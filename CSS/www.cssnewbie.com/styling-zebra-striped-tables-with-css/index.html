@@ -1,0 +1,681 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Styling Zebra Striped Tables With CSS</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Styling Zebra Striped Tables With CSS Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Understanding XHTML Semantics' href='../index.html?p=230' />
+<link rel='next' title='Parla italiano? Check out CSSblog.it!' href='../index.html?p=237' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=233' />
+<link rel='shortlink' href='../index.html?p=233' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,204] -->
+<meta name="description" content="In this article, I will show you an easy way to create an easily scanable and aesthetically pleasing table that doesn’t require you to mess with your XHTML. In fact, you could easily apply this to tables already on your website!" />
+
+<meta name="keywords" content="a list apart,jquery,tables,zebra striping,basic techniques,javascript" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-233 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-233" class="post-233 post type-post status-publish format-standard hentry category-basic-techniques category-javascript tag-a-list-apart tag-jquery tag-tables tag-zebra-striping">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=233" title="Permalink to Styling Zebra Striped Tables With CSS" rel="bookmark">Styling Zebra Striped Tables With CSS</a>
+	</h2>
+	<div class="meta">
+		<p>Published November 3, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href='../example/zebra-tables/index.html'><img src="../wp-content/uploads/2008/11/zebra-400.gif" alt="" title="Zebra striped table using CSS" width="400" height="109" class="alignnone size-full wp-image-235" /></a></p>
+<p>I recently spent a bit of time on <a href="http://hundredpushups.com/index.html">the OneHundredPushups website,</a> and the aspect of the site that most caught my eye (aside from ninja-girl on the front page) was the zebra-striped tables strewn throughout. (For those not in the know, zebra striping tables refers to alternating colored backgrounds on table rows, a la iTunes.) <a href="http://www.alistapart.com/articles/zebrastripingmoredataforthecase">Studies have shown</a> that there is (or at least can be) a slight performance increase associated with zebra striped tables (or at least there isn’t a decrease), and that most users prefer zebra striping to traditional lined tables.</p>
+<p>I thought the tables on OneHundredPushups were fairly well done (<a href="http://hundredpushups.com/week1.html">take a look for yourself here</a>), but a glance at the code showed me that the developer had put more work than was necessary into creating his stripes. Here, I’ll show you an easy way to create a table like the one in the image above <a href="http://cssnewbie.com/example/zebra-tables/">(or on the example page here</a>) that doesn’t require you to mess with your XHTML &mdash; in fact, you could easily apply this to tables already on your website!</p>
+<p>Of course, before we can dive into the CSS, we’ll need a table to style. Mine looks something like this:</p>
+<pre lang="html4strict" escaped="true" line="1">
+&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;State&lt;/th&gt;
+		&lt;th&gt;Date of Poll&lt;/th&gt;
+		&lt;th&gt;% Voting Dem.&lt;/th&gt;
+		&lt;th&gt;% Voting GOP&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AR&lt;/td&gt;
+		&lt;td&gt;10/27&lt;/td&gt;
+		&lt;td&gt;44&lt;/td&gt;
+		&lt;td&gt;54&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AZ&lt;/td&gt;
+		&lt;td&gt;10/23&lt;/td&gt;
+		&lt;td&gt;41&lt;/td&gt;
+		&lt;td&gt;49&lt;/td&gt;
+	&lt;/tr&gt;
+	... and so on ...
+&lt;/table&gt;
+</pre>
+<p>As you can see, it’s nothing out of the ordinary. I’ve used the old-school cellspacing and cellpadding attributes just to ensure consistent treatment across browsers. And otherwise, I’m using a &lt;th&gt; tag or four to distinguish my table headers from the rest of my code. Otherwise, we’ve just got rows and cells galore. You’ll notice there’s not a single class or ID present here (although if I only wanted to style <em>some</em> of the tables on my site, I’d probably give the styled ones a specific class name).</p>
+<p>Next, let’s take a look at the basic CSS styles I’m using:</p>
+<pre lang="css" escaped="true" line="1">table {
+	width: 100%;
+	border: 1px solid #cef;
+	text-align: left; }
+th {
+	font-weight: bold;
+	background-color: #acf;
+	border-bottom: 1px solid #cef; }
+td,th {
+	padding: 4px 5px; }</pre>
+<p>I’ve set the table width to 100% to stop it from collapsing to its minimum size (the default behavior), then given it a pale blue border around the outside. I’ve also set the text alignment throughout the table to “left” &mdash; this is to prevent my table headers from centering themselves, which is the default. I prefer my headers to be aligned with my content, but your mileage may vary.</p>
+<p>When it comes to the headers, I’ve done a little styling: I’ve given them a background color (a bit darker than my border), bolded the text, and given the bottom of the headings a border what matches the border around my entire table.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>Finally, I’m just adding a bit of padding to the interiors of the table cells, to give them a little breathing room. Personally, I think an appropriate use of white (or at least negative) space can be just as critical to legibility as zebra striping &mdash; perhaps someone out there more statistically inclined than me should look into that!</p>
+<p>Those styles give us our basic table layout, which looks something like this:</p>
+<p><img src="../wp-content/uploads/2008/11/prezebra.gif" alt="" title="CSS styled table without zebra striping" width="400" height="107" class="alignnone size-full wp-image-236" /></p>
+<p>So how do we get the alternating rows? For that, I’m creating a new class in my CSS, specifically for the odd (that is, not-even) rows of the table:</p>
+<pre lang="css" escaped="true" line="1">.odd {
+	background-color: #def; }
+.odd td {
+	border-bottom: 1px solid #cef; }</pre>
+<p>This class, once applied to alternating rows of my table, would cause every other row to gain a pale blue background color and a slightly darker bottom border. <a href="http://www.alistapart.com/articles/zebrastripingmoredataforthecase">Since this <em>A List Apart</em> study by Jessica Enders</a> suggested that alternating colored rows and underlines were two of the most aesthetically appealing ways to present tabular data, I figured&#8230; why not use both?</p>
+<p>Now if I wanted, all I would need to do is go back through my HTML and apply this class to alternating rows in my tables, like the folks at OneHundredPushups have done. However, you’ll notice that my code above doesn’t have any CSS classes. That’s because I prefer to work smarter whenever I have the chance. Instead of turning back to my HTML, I’m going to look to JavaScript (specifically, <a href="http://docs.jquery.com/">jQuery</a>) to do my heavy lifting for me.</p>
+<p>To apply our class automatically, all the jQuery I need is this:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function(){
+	$("tr:odd").addClass("odd");
+});</pre>
+<p>In layman’s terms, this tiny snippet is saying, “once the document is done loading, cycle through the page, find every ‘odd’ table row, and give it a class of ‘odd.’” Then our CSS takes over and does the rest. Oh, and for the record, you could also write a second rule like this:</p>
+<pre lang="javascript" escaped="true" line="1">$("tr:even").addClass("even");</pre>
+<p>Which would do the exact same thing as above, only apply it to the “even” rows of the table. And just so you’re not caught off guard by this script’s behavior, it’s good to know in advance that the :odd and :even pseudo-classes start counting at zero, not one. So the first row of your table is, according to jQuery, the “0th” row, and is therefore even.</p>
+<p>And there you have it! <a href="http://cssnewbie.com/example/zebra-tables/">You can see the whole thing in action here.</a> And now, go forth and make the web a more beautiful (or at least stripy-er) place.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			28 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-8815">
+		<article id="comment-8815" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/90a19b469c8bd2b693c2f3a22b413826?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://scottphillips.info' rel='external nofollow' class='url'>Scott Phillips</a> </cite><a href="comment-page-1/index.html#comment-8815"><time datetime="2008-11-04T11:18:39+00:00">Nov. 4, 2008 @ 11:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I knew I recognized that table from somewhere! Looks like the developer of OneHundredPushups.com took some serious &#8220;inspiration&#8221; (ahem) from <a href="http://veerle.duoh.com/blog/comments/a_css_styled_table/" rel="nofollow">Veerle</a>.</p>
+<p>In any case, I really like that jquery addition, Rob. I&#8217;m going to give this a try on a project of my own.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8816">
+		<article id="comment-8816" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a> </cite><a href="comment-page-1/index.html#comment-8816"><time datetime="2008-11-04T14:36:15+00:00">Nov. 4, 2008 @ 2:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice catch, Scott! That&#8217;s pretty entertaining. I hadn&#8217;t read that article on Veerle. Though I have to say, if you&#8217;re going to &#8220;borrow&#8221; from someone, you could do worse than to start with her stuff. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8817">
+		<article id="comment-8817" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/815f3d7867d9194872b8a0a0da29478c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://dowitcherdesigns.com' rel='external nofollow' class='url'>Amber Wallace</a> </cite><a href="comment-page-1/index.html#comment-8817"><time datetime="2008-11-04T18:14:57+00:00">Nov. 4, 2008 @ 6:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks, Rob &#8212; this is great.  I had to research this topic awhile back, to have alternating background colors on a table for a client, and most of the info I found involved assigning classes, as you found.  I used a similar method, as you described, and it made any updates to the table a pain free task!  It really is much less work to do it the right way, especially in the long run. :-)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8833">
+		<p>Pingback: <a href='http://blog.bruno.locaweb.com.br/2008/11/05/links-for-2008-11-05/' rel='external nofollow' class='url'>rascunho &raquo; Blog Archive &raquo; links for 2008-11-05</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8841">
+		<p>Pingback: <a href='http://www.studio404.it/2008/tabelle-righe-alternate-css-jquery.html' rel='external nofollow' class='url'>Creare tabelle a righe alternate con i CSS e jQuery &#8212; Studio404 Web Agency</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8852">
+		<article id="comment-8852" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ca2f1e15dda0ca27d74475fe508ddc15?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">xxx </cite><a href="comment-page-1/index.html#comment-8852"><time datetime="2008-11-06T14:02:38+00:00">Nov. 6, 2008 @ 2:02 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>IOW, nothing interesting and misleading title &#8212; should be &#8220;CSS and JavaScript&#8221;. Now, really doing this CSS (only) would be interesting.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8853">
+		<article id="comment-8853" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a> </cite><a href="comment-page-1/index.html#comment-8853"><time datetime="2008-11-06T14:38:54+00:00">Nov. 6, 2008 @ 2:38 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Technically, you can do it with just CSS&#8230; it&#8217;d just take either: </p>
+<p>1. Adding classes manually, which I mention in the article, which makes my title accurate&#8230; but is labor intensive, or </p>
+<p>2. Writing extremely detailed rules. For example, you could technically write rules that say:</p>
+<p>tr, tr + tr + tr, tr + tr + tr + tr + tr { whatever; }</p>
+<p>That would style the 1st, 3rd, and 5th rows. And then you could just write a counter-rule for the 2nd, 4th, 6th&#8230; and so on, for as long as your tables might conceivably get. But I think JavaScript is probably the easier route to go. :)</p>
+<p>You know, anonymouxxx&#8230; the day you actually leave a positive comment, I think I&#8217;m going to have to print it off and hang it on my fridge. ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8898">
+		<p>Pingback: <a href='http://cssblog.it/2008/11/10/tabelle-a-colori-alternati-con-i-css/' rel='external nofollow' class='url'>Tabelle a colori alternati con i CSS : cssblog.it</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8931">
+		<p>Pingback: <a href='http://www.simonedamico.it/2008/11/css-e-jquery-creare-una-tabella-con-righe-di-colori-alternati/' rel='external nofollow' class='url'>CSS e JQuery: creare una tabella con righe di colori alternati | Simone D'Amico</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9320">
+		<p>Pingback: <a href='http://sharebrain.info/tutorials/css-tutorials/zebra-striped-tables-with-css/5313/' rel='external nofollow' class='url'>Zebra Striped Tables With CSS &laquo; Sharebrain</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9324">
+		<article id="comment-9324" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/aacbe51c483e17b142b97cde5e254c09?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.artologics.com' rel='external nofollow' class='url'>Artologics</a> </cite><a href="comment-page-1/index.html#comment-9324"><time datetime="2009-01-14T02:39:04+00:00">Jan. 14, 2009 @ 2:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice post. Thanks.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9349">
+		<article id="comment-9349" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e86a759137610615197c0e41d5b5cc10?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.maryalenn.com' rel='external nofollow' class='url'>maryalenn</a> </cite><a href="comment-page-1/index.html#comment-9349"><time datetime="2009-01-21T15:15:02+00:00">Jan. 21, 2009 @ 3:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This was so much easier than I thought it would be &#8211; my first use of jquery.  Thanks for the post!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9631">
+		<article id="comment-9631" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/200cfb684e30bdbc49e01c285a40bb92?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Carol Gossard </cite><a href="comment-page-1/index.html#comment-9631"><time datetime="2009-04-22T12:45:26+00:00">Apr. 22, 2009 @ 12:45 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Can you add a webkit border radius on the first table row? When I try it, the row still has square corners. If I add a float:left, the corners are rounded but the cell collapse into a single cell.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9779">
+		<article id="comment-9779" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3eda6fcd3204ef285fa52176c28c4d3e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://none' rel='external nofollow' class='url'>stuart</a> </cite><a href="comment-page-1/index.html#comment-9779"><time datetime="2009-06-13T19:53:36+00:00">Jun. 13, 2009 @ 7:53 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>test, how does this work</p>
+<p>sorry if this automatically updates to your site. i am wondering how this works without being spammed to death &#8211; i see no capcha thing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9780">
+		<article id="comment-9780" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-9780"><time datetime="2009-06-15T08:39:46+00:00">Jun. 15, 2009 @ 8:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Stuart,</p>
+<p>Entertaining. :) I&#8217;m running a spam catcher on the admin side of things which catches 99% of the spam that comes through this site. The other 1% I delete manually every couple of days. Yours doesn&#8217;t count as spam, though, so it stays.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9901">
+		<article id="comment-9901" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dcc6ed0ae5f2850b6caa29e428439b03?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://startupshack.com' rel='external nofollow' class='url'>Denny | Entrepreneur</a> </cite><a href="comment-page-1/index.html#comment-9901"><time datetime="2009-08-21T18:29:48+00:00">Aug. 21, 2009 @ 6:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Accidentally found my way into my first use of jQuery. Pretty cool!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9996">
+		<p>Pingback: <a href='http://likemind.co.uk/zebra-striping-in-php/' rel='external nofollow' class='url'>Zebra-striping in PHP for Drupal or WordPress CMS | Likemind Web Services</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12927">
+		<article id="comment-12927" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0c3c6ed1a55f9016756ea4fe228380dc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.e11world.com' rel='external nofollow' class='url'>e11world</a> </cite><a href="comment-page-1/index.html#comment-12927"><time datetime="2010-08-19T02:36:53+00:00">Aug. 19, 2010 @ 2:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Out of 14 different places I visited to get this right, I finally figured out why with this tutorial. I guess I was probably doing it right all along EXCEPT FOR I WAS USING ONE quotation instead of the double (to keep my code all the same).<br />
+Thanks for the help!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13024">
+		<article id="comment-13024" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/11fef0eb4fac21e7229c531314568046?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.robfloyd.com' rel='external nofollow' class='url'>Robertonugen</a> </cite><a href="comment-page-1/index.html#comment-13024"><time datetime="2010-10-15T12:09:39+00:00">Oct. 15, 2010 @ 12:09 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Is there a way to restrict this working on one table and not another on the same page?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-13034">
+		<article id="comment-13034" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-13034"><time datetime="2010-10-18T13:36:54+00:00">Oct. 18, 2010 @ 1:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey Robert,</p>
+<p>To get this to work on one table (or one set of tables) and not others, just give that table a class (&#8220;striped&#8221;, for example), then change your jQuery to read like this instead:</p>
+<pre>$(document).ready(function(){
+	$(".striped tr:odd").addClass("odd");
+});</pre>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13240">
+		<article id="comment-13240" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/13fc2ba842d7f10e2e98e7a24dd8a14f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://access2learn.com/survey1/' rel='external nofollow' class='url'>Walter Wimberly</a> </cite><a href="comment-page-1/index.html#comment-13240"><time datetime="2011-02-02T10:12:30+00:00">Feb. 2, 2011 @ 10:12 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m trying to see how much zebra striping vs row hight lighting in large tables, (Enders looked only at smaller tables) and have a on-line survey you can participate in if you are interested: <a href="http://access2learn.com/survey1/" rel="nofollow">http://access2learn.com/survey1/</a></p>
+<p>When I developed the table, I used the same method you show here for applying the zebra stripe, but had to use a little more complicated jQuery for highlighting. If you look at the source code of the external javascript, you can see what I did.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13275">
+		<article id="comment-13275" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/91fc3030096a5e5fc3cfa6c1aaf16bb5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ben </cite><a href="comment-page-1/index.html#comment-13275"><time datetime="2011-02-16T21:04:55+00:00">Feb. 16, 2011 @ 9:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is pure CSS:</p>
+<p>.striped tr:nth-of-type(2n+0)<br />
+{<br />
+	background-color: #def;<br />
+}</p>
+<p>(Add salt and pepper to taste)</p>
+<p>Though for IE &lt; 9 and FF &lt; 3.5 you&#039;ll need the js solution still!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13422">
+		<article id="comment-13422" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/01252c05ba21f03388149b05642468aa?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://cica.ro/p/t9Iw4Rg' rel='external nofollow' class='url'>Citeste asta</a> </cite><a href="comment-page-1/index.html#comment-13422"><time datetime="2011-05-05T12:15:21+00:00">May. 5, 2011 @ 12:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Amazing post, honest!</p>
+<p><a href="http://cica.ro/p/t9Iw4Rg" rel="nofollow">http://cica.ro/p/t9Iw4Rg</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13643">
+		<article id="comment-13643" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5ec25f5d955baf694505e1dd97e54841?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://antimatter-studios.com' rel='external nofollow' class='url'>Christopher Thomas</a> </cite><a href="comment-page-1/index.html#comment-13643"><time datetime="2011-10-29T06:16:52+00:00">Oct. 29, 2011 @ 6:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This article is misleading, it should be named &#8220;Styling Zebra Striped Tables with jQuery&#8221;</p>
+<p>the reason I say that is because at no time do you use CSS to control the zebra stripes.</p>
+<p>I would have thought a developer would understand the difference.  HERE is how to do it using CSS ONLY!! </p>
+<p>tr:nth-child(even){ background-color: #FFFFFF; }<br />
+tr:nth-child(odd){ background-color: #CCFFFF; }</p>
+<p>This will require a modern browser, but if you&#8217;re handicapped with IE, you can use ie9.js from here: <a href="http://code.google.com/p/ie7-js/source/browse/trunk/lib/IE9.js?r=35" rel="nofollow">http://code.google.com/p/ie7-js/source/browse/trunk/lib/IE9.js?r=35</a></p>
+<p>to make IE work correctly and this also fixes up a lot of crap you normally have to deal with.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14342">
+		<article id="comment-14342" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f1dd4d123bcd905944f4c34e5c73e23f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sami </cite><a href="comment-page-1/index.html#comment-14342"><time datetime="2012-11-12T20:49:07+00:00">Nov. 12, 2012 @ 8:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Wow, this surely has made my life easier! Thanks alot!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14384">
+		<article id="comment-14384" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/645aea85c0974fc73620ae8088ec574d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://rollisbusiness.ro/model/?cat=4' rel='external nofollow' class='url'>alin</a> </cite><a href="comment-page-1/index.html#comment-14384"><time datetime="2012-12-03T14:35:01+00:00">Dec. 3, 2012 @ 2:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello,</p>
+<p>Please if somebody can help me with my problem. I want to make zerba stile on my page: <a href="http://rollisbusiness.ro/model/?cat=4" rel="nofollow">http://rollisbusiness.ro/model/?cat=4</a></p>
+<p>My table for the moment it&#8217;s like that:</p>
+<p>    &lt;a href=&quot;&#8221;&gt;</p>
+<p>Where i must to change the css style?<br />
+I realy don&#8217;t know very wel to make this modification.</p>
+<p>any litle help will be very good for me.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15532">
+		<article id="comment-15532" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b00e7a3df96671b71dc8e093cfd71257?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.knowing.ir' rel='external nofollow' class='url'>Mohsen Karimian</a> </cite><a href="comment-page-1/index.html#comment-15532"><time datetime="2013-08-26T20:38:50+00:00">Aug. 26, 2013 @ 8:38 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very brilliant<br />
+thank you! That was so simple and useful.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-15956">
+		<p>Pingback: <a href='../index.html?p=730' rel='external nofollow' class='url'>Simple Table Column Highlighting</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=233#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='233' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8631144d9d" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=163" title="Permalink to: On Calendars, Lists, Tables and Semantics">
+                    On Calendars, Lists, Tables and Semantics                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">I recently wrote an article on creating a calendar using lists instead of tables. The first thing that I realized as the comments started to roll in was that my tutorial was fundamentally incomplete in a couple of vital ways. I’d covered the “how,” but not the “what” or the “why.” So I’ll cover more of that here. <a href="../index.html?p=163" class="more-link" title="Permalink to: On Calendars, Lists, Tables and Semantics">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=233#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1030/1095 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:41:01 by W3 Total Cache -->

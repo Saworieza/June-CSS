@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie: CSS Art - The Flower</title>
+<style>
+	#background {
+		position: relative;
+		background-color: #9cf;
+		width: 600px;
+		height: 476px;
+		border-bottom: 10px solid #090;
+		margin: 0 auto; }
+	#flower {
+		position: absolute;
+		top: 20px;
+		left: 172px;
+		width: 256px; }
+	.petal {
+		background-color: #f33;
+		float: left;
+		margin: 1px 1px 0 0;
+		width: 125px;
+		height: 125px;		
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px; }
+	#topleft {
+		-moz-border-radius-bottomright: 0;
+		-webkit-border-bottom-right-radius: 0;
+		border-bottom: 2px solid #c33;
+		border-right: 2px solid #c33; }
+	#topright {
+		-moz-border-radius-bottomleft: 0;
+		-webkit-border-bottom-left-radius: 0;
+		border-bottom: 2px solid #c33;
+		border-left: 2px solid #c33;  }
+	#bottomleft {
+		-moz-border-radius-topright: 0;
+		-webkit-border-top-right-radius: 0;
+		border-top: 2px solid #c33;
+		border-right: 2px solid #c33; }
+	#bottomright {
+		-moz-border-radius-topleft: 0;
+		-webkit-border-top-left-radius: 0;
+		border-top: 2px solid #c33;
+		border-left: 2px solid #c33; }
+	#center {
+		position: absolute;
+		left: 112px;
+		top: 112px;
+		background-color: #ff3;
+		width: 30px;
+		height: 30px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px; }
+	#stem {
+		float: left;
+		width: 12px;
+		height: 200px;
+		margin: 0 1px;
+		background-color: #093; }
+	.leaf {
+		float: left; 
+		margin-top: 80px; 
+		background-color: #093;
+		width: 60px;
+		height: 30px; }
+	#leftleaf {
+		clear: left;
+		margin-left: 10px;
+		-moz-border-radius-bottomleft: 30px;
+		-webkit-border-bottom-left-radius: 30px;
+		-moz-border-radius-topright: 30px;
+		-webkit-border-top-right-radius: 30px; }
+	#rightleaf {
+		-moz-border-radius-bottomright: 30px;
+		-webkit-border-bottom-right-radius: 30px;
+		-moz-border-radius-topleft: 30px;
+		-webkit-border-top-left-radius: 30px; }
+</style>
+</head>
+<body>
+	<div id="background">
+		<div id="flower">
+			<div id="topleft" class="petal"></div>
+			<div id="topright" class="petal"></div>
+			<div id="center"></div>
+			<div id="bottomleft" class="petal"></div>
+			<div id="bottomright" class="petal"></div>
+			<div id="leftleaf" class="leaf"></div>
+			<div id="stem"></div>
+			<div id="rightleaf" class="leaf"></div>
+		</div>
+	</div>
+	<p style="width: 600px; margin: 1em auto;">To see how this flower was created, <a href="../../index.html?p=380">see the original CSS Newbie article.</a></p>
+
+</body>
+</html>

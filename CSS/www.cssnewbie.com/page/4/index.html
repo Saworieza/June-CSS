@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS Newbie - Learn HTML, CSS and jQuery with Tutorials, Tips and Reference Articles - Part 4</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.1" />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,158] -->
+<link rel='prev' href='../3/index.html' />
+<link rel='next' href='../5/index.html' />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="home blog paged paged-4">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	
+<article id="post-430" class="post-430 post type-post status-publish format-standard hentry category-basic-techniques category-bugs-and-fixes category-frameworks-and-libraries category-javascript tag-dojo tag-javascript tag-jquery tag-js tag-mootools tag-no-conflict tag-noconflict tag-prototype latest">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=430" title="Permalink to Running jQuery with Other Frameworks Via noConflict" rel="bookmark">Running jQuery with Other Frameworks Via noConflict</a>
+	</h2>
+	<div class="entry-content">
+		<p><a href="http://www.flickr.com/photos/romainguy/230416692/"><img src="../../wp-content/uploads/2009/07/chess_romainguy.jpg" alt="Photo &quot;Chess&quot; by Romainguy. Used under a Creative Commons license." title="Photo &quot;Chess&quot; by Romainguy. Used under a Creative Commons license." width="579" height="250" class="size-full wp-image-432" /></a></p>
+<p>While <a href="http://jquery.com/">jQuery</a> is certainly a popular JavaScript framework, it&#8217;s by no means the only game in town. Other frameworks such as <a href="http://www.prototypejs.org/">Prototype</a>, <a href="http://mootools.net/">MooTools</a>, <a href="http://www.dojotoolkit.org/">Dojo</a> and many others all have their own strengths, weaknesses, and devoted groupies.</p>
+<p>Generally speaking, these frameworks all play well together &mdash; you can mix and match framework functionality to your heart&#8217;s content, as long as you don&#8217;t mind the additional overhead of loading several libraries simultaneously. So you have a calendar widget in jQuery that you love, but you&#8217;re already using Prototype to animate your navigation bar? Don&#8217;t be shy&#8230; use both!</p>
+<p>Of course, every once in a while you can run in to problems when combining JS frameworks &mdash; particularly (in my experience) when combining jQuery and Prototype.  Luckily, jQuery was kind enough to provide us with a workaround. <a href="../../index.html?p=430#more-430" class="more-link">Read on&#8230;</a></p>
+			</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+
+<div class="grid">
+<article id="post-424" class="post-424 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript category-navigation tag-functions tag-jquery tag-js tag-navigation col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=424" title="Permalink to Using JavaScript to Style Active Navigation Elements" rel="bookmark">Using JavaScript to Style Active Navigation Elements</a>
+	</h2>
+	<div class="entry-content">
+				<p>I&#8217;m all about efficiency when I&#8217;m writing web code, and navigation is often one of those areas where I try to improve my efficiency. Here are some ways to automatically style your &#8220;active&#8221; navigation elements using some streamlined JavaScript and/or jQuery.</p>
+		<p><a href="../../index.html?p=424">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-418" class="post-418 post type-post status-publish format-standard hentry category-ecommerce category-polls category-resources tag-ecommerce tag-foxycart tag-payflow tag-paypal tag-poll tag-shopping-cart tag-template col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=418" title="Permalink to Reader Response: A Simple, Streamlined E-Commerce Solution" rel="bookmark">Reader Response: A Simple, Streamlined E-Commerce Solution</a>
+	</h2>
+	<div class="entry-content">
+				<p>Today I come to you with my arms wide open &mdash; and my shoulders caught somewhere between a slump and a shrug. I&#8217;ve been tearing my hair out over the last couple of months looking for the perfect ecommerce solution. I&#8217;ve come up short.</p>
+		<p><a href="../../index.html?p=418">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-410" class="post-410 post type-post status-publish format-standard hentry category-basic-techniques category-javascript category-quick-tip tag-css tag-javascript tag-jquery tag-stylehseet tag-swap tag-switch col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=410" title="Permalink to A Simple jQuery Stylesheet Switcher" rel="bookmark">A Simple jQuery Stylesheet Switcher</a>
+	</h2>
+	<div class="entry-content">
+				<p>There are lots of reasons you might want to offer your users more than one CSS file for your website. But whatever the reason, it&#8217;s amazingly easy to create a function that swaps between multiple stylesheets using a few lines of jQuery.</p>
+		<p><a href="../../index.html?p=410">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-403" class="post-403 post type-post status-publish format-standard hentry category-basic-techniques category-bugs-and-fixes category-ids-and-classes category-organization tag-bugs tag-errors tag-properties tag-rules-of-css col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=403" title="Permalink to 15 Surefire Ways to Break Your CSS" rel="bookmark">15 Surefire Ways to Break Your CSS</a>
+	</h2>
+	<div class="entry-content">
+				<p>When your CSS doesn&#8217;t behave the way it should, web design can be downright tedious. But some of the the biggest CSS blunders stem from the simplest of errors. Knowing what some of those errors are and remembering to look for them can save you hours of wasted labor.</p>
+		<p><a href="../../index.html?p=403">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=59" title="Permalink to: Using the CSS @import Rule">
+                    Using the CSS @import Rule                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Even the most complex style sheet starts out with a single rule. But when you&#8217;re working on a particularly massive and complex website, over time... <a href="../../index.html?p=59" class="more-link" title="Permalink to: Using the CSS @import Rule">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 462/484 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 00:06:21 by W3 Total Cache -->

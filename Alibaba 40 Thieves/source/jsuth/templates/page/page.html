@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block body %}
+  
+  <article>
+  {% set page as this %}
+  {% include "page/page-part.html" %}
+  {% block content %}{% endblock %}
+  </article>
+  
+{% endblock body %}

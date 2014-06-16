@@ -1,0 +1,948 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Easy CSS Dropdown Menus</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Easy CSS Dropdown Menus Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: May 02 to May 09' href='../index.html?p=118' />
+<link rel='next' title='Fixing the IE6 Whitespace Bug' href='../index.html?p=122' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../easy-css-dropdown-menu/index.html' />
+<link rel='shortlink' href='../index.html?p=119' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,190] -->
+<meta name="description" content="You don't need Flash for a beautiful dropdown menu. This one uses HTML and CSS, and works in all modern web browsers!" />
+
+<meta name="keywords" content="css menu, css dropdown, drop down menu, simple dropdown menu, navbar dropdown,dropdown,lists,menu,navigation,advanced techniques,javascript" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-119 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-119" class="post-119 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript category-navigation tag-dropdown tag-lists tag-menu tag-navigation">
+
+	<h2 class="entry-title">
+		<a href="../easy-css-dropdown-menu/index.html" title="Permalink to Easy CSS Dropdown Menus" rel="bookmark">Easy CSS Dropdown Menus</a>
+	</h2>
+	<div class="meta">
+		<p>Published May 12, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../example/css-dropdown-menu/index.html"><img src="../wp-content/uploads/2008/05/dropdown-400.gif" alt="" width="400" height="115" class="alignnone size-full wp-image-121" /></a></p>
+<p>Attractive dropdown menus have long been the realm of Flash developers and advanced JavaScript gurus. But that needn’t be the case. This tutorial will walk you through developing a clean, semantic dropdown menu using XHTML and CSS that works in all modern browsers!</p>
+<p>Let’s start with the XHTML first and foremost. It’s surprisingly simple:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul id=&quot;navbar&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item One&lt;/a&gt;&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Subitem One&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second Subitem&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Numero Tres&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;!-- ... and so on ... --&gt;
+&lt;/ul&gt;</pre>
+<p>As you can see, our navigation bar consists of nested unordered lists and anchor tags. The key to this working correctly is to properly nest your unordered lists, wrapping the list item around the unordered list that is nested under it (for more on that topic, <a href="../advanced-techniques/word-style-outline/index.html" title="Create a Microsoft Word-Style Outline with CSS">see this article on styling nested lists</a>). The main list items will be our main navigation bar, while the nested unordered lists will become our subnavigation elements. The navigation bar also works without submenus, so you can mix and match as needs be. Also note that, other than an ID on our primary containing unordered list, there are no additional classes or IDs required!</p>
+<p>Next, we’ll start adding a few styles to our navigation bar:</p>
+<pre lang="css" escaped="true" line="1">#navbar {
+	margin: 0;
+	padding: 0;
+	height: 1em; }
+#navbar li {
+	list-style: none;
+	float: left; }
+#navbar li a {
+	display: block;
+	padding: 3px 8px;
+	background-color: #5e8ce9;
+	color: #fff;
+	text-decoration: none; }</pre>
+<p>Here, I’ve removed the margin and padding from the main list, removed all list styling from all the list items, and floated the individual items left. I’ve also added a bit of styling to the anchors, just to make it look a little more like a navigation bar. As you can see, this really isn’t any different than making <a href="../index.html?p=32" title="Tab-Based Navigation in Six (or Seven) Easy Steps">any other sort of navigation bar</a> to start out with. </p>
+<p>The only real oddity here is the “height: 1em;” rule on the navbar ID: this forces the navbar to have a specific height (1em) and width (100% by default), meaning I don’t have to do anything special to “clear” the navigation afterwards. Without that rule, I’d generally need to apply a “clear: left;” to whatever came immediately after the navigation to prevent it from trying to fill the space voided by those left-floated list items. The actual height is arbitrary: as long as a height is specified, the list will retain its block-level status.</p>
+<p>Next, we can apply some styles to the subnavigation section:</p>
+<pre lang="css" escaped="true" line="1">#navbar li ul {
+	display: none; 
+	width: 10em; /* Width to help Opera out */
+	background-color: #69f;}</pre>
+<p>This is pretty straightforward: we’re applying a display: none to prevent the submenu from displaying by default, and giving it a background color to make it stand out against the background. The only odd bit is the width property, which is mostly there to prevent Opera from doing some weird things with the width of the submenus (Opera makes them strangely small without a width specified). However, it also ads a nice bit of consistency to the submenus, so I don’t really mind the “fix.” I chose 10em because that allowed all of my submenu items to exist on one line, but you could choose whatever size works for you.</p>
+<p>Now all we need to do is style the list for its “hover” state:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">#navbar li:hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0; }
+#navbar li:hover li {
+	float: none; }
+#navbar li:hover li a {
+	background-color: #69f;
+	border-bottom: 1px solid #fff;
+	color: #000; }
+#navbar li li a:hover {
+	background-color: #8db3ff; }</pre>
+<p>Let’s go through this bit by bit. The first rule causes the submenu to reappear when the user hovers over the containing list item (this is where the properly nested lists come in handy). We’re using position: absolute on the menus to ensure they don’t push any content below the navigation out of the way. The margin and padding are simply getting rid of the default spacing on the lists so we can style them ourselves.</p>
+<p>Next up comes the “float: none” rule on the list items. This is just preventing the items in the submenu from floating left: it’s counteracting our previous “float: left” rule so that our submenu doesn’t mimic our main navigation elements.</p>
+<p>The rules we’re applying to “#navbar li:hover li a” are purely stylistic: I’m applying a background color, bottom border, and changing the color of the anchor. You could set these to be anything you wanted whatsoever.</p>
+<p>And finally, I’m applying a different background color to the anchor when it’s being hovered over, just to help set it apart from the other items in the list. This is to improve usability: the user can easily see which item their cursor is over.</p>
+<p>That’s all it takes! <a href="../example/css-dropdown-menu/index.html">You can see a working example here.</a> I’ve tested this and found it working in Firefox 2, IE7, Opera 8.5+, and Safari for Windows. Of course, you’ll note that I’m leaving out the usual party pooper: Internet Explorer 6. Because of IE6’s limitations on :hover states (you can only hover over anchors in IE6, instead of any element like in all the other browsers), this fantastic little technique doesn’t work. Unless, of course, you’re willing to add in a couple of lines of JavaScript.</p>
+<p>The brilliant hive mind that is Patrick Griffiths and Dan Webb have come up with <a href="http://htmldog.com/articles/suckerfish/dropdowns/">a fantastic JavaScript solution for Internet Explorer</a> that solves the :hover problem in just 12 lines of code. The version I’m using looks like this:</p>
+<pre lang="javascript" escaped="true" line="1">sfHover = function() {
+	var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+	for (var i=0; i&lt;sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" hover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" hover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);</pre>
+<p>The concept is pretty brilliantly simple (even if the code looks complex). The function goes through your document and finds every list item contained within the “navbar” id (you could change this to be whatever you wanted). It then applies a “mouseover” and “mouseout” state on every item: it adds a class of “hover” to the list item whenever it’s being moused over, and removes it when the cursor wanders off. The result is you can then apply your CSS to the .hover class <em>as well as</em> the :hover pseudo-class and create identical results across the board. So all you need to do is modify your CSS like so:</p>
+<pre lang="css" escaped="true" line="1">#navbar li:hover ul, #navbar li.hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0; }
+#navbar li:hover li, #navbar li.hover li {
+	float: none; }
+#navbar li:hover li a, #navbar li.hover li a {
+	background-color: #69f;
+	border-bottom: 1px solid #fff;
+	color: #000; }</pre>
+<p>And that’s it! With just three tiny changes to your CSS and a dozen lines of JavaScript, you have <a href="../example/css-dropdown-menu/index.html">a CSS dropdown solution</a> that works on <em>every single modern browser</em> – even the ones that aren’t exactly standards-compliant.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			229 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-14278">
+		<article id="comment-14278" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0bea9a5df786c6006605bb21149e7b01?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Lokesh Yadav </cite><a href="comment-page-5/index.html#comment-14278"><time datetime="2012-09-26T12:21:10+00:00">Sep. 26, 2012 @ 12:21 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Tutorial is simple but so much effective. easy to understand step by step. Thanks a lot Rob&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14316">
+		<article id="comment-14316" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/74c5672bf92df9f110fcdddc730694c6?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">paraz </cite><a href="comment-page-5/index.html#comment-14316"><time datetime="2012-10-23T05:13:49+00:00">Oct. 23, 2012 @ 5:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>there you have to replace </p>
+<p>#navbar li:hover ul {<br />
+	display: block;<br />
+	position: absolute;<br />
+	margin: 0;<br />
+	padding: 0;}</p>
+<p>with</p>
+<p>#navbar li ul {<br />
+	display: block;<br />
+	position: absolute;<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	visibility:hidden;<br />
+	z-index:100; }<br />
+#navbar li:hover ul {<br />
+	visibility:visible;}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14319">
+		<article id="comment-14319" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c6aa9e5c58eaadf72d36a61091918ddb?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.lpg-yorkshire.co.uk' rel='external nofollow' class='url'>lpg conversion</a> </cite><a href="comment-page-5/index.html#comment-14319"><time datetime="2012-10-25T06:19:35+00:00">Oct. 25, 2012 @ 6:19 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much for this article. It helped me very. enjoy</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14326">
+		<p>Pingback: <a href='http://soyeonjung.com/blog/art3574/?p=368' rel='external nofollow' class='url'>56) Stylizing Menus | Intro to Web Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14389">
+		<article id="comment-14389" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/22a213f53156d9817c298c38d37e765e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jagabandhu </cite><a href="comment-page-5/index.html#comment-14389"><time datetime="2012-12-06T22:22:46+00:00">Dec. 6, 2012 @ 10:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Thanks<br />
+I used this code in my project nd working 5ne&#8230;..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14398">
+		<article id="comment-14398" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d3d6e3cdab18e82d0c255106fb9cd37f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">gavin petgrave </cite><a href="comment-page-5/index.html#comment-14398"><time datetime="2012-12-11T22:07:00+00:00">Dec. 11, 2012 @ 10:07 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ok first and foremost i must commend u on an awesome build and walk through. like this stuff was so on point a monkey could follow it. and i thank u for that. everything works great but being me i made some alteration. i keep having a bit of a problem. the website i&#8217;m working on requires that i align the menu bar to the right. it worked but wen i go over the last drop down the subitem are off screen. no water wat i try it just won&#8217;t move. do u have any idea as to why it&#8217;s like that. if u do it would be greatly appreciated.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14418">
+		<article id="comment-14418" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ab599ad2b69613ce374ffa54cd41cca4?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.avonlcfsu.nhs.uk' rel='external nofollow' class='url'>Paul</a> </cite><a href="comment-page-5/index.html#comment-14418"><time datetime="2012-12-28T04:24:18+00:00">Dec. 28, 2012 @ 4:24 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am trying to replace my current navigation with a hover over drop down. I have created a copy page to work on, not published, the page is the top banner. I have put as suggested however all I get on the page is the bullet pointed menues. To me it seems that the page coding is not connecting with the CSS to provide the effects. Can you advise why this may be what I am missing to point the coding to this css text?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14454">
+		<article id="comment-14454" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/08f25ac3956a150cd095895870ba1f4d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://lizbobo.net' rel='external nofollow' class='url'>Joanne</a> </cite><a href="comment-page-5/index.html#comment-14454"><time datetime="2013-01-12T16:21:59+00:00">Jan. 12, 2013 @ 4:21 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you for this! Such a simple thing and so darn hard to figure out without help! I&#8217;m a volunteer, so there&#8217;s no one to ask. Thanks again for sharing your insights.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14526">
+		<article id="comment-14526" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/70601dc7cc4edbf4f6b693507469c97f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://mac-resources.net' rel='external nofollow' class='url'>Lennard Boehnke</a> </cite><a href="comment-page-5/index.html#comment-14526"><time datetime="2013-02-03T13:36:44+00:00">Feb. 3, 2013 @ 1:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was wondering&#8230;what does the &#8220;a&#8221; behind the navbar li do?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14547">
+		<article id="comment-14547" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/81effb6a145671b3117f869cb43e50f9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bradfieldandbentley.co.uk' rel='external nofollow' class='url'>Adrian</a> </cite><a href="comment-page-5/index.html#comment-14547"><time datetime="2013-02-12T12:50:37+00:00">Feb. 12, 2013 @ 12:50 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;ve tried many tutorials to do this, and this one is by far the best! for people asking how to add another level of sub menus, try this that i managed to get working. Add to the end of your CSS:</p>
+<p>#navbar li li ul {<br />
+	visibility: hidden;<br />
+}<br />
+#navbar li li:hover ul {<br />
+	visibility: visible;<br />
+	display: block;<br />
+	left: ;<br />
+	margin-top: -1.5em;<br />
+}<br />
+This will allow you to add infinate levels of sub menus in theory, but only for the width of your page!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14673">
+		<article id="comment-14673" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3fd99e6eab335a28dd465e7c950213d4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.4blogers.com' rel='external nofollow' class='url'>alikhani98</a> </cite><a href="comment-page-5/index.html#comment-14673"><time datetime="2013-03-03T09:59:20+00:00">Mar. 3, 2013 @ 9:59 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>tanke you</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14686">
+		<article id="comment-14686" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a61e82af6e6ccd6131ebf4891b9a3f40?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://rddesign.xp3.org' rel='external nofollow' class='url'>Renard</a> </cite><a href="comment-page-5/index.html#comment-14686"><time datetime="2013-03-04T10:49:36+00:00">Mar. 4, 2013 @ 10:49 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Please i wish to know if there is any possibility that i can apply such a drop down, just to one topic. That is, i have a topic in my block that i want it to drop down when hovered but not in the menu. so if there is any possibility then i ask of help. thanks.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14853">
+		<article id="comment-14853" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6771c50d93a3f2142b43d79b566d5a2f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ccsnewbie.com' rel='external nofollow' class='url'>Paul H</a> </cite><a href="comment-page-5/index.html#comment-14853"><time datetime="2013-03-16T16:18:11+00:00">Mar. 16, 2013 @ 4:18 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>nice and simple, worked when I first cut and pasted the code, thanks much.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14955">
+		<article id="comment-14955" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/360755e9690b5a1c60f1856fce5092d8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.innerquestyoga.net' rel='external nofollow' class='url'>Mary</a> </cite><a href="comment-page-5/index.html#comment-14955"><time datetime="2013-03-25T08:47:05+00:00">Mar. 25, 2013 @ 8:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello &#8230; what if my nav bar is in tables as below and I want to add drop downs to each:</p>
+<p> <a href="http://www.cssnewbie.com/easy-css-dropdown-menus/yogatherapy.html" rel="nofollow">Yoga Therapy</a><br />
+          <a href="http://www.cssnewbie.com/easy-css-dropdown-menus/meditation.html" rel="nofollow">Meditation</a><br />
+             <a href="http://www.cssnewbie.com/easy-css-dropdown-menus/Retreats.html" rel="nofollow">Retreats</a></p>
+<p>How do I do that?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15022">
+		<article id="comment-15022" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4afa51970fb42dea530cf0103dba0e76?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Claudia </cite><a href="comment-page-5/index.html#comment-15022"><time datetime="2013-04-02T03:14:03+00:00">Apr. 2, 2013 @ 3:14 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello,<br />
+I tried this, but for some reason the ul isn&#8217;t showing up upon hover.</p>
+<p>.menu ul ul<br />
+{</p>
+<p>   display:none;</p>
+<p>}	</p>
+<p>.menu ul li:hover ul<br />
+{<br />
+	display: block;<br />
+	position: absolute;<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	}	</p>
+<p>.menu li:hover li<br />
+{<br />
+float:none;<br />
+	}	</p>
+<p>.menu li:hover li a {<br />
+	background-color: #69f;<br />
+	border-bottom: 1px solid #fff;<br />
+	color: #000; }	</p>
+<p>.menu li li a:hover {<br />
+	background-color: #8db3ff;<br />
+}</p>
+<p>.menu ul a<br />
+{color:white;<br />
+text-decoration:none;<br />
+}</p>
+<p>.menu ul li:hover<br />
+{background:#0f5baa;<br />
+cursor:pointer;<br />
+-moz-box-shadow: inset 0 0 5px 5px #006699;<br />
+-webkit-box-shadow: inset 0 0 5px 5px #006699;<br />
+box-shadow: inset 0 0 5px 5px #006699;<br />
+}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15236">
+		<article id="comment-15236" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/667ade76ddfc796f72a4dd7ab4145cca?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://freemenu.info' rel='external nofollow' class='url'>mail</a> </cite><a href="comment-page-5/index.html#comment-15236"><time datetime="2013-05-04T04:00:03+00:00">May. 4, 2013 @ 4:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good script code. But onload factor of JS will take more time than traditional simple menus. When it comes to drop don menu, JS or Jquery will  will give required results.  Simple and light weight JS menu with souse code is given here:<br />
+<a href="http://www.freemenu.info/2013/05/js-menui.html" rel="nofollow">http://www.freemenu.info/2013/05/js-menui.html</a></p>
+<p>Regards,<br />
+Mail</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15252">
+		<article id="comment-15252" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/adc875b58857593dc63cf7022171c207?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">George </cite><a href="comment-page-5/index.html#comment-15252"><time datetime="2013-05-10T12:12:44+00:00">May. 10, 2013 @ 12:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Had problem with disappearing menus when the hover hit the border of the links. Fixed by adding <b>z-index:9999;</b> to the #navbar li ul {} rule.</p>
+<p>#navbar lu ul {<br />
+  display: none;<br />
+  width: 10em;<br />
+  background-color: #69;<br />
+  z-index: 9999;<br />
+}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15258">
+		<article id="comment-15258" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9629f347d658d47bf38dd4ccc2a020e5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocuri.co' rel='external nofollow' class='url'>Jocuri</a> </cite><a href="comment-page-5/index.html#comment-15258"><time datetime="2013-05-13T13:18:14+00:00">May. 13, 2013 @ 1:18 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for this article it helped me.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15271">
+		<article id="comment-15271" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8d283281efbc61ec1da6d59e29f7b7a6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.chercherecole.com' rel='external nofollow' class='url'>pietro dellacqua</a> </cite><a href="comment-page-5/index.html#comment-15271"><time datetime="2013-05-19T15:57:59+00:00">May. 19, 2013 @ 3:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>with jQuery is easier:<br />
+$(jQuery).ready{<br />
+var sfEls = document.getElementById(&#8220;navbar&#8221;).getElementsByTagName(&#8220;li&#8221;);<br />
+for (var i=0; i&lt;sfEls.length; i++) {<br />
+	sfEls[i].onmouseover=function() {<br />
+		this.className+=&quot; hover&quot;;<br />
+	}<br />
+	sfEls[i].onmouseout=function() {<br />
+		this.className=this.className.replace(new RegExp(&quot; over\\b&quot;), &quot;&quot;);<br />
+	}<br />
+}<br />
+});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15285">
+		<article id="comment-15285" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f0b7ae4c40d6761e8a9dc69ed65e5a6b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Derek </cite><a href="comment-page-5/index.html#comment-15285"><time datetime="2013-05-28T03:36:16+00:00">May. 28, 2013 @ 3:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How would you add a 3rd tier to the menu, such a menu to slide out from the right of a tier 2 menu it?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15295">
+		<article id="comment-15295" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d22d20e4069fd0fa88f46a422f2db50d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Pegah </cite><a href="comment-page-5/index.html#comment-15295"><time datetime="2013-06-01T02:58:25+00:00">Jun. 1, 2013 @ 2:58 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi , TNK very helpful&#8230;short , useful..<br />
+again TNK<br />
+:)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15366">
+		<article id="comment-15366" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cd46985adfa038b747d9d12fc1dd5c81?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Elangovan </cite><a href="comment-page-5/index.html#comment-15366"><time datetime="2013-07-12T11:41:20+00:00">Jul. 12, 2013 @ 11:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Rob,</p>
+<p>Excellent info. I am using this menu in our app. I tried to add the second sub level to slide to right. ir works but displays 1 level down to right. COuld you please help me?</p>
+<p>This is what i added for second level.</p>
+<p>#navbar li:hover ul li:hover ul, #navbar li.hover ul li.hover ul<br />
+{<br />
+    display: block;<br />
+    position: absolute;<br />
+    left: 100%;<br />
+    top:auto;<br />
+}</p>
+<p>#navbar li:hover ul ul, #nav li.sfhover ul ul {<br />
+    left: -999em;<br />
+}</p>
+<p>#navbar li:hover ul, #navbar li li:hover ul, #navbar li.sfhover ul, #navbar li li.sfhover ul {<br />
+    left: auto;<br />
+}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15413">
+		<article id="comment-15413" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/902b41418a403109a44890b8e79312b0?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Obaid </cite><a href="comment-page-5/index.html#comment-15413"><time datetime="2013-07-16T20:49:59+00:00">Jul. 16, 2013 @ 8:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Ok, HTML tags cannot be directly posted here. So, I am moderating the question.<br />
+Thanks for your article. I am facing some problem with this drop down menu thing. I read your article and it helped me. In the beginning, the drop down worked but when I added some more styling then it stopped working. Other divs and navigation bar is working fine but the drop down menu is not working. Can you please help me pointing out what should be corrected here?</p>
+<p>The parent div is nav-bar-left and the style is<br />
+.nav-bar-left {<br />
+    float; left;<br />
+    overflow: hidden;<br />
+    width: 980px;<br />
+    height: 26px;<br />
+    background-color: Lavender;<br />
+    border: 1px solid MidnightBlue;<br />
+    border-radius: 3px;<br />
+    -moz-border-radius: 3px;<br />
+    -webkit-border-radius: 3px;<br />
+}<br />
+The navigation div is #horizontalmenu which resides within the above parent div and the style is<br />
+#horizontalmenu {<br />
+    width: 733px;<br />
+    margin: 0;<br />
+    position: relative;<br />
+    float: left;<br />
+    padding: 0;<br />
+}<br />
+Rest of the styling for navigation bar is<br />
+#navbar {<br />
+    list-style-type: none;<br />
+    margin: 0;<br />
+    width: 100%;<br />
+    padding: 0;<br />
+    position: relative;<br />
+    display: inline-table;<br />
+    height: 26px;<br />
+    z-index: 5;<br />
+}<br />
+#navbar li {<br />
+    float: left;<br />
+    position: relative;<br />
+}<br />
+#navbar a:link, #navbar a:visited {<br />
+    display: block;<br />
+    color: #333;<br />
+    background-color: lavender;<br />
+    text-align: center;<br />
+    padding: 6px 10px;<br />
+    border-style: solid;<br />
+    border-color: MidnightBlue;<br />
+    border-width: 0 1px 0 0;<br />
+    text-decoration: none;<br />
+    font-size: 14px;<br />
+    line-height: 14px;<br />
+}<br />
+#navbar a:hover, #navbar a:active {<br />
+    color: #fff;<br />
+    background-color: #6b0c36;<br />
+    text-decoration: underline;<br />
+}<br />
+#navbar ul {<br />
+    left:-9999px;<br />
+    list-style-type: none;<br />
+    margin: 0;<br />
+    padding: 0;<br />
+    position: absolute;<br />
+}<br />
+#navbar ul li {<br />
+    float:none;<br />
+    border-style: solid;<br />
+    border-color: Lavender;<br />
+    border-width: 0 1px 1px 1px;<br />
+}<br />
+#navbar ul a {<br />
+    white-space: nowrap;<br />
+}<br />
+#navbar li:hover ul {<br />
+    left: 0;<br />
+}<br />
+#navbar:hover a {<br />
+    text-decoration: none;<br />
+}<br />
+#navbar li:hover ul a {<br />
+    text-decoration: none;<br />
+    background-color: Lavender;<br />
+    color: #333;<br />
+}<br />
+#navbar li:hover ul li a:hover {<br />
+    background-color: Lavender;<br />
+    color: #333;<br />
+}<br />
+So, why is it not working and what can be done?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15524">
+		<article id="comment-15524" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/011e375b7eb64f563b5a95b4b612fb19?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ktse.ir' rel='external nofollow' class='url'>Amir</a> </cite><a href="comment-page-5/index.html#comment-15524"><time datetime="2013-08-21T06:44:36+00:00">Aug. 21, 2013 @ 6:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi<br />
+tank you very much, god bless you&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15529">
+		<article id="comment-15529" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/10883e3b010392ebefbddcd0ca6c19c8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.facegfx.com/' rel='external nofollow' class='url'>Toomy Ngo</a> </cite><a href="comment-page-5/index.html#comment-15529"><time datetime="2013-08-23T02:33:19+00:00">Aug. 23, 2013 @ 2:33 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This solution has working with IE 7?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15533">
+		<article id="comment-15533" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5ec1dff20f41268cad5aaa558b8683de?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.amakups.com' rel='external nofollow' class='url'>amakups</a> </cite><a href="comment-page-5/index.html#comment-15533"><time datetime="2013-08-28T00:42:50+00:00">Aug. 28, 2013 @ 12:42 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks a lot</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15552">
+		<article id="comment-15552" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f93664f72bf2dcc8ba56033713b15aa2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">paul </cite><a href="comment-page-5/index.html#comment-15552"><time datetime="2013-09-07T12:09:07+00:00">Sep. 7, 2013 @ 12:09 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>my drop down is hidden behind the frame what should i do?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15567">
+		<article id="comment-15567" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/34f8e05b71b630d6f53cf5742283e19c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">b </cite><a href="comment-page-5/index.html#comment-15567"><time datetime="2013-09-18T11:50:26+00:00">Sep. 18, 2013 @ 11:50 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>a picture is missing?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15615">
+		<article id="comment-15615" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ec32a76819c5f5e66046ab46ce17dd44?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://onealtkch.bravesites.com/entries/general/help-guide-to-stay-in-good-shape-and-energetic' rel='external nofollow' class='url'>Jennifer</a> </cite><a href="comment-page-5/index.html#comment-15615"><time datetime="2013-10-17T13:35:24+00:00">Oct. 17, 2013 @ 1:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for sharing your thoughts. I truly appreciate your<br />
+efforts and I will be waiting for your next post thank you once again.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="comment-page-4/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../easy-css-dropdown-menu/index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='119' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bc6df0cd4a" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=410" title="Permalink to: A Simple jQuery Stylesheet Switcher">
+                    A Simple jQuery Stylesheet Switcher                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">There are lots of reasons you might want to offer your users more than one CSS file for your website. But whatever the reason, it's amazingly easy to create a function that swaps between multiple stylesheets using a few lines of jQuery. <a href="../index.html?p=410" class="more-link" title="Permalink to: A Simple jQuery Stylesheet Switcher">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../easy-css-dropdown-menu/index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1146/1438 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-28 12:49:27 by W3 Total Cache -->

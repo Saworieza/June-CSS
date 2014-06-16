@@ -1,0 +1,249 @@
+/*
+File:			style.css
+Description:	Custom style of Thesis Reviews plugin
+*/
+.clear {
+	clear:both;
+}
+.clear_space {
+	height:5px;
+	clear:both;
+}
+
+/* do the magic */
+.ta_magic_review {
+	position:absolute;
+	left:-9999px;
+}
+
+/* rating style */
+.ta_rating_container {
+	border: 1px solid #E0E0E0;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 300px;
+	/*margin:20px;*/
+}
+#ta_rating {
+	clear:both;
+	padding: 10px;
+	background: none repeat scroll 0 0 #F6F6F6;
+	border: 2px solid white;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#ta_rating .ta_description {
+	clear: both;
+}
+#ta_rating .rating_btn {
+	clear: both;
+    float: right;
+    margin-top: 20px;
+}
+#ta_rating a {text-decoration:none;}
+#ta_rating a:hover {text-decoration: underline;}
+#ta_rating dt, #ta_rating dd {float: left; font-weight:normal; margin:0px;}
+#ta_rating dd {margin-left: 15px; margin-bottom: 0 !important;}
+#ta_rating dl {margin: 0px;}
+#ta_rating dt {clear: both;}
+
+.ta_rating { 
+	position: relative;
+	background: transparent url(../images/stars.png) 0 -16px repeat-x;
+	width: 80px;
+	height: 16px;
+}
+.ta_rating .result {
+	position: absolute;
+	background: transparent url(../images/stars.png) 0 0 repeat-x;
+	top: 0px;
+	left: 0px;
+	height: 16px;
+	z-index: 102;
+	text-indent: -9999px;
+}
+.result {
+	text-indent: -9999px;
+}
+.ta_headline_meta , .rating_date {
+	font-size:10px;
+	color:#999;
+	cursor: help;
+}
+#ta_rating h3 {
+	font-size:14px;
+	margin: 10px 0 5px 0;
+}
+#ta_rating div.hr {
+  height: 1px;
+  background: #E0E0E0;
+  margin: 5px 0 5px 0;
+}
+#ta_rating div.hr hr {
+  display: none;
+}
+
+#ta_rating p {
+	margin-bottom: 0.2em;
+}
+
+/* review rating after post */
+#ta_post_review_after {
+	margin: 20px 0 20px 0;
+	padding:15px;
+	border-top:dotted 1px #DDD;
+	border-bottom:dotted 1px #DDD;
+	background: none repeat scroll 0 0 #F6F6F6;
+}
+
+#ta_post_review_after ul {
+	margin-top:10px;
+	
+}
+#ta_post_review_after ul li {
+	list-style:outside none;
+	float:left;
+}
+#ta_post_review_after .price {
+	width:100px;
+	height:32px;
+	padding-left:40px;
+	background: transparent url(../images/price.png) no-repeat 0 50%;
+}
+#ta_post_review_after .price span {
+    margin-top: 8px;
+    position: relative;
+	display: block;
+}
+#ta_post_review_after .after_rating {
+	width:160px;
+}
+#ta_post_review_after .after_button {
+	float: right;
+	margin-top:8px;
+    margin-right: 20px;	
+}
+#ta_post_review_after dd {
+	font-size:110%;
+	color:#333333;
+	display: block;
+	margin-bottom: 0px !important;
+	margin-top:5px;
+}
+#ta_post_review_after span {
+	color:#999999;
+}
+
+
+/* review rating on home page and archive pages */
+#ar_rating_home {
+	clear:both;
+	padding: 10px;
+	background: none repeat scroll 0 0 #F6F6F6;
+	border: 2px solid white;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.ar_rating_home_span {
+	margin: 3px 0 3px 0;
+	height: 16px !important;
+	margin: 3px 5px 0 0 !important;
+	float: left;
+	
+}
+.ar_headline_meta_home span {
+	height: 16px !important;
+	margin-top: 0;
+}
+.ar_rating_home { 
+	position: relative;
+	background: transparent url(../images/stars.png) 0 -16px repeat-x;
+	width: 80px !important;
+	height: 16px !important;
+}
+.ar_rating_home .ar_result_home {
+	position: absolute;
+	background: transparent url(../images/stars.png) 0 0 repeat-x;
+	top: 0px;
+	left: 0px;
+	height: 16px;
+	z-index: 102;
+	text-indent: -9999px;
+}
+.ar_result_home {
+	text-indent: -9999px;
+}
+.ar_headline_meta_home {
+	font-size:10px;
+	color:#999;
+	cursor: help;
+}
+
+
+/* review rating widget */
+.ta_widget_list_item {
+	clear:both;
+}
+.ta_widget_post_item {
+	float:left;
+	margin: 0 0 10px 10px;
+}
+.ta_widget_rating {
+	float:right;
+	margin-right:10px
+}
+.widget_recent_reviews ul {
+	margin: 0 !important;
+}
+.widget_recent_reviews li {
+	list-style:none !important;
+	list-style-image:none;
+	padding-left:0 !important;
+}
+
+/* sidebar rating style */
+#sidebars .ta_rating_container {
+	float: none;
+	margin: auto;
+}
+
+/* set rating box alignement */	
+.ta_box_right {
+	float: right;
+	margin: 0px 0px 10px 10px;
+	
+}
+.ta_box_left {
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+.ta_box_align_none {
+	float:none;
+	margin:10px;
+	clear:both;
+}
+ 
+/* web buttons */
+.ar_button {padding: 5px 10px;	display: inline; background: #777 url(../images/bg_button.png) repeat-x bottom; border: none; color: #fff !important; cursor: pointer;font-weight: bold;border-radius: 3px; text-decoration:none !important; 
+		-moz-border-radius: 3px;-webkit-border-radius: 3px;	text-shadow: 1px 1px #666;}
+	.ar_button:hover {	background-position: 0 center;	}
+	.ar_button:active {background-position: 0 top;	position: relative;	top: 1px; padding: 6px 10px 4px;	}
+	
+	.ar_button.ar_red { background-color: #e50000; }
+	.ar_button.ar_purple { background-color: #9400bf; }
+	.ar_button.ar_green { background-color: #58aa00; }
+	.ar_button.ar_orange { background-color: #f97f26; }
+	.ar_button.ar_blue { background-color: #2c6da0; }
+	.ar_button.ar_yellow { background-color: #ffcc00; }
+	.ar_button.ar_black { background-color: #333; }
+	.ar_button.ar_white { background-color: #fff; color: #000 !important; text-shadow: 1px 1px #fff; }
+	.ar_button.ar_gray { background-color: #f1f1f1; color: #333 !important; text-shadow: 1px 1px #fff; font-weight: normal !important; }
+	.ar_button.ar_small { font-size: 75%; padding: 3px 7px; }
+	.ar_button.ar_small:active { padding: 4px 7px 2px; background-position: 0 top; }
+	.ar_button.ar_medium { font-size: 90%; padding: 5px 8px; height: 20px; }
+	.ar_button.ar_medium:active { padding: 5px 8px 4px; background-position: 0 top; }
+	.ar_button.ar_large { font-size: 160%; padding: 7px 12px; height: 40px; }
+	.ar_button.ar_large:active { padding: 8px 12px 6px; background-position: 0 top; }

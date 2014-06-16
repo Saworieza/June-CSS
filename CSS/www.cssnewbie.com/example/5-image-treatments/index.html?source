@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: 5 CSSriffic Ways to Make Your Images Stand Out</title>
+<style>
+/* These rules just style the page. */
+body {
+	font: small/1.3em Arial, Helvetica, sans-serif; 
+	background-color: #eee;
+}
+#wrap {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	width: 40em;
+	margin: 0 auto;
+	padding: 1em 3em; 
+}
+h3 {
+	border-bottom: 1px solid #000;
+	margin: 3em 0 1em 0; 
+}
+.lines {
+	background-image: url(lines.gif); 
+}
+	
+/* These rules style the photos. */
+img.wrap {
+	float: right;
+	margin: 0 0 .5em 1em; 
+}
+img.photo {
+	border: 1px solid #999;
+	background-color: #fcfcfc;
+	padding: 4px; 
+}	
+img.deep {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	background-color: #fcfcfc;
+	padding: 4px;
+}
+.shadowcolor {
+	float: left;
+	background-color: #aaa;
+}
+.shadowimage {
+	float: left;
+	background-image: url(shadow.png);
+}
+.shadowcolor img, .shadowimage img {
+	margin: -4px 4px 4px -4px;
+	background-color: #fcfcfc;
+	padding: 4px;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	display: block; 
+	position: relative;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<h2>5 CSSriffic Ways to Make Your Images Stand Out</h2>
+	<p>This page holds the examples of an article on CSSnewbie, which <a href="../../css-rules/5-cssriffic-treatments-images/index.html">you can find here.</a> If you would like to see how these particular techniques are created, please read the article, and then view the source of this page.</p>
+	<a name="wrap"></a><h3>The Wraparound Treatment</h3>
+	<img class="wrap" src="http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg" width="240" height="165" alt="frozen motivation" />
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum gravida pede vitae sapien. Donec placerat placerat orci. In lobortis feugiat metus. Fusce turpis ante, euismod eget, aliquam et, malesuada eget, ante. Vestibulum elit quam, fringilla sit amet, vehicula quis, sollicitudin id, dolor. Aliquam magna est, tempor sed, malesuada id, mollis vitae, elit. Vestibulum non turpis ut pede hendrerit interdum. Nunc ut ligula imperdiet erat auctor scelerisque. Aenean aliquet leo eget nisi. Aliquam erat volutpat. Nam cursus augue at augue accumsan dignissim. In sed orci a diam eleifend placerat. Mauris nisl leo, porta non, consequat vel, tempor nec, diam. Proin dapibus fringilla dolor. Nam sagittis. Donec aliquam consectetuer augue.</p>
+	<p><a href="../../css-rules/5-cssriffic-treatments-images/index.html">Back to the article.</a></p>
+	<a name="photo"></a><h3>The Photo Treatment</h3>
+	<img class="photo" src="http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg" width="240" height="165" alt="frozen motivation" />
+	<p><a href="../../css-rules/5-cssriffic-treatments-images/index.html">Back to the article.</a></p>
+	<a name="depth"></a><h3>The Depth Treatment</h3>
+	<img class="deep" src="http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg" width="240" height="165" alt="frozen motivation" />
+	<p><a href="../../css-rules/5-cssriffic-treatments-images/index.html">Back to the article.</a></p>
+	<a name="shadow1"></a><h3>The Shadow Treatment</h3>
+	<div class="lines">
+	<div class="shadowcolor"><img src="http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg" alt="frozen motivation" width="240" height="165" /></div>
+	<p style="clear: both; padding: 1em 0;"><a href="index.html?source#">Back to the article.</a></p>
+	</div>
+	<a name="shadow2"></a><h3>The Shadow Treatment, Part Two: Transparency!</h3>
+	<div class="lines">
+	<div class="shadowimage"><img src="http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg" alt="frozen motivation" width="240" height="165" /></div>
+	<p style="clear: both; padding: 1em 0;"><a href="../../css-rules/5-cssriffic-treatments-images/index.html">Back to the article.</a></p>
+	</div>
+</div>
+
+</body>
+</html>

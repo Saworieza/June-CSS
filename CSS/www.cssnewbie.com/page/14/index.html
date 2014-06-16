@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS Newbie - Learn HTML, CSS and jQuery with Tutorials, Tips and Reference Articles - Part 14</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.1" />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,158] -->
+<link rel='prev' href='../13/index.html' />
+<link rel='next' href='../15/index.html' />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="home blog paged paged-14">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	
+<article id="post-19" class="post-19 post type-post status-publish format-standard hentry category-css-rules category-print-css latest">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=19" title="Permalink to 7 Tips for Great Print Style Sheets" rel="bookmark">7 Tips for Great Print Style Sheets</a>
+	</h2>
+	<div class="entry-content">
+		<p><img src='../../wp-content/uploads/2008/02/print-style-sheets.jpg' alt='Print documents - photo by desi.italy' title='Photo by desi.italy. Used under a Creative Commons license.' /></p>
+<p>CSS doesn’t apply exclusively to the Realm of the Screen. You can also write style sheets that apply to <a href="../../definition/what-is-this-css-thing-anyway/index.html">the medium that first spawned them</a> – print. This can be a very useful trick, since people read on the screen very differently than they read print documents. And your fancy-dancy layout may look stellar at 1024&#215;768, but that doesn’t mean it rocks equally at 8 1/2&#8243; x 11&#8243;.</p>
+<p>So here are a few tips for creating a print style sheet that will ensure your website is user-friendly, regardless of the medium it ends up in. </p>
+<h3>1: Specify a Print Style Sheet</h3>
+<p>How’s that for a great opener? Specifying the style sheet in your code is the first step to a much more useable website. Here’s how you do it:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;link rel="stylesheet" href="print.css" 
+media="print" /&gt;</pre>
+<p>The important part here is the media=”print” option. This tells the web browser to only apply these styles to print media.</p>
+<h3>2: Build On Your Screen CSS</h3>
+<p>One nice trick you can use is to build your print style sheet to amend your screen style sheet. To do this, simply neglect to reference a medium in your screen CSS link, like so:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;link rel="stylesheet" href="screen.css" /&gt;
+&lt;link rel="stylesheet" href="print.css" 
+media="print" /&gt;</pre>
+<p>This causes your screen style sheet to be applied to both screen <em>and</em> print. Meaning, your print CSS only has to describe the things you want to do differently.</p>
+<h3>3: Wipe Out Your Screen CSS</h3>
+<p>Of course, if you want your print CSS to differ widely from your screen CSS, denoting all the differences between the two would be tedious. In that case, you’d want to do something like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;link rel="stylesheet" href="screen.css" 
+media="screen" /&gt;
+&lt;link rel="stylesheet" href="print.css" 
+media="print" /&gt;</pre>
+<p>Specifying a media of “screen” for your main CSS file means your print style sheet is building upon a blank slate. If  you’re making a lot of changes, this can be useful.</p>
+<h3>4: Hide Extraneous Elements</h3>
+<p>Not everything that is useful on the screen is nearly so useful in print. For example, the navigation at the top of your page, or the blogroll in your sidebar, aren’t nearly so useful when they take up a full printed page and obscure your text. Consider hiding them in your print style sheet by creating a <a href="../../css-rules/css-rules-multiplicity/index.html">list of multiple selectors,</a> like so:</p>
+<pre lang="css" escaped="true" line="1">#navigation, #blogroll {
+	display: none;
+}</pre>
+<p>Then, as you come across more elements that shouldn’t be in your printed version, you can just add them to the list.</p>
+<h3>5: Bump Up Font Sizes and Line-Heights</h3>
+<p>While I’m sure your 10-pixel-high cramped Helvetica looks so very avant-garde on the screen, people usually prefer a little more room when they’re reading on the page. Try bumping up the font-size and line-height a little compared to the screen:</p>
+<pre lang="css" escaped="true" line="1">body {
+	font-size: 120%;
+	line-height: 130%;
+}</pre>
+<h3>6: Move to Serif Fonts</h3>
+<p>Serif fonts were created to make it easier to read words on the printed page. The serifs (the little “feet” at the bottoms of letters) help the eye define the edges of the letters and lines on the page. Sans-serif fonts, on the other hand, were invented for the screen: the serifs on low-resolution monitors and at small sizes tend to make the letters look a little fuzzy. So while Helvetica may be a great choice for the screen, perhaps Georgia would be better suited for the page:</p>
+<pre lang="css" escaped="true" line="1">body {
+	font-family: Georgia, "Times New Roman", 
+	Times, serif;
+}</pre>
+<h3>7: Think in Inches and Points</h3>
+<p>Pixels are a useful unit of measurement when dealing with the screen, but they lose some of their usefulness when you move to the printed page. At that point, it’s useful to remember that in CSS, you’re not limited to setting sizes in pixels, percentages or ems. You also have inches, centimeters, millimeters, points, and even picos at your disposal. Make use of them:</p>
+<pre lang="css" escaped="true" line="1">body {
+	font-family: Georgia, "Times New Roman", 
+	Times, serif;
+	font-size: 12pt;
+	line-height: 18pt;
+}
+body #container {
+	margin: 1in 1.2in .5in 1.2in;
+}
+</pre>
+<p>What other print style sheet tips have I missed? Share the love in the comments!</p>
+			</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+
+<div class="grid">
+<article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-basic-techniques category-quick-tip col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=28" title="Permalink to Use Comments to Organize Your CSS Design" rel="bookmark">Use Comments to Organize Your CSS Design</a>
+	</h2>
+	<div class="entry-content">
+				<p>It’s inevitable: the longer you work with CSS, the longer your CSS files will grow. And the longer your files get, the tougher it will be to find what you’re looking for when you go back to edit your website’s styles later on down the road. This is where CSS comments can really come in handy.</p>
+		<p><a href="../../index.html?p=28">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-24" class="post-24 post type-post status-publish format-standard hentry category-basic-techniques category-css-rules category-ids-and-classes col-1-2">
+	<h2 class="entry-title">
+		<a href="../../css-rules/css-rules-multiplicity/index.html" title="Permalink to The 4 CSS Rules of Multiplicity" rel="bookmark">The 4 CSS Rules of Multiplicity</a>
+	</h2>
+	<div class="entry-content">
+				<p>One quick and easy way to keep your CSS clean and well-structured is to remember (what I’m going to title) the four CSS Rules of Multiplicity. They are: Multiple declarations can live in a single rule. Multiple selectors can preface the same rule set. Multiple rules can be applied to the same selector. Multiple classes [&hellip;]</p>
+		<p><a href="../../css-rules/css-rules-multiplicity/index.html">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-23" class="post-23 post type-post status-publish format-standard hentry category-articles-elsewhere col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=23" title="Permalink to Great Links from the Week of February 01 to February 08" rel="bookmark">Great Links from the Week of February 01 to February 08</a>
+	</h2>
+	<div class="entry-content">
+				<p>Pure Css Data Chart | Css Globe In this great article from CSS Globe, Alen Grakalic explains how to create a very attractive bar chart using nothing but a XHTML definition list and a whole lot of CSS. There is plenty of detailed instruction and images along the way, so it&#8217;s fairly easy to follow [&hellip;]</p>
+		<p><a href="../../index.html?p=23">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-21" class="post-21 post type-post status-publish format-standard hentry category-basic-techniques col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=21" title="Permalink to When to Use Inline, In-Document, and Linked CSS" rel="bookmark">When to Use Inline, In-Document, and Linked CSS</a>
+	</h2>
+	<div class="entry-content">
+				<p>There are three ways to inject a bit of CSS magic into your web pages. They are inline styles, in-document styles via the &lt;style&gt; tag, and linked style sheets. Each is valuable in its own right – the trick is knowing when to use them. Inline styles are the most basic way of applying styles [&hellip;]</p>
+		<p><a href="../../index.html?p=21">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=635" title="Permalink to: A JavaScript Currency Conversion Script">
+                    A JavaScript Currency Conversion Script                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">It turns out that converting random numbers into formatted currency (with dollar signs, commas, and periods) is more difficult in JavaScript than I would have expected. There's no built-in function for it, and it's something I run into a lot. The function I wrote has worked well for me on a couple of projects now, so I thought I'd share it with you-all. <a href="../../index.html?p=635" class="more-link" title="Permalink to: A JavaScript Currency Conversion Script">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 474/581 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 08:16:39 by W3 Total Cache -->

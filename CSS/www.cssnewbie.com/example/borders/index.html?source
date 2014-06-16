@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Cool Uses for the CSS Border Property</title>
+<style>
+body {
+	width: 600px;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif; }
+.stamp {
+	width: 500px;
+	height: 414px;
+	background: #fff url(george.jpg) no-repeat;
+	border: 12px dashed #1b1a19; }
+.stamp p {
+	color: #fff;
+	margin: 10px 10px 0 0;
+	font: bold 60px Georgia, "Times New Roman", Times, serif;
+	text-align: right; }
+	
+.coupon {
+	width: 250px;
+	padding: 10px;
+	text-align: center;
+	border: 3px dashed #ccc; }
+.coupon h3 {
+	color: #333;
+	font: bold 200% Geneva, Arial, Helvetica, sans-serif; }
+</style>
+</head>
+<body>
+<h1>CSS Newbie Example: Cool Uses for the CSS Border Property</h1>
+
+<p>These are just two of the cool examples of using the CSS border property. <a href="../../index.html?p=322">You can see the original CSS Newbie article, and 10 other cool uses of the property, here.</a></p>
+
+<h2>CSS Postage Stamp</h2>
+<div class="stamp">
+	<p>99&cent;</p>
+</div>
+
+<h2>CSS Coupon</h2>
+
+<div class="coupon">
+	<h3>50% Off CSS!</h3>
+	<p>Present this coupon at checkout to receive half off your CSS order!</p>
+</div>
+
+</body>
+</html>

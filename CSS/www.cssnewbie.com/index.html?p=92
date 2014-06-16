@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Using Definition Lists: Question &#038; Answer formatting</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Using Definition Lists: Question &amp; Answer formatting Comments Feed" href="using-definition-lists-question-answer-formatting/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: April 12 to April 18' href='index.html?p=106' />
+<link rel='next' title='Level the Playing Field with Reset Style Sheets' href='index.html?p=100' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=92' />
+<link rel='shortlink' href='index.html?p=92' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,223] -->
+<meta name="description" content="This guest article was written by Chris Coyier of CSS-Tricks, a site featuring tips, tricks, and tutorials on web design. Unordered lists seem to get all" />
+
+<meta name="keywords" content="dl,guestarticle,list,basic techniques,lists" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-92 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-92" class="post-92 post type-post status-publish format-standard hentry category-basic-techniques category-lists tag-dl tag-guestarticle tag-list">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=92" title="Permalink to Using Definition Lists: Question &amp; Answer formatting" rel="bookmark">Using Definition Lists: Question &#038; Answer formatting</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 21, 2008 by Guest Author.</p>
+	</div>	<div class="entry-content">
+		<p><img src="wp-content/uploads/2008/04/dl-header.png" alt="" width="400" height="200" class="alignnone size-full wp-image-93" /></p>
+<p class="guestbio">This guest article was written by Chris Coyier of <a href="http://www.css-tricks.com/"><strong>CSS</strong>-Tricks</a>, a site featuring tips, tricks, and tutorials on web design.</p>
+<p>Unordered lists seem to get all the love these days, but there are just some things that are better semantically described with definition lists. Never heard of them? I&#8217;m not surprised. Here is the basic syntax:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;dl&gt;
+    &lt;dt&gt;Definition Term&lt;/dt&gt;
+    &lt;dd&gt;Definition Description&lt;/dt&gt;
+&lt;/dl&gt;</pre>
+<p>There are <strong>two big differences</strong> between unordered lists and definition lists. One, there are two different elements that belong in a definition list: dt&#8217;s &amp; dd&#8217;s. In unordered lists, all you have is li&#8217;s. Two, the only default styling applied to definition lists is a bit of a left-margin to the dd elements &#8212; no bullets or other strange positioning to fight.</p>
+<p>Having two different tags to work with is what makes definition lists valuable. Take for example the need to create a FAQ&#8217;s page with a bunch of questions and their answers. Each question and answer group would really benefit from having a parent element, because then you could, for example, control the spacing between them or perhaps apply a border to visually separate them.</p>
+<p>Many people would go straight for the div. With something like:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class="qa"&gt;
+    &lt;h4&gt;Question&lt;/h4&gt;
+    &lt;p&gt;Answer&lt;/p&gt;
+&lt;/dl&gt;	</pre>
+<p>The problem with this is that div&#8217;s are very commonly used. Chances are, your page is already using several so it&#8217;s likely you will need to apply an unique class to the div to style it individually.</p>
+<p>Other people will go straight for the unordered list:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="html4strict" escaped="true" line="1">&lt;ul&gt;
+    &lt;li class="question"&gt;Question&lt;/li&gt;
+    &lt;li class="answer"&gt;Answer&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>The problem with this is that since you only get li elements in your ul, you will need to apply unique classes to them in order to get different styling.</p>
+<p>I propose that the best elements to use for something like question/answer content is the definition list:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;dl&gt;
+    &lt;dt&gt;Question&lt;/dt&gt;
+    &lt;dd&gt;Answer&lt;/dt&gt;
+&lt;/dl&gt;</pre>
+<p>Will using a div or an ul work? Sure, they&#8217;ll work just fine and nobody is going to slap your hand for using them. But if you want to be a super hip semantics junkie, you&#8217;ll use a definition list. You get all the advantages: a parent element for styling the whole group and different tags for the question and answer so they can be styled separately without needing to use unique classes. If needed, you can also use multiple dt&#8217;s and dd&#8217;s and use them in any order you wish.</p>
+<p>Check out this example of a question and answer list using definition lists (click the image to see a <a href='http://css-tricks.com/examples/QandAwithDL2/'>live example</a>):</p>
+<p><a href='http://css-tricks.com/examples/QandAwithDL2/'><img src="wp-content/uploads/2008/04/dl-example-1.png" alt="" title="Click to see this example live." width="400" height="380" class="alignnone size-full wp-image-94" /></a></p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			24 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-705">
+		<article id="comment-705" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8ce9553584717a8d2eb178aa4a9216bd?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.senseon.co.uk' rel='external nofollow' class='url'>Richard</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-705"><time datetime="2008-04-21T16:11:39+00:00">Apr. 21, 2008 @ 4:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That&#8217;s a really cool trick and perfect for FAQ&#8217;s. I will be implementing an FAQ on a site shortly so I will definitely give this a try. As ever it makes perfect sense.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-712">
+		<article id="comment-712" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/533387c21c42f5ca68f1360ee543cbbf?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mootywebdesign.com.au/blog/search-engine-optimisation/seo-google-optimise-shopping-carts/' rel='external nofollow' class='url'>mooty</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-712"><time datetime="2008-04-22T00:10:09+00:00">Apr. 22, 2008 @ 12:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is a cool trick, I&#8217;ve never really used dt&#8217;s before, don&#8217;t know why, never really known what they did, and always struggled with ul&#8217;s to get things to work.</p>
+<p>i&#8217;ve been a web designer for 3 1/2 yrs and this is news to me. cheers</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-718">
+		<article id="comment-718" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a1a9f9b6f4f3895ffea9def75677b361?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://andreapluhar.com' rel='external nofollow' class='url'>mardulia</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-718"><time datetime="2008-04-22T07:50:28+00:00">Apr. 22, 2008 @ 7:50 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good idea. Two things. I think you&#8217;d better look at your mark-up carefully. There are a couple of end tags that aren&#8217;t closed properly. Bu maybe you&#8217;ve seent that already.;-)</p>
+<p>Technically I suppose you could enclose the entire QA of your example in a single  couldn&#8217;t you, and give that  an id. Yes?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-719">
+		<article id="comment-719" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a1a9f9b6f4f3895ffea9def75677b361?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://andreapluhar.com' rel='external nofollow' class='url'>mardulia</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-719"><time datetime="2008-04-22T07:51:48+00:00">Apr. 22, 2008 @ 7:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Sorry that last should read-</p>
+<p>&#8220;Technically I suppose you could enclose the entire QA of your example in a single dl couldn’t you, and give that an id. Yes?&#8221;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-720">
+		<p>Pingback: <a href='http://css-tricks.com/links-of-interest-27/' rel='external nofollow' class='url'>Links of Interest - CSS-Tricks</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-721">
+		<p>Pingback: <a href='http://www.webcreatives.biz/using-definition-lists-question-answer-formatting/' rel='external nofollow' class='url'>&raquo; Using Definition Lists: Question &#38; Answer formatting Webcreatives</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-744">
+		<article id="comment-744" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1140d3f5764f680ccc5d5c949f44ecb7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Edwin </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-744"><time datetime="2008-04-23T16:29:56+00:00">Apr. 23, 2008 @ 4:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great article, I never used defenition lists before. Heard of it, but never saw the advantage of it. This is a very good example to show how to use them good :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-785">
+		<article id="comment-785" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cbb4209198d3e2d8d6ebb782df5211b8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Morpheus </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-785"><time datetime="2008-04-27T00:11:05+00:00">Apr. 27, 2008 @ 12:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good technique but then, unlike in &#8220;ol&#8221;, where numbers are dynamic/automatic, this technique now forces you to Manually enter the question Numbers to the list. </p>
+<p>If you re-order the qstns or delete a qstn, then you need to manually re-number the rest of the entries which can be a lot of work. Unless write a script that does the numbering for u (which again is work).</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-811">
+		<p>Pingback: <a href='http://xyberneticos.com/index.php/2008/04/28/definir-listas-para-crear-una-secuencia-de-preguntas-y-respuestas/' rel='external nofollow' class='url'>Definir listas para crear una secuencia de preguntas y respuestas &laquo; Xyberneticos</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-849">
+		<p>Pingback: <a href='http://www.smashingmagazine.com/2008/04/30/best-of-april-2008/' rel='external nofollow' class='url'>Best Of April 2008 | Best of the Month | Smashing Magazine</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-850">
+		<article id="comment-850" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b17426f212aa525313f692dea3b298fe?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://paulirish.com' rel='external nofollow' class='url'>Paul Irish</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-850"><time datetime="2008-04-30T12:29:10+00:00">Apr. 30, 2008 @ 12:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s a horrible idea to wrap each pair/set in a DL.. The DL should be around all DT/DD sets, not each in particular.<br />
+Bad bad!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-852">
+		<article id="comment-852" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f8d583cdcb29109ab7d150d22a667e60?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">JuG </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-852"><time datetime="2008-04-30T15:23:27+00:00">Apr. 30, 2008 @ 3:23 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>As Paul Irish said !!!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-878">
+		<article id="comment-878" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f57ea412dc9b3e4d5de3a9749e289b75?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">NortelNetworks </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-878"><time datetime="2008-05-01T09:26:07+00:00">May. 1, 2008 @ 9:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Technically, if you wanted numbers, you could put each QA within it&#8217;s on DL (not a good idea), then, put each DL in it&#8217;s on LI within an OL.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-881">
+		<p>Pingback: <a href='http://kantongin.com/aneka/best-of-april-2008/' rel='external nofollow' class='url'>Kantongin &raquo; Best Of April 2008</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-908">
+		<p>Pingback: <a href='http://pixel.lt/skaitiniai-55.html' rel='external nofollow' class='url'>Skaitiniai #55 &raquo; Pixel.lt</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-963">
+		<article id="comment-963" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e789d91ddd0acf7f04762976f1cdf60a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.pixelinedesign.com' rel='external nofollow' class='url'>Travis</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-963"><time datetime="2008-05-06T14:46:49+00:00">May. 6, 2008 @ 2:46 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I agree with Paul. One DL for the whole lot of them.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-1041">
+		<p>Pingback: <a href='http://brent.closetgeekshow.com/?p=7' rel='external nofollow' class='url'>Best Of April 2008 - Glimpses of the Aleph</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9751">
+		<article id="comment-9751" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9fd24dd2283f42b5d617ca5f4da4df7b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.webconsulting.com.au' rel='external nofollow' class='url'>Andy</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-9751"><time datetime="2009-05-28T07:41:25+00:00">May. 28, 2009 @ 7:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice Post&#8230; and very interesting to see simple and clear guidelines on one of the more obnscure &#8211; but potentially very useful tags.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10078">
+		<article id="comment-10078" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/aaed774518c58f7e9e2e124e9082c151?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">MUHAMMAD ISMAIL </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-10078"><time datetime="2009-11-11T00:56:00+00:00">Nov. 11, 2009 @ 12:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ok insha-ullah i help your group and friends. please you help me and i help you . Allah success all my friends. Aamin</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12800">
+		<p>Pingback: <a href='http://www.taiwangeek.com/best-of-april-2008.html' rel='external nofollow' class='url'>Geek is a Lift-Style. &raquo; Best Of April 2008</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13384">
+		<article id="comment-13384" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/38f695a6c9fd9807034083f7e1b03da4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.twelve17.com.au' rel='external nofollow' class='url'>Chris Sears</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-13384"><time datetime="2011-04-17T07:48:15+00:00">Apr. 17, 2011 @ 7:48 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Cool trick</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14098">
+		<article id="comment-14098" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/790360b620b277f1483ed4e4dee61751?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.answer-question.com/' rel='external nofollow' class='url'>Answer question win laptop</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-14098"><time datetime="2012-05-16T14:12:29+00:00">May. 16, 2012 @ 2:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>02.05.2005&#183;&#032;despite having  the correct  inquiries  discussion  might not exactly  movement  quite  because  readily  as you may  expect. Like  you&#8217;ll want to  really  pay attention  actively  on the  responses  you will get.<a href="http://www.answer-question.com/" rel="nofollow">answer question</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14385">
+		<article id="comment-14385" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4fdce145bab6d27d69e34403f99fd11c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://doneitbetter.com' rel='external nofollow' class='url'>Me</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-14385"><time datetime="2012-12-03T18:03:22+00:00">Dec. 3, 2012 @ 6:03 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>there is absolutely nothing wrong with using an unordered list for Q&amp;A&#8217;s, I think they look much neater than definition lists. To suggest that definition lists are the best way to go, suggests that you have something stuck somewhere it doesn&#8217;t belong. I would also suggest that you get your tags correct before assuming that you have anything worthwhile to teach.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15535">
+		<article id="comment-15535" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7bbc6e370f85600783960451832ff34a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://eanswered.blogspot.com' rel='external nofollow' class='url'>Altaf Hussain</a> </cite><a href="using-definition-lists-question-answer-formatting/comment-page-1/index.html#comment-15535"><time datetime="2013-08-29T16:04:34+00:00">Aug. 29, 2013 @ 4:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>i have 2 div&#8217;s in my website<br />
+<a href="http://eanswered.blogspot.com" rel="nofollow">http://eanswered.blogspot.com</a></p>
+<p>for question is </p>
+<p>.que{<br />
+}</p>
+<p>and for answer</p>
+<p>.ans{<br />
+}</p>
+<p>i want to decorate my website i use </p>
+<p>Question<br />
+Answer </p>
+<p>please help me to decorate &#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=92#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='92' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="62cb17e78a" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="index.html?p=388" title="Permalink to: Build Custom Frameworks Easily with CSS Classes">
+                    Build Custom Frameworks Easily with CSS Classes                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Generally speaking, I consider full-fledged CSS frameworks to be overkill. However, I still think that the foundation on which CSS frameworks are built &mdash; the concept of using classes to simplify layout and standardize design across similar elements &mdash; is very much worth investigation. <a href="index.html?p=388" class="more-link" title="Permalink to: Build Custom Frameworks Easily with CSS Classes">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=92#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 911/981 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:52:38 by W3 Total Cache -->

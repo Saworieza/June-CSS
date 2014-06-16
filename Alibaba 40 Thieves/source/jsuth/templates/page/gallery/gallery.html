@@ -1,0 +1,13 @@
+{% extends "page/page.html" %}
+
+{% block content %}
+
+  <ul class="gallery">
+  {% for photo in this.media %}
+    <li><a href="{{ photo.url }}" title="{{ photo.caption|e }}"><img src="{{ photo.url|imagesize({ width:180, height:120, crop:true }) }}" alt="{{ photo.title|e }}" /></a></li>
+  {% else %}
+    <li>No images yet</li>
+  {% endfor %}
+  </ul>
+  
+{% endblock content %}

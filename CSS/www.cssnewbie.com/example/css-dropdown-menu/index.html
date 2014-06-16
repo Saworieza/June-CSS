@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: CSS-Only Dropdown Menu</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: <a href="../../easy-css-dropdown-menu/index.html">(Read the CSS Newbie article)</a></h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/css-dropdown-menu/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSSnewbie Example: CSS-Only Dropdown Menu&lt;/title&gt;
+&lt;style&gt;
+/* These styles just pretty up the page a bit. */
+body {
+   font: 62.5%/1.2 Arial, Helvetica, sans-serif;
+   background-color: #eee; }
+#wrap {
+   font-size: 1.3em;
+   width: 500px;
+   padding: 20px;
+   margin: 0 auto; 
+   background-color: #fff;
+   position: relative; }
+
+/* These styles create the dropdown menus. */
+#navbar {
+   margin: 0;
+   padding: 0;
+   height: 1em; }
+#navbar li {
+   list-style: none;
+   float: left; }
+#navbar li a {
+   display: block;
+   padding: 3px 8px;
+   background-color: #5e8ce9;
+   color: #fff;
+   text-decoration: none; }
+#navbar li ul {
+   display: none; 
+   width: 10em; /* Width to help Opera out */
+   background-color: #69f;}
+#navbar li:hover ul, #navbar li.hover ul {
+   display: block;
+   position: absolute;
+   margin: 0;
+   padding: 0; }
+#navbar li:hover li, #navbar li.hover li {
+   float: none; }
+#navbar li:hover li a, #navbar li.hover li a {
+   background-color: #69f;
+   border-bottom: 1px solid #fff;
+   color: #000; }
+#navbar li li a:hover {
+   background-color: #8db3ff; }
+&lt;/style&gt;
+
+&lt;script&gt;
+// Javascript originally by Patrick Griffiths and Dan Webb.
+// http://htmldog.com/articles/suckerfish/dropdowns/
+sfHover = function() {
+   var sfEls = document.getElementById(&quot;navbar&quot;).getElementsByTagName(&quot;li&quot;);
+   for (var i=0; i&lt;sfEls.length; i++) {
+      sfEls[i].onmouseover=function() {
+         this.className+=&quot; hover&quot;;
+      }
+      sfEls[i].onmouseout=function() {
+         this.className=this.className.replace(new RegExp(&quot; hover\\b&quot;), &quot;&quot;);
+      }
+   }
+}
+if (window.attachEvent) window.attachEvent(&quot;onload&quot;, sfHover);
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id=&quot;wrap&quot;&gt;
+      &lt;h1&gt;CSS-Only Dropdown Menu&lt;/h1&gt;
+      &lt;ul id=&quot;navbar&quot;&gt;
+      &lt;!-- The strange spacing herein prevents an IE6 whitespace bug. --&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item One&lt;/a&gt;&lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Subitem One&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Second Subitem&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Numero Tres&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;
+            &lt;ul&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Just one subitem&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;No Subitem&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Number Four&lt;/a&gt;
+            &lt;ul&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Subitem One&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+               &lt;a href=&quot;#&quot;&gt;Second Subitem&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+               &lt;a href=&quot;#&quot;&gt;Numero Tres&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+               &lt;a href=&quot;#&quot;&gt;Fourth Thinger&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;         
+         &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;&lt;a href=&quot;/easy-css-dropdown-menus/&quot;&gt;Go back to the main article.&lt;/a&gt; This CSS-only dropdown menu should work in all modern browsers. It has been tested and found working in Firefox 2, IE 7, Safari 3, and Opera 8.5. With the included JavaScript, the dropdowns also work in IE 6 (the all-important non-modern browser).&lt;/p&gt;
+      &lt;p&gt;Donec vel massa. Ut nibh. Donec placerat ultrices dui. Morbi eu dui eget mauris cursus pellentesque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ante neque, tempor eu, semper sit amet, hendrerit vitae, quam. Nullam ante. Pellentesque arcu sapien, suscipit in, elementum vitae, vulputate quis, metus. Quisque sollicitudin leo a diam. Quisque in risus sit amet mi faucibus feugiat. Ut ullamcorper pede a libero. Donec nisl.&lt;/p&gt;
+   &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

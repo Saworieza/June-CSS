@@ -1,0 +1,41 @@
+{% if showComments %}
+  <aside class="comments" id="comments">
+    
+  	{% for comment in comments %}
+  	 {% if loop.first %}<h2>Comments</h2>{% endif %}
+  		{% include 'common/comments/comment-partial.html' with ['this':comment, 'parent':this] %}
+  	{% endfor %}
+
+<section id="respond">
+  	<h3>Leave a Comment</h3>
+		<form action="http://edit.{{ hifi.url.host }}/comments/comment.php" method="post" id="commentform">	
+		<input type="hidden" name="parent" value="{{ this.id }}" />
+		<input type="hidden" name="redirectUri" value="http://{{ hifi.url.host }}{{ hifi.url.path }}" />
+			<p> 
+						<label for="author">Name*</label> 
+						<input required type="text" name="author" id="author" value="" size="22" /> 
+					</p> 
+					<p> 
+						<label for="email">Email*</label> 
+						<input required type="email" name="email" id="email" value="" size="22"  /> 
+					</p> 
+					<p> 
+						<label for="url">Website</label> 
+						<input type="url" name="url" id="url" value="" size="22"  /> 
+					</p> 
+					<p> 
+						<label for="url">Is water wet or dry?*</label> 
+						<input type="text" name="dampness" id="dampness" value="" size="22"  /> 
+					</p> 
+					<p>
+						<label for="comment">Comment</label> 
+						<textarea required name="content" id="comment"  cols="40" rows="10"></textarea>
+					</p> 		 
+					<p>
+						<input name="submit" type="submit" id="submit"  value="Submit Comment" /> 
+					</p>
+		</form>
+
+	</section>
+	</aside><!-- comments -->
+{% endif %}

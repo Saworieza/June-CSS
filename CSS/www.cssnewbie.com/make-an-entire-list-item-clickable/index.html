@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Improve Usability and CTR: Make an Entire List Item Clickable</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Improve Usability and CTR: Make an Entire List Item Clickable Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Best CSS Newbie Articles of 2009' href='../index.html?p=488' />
+<link rel='next' title='How To Emulate a Foreach Loop in JavaScript' href='../index.html?p=511' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=501' />
+<link rel='shortlink' href='../index.html?p=501' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,228] -->
+<meta name="description" content="Larger clickable areas make for greater usability and a higher click-through rate. Here's how to expand a clickable area to an entire list item using jQuery." />
+
+<meta name="keywords" content="jquery, javascript, clickable li, jquery trick, window.location,anchor,hover,javascript,lists,navigation,basic techniques" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-501 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-501" class="post-501 post type-post status-publish format-standard hentry category-basic-techniques category-javascript category-lists category-navigation tag-anchor tag-hover tag-javascript tag-jquery tag-lists tag-navigation">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=501" title="Permalink to Improve Usability and CTR: Make an Entire List Item Clickable" rel="bookmark">Improve Usability and CTR: Make an Entire List Item Clickable</a>
+	</h2>
+	<div class="meta">
+		<p>Published January 12, 2010 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../example/clickable-li/index.html"><img src="../wp-content/uploads/2010/01/clickable-list-items.png" alt="" title="Clickable List Items." width="500" height="150" class="alignnone size-full wp-image-502" /></a></p>
+<p>I was recently working on the navigation for a new WordPress site (to be announced later) and I encountered a bit of a conundrum when it came to my category navigation. </p>
+<p>I had developed some snazzy PHP/WordPress scripting to output my category information into a list containing both the category name as well as the category description. It was a nice way to show people what categories the site had, as well as offering some insight into what the category might contain. The code looked something like this: <span id="more-501"></span></p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul id=&quot;categories&quot;&gt;
+	&lt;li id=&quot;cat-1&quot;&gt;
+		&lt;h2&gt;&lt;a href=&quot;/some/where/&quot;&gt;Category One&lt;/a&gt;&lt;/h2&gt;
+		&lt;p&gt;This is a description of category 1.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li id=&quot;cat-2&quot;&gt;
+		&lt;h2&gt;&lt;a href=&quot;/some/where/else/&quot;&gt;Category Two&lt;/a&gt;&lt;/h2&gt;
+		&lt;p&gt;Category 2 description goes here.&lt;/p&gt;
+	&lt;/li&gt;
+	(...and so on...)
+&lt;/ul&gt;</pre>
+<p> I styled it such that the style changed when the user hovered over the list item (as in the image above). But while the list item contained a lot of information, the link to the category (inside the heading) &mdash; and therefore the actual clickable area &mdash; was rather small. I wanted the entire list item to be clickable.  </p>
+<p>And this isn&#8217;t a purely aesthetic choice, either (although that had something to do with it). It&#8217;s a usability concern. If I wanted my entire list item changed on hover, people would expect that clicking the list item would elicit some sort of response – this is the way navigation works in most corners of the web. But in this case, only those fortunate enough to click the anchor inside the heading tag would get anywhere. Not good.</p>
+<p>Further, it stands to reason that the larger your links are, the more likely someone will click on them. <a href="http://en.wikipedia.org/wiki/Fitts's_law">Fitts&#8217; law</a> suggests that the time it takes to successfully click on an object is a function of the distance the mouse is from the object and the size of the object. Thus, the larger the clickable area, the higher the click-through ratio (CTR).</p>
+<p>This line of reasoning left me with three options:</p>
+<ol>
+<li>Wrap the contents of the entire list item in an anchor tag. This isn&#8217;t ideal, because an anchor tag is an inline element, and inline elements technically shouldn&#8217;t contain block-level elements (like heading or paragraph tags).</li>
+<li>Wrap the contents of each block-level element in an anchor tag. This also isn&#8217;t a great solution, because it grows my code and requires me to style several different links.</li>
+<li>Use jQuery to do what I needed.</li>
+</ol>
+<p>Can you guess which one I chose? If you selected option #3&#8230; well, you&#8217;ve visited this site before.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<h3>Our jQuery Script</h3>
+<p>This tiny snippet of code makes it all happen:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$("#categories li:has(a)").click(function() {
+		window.location = $("a:first",this).attr("href");
+	});
+});</pre>
+<p>What this does is assigns a new click function to every list item in our categories list that contains (&#8220;has&#8221;) at least one anchor tag. When someone clicks on the list item, it redirects the browser using window.location to the location indicated in the first anchor&#8217;s href.</p>
+<p>I&#8217;m using an neat jQuery trick here I haven&#8217;t talked about before:</p>
+<pre lang="javascript" escaped="true" line="1">$("a:first",this)</pre>
+<p>The &#8220;this&#8221; in the code above is a context selector, which is limiting the area in which we&#8217;re looking for the first anchor tag to the element that was just clicked. There is always a context applied to every jQuery expression you write: if you don&#8217;t specify a context, it uses the current HTML document. Here we&#8217;re limiting the context to the just-clicked list item, which reduces the complexity of our search (and presumably, calculation time) considerably.</p>
+<p>That&#8217;s it? Yep! Five lines of code and you&#8217;re done! <a href="../example/clickable-li/index.html">You can see a demo of this technique here.</a></p>
+<h3>A jQuery Plugin Alternative</h3>
+<p>Once I started working on this solution, I discovered that there&#8217;s already <a href="http://newism.com.au/blog/post/58/bigtarget-js-increasing-the-size-of-clickable-targets/">a jQuery plugin called BigTarget</a> that does something rather similar to what I&#8217;m doing. If you&#8217;re in to jQuery plugins, definitely give it a look-see. If you&#8217;re planning to apply this in a lot of places, it&#8217;d probably speed up your development time. For my one-off use, however, I think five lines of code are preferable to a large plugin.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			11 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-10356">
+		<article id="comment-10356" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7507832fed430535f5eabd42d8212e98?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">David Hucklesby </cite><a href="comment-page-1/index.html#comment-10356"><time datetime="2010-01-12T19:44:32+00:00">Jan. 12, 2010 @ 7:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>You could also use HTML5, which allows A tags to wrap both heading and paragraph. I believe this was added to HTML5 because it is both useful and enjoys 100% browser support.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-10360">
+		<article id="comment-10360" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-10360"><time datetime="2010-01-12T21:33:10+00:00">Jan. 12, 2010 @ 9:33 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;ll be excited to see HTML5 grow in browser support, for reasons just like this.</p>
+<p>Until then, I&#8217;ll probably stick to XHTML. I recently tried developing a site in HTML5 using a bunch of the new tags, only to discover that CSS support on HTML5-specific tags is atrocious. I gave up and converted it back to XHTML.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10374">
+		<article id="comment-10374" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f610df9699cc6436b7a0b7ec899ba712?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bigrigdriving.com' rel='external nofollow' class='url'>Brett</a> </cite><a href="comment-page-1/index.html#comment-10374"><time datetime="2010-01-13T06:29:11+00:00">Jan. 13, 2010 @ 6:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice code. A simple, excellent solution. </p>
+<p>I might just add ( for the sake of those who do not know )that this is perfect for a small number of items in a list, but for a larger list (say a page with 40 blocks of this nature) I believe you could attach the click event to the ul and use event bubbling to determine which element was clicked on and redirect the same way. That way you&#8217;re attaching one click listener to the entire list, instead of one click listener to each item in the list &#8211; more efficient. </p>
+<p>And if you had a setup that was dynamically adding items to that list after the initial page loading you could use the .live() function attached to the ul (I do believe). </p>
+<p>If the listener won&#8217;t attach properly to the ul you could wrap the entire ul in a div and attach the listener there for event bubbling &#8211; it seems to me I had an issue with this before &#8211; can&#8217;t remember for sure.</p>
+<p>Anyhow, I&#8217;ve been following your blog for some time &#8211; excellent work &#8211; I really enjoy it. I&#8217;m just glad I finally found something I could add!!!!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10378">
+		<article id="comment-10378" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a7bf121ff29c67f31c4d858c81d36570?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jordanwalker.net/index.php' rel='external nofollow' class='url'>Jordan Walker</a> </cite><a href="comment-page-1/index.html#comment-10378"><time datetime="2010-01-13T09:13:24+00:00">Jan. 13, 2010 @ 9:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice work, looking forward to implementation.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-10380">
+		<article id="comment-10380" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-10380"><time datetime="2010-01-13T09:43:56+00:00">Jan. 13, 2010 @ 9:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Excellent addenda, Brett! You&#8217;re right in that this is tailored for a smaller-style list. I built it for a list containing five elements, and thus didn&#8217;t bother to complicate my code to improve speed. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="trackback odd alt thread-odd thread-alt depth-1" id="comment-10392">
+		<p>Pingback: <a href='http://cssbrigit.com/CNews/entrada/2010011406194363' rel='external nofollow' class='url'>CSS Brigit | Improve Usability and CTR: Make an Entire List Item Clickable</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10650">
+		<article id="comment-10650" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bbd41240213f0c210cb9d131f0fa9bc6?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jan-Philipp </cite><a href="comment-page-1/index.html#comment-10650"><time datetime="2010-01-21T10:51:39+00:00">Jan. 21, 2010 @ 10:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Rob, its a very nice solution you build. Just one thing, if I&#8217;ve deactived Javascript, the blocks will still seem like a link itself (caused by the li-hovers and cursor:pointer stuff). I dont think thats very user friendly, because a user with deactivated or blocked Javascript might think of a link, but by clicking he wont find one (only the heading is a real link).</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-10651">
+		<article id="comment-10651" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-10651"><time datetime="2010-01-21T11:03:09+00:00">Jan. 21, 2010 @ 11:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That&#8217;s a good point, Jan-Philipp. One way around that might be to put the &#8220;hover&#8221; CSS styles in a separate class, and then assign that class to the clickable areas using jQuery.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10656">
+		<article id="comment-10656" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/09ae7bd8610890db28aed281479c526e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.nbatdigital.co.uk' rel='external nofollow' class='url'>web design kent</a> </cite><a href="comment-page-1/index.html#comment-10656"><time datetime="2010-01-22T07:00:45+00:00">Jan. 22, 2010 @ 7:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Some very interesting points made there, thanks for the great article.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13670">
+		<article id="comment-13670" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/06d73523189f82a9999994a9ae993a32?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.guccishopstar.com/gucci-clothing-c-80.html' rel='external nofollow' class='url'>cheap gucci clothing for men</a> </cite><a href="comment-page-1/index.html#comment-13670"><time datetime="2011-11-09T17:24:50+00:00">Nov. 9, 2011 @ 5:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have just found your site and enjoy each article. I admire your talent.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13898">
+		<article id="comment-13898" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9ec79fd338793ff6980931bda40dd108?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Menno Was </cite><a href="comment-page-1/index.html#comment-13898"><time datetime="2011-12-20T17:13:20+00:00">Dec. 20, 2011 @ 5:13 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This tiny script is great for increasing CTRs. Thanks a bunch! I combined this with the CSS3 rounded corner + gradient on hover.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=501#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='501' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2561d4a168" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=145" title="Permalink to: A Default Print Stylesheet Template">
+                    A Default Print Stylesheet Template                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Most modern websites don’t look all that attractive when printed using the site’s default CSS: overly-large widths, screen-friendly fonts, and creative color choices all work together to make most sites less than useful on the printed page. However, this tutorial and accompanying downloadable template should help you on your way to building your own personally customized print CSS. <a href="../index.html?p=145" class="more-link" title="Permalink to: A Default Print Stylesheet Template">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=501#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 798/852 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:54:09 by W3 Total Cache -->

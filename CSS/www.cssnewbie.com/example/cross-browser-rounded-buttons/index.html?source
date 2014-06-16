@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Newbie Example: Cross-Browser Rounded Buttons with CSS3 and jQuery</title>
+<style>
+/* These styles are just for this page. You can safely ignore them. */
+body {
+	font: medium/1.5 Arial, Helvetica, sans-serif;
+}
+#wrap {
+	width: 500px;
+	margin: 1em auto;
+}
+/* These styles are for the button. Be sure to grab them! */
+.button {
+	display: inline-block;
+	line-height: 1;
+	padding: 7px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	background-color: #39c;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+input.button, button.button {
+	border: 0px none;
+}
+.buttonwrap {
+	display: inline-block;
+	position: relative;
+	zoom: 1;
+	*display: inline;
+}
+.corner {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: transparent url(images/corner.png) no-repeat 0 0;
+}
+.tl { top: 0; left: 0; background-position: left top; }
+.tr { top: 0; right: 0; background-position: right top; }
+.bl { bottom: 0; left: 0; background-position: left bottom; }
+.br { bottom: 0; right: 0; background-position: right bottom; }
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+jQuery(function() {
+	jQuery.support.borderRadius = false;
+	jQuery.each(['BorderRadius','MozBorderRadius','WebkitBorderRadius','OBorderRadius','KhtmlBorderRadius'], function() {
+		if(document.body.style[this] !== undefined) jQuery.support.borderRadius = true;
+		return (!jQuery.support.borderRadius);
+	});
+});
+$(function() {
+	if(!$.support.borderRadius) {
+		$('.button').each(function() {
+			$(this).wrap('<div class="buttonwrap"></div>')
+			.before('<div class="corner tl"></div><div class="corner tr"></div>')
+			.after('<div class="corner bl"></div><div class="corner br"></div>');
+		});
+	}
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<h1>Cross-Browser Rounded Corners with CSS3 and jQuery</h1>
+	<p>The buttons below have rounded corners, and are completely flexible in size, in any modern browser. Anything IE6 and newer will see rounded corners! Be sure to read <a href="../../index.html?p=591">the CSS Newbie article</a> to find out how.</p>
+	<p><a href="index.html?source#" class="button">Rounded Corners on Anchors!</a></p>
+	<p><button class="button">Rounded Corners on Buttons Too!</button></p>
+	<p><input type="submit" class="button" value="Even Input Tags Work!" />
+</div>
+</body>
+</html>

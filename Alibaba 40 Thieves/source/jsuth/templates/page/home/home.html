@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+		
+{% block body %}
+
+  {% set page as hifi.http.get['page'] %}
+  {% set prev as true %}
+  {% if not page %}
+    {% set page as 1 %}
+    {% set prev as false %}
+  {% endif %}    
+
+  {% set next as false %}
+  {% for page in hifi.get({'type': 'post', 'orderBy': '-publishedAt', 'count': 10, 'page': page}) %}
+    <article>
+		    {% include "page/page-part.html" %}
+		  </article>
+		  {% if loop.index == 10 %}{% set next as true %}{% endif %}
+		{% endfor %}
+		{% if prev or next %}
+		  <div id="pagination">
+  		  {% if prev %}
+  		    {% if page == 2 %}
+          <a class="prev" href="/">Newer Posts</a>
+        {% else %}
+          <a class="prev" href="/?page={{ page }}">Newer Posts</a>
+        {% endif %}
+      {% endif %}
+      {% if next %}
+        <a class="next" href="/?page={{ page + 1 }}">Older Posts</a>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+{% endblock body %}

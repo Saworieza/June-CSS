@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: Styling Blockquotes</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: <a href="../../index.html?p=174">(Read the CSS Newbie article)</a></h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/styling-blockquotes/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSSnewbie Example: Styling Blockquotes&lt;/title&gt;
+&lt;style&gt;
+body {
+   font-size: 62.5%;
+   background-color: #fff5c6; }
+#wrap {
+   background-color: #fff;
+   width: 40em;
+   padding: 2em;
+   margin: 0 auto; 
+   font: 130% Arial, Helvetica, sans-serif; }
+#border {
+   margin: 1em 3em;
+   color: #999;
+   border-left: 2px solid #999;
+   padding-left: 1em; }
+#bgcolor {
+   margin: 1em 3em;
+   padding: .5em;
+   background-color: #f6ebc1; }
+#bgcolor p {
+   margin: 0; }
+#border-bgcolor {
+   margin: 1em 3em;
+   padding: .5em 1em;
+   border-left: 5px solid #fce27c;
+   background-color: #f6ebc1; }
+#border-bgcolor p {
+   margin: 0; }
+#bgimage {
+   margin: 1em 20px;
+   padding-left: 50px;
+   background: transparent url(quote.gif) no-repeat; }
+#dropcap {
+   margin: 1em 2em;
+   border-left: 1px dashed #999;
+   padding-left: 1em; }
+#dropcap p:first-letter {
+   float: left;
+   margin: .2em .3em .1em 0;
+   font-family: &quot;Monotype Corsiva&quot;, &quot;Apple Chancery&quot;, fantasy;
+   font-size: 220%;
+   font-weight: bold; }
+#dropcap p:first-line {
+   font-variant: small-caps; }
+#text {
+   color: #66a;
+   font-weight: bold;
+   font-style: italic;
+   margin: 1em 3em; }
+#text p:before {
+   content: '&quot;'; }
+#text p:after {
+   content: '&quot;'; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;
+   &lt;h1&gt;Styling Blockquotes&lt;/h1&gt;
+   &lt;p&gt;Here you can see a few blockquote styles in action. &lt;a href=&quot;/six-ways-style-blockquotes/&quot;&gt;Click here to go back to the original CSSnewbie article.&lt;/a&gt;&lt;/p&gt;
+   &lt;h2&gt;Unstyled Blockquote:&lt;/h2&gt;
+   &lt;blockquote&gt;&lt;p&gt;Phasellus aliquet  fringilla sem. Maecenas nulla. Mauris semper turpis ut ligula. Praesent  vel massa. Nam suscipit. Nunc pretium mauris id nibh. Maecenas  vulputate metus. Duis commodo arcu et sapien. Etiam sem erat,  pellentesque sed, convallis et, accumsan nec, neque. Nulla quis dolor  in pede sollicitudin auctor. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Color and Border:&lt;/h2&gt;
+   &lt;blockquote id=&quot;border&quot;&gt;&lt;p&gt;Donec hendrerit tellus eget purus. Aenean scelerisque leo at velit.  In hac habitasse platea dictumst. Proin sed diam. Sed in nulla eget sem  dapibus egestas. Vestibulum posuere. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Background Color:&lt;/h2&gt;
+   &lt;blockquote id=&quot;bgcolor&quot;&gt;&lt;p&gt;Ut at metus. Nam nibh felis,  molestie quis, facilisis non, facilisis sagittis, risus. Suspendisse  vitae mi. Mauris rhoncus quam ac ipsum. In iaculis risus vitae odio. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Border and Background Color:&lt;/h2&gt;
+   &lt;blockquote id=&quot;border-bgcolor&quot;&gt;&lt;p&gt;Nunc velit turpis, adipiscing nec, euismod nec, pharetra quis,  nibh. Fusce accumsan. Cras velit. Integer sed metus luctus nunc  suscipit tempor. Vivamus pellentesque turpis aliquam felis. Nullam at  nisi at diam condimentum lacinia. Sed nunc. Proin eget purus. Nunc nec  nibh. Aenean dignissim, enim quis vulputate posuere, arcu lectus  convallis dui, ut scelerisque mi orci sit amet leo. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Background Image:&lt;/h2&gt;
+   &lt;blockquote id=&quot;bgimage&quot;&gt;&lt;p&gt;Vestibulum ultrices ante. Phasellus suscipit. Suspendisse erat quam,  posuere cursus, condimentum quis, mollis eget, tellus. Proin rutrum  mollis libero. Integer feugiat sapien vitae purus. Donec vulputate. Nam  mollis magna sed ante. Duis et orci vestibulum sapien imperdiet  pretium. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Drop-Cap and Stylized Line:&lt;/h2&gt;
+   &lt;blockquote id=&quot;dropcap&quot;&gt;&lt;p&gt;Nullam volutpat. Donec velit. Vivamus velit. Class aptent taciti  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  Cras non justo sed lacus sodales consequat. Cras nec felis. &lt;/p&gt;&lt;/blockquote&gt;
+   &lt;h2&gt;Text and Color:&lt;/h2&gt;
+   &lt;blockquote id=&quot;text&quot;&gt;&lt;p&gt;Cras in  massa at erat viverra semper. Aliquam sem massa, varius vitae, egestas  sed, semper a, lectus. In faucibus, ipsum sed venenatis accumsan, eros  risus elementum nunc, at blandit risus orci a dui. Quisque sed nibh.&lt;/p&gt;&lt;/blockquote&gt;
+   
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

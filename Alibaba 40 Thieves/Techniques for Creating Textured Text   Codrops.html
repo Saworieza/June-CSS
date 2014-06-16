@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/ -->
+<html dir="ltr" lang="en-US" class=" js canvas fontface generatedcontent"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Techniques for Creating Textured Text   Codrops_files/XYxRCoAgEAUvlKx1hU4iumWRrrwnRLfPfoP5m2G8REuwxp61qF_kpDAPVoNOs9yG1KCk2wzFlVDDrpDIkfXn0sn_B5-qxoij9Rc.css" media="all">
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Techniques for Creating Textured Text | Codrops</title>
+				<link rel="stylesheet" type="text/css" href="./Techniques for Creating Textured Text   Codrops_files/codrops.css">
+		<link rel="stylesheet" type="text/css" media="print" href="./Techniques for Creating Textured Text   Codrops_files/codrops_print.css">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="shortcut icon" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/favicon.ico">
+
+		 			
+		
+		
+					<!--single syntax highlighter-->
+			<script src="./Techniques for Creating Textured Text   Codrops_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Techniques for Creating Textured Text   Codrops_files/large"></script><script type="text/javascript" async="" src="./Techniques for Creating Textured Text   Codrops_files/ga.js"></script><script src="./Techniques for Creating Textured Text   Codrops_files/shCore.js"></script>
+			<script src="./Techniques for Creating Textured Text   Codrops_files/shBrushXml.js"></script>
+			<script src="./Techniques for Creating Textured Text   Codrops_files/shBrushCss.js"></script>
+			<script src="./Techniques for Creating Textured Text   Codrops_files/shBrushPhp.js"></script>
+			<script src="./Techniques for Creating Textured Text   Codrops_files/shBrushSql.js"></script>
+			<script src="./Techniques for Creating Textured Text   Codrops_files/shBrushJScript.js"></script>		
+			<script>
+				SyntaxHighlighter.defaults['auto-links'] = false;
+				SyntaxHighlighter.defaults['toolbar'] = false;
+				SyntaxHighlighter.all();
+			</script>
+			   
+		<link rel="alternate" type="application/rss+xml" title="Codrops » Techniques for Creating Textured Text Comments Feed" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/feed/">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var fm_user_I18n = {"ajaxurl":"http:\/\/tympanus.net\/codrops\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/userscripts.js"></script>
+<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/jquery.js"></script>
+<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tympanus.net/codrops/xmlrpc.php?rsd">
+<link rel="prev" title="SVG Icons FTW" href="http://tympanus.net/codrops/2013/11/27/svg-icons-ftw/">
+<link rel="next" title="Progress Button Styles" href="http://tympanus.net/codrops/2013/12/12/progress-button-styles/">
+<link rel="shortlink" href="http://tympanus.net/codrops/?p=17424">
+
+<!-- All in One SEO Pack 2.1.5 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<link rel="author" href="http://sarasoueidan/">
+<meta name="description" content="In this article we&#39;ll explore all the current techniques for creating image or texture filled text and show you how to apply them.">
+
+<meta name="keywords" content="web design, textured text css, image behind text, svg text, svg pattern, fill text with image, canvas, css3">
+
+<link rel="canonical" href="./Techniques for Creating Textured Text   Codrops_files/Techniques for Creating Textured Text   Codrops.html">
+<!-- /all in one seo pack -->
+		<script src="./Techniques for Creating Textured Text   Codrops_files/search.js"></script>
+
+		<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-7243260-2']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
+
+				<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/modernizr.custom.70736.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/css3-mediaqueries.js"></script>
+			<link rel="stylesheet" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/css/ie.css"/>
+		<![endif]-->
+		<!--[if lt IE 8 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/iconfonts.js"></script>
+		<![endif]-->
+		<noscript>
+			
+		</noscript>
+	<script type="text/javascript" async="" src="./Techniques for Creating Textured Text   Codrops_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_af25dfd2f1908889af7a1aa5f4dcbd9e" src="./Techniques for Creating Textured Text   Codrops_files/s_af25dfd2f1908889af7a1aa5f4dcbd9e.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1243201{width:100%;display:block}div.bsap_1243201 a{width:125px}div.bsap_1243201 a img{padding:0}div.bsap_1243201 a em{font-style:normal}div.bsap_1243201 a{background: rgba(255, 255, 255, 0.5); padding: 10px;display:block;font-size:11px;color:#888;margin:0 10px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1243201 img{border:0;}div.bsap_1243201 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; text-align: center; background: rgba(255,255,255,0.5); line-height: 1200%; width: 125px; height: 125px;}div.bsap_1243201 a.adhere:hover{color: #7e95aa;}div.bsap_1243201 a{line-height:100%}div.bsap_1243201 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1243201 a.adhere{width:123px;height:123px}div.bsap_1243201 img.s{height:0;width:0}div.bsap_1248599{width:100%;display:block}div.bsap_1248599 a{width:125px}div.bsap_1248599 a img{padding:0}div.bsap_1248599 a em{font-style:normal}div.bsap_1248599 a{display:block;font-size:11px;color:#888;margin:0px 10px 10px 15px;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1248599 img{border:0;}div.bsap_1248599 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; border: 1px solid #C8D0E1; text-align: center; background: #D9E3EC; line-height: 1200%;}div.bsap_1248599 a.adhere:hover{color: #7E95AA;}div.bsap_1248599 a{line-height:100%}div.bsap_1248599 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1248599 a.adhere{width:123px;height:123px}div.bsap_1248599 img.s{height:0;width:0}div.bsap_1277316{width:100%;display:block}div.bsap_1277316 a{width:728px}div.bsap_1277316 a img{padding:0}div.bsap_1277316 a em{font-style:normal}div.bsap_1277316 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1277316 img{border:0;clear:right;}div.bsap_1277316 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1277316 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1277316 a{line-height:100%}div.bsap_1277316 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1277316 a.adhere{width:726px;height:88px}div.bsap_1277316 img.s{height:0;width:0}div.bsap_1277316{line-height:9px}div.bsap_1277316 .bsap_adhere2,div.bsap_1277316 iframe{float:left}div.bsap_1277316 .bsap_adhere2 a{height:90px;width:20px;background:url(http://s3.buysellads.com/ac/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px}</style></head>
+	<body>
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+			(function(){
+				var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+				(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+			})();
+		</script>
+		<!-- END BuySellAds.com Ad Code -->	
+		<div class="ct-container">
+			<header class="ct-header">
+				<div class="ct-inner ct-cf">
+
+											<div class="ct-branding">
+							<a class="ct-logo" href="http://tympanus.net/codrops" rel="home">Codrops</a>
+						</div>
+					
+					<div class="ct-nav-wrapper">
+						<nav class="ct-nav-main">
+						   <ul>
+								<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+								<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+								<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+								<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+								<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="ct-header-items-right ct-cf">
+						<div class="ct-search" id="ct-search">
+							<form method="get" id="searchform" action="http://tympanus.net/codrops/">
+								<div class="ct-search-input-wrap"><input class="ct-search-input" placeholder="Search on Codrops..." type="text" value="" name="s" id="s"></div>
+								<input class="ct-search-submit" type="submit" id="go" value=""><span class="ct-icon-search"></span>
+							</form>
+						</div>
+						<ul class="ct-connect">
+							<li><a class="ct-icon-feed" href="http://feeds2.feedburner.com/tympanus"><span>Rss Feed</span></a></li>
+							<li><a class="ct-icon-mail" href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US"><span>Email Updates</span></a></li>
+							<li><a class="ct-icon-twitter" href="http://www.twitter.com/codrops"><span>Codrops on Twitter</span></a></li>
+							<li><a class="ct-icon-facebook" href="http://www.facebook.com/pages/Codrops/159107397912"><span>Codrops on Facebook</span></a></li>
+							<li><a class="ct-icon-google-plus" href="https://plus.google.com/101095823814290637419" rel="publisher"><span>Codrops on Google+</span></a></li>
+						    <li><a class="ct-icon-github" href="https://github.com/codrops"><span>Codrops on Github</span></a></li>
+						</ul>
+					</div><!--/ct-header-items-right-->
+
+				</div><!-- ct-inner -->
+			</header><div class="ct-content">
+    <div class="ct-inner">		
+		
+								<div class="ct-main ct-main-post  " id="ct-main" role="main">
+					<div class="ct-post">
+						<article id="post-17424" class="post-17424 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-background-clip tag-canvas tag-image tag-svg tag-text tag-texture">
+							<header>
+								<div class="ct-subline entry-meta">
+									In <a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a>
+																		by <span class="byline author vcard"><a href="http://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></span>
+																		<time pubdate="pubdate">December 2, 2013</time>
+									<a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/#comments" title="Comment on Techniques for Creating Textured Text">18 Comments</a>																										</div>
+								<div class="clr"></div>
+								<h1 class="ct-h-shd entry-title">
+									Techniques for Creating Textured Text																	</h1>	
+							</header>		
+							<div class="ct-post-content">
+								<div class="ct-post-excerpt">In this article we'll explore all the current techniques for creating image or texture filled text and show you how to apply them.</div>								<div class="ct-ad-article-wrapper">
+										<div class="ct-ad-article">
+																						<img class="ct-ad-img" src="./Techniques for Creating Textured Text   Codrops_files/advertisement.jpg">
+												
+											<div id="bsap_1277316" class="bsap_1277316 bsap"><a href="http://stats.buysellads.com/click.go?z=1277316&b=4375353&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.07075969036668539&link=http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&utm_medium=display&utm_content=codrops728v1&utm_campaign=codrops" onmouseover="window.status = &#39;http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&amp;utm_medium=display&amp;utm_content=codrops728v1&amp;utm_campaign=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Bizness Apps - Take Your Clients Mobile!" id="bsa_4375353" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/206983-1391123218.png" width="728" height="90" alt="Bizness Apps - Take Your Clients Mobile!"></a></div>
+										</div>
+									</div>
+								
+								<p><a href="http://tympanus.net/Tutorials/TexturedText/"><img src="./Techniques for Creating Textured Text   Codrops_files/TexturedText.jpg" alt="TexturedText" width="580" height="315" class="alignnone size-full wp-image-17748"></a></p>
+<p><a class="demo" href="http://tympanus.net/Tutorials/TexturedText/">View demo</a> <a class="download" href="http://tympanus.net/Tutorials/TexturedText/TexturedText.zip">Download source</a></p>
+<p>In this article we’re going to explore several techniques that can be used to create textured text or apply a background to text.</p>
+<p><em>Please remember that some of the techniques covered in the article are experimental with very low browser support, and may not be the best technique to use when you’re building real projects that need wide browser support.</em></p>
+<p>I’ve included a screenshot for each demo, the link to the demo in the end of each technique. You can also click the screenshot to see the respective demo. </p>
+<h3>Applying an Image Background to Text Using <br><code>-webkit-background-clip: text</code></h3>
+<p>We’re going to start with the CSS <code>background-clip</code> property and use it to get the following result:</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index.html"><img src="./Techniques for Creating Textured Text   Codrops_files/textured-text-demo1.png" alt="textured-text-demo#1" width="814" height="871" class="alignnone size-full wp-image-17517"></a></p>
+<p>The CSS <a href="http://dev.w3.org/csswg/css-backgrounds/#the-background-clip" title="Background-clip property W3C spec"><code>background-clip</code> property</a> determines an element’s <strong>background painting area</strong>, which is the area within which the background is painted. By default, the background extends all the way to the border of an element with a default value of <code>border-box</code>, and it can take other values like <code>padding-box</code> and <code>content-box</code>, which are self-explanatory.</p>
+<p>Different effects, such as <a href="http://css-tricks.com/transparent-borders-with-background-clip/" title="Transparent Borders with background-clip">giving an element transparent borders</a>, can be created using this property, and it is pretty <a href="http://caniuse.com/#search=background-clip" title="background-clip browser support statistics on caniuse.com">well supported</a> in all modern browsers.</p>
+<p>The <code>background-clip</code> property was <a href="https://www.webkit.org/blog/164/background-clip-text/">extended in Webkit</a> with a fourth value, <code>text</code>, which causes the background image to <strong>clip to foreground text</strong> (including decorations and shadows). Then, by giving the text a transparent color using the Webkit-only property <code>-webkit-text-fill-color</code>, the background image will show through the text, thus completing the clipping effect.</p>
+<p>The <code>text</code> value of the <code>background-clip</code> property is, at the time of writing of this article, <strong>not part of any standard yet, so unfortunately it can only work in WebKit browsers</strong>, and a simple CSS fallback can be provided for other browsers, or <a href="https://github.com/TimPietrusky/background-clip-text-polyfill" title="background-clip property polyfill">a polyfill</a> could be used to provide other fallbacks.</p>
+<p>For now, we’ll create a text with a background using the <code>-webkit-background-clip</code> property, and provide a CSS-only fallback which will <a href="http://css-tricks.com/image-under-text/" title="Show Image Under Text (with Acceptable Fallback)">show the image underneath the text</a> for non-WebKit browsers.</p>
+<p>For our demo (shown in the screenshot above), we have an element with a background and a headline inside it, and we want to clip its background to make it appear as if the background is only applied to the text inside it.</p>
+<pre class="brush:html">&lt;div class="container"&gt;
+	&lt;!-- the element whose background we're going to clip --&gt;
+	&lt;div class="clipped"&gt;
+		&lt;h1&gt;CO&lt;br/&gt;OK&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;!-- arbitrary content --&gt;
+	&lt;p&gt;&lt;span&gt;The #1 cooking magazine in the world.&lt;/span&gt; New healthy and delicious recipes every week. Subscribe to the weekly issue of COOK magazine and stay up-to-date on the latest kitchen trends and tips anc tricks from the world's #1 chefs. &lt;br/&gt;
+	Download our app available for Android, iOS and Windows phones.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<p>We’re going to use a “fat font”, so that the background is more visible through the text. The <code>.clipped</code> element will get a background image, which we’ll clip to the text using the <code>text</code> value of the <code>background-clip property</code>. We’re going to set the text color to white, because non-WebKit browsers will display the text on top of the image and we need to pick a font color that would be readable on the background we chose. Then we’re going to set the text’s fill color to transparent, which will override the white text color in WebKit browsers so that the background image can show through.</p>
+<pre class="brush:css;">.clipped {
+	background: url(../img/kitchen.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	padding: 2em;
+	/* -webkit-background-clip clips the background of the element to the text */
+	-webkit-text-fill-color: transparent; /* overrides the white text color in webkit browsers */
+	-webkit-background-clip: text;
+}
+</pre>
+<p><strong>Check out demo 1: </strong> <a href="http://tympanus.net/Tutorials/TexturedText/index.html" title="Techniques for Image-Filled Text (Demo 1)">Text with Background using <code>background-clip:text</code></a></p>
+<p>If you’re viewing the demo in a non-WebKit browser, you will see a white text on top of a background image.</p>
+<p>Displaying the background image behind the opaque text in non-WebKit browsers is probably the best fallback for when the image plays an important role in conveying a visual message, but you can also fall back to regular text without the image in the background, if you want. Divya Manian has written <a href="http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html" title="Using background clip for text with CSS fallback">an excellent article</a> explaining how to achieve that regular text fallback, and Rachel Nabors has created a Sass mixin based on Divya’s code and has made it <a href="http://codepen.io/rachelnabors/pen/hacbD" title="background-clip Sass mixin by Rachel Nabors">available on Codepen</a> for you to use if you want, too.</p>
+<p>Now, just like we applied an image background to our text, you could also apply a gradient background to it. Because gradients in CSS are images you can apply a gradient to the <code>.clipped</code> element above, and the result will be a text with a gradient background. Riza Selçuk Saydam has created a very nice <a href="http://codepen.io/rss/full/pxuzb" title="How a text gradient is made - Codepen">interactive step-by-step demo on Codepen</a> which explains how a text gradient is made. You can check it out for a more visual explanation of this technique.</p>
+<h3>Applying Texture to Text Using <code>mask-image: url();</code></h3>
+<p>The following CSS technique we’re going to go over is, at this time, also supported in WebKit browsers only (see <a href="http://caniuse.com/#search=mask" title="browser support for CSS masking from caniuse.com">support tables here</a>) with the <code>-webkit</code> prefix. </p>
+<p>We’re going to use <strong>CSS masks</strong> to create a nice textured text effect. <a href="http://www.w3.org/TR/css-masking/" title="CSS Masking W3C Working Draft">CSS Masking is a W3C working draft</a>, and so hopefully it won’t be long before other browsers also start implementing it.</p>
+<p>But for now, we’re going to create a demo that will currently work in WebKit browsers only, and we’ll provide a simple fallback for non-supporting browsers. We’ll be using CSS’s <a href="http://www.w3.org/TR/css-masking/#the-mask-image"><code>mask-image</code> property</a> to apply a splatter effect to text to get the following result:</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index2.html"><img src="./Techniques for Creating Textured Text   Codrops_files/textured-text-demo2.png" alt="textured-text-demo#2" width="814" height="726" class="alignnone size-full wp-image-17478"></a></p>
+<p><strong>When we’re using CSS masks, we’re making the text take the shape of its mask image, instead of making the image take the shape of the text as with the <code>background-clip</code> technique above.</strong></p>
+<p>The <code>mask-image</code> property takes one of three values: an image with alpha opacity, where the transparent areas will be the areas where no content will show, a CSS gradient, or <code>none</code>. For our demo, we’ll be using an image with alpha opacity, which looks like the following:</p>
+<p><img src="./Techniques for Creating Textured Text   Codrops_files/splatter-mask_1-codrops.png" alt="splatter-mask_1-codrops" width="814" height="678" class="alignnone size-full wp-image-17514"></p>
+<p>The image represents a bunch of paint splatters that we want to apply to the text to make it look like it’s got some watercolor paint on it. Non-supporting browsers will simply display the text without the splatter effect applied to it.</p>
+<p>When you apply this mask to your text, or to any other content, the text will be visible where the black splatters are, and the parts where the mask image is transparent the text will not show. You can imagine your text (or content) as a layer and the mask as another layer, and then imagine placing the mask image on top of the text, and then get an eraser and start erasing all the parts of the text that are not covered by those black spots, then you’ll end up with the masked text as shown in the demo’s screenshot above.</p>
+<p>To make the effect more realistic, I added a watercolor background to the element containing that text, which will show through the text where it has been “erased”, therefore nicely blending the text with its background. All of this, using CSS only. Pretty neat, right? Too bad browser support is still very low at the moment. But we’ll go over recreating this effect to work cross-browser in the next section.</p>
+<p>Now, for our demo, we have a container wrapping two headings:</p>
+<pre class="brush:html;">&lt;div class="container&gt;
+  &lt;h1&gt;Art&lt;/h1&gt;
+  &lt;h2&gt;Digital Magazine&lt;/h2&gt;
+&lt;/div&gt;
+</pre>
+<p>We’ll be applying the splatter effect to the <code>h1</code> element. Here’s the relevant CSS for our effect:</p>
+<pre class="brush:css;">.container h1 {
+	font: 35em/100% "Oswald", sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	/* the property that creates the splatter effect */
+	-webkit-mask-image: url(../img/splatter-mask_1.png);
+	mask-image: url(../img/splatter-mask_1.png); 
+}
+</pre>
+<p>And that’s all you need to achieve that effect. Now, of course you’ll want to add some extra styling like I did in the demo, depending on the overall effect you’re after, but that one line of CSS is what’s important when you use a mask to add texture to text.</p>
+<p>One important thing to note here is that when this property is implemented in other browsers, a <code>-webkit-</code> prefix may or may not be the only prefix you need. You need to add the <code>-webkit-</code> prefix for this to work at the time of writing of this article, and if you do use this technique in a project, make sure to update your code whenever the spec or browser support changes.</p>
+<p><strong>Check out demo 2: </strong><a href="http://tympanus.net/Tutorials/TexturedText/index2.html" title="Techniques for Image-Filled Text (Demo 2)">Textured Text using mask-image</a>.</p>
+<p>The demo will fall back to a regular text over an image in non-supporting browsers.</p>
+<p>You can read more about CSS Masking in the <a href="http://www.w3.org/TR/css-masking/" title="CSS Masking Working Draft">W3C spec</a>, and check another example of subtle textured text in <a href="http://trentwalton.com/2011/05/19/mask-image-text/" title="CSS Mask-Image and Text">this post</a> by Trent Walton.</p>
+<div class="ct-ad-article-wrapper ct-ad-article-wrapper-in"><div class="ct-ad-article"><img class="ct-ad-img" src="./Techniques for Creating Textured Text   Codrops_files/advertisement.jpg"><div id="bsap_1279993" class="bsap_1279993 bsap"><iframe width="728" height="90" id="ad_3916284_frame" src="./Techniques for Creating Textured Text   Codrops_files/raw_cb354f56e6453c38f69543af337c4317.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe></div><div style="clear:both;"></div></div></div>
+<h3>Creating textured text with SVG</h3>
+<p>Both of the previous effects can be recreated using SVG, and the best thing about it is that the results obtained with SVG are cross-browser, so you can use the SVG method as a fallback for non-supporting browsers for the above CSS properties.</p>
+<h4>Clipping A Background to Text using An SVG <code>&lt;clippath&gt;</code></h4>
+<p>First, we’re going to recreate the CSS <code>background-clip: text</code> effect using SVG’s <code>&lt;clippath&gt;</code> element.</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index3.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo3.jpg" alt="demo#3" width="814" height="408" class="alignnone size-full wp-image-17639"></a></p>
+<p>A <a href="http://www.w3.org/TR/SVG/masking.html#EstablishingANewClippingPath" title="Establishing a Clipping path - W3C spec">clipping path</a> determines the shape or region where the background is going to be applied. The parts of the background that lie outside the defined shape will not be painted, and only those inside the given shape will be.</p>
+<p>A clipping path can take several values, one of which is a <code>&lt;text&gt;</code> element. When the clip path is set to a text element, the background will be clipped to the shape of the text used.</p>
+<p>Once a clipping path is defined (we’ll get to the code in a minute), that path can be referenced using <code>clip-path</code>, either as an attribute of the image that we want to clip, or as a CSS property of that image.</p>
+<p>Let’s start by defining the clip path that we want to use to clip our image, which in our case will be just a single word that we want our background image to show through.</p>
+<p>First we create an <code>SVG</code> element which will contain all our SVG code. Then we’ll define our clip path and apply it to an <code>image</code> element via the <code>clip-path</code> attribute:</p>
+<pre class="brush:html;">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="400" viewBox="0 0 1200 400"&gt; 
+    &lt;!-- add title for accessibility --&gt;
+    &lt;title&gt;Adding Background to Text using SVG clipPath&lt;/title&gt; 
+    &lt;defs&gt;  
+      &lt;clippath id="my-path"&gt;
+        &lt;text x="50" y="300" font-size="200" &gt;WATERCOLOR&lt;/text&gt;
+      &lt;/clippath&gt;
+    &lt;/defs&gt;
+    &lt;image xlink:href="img/watercolor_1.jpg" clip-path="url(#test)" width="100%" height="100%" preserveAspectRatio="none" /&gt;
+&lt;/svg&gt;
+</pre>
+<p><em>Because an SVG element is basically a graphic, make sure to include a title so that it’s accessible by screen readers.</em></p>
+<p>In the code above, we’ve created a <code>text</code> element, given it a font size, and defined the x and y coordinates which determine where the text will be drawn inside our SVG. Then, we’ve placed our text element inside a <code>clippath</code> element, which we’ve given an ID so that we’d be able to reference it. Then, we placed the <code>clippath</code> element inside a <code>defs</code> element. The <code>defs</code> element can be used to store content that will not be directly displayed. This stored hidden content can then be referenced and displayed by other SVG elements, which makes it ideal for things such as patterns that contain reusable graphics. And in our case, it’s perfect for <em>defining</em> our clip path that we want to reference in our image attribute.</p>
+<p>Next, we added our image, gave it a width and a height, and set the <code>preserveAspectRatio</code> to <code>none</code> so that its aspect ratio does not get locked, because if it does, then the height and width won’t be applied to it if they don’t preserve its aspect ratio.</p>
+<p>And last, we referenced the clipping path we defined by using the <code>clip-path</code> attribute on the image. The <code>clip-path</code> attribute takes the ID of the <code>clippath</code> element as its value, and applies the clipping path to the image.</p>
+<p><strong>Check out demo 3: </strong><a href="http://tympanus.net/Tutorials/TexturedText/index3.html" title="Techniques for Image-Filled Text (Demo 3)">Text background using SVG &lt;clippath&gt;</a>.</p>
+<p>Instead of applying the clip path to the image by referencing it with the <code>clip-path</code> <strong>attribute,</strong> you could also apply it via CSS like so:</p>
+<pre class="brush:css;">image {
+    clip-path: url(#my-path);
+}
+</pre>
+<p>This should work as expected in all modern browsers: Chrome, Safari, Opera, Firefox and IE9+. So, if you do want to use the CSS <code>background-clip: text;</code> property you could, for example, check for browser support for <code>background-clip: text</code> using <a href="http://modernizr.com/" title="Modernizr Homepage">Modernizr</a>, and provide the SVG as a fallback for non-supporting browsers, and this is kind of what Tim Pietrusky’s <a href="https://github.com/TimPietrusky/background-clip-text-polyfill" title="Background-clip Polyfill">polyfill</a> does, but instead of using a background image and clipping it using <code>clippath</code>, it uses an SVG pattern to fill the text with the background image that you would initially want to clip. In the next section, we’re going to go over filling a text with a pattern in SVG.</p>
+<h4>Applying a Background To Text By Filling It With An SVG <code>&lt;pattern&gt;</code></h4>
+<p>So another way we could apply a background or pattern to text is by <em>filling</em> the text with a pattern, instead of using a background image and clipping it to the text. For this demo, we’re going to fill our text with a wooden pattern which I got from <a href="http://subtlepatterns.com/" title="Subtle Patterns Homepage">SubtlePatterns</a>.</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index4.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo4.jpg" alt="demo#4" width="814" height="467" class="alignnone size-full wp-image-17637"></a></p>
+<p>Using an image and clipping it to text could be a great choice for when you’re using decorative fonts like we did in our first demo, where we wanted a big portion of the image to show through the text, because the image plays a role in defining the character of our demo. But sometimes, all we want to do is just add a simple and subtle pattern to text to give it that extra nice touch which makes it less dull. In that case, using SVG, we can define a pattern just like we defined a clipping path in the previous section, and then we can use that pattern to <em>fill</em> the text with it.</p>
+<p>Similar to the previous demo, we have an SVG element with a title added for accessibility, a <code>text</code> element which we want to fill with the pattern, and a <code>defs</code> element which we’re going to use to <em>define</em> our pattern. The pattern consists of an <code>image</code> and has an ID that we’ll be using when we want to reference it and apply it to our text. We’re going to reference the pattern inside the text’s <code>fill</code> attribute, or via the text’s CSS <code>fill</code> property.</p>
+<pre class="brush:html;">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="400" &gt; 
+	&lt;!-- add title for accessibility --&gt;
+	&lt;title&gt;Applying a patterned background to text in SVG&lt;/title&gt; --&gt;
+	&lt;!-- Source: http://lea.verou.me/2012/05/text-masking-the-standards-way/ --&gt;
+	&lt;defs&gt;
+		&lt;pattern id="filler" patternUnits="userSpaceOnUse" width="400" height="400" &gt;
+			&lt;image xlink:href="img/purty_wood.png" width="1200" height="600" preserveAspectRatio="none" /&gt;
+		&lt;/pattern&gt;
+	&lt;/defs&gt;
+	&lt;text x="100" y="70%" font-size="200" fill="url(#filler)"&gt;WOOD&lt;/text&gt;
+&lt;/svg&gt;
+</pre>
+<p>And similar to the previous demo, you could reference the pattern via CSS like so:</p>
+<pre class="brush:css;">text {
+    fill: url(#filler);
+}
+</pre>
+<p><strong>See demo 4, which also works in all modern browsers, in action: </strong><a href="http://tympanus.net/Tutorials/TexturedText/index4.html" title="Techniques for Image-Filled Text (Demo 4)">Text background using SVG text fill with image</a>.</p>
+<p>At this point, it is worth noting that not only can you use an image as an SVG pattern, but because gradients are, as we mentioned before, also images, you can also create an SVG gradient and use that to fill the text, instead:</p>
+<p><img src="./Techniques for Creating Textured Text   Codrops_files/demo5.jpg" alt="demo#5" width="814" height="383" class="alignnone size-full wp-image-17638"></p>
+<p>Creating and using a gradient in SVG is simple. A gradient is created as a <code>radialGradient</code> or <code>linearGradient</code> element, and is given an ID, and is then referenced in the <code>fill</code> attribute or CSS property like we did with the <code>&lt;pattern&gt;</code> above. Here’s a simple example where a gradient is used to fill the text. </p>
+<p><strong>Check out <a href="http://tympanus.net/Tutorials/TexturedText/index5.html">demo 5</a> that shows text being filled with a gradient.</strong></p>
+<p>And of course, a gradient can also be set as the container’s background image, and then we can clip the background using <code>clippath</code> just like we did in the previous section.</p>
+<h4>Applying Texture to Text Using an SVG <code>&lt;mask&gt;</code></h4>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index6.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo6.jpg" alt="demo#6" width="814" height="383" class="alignnone size-full wp-image-17636"></a></p>
+<p>Just like we can apply an image mask to an element using the CSS <code>mask-image</code> property, we can also apply the same masking concepts and get the same effects using <a href="http://www.w3.org/TR/SVG/masking.html" title="SVG Masking W3C Spec">SVG masks</a>.</p>
+<p>An image with opaque and transparent areas would define where the element would be painted just like we saw in the previous section with the CSS <code>mask-image</code> property. There is one important difference, though, between CSS image masks and SVG image masks: <strong>SVG masks, unlike CSS masks, use the luminance values in a mask to determine what gets masked, not the alpha values</strong>. So an image that would be composed of black and transparent areas, for example, like the splatter mask we used above, would have to be replaced with an image composed of white and transparent areas. So, if we were to recreate the same splatter text effect that we created above, we would have to use a mask image that looks like the following:</p>
+<p>&gt;<img src="./Techniques for Creating Textured Text   Codrops_files/luminance-mask-codrops.png" alt="luminance-mask-codrops" width="814" height="678" class="alignnone size-full wp-image-17543"></p>
+<p>An alpha channel image mask can be easily converted to a luminance image mask in Photoshop by applying a white color overlay which turns the black areas into white, and that is what I have done to replace the CSS image mask with this one suitable for SVG masks. The light gray areas visible in the above image are actually transparent, I just gave the image this background so you can see the white splatters which otherwise wouldn’t be visible on the white background of this post.</p>
+<p>Now, just like we defined our SVG clipping path and pattern, we can define our mask in a similar way and apply it to our text.</p>
+<p>We will create an <code>image</code>, wrapped inside an SVG <code>mask</code> element, which will get an ID so that it can be referenced, and the <code>mask</code> will be wrapped inside the <code>defs</code> element, which is used to define our mask without directly rendering it.</p>
+<p>So it’s like saying: we’re defining (<code>defs</code>) an SVG mask (<code>mask</code>) which is an image (<code>image</code>) with the following URL (URL to the luminance mask above), and then we’ll apply this mask to our text using the <code>mask</code> attribute on the <code>text</code> element, or, of course, via CSS using the <code>mask</code> property.</p>
+<pre class="brush:html;">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="380" &gt; 
+	&lt;!-- add title for accessibility --&gt;
+	&lt;title&gt;Adding Texture to Text using SVG Masks&lt;/title&gt;
+		&lt;defs&gt;
+			&lt;mask id="mask"&gt;
+				&lt;image width="1200px" height="1200px" xlink:href="img/splatter-mask_luminance.png" preserveAspectRatio="none"/&gt;
+			&lt;/mask&gt;
+		&lt;/defs&gt;
+	&lt;text x="50" y="70%" font-size="168" fill="white" mask="url(#mask)"&gt;WATERCOLOR&lt;/text&gt;
+&lt;/svg&gt;
+</pre>
+<p>And to complete the effect, I added the watercolor background to the main <code>svg</code> element to make it look like the text is blended into that background. </p>
+<p><strong>Check out the cross-browser result in <a href="http://tympanus.net/Tutorials/TexturedText/index6.html">demo 6</a>.</strong></p>
+<p>If you want you can read more about combining CSS and SVG masks in <a href="http://thenittygritty.co/css-masking" title="How to Use CSS Masking in CSS Now">this excellent article</a> by Christian Schaefer on The Nitty Gritty blog. There’s a lot more potential to SVG masking than this, as things can get quite interesting when you use <a href="http://updates.html5rocks.com/2012/12/Canvas-driven-background-images" title="Canvas-driven backgrounds">animated Canvas-driven backgrounds</a>, for example, as masks.</p>
+<h3>Creating textured text with HTML5 <code>&lt;canvas&gt;</code></h3>
+<p>The last technique we’re going to go over uses the HTML5 <code>&lt;canvas&gt;</code> element to create the above effects. With <code>&lt;canvas&gt;</code>, you can also “clip” an element to the shape of another, “fill” text with texture, and apply a mask-like effect to text, by changing the value of the <code>globalCompositeOperation</code> property of the canvas context.</p>
+<p>Before we get into the how of it, let’s define our markup, because it’s the same markup for the 3 techniques we’re going to cover. </p>
+<p>We have a canvas element for which we specify a height and a width, and before the closing tag, we’re going to add a text content which will be available for screen readers to read, and for browsers that have JavaScript disabled to fall back to. One note here, though, is that Firefox does not display the text as a fallback for the canvas when JavaScript is disabled, which <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=707806">may be a bug</a>.</p>
+<pre class="brush:html;">&lt;canvas id="canvas" width=1000 height=600 &gt;
+ <!-- fallback text added for accessibility and no-js browsers -->
+  WATER
+&lt;/canvas&gt;
+</pre>
+<p>Now that we have our markup ready, let’s start drawing some textured text!</p>
+<p>For our first demo, we’re going to create a text on our canvas, and <strong>fill it</strong> with a pattern of our choice to get the following result:</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index7.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo7.jpg" alt="demo#7" width="814" height="395" class="alignnone size-full wp-image-17635"></a></p>
+<p>We’re going to get our canvas element and its drawing context, and then we’re going to create an image, and use that image as the <strong>fill style</strong> for our text.</p>
+<pre class="brush:js;">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+//create image we're going to use as a fill pattern
+var img = document.createElement("img");
+img.src="img/water.jpg";
+//draw the text
+img.onload= function(){
+  drawText();
+}
+//function that draws the text and fills it with the texture from the img
+function drawText() {
+    ctx.font = "bold 200pt Oswald";
+    ctx.fillStyle = ctx.createPattern(img, 'repeat');
+    ctx.textAlign = 'center';
+    var x = canvas.width / 2; 
+    ctx.fillText("WATER", x, 400);
+    ctx.fill();
+}
+</pre>
+<p>So, let’s go over the above code. All the drawing happens inside a function <code>drawText</code>. We’re going to define the font style in the context’s <code>font</code> property, and then using the context’s <code>createPattern</code> method, we’re going to create a pattern out of the image we created before, and we’re going to set that pattern as the value for the <code>fillStyle</code> property, which determines, of course, the <strong>fill style</strong> for the font. And last but not least, we’re going to actually draw the text on the canvas using the <code>fillText</code> method, which takes a string which is the content of the text we want to draw, and a couple of x and y coordinates, which, as you may have guessed, determine where on the canvas the text will be painted.</p>
+<p>Check out <a href="http://tympanus.net/Tutorials/TexturedText/index7.html">demo 7</a> in action.</p>
+<p>There’s one thing to note here: when you’re using a custom font inside your canvas, you may not be able to see that custom font rendered, because the canvas drawing may happen before the font has been loaded. To work around this, you could, for example, use a font loader like the <a href="https://developers.google.com/fonts/docs/webfont_loader" title="Web Font Loader">Web Font Loader</a> developed by the Typekit and Google developers, and draw on the canvas <em>after</em> the font has been loaded:</p>
+<pre class="brush:js">WebFontConfig = {
+	google: { families: [ 'Oswald' ] },
+	fontactive: function() {
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var img = document.createElement("img");
+		img.src="img/water.jpg";
+		
+		img.onload= function(){
+			drawText();
+		}
+
+		function drawText() {
+			ctx.font = "bold 200pt Oswald";
+			ctx.fillStyle = ctx.createPattern(img, 'repeat');
+			ctx.textAlign = 'center';
+			var x = canvas.width / 2; 
+			ctx.fillText("WATER", x, 400);
+		}
+	}
+};
+(function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	 '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+})();
+</pre>
+<p><em>The demo files will all use this technique but I’ll keep it simple here and only show you relevant function for the technique in the following examples.</em></p>
+<p>Now, moving to the next technique, we’re going to create a clipping-like effect on our canvas by changing the value of the <code>globalcompositeOperation</code> property of our context. The final result will look like the following:</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index8.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo8.jpg" alt="demo#8" width="814" height="383" class="alignnone size-full wp-image-17634"></a></p>
+<p>The canvas context comes with the property <code>globalcompositeOperation</code> which defines the composite operations between what is known as the “source” and the “destination”. That is, it defines how what you want to draw will be blended with what is already drawn on the canvas. <strong>The source is what you want to draw, and the destination is what is already drawn before you set the <code>globalCompositeOperation</code> property</strong>. We can draw new elements or shapes behind existing shapes and mask off certain areas and even clear sections from the canvas using this property.</p>
+<p>The <code>globalCompositeOperation</code> can take one of 16 values, each of these values is demonstrated clearly in a <a href="https://developer.mozilla.org/samples/canvas-tutorial/6_1_canvas_composite.html" title="Examples of the HTML5 Canvas globalCompositeOeration property">visual example</a> on MDN, so check that out if you’re not familiar with this property yet, as those examples will help you understand the values we’re going to set next a lot better. Here’s a screenshot of the results of each of those values. In the demo’s source code, the destination is the blue rectangle which is drawn on the canvas first, and the source is the red circle which is drawn after the <code>globalCompositeOperation</code> value is set.</p>
+<p><img src="./Techniques for Creating Textured Text   Codrops_files/canvas-composite.png" alt="canvas-composite" width="814" height="566" class="alignnone size-full wp-image-17617"></p>
+<p>The <code>source-in</code> value of this property could be translated in plain English to “draw only the parts/areas of the source and destination where they intersect”. So, if you have two elements, one drawn and another one that you want to draw, the result will be that only the areas where these two elements intersect will be painted.</p>
+<p>To help understand this better, let’s get into the code right away.</p>
+<pre class="brush:js;">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var img = document.createElement("img");
+img.onload = function () {
+   drawText();
+}
+img.src="img/fire.jpg";
+function drawText() {
+  
+    // put text on canvas
+    ctx.font = "bold 180pt IM Fell Great Primer SC";
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'center';
+    var x = canvas.width / 2;
+    ctx.fillText("FIRE", x, 325);
+
+    // use compositing to draw the background image only where the text has been drawn
+    ctx.globalCompositeOperation = "source-in";
+    ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+}
+</pre>
+<p>In the above code, inside the <code>drawText</code> function, we have 3 “sections” that define the result of what will be drawn on the canvas. The first section is where we define the text, including all its styles, and then we go ahead and draw it using the <code>fillText</code> method. Next, we set the <code>globalCompositeOperation</code> of our context to <code>source-in</code>. Then, we draw the image on the canvas.</p>
+<p>So you see, the “source” in this case is the element that we want to draw after the <code>globalCompositeOperation</code> has been set (the image), and the “destination” is the text that we drew before we set it. And by setting the value to <code>source-in</code>, we’re telling the browser to draw the image only in the areas where this image intersects with the text, and that’s exactly how we get that clipping effect that we’re after.</p>
+<p>Once you wrap your head around each of the values of the <code>globalCompositeOperation</code>, you can start using them quickly and with ease, and, again, do make sure you check the visual examples on MDN, because they help a lot.</p>
+<p>When you do check them out, you’ll notice that if we set the value to <code>source-atop</code>, the result will be also the same for our demo. <code>source-atop</code> tells the browser to draw the parts/areas of the source (image) where it intersects with the destination (text), and also draw the remaining areas of the destination even those that do not intersect with the source, and in our case, that would also result in the same effect that we want.</p>
+<p><strong>View the <a href="http://tympanus.net/Tutorials/TexturedText/index8.html">live demo (demo 8)</a> for this technique.</strong></p>
+<p>Note: at the time of writing of this article, not all values of the global composite operation property are supported across browsers. There are six modes that work across browsers (in Chrome, Safari, Firefox, and Opera): source-over, source-atop, destination-over, destination-out, lighter, and xor. You can read more about this <a href="http://www.rekim.com/tag/globalcompositeoperation/">here</a>. And for more advanced examples of using the global composite operation property, check out <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/" title="Typographic effects in canvas">this post</a> on HTML5Rocks to learn more about creating some really cool typographic effects with <code>canvas</code>.</p>
+<p>And last but not least, we’re going to create one more effect using <code>canvas</code>, but this time we’ll be adding some texture to the text to blend it into the background like we did in the previous techniques with SVG and CSS. The demo will look like the following:</p>
+<p><a href="http://tympanus.net/Tutorials/TexturedText/index9.html"><img src="./Techniques for Creating Textured Text   Codrops_files/demo9.jpg" alt="demo#9" width="814" height="529" class="alignnone size-full wp-image-17633"></a></p>
+<p>We’re going to be using an image with alpha channels as our “mask”, and we want the text to be drawn only where it intersects with the black areas of the image, and to be “erased” where the image is transparent, right? So we want our source and destination to only be painted where they intersect with each other. According to this logic, and to the above screenshot of the <code>globalCompositeOperation</code> values, we’ll want to use the <code>source-in</code> value to get the result we’re after.</p>
+<p>Below is the image that we’re using as a “mask”. The black areas are where the image is going to intersect with the text. Just like we did in the CSS masking section, you can imagine one layer for the text and another for this image, put them on top of each other, and then erase any part of the image or text where the two don’t intersect with each other, and you get the final effect resulting from the <code>source-in</code> global composite operation.</p>
+<p><img src="./Techniques for Creating Textured Text   Codrops_files/brushed-codrops.png" alt="brushed-codrops" width="814" height="479" class="alignnone size-full wp-image-17629"></p>
+<p>The Javascript code is the same as the one above, only the value of the <code>globalCompositeOperation</code> is different, so we’ll jump right to the live demo, where you can check out the source code and play with it.</p>
+<p><strong>See the <a href="http://tympanus.net/Tutorials/TexturedText/index9.html">demo (demo 9) in action</a>.</strong></p>
+<p>And here again we added a background to our canvas to make the blending effect a little more realistic. We have a “scratched” background with scratched text that blend with each other nicely.</p>
+<h3>Animating Text Backgrounds</h3>
+<p>Not only can text have a background, but you can actually animate this background and create some neat interactive effects with it. Because this article is focused on techniques for adding background/texture to text, we won’t be going over how to animate these backgrounds, because that could be a whole article on its own.</p>
+<p>Mary Lou has written <a href="http://tympanus.net/codrops/2011/12/12/experiments-with-background-clip-text/" title="Experiments with Background-Clip">an article</a> where she experimented with the CSS <code>background-clip: text</code> property, and created some neat text background effects, so make sure to check them out!</p>
+<p>Trent Walton has also written <a href="http://trentwalton.com/bgclip">an article</a> where he goes over creating a text with a gradient background and animates that background resulting in a really nice and subtle effect.</p>
+<p>And as always, <a href="http://codepen.io/" title="Codepen">Codepen</a> includes some creative experiments using the CSS <code>background-clip</code> property with CSS animations, and among those I chose this <a href="http://codepen.io/lbebber/pen/xrwja">really cool experiment</a> by Lucas Bebber, in which he creates a nice effect of a text being filled with water, and provides a fallback for browsers that don’t support <code>background-clip: text</code>, so check that out as well and fiddle with the code, for there are some really cool techniques used to create the filling water effect.</p>
+<h3>Image Replacements</h3>
+<p>Because of the lack of browser support for a lot of the techniques used to create textured text effects, a lot of developers have been resorting to image replacement techniques to display graphical text.</p>
+<p>There have been a lot of techniques available throughout the years, and Chris Coyier has done a great job collecting all of these techniques with their pros and cons in what he called the <a href="http://css-tricks.com/examples/ImageReplacement/" title="CSS Image Replacement Museum">CSS Image Replacement Museum</a>.</p>
+<p>If you do not want to use any of the above techniques to create “graphical” text effects, and want to use one of the image replacement techniques available, you should also have a look at the newest of all techniques, a great technique by Scott Kellum, the one he called “The New Kellum Method”, in which he suggests using sort of an “empty” font, so to speak, which is a font which can be defined with the <code>@font-face</code> rule, and whose characters have no width and no marks, making the text invisible, and therefore allows you to avoid all the other techniques where you would need to hide the original text to make only the text’s background show.</p>
+<p>There are a lot of articles out there that elaborate on these image replacement techniques, and because these techniques are outside the scope of this tutorial which is aimed at showing techniques to create graphical text <em>without</em> having to replace it with an image, I’m only going to list a few resources that I recommend reading if you want to know more about (or use) an image replacement:</p>
+<ul>
+<li>The <a href="http://css-tricks.com/examples/ImageReplacement/" title="CSS Image Replacement Museum">CSS Image Replacement Museum</a> on CSS-Tricks</li>
+<li><a href="http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/" title="Replacing the -9999px Hack">Replacing The -9999px Hack</a> (The Kellum Method) by Jeffrey Zeldman</li>
+<li><a href="http://nicolasgallagher.com/another-css-image-replacement-technique/" title="Another CSS Image Replacement Technique">Another CSS image replacement technique</a> by Nicolas Gallagher</li>
+<li><a href="http://scottkellum.com/2013/10/25/the-new-kellum-method.html" title="The New Kellum Method">The New Kellum Method</a> by Scott Kellum</li>
+</ul>
+<h3>Final Words</h3>
+<p>I hope you learned a new technique or two from this article. I think we covered most of the possible ways to to create textured text with CSS and HTML. My favorite technique has to be the SVG one, simply because of its wider browser support. And when the day comes that all browsers support CSS masks and the <code>background-clip</code>‘s  <code>text</code> value, we can start using them without having to worry too much about providing fallbacks anymore, and then CSS would definitely be the best choice for us.</p>
+<p>I hope you found this article useful. Thank you for reading! =)</p>
+<p><em>Do you know other techniques for adding textures to text? If you do, make sure you share them in the comments below!</em></p>
+<div class="ct-github-link"><a href="https://github.com/SaraSoueidan/textured-text-techniques">Find this project on Github</a></div>
+<p><a class="demo" href="http://tympanus.net/Tutorials/TexturedText/">View demo</a> <a class="download" href="http://tympanus.net/Tutorials/TexturedText/TexturedText.zip">Download source</a></p>
+								
+																	<div class="ct-post-nav">
+										<div class="ct-post-prev">        
+											<strong>Previous:</strong><br> <a href="http://tympanus.net/codrops/2013/11/27/svg-icons-ftw/" rel="prev">SVG Icons FTW</a>  
+										</div>
+										<div class="ct-post-next">
+											<strong>Next:</strong><br> <a href="http://tympanus.net/codrops/2013/12/12/progress-button-styles/" rel="next">Progress Button Styles</a>  
+										</div>
+										<div class="clr"></div>
+									</div> <!-- ct-post-nav -->
+																
+							</div>
+						</article>
+						<p class="ct-tags">
+							Tagged with: <a href="http://tympanus.net/codrops/tag/background-clip/" rel="tag">background-clip</a> <a href="http://tympanus.net/codrops/tag/canvas/" rel="tag">canvas</a> <a href="http://tympanus.net/codrops/tag/image/" rel="tag">image</a> <a href="http://tympanus.net/codrops/tag/svg/" rel="tag">svg</a> <a href="http://tympanus.net/codrops/tag/text/" rel="tag">text</a> <a href="http://tympanus.net/codrops/tag/texture/" rel="tag">texture</a>						</p>
+						<div class="clr"></div>
+					</div>
+
+											<div class="ct-row">
+							<div class="ct-author-info ct-box">
+								<div class="ct-author-avatar">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/81b58502541f9445253f30497e53c280" class="avatar avatar-80 photo" height="80" width="80">								</div>
+								<div class="ct-author-page-desc">
+									<h4><a href="http://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></h4>
+									<p>
+										I'm a freelance front-end web developer from Lebanon, addicted to CSS3, Javascript, and fruity green tea. You can read more of my tutorials on <a href="http://sarasoueidan.com/">my website</a>, check my experiments out on <a href="http://codepen.io/SaraSoueidan">Codepen</a>, and follow me on <a href="http://twitter.com/SaraSoueidan">Twitter</a>.									</p>
+									<p class="ct-author-page-url"><strong>View all contributions by <a href="http://tympanus.net/codrops/author/sarasoueidan/" title="Posts by Sara Soueidan" rel="author">Sara Soueidan</a></strong></p>
+																		<p class="ct-author-page-url">
+										<strong>Website: </strong>
+										<a href="http://sarasoueidan.com/" target="_blank">http://sarasoueidan.com/</a>
+									</p>
+									<div>
+										<ul class="ct-social-profiles">
+											<li><strong>Social Links: </strong></li>
+																																		<li><a class="ct-social-twitter" href="http://twitter.com/SaraSoueidan">http://twitter.com/SaraSoueidan<span>Sara on Twitter</span></a></li>
+																																		<li><a class="ct-social-gplus" href="https://plus.google.com/115621441131126533845/posts?rel=author">https://plus.google.com/115621441131126533845/posts<span>Sara on Google Plus</span></a></li>
+																																																																			<li><a class="ct-social-github" href="http://github.com/SaraSoueidan">http://github.com/SaraSoueidan<span>Sara on Github</span></a></li>
+																																																																			<li><a class="ct-social-deviantart" href="http://emyoussif.deviantart.com/gallery/">http://emyoussif.deviantart.com/gallery/<span>Sara on Deviantart</span></a></li>
+																																											</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+
+						<h2 class="ct-letterpress">Related Articles</h2>
+						<div class="ct-related-post ct-row-float cf">
+							
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/">
+												<img width="300" height="162" src="./Techniques for Creating Textured Text   Codrops_files/AnimatedSVGIcons-300x162.jpg" class="attachment-medium wp-post-image" alt="AnimatedSVGIcons">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/">Animated SVG Icons with Snap.svg</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/10/15/animated-checkboxes-and-radio-buttons-with-svg/">
+												<img width="300" height="162" src="./Techniques for Creating Textured Text   Codrops_files/AnimatedCheckboxes-300x162.png" class="attachment-medium wp-post-image" alt="Animated Checkboxes">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/10/15/animated-checkboxes-and-radio-buttons-with-svg/">Animated Checkboxes and Radio Buttons with SVG</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/12/24/merry-christmas-with-a-bursting-gift-box/">
+												<img width="300" height="162" src="./Techniques for Creating Textured Text   Codrops_files/MerryChristmasCodrops_Main-300x162.png" class="attachment-medium wp-post-image" alt="MerryChristmasCodrops_Main">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/12/24/merry-christmas-with-a-bursting-gift-box/">Merry Christmas with a Bursting Gift Box</a></h3>
+									</div>
+												
+														</div>
+
+						
+										<div class="ct-row-wrapper">
+						<div class="ct-row">
+							
+<div class="ct-sharing ct-box">
+	<h4>Stay connected with us:</h4>
+	<div class="ct-link-list">
+		<a href="http://feeds2.feedburner.com/tympanus" class="ct-link-list-rss">Grab the <strong>RSS Feed</strong></a>
+		<a href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US" class="ct-link-list-mail">Get <strong>email updates</strong></a>
+		<a href="http://www.twitter.com/codrops" class="ct-link-list-twitter">Follow us on <strong>Twitter</strong></a>
+		<a href="http://www.facebook.com/pages/Codrops/159107397912" class="ct-link-list-fb">Join us on <strong>Facebook</strong></a>
+		<a href="https://plus.google.com/101095823814290637419/?prsrc=3" class="ct-link-list-gplus">Add us on <strong>Google+</strong></a>
+	</div>
+</div>
+							<div class="ct-bottom-ads ct-box">
+								<span class="ct-small-text">Advertisement</span>
+								<!-- BSA Zone Code -->
+								<div id="bsap_1248599" class="bsap_1248599 bsap"><a href="http://stats.buysellads.com/click.go?z=1248599&b=1474716&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.7147333140019327&link=http://bit.ly/getfoobar" onmouseover="window.status = &#39;http://bit.ly/getfoobar&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="jQuery Notification Bar Plugin" id="bsa_1474716" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/74474-1314892081.png" width="125" height="125" alt="jQuery Notification Bar Plugin"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=1248692&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.7395602967590094&link=http://www.foxyhare.com" onmouseover="window.status = &#39;http://www.foxyhare.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Foxyhare Hosting Services" id="bsa_1248692" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/57016-1302600028.gif" width="125" height="125" alt="Foxyhare Hosting Services"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=4746175&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.5306310732848942&link=http://www.digicrafts.com.hk/components/JSPolaroidGallery?utm_source=tympanus.net&utm_medium=display&utm_content=banner&utm_campaign=" onmouseover="window.status = &#39;http://www.digicrafts.com.hk/components/JSPolaroidGallery?utm_source=tympanus.net&amp;utm_medium=display&amp;utm_content=banner&amp;utm_campaign=&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="Polaroid Gallery jQuery Plug-ins" id="bsa_4746175" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/222078-1399780011.jpg" width="125" height="125" alt="Polaroid Gallery jQuery Plug-ins"></a></div>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</div>
+					
+						<section id="comments" class="ct-comments">
+	
+		
+			<div class="ct-commenttitle ct-cf">
+			<h2 id="comments-title">
+				<span>Feedback</span>
+				<sup>18</sup>
+			</h2>
+						<div class="ct-right"><a class="ct-addcomment buttonbig action fright" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/#respond">Leave a comment</a></div>
+					</div>
+		
+		
+		<ol class="ct-commentlist">
+							<li class="comment even thread-even depth-1" id="li-comment-454617">
+					<article id="comment-454617" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/97ae5fd555e262ffc2c1a4012a3d03b9" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">James</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454617" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T11:44:11+00:00">December 2, 2013 at 11:44</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">1</div>
+												<div class="ct-commentcontent">
+														<p>Having problem trying to choose the different demo versions because it is covering them up…</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454617#respond" onclick="return addComment.moveForm(&quot;comment-454617&quot;, &quot;454617&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					<ul class="children">
+				<li class="comment byuser comment-author-crnacura odd alt depth-2" id="li-comment-454619">
+					<article id="comment-454619" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/1b17d4931f914ee75c7f5e5dc7b17734" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Mary Lou</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454619" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T11:54:20+00:00">December 2, 2013 at 11:54</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">2</div>
+												<div class="ct-commentcontent">
+														<p>Hi James, we’ve edited the demos, could you please check if you still see the demo links covered up? Which OS and browser are you using? Thanks!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+				<li class="comment even thread-odd thread-alt depth-1" id="li-comment-454618">
+					<article id="comment-454618" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/4014af7ac4ea5d00df95bef4503b78dd" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">plutov</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454618" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T11:51:48+00:00">December 2, 2013 at 11:51</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">3</div>
+												<div class="ct-commentcontent">
+														<p>Wow. I’ve never seen so cool text, made by browser.</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454618#respond" onclick="return addComment.moveForm(&quot;comment-454618&quot;, &quot;454618&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-even depth-1" id="li-comment-454622">
+					<article id="comment-454622" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/96fda0cbc982f765e42be12bd5348005" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Praveen</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454622" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T13:34:49+00:00">December 2, 2013 at 13:34</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">4</div>
+												<div class="ct-commentcontent">
+														<p>Superb.. I liked the “APPLYING TEXTURE TO TEXT USING MASK-IMAGE: URL();”. </p>
+<p>Thanks for sharing.</p>
+<p>Thanks &amp; Regards<br>
+Nair</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454622#respond" onclick="return addComment.moveForm(&quot;comment-454622&quot;, &quot;454622&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-odd thread-alt depth-1" id="li-comment-454627">
+					<article id="comment-454627" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/487b658e06f14ddf6f1071ba42024489" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Chris Wright</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454627" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T14:56:29+00:00">December 2, 2013 at 14:56</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">5</div>
+												<div class="ct-commentcontent">
+														<p>Love your work as usual Sara and the Codrops team.</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454627#respond" onclick="return addComment.moveForm(&quot;comment-454627&quot;, &quot;454627&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-even depth-1" id="li-comment-454628">
+					<article id="comment-454628" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/5fd6c632cb5440cce4a17a752ea25512" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Riley</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454628" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T15:02:17+00:00">December 2, 2013 at 15:02</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">6</div>
+												<div class="ct-commentcontent">
+														<p>Nice!</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454628#respond" onclick="return addComment.moveForm(&quot;comment-454628&quot;, &quot;454628&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-odd thread-alt depth-1" id="li-comment-454629">
+					<article id="comment-454629" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/4c34ac6be07cee655d26cbeacca512a6" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Adhara Diseño Web</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454629" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T15:03:58+00:00">December 2, 2013 at 15:03</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">7</div>
+												<div class="ct-commentcontent">
+														<p>Muy bueno saludos desde ARgentina!</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454629#respond" onclick="return addComment.moveForm(&quot;comment-454629&quot;, &quot;454629&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-even depth-1" id="li-comment-454631">
+					<article id="comment-454631" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/f22582f2b885055d2201e1733297ec7e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Mte90</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454631" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T15:48:12+00:00">December 2, 2013 at 15:48</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">8</div>
+												<div class="ct-commentcontent">
+														<p>On firefox work only the svg effect the other are not working…</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454631#respond" onclick="return addComment.moveForm(&quot;comment-454631&quot;, &quot;454631&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					<ul class="children">
+				<li class="comment byuser comment-author-sarasoueidan bypostauthor even depth-2" id="li-comment-454633">
+					<article id="comment-454633" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/81b58502541f9445253f30497e53c280(1)" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Sara Soueidan</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454633" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T16:31:25+00:00">December 2, 2013 at 16:31</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">9</div>
+												<div class="ct-commentcontent">
+														<p>Hi! </p>
+<p>The first two techniques are webkit-only at this time, but the SVG and Canvas demos should all be working on Firefox. I just checked again and they are working. Which version of Firefox are you using?</p>
+<p>Cheers!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-454636">
+					<article id="comment-454636" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/452793f2f8115f474d2c6bd54da28b2a" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Fitriani</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454636" class="ct-commenttime"><time pubdate="" datetime="2013-12-02T17:05:30+00:00">December 2, 2013 at 17:05</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">10</div>
+												<div class="ct-commentcontent">
+														<p>This is so beautiful,, thanks so much for sharing so  wonderful knowledge,, I m using the latest version from Opera Web Browser and all techniques working so cool  and awasome..<br>
+thanks and regard..</p>
+<p>Fitriani</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454636#respond" onclick="return addComment.moveForm(&quot;comment-454636&quot;, &quot;454636&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-454658">
+					<article id="comment-454658" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/97ae5fd555e262ffc2c1a4012a3d03b9" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">James</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-454658" class="ct-commenttime"><time pubdate="" datetime="2013-12-03T05:19:19+00:00">December 3, 2013 at 05:19</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">11</div>
+												<div class="ct-commentcontent">
+														<p>Yes its works fine now see all demos, using XP and IE8.</p>
+<p>Thanks</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=454658#respond" onclick="return addComment.moveForm(&quot;comment-454658&quot;, &quot;454658&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-455002">
+					<article id="comment-455002" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/27b97887d72be38b3f4a818bbf7fd257" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Amit</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455002" class="ct-commenttime"><time pubdate="" datetime="2013-12-11T09:21:53+00:00">December 11, 2013 at 09:21</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">12</div>
+												<div class="ct-commentcontent">
+														<p>thanks.. this is such a wonderful script.. i tried it not able to get the best results as your’s but slightly good results i got..<br>
+thanks for this post please write more tutorials…</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=455002#respond" onclick="return addComment.moveForm(&quot;comment-455002&quot;, &quot;455002&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-455189">
+					<article id="comment-455189" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/70b03db954aa45fc2559e85f5d5bd13e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">aa</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455189" class="ct-commenttime"><time pubdate="" datetime="2013-12-16T08:23:22+00:00">December 16, 2013 at 08:23</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">13</div>
+												<div class="ct-commentcontent">
+														<p>very good</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=455189#respond" onclick="return addComment.moveForm(&quot;comment-455189&quot;, &quot;455189&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-455279">
+					<article id="comment-455279" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/5fee743aec1ad18fc674300866d85bfa" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Saurabh gupta</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455279" class="ct-commenttime"><time pubdate="" datetime="2013-12-18T06:59:18+00:00">December 18, 2013 at 06:59</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">14</div>
+												<div class="ct-commentcontent">
+														<p>Nice information regarding to create textured text, i really searching this information and my search ends here, don’t know how much time you take to prepared this article, but this is really precious information for me, i like your website information, nice work:)</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=455279#respond" onclick="return addComment.moveForm(&quot;comment-455279&quot;, &quot;455279&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					<ul class="children">
+				<li class="comment byuser comment-author-sarasoueidan bypostauthor even depth-2" id="li-comment-455286">
+					<article id="comment-455286" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/81b58502541f9445253f30497e53c280(1)" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Sara Soueidan</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455286" class="ct-commenttime"><time pubdate="" datetime="2013-12-18T09:55:14+00:00">December 18, 2013 at 09:55</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">15</div>
+												<div class="ct-commentcontent">
+														<p>Thank you Saurabh, it’s great to know that you find it useful. :)</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+				<li class="comment odd alt thread-even depth-1" id="li-comment-455426">
+					<article id="comment-455426" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/7f9590b5ed0efc5d1469d7c1031ce885" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Rhys Blakes</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455426" class="ct-commenttime"><time pubdate="" datetime="2013-12-21T13:11:46+00:00">December 21, 2013 at 13:11</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">16</div>
+												<div class="ct-commentcontent">
+														<p>A lot of impossibilities made possible here! Thank you Sara because I would,’t have imagined learning this here. The finishing is so cool.</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=455426#respond" onclick="return addComment.moveForm(&quot;comment-455426&quot;, &quot;455426&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-odd thread-alt depth-1" id="li-comment-455851">
+					<article id="comment-455851" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/ab3c6694cba10d55aa7a520a150dacb4" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Shimon Ebrahimian</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-455851" class="ct-commenttime"><time pubdate="" datetime="2013-12-26T01:11:28+00:00">December 26, 2013 at 01:11</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">17</div>
+												<div class="ct-commentcontent">
+														<p>Thank you very much.</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=455851#respond" onclick="return addComment.moveForm(&quot;comment-455851&quot;, &quot;455851&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-even depth-1" id="li-comment-456132">
+					<article id="comment-456132" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Techniques for Creating Textured Text   Codrops_files/ab829c072d34aad8ab09fb1d21543360" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">adam</span> <a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/comment-page-1/#comment-456132" class="ct-commenttime"><time pubdate="" datetime="2013-12-30T09:35:22+00:00">December 30, 2013 at 09:35</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">18</div>
+												<div class="ct-commentcontent">
+														<p>Awesome</p>
+						</div>
+
+						<div class="ct-commentreply">
+							<a class="comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/?replytocom=456132#respond" onclick="return addComment.moveForm(&quot;comment-456132&quot;, &quot;456132&quot;, &quot;respond&quot;, &quot;17424&quot;)">Reply</a>						</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+		</ol>
+		<p class="ct-small-text fright">
+						<a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/feed/">Follow this discussion</a>					</p>
+				
+
+
+		<div class="ct-comment-form">	
+										<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://tympanus.net/codrops/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="90eed-comment" cols="45" rows="8" aria-required="true"></textarea><textarea name="comment" style="display:none" rows="1" cols="1"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="17424" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+											</form>
+							</div><!-- #respond -->
+					<div class="clr"></div>
+	</div>
+
+</section><!-- #comments -->
+				</div>
+				<aside class="ct-sidebar">		
+	<div class="ct-ads">
+		<div class="ct-ads-info">
+			<h4>Advertisement</h4>
+			<a href="http://tympanus.net/codrops/advertise/" class="ct-advertise-here">
+				<i class="ct-icon-info"></i>
+				<span>Advertise Here</span>
+			</a>
+		</div>
+		<div id="bsap_1275127" class="bsap_1275127 bsap"><a href="http://stats.buysellads.com/click.go?z=1275127&b=4415228&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.22800653311423957&link=http://www.shopify.com/?utm_source=tympanus.net&utm_medium=cpm&utm_content=top-side-bar&utm_campaign=buysell" onmouseover="window.status = &#39;http://www.shopify.com/?utm_source=tympanus.net&amp;utm_medium=cpm&amp;utm_content=top-side-bar&amp;utm_campaign=buysell&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Shopify: Beautiful Ecommerce Stores " id="bsa_4415228" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/210188-1393264007.jpg" width="300" height="250" alt="Shopify: Beautiful Ecommerce Stores "></a><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/17086/zone/1275127?utm_source=site_17086&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1275127">advertise here</a></div></div>
+		<div id="bsap_1243201" class="bsap_1243201 bsap"><a href="http://stats.buysellads.com/click.go?z=1243201&b=1699101&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9874209153931588&link=https://www.billgrid.com/index?a=codrops" onmouseover="window.status = &#39;https://www.billgrid.com/index?a=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Online quote, invoice and expense and time management - BillGrid.com" id="bsa_1699101" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/82233-1320521466.jpg" width="125" height="125" alt="Online quote, invoice and expense and time management - BillGrid.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4739462&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8217634984757751&link=http://themeforest.net/item/alterna-7-ultra-multipurpose-wordpress-theme/3946450?ref=ThemeFocus" onmouseover="window.status = &#39;http://themeforest.net/item/alterna-7-ultra-multipurpose-wordpress-theme/3946450?ref=ThemeFocus&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="The Powerful Theme of 2014 – Alterna 7" id="bsa_4739462" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/217277-1397003562.jpg" width="125" height="125" alt="The Powerful Theme of 2014 – Alterna 7"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=562176&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.28203678759746253&link=http://www.dreamtemplate.com/?ref=bsa" onmouseover="window.status = &#39;http://www.dreamtemplate.com/?ref=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="Premium Website Templates &amp; WordPress Themes" id="bsa_562176" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/178447-1373139325.gif" width="125" height="125" alt="Premium Website Templates &amp; WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4531388&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.5446671873796731&link=http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart" onmouseover="window.status = &#39;http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="Klaus - Retina Multi-Purpose WordPress Theme" id="bsa_4531388" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/214046-1395474464.png" width="125" height="125" alt="Klaus - Retina Multi-Purpose WordPress Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=2449843&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.06825720565393567&link=http://www.elegantthemes.com/gallery/divi/" onmouseover="window.status = &#39;http://www.elegantthemes.com/gallery/divi/&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="Premium WordPress Themes" id="bsa_2449843" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/200737-1386792759.jpg" width="125" height="125" alt="Premium WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3198884&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.39572427817620337&link=http://bloggingexperiment.com/best-wordpress-themes" onmouseover="window.status = &#39;http://bloggingexperiment.com/best-wordpress-themes&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad6 even" title="Best WordPress Themes" id="bsa_3198884" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/207298-1391377208.png" width="125" height="125" alt="Best WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4349855&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.24835034436546266&link=http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco" onmouseover="window.status = &#39;http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad7 odd" title="X WordPress Theme" id="bsa_4349855" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/208038-1391789985.png" width="125" height="125" alt="X WordPress Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3363337&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.27745472406968474&link=http://www.gojs.net/latest/index.html?utm_source=codrops&utm_medium=m125x125&utm_term=canvas&utm_content=dark-gojs_4canvas-flow&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=codrops&amp;utm_medium=m125x125&amp;utm_term=canvas&amp;utm_content=dark-gojs_4canvas-flow&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad8 even" title="Use GoJS for flowcharts, org charts, mindmaps, ER diagrams and UML diagrams in HTML5 Canvas applications." id="bsa_3363337" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/153867-1358966846.png" width="125" height="125" alt="Use GoJS for flowcharts, org charts, mindmaps, ER diagrams and UML diagrams in HTML5 Canvas applications."></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3361297&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6111958185210824&link=https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&utm_medium=banner&utm_campaign=responsive" onmouseover="window.status = &#39;https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&amp;utm_medium=banner&amp;utm_campaign=responsive&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad9 odd" title="PSD2HTML.com" id="bsa_3361297" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/205745-1390225509.png" width="125" height="125" alt="PSD2HTML.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4367289&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.11086075357161462&link=http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&utm_medium=display&utm_content=codrops125v1&utm_campaign=codrops" onmouseover="window.status = &#39;http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&amp;utm_medium=display&amp;utm_content=codrops125v1&amp;utm_campaign=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad10 even" title="Bizness Apps - Take Your Clients Mobile!" id="bsa_4367289" target="_blank"><img src="./Techniques for Creating Textured Text   Codrops_files/208529-1392144430.jpg" width="125" height="125" alt="Bizness Apps - Take Your Clients Mobile!"></a></div>
+		<div class="clr"></div>
+	</div>
+		
+	<div class="ct-widget-wrapper">
+									<div class="ct-widget ct-widget-coll">
+					<h5>Latest News:</h5>
+					                <article id="post-19024" class="post-19024 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-115/" class="">Collective #115</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-115/" class="ct-trans">
+                            <img width="75" height="105" src="./Techniques for Creating Textured Text   Codrops_files/Collective_115.png" class="attachment-thumbnail wp-post-image" alt="Collective 115">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       WebComponents.org * Make a Bubble Map * Quill * rangeslider.js * Physical Typography * Beginner's Guide to Node.js...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-115/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18975" class="post-18975 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-114/" class="">Collective #114</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-114/" class="ct-trans">
+                            <img width="75" height="105" src="./Techniques for Creating Textured Text   Codrops_files/Collective114.png" class="attachment-thumbnail wp-post-image" alt="Collective114">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       CSS Shapes 101 * Web Fundamentals * Velocity.js * GestureKit * Panoramic * Codassium...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-114/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+            				</div>
+									<div class="clr"></div>
+			
+		
+		<div class="ct-widget ct-widget-default">
+			<h5>Hot on Codrops:</h5>
+			                <article id="post-18828" class="post-18828 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-button tag-circular tag-progress tag-svg">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="ct-trans">
+                            <img width="105" height="105" src="./Techniques for Creating Textured Text   Codrops_files/AnimatedProgressButton-105x105.jpg" class="attachment-thumbnail wp-post-image" alt="AnimatedProgressButton">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="">How to Create a Circular Progress Button</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18780" class="post-18780 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-form tag-transition tag-ui">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="ct-trans">
+                            <img width="105" height="105" src="./Techniques for Creating Textured Text   Codrops_files/minimalform1-105x105.png" class="attachment-thumbnail wp-post-image" alt="minimalform">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="">Minimal Form Interface</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18632" class="post-18632 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-animation tag-inspiration tag-slideshow">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="ct-trans">
+                            <img width="105" height="105" src="./Techniques for Creating Textured Text   Codrops_files/ItemTransitions1-105x105.png" class="attachment-thumbnail wp-post-image" alt="ItemTransitions">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="">Inspiration for Item Transitions</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+            					</div>
+		
+		<div class="ct-widget" id="md-widget">
+			<h5>From Mightydeals</h5>
+			<div>
+				<script type="text/javascript">
+					(function() {
+					  var url = 'http://www.mightydeals.com/widgets/large?width=280&ref=codropswidget';
+					  document.write('<div id="md-large-widget"></div>');
+					  var s = document.createElement('script'), s1 = document.getElementsByTagName('script')[0];
+					  s.type = 'text/javascript';
+					  s.async = true;
+					  s.src = url;
+					  s1.parentNode.insertBefore(s, s1);
+					})();
+				</script><div id="md-large-widget"><style type="text/css"> #md-large-widget-content{ display:inline-block; font-family:Arial; text-align:left;} .md-wg-deal-image {width:100%; margin-bottom: 5px;}  .md-wg-timer-block { font-size: 11px; color:#727a80; margin-top: 5px;}  .mdWidgetDigit {margin-right: 1px; display:inline-block;}  .mdWidgetWord {margin-right: 5px; display:inline-block;}  .md-wg-deal-link {font-weight: bold; font-size:15px; color:#57207c; text-decoration: none; line-height: 17px;} .md-wg-deal-link:hover {color:#f05028;}</style><div id="md-large-widget-content" style="width:280px;"><a href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget" class="">		<img alt="" class="md-wg-deal-image" style="width:280px;" src="./Techniques for Creating Textured Text   Codrops_files/csshero.jpg"></a><a class="md-wg-deal-link" href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget">	<span>Easily Customize WordPress Themes with No Code - only $14!</span></a><div id="md-wg-timer-block" class="md-wg-timer-block">Ends:	<span id="md-wg-time-left-label" class="md-wg-time-left-label"><span class="mdWidgetDigit">7</span><span class="mdWidgetWord">days</span><span class="mdWidgetDigit">17</span><span class="mdWidgetWord">hours</span><span class="mdWidgetDigit">19</span><span class="mdWidgetWord">min</span><span class="mdWidgetDigit">3</span><span class="mdWidgetWord">sec</span></span></div></div></div>		
+			</div>
+		</div>
+	</div>
+
+    		
+    	<div class="clr"></div>
+</aside>
+
+				<div class="clr"></div>
+				<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/plusone.js" gapi_processed="true"></script>
+			    </div>
+</div>
+		<footer class="ct-footer">
+			
+			<div class="ct-inner ct-cf">
+				<nav class="ct-cf">
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+						<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+						<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+						<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+						<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/news/">News</a></li>
+						<li><a href="http://tympanus.net/codrops/category/giveaways/">Giveaways</a></li>
+						<li><a href="http://tympanus.net/codrops/category/freebies/">Freebies</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/about/">About</a></li>
+						<li><a href="http://tympanus.net/codrops/contact/">Contact</a></li>
+						<li><a href="http://tympanus.net/codrops/archives/">Archives</a></li>
+						<li><a href="http://tympanus.net/codrops/deals/">Deals</a></li>
+						<li><a href="http://tympanus.net/codrops/advertise/">Advertise</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="http://tympanus.net/codrops/licensing/">License</a></li>
+						<li><a href="http://tympanus.net/codrops/credits/">Credits</a></li>
+						<li><a href="http://tympanus.net/codrops/impressum/">Impressum</a></li>
+					</ul>
+				</nav>
+				<div class="ct-items ct-cf">
+					<div class="ct-item ct-copyright">
+						<span>© Codrops 2014 by</span> 
+						<a href="http://tympanus.net/" title="Tympanus">Tympanus</a>
+					</div>
+					<div class="ct-item ct-cdn">
+						<span>Content delivered by</span>
+						<a href="http://tracking.maxcdn.com/c/24359/3968/378" title="Content Distribution Network" target="blank">Content Distribution Network</a>
+						<img height="1" width="1" src="./Techniques for Creating Textured Text   Codrops_files/378">
+					</div>	
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="./Techniques for Creating Textured Text   Codrops_files/comment-reply.min.js"></script>
+		</div><!--ct-container-->
+	
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+Content Delivery Network via codropspz.tympanus.netdna-cdn.com
+
+ Served from: tympanus.net @ 2014-05-13 11:51:39 by W3 Total Cache --></body></html>

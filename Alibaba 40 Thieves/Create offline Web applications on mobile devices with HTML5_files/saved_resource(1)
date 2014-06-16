@@ -1,0 +1,35 @@
+mmcore.SetCookie('mmid','-1228385629|AQAAAApqtAn6gQoAAA==',365,1);mmcore.SetCookie('pd','1885126546|AQAAAAoBQmq0CfqBCrEHre0BAP3nCcWjPNFIFHd3dy50b3BkZXNpZ25tYWcuY29tDQAAAP3nCcWjPNFIAAAAAP////8A//////////8AFHd3dy50b3BkZXNpZ25tYWcuY29tA4EKAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ==',365);mmcore.SetCookie('srv','ldnvwcgus01',365);(function(){if(typeof(mmcore.GenInfo)!='object')mmcore.GenInfo={};mmcore.EH=function(e){var s=e.message+'\r\n';if(!window.mm_error)window.mm_error=s;else window.mm_error+=s;};
+try{
+mmcore.NetInsight = function(campaign){
+    if(!window.ibmStats || !ibmStats.event) return mmcore.EH({ message:"NetInsight: ibmStats.event missing." });
+    var GI = mmcore.GenInfo[campaign];
+    if(!GI) return mmcore.EH({ message:"NetInsight: Campaign " + campaign + " does not exist." });
+    var pairs = [];
+    for(var elem in GI) pairs.push(elem + ":" + GI[elem].toLowerCase());
+    ibmStats.event({
+        ibmEV: "Maxymiser",
+        ibmEvName: campaign,
+        ibmEvAction: pairs.join(" | ")
+    });
+};
+}catch(err){mmcore.EH(err);}
+try{
+setTimeout(function(){
+	var strings = [];
+	for(var campaign in mmcore.GenInfo){
+          	var elementValuesList = [];
+		var variantsValuesList = [];
+		for(var element in mmcore.GenInfo[campaign]){
+			elementValuesList.push(element);
+			variantsValuesList.push(mmcore.GenInfo[campaign][element].toLowerCase());
+		}
+		strings.push('maxycamp=' + campaign + '&maxyelement=' + elementValuesList.join(',') + '&maxyvar=' + variantsValuesList.join(','));
+	}
+	if(strings.length)
+		window.NTPT_PGEXTRA = strings.join(';');
+}, 0);
+
+}catch(err){mmcore.EH(err);}
+if(typeof mmcore._callback=='object'&&typeof mmcore._callback[1]=='function'){try{mmcore._callback[1]();}catch(err){mmcore.EH(err);}
+finally{mmcore._callback[1]=null;}}
+})();

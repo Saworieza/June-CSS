@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Show/Hide Content</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: <a href="../../index.html?p=112">(Read the CSS Newbie article)</a></h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/showhide-content/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSS Newbie Example: Show/Hide Content&lt;/title&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+   /* This CSS is just for presentational purposes. */
+   body {
+      font-size: 62.5%;
+      background-color: #777; }
+   #wrap {
+      font: 1.3em/1.3 Arial, Helvetica, sans-serif;
+      width: 30em;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: #fff; }
+   h1 {
+      font-size: 200%; }
+
+   /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id=&quot;wrap&quot;&gt;
+      &lt;h1&gt;Show/Hide Content&lt;/h1&gt;
+      &lt;p&gt;&lt;a href=&quot;/showhide-content-css-javascript/&quot;&gt;Go back to the main article.&lt;/a&gt; This example shows you how to create a show/hide container using a couple of links, a div, a few lines of CSS, and some JavaScript to manipulate our CSS. Just click on the &quot;see more&quot; link at the end of this paragraph to see the technique in action, and be sure to view the source to see how it all works together. &lt;a href=&quot;#&quot; id=&quot;example-show&quot; class=&quot;showLink&quot; onclick=&quot;showHide('example');return false;&quot;&gt;See more.&lt;/a&gt;&lt;/p&gt;
+      &lt;div id=&quot;example&quot; class=&quot;more&quot;&gt;
+         &lt;p&gt;Congratulations! You've found the magic hidden text! Clicking the link below will hide this content again.&lt;/p&gt;
+         &lt;p&gt;&lt;a href=&quot;#&quot; id=&quot;example-hide&quot; class=&quot;hideLink&quot; onclick=&quot;showHide('example');return false;&quot;&gt;Hide this content.&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

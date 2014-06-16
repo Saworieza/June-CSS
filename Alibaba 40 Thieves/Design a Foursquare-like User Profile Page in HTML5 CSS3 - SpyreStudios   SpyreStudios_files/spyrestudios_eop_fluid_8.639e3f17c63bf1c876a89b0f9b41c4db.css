@@ -1,0 +1,206 @@
+/* ------------------
+	Gadget Review - EOP - V2
+------------------------- */
+
+/* ------------------
+  Widget Container
+------------------------- */
+#grv_widget {
+  font-family: helvetica,arial,sans-serif;
+  position: relative;
+}
+
+/* ------------------
+  Widget Title
+------------------------- */
+.grv_stories_header {
+  font-size: 26px;
+	line-height: 32px;
+	color: #000;
+	font-family: helvetica,arial,sans-serif;
+	font-weight: 700;
+	text-shadow: #fff 1px 1px 0;
+	padding: 0 0 10px;
+	margin: 0;
+}
+
+/* ------------------
+  Articles
+------------------------- */
+.grv_articles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li.grv_article {
+  float: left;
+  width: 23.58%;
+  position: relative;
+  margin: 0 1.5% 1.5% 0;
+  background: #fff;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+li.grv_article.grv_num_3,
+li.grv_article.grv_num_7 {
+  margin-right: 0;
+}
+li.grv_article.grv_num_4, 
+li.grv_article.grv_num_5, 
+li.grv_article.grv_num_6, 
+li.grv_article.grv_num_7 {
+  margin-bottom: 0;
+}
+.grv_article_title {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  line-height: 16px;
+  height: 96px;
+  display: block;
+  overflow: hidden;
+  padding: 8px 8px 28px 8px;
+}
+.grv_article_title:hover {
+  color: #999;
+}
+
+/* HAS IMAGE */
+.grv_article.grv_has_image {
+}
+.grv_article.grv_has_image a.grv_img_link {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  height: 120px;
+  width: 101%;
+  display: block; 
+  background: #fff;
+  overflow: hidden;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.grv_has_image .grv_img_link .grv_article_img {
+  position: relative; 
+  /* z-index: 0; /* position beneath */
+}
+.grv_has_image .grv_img_link:hover .grv_article_img {
+  opacity: 0.28;
+}
+.grv_post_type {
+  position: absolute;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: block; 
+  background: transparent;
+  -webkit-box-shadow: inset 0px 0px 20px rgba(0,0,0,0.2);
+  -moz-box-shadow:    inset 0px 0px 20px rgba(0,0,0,0.2);
+  box-shadow:         inset 0px 0px 20px rgba(0,0,0,0.2);
+}
+.grv_article.grv_has_image a.grv_img_link:hover .grv_post_type {
+  background: rgba(0,0,0,.6) url('darken-bg-small.fb64b69a943362bf30e33341219d0954.png') no-repeat center center;
+}
+
+#grv_stat_1 {
+  display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+  border-top: 1px solid #DFDFDF;
+  background: #F9F9F9;
+  height: 24px;
+  pointer-events: none;
+	-webkit-border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 3px 3px;
+}
+#grv_stat_1::after {
+  content: "more";
+  margin-right: 6px;
+	float: right;
+	display: block;
+	padding: 0px 12px 0px 10px;
+	line-height: 24px;
+	vertical-align: middle;
+	background: url("arrow-right-small.be8f465c95c7b51f61256cd78507c8ea.png") no-repeat right 7px;
+	color: #CC5639;
+	font-size: .9em;
+}
+
+#grv_stat_2 {
+  background: #fff;
+  width: 125px;
+  height: 6px;
+  position: absolute;
+  left: 0px;
+  bottom: 25px;
+  display: block;
+}
+
+/* ------------------
+ 	Sponsored
+------------------------- */
+.grv_is_sponsored .grv_article_title {
+  height: 80px;
+  padding-bottom: 44px;
+}
+.grv_is_sponsored #grv_stat_2 {
+  height: 22px;
+}
+.grv_is_sponsored .grv_display_name {
+	display: block;
+	position: absolute;
+  width: 125px;
+  height: 12px;
+  left: 8px;
+  bottom: 28px;
+  z-index: 10;
+	font-size: 8px;
+	color: #aaa;
+	letter-spacing: 1px;
+	text-decoration: none;
+	font-style: italic;
+}
+.grv_is_sponsored .grv_display_name:hover {
+  color: #707070;
+}
+
+
+/* ------------------
+ 	Gravity Attribution
+------------------------- */
+#grv_badge {
+  margin: 0px;
+  position: absolute;
+  top: 9px;
+  right: 0px;
+}
+.grv_badge_inner {
+  background: none;
+  padding: 2px 10px;
+}
+#grv_tooltip {
+	right: 0px;
+	top: 18px;
+	width: 300px;
+	height: 150px;
+	background: url("../../tt-arrow-up.png") no-repeat right 1px;
+	padding: 5px 0px 0px 0px;
+}
+.grv_tt_container {
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0, .5);
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0, .5);
+  box-shadow: 0 2px 3px rgba(0,0,0, .5);
+  border: none;
+}

@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/default.include.251ce8.css" media="all">
+
+	<title>Shutter Effect Portfolio with jQuery and Canvas | Tutorialzine</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+
+	
+	<link rel="pingback" href="http://tutorialzine.com/xmlrpc.php">
+
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Tutorialzine » Shutter Effect Portfolio with jQuery and Canvas Comments Feed" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/feed/">
+<link rel="stylesheet" id="highlight.css-css" href="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/highlight.tomorrow.css" type="text/css" media="all">
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tutorialzine.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tutorialzine.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Making a Flickr-powered Slideshow" href="http://tutorialzine.com/2011/02/flickr-api-slideshow-jquery/">
+<link rel="next" title="Better Check Boxes with jQuery and CSS" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine.html">
+<link rel="shortlink" href="http://tutorialzine.com/?p=1386">
+<link rel="shortcut icon" type="image/x-icon" href="http://tutorialzine.com/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="Tutorialzine » Full Feed" href="http://feeds.feedburner.com/Tutorialzine">
+<meta property="og:site_name" content="Tutorialzine">
+<meta property="fb:admins" content="1674521632">
+<meta name="keywords" content="tutorialzine, tutorial zine, tzine, tutorials, freebies, resources, web development, webdev, demo, PHP, MySQL, jQuery, CSS, XHTML, jQuery UI, CSS3, HTML5, HTML, web design, webdesign">
+<meta name="description" content="The plugin we are developing today is going to use the HTML5 canvas element and generate an opening / closing shutter animation that can be used to spice up your portfolio.">
+<link rel="image_src" href="http://cdn.tutorialzine.com/wp-content/uploads/2011/03/1386-150x150.jpg">
+<meta name="twitter:image" content="http://cdn.tutorialzine.com/wp-content/uploads/2011/03/1386-150x150.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tutorialzine">
+<meta name="twitter:url" content="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/">
+<meta name="twitter:title" content="Shutter Effect Portfolio with jQuery and Canvas">
+<meta name="twitter:description" content="The plugin we are developing today is going to use the HTML5 canvas element and generate an opening / closing shutter animation that can be used to spice up your portfolio.">
+<meta name="twitter:creator" content="@tutorialzine">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<script type="text/javascript" async="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/ga.js"></script><script type="text/javascript" async="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_fe75131c335e3bd42585d699208c59c8" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/s_fe75131c335e3bd42585d699208c59c8.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1251274{width:100%;display:block}div.bsap_1251274 a{width:125px}div.bsap_1251274 a img{padding:0}div.bsap_1251274 a em{font-style:normal}div.bsap_1251274 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1251274 img{border:0;clear:right;}div.bsap_1251274 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1251274 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1251274 a{line-height:100%}div.bsap_1251274 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1251274 a.adhere{width:123px;height:123px}div.bsap_1251274 img.s{height:0;width:0}</style></head>
+
+<body>
+
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+
+	<header>
+
+		<h1><a title="Home" href="http://tutorialzine.com/" id="logo">Tutorial<b>zine</b></a></h1>
+
+		
+		<nav class="Tutorials">
+			<a href="http://tutorialzine.com/category/tutorials/" class="active">Tutorials</a>
+			<a href="http://tutorialzine.com/category/articles/" class="">Articles</a>
+			<a href="http://tutorialzine.com/members/" class="">Member area</a>
+
+			<!-- <a href="http://www.zinescripts.com/" target="blank">Scripts</a> -->
+
+							<a href="http://tutorialzine.com/books/jquery-trickshots/" style="color:#f6ab29 !important" class="">The book</a>
+					</nav>
+
+		<a class="searchIcon">
+			<form action="http://tutorialzine.com/"><input type="text" placeholder="Search the site!" name="s"></form>
+		</a>
+
+	</header>
+
+<section id="content">
+		<aside id="sidebar">
+
+			<div class="sidebar-group about">
+				<p><b>Tutorialzine</b> is a site dedicated to bringing you the coolest web development tutorials and resources. Follow us!</p>
+				
+				<div class="social-icons">
+					<a href="http://twitter.com/Tutorialzine" class="twitter" target="_blank" data-hint="26,951+"></a>
+					<a href="http://www.facebook.com/Tutorialzine" class="facebook" target="_blank" data-hint="12,739+"></a>
+					<a class="googleplus" href="https://plus.google.com/102299652175684141333" target="_blank"></a>
+					<a href="http://feeds.feedburner.com/Tutorialzine" class="rss" target="_blank" data-hint="19,692+"></a>
+				</div>
+
+			</div>
+
+			<div class="sidebar-group adBlock">
+
+				<!-- BuySellAds.com Zone Code -->
+				<div id="bsap_1251274" class="bsap_1251274 bsap"><a href="http://stats.buysellads.com/click.go?z=1251274&b=3869775&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.7669688053429127&link=http://www.gojs.net/latest/index.html?utm_source=Tutorialzine&utm_medium=tr125x125&utm_term=canvas&utm_content=radial-overlay&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=Tutorialzine&amp;utm_medium=tr125x125&amp;utm_term=canvas&amp;utm_content=radial-overlay&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="GoJS radial graph sample" id="bsa_3869775" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/184538-1377108033.png" width="125" height="125" alt="GoJS radial graph sample"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4658398&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9918259598780423&link=http://boldtask.com/services.php" onmouseover="window.status = &#39;http://boldtask.com/services.php&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Bold Task: Ultra Responsive Web Design" id="bsa_4658398" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/218701-1397774814.png" width="125" height="125" alt="Bold Task: Ultra Responsive Web Design"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4672583&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9458294657524675&link=http://boldtask.com/work.php" onmouseover="window.status = &#39;http://boldtask.com/work.php&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="Bold Task: Ultra Responsive Web Design" id="bsa_4672583" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/218957-1398018747.jpg" width="125" height="125" alt="Bold Task: Ultra Responsive Web Design"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=3870011&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.10860590194351971&link=https://www.psd2html.com/order-now.html?utm_source=tutorialzine.com&utm_medium=banner&utm_campaign=responsive" onmouseover="window.status = &#39;https://www.psd2html.com/order-now.html?utm_source=tutorialzine.com&amp;utm_medium=banner&amp;utm_campaign=responsive&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="PSD2HTML.com" id="bsa_3870011" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/205745-1390225509.png" width="125" height="125" alt="PSD2HTML.com"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=562218&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6145223495550454&link=http://www.dreamtemplate.com/?ref=bsa" onmouseover="window.status = &#39;http://www.dreamtemplate.com/?ref=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="Premium Website Templates &amp; WordPress Themes" id="bsa_562218" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/178447-1373139325.gif" width="125" height="125" alt="Premium Website Templates &amp; WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=2925004&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.42126557626761496&link=http://www.bypeople.com/?utm_source=bsa&utm_medium=display&utm_content=banner05&utm_campaign=bsaTutsZine" onmouseover="window.status = &#39;http://www.bypeople.com/?utm_source=bsa&amp;utm_medium=display&amp;utm_content=banner05&amp;utm_campaign=bsaTutsZine&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad6 even" title="By People" id="bsa_2925004" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/141177-1353108659.jpg" width="125" height="125" alt="By People"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4749907&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8677979961503297&link=http://www.wpzoom.com/members/go.php?r=3371&i=l160&utm_source=tutorialzine.com&utm_medium=display&utm_content=&utm_campaign=turorialzine" onmouseover="window.status = &#39;http://www.wpzoom.com/members/go.php?r=3371&amp;i=l160&amp;utm_source=tutorialzine.com&amp;utm_medium=display&amp;utm_content=&amp;utm_campaign=turorialzine&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad7 odd" title="ZOOM Builder - Drag &amp; Drop Page Builder for WordPress" id="bsa_4749907" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/222289-1399973085.png" width="125" height="125" alt="ZOOM Builder - Drag &amp; Drop Page Builder for WordPress"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4643508&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.12226148135960102&link=http://depositphotos.com/?ref=1255735&utm_source=buysellads&utm_medium=banner&utm_content=125_125_retro&utm_campaign=tutorialzine.com" onmouseover="window.status = &#39;http://depositphotos.com/?ref=1255735&amp;utm_source=buysellads&amp;utm_medium=banner&amp;utm_content=125_125_retro&amp;utm_campaign=tutorialzine.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad8 even" title="Stock Images" id="bsa_4643508" target="_blank"><img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/218077-1397470221.jpg" width="125" height="125" alt="Stock Images"></a></div>
+				<!-- END BuySellAds.com Zone Code -->
+
+				
+				<p class="ad">Looking for <a href="http://skillforge.com/courses/web-development/">Website Design Courses</a> you can take from anywhere? Visit SkillForge.com!</p>
+
+				<a href="http://www.maxcdn.com/" class="maxcdn" title="Accelerated by maxcdn" target="_blank">Accelerated by maxcdn</a>
+
+			</div>
+
+			<div class="sidebar-group posts">
+				<h5 class="active" data-tab="latest-tutorials">Latest Tutorials</h5>
+				<h5 data-tab="latest-articles">Latest Articles</h5>
+				<!-- <h5 data-tab="popular-posts">What's Hot</h5> -->
+
+				<ul id="latest-tutorials" class="active">
+										
+					<li>
+						<a href="http://tutorialzine.com/2014/04/responsive-shopping-cart-layout-twitter-bootstrap-3/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/shopping_cart_template-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="shopping_cart_template">							
+							<span class="title">Free Template: Responsive Shopping Cart</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/04/creative-company-bootstrap-template/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/creative_company-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="creative_company">							
+							<span class="title">Free Template: Creative Company Layout</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/03/nodejs-private-webchat/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/nodejs-realtime-chat-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="nodejs-realtime-chat">							
+							<span class="title">Realtime Chat with Node.js</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/technique-hiding-overflowing-text/">
+
+															<img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/default_thumb_small.png">
+							
+							<span class="title">My New Favorite Technique For Hiding Overflowing Text</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/writing-modular-javascript-browserify/">
+
+															<img src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/default_thumb_small.png">
+							
+							<span class="title">Quick Tip: Write Modular JavaScript With Browserify</span>
+						</a>
+					</li>
+
+									</ul>
+
+				<ul id="latest-articles">
+										
+					<li>
+						<a href="http://tutorialzine.com/2014/04/10-mistakes-javascript-beginners-make/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/10-mistakes-javascript-beginners-make-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="10-mistakes-javascript-beginners-make">							
+							<span class="title">10 Mistakes That JavaScript Beginners Often Make</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/10-signs-that-you-are-an-awesome-web-developer/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/10-signs-awesome-web-developers-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="10-signs-awesome-web-developers">							
+							<span class="title">10 Signs That You Are An Awesome Web Developer</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/12/the-10-weirdest-programming-languages/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/weirdest-programming-languages-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="weirdest-programming-languages">							
+							<span class="title">The 10 Weirdest Programming Languages</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/11/a-quick-guide-to-web-storage/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/quick-guide-web-storage-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="quick-guide-web-storage">							
+							<span class="title">A Quick Guide to Web Storage</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/">
+
+															<img width="100" height="100" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/12-awesome-css-features-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="12-awesome-css-features">							
+							<span class="title">12 Awesome CSS3 Features That You Can Finally Start Using</span>
+						</a>
+					</li>
+
+									</ul>
+
+			</div>
+
+			<div class="sidebar-group fb">
+				<iframe src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:258px;background-color:#fefefe;" allowtransparency="true"></iframe>
+			</div>
+
+			<div class="sidebar-group twitter">
+				<h5 class="single">Best from <a href="https://twitter.com/Tutorialzine/" target="_blank">@Tutorialzine</a></h5>
+
+				<ul class="tweetFavList">
+			<li>
+				CodeCombat Battle - Learn to program by playing a game <a href="http://ttzn.co/1pTOohl" target="_blank">http://ttzn.co/1pTOohl</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">9</span>
+										<a href="http://twitter.com/Tutorialzine/status/462014936328437760" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Code Guide - Standards for developing flexible, durable, and sustainable HTML and CSS <a href="http://ttzn.co/1hidBZH" target="_blank">http://ttzn.co/1hidBZH</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">17</span>
+										<a href="http://twitter.com/Tutorialzine/status/461970866977665024" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Cool: Project Naptha - Browser extension that allows you to select text in any image <a href="http://ttzn.co/1u3gJBm" target="_blank">http://ttzn.co/1u3gJBm</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">6</span>
+										<a href="http://twitter.com/Tutorialzine/status/461652578766704640" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Useful: Buttons - A CSS and SASS button library with lots of styles <a href="http://ttzn.co/1gGkqFF" target="_blank">http://ttzn.co/1gGkqFF</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">10</span>
+										<a href="http://twitter.com/Tutorialzine/status/461608464511676416" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Progress.js - a small and themeable library for progress bars <a href="http://ttzn.co/R1Nf7J" target="_blank">http://ttzn.co/R1Nf7J</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">17</span>
+										<a href="http://twitter.com/Tutorialzine/status/461531950487187456" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            </ul>
+				<div id="followTwitterButton"></div>
+
+			</div>
+
+		</aside>
+
+		<article id="post" class="leftPostCol">
+
+							<img class="featured" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/1386.jpg" alt="Shutter Effect Portfolio with jQuery and Canvas">
+			
+			<div class="post-body">
+				<h2>Shutter Effect Portfolio with jQuery and Canvas</h2>
+
+				<p class="post-info"><i class="icon-author"></i> Martin Angelov <i class="icon-cal"></i><time datetime="2011-03-07">March 7th, 2011</time></p>
+
+				<div class="tutorialButtons">
+											<a href="http://demo.tutorialzine.com/2011/03/photography-portfolio-shutter-effect/" class="button green big" target="_blank">Demo</a>
+					
+											<a href="http://demo.tutorialzine.com/2011/03/photography-portfolio-shutter-effect/jquery.shutter.zip" class="button blue big">Download</a>
+									</div>
+
+
+											<div id="adsenseAd" class="hide1340">
+								<script async="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/adsbygoogle.js"></script>
+								<!-- Tutorialzine Bellow Buttons Rect -->
+								<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1100319204652185" data-ad-slot="9621240023" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+							</div>
+				
+						
+				<p>In today’s tutorial, we will be using the HTML5 canvas element to create a simple photography portfolio, which displays a set of featured photos with a camera shutter effect. This functionality will come in the form of an easy to use jQuery plugin that you can easily incorporate into any website.</p>
+<h3>The Idea</h3>
+<p>The canvas element is a special area on which you can draw with JavaScript and apply all sorts of manipulations to your image. However, there are limitations to what can be done with it. Generating complex real-time animations is challenging, as you have to redraw the canvas on every frame.</p>
+<p>This requires a lot of processing power that web browsers just cannot provide currently, and as a result smooth animations are nearly impossible. But there is a way around this limitation. If you’ve played around with the demo,  you’ve noticed how smooth it runs. This is because the frames are generated ahead of time and each one is built as a separate canvas element.</p>
+<p>After the initial load of the page (when the frames are generated), the job of the plugin becomes to simply cycle through the frames.</p>
+<div id="attachment_1392" class="wp-caption alignnone" style="width: 630px"><img class="size-full wp-image-1392" title="The Shutter Effect" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/shutter-effect-canvas-jquery.jpg" alt="The Shutter Effect" width="620" height="460"><p class="wp-caption-text">The Shutter Effect</p></div>
+<p>The shutter itself is generated by drawing the same slightly curved triangular image. With each frame, the opening is smaller until the peaces fit together.</p>
+<h3>HTML</h3>
+<p>First lets take a closer look at the HTML markup of the page. As we are using the canvas element, we need to define the document as HTML5 with the appropriate doctype.</p>
+<h4>index.html</h4>
+<pre class="brush:html">&lt;!DOCTYPE html&gt; &lt;!-- Defining the document as HTML5 --&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;&amp;quot;Shutter Effect&amp;quot; with Canvas and jQuery | Tutorialzine Demo&lt;/title&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="assets/css/styles.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="assets/jquery.shutter/jquery.shutter.css" /&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="top"&gt;&lt;/div&gt;
+
+&lt;div id="page"&gt;
+
+	&lt;h1&gt;Shutter Folio Photography&lt;/h1&gt;
+
+	&lt;div id="container"&gt;
+    	&lt;ul&gt;
+        	&lt;li&gt;&lt;img src="assets/img/photos/1.jpg" width="640" height="400" /&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="assets/img/photos/2.jpg" width="640" height="400" /&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="assets/img/photos/3.jpg" width="640" height="400" /&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="assets/img/photos/4.jpg" width="640" height="400" /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/jquery.shutter/jquery.shutter.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>The stylesheets for the page and the plugin are included in the head section, and the script files just before the closing body tag. The <em><strong>#content</strong></em> div holds an unordered list with four photos, which are going to be displayed as a slideshow. If the user’s browser does not support the canvas element, we will just cycle through these images without displaying the shutter effect.</p>
+<div id="attachment_1393" class="wp-caption alignnone" style="width: 630px"><a href="http://demo.tutorialzine.com/2011/03/photography-portfolio-shutter-effect/"><img class="size-full wp-image-1393" title="Shutter Effect - Opened State" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/shutter-opened.jpg" alt="Shutter Effect - Opened State" width="620" height="460"></a><p class="wp-caption-text">Shutter Effect - Opened State</p></div>
+<p>When the shutter plugin is called, it generates the following HTML markup. In our example, we are calling it on the <em><strong>#content</strong></em> div, so the code below is appended to it.</p>
+<h4>Generated HTML</h4>
+<pre class="brush:html">&lt;div class="shutterAnimationHolder" style="width: 640px; height: 400px;"&gt;
+  &lt;div class="film"
+  style="height: 15000px; width: 1000px; margin-left: -500px; top: -300px;"&gt;
+
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+    &lt;canvas width="1000" height="1000"&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>Each canvas element holds one frame of the shutter animation. The height of the <em>.film</em> div is set be large enough to display the canvas elements one above the other. By animating the film’s top property, we can skip through the frames and create the animation.</p>
+<p>The <em>.shutterAnimationHolder</em> div is set to be the same height as the container in which it is inserted, and is displayed over the unordered list with the photos. With <em>overflow:hidden</em> it hides the rest of the film and only shows one frame at a time. You can think of the canvas elements as regular PNGs, so they supports complete transparency and displays the photo below them.</p>
+<p>We will come back to this in the jQuery step of the tutorial.</p>
+<h3>CSS</h3>
+<p>The CSS that powers the demo is quite simple, as most of the work is done by generating the canvases images. However, they still have to be organized as a film and animated properly in order to achieve a smooth animation.</p>
+<h4>jquery.shutter.css</h4>
+<pre class="brush:css">.shutterAnimationHolder .film canvas{
+	display: block;
+    margin: 0 auto;
+}
+
+.shutterAnimationHolder .film{
+	position:absolute;
+	left:50%;
+	top:0;
+}
+
+.shutterAnimationHolder{
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:0;
+	z-index:1000;
+}</pre>
+<p>These three sets of rules are prefixed with the <em>.shutterAnimationHolder</em> class, so the styles only affect the markup, generated by the plugin. If you are into optimization, you can choose to copy this code to your main stylesheet, in order to minimize the number of HTTP requests.</p>
+<div id="attachment_1394" class="wp-caption alignnone" style="width: 630px"><a href="http://demo.tutorialzine.com/2011/03/photography-portfolio-shutter-effect/"><img class="size-full wp-image-1394" title="Shutter Effect - Closed" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/shutter-closed.jpg" alt="Shutter Effect - Closed" width="620" height="460"></a><p class="wp-caption-text">Shutter Effect - Closed</p></div>
+<h3>jQuery</h3>
+<p>This is the most interesting part of the tutorial. Here we will create a jQuery plugin – <em>tzShutter</em> – which is easy to use and require minimum modifications in your website in order to use it.</p>
+<p>One important aspect of the development of this plugin, is to provide proper support for users whose browsers do not understand the canvas tag (basically all IE versions except for 9). This can be done easily by skipping the canvas generation in this case.</p>
+<p>Also we must provide a way for users of tzShutter to trigger the opening and closing animations. We will achieve this with binding two custom events to the containing element – <em><strong>shutterOpen</strong></em> and <em><strong>shutterClose</strong></em>, both easily executed with the <em>trigger()</em> jQuery method.</p>
+<p>Additionally, the plugin will provide users with a way of plugging custom functionality by the means of callback functions, passes as parameters. These are executed in key parts of the animation process – when the canvas elements are generated, and when the shutter is opened or closed.</p>
+<p>You can see the code of the plugin below.</p>
+<h4>jquery.shutter.js</h4>
+<pre class="brush:js">(function(){
+
+	// Creating a regular jQuery plugin:
+
+	$.fn.tzShutter = function(options){
+
+		// Checking for canvas support. Works in all modern browsers:
+		var supportsCanvas = 'getContext' in document.createElement('canvas');
+
+		// Providing default values:
+
+		options = $.extend({
+			openCallback:function(){},
+			closeCallback:function(){},
+			loadCompleteCallback:function(){},
+			hideWhenOpened:true,
+			imgSrc: 'jquery.shutter/shutter.png'
+		},options);
+
+		var element = this;
+
+		if(!supportsCanvas){
+
+			// If there is no support for canvas, bind the
+			// callack functions straight away and exit:
+
+			element.bind('shutterOpen',options.openCallback)
+				   .bind('shutterClose',options.closeCallback);
+
+			options.loadCompleteCallback();
+
+			return element;
+		}
+
+		window.setTimeout(function(){
+
+			var frames = {num:15, height:1000, width:1000},
+				slices = {num:8, width: 416, height:500, startDeg:30},
+				animation = {
+					width : element.width(),
+					height : element.height(),
+					offsetTop: (frames.height-element.height())/2
+				},
+
+				// This will calculate the rotate difference between the
+				// slices of the shutter. (2*Math.PI equals 360 degrees in radians):
+
+				rotateStep = 2*Math.PI/slices.num,
+				rotateDeg = 30;
+
+			// Calculating the offset
+			slices.angleStep = ((90 - slices.startDeg)/frames.num)*Math.PI/180;
+
+			// The shutter slice image:
+			var img = new Image();
+
+			// Defining the callback before setting the source of the image:
+			img.onload = function(){
+
+				window.console &amp;&amp; console.time &amp;&amp; console.time("Generating Frames");
+
+				// The film div holds 15 canvas elements (or frames).
+
+				var film = $('&lt;div&gt;',{
+					className: 'film',
+					css:{
+						height: frames.num*frames.height,
+						width: frames.width,
+						marginLeft: -frames.width/2, // Centering horizontally
+						top: -animation.offsetTop
+					}
+				});
+
+				// The animation holder hides the film with overflow:hidden,
+				// exposing only one frame at a time.
+
+				var animationHolder = $('&lt;div&gt;',{
+					className: 'shutterAnimationHolder',
+					css:{
+						width:animation.width,
+						height:animation.height
+					}
+				});
+
+				for(var z=0;z&lt;frames.num;z++){
+
+					// Creating 15 canvas elements.
+
+					var canvas	= document.createElement('canvas'),
+						c		= canvas.getContext("2d");
+
+					canvas.width=frames.width;
+					canvas.height=frames.height;
+
+					c.translate(frames.width/2,frames.height/2);
+
+					for(var i=0;i&lt;slices.num;i++){
+
+						// For each canvas, generate the different
+						// states of the shutter by drawing the shutter
+						// slices with a different rotation difference.
+
+						// Rotating the canvas with the step, so we can
+						// paint the different slices of the shutter.
+						c.rotate(-rotateStep);
+
+						// Saving the current rotation settings, so we can easily revert
+						// back to them after applying an additional rotation to the slice.
+
+						c.save();
+
+						// Moving the origin point (around which we are rotating
+						// the canvas) to the bottom-center of the shutter slice.
+						c.translate(0,frames.height/2);
+
+						// This rotation determines how widely the shutter is opened.
+						c.rotate((frames.num-1-z)*slices.angleStep);
+
+						// An additional offset, applied to the last five frames,
+						// so we get a smoother animation:
+
+						var offset = 0;
+						if((frames.num-1-z) &lt;5){
+							offset = (frames.num-1-z)*5;
+						}
+
+						// Drawing the shutter image
+						c.drawImage(img,-slices.width/2,-(frames.height/2 + offset));
+
+						// Reverting back to the saved settings above.
+						c.restore();
+					}
+
+					// Adding the canvas (or frame) to the film div.
+					film.append(canvas);
+				}
+
+				// Appending the film to the animation holder.
+				animationHolder.append(film);
+
+				if(options.hideWhenOpened){
+					animationHolder.hide();
+				}
+
+				element.css('position','relative').append(animationHolder);
+
+				var animating = false;
+
+				// Binding custom open and close events, which trigger
+				// the shutter animations.
+
+				element.bind('shutterClose',function(){
+
+					if(animating) return false;
+					animating = true;
+
+					var count = 0;
+
+					var close = function(){
+
+						(function animate(){
+							if(count&gt;=frames.num){
+								animating=false;
+
+								// Calling the user provided callback.
+								options.closeCallback.call(element);
+
+								return false;
+							}
+
+							film.css('top',-frames.height*count - animation.offsetTop);
+							count++;
+							setTimeout(animate,20);
+						})();
+					}
+
+					if(options.hideWhenOpened){
+						animationHolder.fadeIn(60,close);
+					}
+					else close();
+				});
+
+				element.bind('shutterOpen',function(){
+
+					if(animating) return false;
+					animating = true;
+
+					var count = frames.num-1;
+
+					(function animate(){
+						if(count&lt;0){
+
+							var hide = function(){
+								animating=false;
+								// Calling the user supplied callback:
+								options.openCallback.call(element);
+							};
+
+							if(options.hideWhenOpened){
+								animationHolder.fadeOut(60,hide);
+							}
+							else{
+								hide();
+							}
+
+							return false;
+						}
+
+						film.css('top',-frames.height*count - animation.offsetTop);
+						count--;
+
+						setTimeout(animate,20);
+					})();
+				});
+
+				// Writing the timing information if the
+				// firebug/web development console is opened:
+
+				window.console &amp;&amp; console.timeEnd &amp;&amp; console.timeEnd("Generating Frames");
+				options.loadCompleteCallback();
+			};
+
+			img.src = options.imgSrc;
+
+		},0);
+
+		return element;
+	};
+
+})(jQuery);</pre>
+<p>The only shortcoming of this method, is that the processor intensive task of generating the canvas elements is done when he page is loaded. This might cause the browser interface to become unresponsive for a short period of time. You could alternatively use actual PNG images instead, but this would add more than 1mb of weight to your pages (versus the 12 kb now).</p>
+<p>Now lets see how the plugin is used.</p>
+<h4>script.js</h4>
+<pre class="brush:js">$(document).ready(function(){
+
+	var container = $('#container'),
+		li = container.find('li');
+
+	// Using the tzShutter plugin. We are giving the path
+	// to he shutter.png image (located in the plugin folder), and two
+	// callback functions.
+
+	container.tzShutter({
+		imgSrc: 'assets/jquery.shutter/shutter.png',
+		closeCallback: function(){
+
+			// Cycling the visibility of the li items to
+			// create a simple slideshow.
+
+			li.filter(':visible:first').hide();
+
+			if(li.filter(':visible').length == 0){
+				li.show();
+			}
+
+			// Scheduling a shutter open in 0.1 seconds:
+			setTimeout(function(){container.trigger('shutterOpen')},100);
+		},
+		loadCompleteCallback:function(){
+			setInterval(function(){
+				container.trigger('shutterClose');
+			},4000);
+
+			container.trigger('shutterClose');
+		}
+	});
+
+});</pre>
+<p>When the plugin finishes generating the canvas elements, it triggers the loadCompleteCallback function. We use it to schedule a shutter animation every four seconds, accompanied with a change of the visible photo in the unordered list.</p>
+<p><strong>With this our Shutter Effect Plugin is complete!</strong></p>
+<h3>Conclusion</h3>
+<p>The canvas tag gives developers a vast array of possibilities and allows them to create new and exciting user interfaces, animations and even games. Share your thoughts in the comment section below. If you liked this tutorial be sure to subscribe to our RSS feed and follow us on twitter.</p>
+
+				 <div id="shareBar" style="display:none"></div>
+				
+				<div class="social-icons">
+					<a href="http://twitter.com/Tutorialzine" class="twitter" target="_blank">Tutorialzine on Twitter</a>
+					<a href="http://www.facebook.com/Tutorialzine" class="facebook" target="_blank">Tutorialzine on Facebook</a>
+					<a class="googleplus" href="https://plus.google.com/102299652175684141333" target="_blank">Tutorialzine on Google+</a>
+					<a href="http://feeds.feedburner.com/Tutorialzine" class="rss" target="_blank">Tutorialzine's RSS feed</a>
+				</div>
+
+				<div id="author-info" class="hide600">
+					<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/18635cef09f45858ce6b07c8612c9f5b" class="avatar avatar-120 photo" height="120" width="120">					<h5>by <strong>Martin Angelov</strong></h5>
+					<p>Martin is a web developer with an eye for design from Bulgaria. He founded Tutorialzine in 2009 and publishes new tutorials weekly.</p>
+				</div>
+
+									<p id="categories"><a href="http://tutorialzine.com/category/tutorials/" title="View all posts in Tutorials" rel="category tag">Tutorials</a></p>
+				
+									<ul id="tags"><li><a href="http://tutorialzine.com/tag/css/" rel="tag">CSS</a></li><li><a href="http://tutorialzine.com/tag/jquery/" rel="tag">jQuery</a></li></ul>				
+			</div>
+
+		</article>
+
+        <div id="relatedSection" class="leftPostCol hide600">
+
+            <ul>
+
+				
+					<li><a href="http://tutorialzine.com/2010/09/html5-canvas-slideshow-jquery/" title="An HTML5 Slideshow w/ Canvas &amp; jQuery">
+
+													<img width="150" height="150" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/1176-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="An HTML5 Slideshow w/ Canvas &amp; jQuery">						
+						<span>An HTML5 Slideshow w/ Canvas &amp; jQuery</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2012/04/timeline-portfolio/" title="Timeline Portfolio">
+
+													<img width="150" height="150" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/1920-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Timeline Portfolio">						
+						<span>Timeline Portfolio</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2012/05/growing-thumbnails-portfolio-jquery-css3/" title="Growing Thumbnails Portfolio">
+
+													<img width="150" height="150" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/2004-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Growing Thumbnails Portfolio">						
+						<span>Growing Thumbnails Portfolio</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2011/06/beautiful-portfolio-html5-jquery/" title="Making a Beautiful HTML5 Portfolio">
+
+													<img width="150" height="150" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/1486-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Making a Beautiful HTML5 Portfolio">						
+						<span>Making a Beautiful HTML5 Portfolio</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2011/07/bubble-slideshow-jquery-css/" title="Bubble Slideshow Effect with jQuery">
+
+													<img width="150" height="150" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/1551-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Bubble Slideshow Effect with jQuery">						
+						<span>Bubble Slideshow Effect with jQuery</span>
+					</a></li>
+
+				
+            </ul>
+
+        </div>
+
+		
+		<div id="newsletter-sidebar">
+			
+			<a href="http://tutorialzine.com/newsletter/issues/17-Jan-2014.html" target="_blank" title="See an example!"></a>
+			
+			<form method="post" action="http://tutorialzine.com/members/">
+				<input type="text" placeholder="Enter Your Email" name="email">
+				<input type="submit" name="submit" class="button blue" value="Join!">
+			</form>
+			
+			<div class="hider"></div>
+		</div>
+
+		
+        <script>
+			var the_title = "Shutter Effect Portfolio with jQuery and Canvas";
+			var the_permalink = "http:\/\/tutorialzine.com\/2011\/03\/photography-portfolio-shutter-effect\/";
+		</script>
+
+        
+<div id="comments" class="leftPostCol hide600">
+
+	<h4><b>26</b> Comments</h4>
+
+	
+		<ol>
+				<li class="comment even thread-even depth-1" id="comment-15818">
+				<div id="div-comment-15818" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/4b7f6f5437119ac493c38b962952c093" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Tim</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15818">
+			March 7, 2011 at 1:40 pm</a>		</div>
+
+		<p>Great tutorial, perfect for website owners that are photographers. =-)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15818#respond" onclick="return addComment.moveForm(&quot;div-comment-15818&quot;, &quot;15818&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15819">
+				<div id="div-comment-15819" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/a27e26803ffdf8e064999b924299e695" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Rems</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15819">
+			March 7, 2011 at 1:57 pm</a>		</div>
+
+		<p>You rox nice work :)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15819#respond" onclick="return addComment.moveForm(&quot;div-comment-15819&quot;, &quot;15819&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-15843">
+				<div id="div-comment-15843" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/c2cae9ce601f34447854c49c96edfd2e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.e11world.com/" rel="external nofollow" class="url">e11world</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15843">
+			March 7, 2011 at 10:48 pm</a>		</div>
+
+		<p>Pretty useful but I'm still not using HTML5 until it is seriously supported by all browsers and the fact this was heavy on my browser/processor is something that is a drawback. Still a great tutorial and very nice effect!! Well done!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15843#respond" onclick="return addComment.moveForm(&quot;div-comment-15843&quot;, &quot;15843&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15844">
+				<div id="div-comment-15844" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/2b180190ae2c22803e8cb54b2e32b60d" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.trebiano.it/" rel="external nofollow" class="url">Fabio</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15844">
+			March 8, 2011 at 1:33 am</a>		</div>
+
+		<p>Nice effect, could be cool to add a realistic photo-click-sound on every photo change...</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15844#respond" onclick="return addComment.moveForm(&quot;div-comment-15844&quot;, &quot;15844&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-15869">
+				<div id="div-comment-15869" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/dbe34e48594ed2820c870028e952c490" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.tajpi.ba/" rel="external nofollow" class="url">Kenan</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15869">
+			March 8, 2011 at 2:05 pm</a>		</div>
+
+		<p>Great as usual :)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15869#respond" onclick="return addComment.moveForm(&quot;div-comment-15869&quot;, &quot;15869&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15883">
+				<div id="div-comment-15883" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/b351663012df0af993436adc5b318b76" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://fuzionpro.blogspot.com/" rel="external nofollow" class="url">rajesh</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15883">
+			March 9, 2011 at 12:02 am</a>		</div>
+
+		<p>awesome tutorial you are the best</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15883#respond" onclick="return addComment.moveForm(&quot;div-comment-15883&quot;, &quot;15883&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-15888">
+				<div id="div-comment-15888" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/cf9cb254911bfdde830be11e164db78f" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://beben-koben.blogspot.com/" rel="external nofollow" class="url">Beben Koben</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15888">
+			March 9, 2011 at 3:43 am</a>		</div>
+
+		<p>WOW...its like blitch photo....greats...:D<br>
+thanks^^</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15888#respond" onclick="return addComment.moveForm(&quot;div-comment-15888&quot;, &quot;15888&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15903">
+				<div id="div-comment-15903" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/d1520b9f64b139313b58ea13bd9dc640" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.gleenk.com/" rel="external nofollow" class="url">Gleenk</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15903">
+			March 9, 2011 at 12:17 pm</a>		</div>
+
+		<p>Amazing O.o!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15903#respond" onclick="return addComment.moveForm(&quot;div-comment-15903&quot;, &quot;15903&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-15933">
+				<div id="div-comment-15933" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/3fb95ca574c45c208f137577449f3c6b" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.lucidistorte.it/" rel="external nofollow" class="url">Mike</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15933">
+			March 11, 2011 at 2:46 am</a>		</div>
+
+		<p>Awesome!</p>
+<p>As usual, on internet explorer does not work.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15933#respond" onclick="return addComment.moveForm(&quot;div-comment-15933&quot;, &quot;15933&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15937">
+				<div id="div-comment-15937" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/752fa5ae2d649b16a82902516980711b" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://vipinsahu.com/" rel="external nofollow" class="url">Vipin Sahu</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15937">
+			March 11, 2011 at 6:14 am</a>		</div>
+
+		<p>its not working in internet explorer :(</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15937#respond" onclick="return addComment.moveForm(&quot;div-comment-15937&quot;, &quot;15937&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-15958">
+				<div id="div-comment-15958" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/d9515094f16d1f668df5220ac58fefb6" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://zackify.net/" rel="external nofollow" class="url">Zach</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-15958">
+			March 12, 2011 at 3:25 pm</a>		</div>
+
+		<p>Is there something I embedded wrong on my site? http://zachography.tumblr.com It doesnt circle through the photos.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=15958#respond" onclick="return addComment.moveForm(&quot;div-comment-15958&quot;, &quot;15958&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16246">
+				<div id="div-comment-16246" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/84bb51a1cc25a15bfe0750f154b577a4" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.crearedesign.co.uk/" rel="external nofollow" class="url">Will Postlethwaite</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-16246">
+			March 22, 2011 at 2:33 am</a>		</div>
+
+		<p>WOW This is awesome! its very rare to see a cool transition between slides like this without using flash, but thats the beauty of HTML 5. Unfortunately still issues with cross browser compatibility. Still a great looking effect especially for photographs :)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=16246#respond" onclick="return addComment.moveForm(&quot;div-comment-16246&quot;, &quot;16246&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-16872">
+				<div id="div-comment-16872" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/c9a8c480af774d89acb1cced211ec52d" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://funnyfacebook.org/" rel="external nofollow" class="url">gecko</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-16872">
+			April 18, 2011 at 12:34 am</a>		</div>
+
+		<p>great as always...</p>
+<p>technology plus art are wonderful</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=16872#respond" onclick="return addComment.moveForm(&quot;div-comment-16872&quot;, &quot;16872&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16914">
+				<div id="div-comment-16914" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/6266192fc9f70c61c384ad0b9dc52ddf" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.maiconweb.com/" rel="external nofollow" class="url">Maicon Sobczak</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-16914">
+			April 19, 2011 at 4:42 am</a>		</div>
+
+		<p>Simply amazing effect! If it worked in IE would be a loud success.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=16914#respond" onclick="return addComment.moveForm(&quot;div-comment-16914&quot;, &quot;16914&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-16968">
+				<div id="div-comment-16968" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/b539323b4cdf4ef2833bf2f3099805b8" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://jabberfly.cx.cc/" rel="external nofollow" class="url">Suraj Thapar</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-16968">
+			April 21, 2011 at 3:18 am</a>		</div>
+
+		<p>Great Work! just fabulous specially the Idea of using it in Canvas.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=16968#respond" onclick="return addComment.moveForm(&quot;div-comment-16968&quot;, &quot;16968&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-20451">
+				<div id="div-comment-20451" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/6f3a69215b11fe701baa1dc0e45bb894" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://stylesoftheshutter.com/" rel="external nofollow" class="url">joe</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-20451">
+			November 17, 2011 at 9:04 pm</a>		</div>
+
+		<p>is there any way i can use this effect on a single image in the header when the page loads?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=20451#respond" onclick="return addComment.moveForm(&quot;div-comment-20451&quot;, &quot;20451&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-22699">
+				<div id="div-comment-22699" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/a3efe143f6f2cd9ec29c1a3341c74694" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">sagar</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-22699">
+			March 13, 2012 at 10:55 pm</a>		</div>
+
+		<p>Hi there,<br>
+It's working on jQuery 1.5.0.<br>
+But its not working on jQuery 1.7.1, would you please check it?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=22699#respond" onclick="return addComment.moveForm(&quot;div-comment-22699&quot;, &quot;22699&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-38783">
+				<div id="div-comment-38783" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/ebdf1bbf09da33df11c9063f5156c3de" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">sin</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-38783">
+			July 1, 2012 at 6:08 pm</a>		</div>
+
+		<p>This does not operate by JQuery1.72.<br>
+It cannot use.<br>
+Why is it?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=38783#respond" onclick="return addComment.moveForm(&quot;div-comment-38783&quot;, &quot;38783&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-40192">
+				<div id="div-comment-40192" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/2f0bf61ea345efb34c4ac77f8334eed3" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.ama-research.com/" rel="external nofollow" class="url">Massimiliano</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-40192">
+			July 6, 2012 at 4:43 am</a>		</div>
+
+		<p>Simply wonderful. To let this work with jQuery 1.7.x, just replace "className" with "class" in rows 65 and 78. </p>
+<p>So, in file jquery.shutter.js write: </p>
+<p>'class': 'film' instead of classname: 'film'<br>
+and<br>
+'class': 'shutterAnimationHolder' instead of classname: 'shutterAnimationHolder'</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=40192#respond" onclick="return addComment.moveForm(&quot;div-comment-40192&quot;, &quot;40192&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-40919">
+				<div id="div-comment-40919" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/bbc944dc54f43d85bfe6a17afac73389" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.ieee-tsec.org/" rel="external nofollow" class="url">Rishi</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-40919">
+			August 3, 2012 at 8:09 am</a>		</div>
+
+		<p>i want to execute the shutter close and open when i click on a button....i tried that but it takes nearly 5 seconds  to start the closing...If u could tell me how do i do it on click of a button, its really urgent...</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=40919#respond" onclick="return addComment.moveForm(&quot;div-comment-40919&quot;, &quot;40919&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-41183">
+				<div id="div-comment-41183" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/5b4885089cdfebb57d760e46e6275ad2" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sara</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-41183">
+			August 20, 2012 at 10:48 am</a>		</div>
+
+		<p>Awesome and unique! Thank you very much!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=41183#respond" onclick="return addComment.moveForm(&quot;div-comment-41183&quot;, &quot;41183&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-41328">
+				<div id="div-comment-41328" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/0383b16b58ac2969d0bedbd4b7043b20" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sase</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-41328">
+			August 28, 2012 at 5:14 pm</a>		</div>
+
+		<p>Awesome! Its really useful for my website!Thx</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=41328#respond" onclick="return addComment.moveForm(&quot;div-comment-41328&quot;, &quot;41328&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-71454">
+				<div id="div-comment-71454" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/578afe26434113a7eb037e330a8a54f0" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.zhegu.org/" rel="external nofollow" class="url">lugu</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-71454">
+			November 6, 2012 at 8:11 pm</a>		</div>
+
+		<p>good! but there is  no pre-next button.....it is a  pity</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=71454#respond" onclick="return addComment.moveForm(&quot;div-comment-71454&quot;, &quot;71454&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-78642">
+				<div id="div-comment-78642" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/c9786606a9b92b0f84dfb6beed077414" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Curious Passion</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-78642">
+			March 4, 2013 at 6:53 pm</a>		</div>
+
+		<p>Hello,</p>
+<p>I tried to change with the latest jquery version, but the shutter effect isn't working..</p>
+<p>Please Help...?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=78642#respond" onclick="return addComment.moveForm(&quot;div-comment-78642&quot;, &quot;78642&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-79477">
+				<div id="div-comment-79477" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/2df302c4348a91a1bdd0473ee3169253" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://fitkd.org/" rel="external nofollow" class="url">Athe</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-79477">
+			March 15, 2013 at 12:56 am</a>		</div>
+
+		<p>Hello,<br>
+I noticed that it does not work in IE 9,<br>
+Who can help me ?<br>
+thanks</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=79477#respond" onclick="return addComment.moveForm(&quot;div-comment-79477&quot;, &quot;79477&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-96691">
+				<div id="div-comment-96691" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/53146f54382a4d454e69d3a373c5f7ca" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">nikhil vetam</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#comment-96691">
+			January 3, 2014 at 5:43 am</a>		</div>
+
+		<p>This is amazing, just amazing :-) I wish one day IE will be smart enough to understand technology and art together can create awesomeness!!!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/?replytocom=96691#respond" onclick="return addComment.moveForm(&quot;div-comment-96691&quot;, &quot;96691&quot;, &quot;respond&quot;, &quot;1386&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		</ol>
+
+	
+	
+	
+	<div id="respond">
+		<div id="addCommentSection">
+			<h4 id="leavereply">Add Comment</h4>
+			<h4 id="respondtitle">Add a Reply</h4>
+
+			<form action="http://tutorialzine.com/wp-comments-post.php" method="post" id="commentform">
+
+				
+				<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+				<label for="author"><small>Name</small></label></p>
+
+				<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+				<label for="email"><small>Email (will not be published)</small></label></p>
+
+<!--				<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+				<label for="url"><small>Website</small></label></p>-->
+
+				
+				<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+				<p class="notes"><b>HTML is escaped automatically.</b> Surround code blocks with <b>&lt;pre&gt;&lt;/pre&gt;</b> for readability.<br>
+					Perks:&nbsp;&nbsp;&nbsp;<b>**bold**</b>&nbsp;&nbsp;&nbsp;<i>__italics__</i>&nbsp;&nbsp;&nbsp;<span style="color:#008DE6">[some text](http://example.com)</span> for links</p>
+
+				<div style="padding-top:15px;">
+					<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="button blue">
+					<input type="hidden" name="comment_post_ID" value="1386" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+					<div class="cancel-comment-reply">
+						<a rel="nofollow" id="cancel-comment-reply-link" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/#respond" style="display:none;">Cancel Reply</a>					</div>
+				</div>
+
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b0be9cf93f"></p>
+
+			</form>
+		</div>
+	</div>
+
+	
+</div>
+
+	</section>
+
+	<footer>
+
+		<div class="footer-limiter">
+
+			<div class="footer-group bottom-nav">
+				<a href="http://tutorialzine.com/license/">Tutorial License</a>
+				<a href="http://tutorialzine.com/privacy/">Privacy Policy</a>
+				<a href="http://tutorialzine.com/contact/">Contact Form</a>
+				<a href="http://buysellads.com/buy/detail/35457">Advertise</a>
+
+				<p>Tutorialzine © 2009-2014</p>
+			</div>
+
+			<div class="footer-group contribute">
+				<h6>Become a guest contributor</h6>
+				<p>We're open for guest contributions! If you'd like to share your web development skills by authoring a guest tutorial or article, let us know!</p>
+				<a href="http://tutorialzine.com/contact/" class="button blue small">Contact us</a>
+			</div>
+
+			<div class="footer-group suggest">
+				<h6>Suggest a tutorial idea</h6>
+				<p>We are always looking for something new and fresh. Do you have an idea for a tutorial that you'd like to see on the site? Tell us!</p>
+				<a href="http://tutorialzine.com/contact/" class="button blue small">Suggest</a>
+			</div>
+
+						
+			<div class="footer-group book">
+				<a href="http://tutorialzine.com/books/jquery-trickshots/" class="book-cover-small">Buy now!</a>
+				<h6>jQuery Trickshots</h6>
+				<p>Tutorialzine's advanced jQuery techniques book.</p>
+				<a href="http://tutorialzine.com/books/jquery-trickshots/" class="button red small">Buy now!</a>
+			</div>
+
+			
+		</div>
+
+	</footer>
+
+	<script type="text/javascript" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/jquery.min.js"></script>
+
+	
+
+
+
+		
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-531949-8']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+<script type="text/javascript" src="./Shutter Effect Portfolio with jQuery and Canvas   Tutorialzine_files/single.include-footer.00878b.js"></script>
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using apc
+Page Caching using apc
+Object Caching 1864/1964 objects using apc
+Content Delivery Network via cdn.tutorialzine.com
+
+ Served from: tutorialzine.com @ 2014-05-13 12:57:12 by W3 Total Cache --></body></html>

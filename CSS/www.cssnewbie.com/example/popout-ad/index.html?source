@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: Jquery Popout Ad</title>
+<script language="javascript" src="../../js/jquery/jquery.js"></script>
+<script language="javascript" src="../../js/jquery/jquery.cookie.js"></script>
+<script language="javascript" src="js/popout.js"></script>
+<link rel="stylesheet" type="text/css" href="css/popout.css" />
+
+<style>
+/* Formatting for the page. Not popout-related. */
+body {
+	font: small/1.3 Arial, Helvetica, sans-serif;
+	background-color: #666; }
+#wrap {
+	width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 10px solid #fff;
+	background-color: #f2f2f2; }
+</style>
+</head>
+<body>
+
+<div id="popout">
+	<div id="cap">
+		<a href="index.html?source#" id="open">
+			<img src="images/cap.gif" width="20" height="350" alt="" />
+		</a>
+	</div>
+	<div id="adbox">
+		<a href="index.html?source#" id="close" title="Close this ad.">
+			<span>Close</span>
+		</a>
+		<a href="index.html?source#" id="ad">
+			<img src="images/ad.png" width="300" height="330" alt="" />
+		</a>
+	</div>
+</div>
+
+<div id="wrap">
+	<h1>Building a Jquery Popout Ad</h1>
+	<p>This page demonstrates a Jquery-based popout advertisement in action. The ad along the left side of the page will "pop" out from the side when the page is loaded. If the user closes the advertisement, thet ad will remain closed from then on (for a predetermined amount of time). Once the ad is closed, clicking the permanent "cap" will open it again.</p>
+	<p><a href="../../index.html?p=222">You can return to the original article here</a>.</p>
+	<p>Cum sociis natoque penatibus et magnis dis parturient montes,  nascetur ridiculus mus. Nam imperdiet odio ut nulla. Phasellus non  nulla. Fusce id nisl vitae sapien faucibus facilisis. Ut est purus,  vestibulum in, lobortis ac, cursus eget, velit. Integer congue turpis  dictum felis. Duis quis pede. Sed in ante. Etiam adipiscing turpis.  Nullam placerat vehicula enim. </p>
+    <p>Proin faucibus. Etiam sagittis ornare libero. Curabitur varius  mauris vel magna. Curabitur a sem in purus imperdiet fringilla. Sed  augue. Donec fringilla vehicula purus. Proin nulla massa, convallis ut,  aliquet vitae, ultrices ut, est. Donec rhoncus. Proin pharetra risus.  Vivamus egestas aliquet sem. Fusce porta lectus sit amet quam. Sed id  ligula imperdiet arcu sodales consequat. Curabitur condimentum ornare  augue. Sed eget enim. Integer nunc neque, facilisis quis, interdum a,  feugiat ac, massa. Phasellus id magna eu ipsum porta sollicitudin. </p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes,  nascetur ridiculus mus. Praesent dapibus justo a nisi. Vivamus ut  tellus. Phasellus in eros et ligula mollis ornare. Sed lacinia placerat  turpis. Duis velit tortor, vehicula ac, feugiat eu, bibendum non, orci.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per  inceptos himenaeos. Proin vitae leo. Cras lacinia nulla convallis  sapien. Proin sit amet eros. Pellentesque habitant morbi tristique  senectus et netus et malesuada fames ac turpis egestas. Nulla nibh  odio, mollis eu, vehicula quis, ullamcorper at, purus. Phasellus eu  velit vitae nisl varius vulputate. Nullam ut odio id purus blandit  aliquam. Etiam vitae leo sit amet erat commodo cursus. Mauris luctus  rhoncus augue. </p>
+</div>
+
+</body>
+</html>

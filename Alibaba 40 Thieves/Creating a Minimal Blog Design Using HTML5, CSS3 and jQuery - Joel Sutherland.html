@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://jsuth.com/blog/creating-a-minimal-design-using-html5-css3-and-jquery -->
+<html lang="en" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta charset="utf-8">
+    
+<title>Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland</title> 
+<meta name="author" content="Joel Sutherland"> 
+<meta name="description" content=""> 
+<meta name="keywords" content="mobile, web, design">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+
+
+<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+<meta http-equiv="cleartype" content="on">
+
+    <link rel="alternate" type="application/rss+xml" href="http://jsuth.com/blog.rss">
+
+<!-- Yiibu style targeting -->
+<!-- base contains reset and minimal styling to all devices -->
+<link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/reset.css" rel="stylesheet" type="text/css" media="screen, handheld"><link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/typography.css" rel="stylesheet" type="text/css" media="screen, handheld"><link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/base.css" rel="stylesheet" type="text/css" media="screen, handheld">
+
+<!-- mobile is for high(er) performing phones that are still bandwidth bound -->
+<link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/css" rel="stylesheet" type="text/css" media="only screen and (min-width: 240px)">
+
+<link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/mobile.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 240px) and (max-width: 640px)">
+
+<!-- desktop = whole shebang. note that it won't also load mobile -->
+<link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/layout.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 640px)"><link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 640px)"><link href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/gallery.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 640px)">
+
+<!-- Modernizer 2 with respond.js and yepnope -->
+<script src="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/modernizr-2.0.6.js" type="text/javascript" charset="utf-8"></script>
+    
+            
+</head>
+ 
+<body>
+<div class="container">
+    <header class="header full">
+        <h1><a href="http://jsuth.com/">Joel Sutherland</a></h1>
+    </header>
+    <nav class="navigation full">
+                            
+    
+                    
+                
+            
+        
+    <ul id="" class="">
+                                <li>
+    <a href="http://jsuth.com/">
+        Home
+    </a>
+    </li>                        <li class=" active">
+    <a href="http://jsuth.com/blog">
+        Blog
+    </a>
+    </li>            <li>
+    <a href="http://jsuth.com/contact">
+        Contact
+    </a>
+    </li>            <li>
+    <a href="http://jsuth.com/play">
+        Playground
+    </a>
+    </li>            <li>
+    <a href="http://jsuth.com/about">
+        About
+    </a>
+    </li>               
+</ul>
+
+
+    </nav>
+    <div class="pagebody">
+                <div class="content">
+                <article class="article post">
+
+    
+            <h1><a href="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland.html">Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery</a></h1>
+        <div class="meta">
+        <time datetime="2010-09-02T00:10">
+            <span class="day">Thursday</span> Sep 2<sup>nd</sup>, 2010
+        </time>
+        <span class="sep">in</span>
+        <span class="categories">
+            <a href="http://jsuth.com/categories/development" rel="tag">Development</a><span class="sep"> and </span><a href="http://jsuth.com/categories/jquery" rel="tag">jQuery</a>        </span>
+    </div>    <div class="copy">
+                <p><img src="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/jsuth-design-process-s600x275.jpg" alt="html5 blog design" width="600" height="275"></p>
+<p><strong>A zip of this project is at the end of the post.</strong></p>
+<p>Redesigning this blog was a long time coming. I had started blogging on my personal site in late 2008 on Posterous, but quickly slowed and then stopped posting when my focus turned to my company blogs (<a href="http://www.newmediacampaigns.com/blog">New Media Campaigns</a>, <a href="http://www.gethifi.com/blog">GetHiFi</a>).</p>
+<p>In restarting my personal blog, I had some goals that I wanted to achieve with the design:</p>
+<ul>
+<li>Minimal in appearance and code</li>
+<li>Uses modern web development techniques</li>
+<li>Takes advantage of HiFi, our new CMS</li>
+</ul>
+<p>The net result is something I am fairly proud of. &nbsp;This site certainly isn't complicated, but it features a number of fun technologies:</p>
+<ul>
+<li>HTML5</li>
+<li>@font-face</li>
+<li>CSS3</li>
+<li>jQuery</li>
+<li>HiFi</li>
+</ul>
+<p>This post is meant to be both a tour of the site and a how-to. &nbsp;So without rambling on too much further, lets begin:</p>
+<h2>The Design</h2>
+<p>I initially put together the design in photoshop. &nbsp;The bars at the top are a reference to the New Media Campaigns logo. &nbsp;The font I am using for the headlines is <a href="http://www.fontsquirrel.com/fonts/Bergamo-Std">Bergamo</a>. For body copy, I am using a Helvetica/Arial stack.</p>
+<p>The page width is 600 pixels, which is my preference for content, especially blogs. &nbsp;This is a super handy size because it is an appealing width to read and it fits nicely into most grids. &nbsp;Should I ever redesign again, or migrate my content, I won't need to worry quite as much about sizing issues.</p>
+<p>Finally, I kept the navigation really simple. &nbsp;I hid nearly all of the blog gorp in an expanding menu that appears when you click the 'blog' link. This was probably the design's most opinionated decision. While this certainly hurts the discoverability of content, I'm not out to make a web portal. &nbsp;It's a blog. &nbsp;Generally visitors will either be following via RSS or arriving via Google/Twitter/Whatever to view a particular article. &nbsp;The 99% case is to make the site as readable as possible. This is also why I used a vertical typographic grid, which I will describe later.</p>
+<h2>The Markup</h2>
+<p>Minimalism was a goal for the design; extreme minimalism was a goal for the markup. &nbsp;Below is the markup for a post. &nbsp;The listing page is the same, but there aren't comments and the articles are stacked. &nbsp;Notice how I've tried to eliminate as much non-semantic stuff as possible. My only "sin" is a container div. &nbsp;The bars at the top and other embellishments were loaded via JS.</p>
+<pre class="brush:html">&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; 
+	&lt;meta charset="utf-8" /&gt; 
+	&lt;title&gt;Title&lt;/title&gt; 
+	&lt;!-- styles --&gt;
+&lt;/head&gt; 
+&lt;body&gt; 
+&lt;div id="container"&gt; 
+	&lt;header role="banner"&gt; 
+		&lt;h1&gt;&lt;a href="/"&gt;joel sutherland&lt;/a&gt;&lt;/h1&gt; 
+	&lt;/header&gt; 
+	&lt;nav&gt; 
+		&lt;ul&gt; 
+			&lt;!-- nav items --&gt;
+		&lt;/ul&gt; 
+	&lt;/nav&gt;
+ 	&lt;div id="blog" class="hidden"&gt; 
+		&lt;-- blog dropdown --&gt;
+	&lt;/div&gt;&lt;!-- blog --&gt; 
+	&lt;article&gt; 
+		&lt;header&gt; 
+			&lt;h1&gt;&lt;a href=""&gt;Post Title&lt;/a&gt;&lt;/h1&gt; 
+			&lt;div class="postmeta"&gt; 
+				&lt;time datetime=""&gt;December 31st, 1969&lt;/time&gt; 
+				&lt;a href="y#comments" class="comments"&gt;0 Comments&lt;/a&gt; 
+			&lt;/div&gt; 
+		&lt;/header&gt; 
+		&lt;!-- content --&gt;    
+		&lt;aside class="comments" id="comments"&gt; 
+			&lt;!-- comments --&gt;
+		&lt;/aside&gt;&lt;!-- comments --&gt; 
+	&lt;/article&gt; 
+&lt;/div&gt;&lt;!-- container --&gt; 
+&lt;!-- scripts --&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;</pre>
+<p>I really like the way this came out. &nbsp;It made me realize the potential that HTML5 has with its new elements. &nbsp;Markup is becoming much more terse and readable these days.</p>
+<h2>The CSS: Layout</h2>
+<p>Again, when it came to the CSS I was also trying to consider minimalism. &nbsp;To me, this generally means avoiding images when possible and also making sure that you don't end up repeating yourself too much. &nbsp;CSS that is copied and pasted is bound to give you problems later.</p>
+<p>This site came out very well when it came to my goals with CSS. &nbsp;By using <a href="http://css3please.com/">cross-browser compatible gradients, box-shadows and rgba</a>, I was able to escape with just a single image! &nbsp;Here are some of the interesting highlights:</p>
+<h4>Site Background</h4>
+<p>For the background of the site, I layered my only image, a 24-bit png filled with noise over a gradient:</p>
+<pre class="brush:css">html {
+	background: #d0cec9;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedcd9', endColorstr='#f7f7f6');
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(222,220,217)),
+ color-stop(0.1, rgb(247,247,246)), color-stop(1.0, rgb(247,247,246)));
+	background: -moz-linear-gradient(top,  #dedcd9 0px,  #f7f7f6 400px, #f7f7f6 100%);
+}
+
+body {
+	background: url(../images/noise.png);
+}</pre>
+<p>It felt a bit dirty to use the gradient-stops to get the background to look how I wanted. &nbsp;It isn't quite perfect, but that is the price I had to pay to avoid more wrapper divs.</p>
+<h4>Blog Dropdown and Blockquotes</h4>
+<p>By layering rgba backgrounds, I was able to keep both the gradients and the texture going:</p>
+<pre class="brush:css">blockquote {
+	margin: 0 0 22px 0;
+	background: rgba(0,0,0,.05);
+	border-left: 4px solid rgba(0,0,0,.1);
+	padding: 22px;
+	font-style: italic;
+}</pre>
+<h4>Top-Shadow and Bars</h4>
+<p>You can barely tell, but there is a JS-generated div that is sitting just above the browser viewport. &nbsp;I am applying a box-shadow to it so that the top of the page has a subtle shadow. &nbsp;I am also drawing the bars entirely with JS-generated markup and CSS:</p>
+<pre class="brush:css">#shadow {
+	position: fixed;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	box-shadow: 0px 0px 7px rgba(0,0,0,.2);
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,.2);
+	z-index: 2;
+}
+#bars {
+	width: 100%;
+	height: 42px;
+	margin-top: -20px;
+}
+	#bars div {
+		position: relative;
+		float: left;
+		width: 54px;
+		height: 100%;
+		margin-right: 55px;
+		box-shadow: 0px 2px 5px rgba(0,0,0,.35);
+		-moz-box-shadow: 0px 2px 5px rgba(0,0,0,.35);
+		-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.35);
+	}
+	#bars div.n { background: #2e78bc; }
+	#bars div.m { background: #a3be48; }
+	#bars div.c { background: #9a9a9a; margin: 0; }</pre>
+<p>Those are the layout highlights. &nbsp;The rest is fairly run-of-the-mill.</p>
+<h2>The CSS: Type</h2>
+<p>Writing the CSS type stylesheet was a bit more fun for me since I am fairly new to vertical-grids. &nbsp;I settled on a 22px vertical grid and then made sure to apply the correct styling to EVERYTHING to make it fit. &nbsp;At first this sounds like a lot of work. &nbsp;I was surprised at both how easy it was, and how quickly it went. &nbsp;It turns out that by working within the constraint of a vertical grid, a lot of little spacing decisions end up being a lot easier.</p>
+<p>When you're setting up your grid, a great trick is to use a background image as a guide. &nbsp;Simply make an image that is 1px wide and as tall as your grid. &nbsp;Leave it transparent except for the bottom pixel. &nbsp;Boom, simple guideline. &nbsp;As an Easter Egg, you can enable the baseline grid lines of this site by mousing over each of the bars at the top of the site. &nbsp;It is best to do it on the <a href="http://jsuth.com/blog/greeked-style-guide">style guide page</a> so that you can see how it works without a random image knocking it off course. &nbsp;I took the time to apply the grid to everying: from the blog drop-down, to the comments, even to the syntax highlighter.</p>
+<h4>Questionable Voodoo</h4>
+<p>So after doing quite a bit of reading, there were three tricks that people seemed to recommend adding to your stylesheet to improve legibility:</p>
+<pre class="brush:css">html,body { 
+  text-rendering: optimizeLegibility;
+  text-shadow: 0px 0px 1px rgba(255,255,255,.1);
+-webkit-font-smoothing: antialiased;
+}</pre>
+<p>The first line is supposed to <a href="http://www.aestheticallyloyal.com/public/optimize-legibility/">improve kerning in Firefox</a>. The second line adds an essentially non-visible text-shadow that triggers better anti-aliasing in Chrome/Safari on Windows. &nbsp;The last one works in older versions of webkit.</p>
+<p>I call these voodoo because I don't anticipate them having much longevity. &nbsp;They don't do anything on IE -- and the other browsers will surely end up with sensible defaults that will get pushed out through auto-updates.</p>
+<h4>@Font-Face</h4>
+<p>This is a technique that allows you to embed and use essentially any font you want. &nbsp;It is different from cufon and sIFR in that you're not faking anything. &nbsp;You are using real browser text. &nbsp;It works essentially all browsers, IE6 included. Paul Irish has developed the ideal syntax to use.</p>
+<p>If you have a font that you want to use on a site, first make sure that its licensing permits it. &nbsp;Unless you're super-careful you're probably making your font-files publicly available when you use this technique. &nbsp;Adobe would not be pleased. &nbsp;The next step is to go ahead and use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel @font-face generator</a>. &nbsp;This takes a font file, and outputs the different formats as well as CSS needed to use the font on your site. I recommend checking the 'expert' box and then requesting a Base64 encoded CSS file. &nbsp;This embeds the font into the CSS file directly and saves a few HTTP requests.</p>
+<p>Once you've gotten your @font-face CSS in place, you can use the font just like you would any other. &nbsp;In my case, I'm using Bergamo for the headlines:</p>
+<pre class="brush:css">h1,h2,h3,h4,h5,h6 { 
+	font-family: 'BergamoProRegular',georgia,serif;
+	line-height: 22px;
+	margin-bottom: 22px;
+}</pre>
+<p>This little bit of CSS also shows the main trick to making a grid work. Give everything the same line-height and margin-bottom.  When deviating, make sure it is in multiples of the grid:</p>
+<pre class="brush:css">h1, h1 a{
+	font-size: 33px;
+	color: #333230;
+	line-height: 44px;
+}</pre>
+<p>That's it! &nbsp;If you want to see how I do the whole thing, <a href="http://files.jsuth.com/styles/type.css">here is a link</a> to a non-minified version of my type CSS.</p>
+<h2>The jQuery &amp; HiFi</h2>
+<p>Javascript was used pretty minimally on this site. &nbsp;I'm a huge fan of jQuery so I was willing to spare a few KB to include the library. &nbsp;I made sure to pull it from Google with the hope that visitors would already have it cached.</p>
+<h4>Bars and Shadow</h4>
+<p>The first thing I did was add in the markup I would need for the shadow and bars at the top. &nbsp;Notice that I killed the padding when I added the bars. &nbsp;I did this so that there would not be a weird page jump during the time between the css loading and the javascript executing:</p>
+<pre class="brush:js">var bars = '&lt;div id="bars"&gt;&lt;div class="n"&gt;&lt;/div&gt;&lt;div class="n"&gt;&lt;/div&gt;&lt;div class="m"&gt;&lt;/div&gt;&lt;div class="m"&gt;&lt;/div&gt;&lt;div class="m"&gt;&lt;/div&gt;&lt;div class="c"&gt;&lt;/div&gt;&lt;/div&gt;'
+	$('#container').prepend(bars).css({paddingTop: 0});
+	$('body').prepend('&lt;div id="shadow" /&gt;');</pre>
+<h4>Blog Dropdown</h4>
+<p>For the blog dropdown, I used some simple custom event binding. &nbsp;While not strictly necessary, should I ever need to toggle the visibility of the blog panel from elsewhere, I can.</p>
+<pre class="brush:js">$('#blog').bind('toggle', function(){
+		var $blog = $(this);
+		if($blog.is(':visible')) $blog.trigger('hide');
+		else $blog.trigger('show')
+	})
+	.bind('show', function(){
+		$(this).slideDown('show');
+	})
+	.bind('hide', function(){
+		$(this).slideUp('hide');
+	});
+$('#blogbutton').removeAttr('href').click(function(){
+	$('#blog').trigger('toggle');
+});</pre>
+<h4>AJAX Search Using the HiFi API</h4>
+<p>So I won't get into the full details of this, but I will try to cover the interesting bits. &nbsp;This site runs on a new CMS called <a href="http://www.gethifi.com/">HiFi</a>. It has a unique, super-cool JSON based API built right in to it. &nbsp;I used it to put the search together. &nbsp;Here is the HiFi query I used.</p>
+<pre class="brush:js">{'type': 'page', 'content': {'like': searchphrase }}</pre>
+<p>Translated to English, this means: "Get &nbsp;all pages with content containing the search phrase". HiFi has a javascript library that works with jQuery that makes it easy to use on sites. &nbsp;Here is how searched and displayed the results:</p>
+<pre class="brush:js">var searchphrase = $('#searchbox').val();
+hifi({'type': 'page', 'content': {'like': searchphrase }}).each(function(page){
+	$('ul#results').append('&lt;li&gt;' + page.title + '&lt;/li&gt;');
+});</pre>
+<p>As soon as I get around to it, I'm going to use the API to search for all posts I have done across the three blogs I've written for. &nbsp;It really is a lot of fun to work with.</p>
+<h2>Conclusion</h2>
+<p>This ended up being a bit longer than I wanted. &nbsp;I think there are more lines in this post that there are lines of code running the site! &nbsp;I hope it was helpful to get a look into my thoughts and the process behind the site. &nbsp;If there are any questions or comments, please leave them below.</p>
+<p>You can download a <a href="http://files.www.jsuth.com/drafts/creating-a-minimal-design-using-html5-css3-and-jquery/jsuth.zip">zip of the HiFi theme here</a>. &nbsp;It has all of the HTML/CSS/JS for this site. &nbsp;Feel free to do anything you want with it!</p>
+            </div>
+    <footer>
+    
+    </footer>
+</article>        </div>
+                
+                <div class="sidebar">
+                                </div>
+            </div>
+    <footer class="footer full">
+        © 2014 Joel Sutherland. All Rights Reserved.
+    </footer>
+</div> <!-- container -->
+
+<script src="./Creating a Minimal Blog Design Using HTML5, CSS3 and jQuery - Joel Sutherland_files/jquery.min.js"></script>
+
+</body></html>

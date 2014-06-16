@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Absolute Positioning Messages</title>
+<style>
+body {
+	font: small/1.3em Arial, Helvetica, sans-serif; 
+	background-color: #888; }
+h1 {
+	line-height: 1em; }
+#wrap {
+	position: relative;
+	width: 600px;
+	margin: 0 auto; 
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+.message {
+	/* Positioning the message box. */
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Styling the message. */
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #c00;
+	background-color: #faa;
+	font-weight: bold; 
+	z-index: 10; }
+.message p {
+	margin: .3em auto; }
+</style>
+</head>
+<body>
+	<div class="message">
+		<p>This website has been sold to a family of wombats! <a href="absolute-message.html?source#">Learn more.</a></p>
+	</div>
+	<div id="wrap">
+		<h1>Absolute positioning messages.</h1>
+		<p><a href="../../index.html?p=75">Go back to the article.</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent cursus purus nec sem. Proin egestas. Suspendisse potenti. Nullam vestibulum, leo eu rhoncus tempus, nulla mi aliquet turpis, ut tristique dolor orci id odio. Sed faucibus, magna in iaculis accumsan, magna est convallis dui, in pulvinar nisl arcu eu ante.</p>
+		<p>Suspendisse purus metus, aliquam at, porttitor vitae, elementum sed, purus. Pellentesque elementum aliquet dolor. Fusce convallis magna vitae justo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce id diam. Mauris rhoncus sem at ante. Pellentesque volutpat. Nunc ac pede. Aliquam consequat. Duis mattis faucibus ante. Suspendisse potenti. </p>
+		<p>Pellentesque viverra mattis nulla. Donec imperdiet massa non nisl. Maecenas non orci et dolor dictum iaculis. Morbi id tellus. Curabitur lacinia metus sit amet nisl. In vitae sapien. Cras auctor sapien. Proin ut magna ut magna dictum pellentesque. Proin tincidunt pede vitae justo. In adipiscing. Nulla nunc ante, nonummy sit amet, hendrerit ac, tincidunt vel, nunc. Aliquam vitae elit eget orci luctus porta. In cursus condimentum massa. Morbi pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt, erat pretium imperdiet condimentum, ante leo luctus nulla, in lobortis elit justo ac libero. </p>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent cursus purus nec sem. Proin egestas. Suspendisse potenti. Nullam vestibulum, leo eu rhoncus tempus, nulla mi aliquet turpis, ut tristique dolor orci id odio. Sed faucibus, magna in iaculis accumsan, magna est convallis dui, in pulvinar nisl arcu eu ante.</p>
+		<p>Suspendisse purus metus, aliquam at, porttitor vitae, elementum sed, purus. Pellentesque elementum aliquet dolor. Fusce convallis magna vitae justo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce id diam. Mauris rhoncus sem at ante. Pellentesque volutpat. Nunc ac pede. Aliquam consequat. Duis mattis faucibus ante. Suspendisse potenti. </p>
+		<p>Pellentesque viverra mattis nulla. Donec imperdiet massa non nisl. Maecenas non orci et dolor dictum iaculis. Morbi id tellus. Curabitur lacinia metus sit amet nisl. In vitae sapien. Cras auctor sapien. Proin ut magna ut magna dictum pellentesque. Proin tincidunt pede vitae justo. In adipiscing. Nulla nunc ante, nonummy sit amet, hendrerit ac, tincidunt vel, nunc. Aliquam vitae elit eget orci luctus porta. In cursus condimentum massa. Morbi pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt, erat pretium imperdiet condimentum, ante leo luctus nulla, in lobortis elit justo ac libero. </p>
+	</div>
+
+</body>
+</html>

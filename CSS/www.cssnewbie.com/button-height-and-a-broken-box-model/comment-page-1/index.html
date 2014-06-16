@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Button Height and a Broken Box Model</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Button Height and a Broken Box Model Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Firefox Input Button Line-Height Bug' href='../../index.html?p=528' />
+<link rel='next' title='Understanding the CSS Float Property' href='../../index.html?p=558' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=536' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,204] -->
+<meta name="description" content="Buttons don't behave like normal elements when it comes to the CSS Box Model. Strangely, this seems to be true in all modern browsers!" />
+
+<meta name="keywords" content="box model, css box model, learn css box model, button height, button height bug, button bug, input height, button box model,bug,bug fix,css,firefox,padding,bugs and fixes,layout" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-536 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-536" class="post-536 post type-post status-publish format-standard hentry category-box-model category-bugs-and-fixes category-layout tag-box-model tag-bug tag-bug-fix tag-css tag-firefox tag-padding">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=536" title="Permalink to Button Height and a Broken Box Model" rel="bookmark">Button Height and a Broken Box Model</a>
+	</h2>
+	<div class="meta">
+		<p>Published March 2, 2010 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../../wp-content/uploads/2010/03/broken-button-box-model.png" alt="" title="A Broken Button Box Model" width="500" height="250" class="alignnone size-full wp-image-538" /></p>
+<p>When I figured out the <a href="../../index.html?p=528">workaround for line-heights in form buttons</a> last week, I also discovered an interesting discrepancy (feature?) across all major browsers in terms of buttons and the box model. <a href="../../index.html?p=7">Check out this article for a more in-depth refresher on the CSS Box Model,</a> but here&#8217;s a brief summary:</p>
+<p>Let&#8217;s say I have a div styled like so:</p>
+<pre lang="css" escaped="true" line="1">div {
+	height: 30px;
+	padding: 10px 0; 
+}</pre>
+<p>The box model states that the resulting box will take up 30px of vertical space for the div&#8217;s contents, <em>plus</em> an additional 10px on the top and bottom for the padding, for a total of 50px vertical space taken up by our div. <span id="more-536"></span></p>
+<p>Back in the day, the problem was that while most browsers accepted this &#8220;standard&#8221; box model, Internet Explorer decided to be all rouge-ish and maverick-y and come up with a box model of their own. In their model, the entire div should take up 30px of vertical space, which would mean in our example above that 10px was subtracted from the top and bottom of the div&#8217;s interior to make room for padding&#8230; meaning there was only 10px left over for the div&#8217;s contents. </p>
+<p>As you can imagine, this caused all sorts of problems for web designers trying to design for both box models. There were workarounds of course, but they bloated our code and made our lives just that much less glamorous. I mean, who has time for champagne pool parties when you&#8217;ve got to write browser-specific stylesheets?</p>
+<p>To be fair, Internet Explorer has since begun to adhere to the standard box model. Old pages that used the old box model still work as such in &#8220;Quirks&#8221; mode, while new standards-compliant pages are rendered appropriately in &#8220;Standards&#8221; mode (<a href="../../index.html?p=102">there&#8217;s an article on Quirks vs. Standards modes here</a>).</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<h3>Back to the Future</h3>
+<p>So what the heck does this have to do with us? After all, we live in The Future. Well, as far as I can tell, <strong>buttons still use the non-standard box model.</strong> And the strangest thing to me is, this holds true in every single browser I tested: Chrome, Safari, Firefox, Opera, and Internet Explorer.<br />
+Let&#8217;s look at an example. Here&#8217;s the (essentially identical) CSS for a nice input-style submit button:</p>
+<pre lang="css" escaped="true" line="1">button {
+	height: 30px;
+	padding: 10px 0; 
+}</pre>
+<p>I&#8217;ve specified a height of 30px and top and bottom padding of 10px, which according to the box model should result in a total height of 50px overall, right? Except as you can see in the image up top, Firebug (running in the most recent edition of Firefox) reports a total height of just 30px: it&#8217;s <em>subtracting the padding I&#8217;ve applied,</em> in addition to the height of the default button borders.</p>
+<p>Which means that, in addition to <a href="../../index.html?p=528">Firefox ignoring line-height on buttons</a>, it also ignores the modern box model altogether!</p>
+<p>So what gives? What makes a button any different than any other element on the page? I wish I knew. In fact, if you do happen to know the answer to this riddle, please share with the class in the comments below. Until then, I don&#8217;t have a solution to this particular peccadillo. But knowledge is half the battle!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=696"     class="crp_title">A New CSS Newbie Site Design Launched!</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			13 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-11267">
+		<article id="comment-11267" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d8333ea779e4c5403687c02b54ac7304?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Justin </cite><a href="index.html#comment-11267"><time datetime="2010-03-02T17:05:11+00:00">Mar. 2, 2010 @ 5:05 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Button elements aren&#8217;t block-level elements. I believe technically they&#8217;re &#8220;replaced in-line elements&#8221;; you can see they&#8217;re &#8220;display: inline&#8221; in Firebug or any DOM inspector.</p>
+<p>SitePoint has a decent description of them. Basically browsers can get away with rendering them however they want, because there aren&#8217;t explicit specs covering them.</p>
+<p><a href="http://reference.sitepoint.com/css/replacedelements" rel="nofollow">http://reference.sitepoint.com/css/replacedelements</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11278">
+		<article id="comment-11278" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/67e6b163db483e99d76608769d6c9140?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.h2ok.de' rel='external nofollow' class='url'>Ole</a> </cite><a href="index.html#comment-11278"><time datetime="2010-03-03T01:44:33+00:00">Mar. 3, 2010 @ 1:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Styling form elements is always a mess, also nowadays&#8230; But as Justin mentioned, form elements are (all?) inline-elements, so they can&#8217;t handle fixed vertical heights, paddings, etc.</p>
+<p>Try to set them as display:block and see what happens&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11284">
+		<article id="comment-11284" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/403d47c8b227172b283afd4e3ef7d969?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.wpexplorer.com' rel='external nofollow' class='url'>Top Wordpress Themes</a> </cite><a href="index.html#comment-11284"><time datetime="2010-03-03T11:03:12+00:00">Mar. 3, 2010 @ 11:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Oh what a mess&#8230;Justin above is saying that the issue lies in the fact that they are &#8220;in-line&#8221; elements, so wouldn&#8217;t it solve our little problem by simply adding [display: block;] ?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11286">
+		<article id="comment-11286" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/329331e1689461ba761fb1e85b27422e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.AlchemyUnited.com' rel='external nofollow' class='url'>Mark @ Alchemy United</a> </cite><a href="index.html#comment-11286"><time datetime="2010-03-03T12:17:58+00:00">Mar. 3, 2010 @ 12:17 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8220;The box model states that the resulting box will take up 30px of vertical space for the div’s contents, plus an additional 10px on the top and bottom for the padding, for a total of 50px vertical space taken up by our div. &#8221;</p>
+<p>Hummm&#8230; My understanding is padding goes to the inside. To get 50px total you&#8217;d have to be setting the margin, not the padding, no? Margin is the space between. Padding is the space inside. Or at least that&#8217;s what I thought.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11293">
+		<article id="comment-11293" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/403d47c8b227172b283afd4e3ef7d969?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.wpexplorer.com' rel='external nofollow' class='url'>Top Wordpress Themes</a> </cite><a href="index.html#comment-11293"><time datetime="2010-03-03T15:54:14+00:00">Mar. 3, 2010 @ 3:54 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was also thinking&#8230;browsers are a funny thing. Have you already reset all browser margins and padding&#8217;s as follows:</p>
+<blockquote><p>
+*{<br />
+margin: 0px;<br />
+padding 0px;<br />
+}
+</p></blockquote>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11297">
+		<article id="comment-11297" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5f673db7084ea9594a8e4ab9ff1e250f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.benmalen.com/' rel='external nofollow' class='url'>Ben</a> </cite><a href="index.html#comment-11297"><time datetime="2010-03-04T02:13:09+00:00">Mar. 4, 2010 @ 2:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>input[type="submit"] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:</p>
+<p>box-sizing: content-box</p>
+<p>In Mozilla, you can use:</p>
+<p>-moz-box-sizing: content-box.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11298">
+		<article id="comment-11298" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5f673db7084ea9594a8e4ab9ff1e250f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.benmalen.com/' rel='external nofollow' class='url'>Ben</a> </cite><a href="index.html#comment-11298"><time datetime="2010-03-04T02:13:09+00:00">Mar. 4, 2010 @ 2:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>input[type="submit"] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:</p>
+<p>box-sizing: content-box</p>
+<p>In Mozilla, you can use:</p>
+<p>-moz-box-sizing: content-box.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11304">
+		<article id="comment-11304" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f45d197c8cf2305832bf59f23f144b93?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.normansblog.de' rel='external nofollow' class='url'>Norman</a> </cite><a href="index.html#comment-11304"><time datetime="2010-03-04T19:11:58+00:00">Mar. 4, 2010 @ 7:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>instead of display:block, try display:inline-block<br />
+that way the buttons will stay in line but you can set height and padding as you wish</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11307">
+		<article id="comment-11307" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fad4f1282c1c06326f36f8ac6eef84c7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://swatelier.info' rel='external nofollow' class='url'>Pepa Baros</a> </cite><a href="index.html#comment-11307"><time datetime="2010-03-05T02:08:48+00:00">Mar. 5, 2010 @ 2:08 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The same problem is also when select form element is used. Following page <a href="http://swatelier.info/at/forms/boxModel.htm" rel="nofollow">Form elements and box model</a> describes that. Live example and screenshots included.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11313">
+		<article id="comment-11313" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8e9c2a50594b0ba716d35efc5d7a8cf6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Nathaniel </cite><a href="index.html#comment-11313"><time datetime="2010-03-06T21:57:12+00:00">Mar. 6, 2010 @ 9:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>From the time I started web design I felt padding functioned completely counterintuitive. It is ridiculous that padding gives additional height and width to the element. If the element&#8217;s width is 50px it should stay 50px. Padding shouldn&#8217;t change that. Padding should be added inside the element. </p>
+<p>But unfortunately it&#8217;s a standard. Perhaps there is some rational I don&#8217;t know.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11321">
+		<article id="comment-11321" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1f04c7a47a907d5e36a1087829deb3fb?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">gwi </cite><a href="index.html#comment-11321"><time datetime="2010-03-08T11:30:42+00:00">Mar. 8, 2010 @ 11:30 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8220;Inspect element&#8221; in Safari says it uses the browser default &#8220;-webkit-box-sizing: border-box;&#8221; for input[type="submit"], button and others. So you can reset this behaviour with</p>
+<p>.button { box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; display: block; }</p>
+<p>e.g. if you want &#8220;input type=&#8217;submit&#8217; class=&#8217;button&#8217;&#8221; and &#8220;a class=&#8217;button&#8217;&#8221; to appear identically. This does not answer the quetsion &#8220;why&#8221; but it works around this issue.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11330">
+		<article id="comment-11330" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e615387914a7bbedd771d44f58ce3275?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://avangelistdesign.wordpress.com' rel='external nofollow' class='url'>Avangelist</a> </cite><a href="index.html#comment-11330"><time datetime="2010-03-10T13:28:10+00:00">Mar. 10, 2010 @ 1:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I don&#8217;t think any of these responses are right.</p>
+<p>If we are talking about a button element &#8211; i.e , this is an inline element as correctly stated by Justin. An inline element cannot work with the &#8216;box model&#8217; by definition.</p>
+<p>If we are talking about taking a semantic approach, like a horizontal menu where the markup is made out of an ordered/unordered list where the list is set to display inline, then we already have a clear problem.<br />
+The list is set to inline. You can set the list items  to display:block, but of course now the list is no longer displaying on a single horizontal line. TO complete this task you have to float the list elements.</p>
+<p>Note however, that this is only required for the list items, or buttons to be styled as desired, borders, padding, line-height and so on in IE7 ONLY.</p>
+<p>inline-block is not supported cross browser, and quite often will cause you more problems and even more markup. I think it is also uncertain whether it is going to be re-emerge into the CSS3 model.</p>
+<p>gwi suggests using box-sizing. I am sure that gwi is aware but hasn&#8217;t perhaps explained perfectly, that what they are describing is a style with a vendor prefix. This means that it is a style that is not globally accepted or in a final document from W3C.</p>
+<p>In this example box-size is a CSS3 style which is not currently supported, and is not intended for this sort of example. Not to say that it couldn&#8217;t be used in this way, I just wouldn&#8217;t.</p>
+<p>I don&#8217;t actually think that the issue presented relates in any way to browser mechanics. Bottom line is you are looking at an inline level element not a block level element.</p>
+<p>It&#8217;s all to do with the fact that you are trying to set a height. Don&#8217;t, just use padding to attain your height, because what you are not factoring is the line height of the element content.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13602">
+		<article id="comment-13602" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/982393a6cd5920abde07b05333a904e5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Satya Prakash </cite><a href="index.html#comment-13602"><time datetime="2011-09-28T03:57:02+00:00">Sep. 28, 2011 @ 3:57 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Box-sizing discussion has saved me. On page my input box was having different height than other. and I was surprised.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='536' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9d8b32fe12" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=388" title="Permalink to: Build Custom Frameworks Easily with CSS Classes">
+                    Build Custom Frameworks Easily with CSS Classes                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Generally speaking, I consider full-fledged CSS frameworks to be overkill. However, I still think that the foundation on which CSS frameworks are built &mdash; the concept of using classes to simplify layout and standardize design across similar elements &mdash; is very much worth investigation. <a href="../../index.html?p=388" class="more-link" title="Permalink to: Build Custom Frameworks Easily with CSS Classes">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 840/868 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:13:22 by W3 Total Cache -->

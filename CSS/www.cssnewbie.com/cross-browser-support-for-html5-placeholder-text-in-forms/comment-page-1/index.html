@@ -1,0 +1,1065 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Cross-Browser Support for HTML5 Placeholder Text in Forms</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Cross-Browser Support for HTML5 Placeholder Text in Forms Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Intelligent Select Box Filtering' href='../../index.html?p=611' />
+<link rel='next' title='A JavaScript Currency Conversion Script' href='../../index.html?p=635' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=621' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,224] -->
+<meta name="description" content="HTML5 placeholder text is awesome, but it doesn't currently work in all modern browsers. Here's how to get it to work everywhere: even Internet Explorer." />
+
+<meta name="keywords" content="placeholder text, text hinting, css placeholder, html5 placeholder, placeholder internet explorer, placeholder opera, jquery placeholder, javascript placeholder,advanced techniques,html5" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-621 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-621" class="post-621 post type-post status-publish format-standard hentry category-advanced-techniques category-html5">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=621" title="Permalink to Cross-Browser Support for HTML5 Placeholder Text in Forms" rel="bookmark">Cross-Browser Support for HTML5 Placeholder Text in Forms</a>
+	</h2>
+	<div class="meta">
+		<p>Published November 29, 2010 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../../example/placeholder-support/index.html"><img src="../../wp-content/uploads/2010/11/placeholder-beauty-shot.png" alt="" title="Placeholder text in action" width="500" height="120" class="alignnone size-full wp-image-622" /></a></p>
+<p>HTML5 offers a lot of exciting new features in the realm of forms. One of my favorite new additions to forms in HTML5 is the placeholder attribute. Placeholder text is the “hint&#8221; or “example&#8221; text that resides in a text input field before the user clicks in (or tabs to) that field &mdash; and goes away the moment the field is in use. And the code is amazingly simple, too. Take this example:</p>
+<pre lang="html4strict" escaped="true"> &lt;input type=&quot;text&quot; placeholder=&quot;Start typing to begin searching.&quot; /&gt;</pre>
+<p>The only new bit is the placeholder attribute, but it results in this:</p>
+<p><img src="../../wp-content/uploads/2010/11/placeholder-example-image-1.png" alt="" title="Placeholder text example" width="500" height="60" class="alignnone size-full wp-image-623" /></p>
+<p>I love placeholder text because it can help make large, complex forms easier to navigate. What better place to explain the requirements of an input field than right inside the field itself? And on short forms (like a search bar), placeholder text could be used instead of a field label, making your form that much more compact (though the W3C still suggests you use a label field).</p>
+<p>The only real downside to placeholder text, as I see it, is I can’t use it <strong>right now</strong> … or at least, it won’t show up everywhere. <span id="more-621"></span> Placeholder text is supported by Firefox 3.7+ and Chrome/Safari 4.0+, but Opera is late to the party and Internet Explorer is, as usual, conspicuously absent. The good news is those browsers won’t break if they encounter a placeholder attribute: they’ll just ignore it entirely. But if you were planning to use placeholders to relay important information to your users, that omission might be enough to make you call the whole thing off.</p>
+<p>I’m a notoriously impatient person, and I don’t like to miss out on cool new functionality just because Aunt Gertrude can’t be convinced to switch away from Internet Explorer. So I suggest this as a workaround for the time being: <strong>let’s use placeholder text NOW, for all browsers that support it, and fake the same functionality for legacy browsers.</strong></p>
+<h3>Use Placeholder Text Now</h3>
+<p>This is the easy part. For modern browsers, all we have to do is start using the placeholder attribute, and everything will work automatically. So this:</p>
+<pre lang="html4strict" escaped="true"> &lt;input type=&quot;text&quot; placeholder=&quot;Start typing to begin searching.&quot; /&gt;</pre>
+<p>Becomes this:</p>
+<p><img src="../../wp-content/uploads/2010/11/placeholder-example-image-1.png" alt="" title="Placeholder text example" width="500" height="60" class="alignnone size-full wp-image-623" /></p>
+<p>Easy as pie.</p>
+<h3>All Browsers That Support It</h3>
+<p>As I said earlier, as of the time of this writing, placeholder text is supported by Firefox 3.7+ and Chrome/Safari 4.0+. However, this will inevitably change over time, so we shouldn’t rely on these data to make our implementation decisions. Besides, browser sniffing is SO 20th century. Instead, we’ll write a bit of jQuery to find out whether the user’s browser supports the placeholder attribute. This way, as soon as IE or Opera decide to come join the fun, placeholders on your site will just magically work without any additional help from us.</p>
+<p>This code will do the trick:</p>
+<pre lang="javascript" escaped="true"> jQuery(function() {
+	jQuery.support.placeholder = false;
+	test = document.createElement('input');
+	if('placeholder' in test) jQuery.support.placeholder = true;
+});</pre>
+<p>What I’m doing here is extending the jQuery.support object, just like we did when <a href="../../index.html?p=585">we tested for border-radius support.</a> I’m using JavaScript to create a new input object, and then I’m testing to see if the “placeholder&#8221; attribute is an option inside that object. It will be an option in browsers that support placeholder text, and absent in those that don’t.</p>
+<p>Once we’ve run that code, we’ll be able to check against the jQuery.support object, like so:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="javascript" escaped="true"> if(!$.support.placeholder) {
+// Placeholder text is not supported. 
+}</pre>
+<h3>Fake the Same Functionality</h3>
+<p>So now we just need to get the other browsers to behave the same way. And I discovered something that will make our job easier: even if the user’s browser doesn’t recognize the placeholder attribute, <em>the jQuery running inside that browser will still find it just fine!</em> So we can use the placeholder element in our jQuery. This means we don’t have to do anything fancy to the input element to make it work.</p>
+<p>The following code looks a little complicated (and it is, logic-wise), but it does the trick.</p>
+<pre lang="javascript" escaped="true"> $(function() {
+	if(!$.support.placeholder) { 
+		var active = document.activeElement;
+		$(':text').focus(function () {
+			if ($(this).attr('placeholder') != '' &amp;&amp; $(this).val() == $(this).attr('placeholder')) {
+				$(this).val('').removeClass('hasPlaceholder');
+			}
+		}).blur(function () {
+			if ($(this).attr('placeholder') != '' &amp;&amp; ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+				$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+			}
+		});
+		$(':text').blur();
+		$(active).focus();
+		$('form').submit(function () {
+			$(this).find('.hasPlaceholder').each(function() { $(this).val(''); });
+		});
+	}
+});</pre>
+<p>The first thing we’re doing is finding out if there’s a form element currently selected (which would be automatically selected when the page loads). If so, we store it in the “active&#8221; variable, so we can set it special later. Next, we create two event functions for our elements (I’m targeting “text&#8221; inputs, but you could expand/contract this as you need): a focus function (for when the element gets clicked in/tabbed to) and a blur element (for when the user goes elsewhere). </p>
+<p>The blur function first checks to see if the input element has a placeholder set, and if it does, if the value of the input’s value is either blank (the user didn’t enter anything before moving on) or if it’s the same as the placeholder text. If so, we know that we’re supposed to be applying a placeholder on blur. So we set the value (content) of the input to be the same as the placeholder text, and we add a class of “hasPlaceholder&#8221; to the input so we can style it to look like placeholder text. </p>
+<p>The focus function first checks to see if the element has a placeholder set, and if it does, if the current “value&#8221; of the input area is the same as the placeholder text. If so, that means that the user just clicked into an input field that has our fake placeholder applied. So we blank out the input’s value field and remove the “hasPlaceholder&#8221; class. </p>
+<p>Then we do a few more housekeeping things.  We’re running the “blur&#8221; function on all our fields when the page loads, which adds placeholders wherever they need to be. We then re-focus the originally active field, which would remove the placeholder from that particular field and move the cursor there. And we have a final function that fires on form submission, which strips out the value fields of any fields that have the “hasPlaceholder&#8221; class applied. This prevents us from accidentally sending along our faked placeholder copy as an actual user input.</p>
+<p>And how do we style our input’s new faked placeholder copy to make it look like a real placeholder? It turns out that placeholder styling isn’t that complicated on average, so it doesn’t take much work:</p>
+<pre lang="css"> .hasPlaceholder {
+	color: #777;
+}</pre>
+<p>And with that, you have placeholders that work in ALL modern browsers, not just the fancy ones! <a href="../../example/placeholder-support/index.html">You can see a demo here. Give it a try in various browsers.</a> </p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			102 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-13122">
+		<article id="comment-13122" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c13375ba1016846e39bc0e48260d0bb1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://rmcreative.ru/' rel='external nofollow' class='url'>Sam</a> </cite><a href="index.html#comment-13122"><time datetime="2010-11-29T16:16:27+00:00">Nov. 29, 2010 @ 4:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What about password fields?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13124">
+		<article id="comment-13124" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d8333ea779e4c5403687c02b54ac7304?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Justin </cite><a href="index.html#comment-13124"><time datetime="2010-11-29T22:14:41+00:00">Nov. 29, 2010 @ 10:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Wouldn&#8217;t you want to remove placeholder text from all the forms on the page, not just the first? Or rather, wouldn&#8217;t you want to remove the placeholder text from any fields belonging to the form being submitted?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-13127">
+		<article id="comment-13127" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-13127"><time datetime="2010-11-30T09:06:52+00:00">Nov. 30, 2010 @ 9:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Sam,</p>
+<p>I worked a bit with password fields before I gave it up as a loss. Technically, &#8216;placeholder&#8217; does work on password fields in Firefox and Chrome, though the placeholder text is obfuscated just like the password would be. I was hoping to get them to display clear text until clicked in, but the best solution for that would be to change the input type from password to text (and back again). Which changes how placeholder works, which means it isn&#8217;t a simple solution anymore. Also IE does not support changing input types. So I was forced to scale it back.</p>
+<p>That having been said, you can apply it to password fields, and I&#8217;m pretty sure it&#8217;ll work the same cross-browser. You just won&#8217;t be able to read the placeholder text.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-13128">
+		<article id="comment-13128" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-13128"><time datetime="2010-11-30T09:08:53+00:00">Nov. 30, 2010 @ 9:08 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good catch, Justin. I&#8217;ll fix that in the original. After I&#8217;d written the code originally I went on to apply it in an ASP.NET setting&#8230; which means every page is wrapped in a single form. I added that line to speed up the search slightly, and forgot to remove it for demonstration purposes.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13129">
+		<article id="comment-13129" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c13375ba1016846e39bc0e48260d0bb1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://rmcreative.ru/' rel='external nofollow' class='url'>Sam</a> </cite><a href="index.html#comment-13129"><time datetime="2010-11-30T09:09:34+00:00">Nov. 30, 2010 @ 9:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Actually there is a good solution <a href="http://fuelyourcoding.com/scripts/infield/" rel="nofollow">http://fuelyourcoding.com/scripts/infield/</a> that actually works with password fields. The only drawback is that it does not play nice with Google Chrome autofill feature.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13141">
+		<article id="comment-13141" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/45718458eba0862cb99b2b1b29c459b5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://mohdhazwan.com' rel='external nofollow' class='url'>wnn</a> </cite><a href="index.html#comment-13141"><time datetime="2010-12-09T20:49:21+00:00">Dec. 9, 2010 @ 8:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>IE really screwed up web tech scripting. sam&#8217;s link pretty much helpful. thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13173">
+		<p>Pingback: <a href='http://www.sastgroup.com/links/supporto-placeholder-cross-browser-con-html5-e-jquery' rel='external nofollow' class='url'>Supporto Placeholder Cross-Browser con HTML5 e jQuery!&nbsp;|&nbsp;sastgroup.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13174">
+		<article id="comment-13174" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/73907b7b6f4399e6550c8d74c64f71ed?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">DRoss </cite><a href="index.html#comment-13174"><time datetime="2011-01-08T10:19:37+00:00">Jan. 8, 2011 @ 10:19 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This works for me in firefox, IE &#8211; have never checked opera. </p>
+<p>		$().ready( function() {<br />
+			$( &#8220;input, textarea&#8221; ).placehold();<br />
+		});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13175">
+		<article id="comment-13175" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c893626a3a2796634738a8b14c83380c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://lostwebdesigns.com' rel='external nofollow' class='url'>Guillaume</a> </cite><a href="index.html#comment-13175"><time datetime="2011-01-08T10:21:01+00:00">Jan. 8, 2011 @ 10:21 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice post, very useful, just that with the help of modernizr, and the input atttribute detection you don&#8217;t need to extend the jQuery.support object, for example:</p>
+<pre><code>if (!Modernizr.input.placeholder){
+          $(function() {
+             if(!$.support.placeholder) { 
+                var active = document.activeElement;
+                $(':text').focus(function () {
+                   if ($(this).attr('placeholder') != '' &amp;&amp; $(this).val() == $(this).attr('placeholder')) {
+                      $(this).val('').removeClass('hasPlaceholder');
+                   }
+                }).blur(function () {
+                   if ($(this).attr('placeholder') != '' &amp;&amp; ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                      $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+                   }
+                });
+                $(':text').blur();
+                $(active).focus();
+                $('form:eq(0)').submit(function () {
+                   $(':text.hasPlaceholder').val('');
+                });
+             }
+          });
+        } </code></pre>
+<p>Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13176">
+		<article id="comment-13176" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/73907b7b6f4399e6550c8d74c64f71ed?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">DRoss </cite><a href="index.html#comment-13176"><time datetime="2011-01-08T11:30:44+00:00">Jan. 8, 2011 @ 11:30 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Duh &#8211; I forgot to include the placeholder script. And actually yours might be better &#8212; or at least slimmer:</p>
+<p>jQuery(function(){<br />
+	$.fn.placehold = function( options ) {<br />
+		var opts = $.extend( {}, $.fn.placehold.defaults, options );</p>
+<p>		return this.each( function() {<br />
+			if ( !( &#8220;placeholder&#8221; in document.createElement( &#8220;input&#8221; ) ) ) {<br />
+				var placeholder_attr = $( this ).attr( &#8220;placeholder&#8221; );</p>
+<p>				if ( placeholder_attr ) {<br />
+					var elem = $( this )</p>
+<p>					if ( !elem.val() || elem.val() == placeholder_attr ) {<br />
+						elem.addClass( opts.placeholderClassName ).val( placeholder_attr );<br />
+					}</p>
+<p>					elem.focus( function() {<br />
+						if ( elem.val() == placeholder_attr ) {<br />
+							elem.removeClass( opts.placeholderClassName ).val( &#8220;&#8221; );<br />
+						}<br />
+					});</p>
+<p>					elem.blur( function() {<br />
+						if ( !elem.val() ) {<br />
+							elem.addClass( opts.placeholderClassName ).val( placeholder_attr );<br />
+						}<br />
+					});</p>
+<p>					elem.closest( &#8220;form&#8221; ).submit( function() {<br />
+						if ( elem.val() == placeholder_attr ) {<br />
+							elem.val( &#8220;&#8221; );<br />
+						}</p>
+<p>						return true;<br />
+					});<br />
+				}<br />
+			}<br />
+		});<br />
+	};</p>
+<p>	$.fn.placehold.defaults = {<br />
+		placeholderClassName: &#8220;placeholder&#8221;<br />
+	};<br />
+});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13178">
+		<article id="comment-13178" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/78e739ca5ba994ce4456dddb7579ff31?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://lineadecodigo.com' rel='external nofollow' class='url'>Victor</a> </cite><a href="index.html#comment-13178"><time datetime="2011-01-08T20:24:05+00:00">Jan. 8, 2011 @ 8:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Opera 11 supports this attribute. :-D</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13248">
+		<article id="comment-13248" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d2dca3cc5b23d96e5e1aab30c39c7229?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.palleman.nu' rel='external nofollow' class='url'>Patrik Zingmark</a> </cite><a href="index.html#comment-13248"><time datetime="2011-02-07T06:13:36+00:00">Feb. 7, 2011 @ 6:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I did a jQuery plugin for this a couple of years ago. <a href="http://plugins.jquery.com/node/11997" rel="nofollow">http://plugins.jquery.com/node/11997</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13249">
+		<article id="comment-13249" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/34a956586f1b3978b0fca42d1c9a37d7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://twitter.com/kstre' rel='external nofollow' class='url'>Keegan Street</a> </cite><a href="index.html#comment-13249"><time datetime="2011-02-07T06:18:25+00:00">Feb. 7, 2011 @ 6:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey Rob,</p>
+<p>Thanks for sharing. That&#8217;s a useful snippet. I&#8217;d recommend changing the input selectors to $(&#8216;:text, textarea&#8217;) to add textarea support. The :text selector only selects inputs not textareas.</p>
+<p>Cheers,<br />
+Keegan</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13284">
+		<article id="comment-13284" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/22f43ceca65eba8f1fe86707365b069c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.fromfat2that.com' rel='external nofollow' class='url'>Krista</a> </cite><a href="index.html#comment-13284"><time datetime="2011-02-23T16:08:49+00:00">Feb. 23, 2011 @ 4:08 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for sharing this information. I am just catching up with some of the latest techniques for design/dev.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13285">
+		<article id="comment-13285" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f20d0fa36d4788bd7418732fb6269ab1?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Carl </cite><a href="index.html#comment-13285"><time datetime="2011-02-23T21:51:21+00:00">Feb. 23, 2011 @ 9:51 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>In FF 3.6.13 on Mac (and probably earlier) this will not work, as placeholder is not yet supported and the value reported by the browser for .attr(&#8216;placeholder&#8217;) is not &#8220;&#8221; but instead is undefined.</p>
+<p>The problem only presents on submit when inputs do not have a placeholder attribute defined (which is not included in the demo)</p>
+<p>To fix you need this in the 2 appropriate places in the code:</p>
+<p>if ($(this).attr(&#8216;placeholder&#8217;) != &#8221; &amp;&amp; $(this).attr(&#8216;placeholder&#8217;) != undefined &#8230;</p>
+<p>Sorry if I&#8217;m sounding terse. This code ended up in a project I&#8217;m working on and I didn&#8217;t know it was there and it took me about a day to figure out why my basic form was deleting the text fields on submit. Brain = fried</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13385">
+		<p>Pingback: <a href='http://websitesmaderight.com/2011/04/180-html5-tutorials-and-a-round-up-of-html5-round-ups/' rel='external nofollow' class='url'>180+ HTML5 Tutorials and a Round-Up of HTML5 Round-Ups - WebsitesMadeRight.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13389">
+		<p>Pingback: <a href='http://websitesmaderight.com/2011/04/180-html5-tutorials-and-a-round-up-of-round-ups/' rel='external nofollow' class='url'>180+ HTML5 Tutorials and a Round-Up of Round-Ups - WebsitesMadeRight.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13393">
+		<p>Pingback: <a href='http://websitesmaderight.com/2011/04/270-html5-tutorials-and-a-round-up-of-round-ups/' rel='external nofollow' class='url'>270+ HTML5 Tutorials and a Round-Up of Round-Ups - WebsitesMadeRight.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13429">
+		<p>Pingback: <a href='http://mytory.co.kr/archives/1213' rel='external nofollow' class='url'>Modernizr 플러그인으로 HTML5 지원 여부를 알아 내기</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13451">
+		<article id="comment-13451" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1a68aff5ea054c5e3f51aa2bef500ce4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.clintongreen.com' rel='external nofollow' class='url'>Clinton Green</a> </cite><a href="index.html#comment-13451"><time datetime="2011-05-25T22:32:41+00:00">May. 25, 2011 @ 10:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks, this helped a lot with compressing forms with HTML5 and then hacking it to work in IE.<br />
+Cheers</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13454">
+		<article id="comment-13454" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e39432e2470ed923b79b3ea795168cbc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.riak.uk.com' rel='external nofollow' class='url'>Riak</a> </cite><a href="index.html#comment-13454"><time datetime="2011-05-27T08:32:20+00:00">May. 27, 2011 @ 8:32 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for sharing this. Im using place holder on my current site (still being created) Im just going to scrap place holder and use a classic javascript version.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13455">
+		<article id="comment-13455" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0a367aa212721eef0cb39883dc03d896?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Lindsey </cite><a href="index.html#comment-13455"><time datetime="2011-05-27T09:56:05+00:00">May. 27, 2011 @ 9:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks so much for making this available! i actually don&#8217;t know ANYTHING about jquery and was able to implement with no problems- also thanks to all who commented! &#8211;the bit about changing input selectors to $(‘:text, textarea’)really helped me out also&#8211;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13504">
+		<article id="comment-13504" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7f06957f7996056f0cf982f87782c588?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">George </cite><a href="index.html#comment-13504"><time datetime="2011-07-17T15:04:55+00:00">Jul. 17, 2011 @ 3:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Carl, you are a hero. The exact thing happened to me. The code in this article has a horrible flaw that in some browsers (including IE9) this piece of code clears type=text input fields on the page when submitting. Spent two hours of my life trying to find the problem, and I am lead here. This needs to be fixed with Carl&#8217;s suggestion. Sloppy testing by OP.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13520">
+		<p>Pingback: <a href='http://www.erreur500.com/2011/07/22/uncategorized/attribut-placeholder-des-anciens-aux-nouveaux-navigateurs/' rel='external nofollow' class='url'>Erreur 500 &raquo; Blog Archive &raquo; Attribut placeholder des anciens aux nouveaux navigateurs</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13539">
+		<article id="comment-13539" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5441945c65e3a98df2e7a91dc7e9118c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Alice Bevan-McGregor </cite><a href="index.html#comment-13539"><time datetime="2011-08-03T22:11:04+00:00">Aug. 3, 2011 @ 10:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Here&#8217;s an even more packed version, also using modernizr:</p>
+<p>${function(){var p=&#8217;placeholder&#8217;;if(!Modernizr.input[p]){var z=&#8217;input[',y=']&#8216;;$(z+p+y).map(function(){var t=$(this);if(t.val()==&#8221;)t.val(t.attr(p));});$(z+p+y).focus(function(){var t=$(this);if(t.val()==t.attr(p))t.val(&#8221;);}).blur(function(){var t=$(this);if(t.val()==&#8221;)t.val(t.attr(p));})}});</p>
+<p>Haven&#8217;t tested this, though.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13578">
+		<article id="comment-13578" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6e463b3eb7dddb7d893648b14564a12a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.pixabit.de' rel='external nofollow' class='url'>Pascal</a> </cite><a href="index.html#comment-13578"><time datetime="2011-09-06T07:07:18+00:00">Sep. 6, 2011 @ 7:07 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks. Work&#8217;s for all Forms but for some reasons not with the TYPO3 Indexed Search Form. I think there are other JavaScripts which are fighting this one. Just want to inform others in case they run in the same problem. My workaround was to do the replacements only on forms I wanted. So replace these lines<br />
+$(&#8216;:text&#8217;).focus(function () {<br />
+with<br />
+$(&#8216;.yourForm :text&#8217;).focus(function () {</p>
+<p>and<br />
+$(&#8216;:text&#8217;).blur();<br />
+with<br />
+$(&#8216;.yourForm :text&#8217;).blur();</p>
+<p>and<br />
+$(&#8216;form&#8217;).submit(function () {<br />
+with<br />
+$(&#8216;.yourForm&#8217;).submit(function () {</p>
+<p>Cheers,<br />
+Pascal</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13617">
+		<article id="comment-13617" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5865735b5c2f167efc610ae2fcfdaa59?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Tess </cite><a href="index.html#comment-13617"><time datetime="2011-10-06T18:49:51+00:00">Oct. 6, 2011 @ 6:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How about this simplification:</p>
+<p>test = document.createElement(&#8216;input&#8217;);<br />
+jQuery.support.placeholder = &#8216;placeholder&#8217; in test;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13648">
+		<article id="comment-13648" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1001912f0d0c4475ffac644dfe2ba211?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">dunhakdis </cite><a href="index.html#comment-13648"><time datetime="2011-11-02T07:43:00+00:00">Nov. 2, 2011 @ 7:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you for this script. </p>
+<p>For textarea and password support please use this script.</p>
+<p>Tested in IE8, IE9, FF 3.5+, and G Chrome:</p>
+<p>jQuery(function() {<br />
+	jQuery.support.placeholder = false;<br />
+	WebKit_type_browser = document.createElement(&#8216;input&#8217;);<br />
+	if(&#8216;placeholder&#8217; in WebKit_type_browser) jQuery.support.placeholder = true;</p>
+<p>	if(!$.support.placeholder) {<br />
+		var active = document.activeElement;<br />
+		$(&#8216;:text, textarea, :password&#8217;).focus(function () {<br />
+			if ($(this).attr(&#8216;placeholder&#8217;) != &#8221; &amp;&amp; $(this).val() == $(this).attr(&#8216;placeholder&#8217;)) {<br />
+				$(this).val(&#8221;).removeClass(&#8216;hasPlaceholder&#8217;);<br />
+			}<br />
+		}).blur(function () {<br />
+			if ($(this).attr(&#8216;placeholder&#8217;) != &#8221; &amp;&amp; ($(this).val() == &#8221; || $(this).val() == $(this).attr(&#8216;placeholder&#8217;))) {<br />
+				$(this).val($(this).attr(&#8216;placeholder&#8217;)).addClass(&#8216;hasPlaceholder&#8217;);<br />
+			}<br />
+		});<br />
+		$(&#8216;:text, textarea, :password&#8217;).blur();<br />
+		$(active).focus();<br />
+		$(&#8216;form&#8217;).submit(function () {<br />
+			$(this).find(&#8216;.hasPlaceholder&#8217;).each(function() { $(this).val(&#8221;); });<br />
+		});<br />
+	}</p>
+<p>});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13653">
+		<p>Pingback: <a href='http://www.femgeek.co.uk/2011/11/html5-placeholders-for-troublesome-browsers-ie-ie9/' rel='external nofollow' class='url'>HTML5 Placeholders for troublesome browsers (ie. IE9) | Femgeek.co.uk</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13853">
+		<p>Pingback: <a href='http://www.giantgeek.com/blog/?p=452' rel='external nofollow' class='url'>HTML5 INPUT placeholder text &laquo; Giant Geek Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13897">
+		<article id="comment-13897" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8d6e4c321c53d30d1ce352a9148c0654?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ryan </cite><a href="index.html#comment-13897"><time datetime="2011-12-20T15:19:36+00:00">Dec. 20, 2011 @ 3:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Awesome chunk of code!!! Thanks!!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13909">
+		<article id="comment-13909" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/de84239581be3025e96619ab012928ff?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sandeep Singh </cite><a href="index.html#comment-13909"><time datetime="2011-12-27T08:09:51+00:00">Dec. 27, 2011 @ 8:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The code is not working in IE9</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13932">
+		<p>Pingback: <a href='http://ilyaplot.ru/posts/zastavlyaem-rabotat-placeholder-v-ie/' rel='external nofollow' class='url'>Заставляем работать placeholder в IE | Полу-блог</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13944">
+		<article id="comment-13944" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1301d3a697b243033e7a61b3d5339003?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Elizabeth Kanz </cite><a href="index.html#comment-13944"><time datetime="2012-01-18T10:16:05+00:00">Jan. 18, 2012 @ 10:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is great, and I have it working.  Question though- I&#8217;m using a form where the users will select a type of form they need to fill out, and the form loads on the page in an HTML panel from another html page.  When this loads into the panel, the placeholder text doesn&#8217;t work, but when I view the form page on it&#8217;s own, it works.  I thought I might just need to add the script to the page that I&#8217;m paneling in the form into, but it still doesn&#8217;t work.  Any ideas?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13950">
+		<article id="comment-13950" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f2c16cc8e998211f0399c4b3281f89b4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Abdul </cite><a href="index.html#comment-13950"><time datetime="2012-01-24T18:20:46+00:00">Jan. 24, 2012 @ 6:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Place holder is not working in IE 9</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14020">
+		<article id="comment-14020" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/22333404a7215b08ea8d8b4bd7799592?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.arsenalgears.com' rel='external nofollow' class='url'>maseo</a> </cite><a href="index.html#comment-14020"><time datetime="2012-03-11T10:46:37+00:00">Mar. 11, 2012 @ 10:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, thanks for the code. it working :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14029">
+		<article id="comment-14029" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/79cdeefc5a3196211f138cf3c1762cf2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Mr.777 </cite><a href="index.html#comment-14029"><time datetime="2012-03-20T06:32:46+00:00">Mar. 20, 2012 @ 6:32 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This doesn&#8217;t work in Google Chrome 17.0.963.79 m.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14036">
+		<article id="comment-14036" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/aa427cd291462f0b7ff1e56177c67b6f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://incommercial' rel='external nofollow' class='url'>stan</a> </cite><a href="index.html#comment-14036"><time datetime="2012-03-26T20:11:48+00:00">Mar. 26, 2012 @ 8:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I just fixed for  our customer using this: </p>
+<p>$().ready( function() {<br />
+$(&#8216;input, textarea&#8217; ).each(function() {<br />
+  if($(this).val().length&lt;1){$(this).val($(this).attr(&#039;placeholder&#039;));}<br />
+});</p>
+<p>$(&#039;input, textarea&#039; ).focus(function() {<br />
+if($(this).val()==$(this).attr(&#039;placeholder&#039;)){$(this).val(&#039;&#039;);}<br />
+  //alert(&quot;val=&quot;+$(this).val());<br />
+});</p>
+<p>$(&#039;input, textarea&#039; ).blur(function() {<br />
+if($(this).val().length&lt;1){$(this).val($(this).attr(&#039;placeholder&#039;));}<br />
+});</p>
+<p>});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14038">
+		<article id="comment-14038" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e68e63f1193cb4cca942129898c31dda?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">mc </cite><a href="index.html#comment-14038"><time datetime="2012-03-27T01:14:58+00:00">Mar. 27, 2012 @ 1:14 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>does not work in ie9</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14061">
+		<article id="comment-14061" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/128bbb3b163876d59438916a21a4c32c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.posterjob.co.uk' rel='external nofollow' class='url'>PosterJob</a> </cite><a href="index.html#comment-14061"><time datetime="2012-04-16T11:13:28+00:00">Apr. 16, 2012 @ 11:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Any fix for IE9? it&#8217;s not working for me.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14067">
+		<article id="comment-14067" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/48ece42abfcd3726e07c673cc7ae7d9f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://pacecommunications.com' rel='external nofollow' class='url'>William</a> </cite><a href="index.html#comment-14067"><time datetime="2012-04-19T22:07:54+00:00">Apr. 19, 2012 @ 10:07 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was getting a permission denied error in IE7 and jQuery was completely blowing up.</p>
+<p>I think it was because of this bug <a href="http://bugs.jquery.com/ticket/10570" rel="nofollow">http://bugs.jquery.com/ticket/10570</a></p>
+<p>I used the longhand selector &#8220;input[type=text]&#8221; instead of &#8220;[:text]&#8221; and everything started working again.</p>
+<p>Thank you so much for this very handy script.</p>
+<p>Cheers.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14112">
+		<article id="comment-14112" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/ff8ea85f8bf17030f8c6a2689a76be46?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.makemyblogpretty.com' rel='external nofollow' class='url'>Jennette</a> </cite><a href="index.html#comment-14112"><time datetime="2012-05-21T16:10:32+00:00">May. 21, 2012 @ 4:10 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you so much for this code! It just made my life a lot easier.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14122">
+		<article id="comment-14122" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2e5e19777a8d8fc7809ea693793e7e3b?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://stanfordrosenthal.com' rel='external nofollow' class='url'>Stanford Rosenthal</a> </cite><a href="index.html#comment-14122"><time datetime="2012-05-29T20:02:37+00:00">May. 29, 2012 @ 8:02 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>IE9 was throwing an error with this code:</p>
+<p>$(this).val($(this).attr(&#8216;placeholder&#8217;)).addClass(&#8216;hasPlaceholder&#8217;);</p>
+<p>but breaking it up into two lines fixes the problem:</p>
+<p>$(this).val($(this).attr(&#8216;placeholder&#8217;));<br />
+$(this).addClass(&#8216;hasPlaceholder&#8217;);</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14123">
+		<article id="comment-14123" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a561b0f77645385c1c8c1aff0cc74733?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">veeru </cite><a href="index.html#comment-14123"><time datetime="2012-05-30T00:56:48+00:00">May. 30, 2012 @ 12:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good Work, It is working really in all major browsers. Thank You.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14127">
+		<article id="comment-14127" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/762ea0e7ec8ed37105080897bfd6bf74?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">BB </cite><a href="index.html#comment-14127"><time datetime="2012-06-05T10:49:53+00:00">Jun. 5, 2012 @ 10:49 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am getting one error still. If those fields are required I&#8217;m getting the proper error message but on the second submit in IE it is losing the value I put in. Chrome and Firefox work fine.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14145">
+		<p>Pingback: <a href='http://www.objectpartners.com/2012/06/18/jquery-ui-datepicker-ie-focus-fix/' rel='external nofollow' class='url'>JQuery UI Datepicker IE focus fix | Object Partners Inc</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14148">
+		<article id="comment-14148" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/74ccefd49a0b045c7a6e7130ff0d2059?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Riccardo </cite><a href="index.html#comment-14148"><time datetime="2012-06-20T04:57:08+00:00">Jun. 20, 2012 @ 4:57 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>it doesn&#8217;t work on my IE 9 but works on FF, Chrome, Opera, Safari, Avant and SEAmonkey..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14149">
+		<p>Pingback: <a href='http://makemyblogpretty.com/2012/06/20/how-to-make-text-fields-appear-and-disappear-with-javascript-in-contact-form-7/' rel='external nofollow' class='url'>Make My Blog Pretty | How to make text fields appear and disappear with javascript in Contact Form 7 | Blogs made better by magic fairies</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14228">
+		<article id="comment-14228" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/41f1e327f8dc910c682ad67c5348988c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://fuzzybee7.com' rel='external nofollow' class='url'>Eric Nguyen</a> </cite><a href="index.html#comment-14228"><time datetime="2012-08-23T11:34:30+00:00">Aug. 23, 2012 @ 11:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks a lot for sharing this.</p>
+<p>I&#8217;ve been using a similar approach to Twitter login/ signup form which also involve JQuery and it fakes the placeholder for all modern browsers. However, my code is a little longer and not making use of HTML5 placeholder whenever possible</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14229">
+		<article id="comment-14229" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2e5e19777a8d8fc7809ea693793e7e3b?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://rosenthal.co' rel='external nofollow' class='url'>Stanford Rosenthal</a> </cite><a href="index.html#comment-14229"><time datetime="2012-08-23T11:44:46+00:00">Aug. 23, 2012 @ 11:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@BB, @riccardo see my comment earlier for IE9 fix</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../comment-page-2/index.html#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='621' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="6bded50493" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=418" title="Permalink to: Reader Response: A Simple, Streamlined E-Commerce Solution">
+                    Reader Response: A Simple, Streamlined E-Commerce Solution                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Today I come to you with my arms wide open &mdash; and my shoulders caught somewhere between a slump and a shrug. I've been tearing my hair out over the last couple of months looking for the perfect ecommerce solution. I've come up short. <a href="../../index.html?p=418" class="more-link" title="Permalink to: Reader Response: A Simple, Streamlined E-Commerce Solution">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1392/1516 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 17:05:17 by W3 Total Cache -->

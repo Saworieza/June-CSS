@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Writing CSS Shorthand</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Writing CSS Shorthand Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: March 29 to April 04' href='../../index.html?p=84' />
+<link rel='next' title='The CSS-Only Accordion Effect' href='../../index.html?p=90' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=85' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,188] -->
+<meta name="description" content="Writing Cascading Style Sheets saves you time and bandwidth in the long run by removing all of the presentational elements and attributes from your web" />
+
+<meta name="keywords" content="background,border,font,lists,margin,padding,basic techniques,css rules" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-85 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-85" class="post-85 post type-post status-publish format-standard hentry category-basic-techniques category-css-rules tag-background tag-border tag-font tag-lists tag-margin tag-padding">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=85" title="Permalink to Writing CSS Shorthand" rel="bookmark">Writing CSS Shorthand</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 7, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src='../../wp-content/uploads/2008/04/shorthand-400.jpg' alt='"Jeri Rowe" by spcoon.' title="'Jeri Rowe' by spcoon. Used under a Creative Commons license." /></p>
+<p>Writing Cascading Style Sheets saves you time and bandwidth in the long run by removing all of the presentational elements and attributes from your web pages and moving them into a separate document. But sometimes that CSS document itself can get pretty long as well. So what do you do then?</p>
+<p>There are lots of things you can do to help – <a href="../../index.html?p=51" title="Combating Classitis with Cascades and Sequential Selectors">embracing the cascading nature of CSS</a> helps a great deal, as does <a href="../../css-rules/css-rules-multiplicity/index.html" title="CSS Rules of Multiplicity">combining CSS declarations</a> using sequential selectors. But another trick that can really help cut down on the size of your CSS is to use CSS shorthand properties whenever possible. There are six shorthand properties for various areas of your CSS: margins, padding, borders, backgrounds, list-styles, and fonts. I’ll go through each of them below.</p>
+<p><strong>The margin shorthand property</strong> combines the margin-top, margin-right, margin-bottom, and margin-left properties into one single property. So instead of writing this:</p>
+<pre lang="css" escaped="true" line="1">div {
+	margin-top: 5px;
+	margin-right: 8px;
+	margin-bottom: 3px;
+	margin-left: 4px; }</pre>
+<p>You could shorten it all down to this:</p>
+<pre lang="css" escaped="true" line="1">div { margin: 5px 8px 3px 4px; }</pre>
+<p>It’s important to remember to always put your margins in the shorthand property in the following order: top, right, bottom, and left. Basically, just start at the top and work your way around the element clockwise. And if your top/bottom and left/right margins match, you can boil your shorthand down even further:</p>
+<pre lang="css" escaped="true" line="1">div { margin: 5px 8px; }</pre>
+<p>The rule above applies a 5 pixel margin to the top and bottom of your div, and an 8 pixel margin to the left and right sides. If all four of your margins match, you could even just write this:</p>
+<pre lang="css" escaped="true" line="1">div { margin: 5px; }</pre>
+<p><strong>The padding shorthand property </strong>works exactly the same way as the margin shorthand. The biggest thing to remember about both of these properties is to start at the top and work your way around clockwise. And if you’re shortening it to two values, the top/bottom value always goes first, followed by the left/right value. Further, if you don’t need to specify a value on any one of the sides, you can just specify a zero (0) size with no unit of measurement.</p>
+<pre lang="css" escaped="true" line="1">div { padding: 30px 0; }</pre>
+<p><strong>The border property</strong> allows you to combine the border-width, border-style, and border-color properties into one. The width comes first, followed by the style, and then the color. So instead of writing out all this:</p>
+<pre lang="css" escaped="true" line="1">div {
+	border-width: 3px;
+	border-style: solid;
+	border-color: #c00; }</pre>
+<p>You could boil it down to a single rule, like so: </p>
+<pre lang="css" escaped="true" line="1">div { border: 3px solid #c00; }</pre>
+<p><strong>The background property</strong> is fairly powerful, in that it combines five rules into one: background-color, background-image, background-repeat, background-attachment, and background-position (in that order). So instead of writing this verbose mess of code:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">div {
+	background-color: #fff;
+	background-image: url(../images/bg.gif);
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	background-position: top center; }</pre>
+<p>We could boil all of that down to this little snippet:</p>
+<pre lang="css" escaped="true" line="1">div { background: #fff url(../img/bg.gif) repeat-y fixed top; }</pre>
+<p>Also note that I skipped the “center” portion of my background-position property: if you specify one background position (i.e. “top”) but neglect to specify a second position value, “center” is the assumed value.</p>
+<p><strong>The list-style shorthand property</strong> isn’t used all that often, but it can save you a couple of lines of code. It combines the list-style-position property with either of the list-style-type or list-style-image properties – you could probably specify both, but list-style-image would overwrite the list-style-type property with whatever image you selected. So instead of writing this:</p>
+<pre lang="css" escaped="true" line="1">ul {
+	list-style-type: square;
+	list-style-position: inside; }</pre>
+<p>You could write this:</p>
+<pre lang="css" escaped="true" line="1">ul { list-style: square inside; }</pre>
+<p>Generally speaking, however, I tend to only use this shorthand when I’m looking to remove styling from the list (as when building a navigation bar):</p>
+<pre lang="css" escaped="true" line="1">ul { list-style: none; }</pre>
+<p><strong>The font shorthand property</strong> is probably the most powerful of all the shorthand properties. It combines a grand total of six properties into one: font-style, font-variant, font-weight, font-size, line-height (even though it’s not technically a font property), and font-family. So instead of writing out all six of these rules:</p>
+<pre lang="css" escaped="true" line="1">p {
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: small;
+	line-height: 1.2em;
+	font-family: Helvetica, Arial, sans-serif; }</pre>
+<p>I can get by with a single declaration: </p>
+<pre lang="css" escaped="true" line="1">p { font: italic small-caps bold small/1.2em Helvetica, Arial, sans-serif; }</pre>
+<p>Of course, most of the time you won’t be specifying all six of those properties at once – I can’t even imagine how difficult it would be to read italicized, bold-faced small caps! But it is very useful for specifying your font-size, line-height, and font-family all in one place. That way, all of your typeface information sits one convenient location.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			11 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-552">
+		<article id="comment-552" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d44cf7963dab7c8d2149a009bc2b9034?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Rhaze </cite><a href="index.html#comment-552"><time datetime="2008-04-08T05:32:48+00:00">Apr. 8, 2008 @ 5:32 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One more</p>
+<p>div {margin : 5px 10px 2px}</p>
+<p>5px margin to the top, 10px margin to the left AND right sides, 2px margin to bottom ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-568">
+		<p>Pingback: <a href='http://cssblog.it/2008/04/11/risparmiare-banda-utilizzando-la-sintassi-abbreviata-dei-css/' rel='external nofollow' class='url'>Risparmiare banda utilizzando la sintassi abbreviata dei CSS : cssblog.it</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-573">
+		<article id="comment-573" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/79c8024e7bf728c94627711119e771bf?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Shoghon </cite><a href="index.html#comment-573"><time datetime="2008-04-11T07:11:51+00:00">Apr. 11, 2008 @ 7:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>FYI-You don&#8217;t even need the px in a lot of circumstances. i.e. p {margin: 0 1 2 3;} would, like the clock face, style top=0, right=1, bottom=2, left=3.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-975">
+		<article id="comment-975" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/84aa478df6402689046c995431ec5774?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.hypeelite.com' rel='external nofollow' class='url'>Erika</a> </cite><a href="index.html#comment-975"><time datetime="2008-05-07T11:40:33+00:00">May. 7, 2008 @ 11:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>My question, then, is&#8230; with the font and background attributes, do they have to be in THAT specific order in order to be functional?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-1123">
+		<p>Pingback: <a href='http://www.getincss.ru/2008/05/14/css-optimizaciya-pishem-pravila-sokrashhenno/' rel='external nofollow' class='url'>Блог для вебмастеров &raquo; CSS оптимизация: пишем правила сокращенно</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8396">
+		<p>Pingback: <a href='http://www.thomsonchemmanoor.com/25-extremely-useful-css-shorthand-tutorials.html' rel='external nofollow' class='url'>25 extremely useful CSS Shorthand Tutorials : Online Marketing Blog - Website Development &#38; Website Marketing tips and Strategies</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12957">
+		<article id="comment-12957" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e9c57c31b6288dd2b3fe313da85b28ec?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.infrasoundkids.com' rel='external nofollow' class='url'>Luke</a> </cite><a href="index.html#comment-12957"><time datetime="2010-09-04T10:36:53+00:00">Sep. 4, 2010 @ 10:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The one thing that really gets me with shorthand margins and paddings is that it goes anti-clockwise instead of clockwise. so instead of going top right bottom left. it goes top left bottom right. Always gets me!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13009">
+		<article id="comment-13009" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2612feaf70bafe45d687d2d1128e3ec8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://None' rel='external nofollow' class='url'>Samuel</a> </cite><a href="index.html#comment-13009"><time datetime="2010-10-07T07:16:19+00:00">Oct. 7, 2010 @ 7:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What a great tutorial. I now understand the short-hand more better than i use to.thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13255">
+		<article id="comment-13255" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/82b980cbb396c05b4db5a896fed50f35?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Blaise </cite><a href="index.html#comment-13255"><time datetime="2011-02-09T17:49:05+00:00">Feb. 9, 2011 @ 5:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I always had problems remembering the order Top Right Bottom Left until I realised that it spelt TRouBLe !</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13294">
+		<article id="comment-13294" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/10518831600315eb2026d1434fa9cb0f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">john </cite><a href="index.html#comment-13294"><time datetime="2011-02-28T17:36:54+00:00">Feb. 28, 2011 @ 5:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>i love grapes</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15504">
+		<article id="comment-15504" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9aa607c0df2bead213e26a810558e224?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://macaerials.com' rel='external nofollow' class='url'>Roberto</a> </cite><a href="index.html#comment-15504"><time datetime="2013-08-06T16:22:04+00:00">Aug. 6, 2013 @ 4:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Sigh at the comment above! Thanks for this though, bookmarked until I can remember!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='85' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a425459913" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=472" title="Permalink to: A Full-Width Centered Navigation Bar">
+                    A Full-Width Centered Navigation Bar                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">A friend challenged me to develop a simple horizontal navigation bar that could be span the width of the screen but center the navigation area over his content. This is the result of that challenge. <a href="../../index.html?p=472" class="more-link" title="Permalink to: A Full-Width Centered Navigation Bar">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 759/790 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:13:14 by W3 Total Cache -->

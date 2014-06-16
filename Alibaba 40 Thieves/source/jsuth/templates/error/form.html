@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+ 
+{% block title %}Form Submission Error | {{ settings.title }}{% endblock %}
+
+{% block body %}
+  
+  <h1>There {% if errors|length == 1 %}was an error{% else %}were errors{% endif %} in your form submission</h1>
+  
+  <h2>Please <a href="javascript:history.back()">go back</a> and fix {% if errors|length == 1 %}this problem{% else %}these problems{% endif %}:</h2>
+  <ul>
+  {% for error in errors %}
+    <li>
+      <strong>{{ error.label }}</strong> is {{ error.message }}.
+    </li>
+  {% endfor %}
+  </ul>
+
+{% endblock body %}
+
+{% block sidebar %}{% endblock %}

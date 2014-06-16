@@ -1,0 +1,1008 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Using the CSS @import Rule</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Using the CSS @import Rule Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='When to Use Margins and Padding' href='../index.html?p=56' />
+<link rel='next' title='Great Resources Elsewhere: March 07 to March 14' href='../index.html?p=65' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=59' />
+<link rel='shortlink' href='../index.html?p=59' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,193] -->
+<meta name="description" content="Here's how to load CSS files into other CSS files using the built-in CSS @import command." />
+
+<meta name="keywords" content="css import, css @import, css import rule, how to import css, import url css, import css into css,css,import,organization,css rules,quick tip" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-59 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-59" class="post-59 post type-post status-publish format-standard hentry category-css-rules category-organization category-quick-tip tag-css tag-import tag-organization">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=59" title="Permalink to Using the CSS @import Rule" rel="bookmark">Using the CSS @import Rule</a>
+	</h2>
+	<div class="meta">
+		<p>Published March 19, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src='../wp-content/uploads/2008/03/crayons-500.jpg' alt='box of crayons' title="Photo by turbojoe. Used under a Creative Commons license." /></p>
+<p>Even the most complex style sheet starts out with a single rule. But when you&#8217;re working on a particularly massive and complex website, over time your style sheet will inevitably start to reflect the site&#8217;s size and complexity. And even if you employ every <a href="../index.html?p=42" title="5 Steps to a More Organized Style Sheet">trick for organizing your CSS</a> in the book, you might find that the sheer size of the file is simply overwhelming. At that point, you might want to consider splitting your style sheet up into several smaller CSS files. That&#8217;s when the @import rule can come in quite handy.</p>
+<p>The @import rule is another way of loading a CSS file. You can use it in two ways. The simplest is within the header of your document, like so:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;style&gt;
+	@import url('/css/styles.css');
+&lt;/style&gt;</pre>
+<p>But that isn&#8217;t necessarily the best method for keeping your XHTML small and your code clean. To that end, you can import a style sheet from <em>within</em> another stylesheet. And better still, you can import <em>any number</em> of styles this way. So your document’s head could look like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;link rel="stylesheet" type="text/css" href="/css/styles.css" /&gt;</pre>
+<p>Nice and clean. But then your &#8220;styles.css&#8221; document can contain calls to any number of additional style sheets:</p>
+<pre lang="css" escaped="true" line="1">@import url('/css/typography.css');
+@import url('/css/layout.css');
+@import url('/css/color.css');
+
+/* All three CSS files above will be loaded from
+   this single document. */</pre>
+<p>This lets you break up your gargantuan stylesheet into two or more logical portions &mdash; I chose typography, layout and color for this example, but you might prefer dividing your CSS according to the site sections they style (content versus sidebar, etc) or something similar. Either way, the benefit is immense &mdash; you can have the same number of CSS rules overall, but in smaller, easier to manage units.</p>
+<p>You can even load both your screen <a href="../index.html?p=19">and print</a> (or handheld, etc) stylesheets all at the same time using this trick. If you&#8217;d like to specify a media, just write your rules like this:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">@import url('/css/header.css') screen;
+@import url('/css/content.css') screen;
+@import url('/css/sidebar.css') screen;
+@import url('/css/print.css') print;</pre>
+<p>Like most cool things in CSS, this one comes with <strong>a couple of caveats:</strong></p>
+<ul>
+<li>The @import rule isn’t recognized by the really old browsers out there… Netscape Navigator 4 skips over @imports entirely, and Internet Explorer 4 ignores them if you don’t use the (entirely optional, but generally used) parentheses. Of course, not too many people these days use either of these archaic browsers. And this problem can actually be <em>useful</em> if you’d like to hide some or all of your CSS from the browsers that can’t really support it.</li>
+<li>Your @imports <strong>must</strong> come before all other content in your CSS. And I mean <em>all</em> of your content. Even putting comments before the @import tag will cause your imports to fail. So be sure to do your imports before you do anything else.</li>
+<li>Internet Explorer (you knew it’d come up eventually) doesn’t deal well with specifying media types – it chokes. Basically, IE (versions 4-7) try to read the media type like it were part of the file name, causing the whole thing to come crashing down. As such, if you don’t want your CSS to have a default media type of “all,” you’re probably better off using a combination of the &lt;link&gt; tag and imports – specifying a media type in your link, and then importing the appropriate CSS within the file you’re linking to.  I haven’t yet heard if IE8 suffers from this same problem (if you happen to know, please enlighten me in the comments!).</li>
+</ul>
+<p>But even with those caveats in mind, this can be a really useful technique. No matter how big your website ends up getting, you’ll be able to keep your style sheets under control.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			49 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-939">
+		<article id="comment-939" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8310641859aa4c51d9f082a3bbc5c3d9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.onerutter.com' rel='external nofollow' class='url'>Jake Rutter</a> </cite><a href="comment-page-1/index.html#comment-939"><time datetime="2008-05-05T16:19:49+00:00">May. 5, 2008 @ 4:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good Writeup! I love this way of organizing css, its a pity that the media tag isnt supported by IE.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9148">
+		<p>Pingback: <a href='http://www.matt-the-web-designer.com/2008/12/20/links-for-2008-12-20/' rel='external nofollow' class='url'>Matt the web designer &raquo; links for 2008-12-20</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9419">
+		<article id="comment-9419" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d526eb539e4c42bae105c9aec3d31a0e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sandeep Saroha </cite><a href="comment-page-1/index.html#comment-9419"><time datetime="2009-02-22T07:18:07+00:00">Feb. 22, 2009 @ 7:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Exliant Writeup!</p>
+<p>with this technic you can improve your website performance also.<br />
+because you reducing the HTTP request with this technic.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9432">
+		<article id="comment-9432" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a806a7d841a2b21ea30c968f6c8cc938?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Chris </cite><a href="comment-page-1/index.html#comment-9432"><time datetime="2009-02-25T16:58:51+00:00">Feb. 25, 2009 @ 4:58 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>loved it. explained perfectly.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9571">
+		<article id="comment-9571" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b0220a4b0ec42f2ddc610d0c187b1ee1?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.thomthom.net/' rel='external nofollow' class='url'>Thomas Thomassen</a> </cite><a href="comment-page-1/index.html#comment-9571"><time datetime="2009-04-06T09:16:41+00:00">Apr. 6, 2009 @ 9:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Sandeep Saroha: How is this reducing the number of HTTP requests? If anything it makes more as it has to initiate a new request per imported stylesheet.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9635">
+		<article id="comment-9635" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a0da992c1d2d5e8b9f6c90c80cda6af7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Kurt </cite><a href="comment-page-1/index.html#comment-9635"><time datetime="2009-04-22T18:30:15+00:00">Apr. 22, 2009 @ 6:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The &#8220;media&#8221; import commands appear to work fine in IE8.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9831">
+		<article id="comment-9831" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/470b39413ed4d963360a1e28645f48e6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://csseditor.in' rel='external nofollow' class='url'>Yash</a> </cite><a href="comment-page-1/index.html#comment-9831"><time datetime="2009-07-15T13:01:33+00:00">Jul. 15, 2009 @ 1:01 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That&#8217;s make things clear to me. Thank you.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9832">
+		<article id="comment-9832" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/442c27fc498ef811830e55fbfd796105?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jals.in/' rel='external nofollow' class='url'>Bill</a> </cite><a href="comment-page-1/index.html#comment-9832"><time datetime="2009-07-15T13:02:30+00:00">Jul. 15, 2009 @ 1:02 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great work Rob&#8230;</p>
+<p>Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9897">
+		<article id="comment-9897" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/af4cb7709dc71bbe138c96a57a39b1aa?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kvkconsultancy.co.uk' rel='external nofollow' class='url'>Vaughan</a> </cite><a href="comment-page-1/index.html#comment-9897"><time datetime="2009-08-17T10:53:36+00:00">Aug. 17, 2009 @ 10:53 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yes, agree with everyone, excellent article! :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9900">
+		<article id="comment-9900" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3ed38375cfbae16ac361dc009aa19a8f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kodtasarim.com' rel='external nofollow' class='url'>h.iskender</a> </cite><a href="comment-page-1/index.html#comment-9900"><time datetime="2009-08-19T01:49:10+00:00">Aug. 19, 2009 @ 1:49 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Css import İşlemlerine hakim olmayan kişiler için iyi bir yazı olmuş.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9997">
+		<p>Pingback: <a href='http://www.code-art.hu/blog/css/a-css-kod-formazasi-lehetosegei.php' rel='external nofollow' class='url'>Lehetőségek a css kódunk formázására | code&amp;Art</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10196">
+		<article id="comment-10196" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/635a79512f0cf540d939af067af496cd?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.pool-tools.com' rel='external nofollow' class='url'>Greg</a> </cite><a href="comment-page-1/index.html#comment-10196"><time datetime="2010-01-05T15:03:12+00:00">Jan. 5, 2010 @ 3:03 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks. I am a CSS newbie and just learned about import and used it on another website.  So this helps as I wanted to split menu css from the content css.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10244">
+		<article id="comment-10244" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f61b1d3f23523fb99beddffa7a037401?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.videokaydet.com/' rel='external nofollow' class='url'>imparator01</a> </cite><a href="comment-page-1/index.html#comment-10244"><time datetime="2010-01-10T13:35:17+00:00">Jan. 10, 2010 @ 1:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@import is very useful but compablity with old browsers is a big problem i think</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11213">
+		<p>Pingback: <a href='http://www.websitebabble.com/html-php-css-javascript-coding-programming-topics/12023-import-css-file.html#post85492' rel='external nofollow' class='url'>@import css file - Website Babble Webmaster Forums</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11990">
+		<article id="comment-11990" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/62cc647f11cc836fbf318d82ba777229?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.genera-studio.net' rel='external nofollow' class='url'>Genera</a> </cite><a href="comment-page-1/index.html#comment-11990"><time datetime="2010-03-26T08:09:21+00:00">Mar. 26, 2010 @ 8:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great article!</p>
+<p>@import gives very elegant way of customizing the look and feel of existing web projects.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12421">
+		<article id="comment-12421" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/04435f6e4c852017200613278cf2c19e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://bleckly.com' rel='external nofollow' class='url'>Rob</a> </cite><a href="comment-page-1/index.html#comment-12421"><time datetime="2010-04-06T07:31:33+00:00">Apr. 6, 2010 @ 7:31 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m fascinated, I&#8217;ve seen the same syntax repeated almost everywhere and it doesn&#8217;t work for me from inside a .css file or a .html file</p>
+<p>@import &#8216;navigation.css&#8217;;   works no brackets no &#8216;url&#8217; just quotes. </p>
+<p>@import (&#8216;navigation.css&#8217;);      // with brackets       Fails<br />
+@import url(&#8216;navigation.css)&#8217;;   // with url brackets   Fails<br />
+@import url &#8216;navigation.css&#8217;;    // with url quotes     Fails </p>
+<p>with or without a full http:// path in the bracketed quotes </p>
+<p>I did find the following described as part of an import hack</p>
+<p>quote<br />
+Different versions of the import rule have varying levels of support from older browsers.</p>
+<p>@import &#8220;style.css&#8221;;      /* hidden from nearly all v4 browsers  */<br />
+@import url(&#8216;style.css&#8217;); /* IE4 can understand, but not NN4 */<br />
+unquote</p>
+<p>I get the same results from IE8 and FF3  the simple syntax &#8211; quotes &#8211; is the only one that works. </p>
+<p>&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13003">
+		<article id="comment-13003" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d1b2e314caee2a6b9376aadb2e0ba28?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mrbeej.net' rel='external nofollow' class='url'>Ben</a> </cite><a href="comment-page-1/index.html#comment-13003"><time datetime="2010-10-06T04:35:09+00:00">Oct. 6, 2010 @ 4:35 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I thought this would be a great way to include my css reset rules but when I try using a @import for them I get a flash of unstyled (perhaps reset) content for a moment when I load the page before the style kicks in. This didn&#8217;t happen before.</p>
+<p>Any ideas?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13017">
+		<article id="comment-13017" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8ce3a71010f25e822d8aa78703e8c19c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ronald </cite><a href="comment-page-1/index.html#comment-13017"><time datetime="2010-10-11T16:14:24+00:00">Oct. 11, 2010 @ 4:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks! Nice one.</p>
+<p>@Sandeep Saroha, You&#8217;re an idiot! So is your language. If you don&#8217;t know anything about the topic, then don&#8217;t comment.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13036">
+		<article id="comment-13036" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c37254eb3eb9da95715264d183dcb6aa?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ben </cite><a href="comment-page-1/index.html#comment-13036"><time datetime="2010-10-19T15:13:48+00:00">Oct. 19, 2010 @ 3:13 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@ Ronald, you need to relax.</p>
+<p>Sandeep was actually correct in saying http requests will be reduced by combining stylesheets into one file when using the &#8220;@ import&#8221; technique. And yes, this will ultimately help reduce page loading times.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13067">
+		<article id="comment-13067" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5db0ccfe3cf75415660f0432e1507ec0?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sam Jarvis </cite><a href="comment-page-1/index.html#comment-13067"><time datetime="2010-11-01T11:52:33+00:00">Nov. 1, 2010 @ 11:52 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What happens when you.. import a stylesheet which imports the stylesheet it was just imported by :O &#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13071">
+		<article id="comment-13071" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8a883a5a8ec716a91941d13ca17a2fd0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.gravityweb.co.za' rel='external nofollow' class='url'>Silas</a> </cite><a href="comment-page-1/index.html#comment-13071"><time datetime="2010-11-03T11:27:07+00:00">Nov. 3, 2010 @ 11:27 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Guys after reading the article, i tried my best to go over my code and see if i could find the problem. i just downloaded a free template. it has one layout css and one default css.<br />
+you see on the code below, where  id=&#8221;logo&#8221; it does not display that name. what is wrong with my import tag below?</p>
+<p>	Company Name<br />
+	Your slogan text here</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13072">
+		<article id="comment-13072" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8a883a5a8ec716a91941d13ca17a2fd0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">silas </cite><a href="comment-page-1/index.html#comment-13072"><time datetime="2010-11-03T11:28:16+00:00">Nov. 3, 2010 @ 11:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>wooops the code did not paste</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13073">
+		<article id="comment-13073" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8a883a5a8ec716a91941d13ca17a2fd0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">silas </cite><a href="comment-page-1/index.html#comment-13073"><time datetime="2010-11-03T11:28:58+00:00">Nov. 3, 2010 @ 11:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>[...] </p>
+<p>	Company Name<br />
+	Your slogan text here</p>
+<p>		[...]</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13157">
+		<article id="comment-13157" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5f307c045abba41d0d7dfe39837090e3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Andrei </cite><a href="comment-page-1/index.html#comment-13157"><time datetime="2010-12-22T20:44:54+00:00">Dec. 22, 2010 @ 8:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>this increases the number of HTTP requests &#8211; etc etc&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13165">
+		<article id="comment-13165" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0615f9a7986587104fd6fd7a4bef1b7d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.auviproducciones.com' rel='external nofollow' class='url'>Samuel Ramírez S</a> </cite><a href="comment-page-1/index.html#comment-13165"><time datetime="2010-12-30T14:00:26+00:00">Dec. 30, 2010 @ 2:00 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It works perfectly, just instead of using:</p>
+<p>Single Quotes = @import url(&#8216;your.css&#8217;) screen; inside the brackets</p>
+<p>Use:</p>
+<p>Double Quotes = @import url(&#8220;your.css&#8221;) screen;</p>
+<p>I know it probably doesn&#8217;t make sense but it works for me.</p>
+<p>Good luck you all.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13217">
+		<p>Pingback: <a href='http://ntiersoftwares.info/du/wordpress/?p=51' rel='external nofollow' class='url'>5 Step CSS Weight Loss Program &laquo; dU : V 2.0</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13225">
+		<article id="comment-13225" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6d0df98f6cccafdd6c25aee2c1ef1823?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.templatesrule.com/' rel='external nofollow' class='url'>Ryanqm</a> </cite><a href="comment-page-1/index.html#comment-13225"><time datetime="2011-01-30T06:27:41+00:00">Jan. 30, 2011 @ 6:27 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Sometimes my CSS loads later then the HTML and during css loading the page looks awefull. whats the solution of this problem? is it something with @import?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13266">
+		<article id="comment-13266" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/08d2ac8e9b7488213ff7b7df013e6190?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ametals.com' rel='external nofollow' class='url'>Anil Kumar</a> </cite><a href="comment-page-1/index.html#comment-13266"><time datetime="2011-02-13T04:54:07+00:00">Feb. 13, 2011 @ 4:54 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This technique is really helpful. i appreciate it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13324">
+		<article id="comment-13324" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5adeb77a5865388237724647b1b72c22?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.tasarimrehberi.net' rel='external nofollow' class='url'>nurettin</a> </cite><a href="comment-page-1/index.html#comment-13324"><time datetime="2011-03-18T10:43:16+00:00">Mar. 18, 2011 @ 10:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>i want to improt ony 1 image in css how it?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13457">
+		<article id="comment-13457" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a19132b532b87ce9a62865d1e5eb0553?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.stylishandtrendy.com/' rel='external nofollow' class='url'>Katie @ women magazine</a> </cite><a href="comment-page-1/index.html#comment-13457"><time datetime="2011-06-07T09:13:33+00:00">Jun. 7, 2011 @ 9:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have used a theme which has lots of imports at the top of the theme. While going through YSlow logs i tried to copy paste all the import css files to make them as one long css file. Unfortunately, it breaks the UI entirely. Now, i am wondering when these are imported then my site is working fine but when i copy all of them into single css file it breaks the UI, any idea?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13460">
+		<article id="comment-13460" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6d0df98f6cccafdd6c25aee2c1ef1823?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.templatesrule.com/' rel='external nofollow' class='url'>ryanqm</a> </cite><a href="comment-page-1/index.html#comment-13460"><time datetime="2011-06-10T18:32:26+00:00">Jun. 10, 2011 @ 6:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Katie, copy the code in your common css in the same order as you had all the @import commands. For example if you had imported a.css and then b.css now you will have to copy the code of a.css above b.css. I hope it will solve your problem</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13479">
+		<article id="comment-13479" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/95d680fb6935f4abb8677ed34ffa34ee?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">jesu </cite><a href="comment-page-1/index.html#comment-13479"><time datetime="2011-06-23T06:00:19+00:00">Jun. 23, 2011 @ 6:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ooops code didn&#8217;t past</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13523">
+		<article id="comment-13523" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/deb44aeb27635e100962c2c751b7fcd7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Aeomer </cite><a href="comment-page-1/index.html#comment-13523"><time datetime="2011-07-25T15:05:24+00:00">Jul. 25, 2011 @ 3:05 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>1. To prevent the flash of unstyled content add &#8220;&#8221; to </p>
+<p>2. This technique add additional http requests the first time (1 extra actually for the wrapper) and then the browser should consider the wrapper file a cached entity.</p>
+<p>3. Unfortunately, this technique prevents using &#8216;auto-versioned&#8217; files where the data type stamp is added to the file name and then stripped by an .htaccess file. If you don&#8217;t know what I mean then you need to consider this rewrite rule.</p>
+<p>RewriteCond %{REQUEST_URI} (\.css|\.js|\.bmp|\.jpg|\.jpeg|\.png|\.gif|\.ico|\.swf|\.CSS|\.JS|\.BMP|\.JPG|\.JPEG|\.PNG|\.GIF|\.ICO|\.SWF)$<br />
+RewriteRule ^(.*)\.[\d]+\.(css|js|bmp|jpg|jpeg|png|gif|ico|swf|CSS|JS|BMP|JPG|JPEG|PNG|GIF|ICO|SWF)$ $1.$2</p>
+<p>If you can&#8217;t follow that then you need to study. It would take too long to explain here.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13524">
+		<article id="comment-13524" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/deb44aeb27635e100962c2c751b7fcd7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Aeomer </cite><a href="comment-page-1/index.html#comment-13524"><time datetime="2011-07-25T15:07:40+00:00">Jul. 25, 2011 @ 3:07 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Looks like this site is stripping script examples!</p>
+<p>Here is the code to stop a flash of unstyled content &#8211; remove the extra spaces.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13525">
+		<article id="comment-13525" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/deb44aeb27635e100962c2c751b7fcd7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Aeomer </cite><a href="comment-page-1/index.html#comment-13525"><time datetime="2011-07-25T15:12:11+00:00">Jul. 25, 2011 @ 3:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I don&#8217;t friggin believe this &#8211; talk about not knowing how to program a comments system!!!! What is this, Drupal? It strips the script tag rather than escaping it &#8211; dumb dumb dumb!</p>
+<p>Here we go again. To stop a flash of unstyled content&#8230;.</p>
+<p>Change GT to a greater than symbol.<br />
+Change LT to a less than symbol.<br />
+Change FS to a forward slash symbol.<br />
+Change EQ to an equals symbol.<br />
+Change SQ to a single quote.</p>
+<p>LTscript typeEQSQtextFSjavascriptSQGT LTFSscriptGT</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13906">
+		<article id="comment-13906" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7e8b69e7cfd2fc085cc735727dfeb115?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">bhushab </cite><a href="comment-page-1/index.html#comment-13906"><time datetime="2011-12-25T22:57:19+00:00">Dec. 25, 2011 @ 10:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>it&#8217;s this what i need;<br />
+thanks buddy..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14057">
+		<article id="comment-14057" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fbba93b67ea05769f463809fbe0f782c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mbinusolutions.com/' rel='external nofollow' class='url'>Mbinu</a> </cite><a href="comment-page-1/index.html#comment-14057"><time datetime="2012-04-10T13:33:36+00:00">Apr. 10, 2012 @ 1:33 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Guess what ! i think i just sorted the solution to my problems. I have been doing html sites for my clients and some just download the demo site css for free  ,using the @ import makes my style-sheets less visible .</p>
+<p>Thanks,<br />
+Great Work</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14074">
+		<article id="comment-14074" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f5435be2e2ca86accd7baac92d7bfe0a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.handycss.com' rel='external nofollow' class='url'>Makhan Butt</a> </cite><a href="comment-page-1/index.html#comment-14074"><time datetime="2012-04-28T08:19:30+00:00">Apr. 28, 2012 @ 8:19 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>easy setup How to Import Other CSS Files in a CSS File</p>
+<p><a href="http://www.handycss.com/how/how-to-import-other-css-files-in-a-css-file/" rel="nofollow">http://www.handycss.com/how/how-to-import-other-css-files-in-a-css-file/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14102">
+		<article id="comment-14102" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a0fa9a6ff9381606a29955e1a3bf1644?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://safodnsdgfdgdgdmfgd.com' rel='external nofollow' class='url'>Noah Mccardell</a> </cite><a href="comment-page-1/index.html#comment-14102"><time datetime="2012-05-20T11:29:43+00:00">May. 20, 2012 @ 11:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How could i extend kids on the Wireless N router? I&#8217;ve an Xtreme N handheld router (Dlink). I should extend the reach through the wireless signal. I discover how to undertake it for just a new G signal. I wish to learn how to do them to have an N sign. Is it feasible utilize regular N routers when repeaters. If you do, how can i configure them. Thanks for the information.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14104">
+		<article id="comment-14104" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d5c3e27bd15de600602e82aac60ad915?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://mgbdfsfgfghcsdfloyujgshggjgd.com' rel='external nofollow' class='url'>Terry Blount</a> </cite><a href="comment-page-1/index.html#comment-14104"><time datetime="2012-05-20T11:31:14+00:00">May. 20, 2012 @ 11:31 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Do not ever stop: Although you may fail initially; Dont manage to get significant amounts of views to start with, do your self a favour, never surrender.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14110">
+		<article id="comment-14110" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f73b5f400a4078441f6cb91ed3bfc5e6?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://letsmakesometrafficnoiseblog.com' rel='external nofollow' class='url'>Merrill Ruhmann</a> </cite><a href="comment-page-1/index.html#comment-14110"><time datetime="2012-05-21T05:59:03+00:00">May. 21, 2012 @ 5:59 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I enjoyed going through your post. I absolutely agree with everything you wrote.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14179">
+		<article id="comment-14179" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9b9d26d87566649f6e50f938d02ae6aa?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://kaxay.com' rel='external nofollow' class='url'>Victor</a> </cite><a href="comment-page-1/index.html#comment-14179"><time datetime="2012-07-23T01:06:11+00:00">Jul. 23, 2012 @ 1:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>change the syntax from: </p>
+<p>@import url(&#8216;/css/typography.css&#8217;);<br />
+@import url(&#8216;/css/layout.css&#8217;);<br />
+@import url(&#8216;/css/color.css&#8217;);</p>
+<p>to</p>
+<p>@import &#8220;/css/typography.css&#8221;;<br />
+@import &#8220;/css/layout.css&#8221;;<br />
+@import &#8220;css/color.css&#8221;;</p>
+<p>Some browsers don&#8217;t recognize the simple quotes :P</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14268">
+		<article id="comment-14268" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e75963206726a182c1acb489f3a97e7f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Gabriel </cite><a href="comment-page-1/index.html#comment-14268"><time datetime="2012-09-19T00:51:04+00:00">Sep. 19, 2012 @ 12:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>this technique is not recommended !!!<br />
+I am giving you some posts for your attention :</p>
+<p>1)http://www.stevesouders.com/blog/2009/04/09/dont-use-import/</p>
+<p>slide to the section of the @import rule:<br />
+2)http://developer.yahoo.com/performance/rules.html</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-15208">
+		<p>Pingback: <a href='http://frugihoyi.wordpress.com/2013/04/22/optimizing-webpages-for-mobile-devices-part-2-css-media-queries-javascript-and-mobile-specific-websites/' rel='external nofollow' class='url'>Optimizing webpages for mobile devices, part 2: CSS media queries, Javascript and mobile-specific websites | Frugihoyi&#039;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15420">
+		<article id="comment-15420" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3362b3fbc52dfaf687e3740045f42c2a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.disenoweb.co.uk' rel='external nofollow' class='url'>James Walker</a> </cite><a href="comment-page-1/index.html#comment-15420"><time datetime="2013-07-20T14:11:44+00:00">Jul. 20, 2013 @ 2:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Such a useful tool when using more than one stylesheet in a design!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15581">
+		<article id="comment-15581" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/32c980a4b69bf5e06b43500040fe7e75?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://stanleytips.com/category/php-html-js-css/css/' rel='external nofollow' class='url'>StanleyTips</a> </cite><a href="comment-page-1/index.html#comment-15581"><time datetime="2013-09-27T03:22:27+00:00">Sep. 27, 2013 @ 3:22 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I always use:<br />
+@import url(&#8216;/css/color.css&#8217;);<br />
+to import secondary css.</p>
+<p>Thank you for this lessons.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15587">
+		<article id="comment-15587" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5c8216d65c815c96a80e2cd4bc73e34a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://charlesstricklin.com' rel='external nofollow' class='url'>Charles Stricklin</a> </cite><a href="comment-page-1/index.html#comment-15587"><time datetime="2013-09-30T14:27:47+00:00">Sep. 30, 2013 @ 2:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<blockquote><p>If you’d like to specify a media, just write your rules like this:</p>
+<p>f1c60b274361c6f7f59bd4a7cdcd0fbd003</p></blockquote>
+<p>Uhmm&#8230; come again? ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-15651">
+		<p>Pingback: <a href='http://www.xenabeast.com/solution-isnt-css-import-statement-working/' rel='external nofollow' class='url'>Solution to: Why isn&#039;t my css @import statement working? | Xena Beast! All my questions answered!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15811">
+		<article id="comment-15811" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a1a7b45a6d0392a87b6afb1a591d4d0d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Amba Junior </cite><a href="comment-page-1/index.html#comment-15811"><time datetime="2013-11-18T08:36:05+00:00">Nov. 18, 2013 @ 8:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Rob for this. Realized it works well without the leading slash, i.e. @import url(&#8216;css/header.css&#8217;); not @import url(&#8216;/css/header.css&#8217;);</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=59#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='59' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="611df2f67c" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=125" title="Permalink to: Horizontal CSS Dropdown Menus">
+                    Horizontal CSS Dropdown Menus                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">CSS Newbie reader Andrea Pluhar wrote in with an interesting problem: she wanted to use a CSS dropdown menu on a website that she was building, but the design called for the submenu to be arranged horizontally. She wondered if there was a way to accomplish this effect using CSS. It turns out that there is. <a href="../index.html?p=125" class="more-link" title="Permalink to: Horizontal CSS Dropdown Menus">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=59#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1440/1541 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:51:30 by W3 Total Cache -->

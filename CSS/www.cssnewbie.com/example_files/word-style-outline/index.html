@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Building a Word-style Outline with CSS</title>
+<style>
+/* This CSS creates the Word-like Print Layout style. */
+body {
+	background-color: #9099ae; }
+#wrap {	
+	background-color: #fff;
+	margin: 0 auto;
+	width: 33em;
+	border: 1px solid #000;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	padding: 5em 8em;
+	font-family: "Times New Roman", Times, serif; }
+	
+/* This CSS builds the Word-style outline. */
+ol {
+	list-style: upper-roman;
+	margin-left: 2.25em;
+	padding: 0; }
+ol ol {
+	list-style: lower-alpha; 
+	margin-left: 1.25em;}
+ol ol ol {
+	list-style: lower-roman;
+	margin-left: 2.5em; }
+ol ol ol ol {
+	list-style: decimal; }
+li {
+	padding-left: 2em; }
+li li {
+	padding-left: .4em; }
+li li li {
+	padding-left: 0; }
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<h1>Word-Style Outline with CSS</h1>
+	<p>This is a fairly realistic Microsoft Word-style outline created with just 11 CSS rules. It works on Linux, Windows and MacOS platforms; in Firefox, Opera, Safari, Konqueror, and IE 5.5+ browsers (and perhaps more, but that's as far as I tested). Here's the outline:</p>
+	<ol>
+		<li>First Things First
+			<ol>
+				<li>Firstborn Children</li>
+				<li>First Place Finishes</li>
+			</ol>
+		</li>
+		<li>Give Me a Second
+			<ol>
+				<li>Two's Company
+					<ol>
+						<li>Three's a Crowd</li>
+						<li>Three's a Party
+							<ol>
+								<li>Party Hearty</li>
+								<li>Avast, Me Hearties</li>
+							</ol>
+						</li>
+						<li>Three's Company</li>
+					</ol>
+				</li>
+				<li>B-2 Bombers</li>
+			</ol>
+		</li>
+		<li>The End</li>
+	</ol>
+	<p><a href="../../advanced-techniques/word-style-outline/index.html">Back to the Article.</a></p>
+</div>
+
+
+</body>
+</html>

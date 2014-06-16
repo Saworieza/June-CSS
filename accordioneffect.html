@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS-Only Accordion Effect: Horizontal Accordian</title>
+<style>
+body {
+   font: small/1.2 Arial, Helvetica, sans-serif; }
+img{
+   height:100%;
+   width:100%;
+}
+#accordion {
+   width: 500px;
+   margin: 100px auto; }
+#accordion div {
+   float: left;
+   width:25%;
+   height: 300px;
+   overflow: hidden;}
+#accordion:hover div {
+   width: 20px; }
+#accordion:hover div:hover {
+   width: 440px;
+   overflow: auto; }
+
+#spring {
+   background-color: #CCFF99; }
+#summer {
+   background-color:#FF6633; }
+#autumn {
+   background-color: #FFCC00; }
+#winter {
+   background-color:#99FFFF; }
+h1 {
+   font-size: 150%;
+   margin: 10px 10px .2em 25px; }
+p {
+   margin: 1em 25px; }
+</style>
+</head>
+<body>
+   <div id="accordion">
+      <div id="spring">
+         <h1>Spring</h1>
+         <p>Spring begins in the northern hemisphere around the months of March, April, May, or as reckoned astronomically extending from the vernal equinox. As in summer, the axis of the Earth is tilted toward the Sun and the length of daylight rapidly increases. The northern hemisphere begins to warm significantly causing new plant growth to "spring forth," giving the season its name. Snow begins to melt and streams swell with runoff and spring rains. Most flowering plants bloom this time of year, in a long succession sometimes beginning even when snow is still on the ground, and continuing into early summer. In normally snowless areas "spring" may begin as early as February during warmer years, with subtropical areas having very subtle differences, and tropical ones none at all. Subarctic areas may not experience "spring" at all until May or even June, or December in the outer Antarctic.</p>
+         <p>Severe weather most often occurs during the spring, when warm air begins to invade from lower latitudes while cold air is still pushing from the polar regions. Flooding is also most common in and near mountainous areas during this time of year because of snowmelt, many times accelerated by warm rains. In the United States, Tornado Alley is most active by far this time of year, especially since the Rocky Mountains prevent the surging hot and cold air masses from spreading eastward and instead force them directly at each other. Besides tornadoes, supercell thunderstorms can also produce dangerously large hail and very high winds, for which a severe thunderstorm warning or tornado warning is usually issued. Even more so than winter, the jet streams play an important role in severe weather in the springtime.</p>
+      </div>
+      <div id="summer">
+         <h1>Summer</h1>
+        <img src="img/CH-47-Chinook-deck-landing-05-2014.jpg">
+      </div>
+      <div id="autumn">
+         <h1>Autumn</h1>
+         <p>Autumn (also known as fall in North American English) is one of the four temperate seasons. Autumn marks the transition from summer into winter. In the northern hemisphere, the start of autumn is generally considered to be around September, and in the southern hemisphere, its beginning is considered to be around March. There exist, however, different definitions of autumn, some of which are based on the months of the year while others are based on the equinox and solstice.</p>
+         <p>During autumn, deciduous trees shed their leaves. Leaves change to a yellowish, reddish or brownish hue before falling. Such coloured leaves have come to be colloquially called "fall foliage" in North America. In temperate zones, autumn is the season during which most crops are harvested. It is also the season during which days get shorter and cooler and the nights get longer.</p>
+      </div>
+      <div id="winter">
+         <h1>Winter</h1>
+         <img src="img/CH-47-Chinook-deck-landing-05-2014.jpg">
+      </div>
+      <div style="float: none; clear: both; height: 0;"> </div>
+   </div>
+
+</body>
+</html>

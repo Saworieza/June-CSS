@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: Styling Blockquotes</title>
+<style>
+body {
+	font-size: 62.5%;
+	background-color: #fff5c6; }
+#wrap {
+	background-color: #fff;
+	width: 40em;
+	padding: 2em;
+	margin: 0 auto; 
+	font: 130% Arial, Helvetica, sans-serif; }
+#border {
+	margin: 1em 3em;
+	color: #999;
+	border-left: 2px solid #999;
+	padding-left: 1em; }
+#bgcolor {
+	margin: 1em 3em;
+	padding: .5em;
+	background-color: #f6ebc1; }
+#bgcolor p {
+	margin: 0; }
+#border-bgcolor {
+	margin: 1em 3em;
+	padding: .5em 1em;
+	border-left: 5px solid #fce27c;
+	background-color: #f6ebc1; }
+#border-bgcolor p {
+	margin: 0; }
+#bgimage {
+	margin: 1em 20px;
+	padding-left: 50px;
+	background: transparent url(quote.gif) no-repeat; }
+#dropcap {
+	margin: 1em 2em;
+	border-left: 1px dashed #999;
+	padding-left: 1em; }
+#dropcap p:first-letter {
+	float: left;
+	margin: .2em .3em .1em 0;
+	font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+	font-size: 220%;
+	font-weight: bold; }
+#dropcap p:first-line {
+	font-variant: small-caps; }
+#text {
+	color: #66a;
+	font-weight: bold;
+	font-style: italic;
+	margin: 1em 3em; }
+#text p:before {
+	content: '"'; }
+#text p:after {
+	content: '"'; }
+</style>
+</head>
+<body>
+<div id="wrap">
+	<h1>Styling Blockquotes</h1>
+	<p>Here you can see a few blockquote styles in action. <a href="../../index.html?p=174">Click here to go back to the original CSSnewbie article.</a></p>
+	<h2>Unstyled Blockquote:</h2>
+	<blockquote><p>Phasellus aliquet  fringilla sem. Maecenas nulla. Mauris semper turpis ut ligula. Praesent  vel massa. Nam suscipit. Nunc pretium mauris id nibh. Maecenas  vulputate metus. Duis commodo arcu et sapien. Etiam sem erat,  pellentesque sed, convallis et, accumsan nec, neque. Nulla quis dolor  in pede sollicitudin auctor. </p></blockquote>
+	<h2>Color and Border:</h2>
+	<blockquote id="border"><p>Donec hendrerit tellus eget purus. Aenean scelerisque leo at velit.  In hac habitasse platea dictumst. Proin sed diam. Sed in nulla eget sem  dapibus egestas. Vestibulum posuere. </p></blockquote>
+	<h2>Background Color:</h2>
+	<blockquote id="bgcolor"><p>Ut at metus. Nam nibh felis,  molestie quis, facilisis non, facilisis sagittis, risus. Suspendisse  vitae mi. Mauris rhoncus quam ac ipsum. In iaculis risus vitae odio. </p></blockquote>
+	<h2>Border and Background Color:</h2>
+	<blockquote id="border-bgcolor"><p>Nunc velit turpis, adipiscing nec, euismod nec, pharetra quis,  nibh. Fusce accumsan. Cras velit. Integer sed metus luctus nunc  suscipit tempor. Vivamus pellentesque turpis aliquam felis. Nullam at  nisi at diam condimentum lacinia. Sed nunc. Proin eget purus. Nunc nec  nibh. Aenean dignissim, enim quis vulputate posuere, arcu lectus  convallis dui, ut scelerisque mi orci sit amet leo. </p></blockquote>
+	<h2>Background Image:</h2>
+	<blockquote id="bgimage"><p>Vestibulum ultrices ante. Phasellus suscipit. Suspendisse erat quam,  posuere cursus, condimentum quis, mollis eget, tellus. Proin rutrum  mollis libero. Integer feugiat sapien vitae purus. Donec vulputate. Nam  mollis magna sed ante. Duis et orci vestibulum sapien imperdiet  pretium. </p></blockquote>
+	<h2>Drop-Cap and Stylized Line:</h2>
+	<blockquote id="dropcap"><p>Nullam volutpat. Donec velit. Vivamus velit. Class aptent taciti  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  Cras non justo sed lacus sodales consequat. Cras nec felis. </p></blockquote>
+	<h2>Text and Color:</h2>
+	<blockquote id="text"><p>Cras in  massa at erat viverra semper. Aliquam sem massa, varius vitae, egestas  sed, semper a, lectus. In faucibus, ipsum sed venenatis accumsan, eros  risus elementum nunc, at blandit risus orci a dui. Quisque sed nibh.</p></blockquote>
+	
+</body>
+</html>

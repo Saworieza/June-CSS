@@ -1,0 +1,584 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The Firefox Input Button Line-Height Bug</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; The Firefox Input Button Line-Height Bug Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='New Example Page Formatting' href='../../index.html?p=524' />
+<link rel='next' title='Button Height and a Broken Box Model' href='../../index.html?p=536' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=528' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,207] -->
+<meta name="description" content="I recently ran into a bug in Firefox and Opera when I tried to set the line height of text inside a button. The bug? The line height can't be changed!" />
+
+<meta name="keywords" content="firefox bug, opera bug, firefox line-height, firefox input, firefox button, opera line-height, opera input, opera button, button line-height bug,bug,bug fix,button,firefox,input,opera,box model,bugs and fixes" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-528 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-528" class="post-528 post type-post status-publish format-standard hentry category-box-model category-bugs-and-fixes tag-bug tag-bug-fix tag-button tag-firefox tag-input tag-opera">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=528" title="Permalink to The Firefox Input Button Line-Height Bug" rel="bookmark">The Firefox Input Button Line-Height Bug</a>
+	</h2>
+	<div class="meta">
+		<p>Published February 25, 2010 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../../wp-content/uploads/2010/02/button-sizes-by-browser.png" alt="" title="Button Sizes Using Line-Height by Browser" width="500" height="101" class="alignnone size-full wp-image-529" /></p>
+<p>I recently ran into a bug in Firefox and Opera when I tried to set the line height of text inside a button (which affects input &#8220;submit&#8221; buttons as well as the HTML button tag). The bug? The line height can&#8217;t be changed!</p>
+<p>For example, take the following code:</p>
+<pre lang="css" escaped="true" line="1">input#button {
+	border: 2px solid #06f;
+	color: #06f;
+	background-color: #6cf;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	line-height: 50px;
+}</pre>
+<p>In a perfect world, this code would be a quick and easy way to vertically center text inside a button and set the button&#8217;s height, since text is always centered inside of the space created by its line-height. </p>
+<p>But the results are inconsistent. Chrome, Safari, and (I can&#8217;t believe this either) Internet Explorer 8 all center the text and resize the button just like I&#8217;d expect. But the results are less than perfect in Firefox and Opera (see the image above). <span id="more-528"></span></p>
+<h3>The Problem, Defined</h3>
+<p>A quick look at Firebug proves enlightening: even though I&#8217;ve specified a line-height of 50px, Firefox is using a line-height of 15px instead.</p>
+<p><img src="../../wp-content/uploads/2010/02/firebug-firefox-line-height.png" alt="" title="Firebug showing Firefox&#039;s incorrect line-height" width="500" height="220" class="alignnone size-full wp-image-530" /></p>
+<p>So what gives?</p>
+<p>It seems our bug isn&#8217;t really a bug at all, but a &#8220;feature&#8221;: that is, it&#8217;s a deliberate decision by Firefox to limit line heights on buttons. This is evidenced by this line of CSS in Firefox&#8217;s default CSS:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">button, input[type="reset"], input[type="button"], input[type="submit"] {
+	line-height:normal !important;
+}</pre>
+<p>Basically, Firefox is setting the line-height to &#8220;normal&#8221; on buttons and is enforcing this decision with an !important declaration. This is a frustrating decision on their part, particularly considering (as Eric Meyer has pointed out at great and detailed length), <a href="http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/">line-height: normal is anything but.</a> </p>
+<p>And while trying to work around this rule, I discovered something that makes the situation a little more dire: browser-defined !important rules cannot be over-ruled by author-defined !important rules. This rule cannot be overruled by a CSS file, an inline style &mdash; anything.</p>
+<p>So what&#8217;s to be done?</p>
+<p>After a couple of hours of teeth-gnashing, I&#8217;ve settled on the following as an acceptable workaround. <strong>Instead of using line-height, use padding.</strong></p>
+<p>So to take the example from earlier, we&#8217;d convert it to look like this instead:</p>
+<pre lang="css" escaped="true" line="1">input#button {
+	border: 2px solid #06f;
+	color: #06f;
+	background-color: #6cf;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	padding: 18px 6px;
+}</pre>
+<p>This effectively centers the text inside our buttons, but it isn&#8217;t ideal. It means there&#8217;s no easy way to ensure our buttons are using the same line-height as the rest of our content, and it means the size of the button can&#8217;t be dependent upon the size of the button text. But I&#8217;ll take what I can get on this one.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			71 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-13829">
+		<article id="comment-13829" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/de623ca66e9270d2cee3ffca59272743?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.host1plus.com/' rel='external nofollow' class='url'>virtual private server hosting</a> </cite><a href="index.html#comment-13829"><time datetime="2011-11-10T09:07:00+00:00">Nov. 10, 2011 @ 9:07 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very interesting subject, regards for putting up.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13831">
+		<article id="comment-13831" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/750235c5fb947cfa9e84a9e15994cde4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.sportstvlivestreaming.com/pacquiao-vs-marquez-live-streaming/' rel='external nofollow' class='url'>pacquiao vs marquez live streaming</a> </cite><a href="index.html#comment-13831"><time datetime="2011-11-10T09:13:12+00:00">Nov. 10, 2011 @ 9:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There may be noticeably a bundle to learn about this. I assume you made certain good factors in features also.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13835">
+		<article id="comment-13835" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d400887d14e8aebc98d6de5041a83c61?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.armanipascher.com' rel='external nofollow' class='url'>ceinture armani pas cher</a> </cite><a href="index.html#comment-13835"><time datetime="2011-11-10T09:31:13+00:00">Nov. 10, 2011 @ 9:31 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Well, it is decent, however how about additional choices we have here? Would you mind making one more post regarding them too? Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13914">
+		<p>Pingback: <a href='http://www.showframework.com/2012/01/firefox-input-line-height-bug/' rel='external nofollow' class='url'>Show Framework &raquo; firefox input line-height bug</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14015">
+		<article id="comment-14015" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b317d30405fc9cdbf6bee3d8dfb4cf9b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kaipnumestisvoriolt.lt' rel='external nofollow' class='url'>kaipnumestisvorio</a> </cite><a href="index.html#comment-14015"><time datetime="2012-03-07T14:24:23+00:00">Mar. 7, 2012 @ 2:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I still dont get it how you do it<br />
+btw happy new year</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14017">
+		<article id="comment-14017" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/318fb0cf4a8ad5abc986a83e9021d035?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bcon.lt' rel='external nofollow' class='url'>google reklama internete</a> </cite><a href="index.html#comment-14017"><time datetime="2012-03-07T14:28:03+00:00">Mar. 7, 2012 @ 2:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Did you know that more than ten people a year are killed by vending machines.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14032">
+		<article id="comment-14032" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a2ccf6351ed818d2c15bb82fa607c645?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://keki4gf777.net' rel='external nofollow' class='url'>Gerda</a> </cite><a href="index.html#comment-14032"><time datetime="2012-03-20T19:36:51+00:00">Mar. 20, 2012 @ 7:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Aw, this was a very nice post. In concept I would like to put in writing like this additionally – taking time and precise effort to make an excellent article… but what can I say… I procrastinate alot and not at all appear to get one thing done.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14037">
+		<article id="comment-14037" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c977c9d7dc97631cd20f1490194a04a0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://celebritybuzzire.com' rel='external nofollow' class='url'>Movie Reviews</a> </cite><a href="index.html#comment-14037"><time datetime="2012-03-26T20:15:40+00:00">Mar. 26, 2012 @ 8:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>bookmarked!!, I really like your website!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14072">
+		<p>Pingback: <a href='http://www.csscabin.com/452.html' rel='external nofollow' class='url'>火狐下input按钮不支持line-height | csscabin</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14161">
+		<article id="comment-14161" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a258629074cf1aa3e423eeeb236a0f85?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Dominor Novus </cite><a href="index.html#comment-14161"><time datetime="2012-07-02T18:48:28+00:00">Jul. 2, 2012 @ 6:48 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The 15px line-height restriction can actually be disabled.</p>
+<p>Solution here: <a href="http://stackoverflow.com/a/1986666" rel="nofollow">http://stackoverflow.com/a/1986666</a></p>
+<p>Thanks for documenting the problem. It narrowed down my debugging process.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14185">
+		<article id="comment-14185" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/de14a9cc1afec232cf64cf8dcda9b6c2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://Aliarth.Lt' rel='external nofollow' class='url'>Aliarth</a> </cite><a href="index.html#comment-14185"><time datetime="2012-07-27T05:46:50+00:00">Jul. 27, 2012 @ 5:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yea. Firefox not fixing bug&#8217;s. They just chreating more bug&#8217;s ant giving for Web builders more problems. I hate firefox, that browser badest browser whot i seen.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14225">
+		<article id="comment-14225" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/821cf542ef1145ed4dc6aca4424bc2cc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.metropolis.lt' rel='external nofollow' class='url'>vertimu biuras</a> </cite><a href="index.html#comment-14225"><time datetime="2012-08-20T09:38:01+00:00">Aug. 20, 2012 @ 9:38 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks, that really helps</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14245">
+		<article id="comment-14245" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b317d30405fc9cdbf6bee3d8dfb4cf9b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://straipsniai.bcon.lt' rel='external nofollow' class='url'>straipsniu direktorija</a> </cite><a href="index.html#comment-14245"><time datetime="2012-09-08T13:56:43+00:00">Sep. 8, 2012 @ 1:56 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>firebug on chrome is more useful then on firefox<br />
+strongly recommend it</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14654">
+		<article id="comment-14654" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b012f3ebd615a45bd1d40c399da5def8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.codeshark.dk' rel='external nofollow' class='url'>Thomas Gram</a> </cite><a href="index.html#comment-14654"><time datetime="2013-02-28T09:10:41+00:00">Feb. 28, 2013 @ 9:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello!</p>
+<p>Don&#8217;t forget to assign the line-height property for other browsers.<br />
+<code><br />
+border: 2px solid #06f;<br />
+color: #06f;<br />
+background-color: #6cf;<br />
+font: bold 12px/16px Arial, Helvetica, sans-serif;<br />
+padding: 18px 6px;<br />
+</code></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15199">
+		<article id="comment-15199" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9d05bb2966505930de44d62dfbfdc2a8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.youtube.com/watch?v=KFmF5gS26BQ' rel='external nofollow' class='url'>the chris farrell membership review</a> </cite><a href="index.html#comment-15199"><time datetime="2013-04-19T00:55:04+00:00">Apr. 19, 2013 @ 12:55 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi there i am kavin, its my first occasion to commenting anyplace,<br />
+when i read this post i thought i could also make comment due to this sensible post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15307">
+		<article id="comment-15307" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/72c22b80c2768bb38e4201323c582c97?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Olga </cite><a href="index.html#comment-15307"><time datetime="2013-06-06T05:30:17+00:00">Jun. 6, 2013 @ 5:30 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The problem is still here =( in 2013.</p>
+<p>Thanks for good explanation!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15343">
+		<article id="comment-15343" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9b177bb4537b099f60fdfade40ff3ceb?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Steve </cite><a href="index.html#comment-15343"><time datetime="2013-07-01T21:53:19+00:00">Jul. 1, 2013 @ 9:53 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks. Frustrating :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15604">
+		<article id="comment-15604" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f147788f1f556057810df315f270a009?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Roman </cite><a href="index.html#comment-15604"><time datetime="2013-10-10T16:19:15+00:00">Oct. 10, 2013 @ 4:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Also has been &#8220;teeth-gnashing&#8221; when saw this post. Great help, many thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15630">
+		<article id="comment-15630" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e4480ce2e2d5e7614678b3c81de61831?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://danielboehme.com' rel='external nofollow' class='url'>side777</a> </cite><a href="index.html#comment-15630"><time datetime="2013-10-23T07:48:26+00:00">Oct. 23, 2013 @ 7:48 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8216;button can’t be dependent upon the size of the button text.&#8217;</p>
+<p>use &#8216;em&#8217; for the padding. it works.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15886">
+		<article id="comment-15886" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/50cd2a3f20e7a1d56f82ef7e0e37e4e2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://karolynhutchins' rel='external nofollow' class='url'>Karolyn</a> </cite><a href="index.html#comment-15886"><time datetime="2013-12-07T14:23:50+00:00">Dec. 7, 2013 @ 2:23 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>With havin so much content and articles do you ever run into any problems of plagorism or copyright violation? My website has a lot of exclusive content I&#8217;ve either authored myself or outsourced but it seems a lot of it is popping it up all over the web without my agreement. Do you know any solutions to help stop content from being ripped off? I&#8217;d truly appreciate it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-15967">
+		<p>Pingback: <a href='http://www.migaoo.cn/?p=829' rel='external nofollow' class='url'>表单button的行高问题,米高migaoo | 米高Migaoo</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="../comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='528' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2703e12ee4" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=59" title="Permalink to: Using the CSS @import Rule">
+                    Using the CSS @import Rule                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Even the most complex style sheet starts out with a single rule. But when you&#8217;re working on a particularly massive and complex website, over time... <a href="../../index.html?p=59" class="more-link" title="Permalink to: Using the CSS @import Rule">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1043/1168 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 19:38:05 by W3 Total Cache -->

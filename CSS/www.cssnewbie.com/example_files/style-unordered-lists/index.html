@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: 5 Ways to Style Unordered Lists</title>
+<style>
+html {
+	background-color: #ddd; }
+body {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 40em;
+	margin: 1em auto;
+	font: small/1.3em Verdana, Arial, Helvetica, sans-serif; }
+body #main {
+	float: left;
+	padding: 1em 1.9em 1em 1em;}
+body #footer {
+	clear: both;
+	padding: 1em;
+	border-top: 1px solid #ccc;
+	background-color: #666;
+	color: #fff; }
+body #footer a {
+	color: #fff;
+	font-weight: bold; }
+	
+ul#example1 {
+	list-style-type: circle;
+}
+ul#example2 {
+	margin: 2em; 
+}
+ul#example2 li {
+	padding-left: 1em; 
+	margin-bottom: .5em; 
+}
+ul#example3 {
+	list-style-image: url(check.gif); 
+}
+ul#example4 {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0; 
+}
+ul#example4 li {
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 10px 5px 20px;
+	border-bottom: 1px solid #ccc;
+	color: #666; 
+}
+ul#example4 li:hover {
+	color: #000;
+	background-color: #ddd; 
+}
+ul#example5 {
+	margin: 1.5em; 
+}
+ul#example5 li {
+	list-style-image: url(uncheck.gif);
+	border-bottom: 1px solid #ccc;
+	padding: .2em 0 .2em .5em;
+	font-weight: bold;
+	color: #666; 
+}
+ul#example5 li:hover {
+	cursor: pointer;
+	list-style-image: url(check.gif);
+	background-color: #f2f2f2;
+	color: #000; 
+}
+	
+</style>
+</head>
+
+<body>
+	<div id="main">
+		<h1>Styling Unordered Lists</h1>
+		<p><a href="../../css-rules/style-unordered-lists/index.html">Back to the main article.</a></p>
+		<p id="one"><strong>Example 1 - </strong>Simply changing the list-style-type of your unordered list is enough to create a bit of customization:</p>
+		<ul id="example1">
+			<li>Item One</li>
+			<li>Second Item</li>
+			<li>Tertiary Bits</li>
+			<li>Thing Four</li>
+		</ul>
+		<p id="two"><strong>Example 2 - </strong>Adding a bit of extra margin and padding to your list and list items can really help the list stand out from the rest of your text: </p>
+		<ul id="example2">
+			<li>Item One</li>
+			<li>Second Item</li>
+			<li>Tertiary Bits</li>
+			<li>Thing Four</li>
+		</ul>
+		<p id="three"><strong>Example 3 - </strong>Using a list-style-image instead of one of the default bullets gives you a nearly infinite number of ways to make yours lists unique:</p>
+		<ul id="example3">
+			<li>Item One</li>
+			<li>Second Item</li>
+			<li>Tertiary Bits</li>
+			<li>Thing Four</li>
+		</ul>
+		<p id="four"><strong>Example 4 - </strong>Using a :hover pseudo-class can help your list seem more dynamic (and could help readers keep their place in long lists), but it doesn't work in IE6:</p>
+		<ul id="example4">
+			<li>Item One</li>
+			<li>Second Item</li>
+			<li>Tertiary Bits</li>
+			<li>Thing Four</li>
+		</ul>
+		<p id="five"><strong>Example 5 - </strong>Everything and the kitchen sink. We're using a :hover pseudo-class with multiple list-style-images and some margins and padding to get everything just the way we want:</p>
+		<ul id="example5">
+			<li>Item One</li>
+			<li>Second Item</li>
+			<li>Tertiary Bits</li>
+			<li>Thing Four</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p><a href="../../css-rules/style-unordered-lists/index.html">Return to the main article.</a></p>
+	</div>
+
+</body>
+</html>

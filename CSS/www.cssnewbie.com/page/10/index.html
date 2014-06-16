@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS Newbie - Learn HTML, CSS and jQuery with Tutorials, Tips and Reference Articles - Part 10</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.1" />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,158] -->
+<link rel='prev' href='../9/index.html' />
+<link rel='next' href='../11/index.html' />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="home blog paged paged-10">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	
+<article id="post-122" class="post-122 post type-post status-publish format-standard hentry category-basic-techniques category-bugs-and-fixes tag-bug tag-fix tag-hack tag-ie tag-whitespace latest">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=122" title="Permalink to Fixing the IE6 Whitespace Bug" rel="bookmark">Fixing the IE6 Whitespace Bug</a>
+	</h2>
+	<div class="entry-content">
+		<p><img src="../../wp-content/uploads/2008/05/whitespacebug.gif" alt="" title="whitespace bug - before and after" width="400" height="130" class="alignnone size-full wp-image-123" /></p>
+<p>Sometimes, when I’m building a vertical navigation menu (like the one pictured above), Internet Explorer 6 will fight with me in a fairly annoying way: it adds a bunch of white space between the list items (specifically, I think it’s adding space below each list item). This space isn’t a margin, and it isn’t padding&#8230; it’s just empty, un-selectable space. So what’s going on, and how do we fix it?</p>
+<p>The “what’s going on” part is simultaneously simple and perplexing: IE6 is treating all the empty space inside of your HTML lists – that is, the stuff between your closing &lt;/li&gt; and next opening &lt;li&gt;  tag &#8212; as real space. That’s the simple part. The confusing part is, why would it choose to interpret this space as “real,” when it ignores all of the other space between tags in pretty much every other situation out there? Well, that’s just IE6 for you, and that’s the perplexing bit.</p>
+<p>Luckily, there is a really easy solution to this problem. Actually, truth be told, there are <em>several</em> solutions. Depending on your situation, each might be the right fix for you.</p>
+<h3>Fix #1: Remove All Whitespace</h3>
+<p>This is the most arcane of all the solutions, but to be honest, it’s the one I’ve used most often in the past – because I didn’t know about the other solutions! If you remove the white space from your code, this prevents IE from having anything to screw up. Specifically, if you remove the white space between your closing list item and the next opening list item, and your last closing list item and the end of your list, this will fix the problem. So you just need to turn this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third One!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>Into this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;#&quot;&gt;Third One!&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</pre>
+<p>Like I said, this isn’t exactly an elegant solution. But it does work, and it can be useful in places when CSS isn&#8217;t entirely reliable (like in HTML emails).</p>
+<h3>Fix #2: Float the Anchor Tags</h3>
+<p><a href="http://www.hicksdesign.co.uk/journal/ie-whitespace-bug">Jon Hicks popularized this fix years ago.</a> Basically, you float the anchor tags left, and then clear them left as well, like so:</p>
+<pre lang="css" escaped="true" line="1">ul a {
+	display: block;
+	float: left;
+	clear: left; }</pre>
+<p>This causes your links to behave like floated elements, which naturally don’t have any space between them. Unfortunately, it also prevents your links from filling all the horizontal space available, which would make a mess of the example I used above, because I’m relying on that width to create a background color and a border. However, if your links don’t have any fancy hover states or borders, this solution would work just fine.</p>
+<h3>Fix #3: Apply a Bottom Border</h3>
+<p>Another useful solution is to apply a border to your list item. Why does this work? I have no idea. Does a border just anywhere work? Nope. It has to be applied to the bottom of the list item (or to all four sides, as long as the bottom is included):</p>
+<pre lang="css" escaped="true" line="1">ul li {
+	border-bottom: 1px solid #666; }</pre>
+<p>I suppose the logic on this one is that the space is on the bottom of the element, so specifying a definitive edge to the box causes IE6 to recognize the “real” end of the element. Whatever the reasoning, it works, and it’s a good solution if you don’t mind a pixel of extra space in between your elements in return for getting rid of the great swaths of space IE had introduced. And sometimes it even works in the design. In the image above, for example, the border between the items could just as easily be applied to the list item instead of the anchor (which is where I had placed it initially).</p>
+<h3>Fix #4: Use Display: Inline</h3>
+<p>In my experience, the most useful solution of the four is to force your list items to display inline, instead of as a block-level element (which they are by default):</p>
+<pre lang="css" escaped="true" line="1">ul li {
+	display: inline; }</pre>
+<p>As far as I can tell, this technique was first popularized by <a href="http://www.andybudd.com/archives/2003/12/css_crib_sheet_1_gaps_between_vertical_nav_elements_in_ie5/">Andy Budd waaay back in 2003</a> (of course, he was dealing with IE5 back then). I like this solution because it seems to do the least harm to my lists. It doesn’t add any additional space that I need to account for. It also doesn’t harm the size of my anchor tags: if I apply a “display: block” to my anchors, like I’ve done in the image above, my anchor will stretch out the “inline” list item to its standard size. </p>
+<p>Any of these solutions will remove the extra space from between list items in IE6. The key is simply to pick the fix that works best with your particular design.</p>
+			</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+
+<div class="grid">
+<article id="post-119" class="post-119 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript category-navigation tag-dropdown tag-lists tag-menu tag-navigation col-1-2">
+	<h2 class="entry-title">
+		<a href="../../easy-css-dropdown-menu/index.html" title="Permalink to Easy CSS Dropdown Menus" rel="bookmark">Easy CSS Dropdown Menus</a>
+	</h2>
+	<div class="entry-content">
+				<p>Attractive dropdown menus have long been the realm of Flash developers and advanced JavaScript gurus. But that needn’t be the case. This tutorial will walk you through developing a clean, semantic dropdown menu using XHTML and CSS that works in all modern browsers!</p>
+		<p><a href="../../easy-css-dropdown-menu/index.html">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-118" class="post-118 post type-post status-publish format-standard hentry category-articles-elsewhere col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=118" title="Permalink to Great Resources Elsewhere: May 02 to May 09" rel="bookmark">Great Resources Elsewhere: May 02 to May 09</a>
+	</h2>
+	<div class="entry-content">
+				<p>Hypsometry. On tradition, harmony, pitch, the atonal, typography, Fibonacci, and coincidence. This article may be a little headier than most of the things I link to, but Chris Boone has put together an interesting argument for the use of the traditional typesetting sequence of sizes on the web. He posits that a traditional set of [&hellip;]</p>
+		<p><a href="../../index.html?p=118">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-115" class="post-115 post type-post status-publish format-standard hentry category-fonts-and-typography category-quick-tip col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=115" title="Permalink to 7 Tips for Replacing the Font Tag" rel="bookmark">7 Tips for Replacing the Font Tag</a>
+	</h2>
+	<div class="entry-content">
+				<p>So let’s say – hypothetically – that you’ve decided to take the plunge and replace all of the font tags in your website with semantic code and CSS. Hypothetical congratulations! You’re one step closer to web nirvana. Or perhaps you’ve just inherited a website filled to the brim with hundreds of nested font tags forming [&hellip;]</p>
+		<p><a href="../../index.html?p=115">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+
+
+
+
+<article id="post-112" class="post-112 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript tag-advanced tag-css tag-javascript tag-message-box col-1-2">
+	<h2 class="entry-title">
+		<a href="../../index.html?p=112" title="Permalink to Show/Hide Content with CSS and JavaScript" rel="bookmark">Show/Hide Content with CSS and JavaScript</a>
+	</h2>
+	<div class="entry-content">
+				<p>There are plenty of reasons why you might feel the urge to wax verbose on your website’s front page: to prevent your users from having to click through to a new page to find your information, to avoid having to reload the page, or even to improve your front page’s SEO. But just because your front page is text-heavy doesn’t mean it all needs to be visible at once.</p>
+		<p><a href="../../index.html?p=112">Read on...</a></p>
+	</div><!-- .entry-content -->
+</article>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=635" title="Permalink to: A JavaScript Currency Conversion Script">
+                    A JavaScript Currency Conversion Script                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">It turns out that converting random numbers into formatted currency (with dollar signs, commas, and periods) is more difficult in JavaScript than I would have expected. There's no built-in function for it, and it's something I run into a lot. The function I wrote has worked well for me on a couple of projects now, so I thought I'd share it with you-all. <a href="../../index.html?p=635" class="more-link" title="Permalink to: A JavaScript Currency Conversion Script">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 471/557 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 08:15:52 by W3 Total Cache -->

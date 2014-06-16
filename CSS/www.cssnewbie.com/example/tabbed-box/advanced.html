@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Tabbed Box Using jQuery</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: </h2>
+	<h2 class="source title">Source Code: <a href="advanced.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/tabbed-box/advanced.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSS Newbie Example: Tabbed Box Using jQuery&lt;/title&gt;
+&lt;style&gt;
+   * { margin: 0; padding: 0; }
+   body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 62.5%; }
+   p { margin: 1em 0; }
+   #wrap {
+      width: 500px;
+      font-size: 1.2em;
+      margin: 3em auto; }
+   .tabbed-box {
+      width: 302px;
+      background: #fff url(tabbed-body-bg.jpg) repeat-x bottom;
+      border: 1px solid #ddd; }
+   .tabbed-box .tabs li {
+      list-style: none;
+      float: left; }
+   .tabbed-box .tabs li a {
+      display: block;
+      width: 100px;
+      padding: 5px 0;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #888;
+      background: #fff url(tabbed-tab-bg.jpg) repeat-x bottom; 
+      border-left: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;}
+   .tabbed-box .tabs li:first-child a {
+      border-left: none; }
+   .tabbed-box .tabs li a:hover {
+      color: #333; }
+   .tabbed-box .tabs li a:focus {
+      outline: none; }
+   .tabbed-box .tabs li a.active, .tabbed-box .tabs li a.active:hover {
+      background: #fff;
+      color: #333;
+      border-bottom: 1px solid #fff; }
+   .tabbed-content {
+      padding: 3em 1em 1em 1em;
+      display: none; }
+&lt;/style&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;../../js/jquery/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;../../js/jquery/jquery.equalheights.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+var rotateSpeed = 5000; // Milliseconds to wait until switching tabs.
+var currentTab = 0; // Set to a different number to start on a different tab.
+var numTabs; // These two variables are set on document ready.
+var autoRotate;
+
+function openTab(clickedTab) {
+   var thisTab = $(&quot;.tabbed-box .tabs a&quot;).index(clickedTab);
+   $(&quot;.tabbed-box .tabs li a&quot;).removeClass(&quot;active&quot;);
+   $(&quot;.tabbed-box .tabs li a:eq(&quot;+thisTab+&quot;)&quot;).addClass(&quot;active&quot;);
+   $(&quot;.tabbed-box .tabbed-content&quot;).hide();
+   $(&quot;.tabbed-box .tabbed-content:eq(&quot;+thisTab+&quot;)&quot;).show();
+   currentTab = thisTab;
+}
+
+function rotateTabs() {
+   var nextTab = (currentTab == (numTabs - 1)) ? 0 : currentTab + 1;
+   openTab($(&quot;.tabbed-box .tabs li a:eq(&quot;+nextTab+&quot;)&quot;));
+}
+
+$(document).ready(function() {
+   $(&quot;.tabbed-content&quot;).equalHeights();
+   numTabs = $(&quot;.tabbed-box .tabs li a&quot;).length;
+   $(&quot;.tabbed-box .tabs li a&quot;).click(function() { 
+      openTab($(this)); return false; 
+   });
+   $(&quot;.tabbed-box&quot;).mouseover(function(){clearInterval(autoRotate)})
+   .mouseout(function(){autoRotate = setInterval(&quot;rotateTabs()&quot;, rotateSpeed)});
+   
+   $(&quot;.tabbed-box .tabs li a:eq(&quot;+currentTab+&quot;)&quot;).click()
+   $(&quot;.tabbed-box&quot;).mouseout();
+   
+});
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;
+   &lt;div class=&quot;tabbed-box&quot;&gt;
+      &lt;ul class=&quot;tabs&quot;&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Reader Faves&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Rob&amp;rsquo;s Faves&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;CSS Primer&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;tabbed-content&quot;&gt;
+         &lt;p&gt;Here's my content for tab 1&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 1&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 1&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabbed-content&quot;&gt;
+         &lt;p&gt;Here's my content for tab 2&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 2&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 2&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabbed-content&quot;&gt;
+         &lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+         &lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

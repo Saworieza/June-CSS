@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://s.codepen.io/stephengreig/fullgrid/rscGb?type=embed&animations=run -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <meta name="google" value="notranslate">
+
+  <title>CodePen - A Pen by stephengreig</title>
+
+  <script style="display: none !important;">
+    window.alert   = function(){};
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+  </script>
+
+  <style>@-webkit-keyframes square {
+
+		25% {
+			top:200px;
+			left:0;
+		}
+
+		50% {
+			top:200px;
+			left:400px;
+		}
+
+		75% {
+			top:0;
+			left:400px;
+		}
+
+	}
+
+	@keyframes square {
+
+		25% {
+			top:200px;
+			left:0;
+		}
+
+		50% {
+			top:200px;
+			left:400px;
+		}
+
+		75% {
+			top:0;
+			left:400px;
+		}
+
+	}
+
+	.container {
+		margin:30px auto 0;
+		width:500px;
+		height:300px;
+		border:2px dashed #ccc;
+		position:relative;
+	}
+
+		.box {
+			-webkit-animation: square 8s infinite cubic-bezier(.65,1.95,.03,.32);
+			animation: square 8s infinite cubic-bezier(.65,1.95,.03,.32);
+			width:100px;
+			height:100px;
+			background:blue;
+			position:absolute;
+			top:0;
+			left:0;
+		}</style>
+
+</head>
+
+<body onload="_l=&#39;t&#39;;">
+
+  <div class="container">
+  <div class="box"></div>
+</div>
+
+  <script>
+
+</script>
+
+  <script>
+    (function() {
+
+      // Once the entire pen's loaded we send a message to embeds
+      // to resize again in case they're using auto to the size the embed
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage('resize', "*");
+      }
+
+      // Remove all Iframes
+      var iframes = document.getElementsByTagName('iframe');
+
+      for (var i = iframes.length - 1; i >= 0; i--) {
+        iframes[i].outerHTML = "<p>remove</p>";
+      };
+
+    }());
+  </script>
+
+
+
+</body></html>

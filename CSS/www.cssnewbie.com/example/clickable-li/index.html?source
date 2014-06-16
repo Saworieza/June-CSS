@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Make an Entire List Item Clickable</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("#categories li:has(a)").click(function() {
+		window.location = $("a:first",this).attr("href");
+	});
+});
+</script>
+<style>
+body {
+	background-color: #555;
+	font: small/1.4 Arial, Helvetica, sans-serif; }
+#wrap {
+	width: 600px;
+	padding: 10px 20px;
+	margin: 0 auto;
+	background-color: #fff; }
+#categories {
+	list-style: none;
+	float: left;
+	width: 580px;
+	padding: 10px; }
+#categories li {
+	float: left;
+	padding: 5px 10px;
+	width: 125px;
+	border-top: 8px solid #555;
+	background-color: #fff;
+	cursor: pointer; }
+#categories li h2 {
+	font-size: 120%;
+	margin: 0 0 .2em 0; }
+#categories li h2 a {
+	color: #333;
+	text-decoration: none; }
+#categories li p {
+	margin: 0; }
+li#cat-1 {
+	border-top-color: #06f;
+	background-color: #fafaff; }
+#cat-1:hover {
+	border-top-color: #03f;
+	background-color: #bdf; }
+li#cat-2 {
+	border-top-color: #c00;
+	background-color: #fffaf2; }
+#cat-2:hover {
+	border-top-color: #900;
+	background-color: #fdb; }
+li#cat-3 {
+	border-top-color: #0c0;
+	background-color: #f2fff2; }
+#cat-3:hover {
+	border-top-color: #090;
+	background-color: #cfc; }
+li#cat-4 {
+	border-top-color: #639;
+	background-color: #fff2ff; }
+#cat-4:hover {
+	border-top-color: #609;
+	background-color: #ecf; }
+
+
+</style>
+</head>
+<body>
+<div id="wrap">
+	<ul id="categories">
+		<li id="cat-1">
+			<h2><a href="../../index.html">Category One</a></h2>
+			<p>Category One is full of fun and interesting stories from around the web. Be sure to check it out!</p>
+		</li>
+		<li id="cat-2">
+			<h2><a href="../../index.html">Category Two</a></h2>
+			<p>Category Two is the Edward Cullen of the category list: sexy, yet brooding. Also glittery.</p>
+		</li>
+		<li id="cat-3">
+			<h2><a href="../../index.html">Category Three</a></h2>
+			<p>Category Three isn't as cool as his big brothers, Categories One and Two. But he has heart!</p>
+		</li>
+		<li id="cat-4">
+			<h2><a href="../../index.html">Category Four</a></h2>
+			<p>Category Four is the baby of the group. She can do anything she wants and mom and dad don't care.</p>
+		</li>
+	</ul>
+	<h1>Make an Entire List Item Clickable</h1>
+	<p>The anchor tag in the categories list above is limited to the heading tag, but don't let that fool you: the enire list item is clickable. To find out how this technique is accomplished, <a href="../../index.html?p=501">read the original CSS Newbie article here.</a></p>
+</div>
+
+</body>
+</html>

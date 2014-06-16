@@ -1,0 +1,1003 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>A Full-Width Centered Navigation Bar</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; A Full-Width Centered Navigation Bar Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='How To Create Simple, Stylish and Swappable Image Captions' href='../index.html?p=457' />
+<link rel='next' title='Build a Bare-Bones WordPress 2.8+ Widget' href='../index.html?p=478' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=472' />
+<link rel='shortlink' href='../index.html?p=472' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,204] -->
+<meta name="description" content="This horizontal navigation bar stretches the full width of the screen but centers the navigation over your content. It's easy, clean, and CSS-only." />
+
+<meta name="keywords" content="navigation, horizontal navbar, horizontal navigation, centered navigation bar, stretched navigation bar,css,float,lists,pseudo-class,basic techniques,floats and positioning" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-472 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-472" class="post-472 post type-post status-publish format-standard hentry category-basic-techniques category-floats-and-positioning category-navigation tag-css tag-float tag-lists tag-navigation tag-pseudo-class">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=472" title="Permalink to A Full-Width Centered Navigation Bar" rel="bookmark">A Full-Width Centered Navigation Bar</a>
+	</h2>
+	<div class="meta">
+		<p>Published December 17, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../example/horizontal-menu/centered.html"><img src="../wp-content/uploads/2009/12/centered-navbar-beauty.png" alt="Centered Navigation Bar - Click to see it in action!" title="Centered Navigation Bar - Click to see it in action!" width="500" height="100" class="alignnone size-full wp-image-473" /></a></p>
+<p>Right around the time I was developing the code for the <a href="../index.html?p=444">Super Simple Navigation Bar</a> I wrote about a while back, a friend came to me with an interesting problem. He needed a horizontal navigation bar like the one I was creating, with the following changes:</p>
+<ol>
+<li>The navigation bar background should stretch the full width of the screen (not just the width of the centered content area), but</li>
+<li>The navigation elements themselves should still be centered over the content area.</li>
+</ol>
+<p>The sketch below outlines the basic design concept. <span id="more-472"></span></p>
+<p><img src="../wp-content/uploads/2009/12/centered-navbar-sketch.png" alt="Sketch of a centered full-width navigation bar." title="Sketch of a centered full-width navigation bar." width="500" height="321" class="alignnone size-full wp-image-474" /></p>
+<p>My friend had found some code elsewhere that did what he wanted, but it required two divs in addition to the navigation list to do its centering magic. He wanted to know if I could do it better.</p>
+<p>This tutorial is the result of that challenge.</p>
+<h3>The HTML</h3>
+<p>I was able to reduce the number of extra divs required down to one. Sadly, I don&#8217;t think it&#8217;s possible to do this without at least one extra div &mdash; or turning to JavaScript instead of relying entirely on CSS.</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div id=&quot;nav&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Our Products&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+<p>If you&#8217;re familiar with the code for <a href="../index.html?p=444">the Super Simple Navigation Bar,</a> you&#8217;ll see it&#8217;s nearly identical, except that I&#8217;ve wrapped the ul tag in a div and moved the &#8220;nav&#8221; ID to that div. </p>
+<p>This navigation code should be placed outside of your centered content container to allow us to stretch it the full width of the browser window in our CSS.</p>
+<p>All in all, I think this is an acceptable amount of code for a navigation bar.</p>
+<h3>The CSS</h3>
+<p>Again, all I did here was take the previous navigation bar CSS and modify it a bit. The results are below:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;  }
+#nav ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li:first-child a {
+	border-left: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }</pre>
+<p>Our #nav div is stretched to 100% of the browser window and floated left. The &#8220;float: left&#8221; rule might seem a little strange, because we don&#8217;t want anything to wrap around our navbar. </p>
+<p>This is a little trick that takes advantage of how floats behave. If a container contains nothing but a floated element, that container will collapse down to a height of zero, because floating an element takes it out of the normal document flow. That is, unless the container is floated as well. Then, suddenly, our container only collapses down to the size of the contained float. </p>
+<p>Why is this important? That&#8217;s what lets us set a background color and border on our #nav element and have it still appear. If the #nav weren&#8217;t floated, it would collapse to a height of zero, rendering our background and border invisible!</p>
+<p>Next, we&#8217;ve given the &#8220;#nav ul&#8221; a fixed width and used the auto margin trick to center it. The width here is critical: you want it to be the same width as your centered content area. In this example, that&#8217;s 800 pixels.</p>
+<p>I&#8217;m making use of one pseudo-class to interesting effect here. The &#8220;:first-child&#8221; pseudo-class applies to any element that is the first child in its parent. In our case, this rule is finding the first &#8220;li&#8221; in our parent &#8220;ul&#8221;. We&#8217;re then applying a border to the left side of the anchor tag inside. Without it, our first element wouldn&#8217;t have a border on the left like the others appear to have. While we could technically do that with a class or ID on the first element, I think this solution is a little more elegant.</p>
+<p>The rest of the CSS is identical to that in our <a href="../index.html?p=444">simple horizontal navigation bar</a> and is mostly presentational. You can customize the colors, padding, hovers and everything else to make the navigation bar your own.</p>
+<p>You can see this code in action here. Hopefully others will find this solution as useful as my friend did!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			42 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-10157">
+		<article id="comment-10157" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bfb65f024da96101edab10625a8138c8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Paul </cite><a href="comment-page-1/index.html#comment-10157"><time datetime="2009-12-17T19:46:20+00:00">Dec. 17, 2009 @ 7:46 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Looks good, and easy to incorporate.</p>
+<p>Could you take it another step and make it stick to the top of the browser window? It&#8217;s not something I&#8217;ve seen very often but have always liked it and thought it was a good idea because, especially on long pages, you don&#8217;t have to scroll back to the top to navigate to a different page.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-10159">
+		<article id="comment-10159" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-10159"><time datetime="2009-12-18T10:41:09+00:00">Dec. 18, 2009 @ 10:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I like that idea, Paul. I&#8217;ll write another article in the near future on how to do that. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10170">
+		<article id="comment-10170" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/15441019798629fb2453d43cbe7c718c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://linklist.computer-service-mallorca.com' rel='external nofollow' class='url'>Michael</a> </cite><a href="comment-page-1/index.html#comment-10170"><time datetime="2009-12-25T13:37:53+00:00">Dec. 25, 2009 @ 1:37 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very nice. Multi-Level would be nice too ;) I have added it to my linklist :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10173">
+		<article id="comment-10173" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/101e683ac19d6be60f1c405b1d60ffb1?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">SteveB </cite><a href="comment-page-1/index.html#comment-10173"><time datetime="2009-12-27T07:36:27+00:00">Dec. 27, 2009 @ 7:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Along with your &#8220;#nav li a:hover&#8221;, you should add &#8220;a:focus&#8221; and &#8220;a:active&#8221; so the effect appears for keyboard navigation.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10183">
+		<article id="comment-10183" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1b3094b519daee876a12eff25adc1dec?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ShaverAssociates.net' rel='external nofollow' class='url'>RobShaver</a> </cite><a href="comment-page-1/index.html#comment-10183"><time datetime="2010-01-02T19:43:30+00:00">Jan. 2, 2010 @ 7:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I tried this out and it works in Firefox and Safari but fails in IE 8.0.</p>
+<p>The left border doesn&#8217;t show and the menu just sticks to the left side of the screen. When it didn&#8217;t work as I expected I added a full spectrum of reset CSS at the start. This did remove any margin from the navigator but otherwise the operation was unchanged.</p>
+<p>I left the page accessable at this address:<br />
+<a href="http://shaverassociates.net/a/x.nsf/full-width-centered-navigation-bar" rel="nofollow">http://shaverassociates.net/a/x.nsf/full-width-centered-navigation-bar</a></p>
+<p>Perhaps I did something wrong.</p>
+<p>Thanks for your web site. I&#8217;m learning bit by bit.</p>
+<p>Happy New Year,</p>
+<p>Rob:-]</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10191">
+		<article id="comment-10191" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6804b42fc94a18451ba789e7585e7a26?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Tom Hayden </cite><a href="comment-page-1/index.html#comment-10191"><time datetime="2010-01-04T16:58:15+00:00">Jan. 4, 2010 @ 4:58 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I tried this on FF, IE6, IE7 and IE8. It looked the same for me on all three &#8211; not centered. Not all the way to the left, but left of center.</p>
+<p>Tom</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10477">
+		<article id="comment-10477" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/289cdd8b4d2052d09a314b28ab5ac436?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Chris Thomas </cite><a href="comment-page-1/index.html#comment-10477"><time datetime="2010-01-16T09:00:14+00:00">Jan. 16, 2010 @ 9:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Firefox seems to understand</p>
+<p>li:first-child a</p>
+<p>and</p>
+<p>li:last-child a</p>
+<p>but not IE8 :(</p>
+<p>I&#8217;m wanting to only have a vertical line in between each element, with nothing on each end.</p>
+<p>What to do?</p>
+<p>P.S. For those of you wanting to actually center the navigation elements, reduce the &#8220;800&#8243; width down to the pixel length of your text.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11119">
+		<p>Pingback: <a href='../index.html?p=518' rel='external nofollow' class='url'>The Simple Secret to Good Dropdown Navigation</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11175">
+		<p>Pingback: <a href='http://informativecomputersolutions.com/mikecapson-blog/?p=607' rel='external nofollow' class='url'>Mike Capson &raquo; Blog Archive &raquo; The Simple Secret to Good Dropdown Navigation</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11331">
+		<p>Pingback: <a href='http://www.tutorialmachine.com/css/a-full-width-centered-navigation-bar/' rel='external nofollow' class='url'>Best Photoshop, html, javascript and php tutorials &raquo; A Full Width Centered Navigation Bar</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12616">
+		<article id="comment-12616" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/33e122b19279924d592b53e5a3939681?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.rubiconsociety.org' rel='external nofollow' class='url'>Trevor Haynes</a> </cite><a href="comment-page-1/index.html#comment-12616"><time datetime="2010-04-20T17:37:28+00:00">Apr. 20, 2010 @ 5:37 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was wondering if there was a way to get the menu bar to show up centered on the web page, but with no other color stretching to the end?</p>
+<p>So in other words, the naviagtion elements would be completely centered and there would be background color but the color wouldn&#8217;t stretch all the way to the end of the page. </p>
+<p>If anyone knows how to do that that would be great!</p>
+<p>Thanks so much.</p>
+<p>-Trevor</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12876">
+		<article id="comment-12876" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3a499b85f353e79b2ddc153cdb4f18f7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://new' rel='external nofollow' class='url'>tony</a> </cite><a href="comment-page-1/index.html#comment-12876"><time datetime="2010-07-26T11:45:46+00:00">Jul. 26, 2010 @ 11:45 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Looks great in FF.  In IE8 it is floating to the left and there is an unwanted padding below the navbar (between navbar and main content area).</p>
+<p>Is there an updated version of the code or did I do something wrong?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12877">
+		<article id="comment-12877" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3a499b85f353e79b2ddc153cdb4f18f7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://new' rel='external nofollow' class='url'>tony</a> </cite><a href="comment-page-1/index.html#comment-12877"><time datetime="2010-07-26T11:46:56+00:00">Jul. 26, 2010 @ 11:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Looks great in FF. In IE8 it is floating to the left and there is an unwanted padding below the navbar (between navbar and main content area).</p>
+<p>Is there an updated version of the code or did I do something wrong?</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+copy of the code:<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<p>				header here</p>
+<p>					<a href="../index.html?p=472#" rel="nofollow">About Us</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Our Products</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">FAQs</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Contact</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Login</a></p>
+<p>				content here</p>
+<p>				footer here</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12878">
+		<article id="comment-12878" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3a499b85f353e79b2ddc153cdb4f18f7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://new' rel='external nofollow' class='url'>tony</a> </cite><a href="comment-page-1/index.html#comment-12878"><time datetime="2010-07-26T11:49:00+00:00">Jul. 26, 2010 @ 11:49 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>**sorry for the duplicate entry, wanted to paste the code I&#8217;m using**</p>
+<p>Looks great in FF. In IE8 it is floating to the left and there is an unwanted padding below the navbar (between navbar and main content area).</p>
+<p>Is there an updated version of the code or did I do something wrong?</p>
+<p>——————————————<br />
+copy of the code:<br />
+——————————————</p>
+<p><code></p>
+<p>				header here</p>
+<p>					<a href="../index.html?p=472#" rel="nofollow">About Us</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Our Products</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">FAQs</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Contact</a><br />
+					<a href="../index.html?p=472#" rel="nofollow">Login</a></p>
+<p>				content here</p>
+<p>				footer here</p>
+<p></code></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12928">
+		<article id="comment-12928" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8a5b84ea4f0e570702d988aeccc28648?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://michaelpaypon.freehostia.com' rel='external nofollow' class='url'>Michael Paypon</a> </cite><a href="comment-page-1/index.html#comment-12928"><time datetime="2010-08-19T04:27:13+00:00">Aug. 19, 2010 @ 4:27 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great!Thanks a lot..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13022">
+		<article id="comment-13022" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/eff22e03dada46eb25fe60c5668bd0e4?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Noah </cite><a href="comment-page-1/index.html#comment-13022"><time datetime="2010-10-14T22:27:16+00:00">Oct. 14, 2010 @ 10:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Everything good for me, until I add the<br />
+float: left;</p>
+<p>Then it loses my whole main content container.. no idea why..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-13033">
+		<article id="comment-13033" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-13033"><time datetime="2010-10-18T13:33:32+00:00">Oct. 18, 2010 @ 1:33 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Noah,</p>
+<p>It sounds like your container doesn&#8217;t have anything else in it other than the navigation bar. When you floated the navigation bar, thus removing it from the regular document flow, your content container collapsed to the smallest necessary height&#8230; which would have been 0px. </p>
+<p>Workarounds include floating your content container, adding an &#8220;overflow: auto&#8221; rule to your content container, or adding more content below your navigation bar.</p>
+<p>Hope that helps!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13095">
+		<article id="comment-13095" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/066fc644a2449da978033acda47c66e0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.swizzmagik.com' rel='external nofollow' class='url'>John B. Johnson</a> </cite><a href="comment-page-1/index.html#comment-13095"><time datetime="2010-11-12T15:36:09+00:00">Nov. 12, 2010 @ 3:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>buttons are not centered in any of the modern browsers I have tried&#8230; IE8, FF, Safari, Chrome</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-13096">
+		<article id="comment-13096" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-13096"><time datetime="2010-11-12T16:20:17+00:00">Nov. 12, 2010 @ 4:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi John,</p>
+<p>No, this technique does not center the navigation elements within a navigation bar&#8230; it centers a navigation bar on your page. The elements within are still left (or right) aligned, as they rely on floats.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13108">
+		<article id="comment-13108" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/16c1993bbadad44499cdbd6ce86b02e4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Patrick </cite><a href="comment-page-1/index.html#comment-13108"><time datetime="2010-11-19T11:47:37+00:00">Nov. 19, 2010 @ 11:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m having a similar problem as John. The buttons are still pushing to the left. I haven&#8217;t styled the content div yet or anything but the &#8220;nav&#8221; div sits inside a &#8220;container&#8221; div and I&#8217;ve matched the nav ul width to that but the buttons still sit to the left.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13160">
+		<article id="comment-13160" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ae6232fe65031be60f13f8428bddb284?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Kris Drummond </cite><a href="comment-page-1/index.html#comment-13160"><time datetime="2010-12-27T12:22:59+00:00">Dec. 27, 2010 @ 12:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>To center the nav bar on the page you need to adjust the width of the #nav ul to the size of your bar. That will center it to the page, well that&#8217;s what I did anyway, and it works on IE8 FF and Chrome any screen resolution. I took mine from 800px as in the example and adjusted it to 600px (which is the size of my nav bar. To get rid of the bar that stretched from side to side I took out all the references to background color, ie in the #nav (div). I replaced the background color in #nav li a and replaced it with an image to create a button. I then replaced the hover color with and image to create the hover effect except mine is with button images.<br />
+Thanks this tutorial helped me with my school project.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13239">
+		<article id="comment-13239" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/602197f8c1a2477c7de4af97e41d21e6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.minadanismanlik.com.tr' rel='external nofollow' class='url'>Danışmanlık</a> </cite><a href="comment-page-1/index.html#comment-13239"><time datetime="2011-02-02T07:11:28+00:00">Feb. 2, 2011 @ 7:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thnks but problem navigation element </p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13272">
+		<article id="comment-13272" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/abb66bbbab0ea75ef302eed883cfbf79?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.pyatok.com' rel='external nofollow' class='url'>Shannon Range</a> </cite><a href="comment-page-1/index.html#comment-13272"><time datetime="2011-02-15T16:06:20+00:00">Feb. 15, 2011 @ 4:06 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That was the easiest CSS fix I&#8217;ve ever done &#8211; THANKS!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13360">
+		<article id="comment-13360" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/20610e4a0d831bf39cbeb0c3f66c3392?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.lutonminibustravel.com' rel='external nofollow' class='url'>Asif Rasheed</a> </cite><a href="comment-page-1/index.html#comment-13360"><time datetime="2011-04-03T07:08:31+00:00">Apr. 3, 2011 @ 7:08 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,<br />
+I&#8217;ve just gone through your website and learnt a lot. You&#8217;ve solved my problems in many ways. I am stuck in a very simple thing and I am pretty sure you can solve my problem. If you go to <a href="http://www.lutonminibustravel.com" rel="nofollow">http://www.lutonminibustravel.com</a> and fill in the REQUEST A QUOTE form on the left hand side of the page in FIREFOX, it would work perfectly fine. now try this in Internet Explorer. I am sure it wouldn&#8217;t work. I need to know when it keeps saying &#8220;Please enter all required fields&#8221; and it doesn&#8217;t go through. PLEASE HELP ME!!</p>
+<p>Regards,<br />
+Asif</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13496">
+		<article id="comment-13496" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/24c0b70c680f8c65ce8aeb1bee2d6c50?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Kimberly </cite><a href="comment-page-1/index.html#comment-13496"><time datetime="2011-07-14T10:11:21+00:00">Jul. 14, 2011 @ 10:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am having trouble with my horizontal navigation at the end of my page. i cannot get it to stay down at the bottom. it winds up after my last paragraph</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13567">
+		<article id="comment-13567" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3c9b63b887a041645a809222fb39ba65?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Phil </cite><a href="comment-page-1/index.html#comment-13567"><time datetime="2011-08-26T02:25:17+00:00">Aug. 26, 2011 @ 2:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This tutorial has been extremely helpful&#8230; thanks!<br />
+However, I am still encountering the problem of centering my navigation elements within the nav  similar to some of the other people who have left comments here. Is there any way at all to not just center the nav div, but also the containing navigation elements? Perhaps another div within the nav? Any suggestions?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13600">
+		<article id="comment-13600" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/08a9f7c4a21360fa1a7930233767b2b9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Drew </cite><a href="comment-page-1/index.html#comment-13600"><time datetime="2011-09-28T03:37:38+00:00">Sep. 28, 2011 @ 3:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Incase someone was still wondering about this, the only thing you have to add to make the navbar stick to the top of the page is add this little snippet:</p>
+<p>#nav{<br />
+   position:fixed;<br />
+   top:0;<br />
+   left:0;<br />
+}<br />
+That should just about do it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13601">
+		<article id="comment-13601" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/08a9f7c4a21360fa1a7930233767b2b9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Drew </cite><a href="comment-page-1/index.html#comment-13601"><time datetime="2011-09-28T03:41:35+00:00">Sep. 28, 2011 @ 3:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Phil,</p>
+<p>Make sure in your css you have the following:</p>
+<p>body,html{<br />
+width:100%;<br />
+height:100%;<br />
+padding:0;<br />
+margin:0;<br />
+*****Text-Align:center;**** &lt;&lt;&lt;&lt;That&#039;s important, I.E Centering Fix (minus asteriks)<br />
+}</p>
+<p>I would also make a #navContainer ID within the Nav just to make it easier to control<br />
+something like&#8230;.:<br />
+#navContainer{<br />
+width:1000px;<br />
+height:30px;<br />
+margin:0 auto;<br />
+padding:0;<br />
+}<br />
+or something along the lines of that.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13623">
+		<p>Pingback: <a href='http://www.kabayview.com/css3/css/cascading-style-sheets-reference-links' rel='external nofollow' class='url'>Cascading Style Sheets Reference Links | kabayview.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13636">
+		<article id="comment-13636" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3290b8e46cbf3bbbdced0b44eb1970b2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Amit </cite><a href="comment-page-1/index.html#comment-13636"><time datetime="2011-10-24T13:04:49+00:00">Oct. 24, 2011 @ 1:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks a million, great learning curve, you made my day.<br />
+GOD BLESS YOU !!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13852">
+		<article id="comment-13852" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4145da2570efb4127f2f5a34f7630ae3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Mike </cite><a href="comment-page-1/index.html#comment-13852"><time datetime="2011-11-13T16:59:33+00:00">Nov. 13, 2011 @ 4:59 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>how do u get the CSS horizontal nav bar hover state to hover above a banner .gif please anyone? Please email back, thanks. Mike</p>
+<p>I have this so far:</p>
+<p>#navbar li:hover li a {<br />
+	background-color: #6B8E23;<br />
+	border-bottom: 1px solid #fff;<br />
+	color: #000;<br />
+	}<br />
+#navbar li li a:hover {<br />
+	background-color: #32CD32;<br />
+	}<br />
+/*&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13959">
+		<article id="comment-13959" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d3bbbbcc083f8f9d8a7d9a0c505c620?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jackdurrant.com/' rel='external nofollow' class='url'>Jack Durrant</a> </cite><a href="comment-page-1/index.html#comment-13959"><time datetime="2012-02-01T16:08:57+00:00">Feb. 1, 2012 @ 4:08 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for making this tutorial, now my life is much easier! lol</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14100">
+		<article id="comment-14100" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/15820586555e759860ff3b3443671519?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">shaklin </cite><a href="comment-page-1/index.html#comment-14100"><time datetime="2012-05-18T11:25:28+00:00">May. 18, 2012 @ 11:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks for the blog.. was usefull.. well is it possible to create a rounded menu bar using ul orelse should me use div tags instead of ul..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14119">
+		<article id="comment-14119" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6f4ef2dd8379b928edbdd5a568152083?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Martin </cite><a href="comment-page-1/index.html#comment-14119"><time datetime="2012-05-28T14:24:37+00:00">May. 28, 2012 @ 2:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have tried this sicne the past 5 hours but I really don&#8217;t get it! </p>
+<p>#block_2660  .nav{height:78px;line-height:78px; margin:0 auto; background:none;}<br />
+#block_2660  .nav_l{ display:none;}<br />
+#block_2660  .nav_r{display:none;}<br />
+#block_2660  .navigation{ padding:0px;}<br />
+#block_2660  .navigation li{float:left;width:100px;text-align:center;  position:relative; padding-left:2px;z-index:2601;background:none;background: none; font-size:19px Arial,Helvetica,sans-serif;}<br />
+#block_2660  .navigation li a,.navigation li a:visited{display: block;text-decoration: none;color: #fff; width:100px;}<br />
+#block_2660  .navigation li a:hover,.navigation li.hover a{color: #fff;text-decoration: none;background:none; }<br />
+#block_2660  .navigation li.hover a:visited{_color:#353535;}<br />
+#block_2660  .navigation ul{display:none;overflow:visible;}<br />
+#block_2660  .navigation ul li{background-image:none;background-color:#969696;  height:25px;line-height:25px;margin:0px; padding: 0px;}<br />
+#block_2660  .navigation ul li a,.navigation ul li a:hover{background-image:none;color:#ff8700;width:800px; margin:0px; padding: 0px;}<br />
+#block_2660  .navigation li ul { width:100px; display:none; position:relative; top:54px; left:2px; margin: 0px;  padding:0; z-index:100;  background-color:#e9e9e9;}<br />
+#block_2660  .navigation li ul ul { left:100px; top:20px; z-index:200; top:0; }<br />
+#block_2660  .navigation li ul li {  background-color:#e9e9e9; border:0; background-image:none;}<br />
+#block_2660  .navigation li ul li a {  color:#fff; font-weight:bold; text-align:center; background-image:none; }<br />
+#block_2660  .navigation li ul li a:visited { _color:#fff; background-image:none; font-weight:bold; color:#ffff;}<br />
+#block_2660  .navigation li ul li a:hover { color:#fff; background-image:none; background:#282828;}<br />
+#block_2660  .navigation li ul li.hover{ background:#fff;background-image:none; width:120px;}<br />
+#block_2660  .navigation li.hover ul a{background-image:none; }<br />
+#block_2660  {*z-index:500;}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14146">
+		<article id="comment-14146" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d1cf288b38c0871f7a212dd0b35207be?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Andrew </cite><a href="comment-page-1/index.html#comment-14146"><time datetime="2012-06-18T18:10:44+00:00">Jun. 18, 2012 @ 6:10 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What if someone wanted to have some of the links on the far right and some on the far left? About and Contact being examples of two links they&#8217;d want on the right and leaving navigational links on the left?</p>
+<p>I&#8217;m doing it right now using some  stuff, but it&#8217;s also using some inline coding and I&#8217;d much prefer to eliminate as much inline stuff as possible.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14153">
+		<article id="comment-14153" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bed12688903a42db1031d4cb3b4c485a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ajbf150 </cite><a href="comment-page-1/index.html#comment-14153"><time datetime="2012-06-25T22:16:03+00:00">Jun. 25, 2012 @ 10:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi &#8212; this tut was great. Thank you for relaying this in very digestible bits of information.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14280">
+		<article id="comment-14280" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/de166b31dcf440835110b2c16f7e6772?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.majnooncomputer.com/' rel='external nofollow' class='url'>majnooncomputer</a> </cite><a href="comment-page-1/index.html#comment-14280"><time datetime="2012-09-29T06:20:19+00:00">Sep. 29, 2012 @ 6:20 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>that&#8217;s nice man<br />
+thx :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15421">
+		<article id="comment-15421" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/13f7e3521ed0bf85a61c9367d5d6feb2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">dave </cite><a href="comment-page-1/index.html#comment-15421"><time datetime="2013-07-20T16:03:01+00:00">Jul. 20, 2013 @ 4:03 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s a little odd that page proclaims to describe how to centre something, but it doesn&#8217;t actually centre it; comments going back over 3 years have pointed this out but nothings been done about it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-15439">
+		<article id="comment-15439" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-15439"><time datetime="2013-07-23T07:26:41+00:00">Jul. 23, 2013 @ 7:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Dave,</p>
+<p>The navigation area is centered within the page, but yes, the links are left aligned. I&#8217;m sorry that it wasn&#8217;t specifically what you are looking for, but it certainly helped me at the time!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15478">
+		<article id="comment-15478" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/843b63f2c309e01c583ed14c165ccf7e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://stweb.biz' rel='external nofollow' class='url'>ST Web</a> </cite><a href="comment-page-1/index.html#comment-15478"><time datetime="2013-07-28T22:48:12+00:00">Jul. 28, 2013 @ 10:48 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great Article !</p>
+<p>I am looking to implement a good UI kit for my Site but ones like Jquery UI Doesn&#8217;t have an In-Built Nav Bar support. Creating a Navigation is easier than I thought !</p>
+<p>Thanks,<br />
+Shalabh</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15600">
+		<article id="comment-15600" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dd86f46a0743bd0d22e138d2a69e62b8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">tell me how </cite><a href="comment-page-1/index.html#comment-15600"><time datetime="2013-10-09T11:28:04+00:00">Oct. 9, 2013 @ 11:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>FAILS MY NEEDS !</p>
+<p>i need to control the placement of compleated nav.<br />
+simple stated  i want a compleatd nav bar to beplaced any where i may desire ..</p>
+<p>10-9-2013</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-16042">
+		<p>Pingback: <a href='http://www.codingforums.com/html-css/318639-blog-navigation.html#post1390366' rel='external nofollow' class='url'>blog navigation</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=472#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='472' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5992983cb5" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=75" title="Permalink to: Harnessing CSS Positioning: Part 2">
+                    Harnessing CSS Positioning: Part 2                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">We’re continuing our look at CSS positioning in this article. If you missed last week’s article on the subject, you might want to start there.... <a href="../index.html?p=75" class="more-link" title="Permalink to: Harnessing CSS Positioning: Part 2">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=472#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1427/1544 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-22 15:56:57 by W3 Total Cache -->

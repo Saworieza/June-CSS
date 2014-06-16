@@ -1,0 +1,45 @@
+/* Define the space for the popout. */
+#popout {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 320px;
+	height: 350px;
+	z-index: 100;
+	overflow: hidden; 
+	/* Allows us to hide the ad with a negative margin. */ }
+
+/* Basic formatting within the ad space. */
+#popout a, #popout a img {
+	text-decoration: none;
+	border: 0;
+	outline: 0; }
+#popout a span {
+	display: none; }
+
+/* Formatting the "Cap" - the part the user click to open the ad. */
+#popout #cap {
+	width: 20px;
+	height: 350px;
+	position: relative;
+	left: 0;
+	z-index: 102; }
+
+/* Formatting the close button. */
+#popout a#close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 20px;
+	width: 20%;	}
+
+/* Formatting the ad itself. */
+#popout #adbox {
+	position: absolute;
+	top: 10px;	
+	left: 20px;
+	margin-left: -300px;
+	z-index: 101; }
+

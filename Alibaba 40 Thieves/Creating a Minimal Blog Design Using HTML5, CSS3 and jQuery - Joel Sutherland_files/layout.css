@@ -1,0 +1,122 @@
+/****** Layout *******/
+body {
+    padding: 0 20px;
+}
+.container {
+	position: relative;
+    padding: 10px;
+	margin: 0 auto;
+}
+
+/*** One Column ******/
+@media (max-width: 767px){
+    .container {
+        max-width: 620px
+    }
+        .content {
+            padding: 0;
+            width: 600px;
+        }
+            .article {
+                width: 100%;
+            }
+                .article header {
+                    margin-bottom: 40px;
+                }
+                .article header h1 {
+                    margin: 0;
+                }
+                .meta {
+                    margin: 5px 0 15px 0;
+                    font-size: 12px;
+                    color: #999;
+                    height: 20px;
+                }
+                    .meta time, .meta a {
+                        color: #666;
+                    }
+                    .meta a:hover {
+                        color: #2E78BC;
+                    }
+                .article footer {
+                    position: relative;
+                    width: 620px;
+                    left: -10px;
+                }
+                
+.gallery {
+    display: none;
+}
+                
+}
+
+/*** Two Column @iPad Break ****/
+@media (min-width: 768px) and (max-width: 1899px){
+    .container {
+        background: white;
+        padding: 10px;
+        max-width: 740px;
+        overflow: hidden;
+    }
+        .content {
+            padding: 0 0 0 130px;
+            width: 600px;
+        }
+            .article {
+                position: relative;
+                width: 600px;
+            }
+                .article h1 {
+                    position: relative;
+                    margin-bottom: 40px;
+                }
+                    .article .meta {
+                        float: left;
+                        top: 0;
+                        margin-left: -120px;
+                        width: 100px;
+                        text-align: right;
+                        font-size: 12px;
+                    }
+                        .article .meta time {
+                            display: block;
+                            color: #333;
+                            font-size: 13px;
+                            margin-bottom: 20px;
+                        }
+                        .article .meta time .day {
+                            display: none;
+                        }
+                        .article .meta .categories {
+                            display: block;
+                        }
+                            .article .meta .sep {
+                                display: none;
+                            }
+                            .article .meta .categories a {
+                                display: block;
+                                text-indent: 0;
+                            }
+                .article .copy {
+                }
+                .article footer {
+                    clear: left;
+                    position: relative;
+                    width: 740px;
+                    left: -130px;
+                }
+            
+    .article pre {
+        position: relative;
+        left: -140px;
+        width: 700px;
+        font-size: 11px;
+    }
+}
+
+/*** Big Screen ****/
+@media (min-width: 900px) and (max-width: 1100px) {
+    .container {
+        width: 900px;
+    }
+}

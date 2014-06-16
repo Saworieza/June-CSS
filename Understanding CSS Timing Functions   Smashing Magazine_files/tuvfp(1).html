@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://s.codepen.io/stephengreig/fullgrid/tuvfp?type=embed&animations=run -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <meta name="google" value="notranslate">
+
+  <title>CodePen - A Pen by stephengreig</title>
+
+  <script style="display: none !important;">
+    window.alert   = function(){};
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+  </script>
+
+  <style>.cartoon {
+  width: 125px;
+  height: 150px;
+  background: url(http://tangledindesign.com/codepen/sprite.jpg) left;
+  -webkit-transition: 2s steps(16);
+  transition: 2s steps(16);
+  border: 1px solid black;
+  margin-top: 30px;
+}
+
+#go:target .cartoon {
+  background-position: -4000px 0;
+}
+
+body {
+  font: .7em Arial;
+}
+
+.container {
+  margin: 20px auto;
+  width: 150px;
+}
+
+a {
+  padding: 5px 10px;
+  background: blue;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+p {
+  font-size: 1.2em;
+}</style>
+
+</head>
+
+<body onload="_l=&#39;t&#39;;">
+
+  <div id="go" class="container">
+
+	<a href="http://s.codepen.io/stephengreig/fullgrid/tuvfp?type=embed&animations=run#go">Animate</a> <a href="http://s.codepen.io/stephengreig/fullgrid/tuvfp?type=embed&animations=run#reset">Reset</a>
+
+  <div class="cartoon">
+  </div>
+
+</div>
+
+  <script>
+
+</script>
+
+  <script>
+    (function() {
+
+      // Once the entire pen's loaded we send a message to embeds
+      // to resize again in case they're using auto to the size the embed
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage('resize', "*");
+      }
+
+      // Remove all Iframes
+      var iframes = document.getElementsByTagName('iframe');
+
+      for (var i = iframes.length - 1; i >= 0; i--) {
+        iframes[i].outerHTML = "<p>remove</p>";
+      };
+
+    }());
+  </script>
+
+
+
+</body></html>

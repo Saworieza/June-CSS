@@ -1,0 +1,23 @@
+	<div id="blog" class="hidden">
+			<div id="recent" class="blogcol">
+				<h4>recent posts</h4>
+				<ol>
+					{% for post in hifi.get({'type': 'post', 'orderBy': '-publishedAt', 'count': 3}) %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endfor %}
+				</ol>
+			</div>
+				<div id="categories" class="blogcol">
+				<h4>categories</h4>
+				<ul>
+					{% for category in hifi.get({'type': 'category', 'orderBy': 'ordinal', 'count': 6}) %}
+					<li><a href="{{ category.url }}">{{ category.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div id="search">
+				<h4>search</h4>
+				<input name="searchbox" id="searchbox" type="text" value="Enter search terms here..." />
+				<ul class="results hidden"></ul>
+			</div>
+		</div><!-- blog -->

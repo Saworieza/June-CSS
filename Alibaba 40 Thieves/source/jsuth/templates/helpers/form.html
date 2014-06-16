@@ -1,0 +1,80 @@
+{# Draw an individual form field #}
+{% macro field( field ) %}
+	{% import "helpers/form.html" as formHelper %}
+	
+	{% set type as field.type %}
+	
+	{% if type == 'aggregate' %}
+
+		<fieldset class="{{type}}">
+			{{ formHelper.drawFields(field.fields) }}
+		</fieldset>
+
+	{% elseif type == 'text' %}
+	
+	<fieldset class="text">
+		<label for="{{ field.name }}">{{ field.label }}{% if field.required %}<span class="req">*</span>{% endif %}</label>
+		<input type="text" class="text{% if field.required %} required{% endif %}" id="{{ field.name }}" name="{{ field.name }}" value="{{ field.default }}"/>
+	</fieldset>
+	
+	{% elseif type == 'textarea' %}
+	
+	<fieldset class="textarea">	
+		<label for="{{ field.name }}">{{ field.label }}{% if field.required %}<span class="req">*</span>{% endif %}</label>
+		<textarea id="{{ field.name }}" name="{{ field.name }}"{% if field.required %} class="required"{% endif %} rows="10" cols="50">{{ field.default }}</textarea>
+	</fieldset>		
+	
+	{% elseif type == 'select' %}
+	
+	<fieldset class="select">
+		{% set options as field.properties.options|explode(",") %}
+		<label for="{{ field.name }}">{{ field.label }}{% if field.required %}<span class="req">*</span>{% endif %}</label>
+		<select id="{{ field.name }}" name="{{ field.name }}"{% if field.required %} class="required"{% endif %}>
+			{% for option in options %}{% if ":" in option %}{% set option as option|explode(":") %}<option value="{{option[0]}}">{{ option[1] }}</option>{% else %}<option>{{ option }}</option>{% endif %}{% endfor %}
+		</select>
+	</fieldset>
+
+	{% elseif type == 'radio' %}
+	
+	<fieldset class="radio">	
+		{% set options as field.properties.options|explode(",") %}
+		<label>{{ field.label }}</label>
+		<fieldset>
+			{% for option in options %}<label><input type="radio" name="{{ field.name }}" value="{{ option }}"/> {{ option }}</label>{% endfor %}
+		</fieldset>
+	</fieldset>
+	
+	{% elseif type == 'checkbox' %}
+	
+	<fieldset class="checkbox">	
+		<label><input type="checkbox" id="{{ field.name }}" name="{{ field.name }}" value="{{ field.value }}"{% if field.checked %} checked="checked"{% endif %}/> {{ field.label }}</label>
+	</fieldset>		
+	
+	{% elseif type == 'header' %}
+	
+		<h{{ field.properties.level }}>{{ field.label }}</h{{ field.properties.level }}>
+		
+	{% elseif type == 'richtext' %}
+	
+		{{ field.default }}
+	
+	{% endif %}
+		
+{% endmacro %}
+
+{# Draw an entire form #}
+{% macro draw( form, fields, method ) %}
+	{% import "helpers/form.html" as formHelper %}
+	<form action="{{ form.url }}" method="{{ method|default('post') }}">
+		<input type="hidden" name="id" value="{{ form.id }}" />
+		{{ formHelper.drawFields(form.form) }}
+		<fieldset class="submit">
+			<input type="submit" value="Submit"/>
+		</fieldset>
+	</form>
+{% endmacro %}
+
+{% macro drawFields( fields ) %}
+	{% import "helpers/form.html" as formHelper %}
+	{% for field in fields %}{{ formHelper.field( field ) }}{% endfor %}
+{% endmacro %}

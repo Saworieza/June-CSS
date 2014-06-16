@@ -1,0 +1,107 @@
+
+var content = '';
+
+
+content += '<style type="text/css">';
+content += ' #md-large-widget-content{ display:inline-block; font-family:Arial; text-align:left;}';
+content += ' .md-wg-deal-image {width:100%; margin-bottom: 5px;} ';
+content += ' .md-wg-timer-block { font-size: 11px; color:#727a80; margin-top: 5px;} ';
+content += ' .mdWidgetDigit {margin-right: 1px; display:inline-block;} ';
+content += ' .mdWidgetWord {margin-right: 5px; display:inline-block;} ';
+content += ' .md-wg-deal-link {font-weight: bold; font-size:15px; color:#57207c; text-decoration: none; line-height: 17px;}' ;
+content += ' .md-wg-deal-link:hover {color:#f05028;}' ;
+content += '</style>'
+
+content += '<div id="md-large-widget-content" style="width:280px;" >';
+content += '<a href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget" class=""  >';
+content += '		<img alt="" class="md-wg-deal-image" style="width:280px;" src="http://cdn.mightydeals.com/teaser-images/1459/csshero.jpg" /></a>';
+      
+      
+content += '<a class="md-wg-deal-link" href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget" >';
+content += "	<span>Easily Customize WordPress Themes with No Code - only $14!</span>";
+content += '</a>';
+content += '<div id="md-wg-timer-block" class="md-wg-timer-block">Ends:';
+content += '	<span id="md-wg-time-left-label" class="md-wg-time-left-label"></span>';
+content += '</div>';
+
+				
+	
+content += '</div>';
+
+var mdWidgetContainer = document.getElementById('md-large-widget');
+if(mdWidgetContainer)
+  mdWidgetContainer.innerHTML = content;
+
+
+var mdWidgetTimeEnd = 1400648399;
+var mdWidgetServerTime = 1399981251
+
+var mdWidgetTimeLeft = 0;
+
+var mdWidgetTimeLeft = mdWidgetTimeEnd - mdWidgetServerTime;
+var mdWidgetExpirationIntervalID = window.setInterval('mdWidgetUpdateExpirationTimeLabel()', 1000);
+
+
+function mdWidgetUpdateExpirationTimeLabel(){
+	mdWidgetTimeLeft--;
+	
+	var strTime = mdWidgetGetTimeLeftStr(mdWidgetTimeLeft);
+	   	
+	var timeLabel = document.getElementById('md-wg-time-left-label');
+	if(timeLabel){
+		timeLabel.innerHTML = strTime;
+		
+	}
+	
+	
+	if(mdWidgetTimeLeft <=0){
+		clearInterval(mdWidgetExpirationIntervalID);
+	
+	}
+	
+}
+
+var daySeconds = 3600 * 24;
+var hourSeconds = 3600;
+var minuteSeconds = 60;
+
+function mdWidgetGetTimeLeftStr(timeLeft){
+	var strTime = '';
+
+	var hours = Math.floor(timeLeft / hourSeconds);//Math.floor((timeLeft - elapsedSeconds) / hourSeconds);
+	
+	var days = 0;
+	var elapsedSeconds = 0;
+	
+	if( hours >= 24 ){
+    
+    	days = Math.floor( hours / 24 );
+    	elapsedSeconds = days * daySeconds;
+    
+    	hours = hours - days * 24;
+  	}
+	
+	   elapsedSeconds += hours * hourSeconds;
+	   var minutes = Math.floor((timeLeft - elapsedSeconds) / minuteSeconds);
+	   elapsedSeconds += minutes * minuteSeconds;
+	   seconds = timeLeft - elapsedSeconds;                   
+	   
+	   if(days > 0)
+	     strTime += formatTimerChunk(days ,'day'+ (days > 1 ? 's' : ''));
+	   
+     if(hours > 0)
+	     strTime += formatTimerChunk(hours ,'hour'+ (hours > 1 ? 's' : ''));
+	  
+	   if(minutes > 0 || ( minutes == 0 && hours > 0) )
+	     strTime += formatTimerChunk(minutes , 'min');//'Minute'+ (minutes > 1 ? 's' : '') );
+	   
+	   strTime += formatTimerChunk(seconds, 'sec');//(days > 1 ? 'Sec': 'Seconds') );
+
+	     
+	 return strTime;
+}
+
+function formatTimerChunk(digit, word){
+  return '<span class="mdWidgetDigit">' + digit + '</span><span class="mdWidgetWord">' + word +'</span>';
+}
+

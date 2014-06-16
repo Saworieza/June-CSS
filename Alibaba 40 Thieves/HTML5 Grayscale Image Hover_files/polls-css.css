@@ -1,0 +1,160 @@
+/*
++----------------------------------------------------------------+
+|																							|
+|	WordPress 2.0 Plugin: WP-Polls 2.20										|
+|	Copyright (c) 2007 Lester "GaMerZ" Chan									|
+|																							|
+|	File Written By:																	|
+|	- Lester "GaMerZ" Chan															|
+|	- http://www.lesterchan.net													|
+|																							|
+|	File Information:																	|
+|	- Polls CSS File																	|
+|	- wp-content/plugins/polls/polls-css.css									|
+|																							|
++----------------------------------------------------------------+
+*/
+
+
+#content .wp-polls {
+	width: 450px;
+	padding: 5px 15px 0 15px;
+	margin-bottom: 10px;
+	border: solid 1px #ccc;
+	background: #f9f9ef;
+}
+.wp-polls-ul small {
+	color: #999;
+	font-size: 90%;
+}
+.wp-polls ul li, wp-polls-ul li, .wp-polls-ans ul li {
+	text-align: left;
+	background-image: none;
+	display: block;
+}
+.wp-polls ul, .wp-polls-ul, .wp-polls-ans ul  {
+	text-align: left;
+	list-style: none;
+}
+.wp-polls ul li:before, wp-polls-ul li, .wp-polls-ans ul li:before, #sidebar ul ul li:before {
+	content: '';
+}
+.wp-polls IMG, .wp-polls LABEL , .wp-polls INPUT, .wp-polls-loading IMG, .wp-polls-image IMG {
+	display: inline;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.wp-polls-ul {
+	margin: 0px;
+	padding: 0px 0px 10px 2px;
+}
+#content .wp-polls-ul {
+	padding: 0px;
+	margin: 0px 0px 10px 55px;
+}
+.wp-polls-ul li {
+	margin: 0 0 7px 0;
+	padding: 0px;
+}
+.wp-polls-ans {
+	width:100%;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+	/* background-color: #ffffff; */
+}
+.wp-polls-loading {
+	display: none;
+	text-align: center;
+	height: 16px;
+}
+.wp-polls-image {
+	border: 0px;
+}
+
+.wp-polls .polldata {
+	font-size: 95%;
+	line-height: 120%;
+	padding: 0 0 1.2em 55px;
+	color: #999;
+	border-bottom: solid 1px #ebebeb;
+}
+
+#sidebar .total-voters {
+	text-align: center;
+}
+#content .total-voters {
+	text-align: left;
+	padding-left: 55px;
+}
+
+/* Styles Used In WP-Admin */
+.wp-polls-usage-pre {
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid #c8c8c8;
+	background-color: #f0f0f0;
+	overflow: auto;
+}
+#wp-polls-pollbar-bg {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #000000;
+}
+#wp-polls-pollbar-border {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #000000;
+}
+
+
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url(images/pollbg.gif);
+}
+
+/* polls */
+.polls {
+	font: bold 142%/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 15px 0 0;
+	text-align: center;
+	background: url(images/polls-bg.gif) no-repeat center bottom;
+}
+#sidebar .poll-question {
+	background: url(images/polls-question-bg.gif) no-repeat center center;
+	font: bold 115%/100% Georgia, "Times New Roman", Times, serif;
+	padding: 12px 7px 12px;
+	text-align: center;
+	margin-bottom: 7px;
+}
+#content .poll-question {
+	font: bold 120%/100% Georgia, "Times New Roman", Times, serif;
+	background: url(images/poll-question.gif) no-repeat left center;
+	padding: 3px 0 3px 55px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+#content .vote {
+	padding-left: 55px;
+}
+.vote {
+	text-align: center;
+}
+.wp-polls .Buttons {
+	border:1px solid #c8c8c8;
+	background-color: #f3f6f8;
+	float: left;
+}
+.poll_result {
+	float: right;
+}
+.poll-archive {
+	float: right;
+	font-weight: bold;
+}

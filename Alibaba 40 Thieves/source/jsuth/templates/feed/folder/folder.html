@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block body %}
+
+  {% parent %}
+  
+  <ol id="pageList">
+  {% for post in items %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title|e }}</a></h2>
+    </li>
+  {% endfor %}
+  </ol>
+  
+{% endblock body %}

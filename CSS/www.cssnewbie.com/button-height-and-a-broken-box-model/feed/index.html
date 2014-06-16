@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Button Height and a Broken Box Model</title>
+	<atom:link href="http://www.cssnewbie.com/button-height-and-a-broken-box-model/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/</link>
+	<description>Web Development Tutorials, Tips &#38; Techniques</description>
+	<lastBuildDate>Thu, 03 Apr 2014 01:33:55 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.8.1</generator>
+	<item>
+		<title>By: Satya Prakash</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-13602</link>
+		<dc:creator><![CDATA[Satya Prakash]]></dc:creator>
+		<pubDate>Wed, 28 Sep 2011 08:57:02 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-13602</guid>
+		<description><![CDATA[Box-sizing discussion has saved me. On page my input box was having different height than other. and I was surprised.]]></description>
+		<content:encoded><![CDATA[<p>Box-sizing discussion has saved me. On page my input box was having different height than other. and I was surprised.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Avangelist</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11330</link>
+		<dc:creator><![CDATA[Avangelist]]></dc:creator>
+		<pubDate>Wed, 10 Mar 2010 19:28:10 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11330</guid>
+		<description><![CDATA[I don&#039;t think any of these responses are right.
+
+If we are talking about a button element - i.e , this is an inline element as correctly stated by Justin. An inline element cannot work with the &#039;box model&#039; by definition.
+
+If we are talking about taking a semantic approach, like a horizontal menu where the markup is made out of an ordered/unordered list where the list is set to display inline, then we already have a clear problem.
+The list is set to inline. You can set the list items  to display:block, but of course now the list is no longer displaying on a single horizontal line. TO complete this task you have to float the list elements.
+
+Note however, that this is only required for the list items, or buttons to be styled as desired, borders, padding, line-height and so on in IE7 ONLY.
+
+inline-block is not supported cross browser, and quite often will cause you more problems and even more markup. I think it is also uncertain whether it is going to be re-emerge into the CSS3 model.
+
+gwi suggests using box-sizing. I am sure that gwi is aware but hasn&#039;t perhaps explained perfectly, that what they are describing is a style with a vendor prefix. This means that it is a style that is not globally accepted or in a final document from W3C.
+
+In this example box-size is a CSS3 style which is not currently supported, and is not intended for this sort of example. Not to say that it couldn&#039;t be used in this way, I just wouldn&#039;t.
+
+I don&#039;t actually think that the issue presented relates in any way to browser mechanics. Bottom line is you are looking at an inline level element not a block level element.
+
+It&#039;s all to do with the fact that you are trying to set a height. Don&#039;t, just use padding to attain your height, because what you are not factoring is the line height of the element content.]]></description>
+		<content:encoded><![CDATA[<p>I don&#8217;t think any of these responses are right.</p>
+<p>If we are talking about a button element &#8211; i.e , this is an inline element as correctly stated by Justin. An inline element cannot work with the &#8216;box model&#8217; by definition.</p>
+<p>If we are talking about taking a semantic approach, like a horizontal menu where the markup is made out of an ordered/unordered list where the list is set to display inline, then we already have a clear problem.<br />
+The list is set to inline. You can set the list items  to display:block, but of course now the list is no longer displaying on a single horizontal line. TO complete this task you have to float the list elements.</p>
+<p>Note however, that this is only required for the list items, or buttons to be styled as desired, borders, padding, line-height and so on in IE7 ONLY.</p>
+<p>inline-block is not supported cross browser, and quite often will cause you more problems and even more markup. I think it is also uncertain whether it is going to be re-emerge into the CSS3 model.</p>
+<p>gwi suggests using box-sizing. I am sure that gwi is aware but hasn&#8217;t perhaps explained perfectly, that what they are describing is a style with a vendor prefix. This means that it is a style that is not globally accepted or in a final document from W3C.</p>
+<p>In this example box-size is a CSS3 style which is not currently supported, and is not intended for this sort of example. Not to say that it couldn&#8217;t be used in this way, I just wouldn&#8217;t.</p>
+<p>I don&#8217;t actually think that the issue presented relates in any way to browser mechanics. Bottom line is you are looking at an inline level element not a block level element.</p>
+<p>It&#8217;s all to do with the fact that you are trying to set a height. Don&#8217;t, just use padding to attain your height, because what you are not factoring is the line height of the element content.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gwi</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11321</link>
+		<dc:creator><![CDATA[gwi]]></dc:creator>
+		<pubDate>Mon, 08 Mar 2010 17:30:42 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11321</guid>
+		<description><![CDATA[&quot;Inspect element&quot; in Safari says it uses the browser default &quot;-webkit-box-sizing: border-box;&quot; for input[type=&quot;submit&quot;], button and others. So you can reset this behaviour with
+
+.button { box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; display: block; }
+
+e.g. if you want &quot;input type=&#039;submit&#039; class=&#039;button&#039;&quot; and &quot;a class=&#039;button&#039;&quot; to appear identically. This does not answer the quetsion &quot;why&quot; but it works around this issue.]]></description>
+		<content:encoded><![CDATA[<p>&#8220;Inspect element&#8221; in Safari says it uses the browser default &#8220;-webkit-box-sizing: border-box;&#8221; for input[type="submit"], button and others. So you can reset this behaviour with</p>
+<p>.button { box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; display: block; }</p>
+<p>e.g. if you want &#8220;input type=&#8217;submit&#8217; class=&#8217;button&#8217;&#8221; and &#8220;a class=&#8217;button&#8217;&#8221; to appear identically. This does not answer the quetsion &#8220;why&#8221; but it works around this issue.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Nathaniel</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11313</link>
+		<dc:creator><![CDATA[Nathaniel]]></dc:creator>
+		<pubDate>Sun, 07 Mar 2010 03:57:12 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11313</guid>
+		<description><![CDATA[From the time I started web design I felt padding functioned completely counterintuitive. It is ridiculous that padding gives additional height and width to the element. If the element&#039;s width is 50px it should stay 50px. Padding shouldn&#039;t change that. Padding should be added inside the element. 
+
+But unfortunately it&#039;s a standard. Perhaps there is some rational I don&#039;t know.]]></description>
+		<content:encoded><![CDATA[<p>From the time I started web design I felt padding functioned completely counterintuitive. It is ridiculous that padding gives additional height and width to the element. If the element&#8217;s width is 50px it should stay 50px. Padding shouldn&#8217;t change that. Padding should be added inside the element. </p>
+<p>But unfortunately it&#8217;s a standard. Perhaps there is some rational I don&#8217;t know.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Pepa Baros</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11307</link>
+		<dc:creator><![CDATA[Pepa Baros]]></dc:creator>
+		<pubDate>Fri, 05 Mar 2010 08:08:48 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11307</guid>
+		<description><![CDATA[The same problem is also when select form element is used. Following page &lt;a href=&quot;http://swatelier.info/at/forms/boxModel.htm&quot; rel=&quot;nofollow&quot;&gt;Form elements and box model&lt;/a&gt; describes that. Live example and screenshots included.]]></description>
+		<content:encoded><![CDATA[<p>The same problem is also when select form element is used. Following page <a href="http://swatelier.info/at/forms/boxModel.htm" rel="nofollow">Form elements and box model</a> describes that. Live example and screenshots included.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Norman</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11304</link>
+		<dc:creator><![CDATA[Norman]]></dc:creator>
+		<pubDate>Fri, 05 Mar 2010 01:11:58 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11304</guid>
+		<description><![CDATA[instead of display:block, try display:inline-block
+that way the buttons will stay in line but you can set height and padding as you wish]]></description>
+		<content:encoded><![CDATA[<p>instead of display:block, try display:inline-block<br />
+that way the buttons will stay in line but you can set height and padding as you wish</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ben</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11297</link>
+		<dc:creator><![CDATA[Ben]]></dc:creator>
+		<pubDate>Thu, 04 Mar 2010 08:13:09 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11297</guid>
+		<description><![CDATA[input[type=&quot;submit&quot;] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:
+
+box-sizing: content-box
+
+In Mozilla, you can use:
+
+-moz-box-sizing: content-box.]]></description>
+		<content:encoded><![CDATA[<p>input[type="submit"] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:</p>
+<p>box-sizing: content-box</p>
+<p>In Mozilla, you can use:</p>
+<p>-moz-box-sizing: content-box.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ben</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11298</link>
+		<dc:creator><![CDATA[Ben]]></dc:creator>
+		<pubDate>Thu, 04 Mar 2010 08:13:09 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11298</guid>
+		<description><![CDATA[input[type=&quot;submit&quot;] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:
+
+box-sizing: content-box
+
+In Mozilla, you can use:
+
+-moz-box-sizing: content-box.]]></description>
+		<content:encoded><![CDATA[<p>input[type="submit"] uses the traditional box model (box-sizing: border-box). You can force it to use the W3C model using the CSS3 declaration:</p>
+<p>box-sizing: content-box</p>
+<p>In Mozilla, you can use:</p>
+<p>-moz-box-sizing: content-box.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Top Wordpress Themes</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11293</link>
+		<dc:creator><![CDATA[Top Wordpress Themes]]></dc:creator>
+		<pubDate>Wed, 03 Mar 2010 21:54:14 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11293</guid>
+		<description><![CDATA[I was also thinking...browsers are a funny thing. Have you already reset all browser margins and padding&#039;s as follows:
+
+&lt;blockquote&gt;
+*{
+margin: 0px;
+padding 0px;
+}
+&lt;/blockquote&gt;]]></description>
+		<content:encoded><![CDATA[<p>I was also thinking&#8230;browsers are a funny thing. Have you already reset all browser margins and padding&#8217;s as follows:</p>
+<blockquote><p>
+*{<br />
+margin: 0px;<br />
+padding 0px;<br />
+}
+</p></blockquote>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mark @ Alchemy United</title>
+		<link>http://www.cssnewbie.com/button-height-and-a-broken-box-model/comment-page-1/#comment-11286</link>
+		<dc:creator><![CDATA[Mark @ Alchemy United]]></dc:creator>
+		<pubDate>Wed, 03 Mar 2010 18:17:58 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=536#comment-11286</guid>
+		<description><![CDATA[&quot;The box model states that the resulting box will take up 30px of vertical space for the div’s contents, plus an additional 10px on the top and bottom for the padding, for a total of 50px vertical space taken up by our div. &quot;
+
+Hummm... My understanding is padding goes to the inside. To get 50px total you&#039;d have to be setting the margin, not the padding, no? Margin is the space between. Padding is the space inside. Or at least that&#039;s what I thought.]]></description>
+		<content:encoded><![CDATA[<p>&#8220;The box model states that the resulting box will take up 30px of vertical space for the div’s contents, plus an additional 10px on the top and bottom for the padding, for a total of 50px vertical space taken up by our div. &#8221;</p>
+<p>Hummm&#8230; My understanding is padding goes to the inside. To get 50px total you&#8217;d have to be setting the margin, not the padding, no? Margin is the space between. Padding is the space inside. Or at least that&#8217;s what I thought.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 366/369 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 08:01:33 by W3 Total Cache -->

@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0077)http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/cb=gapi.loaded_1" async=""></script><script src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/cb=gapi.loaded_0" async=""></script>
+
+<title>
+  Intriguing animate-on-scroll effect – jQuery tutorial&nbsp;|&nbsp;PeHaa Blog</title>
+
+<script id="shr-analytics" data-analytics-script-placeholder="true"></script><script type="text/javascript" async="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shareaholic-analytics.js"></script><script type="text/javascript" async="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/ga.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+
+<link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/centered.css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds2.feedburner.com/pehaa">
+<link rel="pingback" href="http://pehaa.com/xmlrpc.php">
+    
+<!--[if lt IE 7]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta2)/IE7.js" type="text/javascript"></script>
+<![endif]-->
+
+  
+<link rel="alternate" type="application/rss+xml" title="PeHaa Blog » Intriguing animate-on-scroll effect – jQuery tutorial Comments Feed" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/feed/">
+<link rel="stylesheet" id="contact-form-7-css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/styles.css" type="text/css" media="all">
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/pehaa.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/tabs.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pehaa.com/xmlrpc.php?rsd">
+<link rel="prev" title="postcard from Paris – css3 keyframes animations in use" href="http://pehaa.com/2011/08/postcard-from-paris-css3-keyframes-animations-in-use/">
+<link rel="next" title="Create a fancy responsive image-on-hover effect" href="http://pehaa.com/2012/02/create-a-fancy-responsive-image-on-hover-effect/">
+<link rel="canonical" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog.html">
+<link rel="shortlink" href="http://pehaa.com/?p=2429">
+
+<!-- Shareaholic Content Tags -->
+
+<meta name="shareaholic:site_name" content="PeHaa Blog">
+<meta name="shareaholic:image" content="http://pehaa.com/wp-content/uploads/2011/08/previewhg.jpg">
+
+<!-- / Shareaholic Content Tags -->
+
+
+
+<!-- Shareaholic - Open Graph Tags -->
+
+<meta property="og:image" content="http://pehaa.com/wp-content/uploads/2011/08/previewhg.jpg">
+
+<!-- / Shareaholic - Open Graph Tags -->
+
+<link href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/default.css" rel="stylesheet" type="text/css">	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery.min.js" type="text/javascript"></script><script type="text/javascript" async="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shareaholic.js"></script><script type="text/javascript" id="shr-google-analytics" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/ga(1).js" data-cfasync="false" async=""></script><link rel="stylesheet" media="screen" id="shareaholic-publisher-css" href="http://pehaa.com/wp-content/plugins/sexybookmarks/spritegen_default/sprite.css"><style type="text/css">.shareaholic-arrow-down{ position: absolute !important; left:45% !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 6px solid #000000 !important; }.shareaholic-tip-text{font-size:12px !important; line-height:120% !important; background: #000000 !important; color: #ffffff !important; padding: 5px !important; border-radius: 5px !important; -webkit-border-radius:5px; !important; -moz-border-radius:5px; !important}</style><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shareaholic_tools.js" data-cfasync="false" async=""></script><script async="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/plusone.js" id="googplusonescript" gapi_processed="true">{"parsetags": "explicit"}</script><link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/green_spaces.css" id="green_spaces_css"><script type="text/javascript" id="shareaholic-partners" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/partners.js" data-cfasync="false" async=""></script><link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/cookie_consent.css" id="cookie_consent_css"><link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/share_buttons.css" id="share_buttons_css"><link rel="stylesheet" type="text/css" href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/recommendations.css" id="recommendations_css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body data-twttr-rendered="true">
+
+<!-- TOP MENU STARTS -->
+
+	<div id="header-out">
+		<div id="decor"></div>
+			<div id="header-bg">
+	<div id="top-menu-out">
+		
+	<div id="top-menu">
+		<ul>
+						<li class="page_item current_page_item first"><a href="http://pehaa.com/">Home</a></li>
+			<li><a href="http://portfolio.pehaa.com/">Portfolio</a></li>
+			<li class="page_item page-item-2"><a href="http://pehaa.com/about/">About</a></li>
+<li class="page_item page-item-12"><a href="http://pehaa.com/contact/">Contact</a></li>
+<li class="page_item page-item-22"><a href="http://pehaa.com/archives/">Archives</a></li>
+<li class="page_item page-item-24"><a href="http://pehaa.com/image-gallery/">Image Gallery</a></li>
+<li class="page_item page-item-27"><a href="http://pehaa.com/sitemap/">Sitemap</a></li>
+		</ul>
+	</div>
+	</div>
+	<!-- TOP MENU ENDS -->
+	<!-- HEADER STARTS -->
+
+
+	<div id="header">
+			<span id="twitter"><a href="http://twitter.com/pehaa" target="_blank">Folow my Tweets</a></span>
+		<div class="col-left">
+			<a href="http://pehaa.com/" title="mad about art and digital">
+            	<img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/logo-trans.png" alt="PeHaa Blog">
+            </a>	
+			<h1><a href="http://pehaa.com/">PeHaa Blog</a></h1>
+		</div>
+		<div class="col-right">
+			<div class="date"><em>12</em><br> May</div>
+			<div id="search">
+				<form method="get" id="searchform" action="http://pehaa.com/">
+					<div>
+						<label for="search">Search</label>
+						<input type="text" name="s" id="s">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<!-- HEADER ENDS -->
+	<!-- MAIN MENU STARTS -->
+	<div id="main-menu-out">
+		<div id="main-menu" class="">
+    	<ul>
+        		<li class="cat-item cat-item-10"><a href="http://pehaa.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://pehaa.com/category/freebies/" title="View all posts filed under Freebies">Freebies</a>
+<ul class="children">
+	<li class="cat-item cat-item-8"><a href="http://pehaa.com/category/freebies/brushes/" title="View all posts filed under Photoshop Brushes">Photoshop Brushes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://pehaa.com/category/inspirations/" title="View all posts filed under Inspirations">Inspirations</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://pehaa.com/category/misc/" title="View all posts filed under Misc">Misc</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://pehaa.com/category/software/" title="View all posts filed under Software">Software</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://pehaa.com/category/tutorials/" title="View all posts filed under Tutorials">Tutorials</a>
+<ul class="children">
+	<li class="cat-item cat-item-49"><a href="http://pehaa.com/category/tutorials/htmlcss/" title="View all posts filed under HTML/CSS">HTML/CSS</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://pehaa.com/category/tutorials/illustrator/" title="View all posts filed under Illustrator">Illustrator</a>
+</li>
+	<li class="cat-item cat-item-55"><a href="http://pehaa.com/category/tutorials/jquery/" title="View all posts filed under jQuery">jQuery</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://pehaa.com/category/tutorials/photoshop/" title="View all posts filed under Photoshop">Photoshop</a>
+</li>
+</ul>
+</li>
+        </ul>
+    </div>
+        
+	</div>
+	<!-- MAIN MENU out ENDS -->
+
+	    
+    
+	<div id="middle-out">
+	<div id="middle" class="wrap">
+		
+		<div id="content" class="col-left">
+		
+		<div id="single">
+												<!-- POST STARTS -->
+				<div class="post">
+					<h2 class="title"><a href="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog.html" rel="bookmark" title="Intriguing animate-on-scroll effect – jQuery tutorial">Intriguing animate-on-scroll effect – jQuery tutorial</a></h2>
+					<p class="post-details"> 23/08/11 </p>
+															
+					<!-- Start Shareaholic LikeButtonSetTop Automatic --><!-- End Shareaholic LikeButtonSetTop Automatic --><p><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/tweet_button.1399599786.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 107px; height: 20px;"></iframe></p>
+<p><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/widgets.js"></script></p>
+<p>I suppose that I was not the only one to become speechless in front of the <a href="http://nizoapp.com/" target="_blank">Nizo for iPhone</a> website.<br>
+In this tutorial we try to recreate the intriguing scrolling effect. We’ll go for simplicity : 5 objects to animate and linear movement, no easing. The basis that opens the door for further elaboration. </p>
+<p>Click here to see <a href="http://pehaa.com/wp-content/uploads/2011/08/myherbgarden/index.html" target="_blank">the demo</a>.<br>
+<a href="http://pehaa.com/wp-content/uploads/2011/08/myherbgarden/index.html" target="_blank"><img alt="My herb garden preview" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/previewhg.jpg" title="My herb garden" class="aligncenter" width="600" height="auto"></a></p>
+<div class="download">
+<h3><a href="http://pehaa.com/wp-content/uploads/2011/08/myherbgarden.zip">Download  the source files</a></h3>
+<p>My herb garden<br>
+<small>.zip 0.4MB</small></p>
+</div>
+<p>We’ll start with the html structure :</p>
+<div><div id="highlighter_578093" class="syntaxhighlighter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;!</code><code class="xml keyword">DOCTYPE</code> <code class="xml plain">html&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">meta</code> <code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"UTF-8"</code> <code class="xml plain">/&gt;</code></div><div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;My herb garden&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">div</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"wrap_out"</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">'wrap'</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">header</code><code class="xml plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">h1</code><code class="xml plain">&gt;My &lt;</code><code class="xml keyword">em</code><code class="xml plain">&gt;herb&lt;/</code><code class="xml keyword">em</code><code class="xml plain">&gt; garden&lt;/</code><code class="xml keyword">h1</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">p</code><code class="xml plain">&gt;Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper.&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">header</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"separation"</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code><code class="xml plain">&gt;Scroll &lt;</code><code class="xml keyword">em</code><code class="xml plain">&gt;down&lt;/</code><code class="xml keyword">em</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">img</code> <code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"images/herbes.jpg"</code> <code class="xml color1">width</code><code class="xml plain">=</code><code class="xml string">"592"</code> <code class="xml color1">height</code><code class="xml plain">=</code><code class="xml string">"350"</code> <code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">"Herbes"</code><code class="xml plain">&gt; &lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">section</code><code class="xml plain">&gt;</code></div><div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp; <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"coriander"</code> <code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"element"</code><code class="xml plain">&gt;</code></div><div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code><code class="xml plain">&gt;coriander&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">img</code> <code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"images/coriander1.jpg"</code> <code class="xml color1">width</code><code class="xml plain">=</code><code class="xml string">"286"</code> <code class="xml color1">height</code><code class="xml plain">=</code><code class="xml string">"232"</code> <code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">"Coriander"</code><code class="xml plain">&gt;</code></div><div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">p</code><code class="xml plain">&gt;Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum.&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div><div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp; <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"rosemary"</code> <code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"element"</code><code class="xml plain">&gt;...&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number24 index23 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp; <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"lemonbalm"</code> <code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"element"</code><code class="xml plain">&gt;...&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number25 index24 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp; <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"chives"</code> <code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"element"</code><code class="xml plain">&gt;...&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number26 index25 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp; <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"basil"</code> <code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"element"</code><code class="xml plain">&gt;...&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number27 index26 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">section</code><code class="xml plain">&gt;</code></div><div class="line number28 index27 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">footer</code><code class="xml plain">&gt; &lt;</code><code class="xml keyword">a</code> <code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"<a href="http://pehaa.com/">http://pehaa.com</a>"</code><code class="xml plain">&gt; by &lt;</code><code class="xml keyword">em</code><code class="xml plain">&gt;PeHaa&lt;/</code><code class="xml keyword">em</code><code class="xml plain">&gt; 2011&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt; &lt;/</code><code class="xml keyword">footer</code><code class="xml plain">&gt;</code></div><div class="line number29 index28 alt2"><code class="xml spaces">&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number30 index29 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number31 index30 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number32 index31 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>The document is composed of 4 elements <code>header</code>, <code>#separation</code>, <code>section</code> and <code>footer</code>, contained within two divs : <code>#wrap_out</code> and <code>#wrap</code>.<br>
+The stylesheet begins with a simple css reset and the @font-face declaration</p>
+<div><div id="highlighter_375906" class="syntaxhighlighter  css"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="css plain">body, div, h</code><code class="css value">1</code><code class="css plain">, h</code><code class="css value">2</code><code class="css plain">, form, fieldset, input, textarea, footer, p, img {</code></div><div class="line number2 index1 alt1"><code class="css spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="css keyword">margin</code><code class="css plain">: </code><code class="css value">0</code><code class="css plain">; </code><code class="css keyword">padding</code><code class="css plain">: </code><code class="css value">0</code><code class="css plain">; </code><code class="css keyword">border</code><code class="css plain">: </code><code class="css value">0</code><code class="css plain">; </code><code class="css keyword">outline</code><code class="css plain">: </code><code class="css value">none</code><code class="css plain">;</code></div><div class="line number3 index2 alt2"><code class="css plain">}</code></div><div class="line number4 index3 alt1"><code class="css plain">a { </code><code class="css keyword">text-decoration</code><code class="css plain">:</code><code class="css value">none</code><code class="css plain">; </code><code class="css keyword">color</code><code class="css plain">: </code><code class="css value">#fff</code><code class="css plain">;}</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="css spaces">&nbsp;</code><code class="css plain">@font-face {</code></div><div class="line number7 index6 alt2"><code class="css spaces">&nbsp;</code><code class="css keyword">font-family</code><code class="css plain">: </code><code class="css string">'DeibiRegular'</code><code class="css plain">;</code></div><div class="line number8 index7 alt1"><code class="css spaces">&nbsp;</code><code class="css keyword">src</code><code class="css plain">: </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'deibi-webfont.eot'</code><code class="css plain">);</code></div><div class="line number9 index8 alt2"><code class="css spaces">&nbsp;</code><code class="css keyword">src</code><code class="css plain">: </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'deibi-webfont.eot?#iefix'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'embedded-opentype'</code><code class="css plain">),&nbsp; </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'deibi-webfont.woff'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'woff'</code><code class="css plain">),&nbsp; </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'deibi-webfont.ttf'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'truetype'</code><code class="css plain">),&nbsp; </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'deibi-webfont.svg#DeibiRegular'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'svg'</code><code class="css plain">);</code></div><div class="line number10 index9 alt1"><code class="css spaces">&nbsp;</code><code class="css keyword">font-weight</code><code class="css plain">: </code><code class="css value">normal</code><code class="css plain">;</code></div><div class="line number11 index10 alt2"><code class="css spaces">&nbsp;</code><code class="css keyword">font-style</code><code class="css plain">: </code><code class="css value">normal</code><code class="css plain">;</code></div><div class="line number12 index11 alt1"><code class="css plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>Right now, the important point is to set <code>width : 100%</code> and <code>overflow-x: hidden</code> for the <code>#wrap_out</code>. The <code>#wrap</code> element centers the content of the page.<br>
+<code>section</code>  is positioned relatively and the animated herbs (<code>class="element"</code>) are positioned absolutely.<br>
+Let’s continue with our stylesheet : </p>
+<div><div id="highlighter_986796" class="syntaxhighlighter  css"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="css plain">body { </code></div><div class="line number2 index1 alt1"><code class="css spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="css keyword">font-family</code><code class="css plain">:</code><code class="css string">'DeibiRegular'</code><code class="css plain">, </code><code class="css color1">Helvetica</code><code class="css plain">, </code><code class="css color1">Arial</code><code class="css plain">, </code><code class="css color1">sans-serif</code><code class="css plain">;</code></div><div class="line number3 index2 alt2"><code class="css spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="css keyword">background</code><code class="css plain">:</code><code class="css value">#f2f2f2</code> <code class="css value">url</code><code class="css plain">(</code><code class="css string">'images/bg.jpg'</code><code class="css plain">);</code></div><div class="line number4 index3 alt1"><code class="css spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="css keyword">color</code><code class="css plain">: </code><code class="css value">#fff</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">:</code><code class="css value">100%</code><code class="css plain">;</code></div><div class="line number5 index4 alt2"><code class="css plain">}</code></div><div class="line number6 index5 alt1"><code class="css plain">#wrap_out {</code><code class="css keyword">width</code><code class="css plain">:</code><code class="css value">100%</code><code class="css plain">; overflow-x:</code><code class="css value">hidden</code><code class="css plain">;}</code></div><div class="line number7 index6 alt2"><code class="css plain">#wrap {</code><code class="css keyword">width</code><code class="css plain">: </code><code class="css value">960px</code><code class="css plain">; </code><code class="css keyword">margin</code><code class="css plain">: </code><code class="css value">0</code> <code class="css value">auto</code><code class="css plain">; </code><code class="css keyword">z-index</code><code class="css plain">:</code><code class="css value">1</code><code class="css plain">;</code><code class="css keyword">position</code><code class="css plain">:</code><code class="css value">relative</code><code class="css plain">;}</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2">&nbsp;</div><div class="line number10 index9 alt1"><code class="css plain">header {</code><code class="css keyword">display</code><code class="css plain">:</code><code class="css value">block</code><code class="css plain">;</code><code class="css keyword">z-index</code><code class="css plain">:</code><code class="css value">2</code> <code class="css keyword">position</code><code class="css plain">:</code><code class="css value">relative</code><code class="css plain">;}</code></div><div class="line number11 index10 alt2"><code class="css plain">header p {</code><code class="css keyword">display</code><code class="css plain">:</code><code class="css value">block</code><code class="css plain">; </code><code class="css keyword">font-size</code><code class="css plain">:</code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">padding</code><code class="css plain">: </code><code class="css value">70px</code> <code class="css value">60px</code> <code class="css value">0px</code><code class="css plain">;}</code></div><div class="line number12 index11 alt1"><code class="css plain">h</code><code class="css value">1</code> <code class="css plain">{</code><code class="css keyword">text-align</code><code class="css plain">:</code><code class="css value">center</code><code class="css plain">;</code><code class="css keyword">font-size</code><code class="css plain">:</code><code class="css value">130px</code><code class="css plain">; </code><code class="css keyword">margin-top</code><code class="css plain">: </code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">text-shadow</code><code class="css plain">: </code><code class="css value">0</code> <code class="css value">0</code> <code class="css value">60px</code> <code class="css value">#889473</code><code class="css plain">;}</code></div><div class="line number13 index12 alt2"><code class="css plain">h</code><code class="css value">1</code> <code class="css plain">em {</code><code class="css keyword">color</code><code class="css plain">: </code><code class="css value">#f5f187</code><code class="css plain">;</code><code class="css keyword">font-style</code><code class="css plain">: </code><code class="css value">normal</code><code class="css plain">;}</code></div><div class="line number14 index13 alt1">&nbsp;</div><div class="line number15 index14 alt2"><code class="css plain">#separation {</code><code class="css keyword">margin</code><code class="css plain">: </code><code class="css value">0</code> <code class="css value">auto</code><code class="css plain">;</code><code class="css keyword">width</code><code class="css plain">: </code><code class="css value">592px</code><code class="css plain">;</code><code class="css keyword">z-index</code><code class="css plain">:</code><code class="css value">-1</code><code class="css plain">;</code><code class="css keyword">position</code><code class="css plain">:</code><code class="css value">relative</code><code class="css plain">;}</code></div><div class="line number16 index15 alt1">&nbsp;</div><div class="line number17 index16 alt2"><code class="css plain">section {</code><code class="css keyword">position</code><code class="css plain">:</code><code class="css value">relative</code><code class="css plain">; </code><code class="css keyword">margin-top</code><code class="css plain">: </code><code class="css value">120px</code><code class="css plain">;</code><code class="css keyword">display</code><code class="css plain">:</code><code class="css value">block</code><code class="css plain">}</code></div><div class="line number18 index17 alt1">&nbsp;</div><div class="line number19 index18 alt2"><code class="css plain">.element { </code><code class="css keyword">position</code><code class="css plain">:</code><code class="css value">absolute</code><code class="css plain">; </code><code class="css keyword">display</code><code class="css plain">:</code><code class="css value">block</code><code class="css plain">;}</code></div><div class="line number20 index19 alt1"><code class="css plain">.element#coriander {</code><code class="css keyword">top</code><code class="css plain">:</code><code class="css value">0px</code><code class="css plain">; </code><code class="css keyword">left</code><code class="css plain">:</code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">: </code><code class="css value">286px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">: </code><code class="css value">272px</code><code class="css plain">;}</code></div><div class="line number21 index20 alt2"><code class="css plain">.element#rosemary {</code><code class="css keyword">top</code><code class="css plain">:</code><code class="css value">40px</code><code class="css plain">; </code><code class="css keyword">left</code><code class="css plain">: </code><code class="css value">335px</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">: </code><code class="css value">370px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">: </code><code class="css value">183px</code><code class="css plain">;}</code></div><div class="line number22 index21 alt1"><code class="css plain">.element#chives {</code><code class="css value">top</code> <code class="css plain">: </code><code class="css value">0px</code><code class="css plain">; </code><code class="css keyword">right</code><code class="css plain">:</code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">: </code><code class="css value">197px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">: </code><code class="css value">514px</code><code class="css plain">;}</code></div><div class="line number23 index22 alt2"><code class="css plain">.element#lemonbalm {</code><code class="css keyword">left</code><code class="css plain">: </code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">top</code><code class="css plain">:</code><code class="css value">280px</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">:</code><code class="css value">265px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">: </code><code class="css value">233px</code><code class="css plain">;}</code></div><div class="line number24 index23 alt1"><code class="css plain">.element#basil {</code><code class="css keyword">right</code><code class="css plain">: </code><code class="css value">255px</code><code class="css plain">; </code><code class="css keyword">top</code><code class="css plain">:</code><code class="css value">250px</code><code class="css plain">; </code><code class="css keyword">width</code><code class="css plain">:</code><code class="css value">368px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">: </code><code class="css value">263px</code><code class="css plain">;}</code></div><div class="line number25 index24 alt2">&nbsp;</div><div class="line number26 index25 alt1"><code class="css plain">footer {</code><code class="css keyword">margin-bottom</code><code class="css plain">: </code><code class="css value">10px</code><code class="css plain">;</code><code class="css keyword">text-align</code><code class="css plain">:</code><code class="css value">center</code><code class="css plain">;</code><code class="css keyword">font-size</code><code class="css plain">: </code><code class="css value">30px</code><code class="css plain">; </code><code class="css keyword">display</code><code class="css plain">:</code><code class="css value">block</code><code class="css plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>The idea is to encourage the visitor to scroll down by positioning the <code>#separation</code> element at the bottom of the page. We want the <code>#separation</code> to stay there when the window is resized but to move up when we start to scroll down. A possible way to do that is to make the height of the  <code>header</code> element dependent on the height of the window browser :</p>
+<div><div id="highlighter_643352" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">$(document).ready(</code><code class="jscript keyword">function</code> <code class="jscript plain">() {</code></div><div class="line number2 index1 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">var</code> <code class="jscript plain">myHeight;</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">function</code> <code class="jscript plain">init() {</code></div><div class="line number5 index4 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myHeight = $(window).height();</code></div><div class="line number6 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript string">'header'</code><code class="jscript plain">).css(</code><code class="jscript string">'height'</code><code class="jscript plain">, myHeight - 300);</code></div><div class="line number7 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number8 index7 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">init();</code></div><div class="line number9 index8 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(window).resize(</code><code class="jscript keyword">function</code> <code class="jscript plain">() {</code></div><div class="line number10 index9 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">init();</code></div><div class="line number11 index10 alt2">&nbsp;</div><div class="line number12 index11 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">});</code></div><div class="line number13 index12 alt2"><code class="jscript plain">})</code></div></div></td></tr></tbody></table></div></div>
+<p>To animate the <code>.element</code> we’ll go simple and use a linear function to move it from its initial position to its target position. We assign four parameters (its initial and final coordinates) to each element :</p>
+<div><div id="highlighter_46410" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">$(</code><code class="jscript string">'.element'</code><code class="jscript plain">).each(</code><code class="jscript keyword">function</code><code class="jscript plain">(i) {</code></div><div class="line number2 index1 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">var</code> <code class="jscript plain">myElement =$(</code><code class="jscript keyword">this</code><code class="jscript plain">);</code></div><div class="line number3 index2 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number4 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">switch</code> <code class="jscript plain">(i)</code></div><div class="line number6 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">{ </code><code class="jscript keyword">case</code> <code class="jscript plain">0 : </code></div><div class="line number7 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myElement.data(</code><code class="jscript string">'params'</code><code class="jscript plain">, {top0 : -1300, x0 : -2600, top1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'top'</code><code class="jscript plain">), x1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'left'</code><code class="jscript plain">)}); </code></div><div class="line number8 index7 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">break</code><code class="jscript plain">; </code></div><div class="line number9 index8 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">case</code> <code class="jscript plain">1 : </code></div><div class="line number10 index9 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myElement.data(</code><code class="jscript string">'params'</code><code class="jscript plain">, {top0 : 0, x0 : -930, top1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'top'</code><code class="jscript plain">), x1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'left'</code><code class="jscript plain">)}); </code></div><div class="line number11 index10 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">break</code><code class="jscript plain">; </code></div><div class="line number12 index11 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">case</code> <code class="jscript plain">2 : </code></div><div class="line number13 index12 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myElement.data(</code><code class="jscript string">'params'</code><code class="jscript plain">, {top0 : 280, x0 : -1030, top1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'top'</code><code class="jscript plain">), x1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'left'</code><code class="jscript plain">)});</code></div><div class="line number14 index13 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">break</code><code class="jscript plain">;&nbsp; </code></div><div class="line number15 index14 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">case</code> <code class="jscript plain">3 : </code></div><div class="line number16 index15 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myElement.data(</code><code class="jscript string">'params'</code><code class="jscript plain">, {top0 : -1200, x0 : -2330, top1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'top'</code><code class="jscript plain">), x1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'right'</code><code class="jscript plain">)}); </code></div><div class="line number17 index16 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">break</code><code class="jscript plain">; </code></div><div class="line number18 index17 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">case</code> <code class="jscript plain">4 : </code></div><div class="line number19 index18 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myElement.data(</code><code class="jscript string">'params'</code><code class="jscript plain">, {top0 : 250, x0 : -530, top1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'top'</code><code class="jscript plain">), x1: $(</code><code class="jscript keyword">this</code><code class="jscript plain">).css(</code><code class="jscript string">'right'</code><code class="jscript plain">)}); </code></div><div class="line number20 index19 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">break</code><code class="jscript plain">; </code></div><div class="line number21 index20 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number22 index21 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">});</code></div></div></td></tr></tbody></table></div></div>
+<p>What happens when we scroll ? The top property of each element and the left (for coriander, rosemary and lemon bald) or right (for chives and basil) changes as a function of the scroll position :</p>
+<div><div id="highlighter_82730" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">$(window).scroll(</code><code class="jscript keyword">function</code> <code class="jscript plain">() {</code></div><div class="line number2 index1 alt1"><code class="jscript keyword">var</code> <code class="jscript plain">s_max = myHeight / 2 + 500;</code></div><div class="line number3 index2 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">function</code> <code class="jscript plain">move(p0, p1, s) {</code></div><div class="line number4 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">return</code> <code class="jscript plain">Math.min((-p0 + p1) / s_max * s + p0, p1);</code></div><div class="line number5 index4 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number6 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number7 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">var</code> <code class="jscript plain">scrollTop = parseInt($(window).scrollTop());</code></div><div class="line number8 index7 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript string">'.element'</code><code class="jscript plain">).each(</code><code class="jscript keyword">function</code> <code class="jscript plain">(i) {</code></div><div class="line number9 index8 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">var</code> <code class="jscript plain">myX = move($(</code><code class="jscript keyword">this</code><code class="jscript plain">).data(</code><code class="jscript string">'params'</code><code class="jscript plain">).x0, parseInt($(</code><code class="jscript keyword">this</code><code class="jscript plain">).data(</code><code class="jscript string">'params'</code><code class="jscript plain">).x1), scrollTop),</code></div><div class="line number12 index11 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myY = move($(</code><code class="jscript keyword">this</code><code class="jscript plain">).data(</code><code class="jscript string">'params'</code><code class="jscript plain">).top0, parseInt($(</code><code class="jscript keyword">this</code><code class="jscript plain">).data(</code><code class="jscript string">'params'</code><code class="jscript plain">).top1), scrollTop);</code></div><div class="line number13 index12 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number14 index13 alt1"><code class="jscript keyword">if</code> <code class="jscript plain">(i &lt; 3) {</code></div><div class="line number15 index14 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript keyword">this</code><code class="jscript plain">).stop().css({</code></div><div class="line number16 index15 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">left: myX + </code><code class="jscript string">'px'</code><code class="jscript plain">,</code></div><div class="line number17 index16 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">top: myY + </code><code class="jscript string">'px'</code></div><div class="line number18 index17 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">})</code></div><div class="line number19 index18 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">} </code><code class="jscript keyword">else</code> <code class="jscript plain">{</code></div><div class="line number20 index19 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript keyword">this</code><code class="jscript plain">).stop().css({</code></div><div class="line number21 index20 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">right: myX + </code><code class="jscript string">'px'</code><code class="jscript plain">,</code></div><div class="line number22 index21 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">top: myY + </code><code class="jscript string">'px'</code></div><div class="line number23 index22 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">})</code></div><div class="line number24 index23 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number25 index24 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">})</code></div><div class="line number26 index25 alt1"><code class="jscript plain">})</code></div></div></td></tr></tbody></table></div></div>
+<p><code>move</code>  is a function of the scroll value and has two parameters : initial (p0) and final (p1) position of an element.<br>
+Before we start scrolling, s = 0, move is equeal to p0. When scroll reaches s_max, the value of move is p1. The min operator prevents further movement.<br>
+As I said this is one of the simplest possible solutions.<br>
+What is s_max ? I wanted the animation to finish once the elements are verticaly centered in the middle of the window (I’m not pixel perfect here).<br>
+Where is that point ? Imagine that we don’t animate our elements and that they are in their final positions. Notice that we have to scroll down 500px (see the scheme below), to see the top of the second row of our herbs. If we scroll down a half height of a window more we will see them in the middle.<br>
+<img alt="My herb garden preview" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/scheme.jpg" title="My herb garden scheme " class="aligncenter" width="552" height="837"><br>
+We want to be sure that the page is high enough so that the elements could reach their final positions. To assure that we will make the property height of <code>section</code> dependent on the height of the browser window, in this case we need to scroll <code>$(window).height/2 + 500</code>. We have 240px above the section (120px + 120px). The minimum height of <code>section</code> is then <code>$(window).height/2 + 260</code>. We add a line to the <code>init</code> function </p>
+<div><div id="highlighter_517045" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript keyword">function</code> <code class="jscript plain">init() {</code></div><div class="line number2 index1 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">myHeight = $(window).height();</code></div><div class="line number3 index2 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript string">'header'</code><code class="jscript plain">).css(</code><code class="jscript string">'height'</code><code class="jscript plain">, myHeight - 300);</code></div><div class="line number4 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">$(</code><code class="jscript string">'section'</code><code class="jscript plain">).css(</code><code class="jscript string">'min-height'</code><code class="jscript plain">, Math.max(myHeight / 2 + 260, 600));</code></div><div class="line number5 index4 alt2"><code class="jscript plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>It was tested in Safari, Firefox, Chrome, Opera, IE7 and IE8. It works in the last two if you don’t forget to add</p>
+<div><div id="highlighter_969304" class="syntaxhighlighter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml comments">&lt;!--[if IE]&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml comments">&lt;script src="<a href="http://html5shiv.googlecode.com/svn/trunk/html5.js">http://html5shiv.googlecode.com/svn/trunk/html5.js</a>"&gt;&lt;/script&gt;</code></div><div class="line number3 index2 alt2"><code class="xml comments">&lt;![endif]--&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>I hope you find it useful. Please bookmark and share.<br>
+Let me know what you think – I’m looking forward to your comments. Thanks.</p>
+<div class="shr-publisher-2429 shareaholic-show-on-load" style="margin-left: 55px; overflow: hidden; height: 70px;"><div class="shr-bookmarks"><ul class="shr-socials"><li class="shr-7 shareaholic" style="margin-left:0px !important;"><a rel="nofollow" target="_blank" class="external" orig_title="Post to Twitter" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious">Post to Twitter</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">60</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">60</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">60</div></div></li><li class="shr-38 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=38&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Post to StumbleUpon">Post to StumbleUpon</a></li><li class="shr-2 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=2&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Post to Delicious">Post to Delicious</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">89</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">89</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">89</div></div></li><li class="shr-282 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=282&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Share on Design Bump">Share on Design Bump</a></li><li class="shr-106 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=106&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Add to Design Float">Add to Design Float</a></li><li class="shr-3 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=3&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Post to Digg">Post to Digg</a></li><li class="shr-5 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=5&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Post to Facebook">Post to Facebook</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">34</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">34</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">34</div></div></li><li class="shr-284 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=Intriguing+animate-on-scroll+effect+-+jQuery+tutorial&link=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=284&ctype=&tags=jquery%7c1%7cdelicious,scrolling%20website%7c1%7cdelicious,javascript%7c1%7cdelicious,effect%7c1%7cdelicious,webdesign%7c1%7cdelicious,animation%7c1%7cdelicious,parallax%7c1%7cdelicious,scrolling%7c1%7cdelicious,scroll%7c1%7cdelicious,tutorial%7c1%7cdelicious" rel="nofollow" target="_blank" class="external" orig_title="Submit to Web Blend">Submit to Web Blend</a></li></ul><div style="clear: both;"></div><div class="shr-getshr" style="visibility: hidden; font-size: 10px !important;"><a target="_blank" href="http://www.shareaholic.com/?src=pub">Get Shareaholic for Google Chrome</a></div><div style="clear: both;"></div><style type="text/css">ul.shr-socials li.shareaholic{background-image:url(http://pehaa.com/wp-content/plugins/sexybookmarks/spritegen_default/sprite.png) !important;}</style></div></div><!-- Start Shareaholic LikeButtonSetBottom Automatic --><div style="clear: both; min-height: 1px; height: 3px; width: 100%;"></div><div class="shareaholic-like-buttonset" style="float:none;height:30px;"><div style="float:left;padding-top:0px !important; margin:0px 5px !important;"><fb:like action="like" send="false" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/" layout="button_count" show_faces="false" width="60" font="" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=207766518608&amp;href=http%3A%2F%2Fpehaa.com%2F2011%2F08%2Fintriguing-animate-on-scroll-effect-jquery-tutorial%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=60"><span style="vertical-align: bottom; width: 76px; height: 20px;"><iframe name="fd7d1bc88" width="60px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/like.html" class="" style="border: none; visibility: visible; width: 76px; height: 20px;"></iframe></span></fb:like></div><div style="float:left; padding-top:1px !important; margin:0px 0px 0px 10px !important;"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1399977381253" name="I0_1399977381253" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div></div></div><div style="clear: both; min-height: 1px; height: 3px; width: 100%;"></div><!-- End Shareaholic LikeButtonSetBottom Automatic --><!-- Start Shareaholic Recommendations Automatic --><div class="shr_rd-2429"><div class="shareaholic-recommendations-container shareaholic-ui shareaholic-contains-6 shareaholic-divisible-2 shareaholic-divisible-3 shareaholic-divisible-6 large" style="height: auto;"><div class="shareaholic-recommendations-header">You may also like:</div><div class="shareaholic-recommendations"><div class="shareaholic-recommendation recommendation-1"> <a href="http://pehaa.com/2009/03/doodled-trees-ps-brushes/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-aqua-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/37f4f6cd-116e-4bcb-8354-f54adca69af4?width=300)">     <span class="recommendation-placeholder-title">
+  something borrowed, something blue – doodled trees PS brushes&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  something borrowed, something blue – doodled trees PS brushes&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div><div class="shareaholic-recommendation recommendation-2"> <a href="http://pehaa.com/2012/02/vintage-free-vector-tv-set/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-blue-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/246ec930-781f-445c-99e4-329aacbf55c0?width=300)">     <span class="recommendation-placeholder-title">
+  Vintage free vector TV-set&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e(1)" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  Vintage free vector TV-set&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div><div class="shareaholic-recommendation recommendation-3"> <a href="http://pehaa.com/2010/04/slavic-soul-free-vector/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-green-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/3f0d0f64-f5b6-43dc-9096-fb62a11151b0?width=300)">     <span class="recommendation-placeholder-title">
+  slavic soul – free vector&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e(2)" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  slavic soul – free vector&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div><div class="shareaholic-recommendation recommendation-4"> <a href="http://pehaa.com/2010/01/simple-ornament-patterns-for-photoshop-and-illustrator/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-aqua-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/c8fdc655-87e8-41f7-80c2-3404ffccfd9c?width=300)">     <span class="recommendation-placeholder-title">
+  simple ornament patterns for Photoshop and Illustrator&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e(3)" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  simple ornament patterns for Photoshop and Illustrator&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div><div class="shareaholic-recommendation recommendation-5"> <a href="http://pehaa.com/2012/02/create-your-portfolio-gallery-using-html5-canvas-tutorial/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-red-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/77480ab9-73fb-4b84-bcec-8cfe6b948e01?width=300)">     <span class="recommendation-placeholder-title">
+  Create your portfolio gallery using html5 canvas – tutorial&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e(4)" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  Create your portfolio gallery using html5 canvas – tutorial&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div><div class="shareaholic-recommendation recommendation-6"> <a href="http://pehaa.com/2010/03/illustrator-tutorial-create-a-6-egg-box-not-necessarily-for-easter/" class="recommendation-article-link" rel="norewrite">   <i class="shareaholic-image shareaholic-blue-lighter has-recommendation-image" style="background-image: url(//images.shareaholic.com/pagePic/f9952d9a-f722-49cb-9fd6-08cc3eb87b7a?width=300)">     <span class="recommendation-placeholder-title">
+  illustrator tutorial: create a 6-egg box (not necessarily for Easter)&nbsp;|&nbsp;PeHaa Blog</span>     <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e(5)" class="recommendation-impression-image" alt="" nopin="nopin">   </i>   <div class="recommendation-article-details">     <div class="recommendation-article-title">
+  illustrator tutorial: create a 6-egg box (not necessarily for Easter)&nbsp;|&nbsp;PeHaa Blog</div>     <div class="recommendation-article-summary"></div>        </div> </a></div></div><div class="shareaholic-recommendations-footer"><a class="shareaholic-recommendations-attribution" target="_blank" href="https://shareaholic.com/publishers/recommendations/?src=relatedapp&src_ref=pehaa.com" title="Powered by Shareaholic"><span class="shareaholic-recommendations-attribution-text">[ what's this ]</span><i class="shareaholic-recommendations-attribution-logo"></i></a></div></div></div><!-- End Shareaholic Recommendations Automatic -->				</div>
+				<!-- POST ENDS -->
+				<!-- COMMENTS STARTS -->
+				<div id="comments">
+					
+<!-- You can start editing here. -->
+
+<div id="comments_wrap">
+
+
+	<h3>23 Responses to “Intriguing animate-on-scroll effect – jQuery tutorial”</h3>
+
+	<ol class="commentlist">
+	
+<li class="comment wrap" id="comment-4292">
+
+    <div class="comment wrap" id="comment-4292">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/6ca1a84b6c4c7e8c195addbcc30ccc40" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.joyoge.com/" rel="external nofollow" class="url">Design Social Media</a><br></p>
+            <p><i> Aug 23rd, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>nice jquery effect, thanks for the tut.</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4292#respond" onclick="return addComment.moveForm(&quot;comment-4292&quot;, &quot;4292&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-4304">
+
+    <div class="comment wrap" id="comment-4304">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/e19987a01225b6691db89febeafa9315" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.scissorspaperwok.com/" rel="external nofollow" class="url">Kimanh</a><br></p>
+            <p><i> Aug 24th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>This is very cool. I’m going to try using this. Fingers crossed I can do it.</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4304#respond" onclick="return addComment.moveForm(&quot;comment-4304&quot;, &quot;4304&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-4309">
+
+    <div class="comment wrap" id="comment-4309">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/0c5bb9ef8a5197eca11ab0d21cad6630" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://pinkonhead.com/" rel="external nofollow" class="url">pinkonhead</a><br></p>
+            <p><i> Aug 24th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Really cool effect, grat tut sister :)</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4309#respond" onclick="return addComment.moveForm(&quot;comment-4309&quot;, &quot;4309&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-4347">
+
+    <div class="comment wrap" id="comment-4347">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/77dc7f4cf23cf5844f6423707b4e5381" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://nouryjanse.nl/" rel="external nofollow" class="url">Noury Janse</a><br></p>
+            <p><i> Aug 26th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Looks nice! Especially when using the scrollbar manually with the mouse. The objects move very smooth :) !</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4347#respond" onclick="return addComment.moveForm(&quot;comment-4347&quot;, &quot;4347&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-4514">
+
+    <div class="comment wrap" id="comment-4514">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4c755e69e5f1fac6cc22c090615f6fea" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.javascriptbank.com/" rel="external nofollow" class="url">Phong Thai</a><br></p>
+            <p><i> Sep 1st, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>great job, but I think you should add scroll effect for clicking on “Scroll Down”</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4514#respond" onclick="return addComment.moveForm(&quot;comment-4514&quot;, &quot;4514&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-4845">
+
+    <div class="comment wrap" id="comment-4845">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/861d4a84463e4cb4d31c4cfe32613477" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.freewebelements.com/" rel="external nofollow" class="url">Free Web Elements</a><br></p>
+            <p><i> Sep 8th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Great tutorial thanks !</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=4845#respond" onclick="return addComment.moveForm(&quot;comment-4845&quot;, &quot;4845&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-5051">
+
+    <div class="comment wrap" id="comment-5051">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/133775eb5c459d8f55ec75130dc77096" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://twitter.com/sagarranpise" rel="external nofollow" class="url">Sagar Ranpise</a><br></p>
+            <p><i> Sep 15th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Nice Tutorial and beautiful blog!</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=5051#respond" onclick="return addComment.moveForm(&quot;comment-5051&quot;, &quot;5051&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-6048">
+
+    <div class="comment wrap" id="comment-6048">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/d0f1c57908a8f8f19c1f83f3fb788c0d" class="avatar avatar-48 photo" height="48" width="48">            <p>juljan<br></p>
+            <p><i> Oct 12th, 2011</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>thanks great tutorial!</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=6048#respond" onclick="return addComment.moveForm(&quot;comment-6048&quot;, &quot;6048&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-9077">
+
+    <div class="comment wrap" id="comment-9077">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/c47eb4d959ec31c0ecbfe9a450db7f24" class="avatar avatar-48 photo" height="48" width="48">            <p>lafeeeee<br></p>
+            <p><i> Jan 11th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>that’s amazing.<br>
+so cool.<br>
+thanks very much</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=9077#respond" onclick="return addComment.moveForm(&quot;comment-9077&quot;, &quot;9077&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-9119">
+
+    <div class="comment wrap" id="comment-9119">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/01e1ed07f04aa97d2945af397c5090d0" class="avatar avatar-48 photo" height="48" width="48">            <p>Jorge Suárez<br></p>
+            <p><i> Jan 12th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Great tutorial thanks !</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=9119#respond" onclick="return addComment.moveForm(&quot;comment-9119&quot;, &quot;9119&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-10189">
+
+    <div class="comment wrap" id="comment-10189">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/5370ef67162f3132e21e034cafcc2599" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.spletis.eu/" rel="external nofollow" class="url">Izdelava spletne strani @ Spletis</a><br></p>
+            <p><i> Feb 13th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Fantastic tutorial! Great work and yes, thank you for sharing!</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=10189#respond" onclick="return addComment.moveForm(&quot;comment-10189&quot;, &quot;10189&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-10393">
+
+    <div class="comment wrap" id="comment-10393">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/2aae8b14d4245685e8b99f623f55a2f1" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://loveit%21/" rel="external nofollow" class="url">Dutchesz</a><br></p>
+            <p><i> Mar 2nd, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Can’t wait to try it out :) Love your blog :)</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=10393#respond" onclick="return addComment.moveForm(&quot;comment-10393&quot;, &quot;10393&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-10942">
+
+    <div class="comment wrap" id="comment-10942">
+        <div class="col-left">
+                        <p><a href="http://webcssjquery.wordpress.com/2012/04/17/free-jquery-scroll-div-animation/" rel="external nofollow" class="url">Free jQuery Scroll Div Animation « Web css jquery</a><br></p>
+            <p><i> Apr 17th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>[...] Read more [...]</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=10942#respond" onclick="return addComment.moveForm(&quot;comment-10942&quot;, &quot;10942&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-11006">
+
+    <div class="comment wrap" id="comment-11006">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/cfa8c733743b18dbe7db4cba8afb542d" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://www.brunocavenaghi.com/" rel="external nofollow" class="url">Bruno Cavenaghi</a><br></p>
+            <p><i> Apr 24th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>PeHaa, great tutorial… i made some changes in your script to make more objects to animate in a larger height page.</p>
+<p>If you want, please visit my portfolio: <a href="http://www.brunocavenaghi.com/" rel="nofollow">http://www.brunocavenaghi.com</a></p>
+<p>Thanks, you helped a lot.</p>
+<p>See you</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=11006#respond" onclick="return addComment.moveForm(&quot;comment-11006&quot;, &quot;11006&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+<ul class="children">
+
+<li class="comment wrap" id="comment-11009">
+
+    <div class="comment wrap" id="comment-11009">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/6f2a1f7b1cf9c8a6086a35b77e2d9d77" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://pehaa.com/" rel="external nofollow" class="url">PeHaa</a><br></p>
+            <p><i> Apr 24th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Thanks ! I’ve just visited your portfolio. Impressive – love it. Glad I could have helped.</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=11009#respond" onclick="return addComment.moveForm(&quot;comment-11009&quot;, &quot;11009&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-11475">
+
+    <div class="comment wrap" id="comment-11475">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/780970ca76be725c0186e1d6d3309352" class="avatar avatar-48 photo" height="48" width="48">            <p>Praveen<br></p>
+            <p><i> Jun 21st, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>so cool tnx pehaa :)</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=11475#respond" onclick="return addComment.moveForm(&quot;comment-11475&quot;, &quot;11475&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-12315">
+
+    <div class="comment wrap" id="comment-12315">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/3c7995cb5b2cdae7f81510367e7f076b" class="avatar avatar-48 photo" height="48" width="48">            <p><a href="http://none/" rel="external nofollow" class="url">emre</a><br></p>
+            <p><i> Nov 14th, 2012</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>thanks..good job….<br>
+How can we change the speed of the animation?</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=12315#respond" onclick="return addComment.moveForm(&quot;comment-12315&quot;, &quot;12315&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-14319">
+
+    <div class="comment wrap" id="comment-14319">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/049d4c6f16cb7a170f3eae10a811f2c1" class="avatar avatar-48 photo" height="48" width="48">            <p>charis<br></p>
+            <p><i> Aug 19th, 2013</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Hi there</p>
+<p>Great tutorial. I have been looking for this exact effect for weeks.</p>
+<p>I first saw this effect on this themify wordpress template <a href="http://themify.me/demo/#theme=parallax" rel="nofollow">http://themify.me/demo/#theme=parallax</a> </p>
+<p>The effect is the same, but the elements also fade in as they animate into the screen</p>
+<p>I have been trying to get the same effect working, but to no avail. </p>
+<p>If you have time it would be a great update to this tutorial, adding fade in fade out </p>
+<p>Keep up the good work</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=14319#respond" onclick="return addComment.moveForm(&quot;comment-14319&quot;, &quot;14319&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-14535">
+
+    <div class="comment wrap" id="comment-14535">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/b0285ae82ada308e86c37cc127fa12f4" class="avatar avatar-48 photo" height="48" width="48">            <p>Jewel<br></p>
+            <p><i> Oct 2nd, 2013</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Many thanks ….. well done.You helped a lot.</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=14535#respond" onclick="return addComment.moveForm(&quot;comment-14535&quot;, &quot;14535&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-14855">
+
+    <div class="comment wrap" id="comment-14855">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/2420fff9d34169a1e622e0a97df6a7fa" class="avatar avatar-48 photo" height="48" width="48">            <p>Dani<br></p>
+            <p><i> Nov 14th, 2013</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Hi, awesome post! I could not much info about this topic until I found it.</p>
+<p>I worked a bit in the function to make it possible that not all the elements stop at the same time, but in couple for example, when you scroll down. I have explained how I do it in my new blog :)</p>
+<p><a href="http://danielrodriguezweb.wordpress.com/2013/11/11/my-website-scrolling-effects/" rel="nofollow">http://danielrodriguezweb.wordpress.com/2013/11/11/my-website-scrolling-effects/</a></p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=14855#respond" onclick="return addComment.moveForm(&quot;comment-14855&quot;, &quot;14855&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-19133">
+
+    <div class="comment wrap" id="comment-19133">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/0a8d00e6a99b92e74164a7353768a353" class="avatar avatar-48 photo" height="48" width="48">            <p>Silvia<br></p>
+            <p><i> Jan 28th, 2014</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>It is GENIAL!!!!! Thanks a lot, I was looking for something like this!!</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=19133#respond" onclick="return addComment.moveForm(&quot;comment-19133&quot;, &quot;19133&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-19173">
+
+    <div class="comment wrap" id="comment-19173">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/513eb54ac5534ba64e48a55bb16b806e" class="avatar avatar-48 photo" height="48" width="48">            <p>Janice<br></p>
+            <p><i> Jan 29th, 2014</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>I’m not super familiar with javascript, is there a way to easily reverse this so that the objects are together when the page loads and then move off the screen as you scroll down?</p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=19173#respond" onclick="return addComment.moveForm(&quot;comment-19173&quot;, &quot;19173&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+
+<li class="comment wrap" id="comment-19725">
+
+    <div class="comment wrap" id="comment-19725">
+        <div class="col-left">
+            <img alt="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/dc226ab96d172f5133cda09930f0111b" class="avatar avatar-48 photo" height="48" width="48">            <p>John<br></p>
+            <p><i> Feb 9th, 2014</i><br></p>
+        </div>
+        <div class="col-right">
+            <p>Thanks for the tutorial. I happened to come across another jQuery script that does something similar.<br>
+<a href="http://creativelycoded.com/2014/02/cre-animate-js-onscroll-animations/" rel="nofollow">http://creativelycoded.com/2014/02/cre-animate-js-onscroll-animations/</a></p>
+                        
+        </div>
+     	<div class="reply"><a class="comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/?replytocom=19725#respond" onclick="return addComment.moveForm(&quot;comment-19725&quot;, &quot;19725&quot;, &quot;respond&quot;, &quot;2429&quot;)">Reply to this comment</a></div>        
+    </div>
+            
+
+	<div class="fix"></div>
+ 
+</li><!-- #comment-## -->
+	</ol>
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="fix"></div>
+	</div>
+ 
+
+</div> <!-- end #comments_wrap -->
+
+
+<div id="respond">
+
+<h3>Leave a Reply</h3>
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+<br>
+
+<form action="http://pehaa.com/wp-comments-post.php" method="post" id="commentform">
+<div>
+
+
+<label for="author" class="wrap"><input type="text" id="author" name="author" value="" size="27" tabindex="1"> <span>Name (required)</span></label>
+<label for="email" class="wrap"><input type="text" id="email" name="email" value="" size="27" tabindex="2"> <span>Email (required) - will not be published</span></label>
+<label for="url" class="wrap"><input type="text" id="url" name="url" value="" size="27" tabindex="3"> <span>Website (optional)</span></label>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre lang=&quot;&quot; line=&quot;&quot; escaped=&quot;&quot; cssfile=&quot;&quot;&gt; </small></p>-->
+
+<textarea name="comment" rows="10" cols="50" tabindex="4"></textarea> 
+
+<input type="submit" class="submit" value="Submit message" tabindex="5">
+
+<input type="hidden" name="comment_post_ID" value="2429">
+
+</div>
+<input type="hidden" name="comment_post_ID" value="2429" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="628b2440b1"></p><script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/pehaa.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/form.js"></script>
+<p style="display: none;"></p><input type="hidden" id="ak_js" name="ak_js" value="1399977371185"></form>
+
+
+<div class="fix"></div>
+<br>
+</div> <!-- end #respond -->
+
+									</div>
+			
+		</div>
+		</div>
+		
+				<div id="sidebar" class="col-right">
+
+			<!-- TABS STARTS -->           
+			<div id="tabs" class="block">
+                <ul class="idTabs tabs wrap">
+	 				<li><a href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/#comm" class="selected">Comments</a></li>
+					<li><a href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/#tagcloud">Tags</a></li>      
+                    <li><a href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/#feat">Popular</a></li>    
+                 </ul>
+                
+                <ul class="inside" id="comm" style="display: block;">
+                    
+
+<li><a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/#comment-26512" title="on create a unique contact form with css3 transitions">chuck: do we create a .php file to link this html templat...</a></li>
+
+
+
+<li><a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/#comment-26511" title="on create a unique contact form with css3 transitions">chuck: Hi, it's a very cool script, the result is so good...</a></li>
+
+
+
+<li><a href="http://pehaa.com/2012/02/create-your-portfolio-gallery-using-html5-canvas-tutorial/#comment-25105" title="on Create your portfolio gallery using html5 canvas - tutorial">Vusi: Thanks lot, helped, was able to implement other cr...</a></li>
+
+
+
+<li><a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/#comment-24404" title="on create a unique contact form with css3 transitions">Michel: Hi do you know Where do you put your “mailto” acti...</a></li>
+
+
+
+<li><a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/#comment-23726" title="on create a unique contact form with css3 transitions">Raghavendra.Padasalgi: I tried to send message it is not working.otherwis...</a></li>
+
+                    
+                </ul>	
+   
+              <!-- <ul class="inside" id="feat">
+                                        
+                        <li><a title="Permanent Link to Pseudo elements with custom attributes to create a css3 menu that will bounce" href="http://pehaa.com/2012/08/pseudo-elements-with-custom-attributes-to-create-a-css3-menu-that-will-bounce/" rel="bookmark">Pseudo elements with custom attributes to create a css3 menu that will bounce</a></li>
+                    
+                                        
+                        <li><a title="Permanent Link to Standard and retina display sprites with compass &#8211; how to" href="http://pehaa.com/2012/07/standard-and-retina-display-sprites-with-compass/" rel="bookmark">Standard and retina display sprites with compass &#8211; how to</a></li>
+                    
+                                        
+                        <li><a title="Permanent Link to Shopping in Paris &#8211; free vector" href="http://pehaa.com/2012/04/shopping-in-paris-free-vector/" rel="bookmark">Shopping in Paris &#8211; free vector</a></li>
+                    
+                                        
+                        <li><a title="Permanent Link to Free vector shopping paper bag" href="http://pehaa.com/2012/04/free-vector-shopping-paper-bag/" rel="bookmark">Free vector shopping paper bag</a></li>
+                    
+                                        
+                        <li><a title="Permanent Link to Free Vector chef &#8211; illustrate your cuisine" href="http://pehaa.com/2012/03/free-vector-chef-illustrate-your-cuisine/" rel="bookmark">Free Vector chef &#8211; illustrate your cuisine</a></li>
+                    
+                    		
+                </ul> -->
+
+					<ul class="inside" id="feat" style="display: none;">
+										<div class="block">
+							<h3><a href="http://pehaa.com/2012/08/pseudo-elements-with-custom-attributes-to-create-a-css3-menu-that-will-bounce/">Pseudo elements with custom attributes to create a css3 menu that will bounce</a></h3>
+							<p>You must have already seen this (what I call “bouncing”) hover effect in navigation menus. Curious how to recreate it easily ?<br>
+Below you’ll find my approach.<br>
+It’s pure css, I use an “::after” pseudo-element with a custom attribute.</p>
+							<a href="http://pehaa.com/2012/08/pseudo-elements-with-custom-attributes-to-create-a-css3-menu-that-will-bounce/" class="read-more">... more</a>            
+						</div>
+
+										<div class="block">
+							<h3><a href="http://pehaa.com/2012/07/standard-and-retina-display-sprites-with-compass/">Standard and retina display sprites with compass – how to</a></h3>
+							<p> One of the of compass features that are especially compelling is “spriting”. With compass you simply place all your images in a folder and import them into your stylesheet.<br>
+In this post I’ll share with how I prepare my sprites in two “versions” for standard and retina display.</p>
+							<a href="http://pehaa.com/2012/07/standard-and-retina-display-sprites-with-compass/" class="read-more">... more</a>            
+						</div>
+
+								
+				</ul>
+                
+                <div class="inside" id="tagcloud" style="display: none;">
+                    <a href="http://pehaa.com/tag/add-new-tag/" class="tag-link-16" title="2 topics" style="font-size: 10.993103448276pt;">Add new tag</a>
+<a href="http://pehaa.com/tag/animals/" class="tag-link-29" title="4 topics" style="font-size: 12.206896551724pt;">animals</a>
+<a href="http://pehaa.com/tag/animation/" class="tag-link-54" title="1 topic" style="font-size: 10pt;">animation</a>
+<a href="http://pehaa.com/tag/christmas/" class="tag-link-34" title="7 topics" style="font-size: 13.310344827586pt;">Christmas</a>
+<a href="http://pehaa.com/tag/contact-form/" class="tag-link-52" title="1 topic" style="font-size: 10pt;">contact form</a>
+<a href="http://pehaa.com/tag/contest/" class="tag-link-45" title="1 topic" style="font-size: 10pt;">contest</a>
+<a href="http://pehaa.com/tag/css/" class="tag-link-50" title="5 topics" style="font-size: 12.648275862069pt;">css</a>
+<a href="http://pehaa.com/tag/css3/" class="tag-link-53" title="5 topics" style="font-size: 12.648275862069pt;">css3</a>
+<a href="http://pehaa.com/tag/decoration/" class="tag-link-35" title="14 topics" style="font-size: 14.855172413793pt;">Decoration</a>
+<a href="http://pehaa.com/tag/doll/" class="tag-link-36" title="1 topic" style="font-size: 10pt;">doll</a>
+<a href="http://pehaa.com/tag/doodling/" class="tag-link-13" title="6 topics" style="font-size: 13.034482758621pt;">doodling</a>
+<a href="http://pehaa.com/tag/easter/" class="tag-link-40" title="2 topics" style="font-size: 10.993103448276pt;">easter</a>
+<a href="http://pehaa.com/tag/egg/" class="tag-link-41" title="1 topic" style="font-size: 10pt;">egg</a>
+<a href="http://pehaa.com/tag/floral/" class="tag-link-39" title="10 topics" style="font-size: 14.08275862069pt;">floral</a>
+<a href="http://pehaa.com/tag/flower/" class="tag-link-28" title="9 topics" style="font-size: 13.862068965517pt;">flower</a>
+<a href="http://pehaa.com/tag/folk/" class="tag-link-38" title="4 topics" style="font-size: 12.206896551724pt;">folk</a>
+<a href="http://pehaa.com/tag/fonts/" class="tag-link-19" title="1 topic" style="font-size: 10pt;">fonts</a>
+<a href="http://pehaa.com/tag/food/" class="tag-link-32" title="8 topics" style="font-size: 13.586206896552pt;">food</a>
+<a href="http://pehaa.com/tag/freebies/" class="tag-link-7" title="55 topics" style="font-size: 18pt;">Freebies</a>
+<a href="http://pehaa.com/tag/horse/" class="tag-link-27" title="2 topics" style="font-size: 10.993103448276pt;">horse</a>
+<a href="http://pehaa.com/tag/html/" class="tag-link-51" title="4 topics" style="font-size: 12.206896551724pt;">html</a>
+<a href="http://pehaa.com/tag/icon/" class="tag-link-43" title="1 topic" style="font-size: 10pt;">icon</a>
+<a href="http://pehaa.com/tag/illustration/" class="tag-link-12" title="18 topics" style="font-size: 15.406896551724pt;">illustration</a>
+<a href="http://pehaa.com/tag/illustrator/" class="tag-link-5" title="50 topics" style="font-size: 17.779310344828pt;">Illustrator</a>
+<a href="http://pehaa.com/tag/iphone/" class="tag-link-31" title="3 topics" style="font-size: 11.655172413793pt;">iPhone</a>
+<a href="http://pehaa.com/tag/jquery/" class="tag-link-55" title="3 topics" style="font-size: 11.655172413793pt;">jQuery</a>
+<a href="http://pehaa.com/tag/mac/" class="tag-link-22" title="1 topic" style="font-size: 10pt;">mac</a>
+<a href="http://pehaa.com/tag/mesh/" class="tag-link-33" title="2 topics" style="font-size: 10.993103448276pt;">mesh</a>
+<a href="http://pehaa.com/tag/ornament/" class="tag-link-37" title="3 topics" style="font-size: 11.655172413793pt;">ornament</a>
+<a href="http://pehaa.com/tag/pattern/" class="tag-link-24" title="25 topics" style="font-size: 16.124137931034pt;">pattern</a>
+<a href="http://pehaa.com/tag/photoshop/" class="tag-link-4" title="28 topics" style="font-size: 16.4pt;">Photoshop</a>
+<a href="http://pehaa.com/tag/brushes/" class="tag-link-8" title="4 topics" style="font-size: 12.206896551724pt;">Photoshop Brushes</a>
+<a href="http://pehaa.com/tag/photoshop-tip-trick/" class="tag-link-14" title="3 topics" style="font-size: 11.655172413793pt;">Photoshop tip trick</a>
+<a href="http://pehaa.com/tag/responsive/" class="tag-link-56" title="1 topic" style="font-size: 10pt;">responsive</a>
+<a href="http://pehaa.com/tag/retro/" class="tag-link-46" title="4 topics" style="font-size: 12.206896551724pt;">retro</a>
+<a href="http://pehaa.com/tag/screenshot/" class="tag-link-23" title="1 topic" style="font-size: 10pt;">screenshot</a>
+<a href="http://pehaa.com/tag/software/" class="tag-link-21" title="1 topic" style="font-size: 10pt;">Software</a>
+<a href="http://pehaa.com/tag/stationary/" class="tag-link-47" title="1 topic" style="font-size: 10pt;">stationary</a>
+<a href="http://pehaa.com/tag/swatches/" class="tag-link-30" title="16 topics" style="font-size: 15.131034482759pt;">swatches</a>
+<a href="http://pehaa.com/tag/t-shirt/" class="tag-link-44" title="1 topic" style="font-size: 10pt;">t-shirt</a>
+<a href="http://pehaa.com/tag/tutorial/" class="tag-link-26" title="11 topics" style="font-size: 14.303448275862pt;">tutorial</a>
+<a href="http://pehaa.com/tag/twitter/" class="tag-link-18" title="1 topic" style="font-size: 10pt;">twitter</a>
+<a href="http://pehaa.com/tag/vector/" class="tag-link-20" title="46 topics" style="font-size: 17.558620689655pt;">vector</a>
+<a href="http://pehaa.com/tag/wallpaper/" class="tag-link-17" title="6 topics" style="font-size: 13.034482758621pt;">wallpaper</a>
+<a href="http://pehaa.com/tag/web-design/" class="tag-link-48" title="6 topics" style="font-size: 13.034482758621pt;">web design</a>                </div>
+                    
+            </div>      
+			<!-- TABS ENDS -->
+
+			<div id="text-3" class="last block widget widget_text">			<div class="textwidget"><a href="http://craftuts.com/" title="Craft Tutorials">
+    <img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/ad-craftuts2_150x150.jpg" height="150" width="150" alt="Craft Tutorials">
+</a></div>
+		</div>
+<div class="subscribe">
+    <h2><a href="http://feeds2.feedburner.com/pehaa">Subscribe to our RSS</a></h2>
+    <p>Receive updates as soon as they are posted.</p>
+</div>
+
+<div id="linkcat-2" class="last block widget widget_links"><h2>My friends!</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://pinkonhead.com/" title="freebies and inspirations! by my sister!!" target="_blank">at Pinkonhead</a></li>
+<li><a href="http://learnai.com/" title="Illustrator tutorials" target="_blank">LearnAi</a></li>
+<li><a href="http://patterns.pehaa.com/">My patterns</a></li>
+<li><a href="http://portfolio.pehaa.com/">My Portfolio</a></li>
+<li><a href="http://myphotoshopbrushes.com/" rel="friend" title="Free Photoshop Brushes" target="_blank">myPhotoshopBrushes</a></li>
+<li><a href="http://vainsfaktory.wordpress.com/" rel="friend" title="Actualités &amp; ressources graphiques by my chéri" target="_blank">Vains Faktory</a></li>
+
+	</ul>
+</div>
+<div id="linkcat-25" class="last block widget widget_links"><h2>Other links...</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.smashingmagazine.com/2009/03/30/desktop-wallpaper-calendar-april-2009/" title="Smashing Magazine" target="_blank">My April wallpaper featured by SM</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/02/27/desktop-wallpaper-calendar-march-2009/" title="Smashing Magazine" target="_blank">My March wallpapers featured by SM</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/04/30/desktop-wallpaper-calendar-may-2009/" title="Smashing Magazine" target="_blank">My May wallpaper featured by SM</a></li>
+
+	</ul>
+</div>
+<div id="categories-350584771" class="last block widget widget_categories"><h2>Categories</h2>		<ul>
+	<li class="cat-item cat-item-10"><a href="http://pehaa.com/category/featured/" title="View all posts filed under Featured">Featured</a> (76)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://pehaa.com/category/freebies/" title="View all posts filed under Freebies">Freebies</a> (56)
+<ul class="children">
+	<li class="cat-item cat-item-8"><a href="http://pehaa.com/category/freebies/brushes/" title="View all posts filed under Photoshop Brushes">Photoshop Brushes</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://pehaa.com/category/inspirations/" title="View all posts filed under Inspirations">Inspirations</a> (4)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://pehaa.com/category/misc/" title="View all posts filed under Misc">Misc</a> (4)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://pehaa.com/category/software/" title="View all posts filed under Software">Software</a> (1)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://pehaa.com/category/tutorials/" title="View all posts filed under Tutorials">Tutorials</a> (16)
+<ul class="children">
+	<li class="cat-item cat-item-49"><a href="http://pehaa.com/category/tutorials/htmlcss/" title="View all posts filed under HTML/CSS">HTML/CSS</a> (7)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://pehaa.com/category/tutorials/illustrator/" title="View all posts filed under Illustrator">Illustrator</a> (8)
+</li>
+	<li class="cat-item cat-item-55"><a href="http://pehaa.com/category/tutorials/jquery/" title="View all posts filed under jQuery">jQuery</a> (1)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://pehaa.com/category/tutorials/photoshop/" title="View all posts filed under Photoshop">Photoshop</a> (1)
+</li>
+</ul>
+</li>
+		</ul>
+</div>		</div>		
+	</div>
+	</div>
+		<!-- FOOTER STARTS -->
+	<div id="footer-out">
+	<div id="footer" class="wrap">
+        
+		<div class="widget block">
+			<div class="flickr">
+    <h2>Photos on <span>flick<span>r</span></span></h2>
+    <div class="inside">
+		<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/badge_code_v2.gne"></script><div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/pajkabajka/4560148323/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4560148323_e1ee2fa294_s.jpg" alt="A photo on Flickr" title="Slavic soul" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/pajkabajka/4458623413/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4458623413_5faf884f73_s.jpg" alt="A photo on Flickr" title="pink" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/pajkabajka/4458623355/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4458623355_5f8903b6c3_s.jpg" alt="A photo on Flickr" title="red-marine" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/pajkabajka/4458623305/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4458623305_b518c17a9c_s.jpg" alt="A photo on Flickr" title="randomly colored" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/pajkabajka/4458623245/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4458623245_98b508c86d_s.jpg" alt="A photo on Flickr" title="light grey in florals" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/pajkabajka/4459401988/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4459401988_15431861c5_s.jpg" alt="A photo on Flickr" title="dark grey in florals" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image7"><a href="http://www.flickr.com/photos/pajkabajka/4423105816/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4423105816_30a1e91ffe_s.jpg" alt="A photo on Flickr" title="yellow flowers1" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image8"><a href="http://www.flickr.com/photos/pajkabajka/4422340041/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4422340041_030676d7f4_s.jpg" alt="A photo on Flickr" title="yellow flowers" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image9"><a href="http://www.flickr.com/photos/pajkabajka/4417204882/"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/4417204882_cbba7229d6_s.jpg" alt="A photo on Flickr" title="fuchsia pattern 1" height="75" width="75"></a></div><span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/p" width="0" height="0" alt=""></span>        
+	<div class="fix"></div>
+    </div>
+</div>
+
+		</div>
+		<div class="widget block">
+					<div id="recent-posts-2" class="last block widget widget_recent_entries">		<h2>Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://pehaa.com/2012/08/pseudo-elements-with-custom-attributes-to-create-a-css3-menu-that-will-bounce/">Pseudo elements with custom attributes to create a css3 menu that will bounce</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/07/standard-and-retina-display-sprites-with-compass/">Standard and retina display sprites with compass – how to</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/04/shopping-in-paris-free-vector/">Shopping in Paris – free vector</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/04/free-vector-shopping-paper-bag/">Free vector shopping paper bag</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/03/free-vector-chef-illustrate-your-cuisine/">Free Vector chef – illustrate your cuisine</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/02/vintage-free-vector-tv-set/">Vintage free vector TV-set</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/02/create-your-portfolio-gallery-using-html5-canvas-tutorial/">Create your portfolio gallery using html5 canvas – tutorial</a>
+						</li>
+					<li>
+				<a href="http://pehaa.com/2012/02/create-a-fancy-responsive-image-on-hover-effect/">Create a fancy responsive image-on-hover effect</a>
+						</li>
+				</ul>
+		</div>		</div>
+		<div class="widget block last">
+			<div id="recent-comments-2" class="last block widget widget_recent_comments"><h2>Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">chuck on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-26512">create a unique contact form with css3 transitions</a></li><li class="recentcomments">chuck on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-26511">create a unique contact form with css3 transitions</a></li><li class="recentcomments">Vusi on <a href="http://pehaa.com/2012/02/create-your-portfolio-gallery-using-html5-canvas-tutorial/comment-page-1/#comment-25105">Create your portfolio gallery using html5 canvas – tutorial</a></li><li class="recentcomments">Michel on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-24404">create a unique contact form with css3 transitions</a></li><li class="recentcomments">Raghavendra.Padasalgi on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-23726">create a unique contact form with css3 transitions</a></li><li class="recentcomments">Nicky on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-23647">create a unique contact form with css3 transitions</a></li><li class="recentcomments">Val on <a href="http://pehaa.com/2011/07/create-a-unique-contact-form-with-css3-transitions/comment-page-2/#comment-23344">create a unique contact form with css3 transitions</a></li><li class="recentcomments">Lydia Martin on <a href="http://pehaa.com/2011/04/botanical-garden-free-photoshop-brushes/comment-page-1/#comment-20800">botanical garden – free Photoshop brushes</a></li></ul></div>		</div>
+	</div>
+	</div>
+	<!-- FOOTER ENDS -->
+	<div id="copyright-out">
+	<div id="copyright" class="wrap">
+		<div class="col-left">
+			<ul>
+								<li class="page_item current_page_item first"><a href="http://pehaa.com/">Home</a></li>
+				<li class="page_item page-item-2"><a href="http://pehaa.com/about/">About</a></li>
+<li class="page_item page-item-12"><a href="http://pehaa.com/contact/">Contact</a></li>
+<li class="page_item page-item-22"><a href="http://pehaa.com/archives/">Archives</a></li>
+<li class="page_item page-item-24"><a href="http://pehaa.com/image-gallery/">Image Gallery</a></li>
+<li class="page_item page-item-27"><a href="http://pehaa.com/sitemap/">Sitemap</a></li>
+			</ul>
+		<p>© Copyright PeHaa Blog. All Rights Reserved</p>
+		</div>
+		<div class="col-right">
+			<a href="http://pehaa.com/2011/08/intriguing-animate-on-scroll-effect-jquery-tutorial/#" id="back2top">Back to top</a>
+		</div>
+	</div>
+	</div>
+<script type="text/javascript">var SHRSB_Settings = {"shr-publisher-2429":{"link":"http:\/\/pehaa.com\/2011\/08\/intriguing-animate-on-scroll-effect-jquery-tutorial\/","shortener":"google","title":"Intriguing animate-on-scroll effect - jQuery tutorial","notes":"I%20suppose%20that%20I%20was%20not%20the%20only%20one%20to%20become%20speechless%20in%20front%20of%20the%20Nizo%20for%20iPhone%20website.%0D%0AIn%20this%20tutorial%20we%20try%20to%20recreate%20the%20intriguing%20scrolling%20effect.","service":"7,38,2,282,106,3,5,284","apikey":"8afa39428933be41f8afdb8ea21a495c","expand":true,"src":"http:\/\/pehaa.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","localize":true,"share_src":"http:\/\/www.shareaholic.com","rel":"nofollow","target":"_blank","center":true,"twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D","mode":"inject","designer_toolTips":"1","tip_bg_color":"#000000","tip_text_color":"#ffffff","shrlink":"1"}};</script><script type="text/javascript">var SHRRD_Settings = {"shr_rd-2429":{"link":"http:\/\/pehaa.com\/2011\/08\/intriguing-animate-on-scroll-effect-jquery-tutorial\/","apikey":"8afa39428933be41f8afdb8ea21a495c","style":"image"}};</script><script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/pehaa.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shCore.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shBrushXml.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shBrushCss.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/shBrushJScript.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://pehaa.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://pehaa.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery.form.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/pehaa.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/scripts.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery.shareaholic-publishers-sb.min.js"></script>
+<script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/jquery.shareaholic-publishers-rd.min.js"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4674395-2");
+pageTracker._trackPageview();
+} catch(err) {}</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"16d520b113","applicationID":"2853963","transactionName":"YVMHN0pQVkcEVhdZCVgZJABMWFdaSkYKXgFaUw==","queueTime":0,"applicationTime":159,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"jserror.newrelic.com","agent":"js-agent.newrelic.com\/nr-400.min.js"}</script>
+
+<script src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/nr-400.min.js"></script><iframe id="shr_oven" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/analytics_frame.html" style="display: none;"></iframe><div id="fb-root" class=" fb_reset"><script async="" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/all.js"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f25d1ee5dc" frameborder="0" allowtransparency="true" scrolling="no" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/ping.html" style="display: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/dgdTycPTSRj.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/dgdTycPTSRj(1).html" style="border: none;"></iframe></div></div></div><script type="text/javascript" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/16d520b113"></script><iframe name="oauth2relay419352263" id="oauth2relay419352263" src="./Intriguing animate-on-scroll effect – jQuery tutorial   PeHaa Blog_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

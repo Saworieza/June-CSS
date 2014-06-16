@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Closable Message Boxes</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: </h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/closable-message-boxes/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;Example: Closable Message Boxes&lt;/title&gt;
+&lt;script&gt;
+function closeBox(toClose) {
+   document.getElementById(toClose).style.display = &quot;none&quot;;
+   setCookie(toClose, &quot;closed&quot;, 365);
+}
+function setCookie(cName, value, expiredays) {
+   var expDate = new Date();
+   expDate.setDate(expDate.getDate()+expiredays);
+   document.cookie=cName + &quot;=&quot; + escape(value) + 
+   &quot;;expires=&quot; + expDate.toGMTString();
+}
+function loadMsg(msgClass) {
+   msg = document.getElementsByTagName(&quot;div&quot;);
+   for (i=0; i&lt;msg.length; i++) {
+      if(msg[i].className == msgClass) {
+         if(document.cookie.indexOf(msg[i].id) == -1) {
+            msg[i].style.display = &quot;block&quot;;
+         }
+      }
+   }
+}
+&lt;/script&gt;
+&lt;style&gt;
+   body {
+      font: small/1.2 Arial, Helvetica, sans-serif;
+      background-color: #eee; }
+   #wrap {
+      width: 40em;
+      margin: 0 auto;
+      padding: 3em 2em;
+      background-color: #fff;
+      border: 1px solid #ccc; }
+      
+   /* These are the styles for the message box. */   
+   .msgbox {
+      display: none;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      width: 20em;
+      background-color: #b00;
+      border: 1px solid #333;
+      color: #fff;
+      font-weight: bold; }
+   .msgbox p {
+      margin: 0;
+      padding: 5px 10px; }
+   .msgbox a.close {
+      float: right;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      background-color: #fff;
+      border-left: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 0 4px;
+      margin-left: 5px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;loadMsg('msgbox');&quot;&gt;
+   &lt;div id=&quot;message-1&quot; class=&quot;msgbox&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;close&quot; onclick=&quot;closeBox('message-1'); return false;&quot; title=&quot;Close This&quot;&gt;X&lt;/a&gt;
+      &lt;p&gt;This is a rather simple, easy-to-create CSS message box.&lt;/p&gt;
+      &lt;p&gt;But the real kicker is the close button in the top right. 
+      If you click it, the  box will go away and won't return (even on refresh!).&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div id=&quot;wrap&quot;&gt;
+      &lt;h1&gt;Perma-Closing Message Boxes&lt;/h1&gt;
+      &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Return to the original article.&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;A message box will pop up the first time you visit this page. When you close it, it won't return (assuming you have cookies and javascript enabled). Give it a try! If you want the message box back, you'll need to clear your browser's cookies.&lt;/p&gt;
+      &lt;p&gt;Pellentesque sed arcu. Vestibulum vel ligula. Pellentesque dolor sapien, mollis vel, semper non, interdum non, urna. Sed quis tortor ut diam scelerisque congue. Aliquam sed purus. Nulla facilisi. Phasellus justo urna, lobortis at, hendrerit et, ultricies eget, odio. Nunc suscipit. Pellentesque ut dolor. Duis vitae purus. In congue mauris a sapien. In at turpis.&lt;/p&gt;
+      &lt;p&gt;ras porta dapibus metus. Aenean posuere. Aliquam vitae enim vitae pede dapibus euismod. Duis tortor dolor, lacinia quis, iaculis vulputate, tempor vitae, libero. Sed adipiscing mattis nibh. Duis vel sapien eu velit eleifend tempor. Duis turpis odio, dapibus in, consectetuer in, facilisis sed, justo. Integer quis pede non erat hendrerit cursus.&lt;/p&gt;
+      &lt;p&gt;Duis nulla. Aenean adipiscing interdum urna. Sed quam. Cras commodo velit vel turpis rutrum placerat. Phasellus tristique consectetuer nulla. Aliquam aliquam, pede et fringilla tincidunt, tellus sem gravida nibh, sit amet scelerisque lectus sapien sed neque. Nulla facilisi. Phasellus molestie auctor sem. Nunc venenatis.&lt;/p&gt;
+      &lt;p&gt;Pellentesque commodo odio ac metus. Pellentesque nisl ipsum, ullamcorper imperdiet, faucibus quis, vestibulum sit amet, nunc. Curabitur quis eros. Maecenas at neque quis sapien hendrerit molestie. Maecenas iaculis, lectus eu volutpat volutpat, sapien turpis pharetra est, at tristique nisl sapien in diam.&lt;/p&gt;
+      &lt;p&gt;Pellentesque sed arcu. Vestibulum vel ligula. Pellentesque dolor sapien, mollis vel, semper non, interdum non, urna. Sed quis tortor ut diam scelerisque congue. Aliquam sed purus. Nulla facilisi. Phasellus justo urna, lobortis at, hendrerit et, ultricies eget, odio. Nunc suscipit. Pellentesque ut dolor. Duis vitae purus. In congue mauris a sapien. In at turpis.&lt;/p&gt;
+      &lt;p&gt;ras porta dapibus metus. Aenean posuere. Aliquam vitae enim vitae pede dapibus euismod. Duis tortor dolor, lacinia quis, iaculis vulputate, tempor vitae, libero. Sed adipiscing mattis nibh. Duis vel sapien eu velit eleifend tempor. Duis turpis odio, dapibus in, consectetuer in, facilisis sed, justo. Integer quis pede non erat hendrerit cursus.&lt;/p&gt;
+      &lt;p&gt;Duis nulla. Aenean adipiscing interdum urna. Sed quam. Cras commodo velit vel turpis rutrum placerat. Phasellus tristique consectetuer nulla. Aliquam aliquam, pede et fringilla tincidunt, tellus sem gravida nibh, sit amet scelerisque lectus sapien sed neque. Nulla facilisi. Phasellus molestie auctor sem. Nunc venenatis.&lt;/p&gt;
+      &lt;p&gt;Pellentesque commodo odio ac metus. Pellentesque nisl ipsum, ullamcorper imperdiet, faucibus quis, vestibulum sit amet, nunc. Curabitur quis eros. Maecenas at neque quis sapien hendrerit molestie. Maecenas iaculis, lectus eu volutpat volutpat, sapien turpis pharetra est, at tristique nisl sapien in diam.&lt;/p&gt;
+   &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

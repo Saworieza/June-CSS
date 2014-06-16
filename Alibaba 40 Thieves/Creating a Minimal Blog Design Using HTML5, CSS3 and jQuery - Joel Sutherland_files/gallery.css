@@ -1,0 +1,57 @@
+.gallery {
+    position: relative;
+    width: 740px;
+    left: -130px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+    .gallery ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .gallery .images {
+        z-index: 1;
+        position: absolute;
+        width: 740px;
+        height: 420px;
+        overflow: hidden;
+    }
+        .gallery .images li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            -webkit-transition: 500ms;
+        }
+        .gallery .images li.active {
+            opacity: 1;
+        }
+    .gallery .thumbs {
+        display: block;
+        position: relative;
+        max-width: 620px;
+        padding-top: 390px;
+        float: right;
+        background: white;
+    }
+        .gallery .thumbs li {
+            z-index: 2;
+            position: relative;
+            display: inline;
+            float: left;
+            background: white;
+            padding: 10px 0 0 10px;
+            margin: 0;
+            cursor: pointer;
+        }
+            .gallery .thumbs li img {
+                display: block;
+                margin: 0;
+                padding: 0;
+                opacity: .5;
+                -webkit-transition: 500ms;
+            }
+            .gallery .thumbs li.active img {
+                opacity: 1;
+            }

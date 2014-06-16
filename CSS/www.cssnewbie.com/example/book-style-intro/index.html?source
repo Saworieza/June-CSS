@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Book-style Chapter Introductions Using Pure CSS</title>
+<style>
+#wrap {
+	background-color: #fefcf2;
+	width: 33em;
+	padding: 2em 3em;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	font: small/1.3em Georgia, "Times New Roman", Times, serif; }
+h4 {
+	font-size: 1.3em; }
+h4 + p:first-line {
+	font-variant: small-caps;
+	font-size: 1.1em; }
+h4 + p:first-letter {
+	float: left;
+	font-size: 2.5em;
+	font-weight: bold;
+	font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+	margin: 5px 5px 5px 0; }
+</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<h4>Chapter 4: Dropcaps and Damsels</h4>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla id magna quis quam fermentum ultricies. Donec ac magna. Duis commodo leo. Nulla ornare. Proin sed leo. Etiam at massa sed lectus sodales vehicula. Vestibulum purus ipsum, accumsan ac, mollis ut, pulvinar id, pede. Vivamus non enim eget metus tristique eleifend. Fusce sollicitudin consequat nibh. Pellentesque sollicitudin enim non odio. Mauris sagittis, metus non pellentesque dignissim, ipsum neque placerat arcu, sollicitudin luctus magna quam a magna. Nunc suscipit. Donec porttitor. Curabitur mauris massa, pulvinar suscipit, condimentum ut, fringilla a, enim. Fusce vitae erat. In viverra ultricies nulla. Sed enim nibh, vestibulum sed, varius et, iaculis in, mauris. Duis dolor nunc, mattis at, mollis eget, ullamcorper non, nulla.</p>
+		<p>Nullam libero mauris, tincidunt vel, aliquam in, ornare ac, nibh. In hac habitasse platea dictumst. Aliquam placerat. Proin dapibus pharetra neque. Donec malesuada, nibh nec lacinia euismod, nibh nisi fermentum leo, eu mollis risus lorem ut erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ut neque. Aliquam vel lacus a felis pulvinar placerat. Cras ornare justo nec risus. Vestibulum placerat nibh vel ligula ornare lacinia. Nunc vel risus in sapien sodales commodo. Integer posuere. Duis viverra tortor luctus ligula. Cras eget mauris. In congue imperdiet erat. Integer fringilla erat ac ante. Fusce tempus libero at nibh. Morbi faucibus facilisis nulla.</p>
+		<p>Nunc porttitor, ligula vitae tristique dictum, urna arcu elementum purus, vel dapibus nulla odio vel est. Duis rutrum egestas magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eleifend nisl et tellus. Nullam porttitor. Suspendisse lorem lorem, nonummy vitae, consectetuer non, euismod non, ligula. Curabitur turpis. Nunc urna massa, auctor eu, pellentesque non, sodales vitae, erat. Integer mollis ligula sit amet sem feugiat consectetuer. Duis egestas lacus a ante. Sed diam. Nulla facilisi. </p>
+		<p><a href="../../css-rules/book-style-chapter-intros/index.html">Back to the article.</a></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+var b_txt = '';
+
+// write the badge
+	
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/pajkabajka/4560148323/"><img src="http://farm3.staticflickr.com/2793/4560148323_e1ee2fa294_s.jpg" alt="A photo on Flickr" title="Slavic soul" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/pajkabajka/4458623413/"><img src="http://farm3.staticflickr.com/2760/4458623413_5faf884f73_s.jpg" alt="A photo on Flickr" title="pink" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/pajkabajka/4458623355/"><img src="http://farm3.staticflickr.com/2693/4458623355_5f8903b6c3_s.jpg" alt="A photo on Flickr" title="red-marine" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/pajkabajka/4458623305/"><img src="http://farm3.staticflickr.com/2759/4458623305_b518c17a9c_s.jpg" alt="A photo on Flickr" title="randomly colored" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/pajkabajka/4458623245/"><img src="http://farm5.staticflickr.com/4048/4458623245_98b508c86d_s.jpg" alt="A photo on Flickr" title="light grey in florals" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/pajkabajka/4459401988/"><img src="http://farm3.staticflickr.com/2756/4459401988_15431861c5_s.jpg" alt="A photo on Flickr" title="dark grey in florals" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image7"><a href="http://www.flickr.com/photos/pajkabajka/4423105816/"><img src="http://farm5.staticflickr.com/4066/4423105816_30a1e91ffe_s.jpg" alt="A photo on Flickr" title="yellow flowers1" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image8"><a href="http://www.flickr.com/photos/pajkabajka/4422340041/"><img src="http://farm3.staticflickr.com/2764/4422340041_030676d7f4_s.jpg" alt="A photo on Flickr" title="yellow flowers" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image9"><a href="http://www.flickr.com/photos/pajkabajka/4417204882/"><img src="http://farm5.staticflickr.com/4065/4417204882_cbba7229d6_s.jpg" alt="A photo on Flickr" title="fuchsia pattern 1" height="75" width="75"></a></div>';
+
+
+b_txt += '<span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&t=f88e90eb59fd4f19b0f0653a8c8052e9&fl_ev=0&lang=en&intl=us" width="0" height="0" alt="" /></span>';
+
+document.write(b_txt);

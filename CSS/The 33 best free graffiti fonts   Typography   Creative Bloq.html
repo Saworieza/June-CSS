@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://www.creativebloq.com/typography/free-graffiti-fonts-11121160 -->
+<html id="top" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js-ready" lang="en" dir="ltr" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div class="kxhead" data-id="I2gAOUHz" style="display:none;"><span class="kxtag kxinvisible" data-id="27701" data-alias="Krux Load Segments v2"><script id="LR1" type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/client.js"></script><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/3"></script><script type="text/javascript">
+// DFP premium
+(function(require) {
+  var store = require('store');
+  var _ = require('util');  
+  var segments;
+  
+  function handleUserDataResponse(r) {
+    // Handle the response as usual.
+    segments.handleUserDataResponse(r);
+    
+    // Override localStorage.kxuser with a case-insensitive value for DFP premium.
+    // This will get read by the interchange direct snippet for Krux.user
+    // and Krux.dfpKeyValues
+    if(r.kuid_long) {
+      store.set('user', r.kuid_long, store.DAYS*30);
+    }
+  }
+  
+  // Our own fetch uses our own handleResponse
+  function fetch() {
+    var options = {
+      url: _.get('url_userData'),
+      data: {pubid: _.get('pubid')},
+      callback: 'kxjsonp_userData',
+      done: handleUserDataResponse
+    };
+    if(!segments.readTechFromStore()) {
+      options.data.technographics = 1;
+    }
+    require('http').jsonp(options);  
+  }
+  
+  
+  if(!store.get('segWait')) {
+    // disable segments.fetch and use our own
+    _.set('segWait', 1, store.MINUTES*5);
+    _.onOnce('dom:load', fetch);
+    _.fire('user_data_fetch_scheduled');
+  }
+  
+  // Finally, require segments as usual.
+  segments = require('segments');
+}(Krux.require));
+</script></span><span class="kxtag kxinvisible" data-id="28966" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//p.acxiom-online.com/pixel/sci",
+      data: {
+          uid: kuid,
+          _kdpid: 'f19b7626-3732-4dcc-bac5-8d2c937dae9a',
+          pid: 3021
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="27698" data-alias="Krux Track Social"><script type="text/javascript">Krux('social.init');</script></span><span class="kxtag kxinvisible" data-id="27699" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="27700" data-alias="Krux Geographic Data provider tag"></span><span class="kxtag kxinvisible" data-id="30067" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "https://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30068" data-alias="IXI Digital (Open Market) provider tag"><script>
+  Krux('require:http').pixel({
+    url: "//s.ixiaa.com/digi/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif"
+  });
+</script></span><span class="kxtag kxinvisible" data-id="30069" data-alias="DataLogix provider tag"><script>
+(function() {
+  // krxd.nexac.com throws SSL cert errors so only fire this tag
+  // on HTTP pages
+  if (location.protocol == "http:") {
+      var Krux = window.Krux;
+      var kuid = Krux('get', 'user');
+      if (kuid) {
+         var u = "http://krxd.nexac.com/dlx.gif?_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&kuid=" + kuid;
+         (new Image()).src = u;
+      }
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30070" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28099" data-alias="eXelate Media provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//loadm.exelator.com/load",
+      data: {
+          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',
+          buid: kuid,
+          p: '204',
+          g: '270',
+          j: '0'
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="28758" data-alias="CreativeBloq DTC"><script>
+loc = location.href.substr(location.href.indexOf('http://')+7,256);
+if(loc.length - loc.indexOf('/') > 1) {
+	path_loc = loc.substr(loc.indexOf('/')+1,256).split('/');
+	if(path_loc[0] == 'apple') {Krux('set', 'section', 'Apple Products');}
+	else if(path_loc[0] == 'gadgets') {Krux('set', 'section', 'Gadgets');}
+	else if(path_loc[0] == 'photography') {Krux('set', 'section', 'Photography');}
+} else {
+	Krux('set', 'section', 'Home Page');
+}
+</script></span><span class="kxtag kxinvisible" data-id="30814" data-alias="DataXu User Match"><script>
+(function(){
+        var kuid = Krux('get', 'user');
+        if (kuid) {
+            var dxu_url = '//i.w55c.net/ping_match.gif?st=Krux&rurl=http://beacon.krxd.net/usermatch.gif?partner=dataxu&uid=_wfivefivec_';
+           var i = new Image();
+           i.src = dxu_url;
+        }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30820" data-alias="Appnexus Extension User Match"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  var cbust = Math.round(new Date().getTime() / 1000);
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//ib.adnxs.com/pxj",
+      data: {
+          bidder: '140',
+          seg: '381342',
+          action: "setuid('" + kuid + "')",
+          bust: cbust
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="29302" data-alias="AdX user sync"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid && typeof kuid != 'undefined') {
+      var prefix = location.protocol == 'https:' ? "https:" :"http:";
+      var r_url = prefix + '//cm.g.doubleclick.net/pixel'
+      var kurl = prefix + '//apiservices.krxd.net/um?partner=google&r=' + r_url;
+      var i = new Image();
+      i.src = kurl;
+  }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28130" data-alias="DTC v1: basic info for training"><script>
+// Using UrlPath 1 to produce page attribute url_path_1
+Krux('scrape', { "page_attr_url_path_1": {url_path: "1"}});
+// Using UrlPath 2 to produce page attribute url_path_2
+Krux('scrape', { "page_attr_url_path_2": {url_path: "2"}});
+// Using Cookie asi_segs to produce user attribute cookie_asi_segs
+Krux('scrape', { "user_attr_cookie_asi_segs": {cookie: "asi_segs"}});
+// Using Cookie rsi_segs to produce user attribute cookie_rsi_segs
+Krux('scrape', { "user_attr_cookie_rsi_segs": {cookie: "rsi_segs"}});
+</script></span></div><script async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/gatrack.js"></script><script async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/controltag.js.ae7f2374304abe49e3ec18a3fb32755f"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/linkid.js" id="undefined"></script><script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/6117.js" async="" type="text/javascript"></script><script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/cb=gapi.loaded_1" async=""></script><script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/cb=gapi.loaded_0" async=""></script><script async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/all-v1.js"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/analytics.js"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/controltag"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/socialize.js">[object Object]</script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/widgets.js"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/in.js"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/ga.js"></script><script async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/gtm.js"></script><script type="text/javascript" async="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/widget.js"></script><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/get" async=""></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+          <meta name="google-site-verification" content="zUiAEoV0xWpyLLW0GL5nEjlImdsOhYen-XH8Bh5rRRw">
+              <meta name="msvalidate.01" content="DD1D5DE15ADB83A7C7A75936197CB88F">
+    
+    
+    <script async="" type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/gpt.js"></script><script class="kxint" type="text/javascript"> 
+        window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]); 
+        (function(){  
+              
+            function  retrieve(n){  
+                var m,  k='kx'+n; 
+                if  (window.localStorage) { 
+                        return  window.localStorage[k]  ||  ""; 
+                } else  if  (navigator.cookieEnabled) { 
+                        m = document.cookie.match(k+'=([^;]*)');  
+                        return  (m  &&  unescape(m[1])) ||  ""; 
+                } else  { 
+                        return  ''; 
+                } 
+            } 
+      
+            Krux.user = retrieve('user'); 
+            Krux.segments = retrieve('segs')  ? retrieve('segs').split(',') : []; 
+              
+            //  DFP Premium 
+            var dfpp  = []; 
+            if  (Krux.user) { 
+                dfpp.push('khost='  + encodeURIComponent(location.hostname)); 
+                dfpp.push('kuid=' + Krux.user); 
+            } 
+            for (var  i = 0;  i < Krux.segments.length; i++ ) { 
+                dfpp.push('ksg='  + Krux.segments[i]);  
+            } 
+            Krux.dfppKeyValues  = dfpp.length ? dfpp.join(';')  + ';' : ''; 
+              
+        })(); 
+    </script> 
+
+    
+<link rel="shortcut icon" href="http://media.creativebloq.futurecdn.net/sites/all/themes/creativebloq_redesign/favicon.ico" type="image/x-icon">
+<script type="text/javascript">var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+(function() { var gads = document.createElement("script"); gads.async = true; gads.type = "text/javascript"; var useSSL = "https:" == document.location.protocol; gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js"; var node = document.getElementsByTagName("script")[0]; node.parentNode.insertBefore(gads, node);})();</script>
+<!-- AUDIENCESCIENCE AD TAG CODE --><script type="text/javascript">var asi_segs = []; var segs_beg = document.cookie.indexOf("asi_segs="); if (segs_beg >= 0) { segs_beg = document.cookie.indexOf("=", segs_beg) + 1; if (segs_beg > 0) { var segs_end = document.cookie.indexOf(";", segs_beg); if (segs_end == -1) { segs_end = document.cookie.length } asi_segs = document.cookie.substring(segs_beg, segs_end).split("|") } } if ((asi_segs == null) || (asi_segs.length == 0)) { asi_segs = "null" } ;</script><!-- END AUDIENCESCIENCE AD TAG CODE -->
+<script type="text/javascript">googletag.cmd.push(function() {
+dfp_leaderboard = googletag.defineSlot("/8644/Design_CreativeBloQ/feature", [[728,90],[970,66],[970,90],[970,250]], "dfp-ad-leaderboard")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","1");
+dfp_mpu1 = googletag.defineSlot("/8644/Design_CreativeBloQ/feature", [300,250], "dfp-ad-mpu1")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","2");
+dfp_skyscraper = googletag.defineSlot("/8644/Design_CreativeBloQ/feature", [[160,600],[300,600]], "dfp-ad-skyscraper")
+  .addService(googletag.pubads())
+  .setTargeting("pos","3");
+dfp_oop_background = googletag.defineOutOfPageSlot("/8644/Design_CreativeBloQ/feature", "dfp-ad-background")
+  .addService(googletag.pubads())
+  .setTargeting("oop","skin")
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","4");
+dfp_oop_overlay = googletag.defineOutOfPageSlot("/8644/Design_CreativeBloQ/feature", "dfp-ad-overlay")
+  .addService(googletag.pubads())
+  .setTargeting("oop","overlay")
+  .setTargeting("pos","5");
+dfp_inline_advert_mpu_body_1 = googletag.defineSlot("/8644/Design_CreativeBloQ/feature", [300,250], "dfp-ad-advert_mpu_body_1")
+  .addService(googletag.pubads())
+  .setTargeting("pos","6");
+dfp_leaderboardmobile = googletag.defineSlot("/8644/Design_CreativeBloQ/feature", [320,50], "dfp-ad-leaderboardmobile")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","1");
+googletag.pubads().setTargeting("ksg",  Krux.segments);
+googletag.pubads().setTargeting("kuid", Krux.user); 
+googletag.pubads().setTargeting("khost",  encodeURIComponent(location.hostname)); 
+googletag.pubads().setTargeting("asi", asi_segs);
+googletag.pubads().setTargeting("kw", ["Typography","Graphic design","Feature"]);
+googletag.pubads().setTargeting("articleid", "1160");
+googletag.pubads().enableAsyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();});
+</script><script async="" type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/pubads_impl_39.js"></script>
+<meta name="description" content="We&#39;ve sourced the coolest free graffitti fonts for you to use, no catch, so you can add a bit of Banksy to your project.">
+<link rel="canonical" href="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/The 33 best free graffiti fonts   Typography   Creative Bloq.html">
+<meta name="revisit-after" content="1 day">
+<link rel="image_src" href="http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/imagecache/v2_article_image/articles/article/2014/01/misdem-prime.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CreativeBloQ">
+<meta name="twitter:url" content="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160">
+<meta name="twitter:title" content="The 33 best free graffiti fonts">
+<meta name="twitter:image" content="http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/imagecache/v2_article_image/articles/article/2014/01/misdem-prime.jpg">
+<meta name="twitter:description" content="Check out this cool compilation of free graffiti font styles for you to use right now.">
+<meta name="twitter:creator" content="@creativebloq">
+<title>The 33 best free graffiti fonts | Typography | Creative Bloq</title>
+<meta name="description" content="Check out this cool compilation of free graffiti font styles for you to use right now.">
+<meta name="keywords" content="Typography,Graphic design,Feature,Feature">
+<link rel="canonical" href="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/The 33 best free graffiti fonts   Typography   Creative Bloq.html">
+<script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/saved_resource"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/css_646761e397a3cd3b7f0ae8a5382ac057.css">
+    <link href="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/future_branding.min.css" rel="stylesheet" type="text/css">
+
+        
+    <!-- Maxymiser script start -->
+    <script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/mmcore.js"></script><script id="mmcore.1" type="text/javascript" charset="utf-8" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/saved_resource(1)"></script>
+    <!-- Maxymiser script end -->
+  <script async="" defer="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/317817.js"></script><script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/nonSecureAnonymousFramework"></script><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/osd.js"></script><style type="text/css">* html #li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link{height:1% !important;}#li_ui_li_gen_1400326830488_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link:link, #li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link:visited, #li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link:hover, #li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1400326830488_0 a#li_ui_li_gen_1400326830488_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-logo{background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-logo, #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-logo{}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title, #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title{}.IN-shadowed #li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title{}.IN-shadowed #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title, .IN-shadowed #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title{}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text, #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title-text, #li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title-text *{color:#000 !important;}#li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title-text, #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title-text, #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title-text *, #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title-text *{color:#666 !important;}#li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title #li_ui_li_gen_1400326830488_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text, .success #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1400326830488_0 #li_ui_li_gen_1400326830488_0-title{}.success #li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title-text, .success #li_ui_li_gen_1400326830488_0.hovered #li_ui_li_gen_1400326830488_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title, .success #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title-text, .success #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title-text, .success #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title-text *, .success #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1400326830488_0.clicked #li_ui_li_gen_1400326830488_0-title, .IN-shadowed .success #li_ui_li_gen_1400326830488_0.down #li_ui_li_gen_1400326830488_0-title{}#li_ui_li_gen_1400326830513_1-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1400326830513_1.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:-150px top !important;}#li_ui_li_gen_1400326830513_1-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:38px !important;}#li_ui_li_gen_1400326830513_1-container.IN-empty #li_ui_li_gen_1400326830513_1-inner.IN-top {background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -20px !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1400326830513_1-container.IN-empty #li_ui_li_gen_1400326830513_1-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1400326830513_1-container.IN-hidden #li_ui_li_gen_1400326830513_1 {display:none !important;}* html #li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link{height:1% !important;}#li_ui_li_gen_1400326830521_2{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link:link, #li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link:visited, #li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link:hover, #li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1400326830521_2 a#li_ui_li_gen_1400326830521_2-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-logo{background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-logo, #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-logo{}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title, #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title{}.IN-shadowed #li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title{}.IN-shadowed #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title, .IN-shadowed #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title{}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text, #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text em{font-style:italic !important;}#li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title-text, #li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title-text *{color:#000 !important;}#li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title-text, #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title-text, #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title-text *, #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title-text *{color:#666 !important;}#li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title #li_ui_li_gen_1400326830521_2-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text, .success #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1400326830521_2 #li_ui_li_gen_1400326830521_2-title{}.success #li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title-text, .success #li_ui_li_gen_1400326830521_2.hovered #li_ui_li_gen_1400326830521_2-title-text *{color:#000 !important;}.success #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title, .success #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title-text, .success #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title-text, .success #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title-text *, .success #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1400326830521_2.clicked #li_ui_li_gen_1400326830521_2-title, .IN-shadowed .success #li_ui_li_gen_1400326830521_2.down #li_ui_li_gen_1400326830521_2-title{}#li_ui_li_gen_1400326830526_3-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1400326830526_3.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:-150px top !important;}#li_ui_li_gen_1400326830526_3-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:38px !important;}#li_ui_li_gen_1400326830526_3-container.IN-empty #li_ui_li_gen_1400326830526_3-inner.IN-top {background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -20px !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1400326830526_3-container.IN-empty #li_ui_li_gen_1400326830526_3-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1400326830526_3-container.IN-hidden #li_ui_li_gen_1400326830526_3 {display:none !important;}</style><style type="text/css">.ob-tcolor{color:rgb(51, 51, 51)} .ob-lcolor{color:rgb(255, 90, 20)} .ob-bgtcolor{background-color:rgb(51, 51, 51)} .item-link-container:hover .ob-tcolor{border-color:rgb(51, 51, 51)}</style><style type="text/css">#future-gigya-login td, #future-gigya-login table {width:auto;font-size:1px;vertical-align:top;border-collapse:separate;border:none; padding:0px;margin:0px;} #future-gigya-login {}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script async="" type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/seg"></script></head>
+  <body class="not- page-node node-type-article   i18n-en placeholder-support" itemscope="" itemtype="http://schema.org/WebPage" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/hub(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="gigya_ruler" style="visibility: hidden; position: absolute; margin: 0px; padding: 0px; line-height: 11px; font-family: arial; font-size: 11px; white-space: nowrap; width: auto; overflow: hidden; display: none;"><span id="gigya_ruler_text"></span></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/dgdTycPTSRj.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/dgdTycPTSRj(1).html" style="border: none;"></iframe></div></div></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 10px; padding-right: 20px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden;" class=""></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position:absolute; width:9999px; visibility:hidden; display:none"></div></div><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/608736030.js"></script><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/pcx.js"></script>
+    <!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+          <div class="block block-future_dfp" id="block-future_dfp-background">
+      <div class="content"><div id="dfp-ad-background" class="dfp-tag-wrapper" style="display: none;">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-background");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_3__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_3" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_3" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_3__hidden__" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_3__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe>
+</div>
+</div>
+</div>        <div id="container">
+      <div class="wrap social">
+        <nav id="menu-site-nav"><header class="assistive-text">View content by tag</header>
+          <ul class="menu">
+            <li class="leaf first link-features"><a href="http://www.creativebloq.com/tag/feature" title="">Features</a></li>
+            <li class="leaf link-news"><a href="http://www.creativebloq.com/tag/news" title="">News</a></li>
+            <li class="leaf link-tutorials"><a href="http://www.creativebloq.com/tag/tutorial" title="">Tutorials</a></li>
+            <li class="leaf link-opinion"><a href="http://www.creativebloq.com/tag/opinion" title="">Opinion</a></li>
+            <li class="leaf link-interviews"><a href="http://www.creativebloq.com/tag/interview" title="">Interviews</a></li>
+            <li class="leaf last link-videos"><a href="http://www.creativebloq.com/tag/video" title="">Videos</a></li>
+          </ul>
+        </nav>
+
+        <ul class="header_icons">
+          <li class="twitter"><a href="http://twitter.com/creativebloq"><span class="FIR">Twitter<span></span></span></a></li>
+          <li class="facebook"><a href="http://www.facebook.com/creativebloq"><span class="FIR">Facebook<span></span></span></a></li>
+          <li class="pintrest"><a href="http://pintrest.com/creativebloq"><span class="FIR">Pintrest<span></span></span></a></li>
+          <li class="youtube"><a href="http://www.youtube.com/creativebloq"><span class="FIR">YouTube<span></span></span></a></li>
+          <li class="google_plus"><a href="https://plus.google.com/111587549431808172126"><span class="FIR">Google+<span></span></span></a></li>
+          <li class="future"><a href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#future_company_footer"><span class="FIR">Future<span></span></span></a></li>
+        </ul>
+      </div>
+
+      <header id="header" role="banner">
+        <div class="main_nav">
+          <div class="wrap">
+            <div class="content">
+              <a id="nav-btn-open" class="nav-btn" title="Open Menu" href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#header">Open Menu</a>
+              <a id="nav-btn-close" class="nav-btn" title="Close Menu" href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#top">Close Menu</a>
+              <div id="site-logo"><h1><a href="http://www.creativebloq.com/" title="Homepage">Creative Bloq</a></h1></div>
+                          </div><!-- content -->
+                      <nav role="navigation" class="nav" id="nav">
+            <ul class="user-opts">
+              <li class="user-search">
+                <a class="expand" href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#site-search" data-toggle="block"><i class="cb-icon-search"></i></a>
+                <div id="site-search" class="searchblock superblock closed">
+                  <form action="http://www.creativebloq.com/search" accept-charset="UTF-8" method="get" id="future-search-block-form" class="search-form">
+                    <input type="text" maxlength="255" name="term" id="search-term" value="" placeholder="Search" class="cb-search search-text">
+                    <input type="submit" value="Search" class="btn btn-search">
+                  </form>
+                </div>
+              </li>
+                            <li class="user-login">
+              <a href="http://www.creativebloq.com/user/login?destination=typography%2Ffree-graffiti-fonts-11121160"><i class="cb-icon-profile">Login</i></a>              </li>
+                          </ul>
+            <ul class="primary" id="main-menu">
+              <li class="menu-home home"><a href="http://www.creativebloq.com/">Home</a></li>
+              <li class="menu-graphic-design"><a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a></li>
+              <li class="menu-web-design"><a href="http://www.creativebloq.com/tag/Web-design">Web design</a></li>
+              <li class="menu-3d"><a href="http://www.creativebloq.com/tag/3D">3D</a></li>
+              <li class="menu-audiovisual"><a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a></li>
+              <li class="menu-typography extra-mob"><a href="http://www.creativebloq.com/tag/Typography">Typography</a></li>
+              <li class="menu-branding extra-mob"><a href="http://www.creativebloq.com/tag/Branding">Branding</a></li>
+							<li class="menu-illustration extra-mob"><a href="http://www.creativebloq.com/tag/illustration">Illustration</a></li>
+              <li>
+                <a class="expand" href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#more-block" data-target="block">More… <i class="cb-icon-menu-arrow"></i></a>
+                <div id="more-block" class="superblock closed">
+                  <ul class="shortlist">
+                    <li class="block-title">
+                      <h5>Most Popular</h5>
+                    </li>
+                    <li><a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Web-design">Web design</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/3D">3D</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Inspiration">Inspiration</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/typography">Typography</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/branding">Branding</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/illustration">Illustration</a></li>
+                  </ul>
+                  <div class="longlist">
+                    <div class="inner scroll-pane jspScrollable" tabindex="0" style="overflow: hidden; padding: 0px; width: 649px;">
+                                          <div class="jspContainer" style="width: 649px; height: 411px;"><div class="jspPane" style="padding: 0px; left: 0px; width: 649px;"><div class="view view-tag-menu view-id-tag_menu view-display-id-taxonomy_menu_block view-dom-id-68a88a2ade0a3364fe868714e3cb28cd">
+    
+  
+  
+      <div class="view-content">
+        <ul>      <li class="block-title"><h5>3</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/3D">3D</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3D-modelling">3D modelling</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3D-printing">3D printing</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3ds-Max">3ds Max</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>A</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Adobe">Adobe</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Advertising">Advertising</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/After-Effects">After Effects</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Agencies">Agencies</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Android">Android</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Animation">Animation</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/App-design">App design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Apple">Apple</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Art-direction">Art direction</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>B</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Behance">Behance</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Blender">Blender</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Branding">Branding</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Business">Business</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>C</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Career">Career</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Character-design">Character design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Cinema-4D">Cinema 4D</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Comics">Comics</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Create-Now">Create Now</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Creative-Cloud">Creative Cloud</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Creativity">Creativity</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/CSS3">CSS3</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>D</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Design">Design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Dreamweaver">Dreamweaver</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>E</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Education">Education</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>F</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Flash">Flash</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>G</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Gadgets">Gadgets</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Gamification">Gamification</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>H</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Hardware">Hardware</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/HTML5">HTML5</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>I</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Illustration">Illustration</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Illustrator">Illustrator</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/InDesign">InDesign</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Infographic">Infographic</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Inspiration">Inspiration</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Interview">Interview</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/iPad">iPad</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/iPhone">iPhone</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>J</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/JavaScript">JavaScript</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Jobs">Jobs</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/jQuery">jQuery</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>L</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Logo-design">Logo design</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>M</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Maya">Maya</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Microsoft">Microsoft</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Mobile">Mobile</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Moleskine">Moleskine</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Motion-graphics">Motion graphics</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Movies">Movies</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>N</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Navigation">Navigation</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/News">News</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>O</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Opinion">Opinion</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/OS-X">OS X</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>P</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Packaging">Packaging</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Photography">Photography</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Photoshop">Photoshop</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Portfolios">Portfolios</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Posters">Posters</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Premiere-Pro">Premiere Pro</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Print-design">Print design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Product-design">Product design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Productivity">Productivity</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>Q</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Q%2526A">Q&amp;A</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>R</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Review">Review</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>S</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Self-promotion">Self promotion</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Showcase">Showcase</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Showreel">Showreel</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Street-art">Street art</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Studio">Studio</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>T</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Tutorial">Tutorial</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Twitter">Twitter</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Typography">Typography</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>U</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/UX">UX</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>V</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Video">Video</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Video-games">Video games</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Video-production">Video production</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>W</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Wallpapers">Wallpapers</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Web-design">Web design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Weekly">Weekly</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Wireframes">Wireframes</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/WordPress">WordPress</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>Z</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/ZBrush">ZBrush</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div></div><div class="jspHorizontalBar"><div class="jspCap jspCapLeft"></div><div class="jspTrack" style="width: 651px;"><div class="jspDrag" style="width: 96px;"><div class="jspDragLeft"></div><div class="jspDragRight"></div></div></div><div class="jspCap jspCapRight"></div></div></div></div><!-- .inner -->
+                  </div><!-- .longlist -->
+                </div>
+              </li>
+            </ul>
+            <ul class="other">
+              <li class="menu-jobs-board last">
+                <a href="http://jobs.creativebloq.com/" title="">Jobs</a>
+              </li>
+              <li>
+                <a class="expand" href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#magazines-block" data-toggle="block">Magazines<i class="cb-icon-menu-arrow"></i></a>
+                <div id="magazines-block" class="superblock closed">
+                  <div class="view view-magazines view-id-magazines view-display-id-magazine_menu_block view-dom-id-4ab7055dc5e1594d0cdf64276e534a2a">
+    
+  
+  
+      <div class="view-content">
+          <ul class="magazines">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+          <a href="http://www.creativebloq.com/3d-world-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/maythreewidget.jpg" alt="" title="" width="133" height="172" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/3d-world-magazine" class="btn-cover">3D World</a>  </li>
+          <li class="views-row views-row-2 views-row-even">  
+          <a href="http://www.creativebloq.com/computer-arts-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/art227coversmall.jpg" alt="" title="" width="133" height="180" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/computer-arts-magazine" class="btn-cover">Computer Arts</a>  </li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+          <a href="http://www.creativebloq.com/net-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/netmay.jpg" alt="" title="" width="133" height="172" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/net-magazine" class="btn-cover">net magazine</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>                  <ul class="shortlist">
+                    <li class="block-title"><h5>Other Products</h5></li>
+                    <li><a href="http://www.myfavouritemagazines.co.uk/design-bookazines/">Special Editions</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          </div><!-- .wrap -->
+        </div>
+      </header>
+      <div id="header_top" class="wrap above-header">
+        
+                  <nav id="menu-site-nav"><header class="assistive-text">View content by tag</header><ul class="menu"><li class="leaf first link-features"><a href="http://www.creativebloq.com/tag/feature" title="">Features</a></li>
+<li class="leaf link-news"><a href="http://www.creativebloq.com/tag/news" title="">News</a></li>
+<li class="leaf link-tutorials"><a href="http://www.creativebloq.com/tag/tutorial" title="">Tutorials</a></li>
+<li class="leaf link-opinion"><a href="http://www.creativebloq.com/tag/opinion" title="">Opinion</a></li>
+<li class="leaf link-interviews"><a href="http://www.creativebloq.com/tag/interview" title="">Interviews</a></li>
+<li class="leaf last link-videos"><a href="http://www.creativebloq.com/tag/video" title="">Videos</a></li>
+</ul></nav>
+<div class="block block-future_dfp" id="block-future_dfp-leaderboard">
+      <div class="content"><div id="dfp-ad-leaderboard" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-leaderboard");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_0" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div class="block block-future_dfp" id="block-future_dfp-leaderboardmobile" style="display: none;">
+      <div class="content"><div id="dfp-ad-leaderboardmobile" class="dfp-tag-wrapper" style="display: none;"></div>
+</div>
+</div>        
+      </div>
+      <div id="page-canvas"><!-- important: for mobile off-canvas navigation, must be after header -->
+        <div class="grid">
+          <div id="main-content" class="page-content">
+            <section class="article-listing-section">
+
+              
+              
+                                            
+              
+                            
+              
+                <nav class="next-prev clearfix">
+    <h3 id="next-prev-nav">Previous and Next articles</h3>
+          <a href="http://www.creativebloq.com/responsive-web-design/palantir-retro-space-themed-responsive-site-11121159" class="prev">
+        <article class="">
+                      <figure>
+              <img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/palantirprimary.jpg" alt="" title="" width="130" height="73" class="imagecache imagecache-v2_teaser_image">            </figure>
+                    <h4>Palantir: retro space-themed agency site</h4>
+        </article>
+      </a>
+              <a href="http://www.creativebloq.com/branding/cowco-innovative-branding-11121161" class="next">
+        <article class="">
+                      <figure>
+              <img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/cowprimary.jpg" alt="" title="" width="130" height="73" class="imagecache imagecache-v2_teaser_image">            </figure>
+                    <h4>Design superstore Cow&amp;Co's innovative branding</h4>
+        </article>
+      </a>
+      </nav>
+
+<article class="node node-article" itemscope="" itemtype="http://schema.org/Article">
+  <header>
+          <h4><span class="tag">Typography</span><span class="topic tag">Feature</span></h4>
+            <h1 class="title" itemprop="name"><span>The 33 best free graffiti fonts</span></h1>
+          <div class="submitted">
+  <div class="submitted-info">
+    <span><time datetime="2014-01-07T15:30:42+00:00" class="js-hide"><span class="submitted-date">Jan 7, 2014</span> <span class="submitted-time">15:30 pm</span></time></span>
+    <span class="submitted-comment-count comment-count-1"><span class="comment-count"><a href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#comments-list">1 comment</a></span></span>
+  </div>
+      
+<div class="share-links">
+	<h3>Share this article</h3>
+	<ul>
+					<li class="twitter-button">
+				<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/tweet_button.1400006231.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 62px;"></iframe>			
+			</li>
+					
+					<li class="facebook-button">
+				<iframe src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:51px; height:62px;" allowtransparency="true"></iframe>			
+			</li>
+					
+					
+			<li class="googleplus-button">
+				<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I0_1400326829563" name="I0_1400326829563" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>		
+			</li>
+					
+					
+			<li class="linkedin-button">
+				<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326830513_1-container" class="IN-top"><span id="li_ui_li_gen_1400326830513_1" class="IN-top"><span id="li_ui_li_gen_1400326830513_1-inner" class="IN-top"><span id="li_ui_li_gen_1400326830513_1-content" class="IN-top">20</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326830488_0"><a id="li_ui_li_gen_1400326830488_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1400326830488_0-logo">in</span><span id="li_ui_li_gen_1400326830488_0-title"><span id="li_ui_li_gen_1400326830488_0-mark"></span><span id="li_ui_li_gen_1400326830488_0-title-text">Share</span></span></a></span></span></span><script type="in/share+init" data-counter="top"></script>		
+			</li>
+		
+		
+			</ul>
+</div>  </div>    
+              
+  </header>
+
+  <div class="content">
+
+                  <h2 class="strapline">
+          Check out this cool compilation of free graffiti font styles for you to use right now.        </h2>
+            
+    
+    
+    <div class="copy">
+      <p>We've sourced the coolest free graffitti fonts for you to use, no catch, so you can add a bit of Banksy to your project.</p>
+<p>In recent decades, graffiti has moved from an urban nuisance to a professional business thanks to the rise of <a href="http://www.creativebloq.com/street-art/examples-street-art-612334" target="_blank">street art</a> as a serious creative force. And with the artform ever growing in popularity, there are now a wealth of graffiti font styles available online for creatives to use as the <a href="http://www.creativebloq.com/tag/typography">typography</a> in their urban artwork.</p>
+<p>Here, we've scoured the web to find you the best examples of <a href="http://www.creativebloq.com/graphic-design-tips/best-free-fonts-for-designers-1233380">free fonts</a> in a graffiti style for designers. Enjoy!</p>
+<h3 class="crosshead">01. <a href="http://www.behance.net/gallery/Fozzie-Got-A-Posse-Typeface-Free-Font/12858351" target="_blank">Fozzie Got A Posse Typeface</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Posse" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/posse.jpg" style="width:535px">
+	<figcaption>This graffiti font is explicitly based on tagging</figcaption>
+</figure>
+<p>Thiago, aka TIPS, is a 29-year-old graphic designer from São Paulo, Brazil and he's generously made this organic font based on graffiti tagging available as a free download. A brilliant graffiti font with a name you can't help but love.</p>
+<h3 class="crosshead">02. <a href="http://www.fontspace.com/kc-fonts/misdemeanor" target="_blank">Misdemeanour</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Misdemeanour" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/misdem.jpg" style="width:535px">
+	<figcaption>Misdemeanour is a stencil font with a graffiti edge</figcaption>
+</figure>
+<p>Misdemeanour is a spraypaint <a href="http://www.creativebloq.com/typography/10-top-free-stencil-fonts-2131956" target="_blank">stencil font</a> by Kevin Christopher. Free for personal use only, this could be the perfect graffiti font for your <a href="http://www.creativebloq.com/street-art/10-best-banksy-designs-new-york-11135137" target="_blank">Banksy</a>-inspired designs.</p>
+<h3 class="crosshead">03. <a href="http://www.fontspace.com/blambot/youmurderer-bb" target="_blank">You Murderer</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font You Murderer" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/killer.jpg" style="width:535px">
+	<figcaption>You Murderer conveys a serial killer vibe masterfully</figcaption>
+</figure>
+<p>Want to convey the deranged killer vibe? Then the self-explanatory You Murder font offers a suitably psychotic graffiti font for you to try out. Created by Nate Piekos, it's free for personal use only.</p>
+<h3 class="crosshead">04. <a href="http://www.behance.net/gallery/Brooklyn-Font-Free-Font/6674365" target="_blank">Brooklyn</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Brooklyn" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/brooklyn.jpg" style="width:535px">
+	<figcaption>Brooklyn is available in two versions, regular and inline</figcaption>
+</figure>
+<p>One of our favourite graffiti font styles, Brooklyn was developed by graphic designer <a href="http://www.behance.net/paulreis" target="_blank">Paul Reis</a>, who describes it online as 'a calligraphy-based typeface that is both sleek and brutal'. Created as a result of his calligraphic exercises and doodles, Brooklyn is available in two versions, regular and inline.</p>
+<h3 class="crosshead">05. <a href="http://www.dafont.com/stylin-brk.font" target="_blank">Stylin' BRK</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Styli&#39; BRK" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/stylinbrk.jpg" style="width:535px">
+	<figcaption>Styli' BRK is a simple marker style tag design. Image © Beraka</figcaption>
+</figure>
+<p>Stylin' BRK was the first font created by graphic and web designer <a href="http://about.me/beraka" target="_blank">Beraka</a>. One of many graffiti font styles developed by this artist, the simple marker style tag design is by far his most popular download. Free for personal use only.</p>
+<h3 class="crosshead">06. <a href="http://www.dafont.com/a-dripping-marker.font" target="_blank">A Dripping Marker</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font A Dripping Marker" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/drippingmarker.jpg" style="width:535px">
+	<figcaption>Give your graffiti designs an authetic feel with A Dripping Marker by Wick van den Belt</figcaption>
+</figure>
+<p>The name says it all: A Dripping Marker, created by designer <a href="http://www.wickhop.nl/Wickhop/" target="_blank">Wick van den Belt</a>, is free for personal use only and comes complete with a full set of upper and lowercase characters, numbers and selection of special characters. A worthy inclusion in our list of the best free graffiti font styles.</p>
+<h3 class="crosshead">07. <a href="http://www.dafont.com/maelstrom.font" target="_blank">Maelstrom</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Maelstrom" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/maelstrom.jpg" style="width:535px">
+	<figcaption>This detailed graffiti font was created by designer Chung-Deh Tien</figcaption>
+</figure>
+<p><a href="http://www.dafont.com/chung-deh-tien.d2979" target="_blank">Chung-Deh Tien</a> is the man behind this heavy, detailed typeface design Maelstrom. Tien describes this font as his 'contribution to civic eyesore'. The detailed design is one of the most inspiring graffiti font styles we've seen - and it's free for personal use!</p>
+<h3 class="crosshead">08. <a href="http://www.dafont.com/juice.font" target="_blank">Juice</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Juice" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jiuce.jpg" style="width:535px">
+	<figcaption>Juice is one of many typeface designs by Fontalicious</figcaption>
+</figure>
+<p>This font is one of over 100 designs which, collectively, have been downloaded over 10 millions, by <a href="http://www.fontbros.com/foundries/fontalicious" target="_blank">Fontalicious</a>. A popular choice among free graffiti fonts, with its quirky, marker-style design it has received over half a million downloads to date.</p>
+<h3 class="crosshead">09. <a href="http://www.dafont.com/street-writer.font" target="_blank">Street Writer</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti fontStreet Writer" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/streetwriter.jpg" style="width:535px">
+	<figcaption>Get an authentic graffiti feel with this cool Street Writer font</figcaption>
+</figure>
+<p>If you're looking for free graffiti font downloads, this one is well worth considering. Give your graffiti illustrations an authentic feel with this font by Noah. The interesting design incorporates small pictures outside of each letter and includes a full set of uppercase letters and numbers.</p>
+<h3 class="crosshead">10. <a href="http://www.dafont.com/amsterdam-graffiti.font" target="_blank">Amsterdam Graffiti</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Amsterdam Graffiti" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/amsterdam.jpg" style="width:535px">
+	<figcaption>Jesse Kuiper's Amsterdam Graffiti is free for personal use</figcaption>
+</figure>
+<p>Designer <a href="http://www.dafont.com/jesse-kuiper.d2389" target="_blank">Jesse Kuiper</a> was the brains behind this brilliant free graffiti font. A popular choice, it's received nearly 1.4million downloads since its release. It's free for personal use only, with donations to the author, as always, welcome.</p>
+<h3 class="crosshead">11.&nbsp;<a href="http://www.dafont.com/jerome-delage.d1232" target="_blank">El&amp;font Block</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font El&amp;font Block" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/elefont.jpg" style="width:535px">
+	<figcaption>Create striking designs with the El&amp;font Block typeface. lllustration © Jerome Delage</figcaption>
+</figure>
+<p>Typeface designer <a href="http://www.dafont.com/jerome-delage.d1232" target="_blank">Jérôme Delage</a> is the brains behind this brilliant free graffiti font titled El&amp;font (see what he did there?) Block. A member of&nbsp;<a href="http://www.dafont.com/" target="_blank">Dafont.com</a>&nbsp;- the archive of freely downloadable fonts -&nbsp;Delage is the author of eight typefaces on the popular site, which collectively have been download over seven million times!</p>
+<h3 class="crosshead">12.&nbsp;<a href="http://www.fontspace.com/kc-fonts/urban-jungle" target="_blank">Urban Jungle</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Urban Jungle" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/Urban-Jungle.jpg" style="width:535px">
+	<figcaption>Typeface designer Kevin Christopher designed this gorgeous typeface, which is perfect for creating stand out poster and flyer designs</figcaption>
+</figure>
+<p>This big, bold typeface 'Urban Jungle' was created by designer Kevin Christopher of <a href="http://www.kcfonts.com/" target="_blank">KC Fonts</a>. The eye-catching free graffiti font is perfect for creating stand out graffiti-style posters and flyers. There's a charge to get hold of the full font but you can do personal work to your heart's content with this free demo version.&nbsp;</p>
+<h3 class="crosshead">13.&nbsp;<a href="http://www.mawns.com/wordpress/font/?font=ghang" target="_blank">Ghang</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Ghang" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/ghang.jpg" style="width:535px">
+	<figcaption>Make an impact with your work by using typeface Ghang. Image © Måns Grebäck</figcaption>
+</figure>
+<p>Graphic designer Måns Grebäck specialises in font, logotype and typography design and he developed this free graffiti font, as well as a host of other <a href="http://www.mawns.com/wordpress/fonts/categories/graffiti/" target="_blank">typefaces</a> in this particular style. The demo version of Ghang is available as a free download or the full font can be purchased for $59 on Grebäck's site <a href="http://www.mawns.com/wordpress/font/?font=ghang" target="_blank">Mawns</a>&nbsp;.&nbsp;</p>
+<h3 class="crosshead">14. <a href="http://www.fontriver.com/font/nosegrind/" target="_blank">Nosegrind</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Nosegrind" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/nosegrind.jpg" style="width:535px">
+	<figcaption>The Nosegrind typeface was inspired by similar graffiti styles found on walls in Austin and online</figcaption>
+</figure>
+<p>This free graffiti font comes from <a href="http://www.fontcraft.com/fontcraft/#axzz2BMxOBH1v" target="_blank">Scriptorium Fonts</a>, an Austin, Texas-based type foundry started in 1992 by game designer, editor and historian Dave Nalle. Describing the typeface, Nalle says on his website,&nbsp;'Nosegrind is based on skate-culture graffiti gleaned from various samples of similar style found on walls in Austin and online'.&nbsp;</p>
+<h3 class="crosshead">15.&nbsp;<a href="http://www.hydro74.com/typefaces/font/the-pricks/" target="_blank">The Pricks</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Pricks" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/pricks.jpg" style="width:535px">
+	<figcaption>A brilliant, aptly named typeface by designer Hydro74. Image © Hydro74</figcaption>
+</figure>
+<p>We love this simple block font with mean spikes&nbsp;by&nbsp;Orlando-based designer <a href="http://www.hydro74.com/" target="_blank">Hydro74</a> aka&nbsp;Joshua M. Smith. The free graffiti font is just one of many typefaces Hydro74 has come up with.&nbsp;While many of them you have to pay for, the generous designer also has a bunch of brilliant free fonts up for grabs on his site.&nbsp;</p>
+<div class="future_dfp-inline_ad">
+   <h4 class="dfp-ad-advert_mpu_body_1">Advertisement</h4>
+  <div id="dfp-ad-advert_mpu_body_1" class="dfp-tag-wrapper">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("dfp-ad-advert_mpu_body_1");});</script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_5__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_5" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_5" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+  </div>
+</div>
+<h3 class="crosshead">16.&nbsp;<a href="http://www.smirapdesigns.com/30851/downloads" target="_blank">The Graffiti Font </a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="The Graffiti Font" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/graffiti.jpg" style="width:535px">
+	<figcaption>The Graffiti Font is available in both black and white and colour. Image © Mike Karolos</figcaption>
+</figure>
+<p>This handmade graffiti font was created by 27-year-old graphic designer <a href="http://www.behance.net/SmirapDesigns" target="_blank">Mike Karolos</a>&nbsp;who currently works as an art director in Athens.&nbsp;The bold colour and fresh, funky feel to this free graffiti font makes it perfect for injecting life to any bare wall. Only upper case letters are available but the font is free for both personal and commercial use.&nbsp;</p>
+<h3 class="crosshead">17.&nbsp;<a href="http://www.dafont.com/degrassi.font" target="_blank">Degrassi</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Degrassi" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/degrassi.jpg" style="width:535px">
+	<figcaption>Degrassi by typeface designer Ray Larabie</figcaption>
+</figure>
+<p>Degrassi typeface creator&nbsp;Ray Larabie describes this free graffiti font as a 'somewhat wack, graffiti inspired font', which pretty much sums it up. President of Japanese company <a href="http://typodermicfonts.com/" target="_blank">Typodermic Fonts</a>, Larabie has designed numerous typefaces, many of which are free to download on his site.</p>
+<h3 class="crosshead">18.&nbsp;<a href="http://www.dafont.com/brock-vandalo.font" target="_blank">Brock Vandalo</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Brock" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/vandalo.jpg" style="width:535px">
+	<figcaption>Typeface Brock Vandalo looks like it was hand drawn effortlessly. Image © Luis Marques</figcaption>
+</figure>
+<p>Graphic design student&nbsp;<a href="http://www.behance.net/BrockMarques" target="_blank">Luis Marques</a>&nbsp;aka Brock Marques is the man behind this free graffiti font. The design features rounded shaped characters with thin ends and hairpin bends. Marques describes his typeface as being 'joyous and sometimes disorganised but with a sense of urban scrawl graffiti'.</p>
+<h3 class="crosshead">19.&nbsp;<a href="http://www.dafont.com/inner-city.font" target="_blank">Inner City</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti fon tInner City" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/inner_city.jpg" style="width:535px">
+	<figcaption>Add a bit of old school to your work with this cool, free Inner City typeface. lmage © Mike Wolf</figcaption>
+</figure>
+<p>We love this 3D drop font by type designer <a href="http://www.dafont.com/mike-wolf.d3348" target="_blank">Mike Wolf</a>. His particular use of colour in the above design reminds us of the old school graffiti you still see on the walls of many concrete jungles around the globe. Free for personal use, the font includes a full set of caps and digits.</p>
+<h3 class="crosshead">20.&nbsp;<a href="http://fontvir.us/?x=fontz&xx=graffonti" target="_blank">Graffonti</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Graffonti" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/Graffonti.jpg" style="width:535px">
+	<figcaption>The Graffonti typefaces incorporates many styles, including drop 3D and gradient fill</figcaption>
+</figure>
+<p>This cool 3D drop font was created by&nbsp;30-year-old programmer Xero who has created typefaces as a hobby since 1997. The designer runs the site <a href="http://fontvir.us/" target="_blank">Fontvir.us</a>&nbsp;where you can read all about and download more of his brilliant creations. &nbsp;</p>
+<h3 class="crosshead">21.&nbsp;<a href="http://dirt2.com/fonts/please-show-me-love/" target="_blank">Please show me love</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Please" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/showmelove.jpg" style="width:535px">
+	<figcaption>Download this cool font to add a handwritten scrapbook-inspired feel to your work. Image © Andrew Hart</figcaption>
+</figure>
+<p>Designer Andrew Hart is the author of&nbsp;<a href="http://dirt2.com/" target="_blank">Dirt 2</a>, a site dedicated to design resources - a section of which offers font downloads. There are many to choose from but we particularly liked his handwritten scrapbook-inspired free graffiti font titled 'Please show me love'. Note: the free version is limited to demo only for non-commercial purposes.&nbsp;</p>
+<h3 class="crosshead">22.&nbsp;<a href="http://www.1001freefonts.com/Hardkaze.php" target="_blank">Hardkaze</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Hardkaze" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/hardkaze.jpg" style="width:535px">
+	<figcaption>The uniquely named designer Pizzadude created this cool graffiti style typeface Hardkaze</figcaption>
+</figure>
+<p>This casual looking, hand drawn free graffiti font was designed by&nbsp;Jakob Fischer aka <a href="http://www.pizzadude.dk/home.php" target="_blank">Pizzadude</a>. Based in Copenhagen, Fischer describes his style as 'Loose, laid back and goofy, which especially comes to expression through unique handmade fonts.'&nbsp;</p>
+<h3 class="crosshead">23.&nbsp;<a href="http://www.11-d.net/" target="_blank">Whoa</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Whoa" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/whoa.jpg" style="width:535px">
+	<figcaption>This cool Whoa font was inspired by graffiti styles of the early 90's</figcaption>
+</figure>
+<p>If you're looking for a free graffiti font that packs a punch then check out this 'Whoa' font by&nbsp;Stockholm-based creative&nbsp;Johan Waldenström. The designer comments on his site <a href="http://www.11-d.net/" target="_blank">11-D productions</a>, 'As a kid I was often fascinated by all the hiphop graffiti I saw around the early 90's. The oldschool era of graffiti was (and still is) very fascinating to me'.</p>
+<h3 class="crosshead">24.&nbsp;<a href="http://www.dafont.com/ruthless-one.font" target="_blank">Ruthless One</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Ruthless One" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/ruthless_one.jpg" style="width:535px">
+	<figcaption>Create stunning graffiti designs with this brilliant Ruthless One typeface. lllustration © Måns Grebäck</figcaption>
+</figure>
+<p>Another typeface from&nbsp;Måns Grebäck, we couldn't not include this brilliant free graffiti font. The designer has nearly 100 fonts available to download for free personal use on <a href="http://www.dafont.com/mans-greback.d2878" target="_blank">Dafont.com</a>, many of them with a graffiti style. For a full collection of&nbsp;Grebäck's work, head over to his website <a href="http://www.mawns.com/wordpress/" target="_blank">Mawns</a>.</p>
+<h3 class="crosshead">25.&nbsp;<a href="http://www.dafont.com/sdfonts.d124?page=1&text=Graphic+Mania" target="_blank">DJ Gross</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font DJ Gross" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/djgross.jpg" style="width:535px">
+	<figcaption>Helo yourself to this cool hand drawn graffiti font and many more styles at SD Fonts</figcaption>
+</figure>
+<p>Despite its name, there's nothing at all gross about this hand drawn free graffiti font. The design comes from Finland-based designer who goes by the name of Ritzy (real name Sami), owner of <a href="http://jump.to/sdfonts/" target="_blank">SD Fonts</a>. And thanks to generous creative, DJ Gross is just one of many fonts he has created and offered as a free download.&nbsp;</p>
+<h3 class="crosshead">26. <a href="http://www.fontspace.com/skyhaven/take-warning" target="_blank">Take Warning</a></h3>
+<figure class="captioned-image"><img alt="" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/Take-Warning-font.jpg"></figure>
+<p>Created by Skyhaven, aka Alex Tomlinson, this is a cartoony take on the graffiti font that really hits the spot for us. It's free for personal use, while commercial use requires a donation.</p>
+<h3 class="crosshead">27.&nbsp;<a href="http://www.dafont.com/the-battle-continuez.font" target="_blank">The Battle Continues</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font The Battle Continues" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/battle.jpg" style="width:535px">
+	<figcaption>Win your creative battles with this cool typeface by designer Christopher Hansen</figcaption>
+</figure>
+<p>The Battle Continues was created by typeface designer Christopher Hansen. Dedicated to his craft, this creative has 28 gorgeous fonts available as a free download on <a href="http://www.dafont.com/christopher-hansen.d643" target="_blank">Dafont.com</a>. With over eight million downloads collectively, it is clear to see - just from this free graffiti font - why this designer's work is so popular.&nbsp;</p>
+<h3 class="crosshead">28.&nbsp;<a href="http://www.behance.net/gallery/Broken-Records-(Font)/1044195" target="_blank">Broken Records</a></h3>
+<figure class="captioned-image"><img alt="Graffiti font Broken Records" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/broken.jpg"></figure>
+<p>Fancy adding a bit of a sophistication and sexy to your designs? Then take advantage of this free graffiti font by freelance designer <a href="http://www.behance.net/ZwarteKoffie" target="_blank">Timo Kuilder</a>. Broken Records is available in two versions, fill and outline and includes a full set of capital letters and digits.</p>
+<h3 class="crosshead">29.&nbsp;<a href="http://www.dafont.com/reskagraf.font" target="_blank">ReskaGraf</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font ReskaGraf" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/reskagraf.jpg" style="width:535px">
+	<figcaption>Make your work stand out with this bold typeface by designer Olivier Zitoune</figcaption>
+</figure>
+<p>Base your designs around this bold typeface for a really eye-catching piece of work. ReskaGraf was created by designer Olivier Zitoune, who also composed another similar styled font titled <a href="http://www.dafont.com/olivier-d-aka-zitoune.d478" target="_blank">Zit Graffiti</a>. The free graffiti font set includes a mixture of both capital and lower case letters and digits 0-9.</p>
+<h3 class="crosshead">30.&nbsp;<a href="http://www.dafont.com/ogeday-koc.d1720" target="_blank">Graffogie</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Graffogie" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/graffogie.jpg" style="width:535px">
+	<figcaption>Make a bold statement with typeface Graffogie. Illustration © Ogeday Koç</figcaption>
+</figure>
+<p>Graphic and web designer Ogeday Koç is the designer behind this street style typeface. The free graffiti font has a full range of upper, lower and special characters available for both personal and commercial use.&nbsp;</p>
+<h3 class="crosshead">31. <a href="http://www.dafont.com/graffiti-treat.font" target="_blank">Graffiti Treat</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Graffiti Treat" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/graffititreat.jpg" style="width:535px">
+	<figcaption>Ray Larabie is the designer behind this angular graffiti-inspired font</figcaption>
+</figure>
+<p>Free graffiti font Graffiti Treat was created by <a href="http://typodermicfonts.com/" target="_blank">Typodermic Fonts</a> founder Ray Larabie. He comments: "Graffiti Treat is a staggered, angular, graffiti inspired display font."</p>
+<h3 class="crosshead">32. <a href="http://www.dafont.com/justfist.font" target="_blank">JustFist</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font JustFist" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/justfist.jpg" style="width:535px">
+	<figcaption>JustFist includes a traditional and paint drip design</figcaption>
+</figure>
+<p>This strong, bold, free graffiti font comes complete with two files; a traditional design and another that features paint drips from each letter. However, there are no lowercase letters, numbers or special characters. Free for personal use only.</p>
+<h3 class="crosshead">33. <a href="http://www.urbanfonts.com/fonts/zit_graffiti.htm" target="_blank">Zit Graffiti</a></h3>
+<figure class="captioned-image" style="width:535px"><img alt="Graffiti font Zit Graffiti" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/zitgraffiti.jpg" style="width:535px">
+	<figcaption>Make an impact with Olivier Zitoune D's Zit Graffiti font</figcaption>
+</figure>
+<p>Make an impact with this cool block font created by designer <span>Olivier 'Zitoune' D</span>. Free for personal use, this free graffiti font includes a full set of uppercase letters only.</p>
+<p><em><span>Have you seen any great free fonts with a flavour of the street? Tell us about them in the comments!</span></em></p>
+              <div id="author-information">
+  <p><strong>Words</strong>: <a href="https://plus.google.com/u/0/110638547493564168766?rel=author">Kerrie Hughes</a></p>
+  <p><em>Kerrie Hughes is channel editor at Creative Bloq.</em></p>  
+</div>
+          </div>
+
+              
+    
+          
+          
+  </div>
+  <footer>
+              
+    
+          
+<div class="share-links">
+	<h3>Share this article</h3>
+	<ul>
+					<li class="twitter-button">
+				<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/tweet_button.1400006231(1).html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 62px;"></iframe>			
+			</li>
+					
+					<li class="facebook-button">
+				<iframe src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:51px; height:62px;" allowtransparency="true"></iframe>			
+			</li>
+					
+					
+			<li class="googleplus-button">
+				<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I1_1400326829573" name="I1_1400326829573" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/fastbutton(1).html" data-gapiattached="true" title="+1"></iframe></div>		
+			</li>
+					
+					
+			<li class="linkedin-button">
+				<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326830526_3-container" class="IN-top"><span id="li_ui_li_gen_1400326830526_3" class="IN-top"><span id="li_ui_li_gen_1400326830526_3-inner" class="IN-top"><span id="li_ui_li_gen_1400326830526_3-content" class="IN-top">20</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326830521_2"><a id="li_ui_li_gen_1400326830521_2-link" href="javascript:void(0);"><span id="li_ui_li_gen_1400326830521_2-logo">in</span><span id="li_ui_li_gen_1400326830521_2-title"><span id="li_ui_li_gen_1400326830521_2-mark"></span><span id="li_ui_li_gen_1400326830521_2-title-text">Share</span></span></a></span></span></span><script type="in/share+init" data-counter="top"></script>		
+			</li>
+		
+		
+			</ul>
+</div>    
+          <div class="article-tags">
+        <p>Tags:</p>
+        <div class="item-list"><ul><li class="first"><a href="http://www.creativebloq.com/tag/typography">Typography</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/graphic-design">Graphic design</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/feature">Feature</a></li>
+</ul></div>      </div>
+        
+  </footer>
+
+  <meta itemprop="interactionCount" content="UserComments:1">
+
+</article>
+
+
+<div id="ob_holder" style="display: none;"><iframe id="ob_iframe" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/comScore.html" style="display: none; width: 1px; height: 1px;"></iframe></div><div class="OUTBRAIN" data-widget-id="AR_1" data-src="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160" data-ob-template="FutureRegional" data-ob-mark="true" data-browser="chrome" data-os="linux i686" data-dynload="" id="outbrain_widget_0" style="opacity: 1.9448100000000004;"><div class="ob_strip_container AR_1">
+	<span class="ob_empty"><wbr></span>
+<style type="text/css">
+.voterDiv .ob_bctrl{display:none;}
+.ob_pdesc IMG{border:none;}
+.AR_1 .ob_what{direction:ltr;text-align:right;clear:both;padding:5px 10px 0px;}
+.AR_1 .ob_what a{color:#999;font-size:10px;font-family:arial;text-decoration: none;}
+.AR_1 .ob_clear{clear:both;}
+.AR_1 .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16.png') no-repeat center top;display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-bottom:-2px;padding:0px 5px;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+.AR_1:hover .ob_amelia{background-position:center bottom;}
+	.AR_1 .ob_container{width:100%;position:relative;overflow:hidden;}
+.AR_1 .strip-img{width:145px;height:90px;border:none !important;margin:0px !important;display:block;padding:0px !important;}
+.AR_1 .item-link-container{text-decoration:none;}
+.AR_1 .strip-rec-link-title{font-size:13px;font-weight:normal;line-height:16px;}
+.AR_1 .strip-rec-link-source{font-size:12px;line-height:16px}
+.AR_1 .strip-like{padding-bottom:4px;font-size:14px;line-height:16px;height:20px;font-weight:bold;}
+.AR_1 .item-container a,.AR_1 .item-container a:hover,.AR_1 .item-container a:visited{border:medium none;text-decoration:none;}
+.AR_1 .ob_video{border:medium none;position:absolute;top:5px;left:5px}
+.AR_1 .ob-rec-link-img{position:relative;}
+.AR_1 .wbr:before {content: \"\200B\"}
+.AR_1 .ob_container_recs{width:100%;position:absolute;}
+.AR_1 .ob_container_recs A{display:inline;direction:ltr;text-align:left;}
+.AR_1 .ob-text-content A{width:100%;padding:0px 0px;}
+.AR_1 .ob-text-content{padding-top:6px;}
+.AR_1 .item-container A.ob-text-content{display:block;}
+.AR_1 .ob_container_recs .item-container{float:left;direction:ltr;width:147px;margin-bottom:300px;padding-right:12px;}
+.AR_1 .ob_container_recs .ob-last{padding-right:0px;}
+.AR_1 .ob_container_shadow_outer{position:static;width:100%;}
+.AR_1 .ob_container_shadow .item-container-shadow{position:static;overflow-x:hidden;width:0px;float:left;direction:ltr;}
+.AR_1 .ob_container_shadow .item-container{width:147px;visibility:hidden;float:left}
+	</style>
+<style type="text/css" class="ob-custom-css">
+.AR_1 .ob_container_recs .item-container {
+  padding-right: 9px;
+}
+.AR_1 .strip-rec-link-title {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: #333333;
+  font-family: Oswald,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+}
+body .AR_1 .item-link-container:hover .strip-rec-link-title{
+    color: #FF5A14;
+}
+.AR_1 .ob_container_recs .ob-last {
+  padding-right: 0;
+}
+.AR_1 .ob_source {
+  font-family: Oswald,Arial,sans-serif;
+  color: #333333;
+  font-size: 12px;
+}
+.AR_1 .ob_org_header {
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  color: #333333;
+  display: block;
+  font-family: Oswald,Arial,sans-serif;
+  font-size: 17.6px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.AR_1 .ob_what {
+  padding: 5px 0 10px;
+}
+</style>
+	<span class="ob_org_header">
+BEST FROM AROUND THE WEB
+</span>		    <div class="ob_container">
+	<div class="ob_container_recs">
+                        <a class="item-link-container ob-odd" href="http://school.keyartstudio.com/cake-decorating-tutorials/tutorial-the-watercolor-cookie-art/" data-redirect="http://paid.outbrain.com/network/redir?key=918ae4647300af9228bfa739393ace67&amp;rdid=409138495&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=0&amp;pc_id=24003731&amp;req_id=a8abe52922ef8fb0546748299244d847&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=1603,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=44777&amp;origSrc=2968794&amp;did=772781502" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-0  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Tutorial: The Watercolor Cookie Art" class="strip-img" alt="Tutorial: The Watercolor Cookie Art" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/qIVlm-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Tutorial: The Watercolor Cookie Art</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Key Art Studio)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-even" href="http://blog.kii.com/?p=3380" data-redirect="http://paid.outbrain.com/network/redir?key=610438d4a4c2e77df89a028b7b58e8cf&amp;rdid=409138495&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=1&amp;pc_id=24163157&amp;req_id=a8abe52922ef8fb0546748299244d847&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=5&amp;adsCats=2006,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=45504&amp;origSrc=2968794&amp;did=775335613" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-1  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Build a WhatsApp Clone in a Day" class="strip-img" alt="Build a WhatsApp Clone in a Day" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/qTED7-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Build a WhatsApp Clone in a Day</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Kii Blog)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-odd" href="http://www.forbes.com/sites/alexmorrell/2014/04/09/new-financing-round-for-australian-software-company-atlassian-turns-founders-into-billionaires/" data-redirect="http://paid.outbrain.com/network/redir?key=b8903599a623cf5d7cbc8495e40de2b6&amp;rdid=409138495&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=2&amp;pc_id=23849724&amp;req_id=a8abe52922ef8fb0546748299244d847&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=2002,2003,2006&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=36101&amp;origSrc=2968794&amp;did=770143433" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-2  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" class="strip-img" alt="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/q7RUH-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Forbes)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-even" href="http://mashable.com/2013/08/29/twitter-lead-generation-cards-2/" data-redirect="http://paid.outbrain.com/network/redir?key=d57b0ca7dbd0fb316c58cdad086e2ed8&amp;rdid=409138495&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=3&amp;pc_id=21606972&amp;req_id=a8abe52922ef8fb0546748299244d847&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=1210,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=35204&amp;origSrc=2968794&amp;did=602811746" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-3  item-container-ad  ob-last ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Twitter Expands Lead Generation Cards to All Businesses" class="strip-img" alt="Twitter Expands Lead Generation Cards to All Businesses" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/enKs6-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Twitter Expands Lead Generation Cards to All Businesses</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Mashable)</span></span>    </div>
+    </div>
+        </div>
+</a>            </div>
+<div class="ob_container_shadow_outer">
+    <div class="ob_container_shadow">
+                                    <div class="item-container-shadow ob-recIdx-0   ob-odd">
+    <div class="item-container ob-recIdx-0  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Tutorial: The Watercolor Cookie Art" class="strip-img" alt="Tutorial: The Watercolor Cookie Art" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/qIVlm-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Tutorial: The Watercolor Cookie Art</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Key Art Studio)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-1  ob-even">
+    <div class="item-container ob-recIdx-1  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Build a WhatsApp Clone in a Day" class="strip-img" alt="Build a WhatsApp Clone in a Day" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/qTED7-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Build a WhatsApp Clone in a Day</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Kii Blog)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-2   ob-odd">
+    <div class="item-container ob-recIdx-2  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" class="strip-img" alt="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/q7RUH-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Forbes)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-3  ob-even">
+    <div class="item-container ob-recIdx-3  item-container-ad  ob-last ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Twitter Expands Lead Generation Cards to All Businesses" class="strip-img" alt="Twitter Expands Lead Generation Cards to All Businesses" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/enKs6-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Twitter Expands Lead Generation Cards to All Businesses</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Mashable)</span></span>    </div>
+    </div>
+        </div>
+</div>                        </div>
+</div>	</div>
+				<div class="ob_what">
+	
+	<a href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160#" onmousedown="" onclick="OBR.extern.callWhatIs(&#39;http://www.outbrain.com/what-is/default/en&#39;,&#39;&#39;,500,450,true ,null);return false">
+		Recommended by <span class="ob_amelia" title="Outbrain"></span>
+	</a>
+</div>
+	
+</div></div>
+<script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/outbrain.js"></script>
+
+
+  <div id="comments-list"><div id="comments">
+   <h4 class="std-hdr"><span>1</span> comment</h4>
+   <div class="content">
+      <a id="comment-1684"></a>
+<article class="comment comment-published ">
+	   <footer>
+      <div class="submitted"><div class="picture avatar_small"><a href="http://www.creativebloq.com/users/printfirm" title="Printfirm"><img class="imagecache imagecache-avatar_small" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/picture-4194.jpg" alt="Printfirm avatar" title="Printfirm" itemprop="image" width="68" height="68"></a></div> <span class="username"><a href="http://www.printfirm.com/" class="std-link" rel="nofollow">Printfirm</a></span> <time datetime="2013-04-08T23:32:16+01:00">April 08, 2013 at 23:32</time></div>
+   </footer>
+   <div class="content">
+      Already have most of these in my collection. A Dripping Marker is another cool one I use a lot. Not a big fan of the boxier typesfaces. But thanks for giving me some new ideas. Pinning this!         </div>
+   <div class="links-cnt">
+      <ul class="links">
+         <li><a title="Flag this content as offensive" rel="nofollow" class="std-link" href="http://www.creativebloq.com/future/report/comment/1684?destination=node%2F1160">Report abuse</a></li>
+      </ul>
+   </div>
+</article>
+   </div>
+</div></div>
+
+      <div id="comments-form" class="has-comments">
+      <form action="http://www.creativebloq.com/user/login?destination=typography%2Ffree-graffiti-fonts-11121160#comments-form" accept-charset="UTF-8" method="post" id="user-login-comment-form">
+<div>
+	<div class="col">
+		<h4>Log in to Creative Bloq with your preferred social network to comment</h4>
+		<div id="future-gigya-login" gigid="showLoginUI" style="width: 220px; height: 60px;"><table width="100%" cellspacing="0" cellpadding="0" style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;background-color:transparent;vertical-align: middle; width: 220px; height: 60px;"><tbody><tr><td style="vertical-align:middle;margin:0px;padding:0px;border:0px;"><center><table style="margin:0px;padding:0px;border:0px;vertical-align:middle; height: 60px;width:100%" align="center" cellspacing="0" cellpadding="0"><tbody><tr style="height:99%"><td align="right" style="margin:0px;padding:0px;border:0px;vertical-align:middle;width:48%;text-align:right"><div align="right" style="text-align:right;width:auto"></div></td><td align="center" style="width:135px;margin:0px;padding:0px;border:0px;vertical-align:middle;white-space:nowrap" id="future-gigya-login_page"><table align="center" cellspacing="0" cellpadding="0" style="margin: 0px; padding: 0px; border: 0px;" id="future-gigya-login_p0"><tbody><tr><td align="center" style="margin:0px;padding:0px;border:0px;vertical-align:middle"><table align="center" cellspacing="0" cellpadding="0" style="margin:0px;padding:0px;border:0px;"><tbody><tr><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;facebook&#39;)" title="Facebook" alt="Facebook" style="zoom:1;cursor:pointer; width:30px;"><div gigid="facebook" style="width:30px; height:30px"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/facebook_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;twitter&#39;)" title="Twitter" alt="Twitter" style="zoom:1;cursor:pointer; width:30px;"><div gigid="twitter" style="width:30px; height:30px"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/twitter_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;googleplus&#39;)" title="Google+" alt="Google+" style="zoom:1;cursor:pointer; width:30px;"><div gigid="googleplus" style="width:30px; height:30px"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/googleplus_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;linkedin&#39;)" title="LinkedIn" alt="LinkedIn" style="zoom:1;cursor:pointer; width:30px;"><div gigid="linkedin" style="width:30px; height:30px"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/linkedin_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td></tr></tbody></table></td></tr></tbody></table></td><td align="left" style="margin:0px;padding:0px;border:0px;vertical-align:middle;width:48%"></td></tr></tbody></table></center></td></tr></tbody></table></div>	</div>
+	<div class="col separator">
+		<strong>OR</strong>
+	</div>
+
+<div class="col last">
+	<h4>Log in with your Creative Bloq account</h4>
+	
+	<div class="form-row">
+	 <label for="comment-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="comment-name" size="15" value="" placeholder="Username" required="required" class="form-text required">
+	</div>
+	<div class="form-row">
+	 <label for="comment-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="comment-pass" maxlength="60" size="15" placeholder="Password" required="required" class="form-text required">
+	</div>
+	<div class="form-row">
+		</div>
+	<div class="buttons">
+		<input type="submit" name="op" id="edit-submit" value="Log in" class="form-submit">
+		<a href="http://www.creativebloq.com/user/password" class="std-link">Forgotten your username or password?</a>	</div>
+
+	<input type="hidden" name="form_build_id" id="form-TPSbyiFF_UQvUSu9zYTo1PsYGGuLGDIslK76Sufl67E" value="form-TPSbyiFF_UQvUSu9zYTo1PsYGGuLGDIslK76Sufl67E">
+<input type="hidden" name="form_id" id="edit--future-user-login-comment-form" value="user_login">
+</div>
+	
+<div class="footer">
+	<h4>Don't have an account?</h4>
+	<p>
+		Join now. It's completely free and takes seconds		<a href="http://www.creativebloq.com/user/register" class="form-submit">Join</a>	</p>
+</div>
+</div></form>
+      <input type="hidden" value="1160" id="article-id">
+    </div>
+  
+  
+  
+                                        </section>
+          </div>
+                      <div class="sidebar">
+              <div class="block block-views" id="block-views-carousel_widget-block_1">
+      <div class="content"><div class="carousel-widget with-border" style="height: 414px;">
+<h4 class="std-hdr">Magazine store</h4>
+	<div class="items" style="width: 1500px; left: -627.2775423862465px;"><div class="item views-row views-row-3 views-row-odd views-row-last cloned">
+    <a href="http://bit.ly/1hsQxvp" title="Buy in print or digital">
+	<img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/netmagnewmay.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1hsQxvp" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+		  <div class="item views-row views-row-1 views-row-odd views-row-first">
+    <a href="http://bit.ly/19d3ilD" title="Buy in print or digital">
+	<img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/art227coverswidget.jpg" alt="" title="" width="220" height="170" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/19d3ilD" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+  <div class="item views-row views-row-2 views-row-even">
+    <a href="http://bit.ly/1batwbI" title="Buy in print or digital">
+	<img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/maythreeworld.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1batwbI" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+  <div class="item views-row views-row-3 views-row-odd views-row-last">
+    <a href="http://bit.ly/1hsQxvp" title="Buy in print or digital">
+	<img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/netmagnewmay.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1hsQxvp" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+	<div class="item views-row views-row-1 views-row-odd views-row-first cloned">
+    <a href="http://bit.ly/19d3ilD" title="Buy in print or digital">
+	<img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/art227coverswidget.jpg" alt="" title="" width="220" height="170" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/19d3ilD" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div></div>
+	<div class="items-nav"><a class=""></a><a class=""></a><a class="active"></a></div>
+	<div class="carousel-arrow arrow-left prev disabled" style="display: block;"></div>
+	<div class="carousel-arrow arrow-right next disabled" style="display: block;"></div>
+  </div>
+</div>
+</div><div class="block block-future_dfp" id="block-future_dfp-mpu1">
+      <div class="content"><div id="dfp-ad-mpu1" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-mpu1");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_1__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_1" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_1" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div id="block-7" class="block">
+      <div class="rss_kicker">
+<h3>Subscribe to our RSS feed</h3>
+<p><a class="rss_all" href="http://www.creativebloq.com/rss">View all our feeds</a></p>
+<p>  <a href="http://feeds.feedburner.com/creativebloq/" class="rss_icon FIR">RSS icon<span></span></a>
+</p></div>
+</div><div id="jobs-widget" class="block">
+
+			<h4 class="std-hdr">Featured Jobs</h4>
+		
+	<div class="jb-wrap">
+<ul class="jobs-list">
+<li class="hero">
+<figure><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/saved_resource(2)" alt="Senior Graphic Designer - Retail Environment"></figure>
+<h5><a href="http://jobs.creativebloq.com/apply/18135/senior-graphic-designer-retail-environment-/?TrackID=11228">Senior Graphic Designer - Retail Environment</a></h5>
+<p>London (Central), London (Greater)</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18134/lead-digital-designer-/?TrackID=11228">Lead Digital Designer</a></h5>
+<p>London (Central), London (Greater)</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18075/technical-qa-lead-m-f-/?TrackID=11228">Technical QA Lead (m/f)</a></h5>
+<p>Germany</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18074/flash-developer-m-f-/?TrackID=11228">Flash Developer (m/f)</a></h5>
+<p>Hamburg</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18073/mobile-developer-c-m-f-/?TrackID=11228">Mobile Developer C++ (m/f)</a></h5>
+<p>Hamburg</p>
+</li>
+</ul>
+<form action="http://jobs.creativebloq.com/searchjobs" method="get">
+<input type="text" placeholder="SEARCH JOBS" id="Keywords" name="Keywords">
+<button type="submit" class="FIR">Search<span></span></button>
+</form>
+<a href="http://jobs.creativebloq.com/" class="all">Browse all Jobs</a>
+</div>
+</div><div id="recommended-widget" class="block">
+
+			<h4 class="std-hdr">Top design resources</h4>
+		
+	<div class="item-list"><ul class="std-list"><li class="first">	<h3><a href="http://www.creativebloq.com/graphic-design-tips/best-free-fonts-for-designers-1233380">Free fonts</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/inspiration/print-ads-1233780">Print ads</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/web-design-tips/mobile-apps/best-ipad-apps-1233629">Best iPad apps</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/photoshop/free-photoshop-brushes-11121140">Photoshop brushes</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/3d-tips/3d-animation/best-3d-movies-for-2012-1233045">Best 3D movies</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/graphic-design/improve-your-logo-design-21221">Logo design</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/photoshop/photoshop-actions-912784">Photoshop actions</a></h3>
+</li>
+<li class="last">	<h3><a href="http://www.creativebloq.com/3d-tips/print-in-3d-1234034">Print in 3D</a></h3>
+</li>
+</ul></div>
+</div><div class="block block-future_dfp" id="block-future_dfp-skyscraper">
+      <div class="content"><div id="dfp-ad-skyscraper" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-skyscraper");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_2" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_2" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div id="advertorial_block_2" class="block">
+
+		
+	<a href="http://www.creativebloq.com/"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/transparent.gif" alt="" title="" width="300" height="20" class="imagecache imagecache-advertorial_item"></a>
+</div><div id="advertorial_block_3" class="block">
+
+		
+	<a href="http://www.pny.eu/"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/pny_300X100.gif" alt="PNY" title="PNY" width="300" height="100" class="imagecache imagecache-advertorial_item"></a>
+</div><div id="advertorial_block_4" class="block">
+
+		
+	<a href="http://www.digitaltutors.com/"><img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/animated_gif_ad.gif" alt="Digital tutors" title="Digital tutors" width="300" height="100" class="imagecache imagecache-advertorial_item"></a>
+</div>            </div>
+                            </div><!-- .grid -->
+        <!-- _FUTURE FOOTER_ -->
+        <footer id="footer">
+          <div class="footer-content">
+            
+<div id="menu-static-nav" class="block">
+   <h4></h4>
+   <ul class="menu"><li class="leaf first link-advertising"><a href="http://www.creativebloq.com/advertising" title="">Advertising</a></li>
+<li class="leaf link-about-us"><a href="http://www.creativebloq.com/about-us" title="">About us</a></li>
+<li class="leaf last link-contact"><a href="http://www.creativebloq.com/contact" title="">Contact</a></li>
+</ul></div>
+          </div>
+          <div id="future_company_footer"><div><ul class="foot_images"><li class="footer_logo" title="Future Publishing"><a href="http://www.futureplc.com/" class="future-logo">Future Publishing</a></li></ul><div class="text"><div class="backtotop"><a href="javascript:window.scrollTo(0,0);">Top&nbsp;▲</a></div><ul class="footertext"><li>Future is AOP &amp; PPA Digital Publisher of the Year and BMA Media Company of the Year.</li><li>Creative Bloq&nbsp;is part of Future plc, an international media group and leading digital publisher. We produce content across five core areas:</li></ul><ul class="category"><li><h6>Technology</h6><ul><li title="TechRadar"><a href="http://www.techradar.com/" title="Tech news">TechRadar</a></li><li title="T3"><a href="http://www.t3.com/" title="Technology news and gadget reviews">T3</a></li><li title="Mac|Life"><a href="http://www.maclife.com/" title="iPhone, iPad, Mac">Mac|Life</a></li><li title="Gizmodo UK"><a href="http://www.gizmodo.co.uk/" title="Tech news, from off the beaten track">Gizmodo UK</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/technology/" title="More...">More...</a></li></ul></li><li><h6>Entertainment</h6><ul><li title="CVG"><a href="http://www.computerandvideogames.com/" title="Game news and reviews">CVG</a></li><li title="PC Gamer"><a href="http://www.pcgamer.com/" title="PC games">PC Gamer</a></li><li title="GamesRadar"><a href="http://www.gamesradar.com/" title="Game cheats and news">GamesRadar</a></li><li title="Total Film"><a href="http://www.totalfilm.com/" title="Movie news">Total Film</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/entertainment/" title="More...">More...</a></li></ul></li><li><h6>Music</h6><ul><li title="MusicRadar"><a href="http://www.musicradar.com/" title="Music news">MusicRadar</a></li><li title="Guitarist"><a href="http://www.musicradar.com/guitarist" title="The guitar player&#39;s bible">Guitarist</a></li><li title="FutureMusic"><a href="http://www.musicradar.com/futuremusic" title="Technique and technology for making music">FutureMusic</a></li><li title="Rhythm"><a href="http://www.musicradar.com/rhythm" title="The UK&#39;s best-selling drum magazine">Rhythm</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/music/" title="More...">More...</a></li></ul></li><li><h6>Creative</h6><ul><li title="Digital Camera World"><a href="http://www.digitalcameraworld.com/" title="Digital Camera News, Reviews, Tips and Techniques">Digital Camera World</a></li><li title="Mollie Makes"><a href="http://www.molliemakes.com/" title="Making, collecting, thrifting, crafting">Mollie Makes</a></li><li title="Photography Week"><a href="http://photographyweek.digitalcameraworld.com/" title="The weekly iPad magazine for photographers">Photography Week</a></li><li title="The Simple Things"><a href="http://www.thesimplethings.com/" title="Celebrating the things that matter most">The Simple Things</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/creative/" title="More...">More...</a></li></ul></li><li><h6>Sport &amp; Auto</h6><ul><li title="BikeRadar"><a href="http://www.bikeradar.com/" title="Bikes and bike reviews">BikeRadar</a></li><li title="Cyclingnews"><a href="http://www.cyclingnews.com/" title="Pro cycling news and reviews">Cyclingnews</a></li><li title="Football Week"><a href="http://www.thefootballweek.net/" title="Get ahead of the game">Football Week</a></li><li title="TriRadar"><a href="http://www.triradar.com/" title="Triathlon Training, News &amp; Gear">TriRadar</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/sport-and-auto/" title="More...">More...</a></li></ul></li></ul><ul class="foot_legals"><li title="About Future"><a href="http://www.futureplc.com/about/" title="About Future" rel="nofollow">About Future</a></li><li title="Jobs"><a href="http://www.yourfuturejob.com/" title="Jobs in media" rel="follow">Jobs</a></li><li title="PR"><a href="http://www.futureplc.com/news/" title="Public Relations" rel="nofollow">PR</a></li><li title="Advertising"><a href="http://www.futureplc.com/what-we-do/advertising-solutions/" title="Advertising" rel="nofollow">Advertising</a></li><li title="Digital Future"><a href="http://advertising.digitalfuture.com/" title="Digital Future" rel="nofollow">Digital Future</a></li><li title="Privacy Policy"><a href="http://www.futureplc.com/privacy-policy/" title="Privacy Policy" rel="nofollow">Privacy Policy</a></li><li title="Cookies Policy"><a href="http://www.futureplc.com/cookies-policy/" title="Cookies Policy" rel="nofollow">Cookies Policy</a></li><li title="Terms &amp; Conditions"><a href="http://www.futureplc.com/terms-and-conditions/" title="Terms and Conditions" rel="nofollow">Terms &amp; Conditions</a></li><li title="Subscriptions"><a href="http://www.myfavouritemagazines.co.uk/" title="Buy magazines online" rel="follow">Subscriptions</a></li><li title="Investor Relations"><a href="http://www.futureplc.com/investors/" title="Investor Relations" rel="nofollow">Investor Relations</a></li><li title="Contact Future"><a href="http://www.futureplc.com/contact/" title="Contact Future" rel="nofollow">Contact Future</a></li></ul><p>© Future Publishing Limited, Beauford Court, 30 Monmouth Street, Bath BA1 2BW. All rights reserved. England and Wales company registration number 2008885.</p></div></div></div><style>@media all and (min-width: 970px){#future_company_footer{min-width: 970px;}}#future_company_footer>div{max-width: 970px;}</style>
+        </footer>
+        <!-- _FUTURE FOOTER_ -->
+      </div>
+    </div>
+    <!-- Future cookie bar (responsive) -->
+<div class="future-cookie-bar" style="display: block;">
+We use cookies on this website. By using this site, you agree that we may store and access cookies on your device.  Find out more and set your preferences <a href="http://www.futureplc.com/cookies-policy/">here</a>
+<a href="javascript:;" class="future-cookie-bar__dismiss is-reversed">x</a>
+</div>          <img src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/future.php" width="1" height="1" alt="site stat collection" style="display:block;position:absolute;bottom:0px;">
+    
+    <script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/js_ef1fe3b1da331919819014e4d23203d0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","future_gigya":{"conf":{"APIDomain":"cdn.gigya.com","APIKey":"2_36UDg3isn0w5FUf13fu1da12RyzHok_849O4EJKtiOh5TCH3T5WlE5yybqH9TprA","enabledProviders":"facebook,twitter,google,linkedin","redirectURL":"http:\/\/www.creativebloq.com\/user\/social-login?destination=typography\/free-graffiti-fonts-11121160#comments-form","buttonsStyle":"standard","height":60,"width":220}},"future":{"conf":{"videoWidth":"535","videoHeight":"300"}}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function addEvent(obj, type, fn) {
+    if (obj.attachEvent) {
+      obj['e' + type + fn] = fn;
+      obj[type + fn] = function() {
+        obj['e' + type + fn](window.event);
+      }
+      obj.attachEvent('on' + type, obj[type + fn]);
+    } else
+      obj.addEventListener(type, fn, false);
+    }
+//--><!]]>
+</script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/sites/all/themes/creativebloq_redesign/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		
+		<script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.tools-scrollable.min.js"></script>
+		
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.cookie.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/cookie.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.touchwipe.min.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.jscrollpane.min.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/nav.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/form.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/main.js"></script>
+    <script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/jquery.sharrre.min.js"></script>
+
+          <script>
+                (function() {
+                  var cw = document.createElement('script');
+                  cw.type = 'text/javascript';
+                  cw.async = true;
+                  cw.src = '//static.creativebloq.futurecdn.net/sites/creativebloq.com/files/creative_network/widget.js';
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(cw, s);
+                })();
+      </script>
+    
+    <!-- Google Tag Manager -->
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-53T993"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-53T993');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- COMSCORE CODE --><script src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/sitestat.js"></script><!-- END COMSCORE CODE -->
+    <!-- START REVENUE SCIENCE API CODE --><script type="text/javascript" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/gw.js"></script><!-- END REVENUE SCIENCE API CODE -->
+
+    <script type="text/javascript">
+      ssUsr = '';
+      match = document.cookie.match(/FUTURE_USER=[0-9]+/);
+      if (match != null && match != undefined) {
+        match += '';
+        parts = match.split('=');
+        ssUsr = '&fp_uid=' + parts[1];
+      }
+    </script>
+
+    <script type="text/javascript">
+      ssurl = 'http://uk.sitestat.com/future/creativebloq/s?name=feature.article.33-best-free-graffiti-fonts.07-01-2014.page&fp_tags=typography|graphic-design|feature&fp_pagenum=1&fp_author=khughes&fp_postdate=07-01-2014&fp_article_id=1160&category=feature' + ssUsr;
+      // <![CDATA[
+      function sitestat(u) {
+        var d = document, l = d.location;
+        ns_pixelUrl = u + "&ns__t=" + (new Date().getTime());
+        u = ns_pixelUrl + "&ns_c=" + ((d.characterSet) ? d.characterSet : d.defaultCharset) + "&ns_ti=" + escape(d.title) + "&ns_jspageurl=" + escape(l && l.href ? l.href : d.URL) + "&ns_referrer=" + escape(d.referrer);
+        var m = u.lastIndexOf("&");
+        if (u.length > 2000 && m >= 0) {
+          u = u.substring(0, m + 1) + "ns_cut=" + u.substring(m + 1, u.lastIndexOf("=")).substring(0, 40)
+        }
+        (d.images) ? new Image().src = u : d.write('<' + 'p><' + 'img src="' + u + '" height="1" width="1" alt="*"' + '><' + '/p>');
+      }
+      ;
+      sitestat(ssurl);
+      // ]]>
+    </script>
+    <noscript>&lt;p&gt;&lt;img src="http://uk.sitestat.com/future/creativebloq/s?name=feature.article.33-best-free-graffiti-fonts.07-01-2014.page&amp;amp;fp_tags=typography|graphic-design|feature&amp;amp;fp_pagenum=1&amp;amp;fp_author=khughes&amp;amp;fp_postdate=07-01-2014&amp;amp;fp_article_id=1160&amp;amp;category=feature" height="1" width="1" alt="comscore"&gt;&lt;/p&gt;</noscript>
+
+    
+                  <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4832100-10']);
+        _gaq.push(['_setDomainName', '.creativebloq.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+      setTimeout(function() {
+        var a = document.createElement("script");
+        var b = document.getElementsByTagName('script')[0];
+        a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0009/6117.js";
+        a.async = true;
+        a.type = "text/javascript";
+        b.parentNode.insertBefore(a, b)
+      }, 1);
+    </script>
+
+          <script type="text/javascript">
+        var s = document.getElementsByTagName('script')[0];
+        (function() {
+
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            s.parentNode.insertBefore(po, s);
+  
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://platform.twitter.com/widgets.js';
+            s.parentNode.insertBefore(po, s);
+  
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://platform.linkedin.com/in.js';
+            s.parentNode.insertBefore(po, s);
+  
+  
+  
+        })();
+      </script>
+    
+    
+              
+    <script>if(typeof enable_takeover == 'function') { enable_takeover() } </script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Drupal.behaviors.password = function () {};
+//--><!]]>
+</script>
+
+              <div class="block block-future_dfp" id="block-future_dfp-overlay">
+      <div class="content"><div id="dfp-ad-overlay" class="dfp-tag-wrapper" style="display: none;">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-overlay");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_4__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/feature_4" name="google_ads_iframe_/8644/Design_CreativeBloQ/feature_4" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div>    
+  
+
+<div style="display: none; visibility: hidden;">
+
+<script class="kxct" data-id="I2gAOUHz" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=!0;var a,c=(a=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(a[1]);b.src=/^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(c)?c:"disable"===c?"":("https:"===location.protocol?"https:":"http:")+"//cdn.krxd.net/controltag?confid\x3dI2gAOUHz";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+
+<script>window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){function b(a){a="kx"+a;return window.localStorage?window.localStorage[a]||"":navigator.cookieEnabled?(a=document.cookie.match(a+"\x3d([^;]*)"))&&unescape(a[1])||"":""}Krux.user=b("user");Krux.segments=b("segs")&&b("segs").split(",")||[]})();</script></div><div style="display: none; visibility: hidden;"><script>(function(c){var b=document,a=b.createElement("script");a.async=!0;a.defer=!0;a.src=c;b.getElementsByTagName("head")[0].appendChild(a)})((iatDev=-1<window.location.href.indexOf("iatDev\x3d1")||-1<document.cookie.indexOf("iatDev\x3d1"),"//"+("http:"!=window.location.protocol||iatDev?"s":"")+"data.captifymedia.com/317817.js?r\x3d"+1E16*Math.random()+"\x26m\x3d1112\x26a\x3d317817"+(iatDev?"\x26d\x3d1":"")));</script></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._ttf=window._ttf||[];_ttf.push({pid:22688,lang:"en",slot:".content p",format:"inread",minSlot:3,components:{mute:{delay:0},skip:{delay:0}}});(function(a){var b=a.getElementsByTagName("script")[0];a=a.createElement("script");a.async=!0;a.src="http://cdn.teads.tv/js/all-v1.js";b.parentNode.insertBefore(a,b)})(window.document);</script></div><iframe name="oauth2relay413614612" id="oauth2relay413614612" src="./The 33 best free graffiti fonts   Typography   Creative Bloq_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="iatDivInsert" style="display: none;"></div><iframe id="google_osd_static_frame_6281939097680" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

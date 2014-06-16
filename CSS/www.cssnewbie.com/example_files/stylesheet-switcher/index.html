@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Simple jQuery Stylesheet Switcher</title>
+<link rel="stylesheet" type="text/css" href="style1.css" />
+<script type="text/javascript" language="javascript" src="../../js/jquery/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="../../js/jquery/jquery.cookie.js"></script>
+<script>
+		if($.cookie("css")) {
+			$("link").attr("href",$.cookie("css"));
+		}
+	$(document).ready(function() { 
+		$("#nav li a").click(function() { 
+			$("link").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Heading Text</h1>
+		<ul id="nav">
+			<li><a href="index.html#" rel="style1.css">Original CSS</a></li>
+			<li><a href="index.html#" rel="style2.css">Larger Text</a></li>
+			<li><a href="index.html#" rel="style3.css">Something Different</a></li>
+		</ul>
+		<div id="content">
+			<h2>A Simple jQuery Stylesheet Switcher</h2>
+			<p>This is an example of how to build a simple stylesheet switcher in jQuery. <a href="../../index.html?p=410">To read about how this is done, see the original CSS Newbie article.</a></p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+		<div id="sidebar">
+			<h2>Sidebar!</h2>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		</div>
+		<div id="footer">
+			<p><a href="../../index.html?p=410">Go back to the original article.</a></p>
+	</div>
+
+</body>
+</html>

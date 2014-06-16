@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: All About: CSS Positioning. Absolute Positioning</title>
+<style>
+	body {
+		font: small/1.3em Arial, Helvetica, sans-serif;
+		background-color: #777; }
+	#wrap {
+		width: 35em;
+		padding: 2em;
+		border: 1px solid #ddd;
+		background-color: #fff;
+		margin: 3em auto; }
+	p {
+		background-color: #eee;
+		border: 1px solid #ccc; }
+	p#two {
+		position: absolute;
+		bottom: 2px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+	<h1>Absolute Positioning</h1>
+	<p id="one">Suspendisse id risus sit amet neque facilisis sagittis. Morbi luctus, leo non eleifend tristique, lacus ante porta felis, at tincidunt turpis arcu at mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi convallis, elit vel vestibulum molestie, justo sapien feugiat elit, eu scelerisque ante nunc id lacus. Proin rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus purus.</p>
+	<p id="two">Aliquam ut eros vitae elit interdum consequat. In et quam sit amet arcu accumsan malesuada. Etiam nec nisl ullamcorper pede lobortis dignissim. Quisque magna elit, laoreet et, dapibus eget, euismod at, libero. Mauris nec elit. Fusce suscipit, ante vel iaculis pretium, felis purus ultricies tortor, eget congue nisi arcu et enim. Nulla ac velit. Praesent volutpat. Nam a diam. Pellentesque quis ipsum. Praesent sem sapien, rhoncus id, malesuada ut, tincidunt et, nisi. Suspendisse malesuada elit.</p>
+	<p id="three">Nullam condimentum, eros at dignissim vulputate, magna tortor pharetra quam, sed hendrerit massa neque ut est. In eu enim at augue pellentesque semper. Ut tellus. Mauris adipiscing scelerisque justo. Phasellus mollis, lacus vitae tempus rutrum, diam dolor ultricies urna, accumsan luctus metus neque eget nibh. Nunc porta mollis nisi.</p>
+</div>
+
+</body>
+</html>

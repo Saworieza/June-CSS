@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/animations.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script><!--adding jquery-->
+</head>
+<body>
+
+<!--to trigger animation when user scrolls the element-->
+	<script>
+	$(window).scroll(function() {
+		$('#animatedElement').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideUp");
+			}
+		});
+	});
+</script>
+<!--to trigger animation when user clicks on element-->
+<script>
+	$('#animatedElement').click(function() {
+		$(this).addClass("slideUp");
+	});
+</script>
+</body>
+</html>

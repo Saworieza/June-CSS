@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://s.codepen.io/stephengreig/fullgrid/vbqBh?type=embed&animations=run -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <meta name="google" value="notranslate">
+
+  <title>CodePen - A Pen by stephengreig</title>
+
+  <script style="display: none !important;">
+    window.alert   = function(){};
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+  </script>
+
+  <style>.balloon {
+  border-radius: 60% 60% 55% 55%;
+  width: 150px;
+  height: 210px;
+  margin-top: 30px;
+  background: -webkit-radial-gradient(40% 20%, #acd9fc 10%, #0090ff 50%, #002f53 90%);
+  background: radial-gradient(ellipse at center, #acd9fc 10%, #0090ff 50%, #002f53 90%);
+  -webkit-transform: translate(0, 250px) rotate(-50deg);
+  -webkit-transition: 3s cubic-bezier(.65, 1.95, .03, .32);
+  transform: translate(0, 250px) rotate(-50deg);
+  transition: 3s cubic-bezier(.65, 1.95, .03, .32);
+  z-index: 2;
+  position: relative;
+}
+
+.balloon:after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #002f53;
+  position: absolute;
+  bottom: -8px;
+  right: 62px;
+}
+
+.shadow {
+  width: 200px;
+  height: 40px;
+  background: -webkit-radial-gradient(#333 5%, #999 30%, #fff 70%);
+  background: radial-gradient(#333 5%, #999 30%, #fff 70%);
+  border-radius: 50%;
+  margin-top: -208px;
+  -webkit-transform: translate(0, 426px) scale(1);
+  -webkit-transition: 3s cubic-bezier(.65, 1.95, .03, .32);
+  transform: translate(0, 426px) scale(1);
+  transition: 3s cubic-bezier(.65, 1.95, .03, .32);
+  z-index: 1;
+  position: relative;
+}
+
+.balloon:target + .shadow {
+  -webkit-transform: translate(0, 426px) scale(1.5, 1);
+  transform: translate(0, 426px) scale(1.5, 1);
+  opacity: 0;
+}
+
+.balloon:target {
+  -webkit-transition: 3s cubic-bezier(.65, 2, .03, .32);
+  -webkit-transform: translate(0) rotate(0deg);
+  transition: 3s cubic-bezier(.65, 2, .03, .32);
+  transform: translate(0) rotate(0deg);
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  font: .9em Arial;
+}
+
+a {
+  padding: 5px 10px;
+  background: blue;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+a:hover {
+  opacity: 0.6;
+}</style>
+
+</head>
+
+<body onload="_l=&#39;t&#39;;">
+
+  <div class="container">
+
+  <a href="http://s.codepen.io/stephengreig/fullgrid/vbqBh?type=embed&animations=run#float">Add Helium</a> <a href="http://s.codepen.io/stephengreig/fullgrid/vbqBh?type=embed&animations=run#reset">Remove Helium</a>
+
+  <div id="float" class="balloon"></div>
+  <div class="shadow"></div>
+
+</div>
+
+  <script>
+
+</script>
+
+  <script>
+    (function() {
+
+      // Once the entire pen's loaded we send a message to embeds
+      // to resize again in case they're using auto to the size the embed
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage('resize', "*");
+      }
+
+      // Remove all Iframes
+      var iframes = document.getElementsByTagName('iframe');
+
+      for (var i = iframes.length - 1; i >= 0; i--) {
+        iframes[i].outerHTML = "<p>remove</p>";
+      };
+
+    }());
+  </script>
+
+
+
+</body></html>

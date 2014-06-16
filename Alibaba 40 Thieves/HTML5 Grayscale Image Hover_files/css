@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Copse';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Copse'), url(http://themes.googleusercontent.com/static/fonts/copse/v4/wpqdPiqIhpZbF5z3WfvSXg.woff) format('woff');
+}

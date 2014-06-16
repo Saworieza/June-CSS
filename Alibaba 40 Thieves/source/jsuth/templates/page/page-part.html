@@ -1,0 +1,26 @@
+{# get comments & categories #}
+{% set comments as hifi.get({'type': 'comment',
+'parent': page.id,'orderBy': 'publishedAt','count': 100,'isApproved': true,'isSpam': false}) %}
+{% set categories as hifi.get({'type':'category','related':{'from':page.id}}) %}
+
+
+<header>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  {% if page.type == 'post' %}
+  <div class="postmeta">
+    <time datetime="{{ page.publishedAt|date('Y-m-dTH:i:sO') }}">{{ page.publishedAt|date('F jS, Y') }}</time>
+    <a href="{{ page.url }}#comments" class="comments">{{ comments|length }} Comment{% if comments|length != 1 %}s{% endif %}</a>
+    {% if '/blog' in this.url %}
+    <div class="retweet"></div>
+    {% endif %}
+  </div>
+  {% endif %}
+</header>
+{{ page.content }}
+{#
+<ul>
+{% for category in categories %}
+  <li>{{ category.title }}</li>
+{% endfor %}
+</ul>
+#}

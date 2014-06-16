@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Generating Automatic Website Footnotes with jQuery</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Generating Automatic Website Footnotes with jQuery Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: August 1 to August 7' href='../../index.html?p=212' />
+<link rel='next' title='5 Great Uses for the CSS Display Property' href='../../index.html?p=219' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=217' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,217] -->
+<meta name="description" content="Generating footnotes for HTML documents in the past was always a slow, painful task &mdash; and every time I did it, I wondered why there wasn't a better, easier way. Today, I'm happy to announce that I've come up with a better solution to web footnotes using the jQuery JavaScript framework and a few tags and attributes that already exist in XHTML. And I'm even happier to show you how to do it!" />
+
+<meta name="keywords" content="jquery footnotes automatic generate javascript,advanced techniques,frameworks and libraries,javascript" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-217 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-217" class="post-217 post type-post status-publish format-standard hentry category-advanced-techniques category-frameworks-and-libraries category-javascript tag-jquery-footnotes-automatic-generate-javascript">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=217" title="Permalink to Generating Automatic Website Footnotes with jQuery" rel="bookmark">Generating Automatic Website Footnotes with jQuery</a>
+	</h2>
+	<div class="meta">
+		<p>Published August 13, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href='../../example/automatic-footnotes/index.html'><img src="../../wp-content/uploads/2008/08/automatic-footnotes.gif" alt="" title="automatic footnotes generated with jQuery" width="400" height="155" class="alignnone size-full wp-image-218" /></a></p>
+<p>I spent a lot of time (7 long years) in academia, writing about technical communication and new media. During that time, I created many academic documents for the web. A lot of those documents had footnotes. Generating footnotes for HTML documents in the past was always a slow, painful task &mdash; and every time I did it, I wondered why there wasn&#8217;t a better, easier way.</p>
+<p>Today, I&#8217;m happy to announce that I&#8217;ve come up with a better solution to web footnotes using the <a href="http://www.jquery.com/">jQuery JavaScript framework</a> and a few tags and attributes that already exist in XHTML. And I&#8217;m even happier to show you how to do it! <a href="../../example/automatic-footnotes/index.html">If you&#8217;d like to see it in action before we begin, go here.</a></p>
+<h3>The Problem:</h3>
+<ul>
+<li>Many websites could benefit from having footnotes, but&#8230;</p>
+<li>Manually creating footnotes for web documents is a slow process.</li>
+</ul>
+<h3>The Requirements:</h3>
+<ul>
+<li>Creating the footnotes should be as painless as possible (i.e., make use of as many standard tags/attributes as possible).</li>
+<li>Users should be able to create footnotes that are pure commentary, book citation, web reference, or any combination thereof.</li>
+</ul>
+<h3>The Solution:</h3>
+<p>I decided to make use of the two most common XHTML tags that might need footnote information: blockquotes and quotations (&lt;q&gt;). Both of those tags can take the &ldquo;cite&rdquo; attribute, whose value is the URL from which the quoted material originated.</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;q cite=&quot;http://www.cssnewbie.com/&quot;&gt;
+	Rob Glazebrook of CSSnewbie is imminently quoatable.
+&lt;/q&gt;</pre>
+<p>That takes care of the URL portion of our requirements&#8230; but what about commentary-type asides or non-web citations? You can&#8217;t put those in the cite attribute, because the only acceptable value for that attribute is a URL, and any comments you put in will be rendered as such in the output (it&#8217;s ugly&#8230; trust me). So for comments and other reference material, let&#8217;s turn to the &ldquo;title&rdquo; attribute instead.</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;q title=&quot;Done with your TPS reports?&quot;&gt;
+	Is this good for the company?
+&lt;/q&gt;</pre>
+<p>And if you&#8217;d like your footnote to look more like a standard-issue reference citation, you could even put markup inside your title.</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;q title=&quot;Zeldman, Jeffrey. &lt;em&gt;Designing with 
+Web Standards&lt;/em&gt; New Riders, 2003.&quot;&gt;
+	We build only to rebuild.
+&lt;/q&gt;</pre>
+<p>Admittedly, sticking XHTML markup in your title tag is pretty bad practice, so I can&#8217;t say that I 100% recommend this tactic&#8230; but I&#8217;ve tested it, and it works (at least in XHTML Transitional).</p>
+<p>So now that we know what our XHTML looks like, let&#8217;s turn to the jQuery!</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$(&quot;#wrap&quot;).append(&quot;&lt;ol id=\&quot;footnotes\&quot;&gt;&lt;/ol&gt;&quot;);
+	footnote = 1;
+	$(&quot;q[cite],q[title],blockquote[cite],blockquote[title]&quot;).addClass(&quot;footnote&quot;);
+	$(&quot;.footnote&quot;).each(function() {
+		$(this).append(&quot;&lt;sup&gt;&quot;+footnote+&quot;&lt;/sup&gt;&quot;);
+		cite=&quot;&lt;li&gt;&quot;;
+		url=$(this).attr(&quot;cite&quot;);
+		title=$(this).attr(&quot;title&quot;);
+		if(title &amp;&amp; url) {
+			cite+=&quot;&lt;a href=\&quot;&quot;+url+&quot;\&quot;&gt;&quot;+title+&quot;&lt;/a&gt;&quot;;
+		} else if(title) {
+			cite+=title;
+		} else if(url) {
+			cite+=&quot;&lt;a href=\&quot;&quot;+url+&quot;\&quot;&gt;&quot;+url+&quot;&lt;/a&gt;&quot;;
+		}
+		cite+=&quot;&lt;/li&gt;&quot;;
+		$(&quot;#footnotes&quot;).append(cite);
+		footnote++;
+	});
+});</pre>
+<p>And now, so that everyone understands exactly what this script is doing, I&#8217;ll walk you through each section of code.</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+});</pre>
+<p>This bit of jQuery is saying &ldquo;wait until the document is fully loaded (&ldquo;ready&rdquo;), then run the following function. This prevents our script from running while the document is only half-loaded.</p>
+<pre lang="javascript" escaped="true" line="1">$(&quot;#wrap&quot;).append(&quot;&lt;ol id=\&quot;footnotes\&quot;&gt;&lt;/ol&gt;&quot;);
+footnote = 1;</pre>
+<p>The first line finds my element with an ID of &ldquo;wrap&rdquo; (you could use whatever element you wanted, such as the body tag), and appends (adds something to the end of) an ordered list with an ID of &ldquo;footnotes.&rdquo; This is where our script will stick all of our footnotes. The second line is just setting a variable, &ldquo;footnote,&rdquo; to a value of 1. This is the number we want our footnotes to start on.</p>
+<pre lang="javascript" escaped="true" line="1">$("q[cite],q[title],blockquote[cite],
+blockquote[title]").addClass("footnote");</pre>
+<p>This line is going through our entire document and finding every q and blockquote element with either a &ldquo;cite&rdquo; or &ldquo;title&rdquo; attribute set, and giving them all a class of &ldquo;footnote.&rdquo; </p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>This is a workaround to a problem I uncovered while building the script. Originally, I was just cycling through the document, grabbing all q and blockquote elements and checking for their attributes later, using jQuery&#8217;s &ldquo;each&rdquo; function (which we&#8217;ll see in a moment). The problem is, if you specify more than one element in an &ldquo;each&rdquo; function, jQuery will build an array (good) of all of your <em>first</em> elements first, and your <em>second</em> elements second, and so on (bad, in our case). Which meant that when I went through and numbered my footnotes later in the script, all the &lt;q&gt; tags would get numbered, and then the script would start over at the top of the page and number all my &lt;blockquote&gt; tags. That resulted in all my footnotes being out of order. This fixes that problem.</p>
+<pre lang="javascript" escaped="true" line="1">$(".footnote").each(function() {
+});</pre>
+<p>Here&#8217;s the &ldquo;each&rdquo; function I mentioned previously. This line goes through the document and finds every instance of an item with a &ldquo;footnote&rdquo; class (which we just dynamically applied to all the appropriate elements), and then executes the contained function on every element it finds. It&#8217;s a cheap and easy &ldquo;foreach&rdquo; loop, basically.</p>
+<pre lang="javascript" escaped="true" line="1">$(this).append(&quot;&lt;sup&gt;&quot;+footnote+&quot;&lt;/sup&gt;&quot;);</pre>
+<p>The first thing we do in our main function is append a footnote number to the end of the element. We put the footnote in a &ldquo;sup&rdquo; (superscript) tag to make it look like a footnote tag by default. You could use a different element if you so chose, and then use CSS to style it however you wish.</p>
+<pre lang="javascript" escaped="true" line="1">cite="&lt;li&gt;";
+url=$(this).attr("cite");
+title=$(this).attr("title");</pre>
+<p>I&#8217;m setting three variables here. The first, &ldquo;cite,&rdquo; is the foundation for our footnote at the bottom of the page. Since I&#8217;m building my footnote list using an ordered list, every element within will be wrapped with &lt;li&gt; tags. Next, I&#8217;m creating a variable called &ldquo;url&rdquo; which contains the &ldquo;cite&rdquo; attribute, and a variable called &ldquo;title&rdquo; which contains the &ldquo;title&rdquo; attribute. If the attribute exists on our particular quote, the variable will be set with that attribute&#8217;s contents. If the attribute isn&#8217;t set, the variable will be a Boolean &ldquo;false.&rdquo;</p>
+<pre lang="javascript" escaped="true" line="1">if(title &amp;&amp; url) {
+	cite+=&quot;&lt;a href=\&quot;&quot;+url+&quot;\&quot;&gt;&quot;+title+&quot;&lt;/a&gt;&quot;;
+} else if(title) {
+	cite+=title;
+} else if(url) {
+	cite+=&quot;&lt;a href=\&quot;&quot;+url+&quot;\&quot;&gt;&quot;+url+&quot;&lt;/a&gt;&quot;;
+}</pre>
+<p>We have three &ldquo;if&rdquo; checks and three possible outcomes here. If both the &ldquo;title&rdquo; and &ldquo;url&rdquo; variables are set, we wrap the &ldquo;title&rdquo; content in an anchor tag with an href of the &ldquo;url&rdquo; content, and add it to the end of our &ldquo;cite&rdquo; variable. If just the title is set, we just output the title. And if just the url variable is set, we output the url, wrapped in an anchor tag so it&#8217;s active.</p>
+<pre lang="javascript" escaped="true" line="1">cite+="&lt;/li&gt;";
+$("#footnotes").append(cite);
+footnote++;</pre>
+<p>Now we just need to wrap up our script. First, we close the list item in our cite variable, now that the rest of its content has been filled. Then we append the contents of our cite variable to the end of the &ldquo;footnotes&rdquo; ordered list that we created at the beginning of our script. And last but not least, we increase the number of our footnote by one, so that the next footnote will be one larger than the last.</p>
+<p>That&#8217;s all there is to it! <a href="../../example/automatic-footnotes/index.html">You can see this script in action here.</a> Be sure to view the source code so you can see that there is no footnote list in the code&#8230; it&#8217;s being automatically generated by our script. And of course, you&#8217;ll need to include <a href="http://www.jquery.com/">the jQuery framework</a> at the top of your document before you can run this script (view the source on <a href="../../example/automatic-footnotes/index.html">the example page</a> for a demonstration on how to do that). And you could style your footnotes any way you please: my example page contains some rudimentary styles you can feel free to borrow.</p>
+<p>This script could probably be made more advanced fairly easily, and I might write another article in the future on expanding this script for added functionality. If you have any suggestions on other things you&#8217;d like to see this script do, don&#8217;t hesitate to share them in the comments! I&#8217;d also love to hear if you&#8217;re planning to use this script anywhere, if you know of a better way to write my jQuery (I&#8217;m new to the framework, so it&#8217;s possible), or anything else of that nature.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			24 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-8333">
+		<article id="comment-8333" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b33930307be0b697ea5b078b689eec29?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mikewhobikes.com' rel='external nofollow' class='url'>MikeWhoBikes</a> </cite><a href="index.html#comment-8333"><time datetime="2008-08-13T22:20:02+00:00">Aug. 13, 2008 @ 10:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great idea, I haven&#8217;t seen jQuery used like this before. I can see how this could be a huge timesaver for long academic documents.</p>
+<p>Just a thought: Would it be possible to have each number link to the corresponding footnote and vice versa? It would be great to be able to click a quote, have the page jump down to the relevant footnote, and then click again to return back to where I was reading. This would be a great usability improvement on long documents.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8334">
+		<p>Pingback: <a href='http://chernev.ru/avtomaticheskie-snoski.html' rel='external nofollow' class='url'>Автоматические сноски | Чернев.ру</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8335">
+		<article id="comment-8335" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/103663efaac407f2d83c6b1d48b679e4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.csskarma.com' rel='external nofollow' class='url'>Tim Wright</a> </cite><a href="index.html#comment-8335"><time datetime="2008-08-14T12:04:04+00:00">Aug. 14, 2008 @ 12:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That&#8217;s some good stuff, very useful. Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-8336">
+		<article id="comment-8336" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-8336"><time datetime="2008-08-14T21:41:40+00:00">Aug. 14, 2008 @ 9:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I agree, Mike: having hyperlinks in the code to jump back and forth between quotes and footnotes would be useful. And I even had it in the code at one point, but then I decided that, from a tutorial standpoint, this implementation was easier to explain. :) </p>
+<p>I&#8217;ll probably revamp this code at some point in the future and add that functionality then. Thanks for the comment!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8337">
+		<article id="comment-8337" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1e6839f12e6795d7c250987e1ed08b74?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://whatiknowiswhatyouget.com/' rel='external nofollow' class='url'>Jérôme Gamez</a> </cite><a href="index.html#comment-8337"><time datetime="2008-08-15T01:51:43+00:00">Aug. 15, 2008 @ 1:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great idea and script, Rob! I liked it so much that I ported it to MooTools (which I personally prefer to jQuery) and added the &#8220;jump back and forth&#8221; feature. You can see it in action on <a href="http://whatiknowiswhatyouget.com/examples/automaticfootnotes/" rel="nofollow">http://whatiknowiswhatyouget.com/examples/automaticfootnotes/</a> &#8211; I have to admit I have stolen most of your dummy text, but I hope you forgive me :).</p>
+<p>Best<br />
+- Jérôme</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8338">
+		<article id="comment-8338" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a97f3a545a5e96e1dafb682fbe97b3c3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.aniquito.com' rel='external nofollow' class='url'>Pradeep Mamgain</a> </cite><a href="index.html#comment-8338"><time datetime="2008-08-15T01:56:59+00:00">Aug. 15, 2008 @ 1:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much. G8 Script.</p>
+<p>&#8230;<br />
+_pADDy_<br />
+<a href="http://www.aniquito.com" rel="nofollow">http://www.aniquito.com</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8339">
+		<p>Pingback: <a href='http://www.aniquito.com/2008/08/15/generating-automatic-website-footnotes-with-jquery/' rel='external nofollow' class='url'>Generating Automatic Website Footnotes with jQuery | Aniquito.COM</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8340">
+		<p>Pingback: <a href='http://www.anieto2k.com/2008/08/15/creando-notas-al-pie-con-jquery/' rel='external nofollow' class='url'>Creando notas al pie con jQuery | aNieto2K</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8341">
+		<article id="comment-8341" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/270fa8260d925fefcdcdfd3ee5495491?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.santhos.nl' rel='external nofollow' class='url'>Santhos Webdesign</a> </cite><a href="index.html#comment-8341"><time datetime="2008-08-15T05:24:24+00:00">Aug. 15, 2008 @ 5:24 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very nice thanks a lot for this!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8348">
+		<p>Pingback: <a href='http://www.kreativuse.com/generating-automatic-website-footnotes-with-jquery/' rel='external nofollow' class='url'>Generating Automatic Website Footnotes with jQuery - Kreativuse™ - Creative Resources and Inspirations</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8350">
+		<p>Pingback: <a href='http://grantpalin.com/2008/08/17/weekly-links-14/' rel='external nofollow' class='url'>Weekly Links #14 | GrantPalin.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8352">
+		<article id="comment-8352" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1eea5122e453b7272eb59bb6378462be?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.omniweb.be' rel='external nofollow' class='url'>acms</a> </cite><a href="index.html#comment-8352"><time datetime="2008-08-18T03:09:10+00:00">Aug. 18, 2008 @ 3:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>very good for legal documents, thanks for sharing</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8353">
+		<p>Pingback: <a href='http://www.fatihhayrioglu.com/?p=576' rel='external nofollow' class='url'>Fatih Hayrioğlu'nun not defteri &raquo; 18 Ağustos 2008 web&rsquo;den se&ccedil;me haberler &raquo; Firefox, CSS3, tanımı, Bağlantı, SmasingMagazine, yapılmış, g&uuml;zel, se&ccedil;miş, Amazon, sonu&ccedil;</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8376">
+		<article id="comment-8376" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dbc7a83eac111768b3f882d1aed0431f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://readingcirclebooks.com' rel='external nofollow' class='url'>CircleReader</a> </cite><a href="index.html#comment-8376"><time datetime="2008-08-28T14:19:18+00:00">Aug. 28, 2008 @ 2:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I use Simon Elvery&#8217;s plugin for WordPress, <a href="http://elvery.net/drzax/more-things/wordpress-footnotes-plugin/" rel="nofollow">WP-Footnotes</a>. Since WordPress also uses jQuery, you may find it useful to look at his code&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8388">
+		<p>Pingback: <a href='http://ag7.alltagsgrauen.info/19.html' rel='external nofollow' class='url'>jQuery-based Footnotes &laquo; AlltagsGrauen v7.0</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-8424">
+		<p>Pingback: <a href='http://www.daimi.au.dk/~sma/blog/2008/09/19/using-jquery-for-putting-links-and-quote-cites-in-a-footnote-for-print/' rel='external nofollow' class='url'>Using jQuery for putting links and quote cites in a footnote for print | Søren Madsens blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-8443">
+		<p>Pingback: <a href='http://whatiknowiswhatyouget.com/2008/08/15/automatic-footnotes-with-mootools/' rel='external nofollow' class='url'>What I know is what you get &raquo; Blog Archive &raquo; Automatic Footnotes with MooTools</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9391">
+		<article id="comment-9391" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ed277c7845279cff45c113ac4d3ab23d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.planetholt.com/articles/jQuery-Footnotes' rel='external nofollow' class='url'>Brian Holt</a> </cite><a href="index.html#comment-9391"><time datetime="2009-02-08T08:03:46+00:00">Feb. 8, 2009 @ 8:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This was a great idea. I extended it a bit and made it into an actual jQuery plugin. It&#8217;s been working on my site for a while now; I&#8217;m just now getting around to packaging it up so others might be able to use it as well.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10068">
+		<article id="comment-10068" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/34166d1b5d37eb830f980c428a604022?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.nexustechnologiesllc.com' rel='external nofollow' class='url'>Charles Boyung</a> </cite><a href="index.html#comment-10068"><time datetime="2009-11-04T14:17:04+00:00">Nov. 4, 2009 @ 2:17 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great post, this was just what I was looking for.  One good change to make is to use .after instead of .append when adding your footnote number to the <q>.  This puts the number outside of the quotes that get generated by browsers when you use that element.  Otherwise, love it.</q></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10096">
+		<p>Pingback: <a href='http://www.jaceju.net/blog/?p=350' rel='external nofollow' class='url'>網站製作學習誌 &raquo; [Web] 連結分享</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11188">
+		<p>Pingback: <a href='http://informativecomputersolutions.com/mikecapson-blog/?p=323' rel='external nofollow' class='url'>Saint John Web Design | Informative Computer Solutions &raquo; Blog Archive &raquo; How To Emulate a Foreach Loop in JavaScript</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12803">
+		<article id="comment-12803" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8cfad9940afd7a8ff6bbcb7e72c3a0c7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">david </cite><a href="index.html#comment-12803"><time datetime="2010-06-22T07:38:09+00:00">Jun. 22, 2010 @ 7:38 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi just wondering if there was a want to run this only when the page is being printed? as i would like to produce somthing that lists all the urls on a page as footnotes when a page is printed</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14006">
+		<article id="comment-14006" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e35342b1773976229cdc1932e9d21d46?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://highhyip.com/join-liberty-reserve/' rel='external nofollow' class='url'>invest liberty reserve</a> </cite><a href="index.html#comment-14006"><time datetime="2012-03-02T03:36:03+00:00">Mar. 2, 2012 @ 3:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I got what you convey, thanks for swing up. Woh I am willing to bump this website through google. Thanks For Share Generating Automatic Website Footnotes with jQuery.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14455">
+		<article id="comment-14455" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c0ce312428edbdbe5f706a62eb9ef2fe?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.collectiondx.com/node/8385/' rel='external nofollow' class='url'>Seo Services</a> </cite><a href="index.html#comment-14455"><time datetime="2013-01-13T00:34:59+00:00">Jan. 13, 2013 @ 12:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Do you mind if I quote a couple of your posts as long as<br />
+I provide credit and sources back to your site? My blog is in the exact<br />
+same area of interest as yours and my users would truly benefit from a lot of<br />
+the information you provide here. Please let me know if this ok<br />
+with you. Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='217' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7dc9b6cea3" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=311" title="Permalink to: Advanced CSS Accordion Effect">
+                    Advanced CSS Accordion Effect                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">A while back, I wrote an article demonstrating how the accordion effect could be replicated with nothing more than CSS. There was one caveat, however: the technique didn’t work in Internet Explorer 6 due to its limited support of :hover. Today I'm revisiting the CSS accordion technique and will make a modification or two that will let it work with IE6. <a href="../../index.html?p=311" class="more-link" title="Permalink to: Advanced CSS Accordion Effect">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 864/903 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:10:57 by W3 Total Cache -->

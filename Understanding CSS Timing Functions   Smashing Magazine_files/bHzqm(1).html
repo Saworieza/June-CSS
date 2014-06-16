@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://s.codepen.io/stephengreig/fullgrid/bHzqm?type=embed&animations=run#go -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <meta name="google" value="notranslate">
+
+  <title>CodePen - A Pen by stephengreig</title>
+
+  <script style="display: none !important;">
+    window.alert   = function(){};
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+  </script>
+
+  <style>.box {
+  background: blue;
+  width: 40px;
+  height: 40px;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.linear .box {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+.ease-in .box {
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.ease-out .box {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.ease-in-out .box {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+#go:target .box {
+  -webkit-transform: translate(300px);
+  transform: translate(300px);
+}
+
+body {
+  font: .7em Arial;
+}
+
+h2 {
+  margin: 20px 0 5px;
+}
+
+a {
+  padding: 5px 10px;
+  background: blue;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+p {
+  font-size: 1.2em;
+}</style>
+
+</head>
+
+<body onload="_l=&#39;t&#39;;">
+
+  <div id="go">
+
+		<a href="bHzqm(1).html">Animate</a> <a href="http://s.codepen.io/stephengreig/fullgrid/bHzqm?type=embed&animations=run#reset">Reset</a>
+
+		<p>All of the animations below last exactly 2 seconds</p>
+
+		<div class="ease">
+			<h2>Ease (default)</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="linear">
+			<h2>Linear</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="ease-in">
+			<h2>Ease In</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="ease-out">
+			<h2>Ease Out</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="ease-in-out">
+			<h2>Ease In-Out</h2>
+			<div class="box">
+			</div>
+		</div>
+
+	</div>
+
+  <script>
+
+</script>
+
+  <script>
+    (function() {
+
+      // Once the entire pen's loaded we send a message to embeds
+      // to resize again in case they're using auto to the size the embed
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage('resize', "*");
+      }
+
+      // Remove all Iframes
+      var iframes = document.getElementsByTagName('iframe');
+
+      for (var i = iframes.length - 1; i >= 0; i--) {
+        iframes[i].outerHTML = "<p>remove</p>";
+      };
+
+    }());
+  </script>
+
+
+
+</body></html>

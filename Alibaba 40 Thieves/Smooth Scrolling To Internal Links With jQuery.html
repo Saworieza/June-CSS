@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery -->
+<html lang="en" itemscope="itemscope" itemtype="http://schema.org/WebPage"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="UTF-87">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smooth Scrolling To Internal Links With jQuery</title>
+	
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.8 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Doing the above creates a link that will move the page to the services div when you click it. But it jumps to this position and if it&#39;s far down the page it&#39;s not the nicest effect to the visitor.">
+<link rel="canonical" href="./Smooth Scrolling To Internal Links With jQuery_files/Smooth Scrolling To Internal Links With jQuery.html">
+<link rel="author" href="https://plus.google.com/115632817497386802678">
+<link rel="publisher" href="https://plus.google.com/u/0/b/110725720433094046987/PaulundCoUk">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Smooth Scrolling To Internal Links With jQuery">
+<meta property="og:description" content="Doing the above creates a link that will move the page to the services div when you click it. But it jumps to this position and if it&#39;s far down the page it&#39;s not the nicest effect to the visitor.">
+<meta property="og:url" content="http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery">
+<meta property="og:site_name" content="Paulund">
+<meta property="article:publisher" content="https://www.facebook.com/paulundcouk">
+<meta property="article:tag" content="Animation">
+<meta property="article:tag" content="scroll">
+<meta property="article:section" content="jQuery">
+<meta property="article:published_time" content="2012-01-23T06:44:54+00:00">
+<meta property="article:modified_time" content="2013-04-17T18:27:24+00:00">
+<meta property="og:updated_time" content="2013-04-17T18:27:24+00:00">
+<meta property="og:image" content="http://www.paulund.co.uk/wp-content/uploads/2011/12/1322809135_scroll-down.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@paulund">
+<meta name="twitter:domain" content="Paulund">
+<meta name="twitter:creator" content="@paulund_">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="stylesheet" id="prism_css-css" href="./Smooth Scrolling To Internal Links With jQuery_files/prism.css" type="text/css" media="all">
+<script src="./Smooth Scrolling To Internal Links With jQuery_files/cb=gapi.loaded_1" async=""></script><script src="./Smooth Scrolling To Internal Links With jQuery_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Smooth Scrolling To Internal Links With jQuery_files/platform.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./Smooth Scrolling To Internal Links With jQuery_files/ga.js"></script><script type="text/javascript" src="./Smooth Scrolling To Internal Links With jQuery_files/jquery.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-8196211-5']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+	<link rel="stylesheet" href="./Smooth Scrolling To Internal Links With jQuery_files/style.css" type="text/css" media="all">
+<script type="text/javascript" async="" src="./Smooth Scrolling To Internal Links With jQuery_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_cb63799cedb1d4d086190f4ab7a152a4" src="./Smooth Scrolling To Internal Links With jQuery_files/s_cb63799cedb1d4d086190f4ab7a152a4.js" async="async"></script></head>
+
+<body class="single single-post postid-2827 single-format-standard">
+<script type="text/javascript">
+	(function(){
+		var bsa = document.createElement('script');
+		bsa.type = 'text/javascript';
+		bsa.async = true;
+		bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+</script>
+<div id="page" class="hfeed site">
+	<header class="site-header" role="banner">
+		<div class="container">
+			<a class="home-link" href="http://www.paulund.co.uk/" title="Paulund" rel="home">
+				<h1 class="site-title">Paulund</h1>
+			</a>
+
+			<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+				<div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="nav-menu"><li id="menu-item-2714" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-2714"><a href="http://www.paulund.co.uk/c/tutorials">Tutorials</a></li>
+<li id="menu-item-2715" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2715"><a href="http://www.paulund.co.uk/c/snippets">Snippets</a></li>
+<li id="menu-item-6666" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6666"><a href="http://www.paulund.co.uk/c/resources">Resources</a></li>
+<li id="menu-item-3226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3226"><a href="http://www.paulund.co.uk/archives">Archives</a></li>
+<li id="menu-item-6667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6667"><a href="http://www.paulund.co.uk/about">About</a></li>
+<li id="menu-item-420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-420"><a href="http://www.paulund.co.uk/contactform">Contact</a></li>
+</ul></div>			</nav>
+		</div>
+		<div class="clear"></div>
+	</header>
+
+	
+	<div class="top-ad-container">
+        <div id="bsap_1294735" class="bsap_1294735 bsap"></div>
+        <p><a href="http://bsa.ly/1gns" target="_blank">Advertise here</a></p>
+	</div>
+
+
+	<div id="main" class="site-main">
+		<div class="container">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			<article id="post-2827" class="post-2827 post type-post status-publish format-standard has-post-thumbnail hentry category-jquery-tutorials tag-animation tag-scroll">
+	<header class="entry-header">
+		                <div class="post-category">
+                    <a href="http://www.paulund.co.uk/c/tutorials/jquery-tutorials" class="jquery">jQuery</a>
+                </div>
+            
+					<h1 class="entry-title">Smooth Scrolling To Internal Links With jQuery</h1>
+			</header>
+
+		<div class="entry-content">
+			<p><img src="./Smooth Scrolling To Internal Links With jQuery_files/1322809135_scroll-down.png" alt="Scroll" title="1322809135_scroll down" width="128" height="128" class="aligncenter size-full wp-image-2828"></p>
+<p>jQuery allows you change the way you interact with your website with very little code. jQuery has an animate function which allows you to animate anything that jQuery does, including scrolling.</p>
+<p>Animate scrolling creates a better effect to the visitor than to just job to a place on the page.</p>
+<p>There are many websites that will use internal links to jump to different parts of the page this is done by using a # and then the element id in the anchor tag.<br>
+<span id="more-2827"></span></p>
+<pre class="language-html"><code>&lt;a href="#services"&gt;Jump to services&lt;/a&gt;
+
+&lt;div id="services"&gt;
+
+&lt;/div&gt;</code></pre>
+<p>Doing the above creates a link that will move the page to the services div when you click it. But it jumps to this position and if it's far down the page it's not the nicest effect to the visitor. It's better if you can actually scroll to this position to help the visitors see where this is positioned.</p>
+<p>In jQuery if you set an animation on the scroll event then it creates a scrolling effect in the browser.</p>
+<pre class=" language-javascript"><code class=" language-javascript">$<span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	$<span class="token punctuation">(</span><span class="token string">'a[href^="#"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on<span class="token punctuation">(</span></span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	    e<span class="token punctuation">.</span><span class="token function">preventDefault<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	    <span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hash<span class="token punctuation">,</span>
+	    $target <span class="token operator">=</span> $<span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	    $<span class="token punctuation">(</span><span class="token string">'html, body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+	        <span class="token string">'scrollTop'</span><span class="token punctuation">:</span> $target<span class="token punctuation">.</span><span class="token function">offset<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span>top
+	    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">900</span><span class="token punctuation">,</span> <span class="token string">'swing'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>hash <span class="token operator">=</span> target<span class="token punctuation">;</span>
+	    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Add the above in your $(document).ready function in your jQuery file and all links which start with a # will have an animated scroll to the target.</p>
+<p>Look at the demo to see the effect this creates.</p>
+<p><a href="http://www.paulund.co.uk/playground/demo/jquery_internal_animation_scrolling/" class="button">Demo</a></p>
+		</div><!-- .entry-content -->
+</article><!-- #post --><div class="social">
+    <a href="https://twitter.com/share?text=Smooth%20Scrolling%20To%20Internal%20Links%20With%20jQuery&url=http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery&via=paulund" class="button full twitter" target="_blank">Tweet</a>
+    <a href="https://plus.google.com/share?url=http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery" onclick="javascript:window.open(this.href,
+&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;" class="button full google">+1</a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery" class="button full facebook" target="_blank">Like</a>
+</div>                    <div id="bsap_1294770" class="bsap_1294770 bsap"></div>
+                    <p><a href="http://bsa.ly/1gns" target="_blank">Advertise here</a></p>
+
+                    <div class="bottom-content-signup">
+    <form action="http://paulund.us4.list-manage.com/subscribe/post?u=39aa6202214a15e22c91ba035&id=7488a0af21" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mc-field-group validate" target="_blank">
+        <h3>Keep updated with the latest tutorials and snippets.</h3>
+        <p>Join me on <a href="https://twitter.com/paulund">Twitter</a> | <a href="https://plus.google.com/u/0/b/110725720433094046987/110725720433094046987/posts">G+</a> | <a href="https://www.facebook.com/paulundcouk">Facebook</a></p>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required="">
+        <div class="clearfix"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </form>
+</div>
+<div id="comments" class="comments-area">
+	<div class="showComments">
+		Comment
+	</div>
+	<div id="displayComments">
+		<div id="disqus_thread"></div>
+	</div>
+</div>		</div>
+	</div>
+
+<div id="tertiary" class="sidebar-container" role="complementary">
+	<div class="sidebar-inner">
+		<div class="widget-area">
+			<aside id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.paulund.co.uk/">
+    <div>
+        <input type="text" value="" name="s" id="s" placeholder="Search for:">
+        <input type="submit" id="searchsubmit" value="Search">
+    </div>
+</form></aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"><div id="bsap_1294734" class="bsap_1294734 bsap"></div></div>
+		</aside><aside id="coveloping-google-plus-badge-widget-2" class="widget coveloping-google-plus-badge"><div id="___page_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 259px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 259px;" tabindex="0" vspace="0" width="100%" id="I0_1399985450828" name="I0_1399985450828" src="./Smooth Scrolling To Internal Links With jQuery_files/page.html" data-gapiattached="true" title="+Badge"></iframe></div>
+</aside>		</div>
+	</div>
+</div>
+	<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="container">
+    <div class="back-to-top">Back to top ^</div>
+</div>
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <p>I am a freelance PHP developer from Bristol, <a href="http://www.paulund.co.uk/work-with-me">work with me</a> on your next projects.</p>
+
+        <h3>Social</h3>
+        <p><a href="http://twitter.com/paulund">Twitter</a></p>
+        <p><a href="https://plus.google.com/+Paulundcouk">Google+</a></p>
+
+        <h3>Notification Bar</h3>
+        <p><a href="http://codecanyon.net/item/specific-social-notification-bar/2531131?ref=paulund">Download Specific Social Notification Bar</a></p>
+    </div>
+</footer>
+</div>
+<script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script><script type="text/javascript" src="./Smooth Scrolling To Internal Links With jQuery_files/prism.js"></script>
+<script type="text/javascript" src="./Smooth Scrolling To Internal Links With jQuery_files/site.js"></script>
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: paulund.co.uk @ 2014-05-07 07:07:01 by W3 Total Cache --><iframe name="oauth2relay1424293706" id="oauth2relay1424293706" src="./Smooth Scrolling To Internal Links With jQuery_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

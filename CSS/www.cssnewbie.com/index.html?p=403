@@ -1,0 +1,902 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>15 Surefire Ways to Break Your CSS</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; 15 Surefire Ways to Break Your CSS Comments Feed" href="15-surefire-ways-to-break-your-css/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='New Poll: How Much CSS Do You Already Know?' href='index.html?p=397' />
+<link rel='next' title='A Simple jQuery Stylesheet Switcher' href='index.html?p=410' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=403' />
+<link rel='shortlink' href='index.html?p=403' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,201] -->
+<meta name="description" content="Some of the the biggest CSS blunders stem from the simplest of errors. Knowing what those errors are can save you hours of wasted labor." />
+
+<meta name="keywords" content="css bug, css error, css problem, css organization, css rules, learn css, css properties,bugs,errors,properties,rules of css,basic techniques,bugs and fixes,ids and classes,organization" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-403 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-403" class="post-403 post type-post status-publish format-standard hentry category-basic-techniques category-bugs-and-fixes category-ids-and-classes category-organization tag-bugs tag-errors tag-properties tag-rules-of-css">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=403" title="Permalink to 15 Surefire Ways to Break Your CSS" rel="bookmark">15 Surefire Ways to Break Your CSS</a>
+	</h2>
+	<div class="meta">
+		<p>Published March 26, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="http://www.flickr.com/photos/ultimateslug/109566859/"><img src="wp-content/uploads/2009/03/broken-monitor.jpg" alt="&#039;Fixed&#039; by Don Fulano. Used under a Creative Commons license." title="&#039;Fixed&#039; by Don Fulano. Used under a Creative Commons license." width="579" height="250" class="alignnone size-full wp-image-404" /></a></p>
+<p>The life of a CSS developer isn&#8217;t all about attending glamorous champagne parties, jet-setting around the world and hanging out with supermodels. In fact, when your CSS doesn&#8217;t behave the way it should, the job can be downright tedious. I&#8217;ve spent untold hours of my life debugging my code &mdash; and I&#8217;m guessing I&#8217;m not alone here.</p>
+<p>But as silly as it may seem, some of the biggest CSS blunders stem from the simplest of errors. Knowing what some of those errors are and remembering to look for them can save you hours of wasted labor. Here are fifteen ways I&#8217;ve found to break my CSS for sure &mdash; and fifteen things I always look for whenever I have a problem in my code.<span id="more-403"></span></p>
+<h3>Missing a Semicolon</h3>
+<p>CSS rules are comprised of property-value pairs (declarations) followed by a semicolon. Accordng to the CSS specification, the last declaration doesn&#8217;t need a semicolon &mdash; because the closing brace effectively ends the declaration just as well. That means something like this is perfectly acceptable: </p>
+<pre lang="css" escaped="true" line="1">body {
+	background-color: #444;
+	color: #eee }</pre>
+<p>The only problem is, as soon as you decide to add another declaration to your previous rule, you&#8217;ve now made it all too easy to forget to add the semicolon to your once-last rule:</p>
+<pre lang="css" escaped="true" line="1">body {
+	background-color: #444;
+	color: #eee 
+font-family: Helvetica, Arial, sans-serif }</pre>
+<p>The result? Your font-family rule never gets applied, because the parser reads &#8220;font-family&#8221; as part of the color value. Which is why I make a habit of adding the final semicolon in a rule, no matter what.</p>
+<h3>Missing a Colon</h3>
+<p>I&#8217;ve seen this particular problem crop up frequently while teaching classes on CSS. People get excited when CSS starts to make sense, and their typing speed increases. The downside: this makes errors of omission much more likely. And a missing colon is particularly tough to see, since it sits right in the middle of a declaration. Consider the following two lines:</p>
+<pre lang="css" escaped="true" line="1">body { font-family Helvetica, Arial, sans-serif; }
+body { font-family: Helvetica, Arial, sans-serif; }</pre>
+<p>It&#8217;s easy to see how the colon could get overlooked in the jumble of braces, hyphens, semicolons and cryptic words. As a rule of thumb, if you only have one declaration not behaving itself, this is a good place to start looking.</p>
+<h3>Missing a Brace</h3>
+<p>{Braces} around a CSS rule are like the circle of life: regular, natural, and expected. And if you ever miss a brace (generally a closing brace for whatever reason) &#8212; just like if you have a zombified corpse that refuses to die &#8212; you suddenly have all sorts of mayhem on your hands.</p>
+<p>When an unsuspecting browser comes across a pair of rules like this:</p>
+<pre lang="css" escaped="true" line="1">body {
+	font-family: Helvetica, Arial, sans-serif;
+#wrap {
+	width: 960px; }</pre>
+<p>The browser is going to choke. Two opening braces before a closing brace is right out: everything from your #wrap rule (in this example) on would be ignored. </p>
+<p>However, this does make debugging easier. Do you have a whole chunk of CSS being ignored? Which is the first rule that is being neglected? There&#8217;s a good chance you have an uneven number of braces hanging out in the vicinity.</p>
+<h3>Misspelled Properties</h3>
+<p>I consider the following few errors the bane of dyslexic developers everywhere. Generally speaking, I&#8217;m a good speller. But when I&#8217;m &#8220;in the zone&#8221; and typing as fast as my fingers can carry me, I tend to transpose a few letters here and there. In writing, this isn&#8217;t such a big deal: people can generally figure out what I mean. Computers, sadly, are less discerning. </p>
+<pre lang="css" escaped="true" line="1">div { border-bototm: 5px; }</pre>
+<p>Now, I have no idea what a &#8220;bototm&#8221; is, but I do know I write the word at least one time in five when I&#8217;m trying to refer to the lower edge of an element. I&#8217;m lucky in that I have a decent eye for editing and often catch these mistakes as I make them. If you&#8217;re not so fortunate, using a program with code coloring like <a href="http://notepad-plus.sourceforge.net">Notepad++</a> or <a href="http://www.amazon.com/gp/product/B001EUDIZE?ie=UTF8&#038;tag=cssnewbie-20&#038;linkCode=as2&#038;camp=1789&#038;creative=390957&#038;creativeASIN=B001EUDIZE">Adobe Dreamweaver (my personal favorite)</a> can make the job a lot easier: if a property isn&#8217;t colored like the other properties, than it&#8217;s probably not much of a property at all.</p>
+<h3>Misspelled Values</h3>
+<p>Misspellings aren&#8217;t limited to just properties. And sometimes a misspelled value can be even more difficult to notice:</p>
+<pre lang="css" escaped="true" line="1">#wrap { padding: 10px 20pz 25px 20px; }</pre>
+<p>Unfortunately for the rule above, I&#8217;m fairly sure only Snoop Dogg and I have ever tried to measure elements in pizzles. Instead of the generous padding you&#8217;d expect this rule to generate, this one misspelled unit renders the entire declaration invalid.</p>
+<h3>Misspelled Classes and IDs</h3>
+<p>No matter how often I create a div with an ID of &#8220;navigation,&#8221; I still find myself writing rules that look more like this:</p>
+<pre lang="css" escaped="true" line="1">#navigaiton { float: left; } </pre>
+<p>This can be a frustrating error to track down, because color-coded editors won&#8217;t help you out here: you could just as easily purposefully name an element &#8220;navigaiton&#8221; if you really wanted. But I&#8217;d recommend against it.</p>
+<h3>Improperly Ordered Values</h3>
+<p>Some CSS properties have a built-in shorthand, which is a great way to save yourself a few lines of code. Unfortunately, most of the shorthand properties are very picky about the order of the property&#8217;s values. For example:</p>
+<pre lang="css" escaped="true" line="1">div { font: 2em Helvetica, Arial, sans-serif; }
+a { font: "Times New Roman", serif 1.5em; }</pre>
+<p>The first rule will result in all divs gaining a specific typeface and size. The second rule will result in a debugging session &mdash; while it&#8217;s okay to leave some values out of the font declaration, changing up the order of the values will result in problems.</p>
+<h3>Measurement Values Without Units</h3>
+<p>CSS Newbie reader Justin reminded me of this problem <a href="index.html?p=52">the last time I wrote about CSS faux pas.</a> With only a few limited exceptions, all measurement values in CSS need a unit of measurement associated with it. Take the following rule for example:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">#wrap { margin: 3; }</pre>
+<p>Three <em>what</em>? Ems? Inches? Pizzles? The flexibility of CSS that allows us to pick from several units of measurement also means specifying a unit is fairly important.</p>
+<h4>Bonus &mdash; Two unit-agnostic measurements:</h4>
+<ol>
+<li>Values of zero don&#8217;t need a unit of measurement. Turns out, zero pixels and zero miles are <em>exactly the same length.</em></li>
+<li>Line heights needn&#8217;t have a specific unit. A line height of &#8220;1.5&#8243;, for example, will simply assume you meant &#8220;1.5 times my font size.&#8221; For more on this phenomenon, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">visit Eric Meyer&#8217;s article on Unitless Line Heights.</a></li>
+</ol>
+<h3>Competing Identical Rules</h3>
+<p>Once a stylesheet gets to be a certain length, it can be difficult to remember which rules you&#8217;ve already written <a href="index.html?p=42">unless your CSS is very well organized.</a> And two identical rules at different spots in your CSS file can wreak havoc on your design and sanity alike.</p>
+<pre lang="css" escaped="true" line="1">ul li { margin: 0 2em; }
+... 300 lines later ... 
+ul li { margin: 0; padding: 10px; }</pre>
+<p>In this scenario, the latter rule would win out over the former, thus removing the margin and applying padding instead. But if you&#8217;ve forgotten about this duplicity, you might go back into your CSS later and try editing the <em>first</em> rule only, and remain perplexed as to why, no matter how you tweak your margin, you can&#8217;t seem to make any difference.</p>
+<h3>Unintentionally Competing Rules</h3>
+<p>A similar problem could force your CSS to compete with itself in ways you didn&#8217;t expect. For example, if you had the following code in your XHTML:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div id="navigation" class="nav"&gt;...&lt;/div&gt;</pre>
+<p>You could refer to this element by either its class or its ID. The problem arises when you do both, and forget that you&#8217;ve done so:</p>
+<pre lang="css" escaped="true" line="1">.nav { width: 50%; }
+... later in the code ...
+#navigation { width: 500px; }</pre>
+<p>This code would result in a fixed-width navigation bar, even though the first rule would suggest a more flexible width. Again, <a href="index.html?p=42">having a well organized stylesheet</a> is the easiest way to avoid this problem.</p>
+<h3>Calling a Class an ID (or vice-versa)</h3>
+<p>I fall into this particular trap all the time. I&#8217;ll write a rule like this: </p>
+<pre lang="css" escaped="true" line="1">.navigation {
+	float: left;
+	width: 100%;
+	height: 4em; }</pre>
+<p>And nothing will happen! It often takes me a minute or two to realize that the real problem is that I&#8217;d given my navigation bar an ID, not a class. My best advice here is to pick a naming system that works well for you and <strong>be consistent.</strong> If you always call your top navigation bar &#8220;#topnav&#8221;, for example, you&#8217;re far less likely to misremember your element names.</p>
+<h3>Using a Nonexistent Property</h3>
+<p>Not all CSS properties are named the most intuitively. For example, this might look like a perfectly acceptable rule to someone new to CSS:</p>
+<pre lang="css" escaped="true" line="1">body { text-size: 3em; }</pre>
+<p>The problem is, while there are certainly several text-riffic properties, text-size isn&#8217;t one of them. Instead, we use font-size. Which means that the rule above wouldn&#8217;t do much of anything. <a href="http://www.amazon.com/gp/product/B001EUDIZE?ie=UTF8&#038;tag=cssnewbie-20&#038;linkCode=as2&#038;camp=1789&#038;creative=390957&#038;creativeASIN=B001EUDIZE">Intelligent code-coloring editors like Dreamweaver</a> usually make this sort of debugging much easier: if it&#8217;s not a real CSS property, it won&#8217;t be the same color as the surrounding properties. That&#8217;s usually my first clue I&#8217;ve done something wrong.</p>
+<h3>Using a Nonexistent Value</h3>
+<p>This is a sister stumbling block to the one above. Some values just seem to make sense, but will fail you nonetheless:</p>
+<pre lang="css" escaped="true" line="1">td { vertical-align: center; }</pre>
+<p>You would assume that this rule would vertically center your table text, right? Unfortunately, while &#8220;center&#8221; is indeed an acceptable value for text-align, vertical-align uses the perhaps less intuitive &#8220;middle&#8221; instead. And you&#8217;d have to ask a better educated rhetorician than me to figure out the difference between middle and center in this context, because I&#8217;m at a loss.</p>
+<h3>Improperly Matching Properties and Values</h3>
+<p>Certain CSS declarations can look correct even to the trained eye, unless that eye is paying particularly close attention. For example:</p>
+<pre lang="css" escaped="true" line="1">a { text-transform: italic; }</pre>
+<p>While this might look like a perfectly reasonable rule, you won&#8217;t end up with italicized text. That&#8217;s because &#8220;italic&#8221; belongs to the font-style property, not the text-transform property. But even most advanced editors won&#8217;t catch that bug, as you&#8217;ve used a perfectly reasonable property and value &mdash; you&#8217;ve just used them in an inappropriate combination.</p>
+<h3>Not Closing Comments</h3>
+<p>The <a href="http://blogthememachine.com/">gentle persons at BlogThemeMachine</a> tipped me off to this common CSS problem. Can you spot the major difference between these two sets of rules?</p>
+<pre lang="css" escaped="true" line="1">/* Navigation goes here. */
+#nav {
+	float: left;
+	width: 100%;
+	height: 3em; }</pre>
+<pre lang="css" escaped="true" line="1">/* Navigation goes here. /*
+#nav {
+	float: left;
+	width: 100%;
+	height: 3em; }</pre>
+<p>The only difference is that the second rule has an improperly closed comment tag: /* versus */. That seemingly insignificant difference can result in entire swaths of your CSS suddenly not working. In fact, this tiny blunder will negate all your CSS from the start of your comment until you successfully close a <em>second</em> comment. Which if you&#8217;re using comments to organize your CSS means an entire section of your site will lose its styling.</p>
+<p>These fifteen tiny blunders are sure to give you hours upon hours of CSS frustration&#8230; unless you know to watch for them. What are some other self-introduced bugs you often find in your code? I&#8217;d love to hear about them in the comments!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			41 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9514">
+		<article id="comment-9514" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://css-tricks.com' rel='external nofollow' class='url'>Chris Coyier</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9514"><time datetime="2009-03-26T21:27:39+00:00">Mar. 26, 2009 @ 9:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>For the record, I wish I could measure EVERYTHING in pizzles.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9515">
+		<article id="comment-9515" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ae8db9ce63c417222231c8203e19dd80?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://adhipg.info' rel='external nofollow' class='url'>Adhip</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9515"><time datetime="2009-03-26T22:38:51+00:00">Mar. 26, 2009 @ 10:38 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One of the bigger puzzlers is when you start having fun with specificity. </p>
+<p>Like if you have a div which has a list and you define a class:</p>
+<p>#nav ul li { font-size: 1.1em; &#8230; }</p>
+<p>Then, later you want to give a certain property to a particular list item which has an ID like say, &#8216;about&#8217;. Then,</p>
+<p>#about { font-size: 1.5em; &#8230; } </p>
+<p>will not work. Neither will:</p>
+<p>li#about { font-size: 1.5em; &#8230; }</p>
+<p>This is the point where you start pulling your hair. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9516">
+		<p>Pingback: <a href='http://blog.petrusha.name/2009/03/27/n-surefire-ways-to-break-your-css/' rel='external nofollow' class='url'>N верных путей чтобы сломать ваш CSS | IнTересности</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9518">
+		<article id="comment-9518" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bc142c2272f756545c5fbb0551c2c2c3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.dave-woods.co.uk' rel='external nofollow' class='url'>Dave Woods</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9518"><time datetime="2009-03-27T06:14:02+00:00">Mar. 27, 2009 @ 6:14 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Adhip, that&#8217;s where Firebug comes in extremely handy</p>
+<p>The main one on the list that occasionally catches me out is mixing up IDs and classes in my CSS. I&#8217;ve often tried to memorise the HTML IDs and classes while coding my CSS only to find that something doesn&#8217;t work. Easily fixed though :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9520">
+		<article id="comment-9520" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2277c5ffe63dd8034f21a14fb4dbf347?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.addictedtocoffee.de' rel='external nofollow' class='url'>Oliver</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9520"><time datetime="2009-03-27T08:11:06+00:00">Mar. 27, 2009 @ 8:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Is there any webdeveloper out there who could code an online pizzles-to-em&#8217;s calculator?????</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9521">
+		<article id="comment-9521" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/630d3ceb806cf48ff7f1e64e27f1fd50?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.seeseeeye.com' rel='external nofollow' class='url'>Teresa</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9521"><time datetime="2009-03-27T09:15:32+00:00">Mar. 27, 2009 @ 9:15 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Safari&#8217;s developer tools are invaluable in tracking down CSS bugs (open Safari Prefs, click Advanced tab, click Show Develop menu option). In addition to the final computed style, it&#8217;ll display the rules applied for a given selector in your style sheet, in order of cascade. If a particular rule isn&#8217;t being applied it&#8217;ll have a line through it. While Firefox is my #1 choice for browsing, and I like the ability to inspect/select/copy HTML, Safari is #1 for me when it comes to debugging (something I do all too often).</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9522">
+		<article id="comment-9522" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cde0cb323b879e7457fbe1b1526910aa?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://dttvb.com/' rel='external nofollow' class='url'>the DtTvB</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9522"><time datetime="2009-03-27T10:33:27+00:00">Mar. 27, 2009 @ 10:33 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Semicolons are the thing that I always miss.</p>
+<p>Sometimes I miss a comma, and sometimes I even add an extra comma. For example:</p>
+<p>font: 10pt &#8220;Verdana&#8221;, &#8220;Tahoma&#8221; sans-serif</p>
+<p>And sometimes:</p>
+<p>font: 10pt, Verdana, Tahoma, sans-serif</p>
+<p>Uh&#8230; Note the missing semicolon. ;) Sometimes when I made a rule to change the font size, at some point I decided to change the font family, so this happens to me sometimes:</p>
+<p>font-size: 10pt &#8220;Verdana&#8221;, &#8220;Tahoma&#8221;, sans-serif;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9524">
+		<article id="comment-9524" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8f4e46f06a406d7c3bdd04a8a4ab40c7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://khaz.fr' rel='external nofollow' class='url'>Khaz</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9524"><time datetime="2009-03-27T11:10:58+00:00">Mar. 27, 2009 @ 11:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice reminder !</p>
+<p>I have permit myself to translate it in French (because most Frenchies don&#8217;t dare to read a post written in English !)</p>
+<p>Thank you for your job !</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9525">
+		<article id="comment-9525" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/69f14ba402799f293a4e167d7ae761f0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://thefstopfiles.com' rel='external nofollow' class='url'>Gabe</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9525"><time datetime="2009-03-27T11:27:08+00:00">Mar. 27, 2009 @ 11:27 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Pizzles FTW!! I love it. Good list. Most of it common sense, but nevertheless interesting &amp; entertaining for web nerds like us.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9527">
+		<article id="comment-9527" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f20c3ac7dcbcf9bda5babf359d45b1bd?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://kaioa.com' rel='external nofollow' class='url'>Jos Hirth</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9527"><time datetime="2009-03-27T16:18:08+00:00">Mar. 27, 2009 @ 4:18 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8220;When in doubt, validate.&#8221; ;)</p>
+<p>Also if there is nothing else to do, validate as well. Heh.</p>
+<p>(Yes, there is also a CSS validator over at the W3C page.)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9529">
+		<article id="comment-9529" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1713a3169a49a37f9059c8edb70c4b42?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.vandenoostende.com' rel='external nofollow' class='url'>Gilles</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9529"><time datetime="2009-03-28T05:16:02+00:00">Mar. 28, 2009 @ 5:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Also, CHECK YOUR DOCTYPES. One time I spent the best part of four hours writing hacks for stuff that was allready working perfectly, but didn&#8217;t anymore because some developer forgot to copy the correct strict doctype&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9530">
+		<article id="comment-9530" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c3bc4e9bcc4665a11803c284893349f3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://kingofmycastle.com' rel='external nofollow' class='url'>John King</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9530"><time datetime="2009-03-28T06:02:37+00:00">Mar. 28, 2009 @ 6:02 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The one that has caught me out twice recently is</p>
+<p>margin: none;</p>
+<p>I used it to alter a margin set on a li at the top of the stylesheet. It&#8217;s &#8217;0px&#8217; you dumbass! :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9531">
+		<article id="comment-9531" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f45d197c8cf2305832bf59f23f144b93?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.normansblog.de' rel='external nofollow' class='url'>Norman</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9531"><time datetime="2009-03-28T07:11:30+00:00">Mar. 28, 2009 @ 7:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>get an editor with proper css syntax highlighting.. then you now pretty fast when you wrote something wrong or forgot braces/semicolons ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9533">
+		<article id="comment-9533" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/758b3dcfda4196cba0fd48c45bfb6df3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Kristian J. </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9533"><time datetime="2009-03-28T08:56:33+00:00">Mar. 28, 2009 @ 8:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Personally I have found that I work faster when I use an CSS editor with some kind of syntax checking. I use Aptana, which actually has a pretty good CSS editor, and spend very little time nowadays hunting down missing braces/semicolons or invalid rules.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9534">
+		<article id="comment-9534" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2e225ff5beb684088f5c9131d3979a18?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://sigurdhsson.org/' rel='external nofollow' class='url'>Simon Sigurdhsson</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9534"><time datetime="2009-03-28T12:42:17+00:00">Mar. 28, 2009 @ 12:42 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is why we have validators.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9535">
+		<article id="comment-9535" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/902d82959c34b58bc6d9de6dada0ae71?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">k3n </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9535"><time datetime="2009-03-28T15:39:57+00:00">Mar. 28, 2009 @ 3:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The one that&#8217;s bitten me in the butt more than once is when a generic (probably not the correct term for it) property is set using non-generic declaration, resulting in unintended results. I think an example captures it best.</p>
+<p>You want to set a background image, but you do it like so:</p>
+<p>    .foo { background: url(&#8216;&#8230;&#8217;); }</p>
+<p>This is problematic because using the generic &#8220;background&#8221; property, you should set ALL values that it accepts; if not, I believe it defaults them based on the browser. Instead, one should use:</p>
+<p>    .foo { background-image: url(&#8216;&#8230;&#8217;); }</p>
+<p>This problem can be exposed with any of the declarations that have &#8220;generic&#8221; super-sets, such as font, border, etc. I know I&#8217;ve read about this before, I just can&#8217;t find where that was.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9536">
+		<article id="comment-9536" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a167933a9281c339e15d37d51739e6bf?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jayphen </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9536"><time datetime="2009-03-28T19:41:29+00:00">Mar. 28, 2009 @ 7:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Using Firebug to inspect an element that isn&#8217;t behaving like you want it to is the quickest way to debug these kind of issues. I can&#8217;t count how many times I&#8217;ve made silly little mistakes &amp; have been saved by Firebug.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9537">
+		<p>Pingback: <a href='http://sarahsmile.us/2009/03/link-love-032809/' rel='external nofollow' class='url'>Link Love :: 03.28.09 | sarahsmile.us</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9539">
+		<article id="comment-9539" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/660465fc81f8d18d91a3b63698073337?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.danhbaweb20.com/' rel='external nofollow' class='url'>Danh ba web 2.0</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9539"><time datetime="2009-03-29T02:55:25+00:00">Mar. 29, 2009 @ 2:55 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great post. Thanks a lot<br />
+See more tool CSS in my blog: <a href="http://tr.im/hWzo" rel="nofollow">http://tr.im/hWzo</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9541">
+		<p>Pingback: <a href='http://www.thisinspires.me/2009/03/29/links-for-2009-03-29/' rel='external nofollow' class='url'>links for 2009-03-29 | This Inspires Me</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9542">
+		<p>Pingback: <a href='http://design-newz.com/2009/03/29/15-surefire-ways-to-break-your-css/' rel='external nofollow' class='url'>15 Surefire Ways to Break Your CSS : Design Newz</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9548">
+		<article id="comment-9548" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/032f1a85263f21ff1f013421967ef99e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.freshivore.net' rel='external nofollow' class='url'>Vincent Franco</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9548"><time datetime="2009-03-31T10:51:48+00:00">Mar. 31, 2009 @ 10:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Another point is to make sure your remember specificity, that one bites me sometimes with huge multi sheet styles</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9549">
+		<article id="comment-9549" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0fe274896489145d0cb312092eec4cde?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.snifim.co.il' rel='external nofollow' class='url'>סניפים</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9549"><time datetime="2009-04-01T15:29:42+00:00">Apr. 1, 2009 @ 3:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If you use dreamweaver &#8211; it can show you all mistkes in a very easy way.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9570">
+		<article id="comment-9570" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/650f520adad03869154a1a4744269222?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.codesignstudios.com' rel='external nofollow' class='url'>Dennison Uy</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9570"><time datetime="2009-04-06T04:03:14+00:00">Apr. 6, 2009 @ 4:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Do Pizzles come in different flavors? Does it come with Pepperoni?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9576">
+		<p>Pingback: <a href='http://www.jaceju.net/blog/?p=423' rel='external nofollow' class='url'>網站製作學習誌 &raquo; [Web] 連結分享</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9656">
+		<article id="comment-9656" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b182449eb1c596b6bc3c5a1bd0ef3885?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.seangw.com/wordpress/' rel='external nofollow' class='url'>Sean</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9656"><time datetime="2009-04-28T12:29:58+00:00">Apr. 28, 2009 @ 12:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One that I always find annoying is accidentally putting a semi colon after a style, like in coding:</p>
+<p>.badCSS {font-weight: normal;};</p>
+<p>Certain browsers will go on happily, others will stop at the extra semi colon at the end of the line and not render CSS past that.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9677">
+		<article id="comment-9677" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fff67acd424240025bec0bf59a27e620?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://budurl.com/vvbp' rel='external nofollow' class='url'>Rahul</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9677"><time datetime="2009-05-04T03:59:00+00:00">May. 4, 2009 @ 3:59 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Do take a look at Top Style 3. One of the best softwares for CSS coding and editing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9830">
+		<article id="comment-9830" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/77734f67b519144913746a2d1bfc37d3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://designsnprint.com' rel='external nofollow' class='url'>Graphic Designer in Atlanta</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9830"><time datetime="2009-07-14T07:06:36+00:00">Jul. 14, 2009 @ 7:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If a particular rule isn’t being applied it’ll have a line through it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9837">
+		<article id="comment-9837" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/25f0b948f2d7eef5f75a7c10e9a581d6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.r-sn.com' rel='external nofollow' class='url'>r-sn.com</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9837"><time datetime="2009-07-17T06:39:27+00:00">Jul. 17, 2009 @ 6:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>good tutorial </p>
+<p>thank you</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9863">
+		<article id="comment-9863" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/26ea8cd49dc6a3b23cd7a5a1f3ff3a1d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.householdbudgetnerd.com' rel='external nofollow' class='url'>Nathon</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9863"><time datetime="2009-08-03T19:41:09+00:00">Aug. 3, 2009 @ 7:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Notepad++ does color coding for HTML and CSS. It helps me find mistakes, and it&#8217;s free.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9917">
+		<article id="comment-9917" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6aee2ae3b1e339b726474bd65e59e7da?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.retroboutiques.com' rel='external nofollow' class='url'>Arlene</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-9917"><time datetime="2009-08-27T16:43:36+00:00">Aug. 27, 2009 @ 4:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Just curious&#8230;.where you looking over my shoulder last night as I worked???  Me thinks so :0  Thanks so much, great article, and I have committed probably all of the above at one time or another!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10006">
+		<p>Pingback: <a href='http://www.nutspress.com/2009/10/01/css-hack-mania-1/' rel='external nofollow' class='url'>CSSハックマニア その1 | Nutspress</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10195">
+		<p>Pingback: <a href='index.html?p=488' rel='external nofollow' class='url'>The Best CSS Newbie Articles of 2009</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11185">
+		<p>Pingback: <a href='http://informativecomputersolutions.com/mikecapson-blog/?p=321' rel='external nofollow' class='url'>Mike Capson &raquo; Blog Archive &raquo; The Best CSS Newbie Articles of 2009</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12422">
+		<article id="comment-12422" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/365e5b605ca39e5f19889a35defa2db8?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ekrikt.com/map.html' rel='external nofollow' class='url'>Hoyamatu</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-12422"><time datetime="2010-04-06T09:50:44+00:00">Apr. 6, 2010 @ 9:50 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Marrow rose <a href="http://ekrikt.com/pancreatin-for-gas/" rel="nofollow">porcine pancreatin</a> tree should <a href="http://ekrikt.com/allergy-to-synvisc/" rel="nofollow">synvisc injections side effects</a> person could <a href="http://ekrikt.com/famvir/" rel="nofollow">what is famvir 500mg</a> believe the <a href="http://ekrikt.com/allantoin-final-monograph/" rel="nofollow">allantoin determination</a> his should <a href="http://ekrikt.com/vetamix-biotin/" rel="nofollow">is biotin safe for the body</a> cloaked cubby <a href="http://ekrikt.com/alternative-medication-for-dopamine/" rel="nofollow">dopamine anger</a> the change <a href="http://ekrikt.com/lor-brina/" rel="nofollow">xia lor</a> even night <a href="http://ekrikt.com/acth-for-infantile-spasms/" rel="nofollow">acth stimulation test interpertation</a> hand was <a href="http://ekrikt.com/insulin-lettuce/" rel="nofollow">insulin pump soft belt</a> ore descended <a href="http://ekrikt.com/massachusetts-zinc-chromate-paint-regulations/" rel="nofollow">composition of yellow chromate</a> hat form <a href="http://ekrikt.com/embroidery-ginkgo-arts-and-crafts/" rel="nofollow">side effects ginkgo biloba</a> ecause his <a href="http://ekrikt.com/leena-kokkonen/" rel="nofollow">leena nguyen</a> concluded that <a href="http://ekrikt.com/mucomyst-ald/" rel="nofollow">mucomyst in treatment of contrast nephropathy</a> not stare <a href="http://ekrikt.com/transparent-polymeric-eyeglass-lenses/" rel="nofollow">polymeric polysulfide acetal</a> blank soul <a href="http://ekrikt.com/gotu-kola-stops-dht-from-forming/" rel="nofollow">gotu kola used</a> take him <a href="http://ekrikt.com/lost-battles-sabin/" rel="nofollow">kathy sabin and john elway</a> green rock <a href="http://ekrikt.com/muscle-relaxants-used-in-electroconvulsive-therapy/" rel="nofollow">muscle relaxants</a> hope your <a href="http://ekrikt.com/leucovorin/" rel="nofollow">leucovorin calcium product information</a> kicked the <a href="http://ekrikt.com/kariva-28-day/" rel="nofollow">kariva and pregnancy</a> your soul <a href="http://ekrikt.com/edta-ethylenediamine-tetraacetic-acid/" rel="nofollow">edta ethylenediamine tetraacetic acid</a> was duly <a href="http://ekrikt.com/carters-pj/" rel="nofollow">don carters</a> never been <a href="http://ekrikt.com/laser-tattoo-removers-for-sale/" rel="nofollow">decal adhesive removers</a> idea anyway <a href="http://ekrikt.com/chickenpox-vaccine/" rel="nofollow">what is chickenpox</a> their needs <a href="http://ekrikt.com/peri-shefik/" rel="nofollow">el peri dico de catalunya mendicidad</a> lowered their <a href="http://ekrikt.com/change-management-software-and-tfs/" rel="nofollow">merida tfs trail 700d</a> jumped backwards <a href="http://ekrikt.com/effects-of-spironolactone/" rel="nofollow">flutamide vs spironolactone vs bicalutamide</a> boys were <a href="http://ekrikt.com/tranexamic/" rel="nofollow">side effecrts of tranexamic acid</a> the third <a href="http://ekrikt.com/l-fudge-art/" rel="nofollow">fudge dice</a> the result <a href="http://ekrikt.com/alumina-silicate-suppliers/" rel="nofollow">zirconia alumina</a> dripping cake <a href="http://ekrikt.com/doxylamine-succinate-tablets/" rel="nofollow">doxylamine succinate alcohol</a> into anything <a href="http://ekrikt.com/cultivo-hongos/" rel="nofollow">clasificaci n de los hongos</a> chain over <a href="http://ekrikt.com/exelon/" rel="nofollow">exelon td adverse reactions</a> his clothing <a href="http://ekrikt.com/bromelain-acts-on-fibrinogen/" rel="nofollow">fibrinogen</a> orceress saw <a href="http://ekrikt.com/combining-tylenol-and-advil/" rel="nofollow">better advil or serevent with asmanex</a> her like <a href="http://ekrikt.com/sel-de-la-terre-restaurant/" rel="nofollow">taurus sel 2002 interceptor</a> this were <a href="http://ekrikt.com/kenalog-injections-side-effects/" rel="nofollow">maximum repeat subtenon kenalog injections</a> more with <a href="http://ekrikt.com/zovirax-ointment/" rel="nofollow">zovirax cream 5</a> difficulty extricatin <a href="http://ekrikt.com/product-contain-phenylpropanolamine-pharmacy/" rel="nofollow">phenylpropanolamine and phenylalanine</a> dealt with <a href="http://ekrikt.com/foxy-doxy-rescue/" rel="nofollow">doxies for sale seattle</a> know that <a href="http://ekrikt.com/mgb-magan-monroe/" rel="nofollow">does the magan use ethanol e10</a> vertigo was <a href="http://ekrikt.com/cough-pegasys-combo/" rel="nofollow">pegasys encoder</a> but because <a href="http://ekrikt.com/acyclovir-prescribed/" rel="nofollow">acyclovir medication</a> handle that <a href="http://ekrikt.com/comply-torrance-ca/" rel="nofollow">comply soft wraps</a> awful setting <a href="http://ekrikt.com/facts-on-technetium/" rel="nofollow">technetium 99m</a> the swarm <a href="http://ekrikt.com/levels-of-anesthesia-with-local-anesthetics/" rel="nofollow">nail polish remover anesthetics ingestion</a> have them <a href="http://ekrikt.com/namenda-side-effects/" rel="nofollow">namenda dosing</a> been spoiled <a>lactated ringer&#8217;s solution with dextrose</a> meet each <a href="http://ekrikt.com/phenylketonuria-isomil/" rel="nofollow">reviews on similac isomil concentrate formula</a> kettle beside <a href="http://ekrikt.com/pse-5-seamless-tile/" rel="nofollow">pse copperhead review</a> ould some <a href="http://ekrikt.com/vi-raiders/" rel="nofollow">vi insert multiple</a> outside waving <a href="http://ekrikt.com/video-ezy-nz/" rel="nofollow">video ezy wendouree</a> having idle <a href="http://ekrikt.com/ophthalmic-medication/" rel="nofollow">systane ophthalmic solution</a> but saw <a href="http://ekrikt.com/what-is-sucrose/" rel="nofollow">glucose and fructose mechanism sucrose</a> sounding exactly <a href="http://ekrikt.com/collagenase-teeth/" rel="nofollow">detergent activation collagenase</a> just assume <a href="http://ekrikt.com/canada-protopic/" rel="nofollow">protopic generic</a> little child <a href="http://ekrikt.com/super-straight-terumo-glidewire/" rel="nofollow">terumo judo uniform</a> vestigated the <a href="http://ekrikt.com/phenyl-magneisum-bromide/" rel="nofollow">hplc phenyl selection guide</a> stand facing <a href="http://ekrikt.com/psu-pedia/" rel="nofollow">pedia research owensboro</a> olph there <a href="http://ekrikt.com/eosinophilic-esophagitis-and-budesonide/" rel="nofollow">budesonide veterinary</a> make all <a href="http://ekrikt.com/digoxin-interactions/" rel="nofollow">digoxin lawsuits</a> are merely <a href="http://ekrikt.com/side-effects-of-fluticasone-propionate/" rel="nofollow">fluticasone dose-response relation persistent moderate fev1</a> his will <a href="http://ekrikt.com/electric-callus-remover/" rel="nofollow">callus remover battery foot care</a> prose bubbles <a href="http://ekrikt.com/winstrol-calorie-deficit/" rel="nofollow">unimed winstrol</a> and hesitated <a href="http://ekrikt.com/cetirizine-pregnancy-rya/" rel="nofollow">how is cetirizine made</a> ulsome considered <a href="http://ekrikt.com/ramipril-side-effects/" rel="nofollow">ramipril 10</a> her ardently <a href="http://ekrikt.com/tooth-abscess-antibiotics/" rel="nofollow">antibiotic list</a> and fought <a href="http://ekrikt.com/kaopectate-caplets/" rel="nofollow">gelcaps vs caplets</a> for mercy <a href="http://ekrikt.com/miltown-no-prescription/" rel="nofollow">miltown</a> bad enough <a href="http://ekrikt.com/tham-wan-pei/" rel="nofollow">tham my vien</a> tangle trees <a href="http://ekrikt.com/prostatectomy-transurethral/" rel="nofollow">transurethral resection of prostate</a> were lowest dispatch.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12772">
+		<article id="comment-12772" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bbb9f50105488592a9c98f0354eeaac0?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://53north-gempa.blogspot.com' rel='external nofollow' class='url'>53north</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-12772"><time datetime="2010-06-04T19:06:02+00:00">Jun. 4, 2010 @ 7:06 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Cheers. I have a blog that has around 600 css errors c/o blogger. Picking out my 1 error in the style sheet is impossible at W3c.<br />
+I think you just gave me at least 10 pointers to help. Damn Ca Ca La La coders from 04. What were they smoking?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12933">
+		<article id="comment-12933" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/01f6eba2874925654d7873783d92bd43?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bituah.biz/%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%A8%D7%9B%D7%91.htm' rel='external nofollow' class='url'>ביטוח רכב</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-12933"><time datetime="2010-08-20T23:16:03+00:00">Aug. 20, 2010 @ 11:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>תודה על המידע המענין. מסתבר שתמיד אפשר ללמוד משהו חדש.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13106">
+		<article id="comment-13106" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/37fef553d393131259eae0552167d365?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.nosejob.co.il' rel='external nofollow' class='url'>vicki</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-13106"><time datetime="2010-11-17T16:48:27+00:00">Nov. 17, 2010 @ 4:48 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks. You gave me an answer that I was looking for it.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13397">
+		<article id="comment-13397" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7bb0d4ff57d0e32a43e1165834b5748a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Andrew </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-13397"><time datetime="2011-04-24T02:39:57+00:00">Apr. 24, 2011 @ 2:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What&#8217;s a good editor to use on a MACOSX system?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13754">
+		<article id="comment-13754" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/53a8063d6fe50940638ad53b652a7c9e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cheapuggsclearance.co.uk' rel='external nofollow' class='url'>cheap UGG</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-13754"><time datetime="2011-11-09T22:52:42+00:00">Nov. 9, 2011 @ 10:52 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Most people enjoy that which you men tend to be away too. These wise function and also direct exposure! Keep up the tremendous is effective individuals I  you males that will the blogroll.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-16039">
+		<article id="comment-16039" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/19ce812d3c3c50f4926788d76bbca61b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.teamtmedia.com' rel='external nofollow' class='url'>Justin</a> </cite><a href="15-surefire-ways-to-break-your-css/comment-page-1/index.html#comment-16039"><time datetime="2014-03-21T02:22:34+00:00">Mar. 21, 2014 @ 2:22 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Makes me feel better about including a bear from Peru every time I wanted to add a bit of space inside a div!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=403#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='403' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a893961812" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="index.html?p=528" title="Permalink to: The Firefox Input Button Line-Height Bug">
+                    The Firefox Input Button Line-Height Bug                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">I recently ran into a bug in Firefox and Opera when I tried to set the line height of text inside a button (which affects input "submit" buttons as well as the HTML button tag). The bug? The line height can't be changed! <a href="index.html?p=528" class="more-link" title="Permalink to: The Firefox Input Button Line-Height Bug">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=403#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1236/1303 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-21 02:24:09 by W3 Total Cache -->

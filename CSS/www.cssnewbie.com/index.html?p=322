@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>12 Creative and Cool Uses for the CSS Border Property</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; 12 Creative and Cool Uses for the CSS Border Property Comments Feed" href="12-creative-and-cool-uses-for-the-css-border-property/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Advanced CSS Accordion Effect' href='index.html?p=311' />
+<link rel='next' title='The Year In Review: 2008' href='index.html?p=338' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=322' />
+<link rel='shortlink' href='index.html?p=322' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,220] -->
+<meta name="description" content="The CSS border property can do a lot more than we give it credit for. Here are 12 examples of the cool things the CSS border property can do." />
+
+<meta name="keywords" content="css, border, image, blockquote, css list,,art,blockquote,border,design,images,basic techniques,quick tip,resources" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-322 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-322" class="post-322 post type-post status-publish format-standard hentry category-basic-techniques category-quick-tip category-resources tag-art tag-blockquote tag-border tag-css tag-design tag-images">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=322" title="Permalink to 12 Creative and Cool Uses for the CSS Border Property" rel="bookmark">12 Creative and Cool Uses for the CSS Border Property</a>
+	</h2>
+	<div class="meta">
+		<p>Published December 23, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="wp-content/uploads/2008/12/random-art.gif" alt="random art using the CSS border property" title="random art using the CSS border property" width="579" height="175" class="alignnone size-full wp-image-323" /></p>
+<p>If CSS properties attended high school, you would never expect to see the border property sitting at the cool kids&#8217; table. Sure, it&#8217;s a useful property and all &mdash; as long as you&#8217;re looking accentuate the boxiness of a design, right? </p>
+<p>Actually, you&#8217;d be surprised at just how cool the border property can be. Please take the following dozen exhibits as proof that the CSS border property is a lot cooler than we give it credit for.<span id="more-322"></span></p>
+<h3>Jazzing Up Anchors</h3>
+<p><a href="index.html?p=11">I&#8217;ve written here before about jazzing up anchor tags</a> by changing the color, removing the underline, and adding background images. But border can be a great way to add a bit of visual style to your anchors without adding that great bit of accessibility that the underline provides. For example, CSS Newbie&#8217;s article links are currently styled with a dotted border, like so:</p>
+<pre lang="css" escaped="true" line="1">.entry a {
+	color: #253c93;
+	text-decoration: none;
+	border-bottom: 1px dotted #253c93; }
+.entry a:hover {
+	border-bottom: 1px solid #253c93; }</pre>
+<p>That gives me a nice dotted border that turns solid when the user hovers over the link. All sorts of style and accessibility without that so-&#8217;90s underline.</p>
+<h3>Build a Postage Stamp</h3>
+<p><a href="example/borders/index.html"><img src="wp-content/uploads/2008/12/stamp.jpg" alt="CSS postage stamp" title="CSS postage stamp" width="536" height="190" class="alignnone size-full wp-image-324" /></a></p>
+<p>A while back, I ran across a cool little technique for faking a postage stamp using the CSS border property. The original link seems to have been lost from the web, but here&#8217;s the basic technique, in XHTML:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class=&quot;stamp&quot;&gt;
+	&lt;p&gt;99&amp;cent;&lt;/p&gt;
+&lt;/div&gt;</pre>
+<p>And CSS:</p>
+<pre lang="css" escaped="true" line="1">.stamp {
+	width: 500px;
+	height: 414px;
+	background: #fff url(george.jpg) no-repeat;
+	border: 12px dashed #1b1a19; }
+.stamp p {
+	color: #fff;
+	margin: 10px 10px 0 0;
+	font: bold 60px Georgia, "Times New Roman", Times, serif;
+	text-align: right; }</pre>
+<p>Now, you could obviously take this even further with a bit of skill and a degree in something other than Rhetoric, but I think you get the idea. <a href="example/borders/index.html">You can see the example live here.</a></p>
+<h3>Prettier Images</h3>
+<p>Borders are a great way to make your excellent images stand out even more. <a href="css-rules/5-cssriffic-treatments-images/index.html">I wrote an article on the subject a while back,</a> but here&#8217;s the basic idea:</p>
+<pre lang="css" escaped="true" line="1">img.photo {
+	border: 1px solid #999;
+	background-color: #fcfcfc;
+	padding: 4px;}</pre>
+<p>You can see a similar technique used on CSS Newbie&#8217;s current design around all of the images in the articles, as well as the ads in the sidebar. As you can see, the technique can be subtle but visually pleasing if used properly.</p>
+<h3>Homemade Coupons</h3>
+<p>If you&#8217;re ever required to design an online coupon, you needn&#8217;t turn straight to Photoshop or the like. You can craft a coupon easily with just a bit of CSS:</p>
+<pre lang="css" escaped="true" line="1">.coupon {
+	width: 250px;
+	padding: 10px;
+	text-align: center;
+	border: 3px dashed #ccc; }</pre>
+<p>Just that speck of code gives me a nice coupon that looks something like this:</p>
+<p><a href="example/borders/index.html"><img src="wp-content/uploads/2008/12/coupon.gif" alt="CSS coupon" title="CSS coupon" width="285" height="191" class="alignnone size-full wp-image-326" /></a></p>
+<p>You&#8217;ll have your readers printing and clipping in no time.</p>
+<h3>Better Blockquotes</h3>
+<p><img src="wp-content/uploads/2008/12/blockquote.gif" alt="CSS blockquote" title="CSS blockquote" width="500" height="75" class="alignnone size-full wp-image-325" /></p>
+<p>Blockquotes are often useful, seldom used. But if you have a website that often refers to the words of others,<a href="index.html?p=174" title="Six Ways to Style Blockquotes"> a well-styled blockquote will go a long way</a> towards impressing your readers with your borrowed prose:</p>
+<pre lang="css" escaped="true" line="1">blockquote {
+	margin: 1em 3em;
+	color: #999;
+	border-left: 2px solid #999;
+	padding-left: 1em; }</pre>
+<p>Just a touch of code, and voila&#8230; instant credibility!</p>
+<h3>Hunt Archaic Code</h3>
+<p><a href="index.html?p=138" title="Find Deprecated Elements with Diagnostic CSS Highlighting"><img src="wp-content/uploads/2008/12/diagnostic.gif" alt="diagnostic CSS" title="diagnostic CSS" width="400" height="150" class="alignnone size-full wp-image-327" /></a></p>
+<p>If you ever take over a website (or perhaps built a website) that is still using the Code of Yesteryear, consider turning to CSS and the border property for help hunting down bits of HTML soup that could use a bit less seasoning:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">font, center, s, u, b, i {
+	color: #000;
+	font-weight: bold;
+	background-color: #f99;
+	border: 3px solid #c00; }</pre>
+<p>For more information on this useful technique, <a href="index.html?p=138" title="Find Deprecated Elements with Diagnostic CSS Highlighting">see my article on finding deprecated elements with diagnostic CSS highlighting.</a> It just might save your life someday. But I doubt it.</p>
+<h3>Round the Bend</h3>
+<p><a href="index.html?p=205" title="Easy Rounded Corners with Border Radius"><img src="wp-content/uploads/2008/12/rounded-div.gif" alt="CSS rounded  border" title="CSS rounded  border" width="400" height="86" class="alignnone size-full wp-image-328" /></a></p>
+<p>So far, all of our techniques have had one thing in common: boxy edges. But if you&#8217;re using a browser developed within the last five or so years (read: not IE6), you&#8217;re not limited to those same old dull right angles. <a href="index.html?p=205" title="Easy Rounded Corners with Border Radius">This article from last August</a> shows us that CSS3 offers us a way of breaking out of &mdash; or at least bending the corners of &mdash; the CSS box:</p>
+<pre lang="css" escaped="true" line="1">div.rounded {
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; }</pre>
+<p>The border-radius properties allow us to round the corners of elements without having to resort to images. Cool indeed!</p>
+<h3>Angle it In</h3>
+<p><a href="http://meyerweb.com/eric/css/edge/slantastic/demo.html"><img src="wp-content/uploads/2008/12/slant.gif" alt="Eric Meyer slant" title="Eric Meyer slant" width="400" height="89" class="alignnone size-full wp-image-329" /></a></p>
+<p>Of course, not all angles are bad angles&#8230; if used properly. Way back in the day, CSS guru Eric Meyer pointed out a way to use borders to create some pretty wicked angles. If you&#8217;d like to learn more about this technique, <a href="http://meyerweb.com/eric/css/edge/slantastic/demo.html">his site is a great place to start.</a></p>
+<h3>CSS Drawings</h3>
+<p>And now for a bit of fun!  The following excellent (and cool) examples are all drawn using the CSS border property.</p>
+<p><a href="http://www.tanfa.co.uk/css/borders/clock-working.asp"><img src="wp-content/uploads/2008/12/lcd-clock.gif" alt="CSS lcd clock" title="CSS lcd clock" width="389" height="134" class="alignnone size-full wp-image-330" /></a></p>
+<p>This functional LCD-style digital clock was built using CSS borders to create the lines of the LCD. <a href="http://www.tanfa.co.uk/css/borders/clock-working.asp">Check out tanfa.co.uk to see it in action!</a></p>
+<p><a href="http://www.intersmash.com/border/"><img src="wp-content/uploads/2008/12/skyline.gif" alt="CSS skyline" title="CSS skyline" width="533" height="166" class="alignnone size-full wp-image-331" /></a></p>
+<p>There&#8217;s something very pop-art about <a href="http://www.intersmash.com/border/">this CSS skyline.</a> It leans heavily on the border property to create the buildings and windows.</p>
+<p><a href="http://infimum.dk/HTML/randomArt.html"><img src="wp-content/uploads/2008/12/random-art.gif" alt="random art using the CSS border property" title="random art using the CSS border property" width="579" height="175" class="alignnone size-full wp-image-323" /></a></p>
+<p><a href="http://infimum.dk/HTML/randomArt.html">Here&#8217;s a random art generator</a> that combines HTML, JavaScript, and the CSS border property to create random examples of modern art. If you hit the &#8220;update&#8221; button long enough, you&#8217;re bound to find something worthy of hanging on your (cubicle?) wall.</p>
+<p><a href="http://www.designdetector.com/tips/3DBorderDemo2.html"><img src="wp-content/uploads/2008/12/house.gif" alt="CSS house" title="CSS house" width="500" height="200" class="alignnone size-full wp-image-332" /></a></p>
+<p>Christopher Hester is a man with fantastic CSS skill, incalculable patience, and presumably no girlfriend &mdash; at least until he started impressing the ladies with <a href="http://www.designdetector.com/tips/3DBorderDemo2.html">this house he built with the CSS border property.</a> And be sure to check out <a href="http://www.designdetector.com/demos/css-house-2.html">his second CSS house,</a> which he built using background colors and approximately 50 gazillion non-semantic divs.</p>
+<p>If you know of any other fantastic uses for the CSS border property, be sure to mention them in the comments!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			57 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-13887">
+		<article id="comment-13887" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/56f36c400bab6faa8901be7a8227cf62?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://cc' rel='external nofollow' class='url'>:-D德</a> </cite><a href="12-creative-and-cool-uses-for-the-css-border-property/comment-page-2/index.html#comment-13887"><time datetime="2011-12-13T21:40:24+00:00">Dec. 13, 2011 @ 9:40 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>确实不错，</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14076">
+		<article id="comment-14076" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/355b73b0ec82419e24102c7a92433215?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://bestinversiontablebenefits.com' rel='external nofollow' class='url'>Samuel</a> </cite><a href="12-creative-and-cool-uses-for-the-css-border-property/comment-page-2/index.html#comment-14076"><time datetime="2012-04-29T08:41:27+00:00">Apr. 29, 2012 @ 8:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice CSS tricks. Love the postage stamp effect &#8211; haven&#8217;t seen that one before.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14150">
+		<p>Pingback: <a href='http://globtech24x7.com/globtrikz/21-amazing-css-techniques-you-should-know/' rel='external nofollow' class='url'>GLOBTRIKZ24x7 &#8211; 21 Amazing CSS Techniques You Should Know</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14173">
+		<p>Pingback: <a href='http://www.yelanxiaoyu.com/index.php/gongshi/21%e4%b8%aacss%e6%83%8a%e4%ba%ba%e6%8a%80%e5%b7%a7%e5%88%86%e4%ba%ab.html' rel='external nofollow' class='url'>21个CSS惊人技巧分享 | 夜阑小雨,飘洒在岁月的流沙。80后，爱网络，爱小说，爱研究。产品设计，编程代码，网络营销，原创文学， 系统研究。</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14295">
+		<p>Pingback: <a href='http://www.90idc.net/html/2012/10/2012102037.html' rel='external nofollow' class='url'>你需要了解的21个CSS惊人技巧 &#8211; 90互联网数据中心</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14296">
+		<p>Pingback: <a href='http://www.zzzla.com/ni_xu_yao_le_jie_de_21_ge_css_jing_ren_ji_qiao.html' rel='external nofollow' class='url'>你需要了解的21个CSS惊人技巧 | 站长站</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-15803">
+		<p>Pingback: <a href='http://www.multiprocess.net/?p=431' rel='external nofollow' class='url'>40个很不错的CSS技术 | multiprocess</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="12-creative-and-cool-uses-for-the-css-border-property/comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=322#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='322' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c323e655f4" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="index.html?p=42" title="Permalink to: 5 Steps to a More Organized Style Sheet">
+                    5 Steps to a More Organized Style Sheet                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">One of the nice things about languages like CSS is that you don’t have to write them in any specific way. For example, you could... <a href="index.html?p=42" class="more-link" title="Permalink to: 5 Steps to a More Organized Style Sheet">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=322#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 744/842 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:58:57 by W3 Total Cache -->

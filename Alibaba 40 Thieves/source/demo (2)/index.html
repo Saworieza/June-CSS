@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Tabbed Ajax Content Widget - SpyreStudios Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+  <div id="w">
+    <h1>Simple Tabbed Content Widget using jQuery</h1>
+    
+    <div id="content" class="clearfix">
+      <section id="left">
+        <h2>Some Post Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere suscipit eros, a dignissim ante vulputate et. Etiam vestibulum faucibus justo sit amet rhoncus. Sed ut vehicula elit. Curabitur pretium felis sed orci iaculis, et porttitor nulla dignissim. Nam a felis at tortor tristique mattis a nec justo.</p>
+        
+        <p>Pellentesque a lorem ut neque placerat cursus. Nunc cursus luctus felis in varius. Vivamus tempor mattis pulvinar. Proin tempus metus nec odio volutpat, ac posuere mi vestibulum.</p>
+        
+        <hr>
+        
+        <h2>Another Sample</h2>
+        <p>Integer ultricies, velit et ultrices lacinia, ligula sem accumsan metus, aliquet condimentum est est non quam. Ut accumsan ullamcorper feugiat. In tristique urna id elit vehicula, eget posuere tellus malesuada. Mauris eget sem laoreet, lacinia metus ac, mollis tortor. Suspendisse in massa nec mauris convallis rhoncus non ut felis.</p>
+        
+        <p>Suspendisse potenti. Phasellus eget sagittis metus. Praesent facilisis, massa et pellentesque lacinia, nisl libero scelerisque quam, in volutpat dui turpis non est. Nullam condimentum sem nec ligula ornare sollicitudin.</p>
+        
+        <p>Morbi pharetra rutrum massa ut semper. Phasellus ac libero vestibulum, semper massa eget, volutpat elit. Vivamus pulvinar tortor felis, sed viverra sapien malesuada non.</p>
+      </section><!-- @end #left -->
+      
+      <aside id="sidebar">
+        <div id="tabbed-posts">
+          <header class="navlinks">
+            <a href="#" id="newpostslink" class="active">Newest</a>
+            <a href="#" id="popularpostslink">Popular</a>
+            <a href="#" id="randompostslink">Random</a>
+          </header>
+          <div id="tabbed-posts-new" class="tabcontent">
+            <ul>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1294753-Iphone-Flat-Design" class="clearfix"><span class="featuredpic"><img src="img/hidpi-iphone.png"></span> Tips for Creating HiDPI Websites</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1297393-Instagram-Flat-icon" class="clearfix"><span class="featuredpic"><img src="img/flat-instagram-icon.png"></span> Most Popular Webapps for Instagram Users</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1282237-Service-Icons" class="clearfix"><span class="featuredpic"><img src="img/responsive-design.png"></span> Designing Powerful Mobile Responsive Layouts</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1256154-Get-Started" class="clearfix"><span class="featuredpic"><img src="img/freelance-work.png"></span> Balancing Freelance Work and Education</a></h3>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="tabbed-posts-popular" class="tabcontent" style="display:none;">
+            <ul>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1303721-Dream-Makers-landing-page" class="clearfix"><span class="featuredpic"><img src="img/landing-pages.png"></span> How To Design Effective Landing Pages</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1204989-Rocket-Shopping-Cart" class="clearfix"><span class="featuredpic"><img src="img/shopping-cart.png"></span> Shopping Cart UX Design Examples</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1269767-Flat-Adobe-App-Icons" class="clearfix"><span class="featuredpic"><img src="img/ps-photoshop-icon.png"></span> Best Free PSDs Released in 2013</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/752819-Easel" class="clearfix"><span class="featuredpic"><img src="img/art-easel.png"></span> 100 Best Websites for Design Inspiration</a></h3>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="tabbed-posts-random" class="tabcontent" style="display:none;">
+            <ul>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1302158-Doctor-icon-for-iOS7-App-redesign" class="clearfix"><span class="featuredpic"><img src="img/ios-app-icons.png"></span> Showcase of Beautiful iOS App Icons</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1226322-Restaurant-Menu-Mock-Ups" class="clearfix"><span class="featuredpic"><img src="img/restaurant-menus.png"></span> Print Designs for Restaurant Menus</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/680267-Gtalk-Concept-Design-PSD" class="clearfix"><span class="featuredpic"><img src="img/gtalk.png"></span> Getting Started with Google Talk</a></h3>
+              </li>
+              <li>
+                <h3><a href="http://dribbble.com/shots/1304611-Responsive-Site-Icons" class="clearfix"><span class="featuredpic"><img src="img/free-responsive-icons.png"></span> Free Set of Responsive Website Icons</a></h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside><!-- @end #sidebar -->
+    </div> <!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+  $('#tabbed-posts .navlinks a').on('click', function(e){
+    e.preventDefault();
+    
+    if($(this).hasClass('active')) {
+      return;
+    } 
+    else {
+      var currentitm = $('#tabbed-posts .navlinks a.active').attr('id');
+      if(currentitm == 'newpostslink') { var currentlist = $('#tabbed-posts-new'); }
+      if(currentitm == 'popularpostslink') { var currentlist = $('#tabbed-posts-popular'); }
+      if(currentitm == 'randompostslink') { var currentlist = $('#tabbed-posts-random'); }
+      
+      var newitm = $(this).attr('id');
+      if(newitm == 'newpostslink') { var newlist = $('#tabbed-posts-new'); }
+      if(newitm == 'popularpostslink') { var newlist = $('#tabbed-posts-popular'); }
+      if(newitm == 'randompostslink') { var newlist = $('#tabbed-posts-random'); }
+      
+      $('#tabbed-posts .navlinks a').removeClass('active');
+      $(this).addClass('active');
+      
+      $(currentlist).fadeOut(320, function(){
+        $(newlist).fadeIn(200);
+      });
+    } // end if/else logic
+    
+  }); // end event handler
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Build Custom Frameworks Easily with CSS Classes</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Build Custom Frameworks Easily with CSS Classes Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CSS Art: The Flower' href='../index.html?p=380' />
+<link rel='next' title='New Poll: How Much CSS Do You Already Know?' href='../index.html?p=397' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=388' />
+<link rel='shortlink' href='../index.html?p=388' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,214] -->
+<meta name="description" content="CSS Frameworks are overkill for all but the most complex projects. Instead, learn how to build your own custom CSS framework that does exactly what you need." />
+
+<meta name="keywords" content="css framework, web framework, web grid, css grid, custom framework, custom css grid,css,custom,framework,layout,xhtml,basic techniques,frameworks and libraries,ids and classes" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-388 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-388" class="post-388 post type-post status-publish format-standard hentry category-basic-techniques category-frameworks-and-libraries category-ids-and-classes category-layout tag-css tag-custom tag-framework tag-layout tag-xhtml">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=388" title="Permalink to Build Custom Frameworks Easily with CSS Classes" rel="bookmark">Build Custom Frameworks Easily with CSS Classes</a>
+	</h2>
+	<div class="meta">
+		<p>Published March 10, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="http://www.woodsmithshop.com/?from=cssnewbie"><img src="../wp-content/uploads/2009/03/column-wsshop.jpg" alt="Woodsmith Shop columns" title="Woodsmith Shop columns" width="579" height="200" class="alignnone size-full wp-image-389" /></a></p>
+<p>Generally speaking, I consider full-fledged CSS frameworks to be overkill on all but the most absolutely complex projects or, on the other end of the spectrum, rapid proof-of-concept prototyping. Most people only use a few of the classes that any one CSS framework provides, but then still require their users to download the entire, and largely unused, stylesheet.</p>
+<p>However, I still think that the foundation on which CSS frameworks are built &mdash; the concept of using classes to simplify layout and standardize design across similar elements &mdash; is very much worth investigation. But instead of relying on a one-size-fits-all (snuggie-esque?) solution, I&#8217;d encourage you to take a few minutes and build a custom, simplified framework that does exactly what you need it to do.<span id="more-388"></span></p>
+<h3>The Back Story</h3>
+<p>I recently built a website based on a fairly regular, consistent grid. The content area was 780px wide and would contain six &#8220;columns&#8221; of content with 12-pixel gutters between each of the columns, though various elements could span one or more of those columns. </p>
+<p><img src="../wp-content/uploads/2009/03/column-examples.png" alt="sample content layouts in a six-column grid" title="sample content layouts in a six-column grid" width="579" height="200" class="alignnone size-full wp-image-390" /></p>
+<p>Because of the general flexibility of the content combined with the rigidity of the columnar structure, my mind immediately jumped to frameworks as a way to get this design pushed out in a hurry. But in the end, I just couldn&#8217;t justify all that overhead, even to create a flexible six-column design. So instead, I decided to write my own mini-framework to do only what I needed.</p>
+<h3>The Custom Framework</h3>
+<p>Here&#8217;s the basic CSS I ended up writing:</p>
+<pre lang="css" escaped="true" line="1">.col {
+	float: left; }
+.gutter {
+	margin-right: 12px; }
+.span1 {
+	width: 120px; }
+.span2 {
+	width: 252px; }
+.span3 {
+	width: 384px; }
+.span4 {
+	width: 516px; }
+.span5 {
+	width: 648px; }
+.span6 {
+	width: 780px; }
+.clear {
+	clear: left; }</pre>
+<p>Pretty simple stuff, right? All it contains is nine classes that I can arbitrarily assign to my structural divs to determine how the page will lay out. The first class, &#8220;col&#8221;, gets assigned to any div I want to behave like a column. </p>
+<p>Then each column is given one of the &#8220;span&#8221; classes (using <a href="../css-rules/css-rules-multiplicity/index.html">the benefit of multiple CSS classes to great effect</a>) to determine its width &mdash; or as I thought of it at the time, the number of columns the div would span&#8230; just like using &#8220;colspan&#8221; in old-school table layouts. </p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>Next up we have the &#8220;gutter&#8221; class, which I add to any column that should have a gutter along its right edge (which would be true for all columns except those along the very right edge of my content area). And finally, there&#8217;s a &#8220;clear&#8221; class, just to ensure that my divs behave themselves even if I didn&#8217;t entirely fill up the previous &#8220;row&#8221; of divs.</p>
+<h3>The XHTML Structure</h3>
+<p>There&#8217;s not much to the XHMTL structure for my custom framework. Essentially, it&#8217;s a bunch of divs given two or more of my nine classes to determine its behavior. For example, to create the 4-2/2-1-3 structure I highlighted in the image above, this would be the structure:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class=&quot;col span4 gutter&quot;&gt;Four columns&lt;/div&gt;
+&lt;div class=&quot;col span2&quot;&gt;Two columns here&lt;/div&gt;
+&lt;div class=&quot;col span2 gutter&quot;&gt;Two cols and a gutter&lt;/div&gt;
+&lt;div class=&quot;col span1 gutter&quot;&gt;Only 120px!&lt;/div&gt;
+&lt;div class=&quot;col span3&quot;&gt;Three columns.&lt;/div&gt;</pre>
+<p>If you&#8217;d like to see this sort of custom framework in action, it&#8217;s running on <a href="http://www.woodsmithshop.com/?from=cssnewbie">the website for the Woodsmith Shop TV show.</a></p>
+<h3>One Size Doesn&#8217;t Fit All</h3>
+<p>Now, I&#8217;m not saying my framework is the end-all CSS framework and that you should just copy it wholesale into your own project and expect it to work perfectly. The idea here is to take this concept and come up with a custom framework that works perfectly for <em>your needs</em>. </p>
+<p>The real take-away lesson here is that for most projects, you don&#8217;t need dozens of classes and hundreds of lines of CSS just to create a flexible grid structure. I created mine with just nine CSS classes and it was sufficient to power my six-column grid. I&#8217;d be interested to see what other people (namely, you) have come up with along these same lines. Share a link in the comments!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			12 Responses		</h3>
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-9460">
+		<p>Pingback: <a href='http://www.bestwebgallery.ca/resources/build-custom-frameworks-easily-with-css-classes' rel='external nofollow' class='url'>Build Custom Frameworks Easily with CSS Classes | Best Web Gallery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9461">
+		<p>Pingback: <a href='http://mybadattitude.com/2009/03/11/build-custom-frameworks-easily-with-css-classes/' rel='external nofollow' class='url'>My Bad Attitude &raquo; Build Custom Frameworks Easily with CSS Classes</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9462">
+		<p>Pingback: <a href='http://designm.ag/news/build-custom-frameworks-easily-with-css-classes/' rel='external nofollow' class='url'>Build Custom Frameworks Easily with CSS Classes</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9463">
+		<article id="comment-9463" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/33e5ec58429564b26414f0cbd5324315?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://pw-software.com' rel='external nofollow' class='url'>NetOperator Wibby</a> </cite><a href="comment-page-1/index.html#comment-9463"><time datetime="2009-03-11T23:14:56+00:00">Mar. 11, 2009 @ 11:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is pretty cool, thanks for the tut.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9465">
+		<p>Pingback: <a href='http://www.thisinspires.me/2009/03/12/links-for-2009-03-12/' rel='external nofollow' class='url'>links for 2009-03-12 | This Inspires Me</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9466">
+		<article id="comment-9466" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1c53a39881ddd4d95144eeb614172b79?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sean </cite><a href="comment-page-1/index.html#comment-9466"><time datetime="2009-03-12T09:29:37+00:00">Mar. 12, 2009 @ 9:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Never thought about putting the gutter in it&#8217;s own class. Much better idea than doing a &#8220;last&#8221; class that removes a built-in gutter.</p>
+<p>If I might make a couple of suggestions, though. Name your col class something like .float-left, and your clear class to .clear-left.</p>
+<p>This gives you the ability to use them in other places other than framework, and gives you a descriptive name so that you can remember what they were doing later on.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9468">
+		<article id="comment-9468" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/ba449d8f51007e714f1bfaf3808fe883?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://StevenBlack.com' rel='external nofollow' class='url'>Steven Black</a> </cite><a href="comment-page-1/index.html#comment-9468"><time datetime="2009-03-12T16:37:40+00:00">Mar. 12, 2009 @ 4:37 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob, please explain how you can write this and never once use the tern &#8220;blueprint&#8221;, as in BluePrint.css, from which all this is apparently shamelessly copied.</p>
+<p><a href="http://www.blueprintcss.org/" rel="nofollow">http://www.blueprintcss.org/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9477">
+		<article id="comment-9477" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-9477"><time datetime="2009-03-16T09:04:32+00:00">Mar. 16, 2009 @ 9:04 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Steven,</p>
+<p>I can do it because I&#8217;ve never downloaded the Blueprint framework, and thus have no idea how they do what they do.</p>
+<p>And now that I&#8217;ve downloaded it for a reference point, I can see that by &#8220;shamelessly copied,&#8221; you mean that they also used the word &#8220;span&#8221; to create widths (though theirs are written differently), meaning I wasn&#8217;t the first person on earth to conceive of a correlation between a colspan and a grid span. Mind boggling stuff. </p>
+<p>Many frameworks share a lot of elements in common, since they&#8217;re trying to accomplish the same fundamental ends. For example, I guarantee that the YUI grid system uses the width property (though I&#8217;ve never downloaded it either). So by your logic, Blueprint is a ripoff of them, correct?</p>
+<p>Bare minimum I would say that mine is different because it contains 9 rules, whereas theirs contains 240 rules. Or possibly because mine isn&#8217;t meant to be a standalone framework at all, but rather a starting point from which others can build their own framework (and thus understand how the framework works) instead of just grabbing someone else&#8217;s code and running. Had you actually stopped to read my article instead of skipping to the code, noticing a similarity, and then jumping to conclusions, you would have realized that was my whole point to begin with.</p>
+<p>Thanks for playing,<br />
+-Rob</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9480">
+		<article id="comment-9480" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a97d505ea2d0a9d90cfbd877d9d8a7c0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Alexander </cite><a href="comment-page-1/index.html#comment-9480"><time datetime="2009-03-16T20:09:20+00:00">Mar. 16, 2009 @ 8:09 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for great and very helpful tutorial.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9488">
+		<article id="comment-9488" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9e8da9a3c360bb50f0a9805d51469ae2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.catsportfolio.co.cc' rel='external nofollow' class='url'>catsss</a> </cite><a href="comment-page-1/index.html#comment-9488"><time datetime="2009-03-19T07:05:25+00:00">Mar. 19, 2009 @ 7:05 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I really like it. Thnx Rob for sharing your idea..</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9493">
+		<p>Pingback: <a href='http://csshelper.net/archives/3192' rel='external nofollow' class='url'>Build Custom Frameworks Easily with CSS Classes | CSS Tutorials - CSSHelper.net</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10197">
+		<article id="comment-10197" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1b3094b519daee876a12eff25adc1dec?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ShaverAssociates.net' rel='external nofollow' class='url'>RobShaver</a> </cite><a href="comment-page-1/index.html#comment-10197"><time datetime="2010-01-05T16:58:01+00:00">Jan. 5, 2010 @ 4:58 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;ve looked at other CSS frameworks but they seem to complex. I like you&#8217;rs for it&#8217;s simplicity.</p>
+<p>Since the col class appears in every div, why not just include the float:left in the span classes? Just a thought. I&#8217;m new at this so maybe there&#8217;s some example to keep the flexibility of having it separate.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=388#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='388' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="6f66c0c104" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=90" title="Permalink to: The CSS-Only Accordion Effect">
+                    The CSS-Only Accordion Effect                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Update: I&#8217;ve created an advanced version of this technique that works in IE6! Read more here. The Accordion Effect is fast becoming one of the... <a href="../index.html?p=90" class="more-link" title="Permalink to: The CSS-Only Accordion Effect">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=388#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 812/904 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 18:05:27 by W3 Total Cache -->

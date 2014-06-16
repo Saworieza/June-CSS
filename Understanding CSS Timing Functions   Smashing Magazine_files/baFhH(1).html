@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://s.codepen.io/stephengreig/fullgrid/baFhH?type=embed&animations=run -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <meta name="google" value="notranslate">
+
+  <title>CodePen - A Pen by stephengreig</title>
+
+  <script style="display: none !important;">
+    window.alert   = function(){};
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+  </script>
+
+  <style>.box {
+  background: blue;
+  width: 40px;
+  height: 40px;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.one .box {
+  -webkit-transition-timing-function: cubic-bezier(.1,.9,.9,.1);
+  transition-timing-function: cubic-bezier(.1,.9,.9,.1);
+}
+.two .box {
+  -webkit-transition-timing-function: cubic-bezier(.22,.81,.01,.99);
+  transition-timing-function: cubic-bezier(.22,.81,.01,.99);
+}
+.three .box {
+  -webkit-transition-timing-function: cubic-bezier(.8,.1,1,.04);
+  transition-timing-function: cubic-bezier(.8,.1,1,.04);
+}
+.four .box {
+  -webkit-transition-timing-function: cubic-bezier(1,.45,0,.34);
+  transition-timing-function: cubic-bezier(1,.45,0,.34);
+}
+
+#go:target .box {
+  -webkit-transform: translate(300px);
+  transform: translate(300px);
+}
+
+body {
+  font: .7em Arial;
+}
+
+h2 {
+  margin: 20px 0 5px;
+}
+
+a {
+  padding: 5px 10px;
+  background: blue;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+p {
+  font-size: 1.2em;
+}</style>
+
+</head>
+
+<body onload="_l=&#39;t&#39;;">
+
+  <div id="go">
+
+		<a href="http://s.codepen.io/stephengreig/fullgrid/baFhH?type=embed&animations=run#go">Animate</a> <a href="http://s.codepen.io/stephengreig/fullgrid/baFhH?type=embed&animations=run#reset">Reset</a>
+
+		<p>All of the animations below last exactly 2 seconds</p>
+
+		<div class="one">
+			<h2> cubic-bezier(.1,.9,.9,.1)</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="two">
+			<h2>cubic-bezier(.22,.81,.01,.99)</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="three">
+			<h2>cubic-bezier(.8,.1,1,.04)</h2>
+			<div class="box">
+			</div>
+		</div>
+
+		<div class="four">
+			<h2>cubic-bezier(1,.45,0,.34)</h2>
+			<div class="box">
+			</div>
+		</div>
+
+	</div>
+
+  <script>
+    (function() {
+
+      // Once the entire pen's loaded we send a message to embeds
+      // to resize again in case they're using auto to the size the embed
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage('resize', "*");
+      }
+
+      // Remove all Iframes
+      var iframes = document.getElementsByTagName('iframe');
+
+      for (var i = iframes.length - 1; i >= 0; i--) {
+        iframes[i].outerHTML = "<p>remove</p>";
+      };
+
+    }());
+  </script>
+
+
+
+</body></html>

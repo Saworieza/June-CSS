@@ -1,0 +1,169 @@
+/* Effect 1 */
+.effect1 a {
+	color: #a186be;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.effect1 a::before {
+	color: #662d91;
+	position: absolute;
+	content: attr(data-hover);
+
+	transition: transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+}
+
+.effect1 a:hover::before,
+.effect1 a:focus::before {
+	opacity: 0;
+}
+
+/* Effect 2 */
+.effect2 a {
+	color: #a186be;
+	padding: 10px 0;
+}
+
+.effect2 a::before {
+	color: #440e62;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	max-width: 0;
+	content: attr(data-hover);
+
+	transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	-webkit-transition: max-width 0.5s;
+}
+
+.effect2 a:hover::before,
+.effect2 a:focus::before {
+	max-width: 100%;
+}
+
+/* Effect 3 */
+.effect3 a {
+	color: #c1add8;
+	overflow: hidden;
+	padding: 0 5px;
+	height: 1em;
+
+}
+
+.effect3 a span {
+	position: relative;
+	display: inline-block;
+
+	transition: transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+}
+
+.effect3 a span::before {
+	color: #440e62;
+	position: absolute;
+	top: 100%;
+	content: attr(data-hover);
+
+	transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.effect3 a:hover span,
+.effect3 a:focus span {
+	transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+}
+
+/* Effect 4 */
+.effect4 a {
+	color: #662d91;
+	padding: 10px 0;
+}
+
+.effect4 a::after {
+	background: #662d91;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 1px;
+	opacity: 0;
+
+	transition: opacity 0.3s, transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-webkit-transform: translateY(-10px);
+}
+
+.effect4 a:hover::after,
+.effect4 a:focus::after {
+	opacity: 1;
+
+	transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+}
+
+/* Effect 5 */
+.effect5  {
+	position: relative;
+	z-index: 1;
+}
+
+.effect5 a {
+	margin: 0 15px;
+	overflow: hidden;
+}
+
+.effect5 a span {
+	color: #a186be;
+	background: #662d91;
+	display: block;
+	padding: 10px 20px;
+
+	transition: transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+}
+
+.effect5 a::before {
+	color: #662d91;
+	background: #a186be;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 10px 0;
+	width: 100%;
+	height: 100%;
+	content: attr(data-hover);
+
+	transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.effect5 a:hover span,
+.effect5 a:focus span {
+	transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+}
+
+.effect5 a:hover::before,
+.effect5 a:focus::before {
+	transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+}

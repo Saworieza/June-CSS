@@ -1,0 +1,887 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Build a Tabbed Box with CSS and jQuery</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Build a Tabbed Box with CSS and jQuery Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Fixing a Bad Feedburner Subscriber Count' href='../../index.html?p=349' />
+<link rel='next' title='Advanced jQuery Tabbed Box Techniques' href='../../index.html?p=363' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=355' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,205] -->
+<meta name="description" content="This tutorial will walk you through building a tabbed box, perfect for sidebars and sites with too much clutter, using CSS and jQuery." />
+
+<meta name="keywords" content="jquery, tabs, tabbed, tabbed box, automatic tabs, jquery tabs, jquery box, javascript tabs, message box, build tabbed box,box,css,message box,series,tabbed navigation,tabs,xhtml,advanced techniques,box model,javascript,organization" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-355 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-355" class="post-355 post type-post status-publish format-standard hentry category-advanced-techniques category-box-model category-javascript category-organization tag-box tag-css tag-jquery tag-message-box tag-series tag-tabbed-navigation tag-tabs tag-xhtml">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=355" title="Permalink to Build a Tabbed Box with CSS and jQuery" rel="bookmark">Build a Tabbed Box with CSS and jQuery</a>
+	</h2>
+	<div class="meta">
+		<p>Published January 18, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../../wp-content/uploads/2009/01/tabbed-box-beauty.gif" alt="tabbed box" title="tabbed box" width="579" height="200" class="alignnone size-full wp-image-357" /></p>
+<p>The longer a site has been around, the more content it tends to accumulate. As website operators, we walk a fine line: too much content on every page and your site will look cluttered. Too little, and users won&#8217;t be able to find all your website has to offer. A tabbed box like the one pictured above is a nice bridge between the two extremes. It allows you to show off a large amount of content without cluttering up a lot of space. And this tabbed box has extra niceties that are sure to help your content get noticed.</p>
+<h3>What it Does</h3>
+<p>At the end of this two-article series, you&#8217;ll be able to build a tabbed content box of your own that:</p>
+<ul>
+<li>Is easily customized to fit the size and color scheme of your website.</li>
+<li>Is either fixed or variable height.</li>
+<li>Can automatically rotate through the tabs to draw interest.</li>
+<li>Pauses its rotation when the user interacts with it.</li>
+</ul>
+<p>This article will show you how to take the tabbed box from Photoshop to XHTML and CSS, and how to apply the basic jQuery functionality to make the tabs operate. The next article will show you some advanced jQuery techniques to make your tabbed box even more dynamic and eye-catching.<span id="more-355"></span></p>
+<h3>The Photoshop Mockup</h3>
+<p>Like most of my projects, this one started life as a drawing roughly sketched out on a piece of paper. Despite all the cool tools we web developers have at our disposal, paper and pencil are still by far the fastest way to rapidly prototype a new idea. Here&#8217;s a crappy iPhone photo of the drawing:</p>
+<p><img src="../../wp-content/uploads/2009/01/tabbed-box-drawing.jpg" alt="drawing of a tabbed box" title="drawing of a tabbed box" width="579" height="200" class="alignnone size-full wp-image-358" /></p>
+<p>This is what I mean when I say I&#8217;m not a designer, people.</p>
+<p>Once you have a good idea as to what you&#8217;re looking to do with your tabbed box, it&#8217;s time to move into Photoshop (or a similar editing tool). If you&#8217;re looking for an extremely barebones tabbed interface you can probably skip this step entirely, but I wanted my tabs to have a little pizzazz. Here&#8217;s a look at my Photoshop document:</p>
+<p><img src="../../wp-content/uploads/2009/01/tabbed-box-photoshop.gif" alt="tabbed box in photoshop" title="tabbed box in photoshop" width="579" height="287" class="alignnone size-full wp-image-359" /></p>
+<p>It&#8217;s nothing fancy: just two layers with gradients, a layer creating my borders, and my text. Of course, your layout may be more complex than mine.</p>
+<p>When I&#8217;m working in Photoshop, I like to stop and think about how I&#8217;m going to actually develop what I&#8217;m building (and I&#8217;d advocate you do the same!). In this case, I knew that I wanted gradients on both my unselected tabs as well as the content box and that my unselected tabs should appear faded. Once I had a pretty good mockup in place, I could start to visualize how my XHTML and CSS would work together to produce the result I was looking for.</p>
+<p><img src="../../wp-content/uploads/2009/01/tabbed-box-outline.gif" alt="tabbed box&#039;s outline of parts" title="tabbed box&#039;s outline of parts" width="579" height="150" class="alignnone size-full wp-image-360" /></p>
+<h3>The XHTML</h3>
+<p>Here&#8217;s the basic XHTML I decided on for my tabbed box:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class=&quot;tabbed-box&quot;&gt;
+	&lt;ul class=&quot;tabs&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab #1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab #2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab #3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class=&quot;tabbed-content&quot;&gt;
+		&lt;p&gt;Here's my content for tab 1&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tabbed-content&quot;&gt;
+		&lt;p&gt;Here's my content for tab 2&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tabbed-content&quot;&gt;
+		&lt;p&gt;Here's my content for tab 3&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>I wanted to keep my XHTML as simple as possible, so that if I ever wanted to update the content my tabbed box, I wouldn&#8217;t have to dig through a lot of extra code to do so. The box has three basic components: a wrapper div (tabbed-box) that holds my entire box together, an unordered list with links that will function as my tabs, and a series of divs (tabbed-content) to function as the containers for my tabbed content. </p>
+<p>I decided early on to stay away from extra IDs on all my elements as much as possible, to keep the updating process as simple as possible. Of course, that meant my jQuery would have to work smarter to figure out how the box works&#8230; but we&#8217;ll get to that later.</p>
+<h3>The CSS</h3>
+<p>Developing the CSS for this box does take a little math and <a href="../../index.html?p=7">a good understanding of the box model,</a> but it&#8217;s not overly complex. First we&#8217;ll style our container box:</p>
+<pre lang="css" escaped="true" line="1">.tabbed-box {
+	width: 302px;
+	background: #fff url(tabbed-body-bg.jpg) repeat-x bottom;
+	border: 1px solid #ddd; }</pre>
+<p>The width here is the most difficult number to determine. To come up with the number, I need to know two things: how much space I have to work with, and the number of tabs I plan to have. (I could probably calculate all this dynamically in jQuery, but I prefer to use CSS to accomplish as much as possible before turning to scripting.) </p>
+<p>The space allotted is determined by the size of the tabbed box&#8217;s containing element: I built this box with CSS Newbie&#8217;s sidebar in mind, which gave me just over 300px of breathing room. Next up, I need to consider the number of tabs I&#8217;ll have. My box will have three tabs. If each of those tabs are 100px wide, they then use 3 * 100 (300) pixels of space. But don&#8217;t forget: according to our design, two of those tabs will need a border on one side to create the tabbed effect. This results in another two pixels added to our width, for a total of 100 * 3 + 2 (302) pixels. But remember, with the borders I added to my tabbed-box class, my final overall width is 100 * 3 + 2 + 2 (304) pixels.</p>
+<p>Next up, we&#8217;ll style our tabs:</p>
+<pre lang="css" escaped="true" line="1">.tabbed-box .tabs li {
+	list-style: none;
+	float: left; }
+.tabbed-box .tabs li a {
+	display: block;
+	width: 100px;
+	padding: 5px 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #888;
+	background: #fff url(tabbed-tab-bg.jpg) repeat-x bottom; 
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;}
+.tabbed-box .tabs li:first-child a {
+	border-left: none; }</pre>
+<p>First I&#8217;m removing the list style and floating my tabs to the left to get them lined up horizontally. Next I&#8217;m making them block-level, so the entire tab becomes clickable. Then I&#8217;m setting them to the appropriate width (100px in this case), giving them some padding, styling the text, applying my gradient background, and applying my borders to the left and bottom sides.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>Next I have a rather specific rule: I&#8217;m removing the left border on the first-child element: this means that my very first tab won&#8217;t have a border on its left side, since the containing box has a border there and we don&#8217;t want to double up. Of course, first-child isn&#8217;t supported by Internet Explorer 6&#8230; but don&#8217;t worry, we&#8217;ll account for that in our jQuery.</p>
+<p>Then all we have left to get our tabs in working order is to set how they behave in three states: hover, focus, and &#8220;active&#8221;:</p>
+<pre lang="css" escaped="true" line="1">.tabbed-box .tabs li a:hover {
+	color: #333; }
+.tabbed-box .tabs li a:focus {
+	outline: none; }
+.tabbed-box .tabs li a.active {
+	background: #fff;
+	color: #333;
+	border-bottom: 1px solid #fff; }</pre>
+<p>I&#8217;m giving my tabs a slightly darker text color in the hover state, to help the user see when they&#8217;re hovering. The focus state is there simply to remove the resulting outline in Firefox when the user clicks a tab: if you&#8217;re one of those who insist on having a focus state, feel free to leave this rule out. And finally, we have an active class. This class will be applied by our jQuery to the tab that is currently open. Here we&#8217;re removing the bottom border and changing the background color to give it the appearance of an open tab.</p>
+<p>And last but not least, we need to apply some styles to our tabbed-content divs:</p>
+<pre lang="css" escaped="true" line="1">.tabbed-content {
+	padding: 3em 1em 1em 1em;
+	display: none; }</pre>
+<p>The padding simply pushes the content away from the edges of our box. You can set this to whatever you wish. And our display rule hides all our content, until it&#8217;s called upon by our jQuery.</p>
+<h3>The jQuery</h3>
+<p>Since we&#8217;re using the jQuery library to do most of our heavy lifting here, you&#8217;ll need to include the jQuery library somewhere above the following code.</p>
+<p>Because I decided to write my XHTML without a lot of extra IDs and classes, my jQuery is going to have to be a lot smarter when it comes to figuring out which tabs display which content. My rationale is pretty straightforward: the first anchor in my unordered list should open the first tabbed-content div, the second one the second, and so on down the line. Because our logic is so straightfoward, I can rely on the jQuery index functionality to do a lot of the hard math.</p>
+<pre lang="javascript" escaped="true" line="1">var currentTab = 0; 
+
+function openTab(clickedTab) {
+	var thisTab = $(&quot;.tabbed-box .tabs a&quot;).index(clickedTab);
+	$(&quot;.tabbed-box .tabs li a&quot;).removeClass(&quot;active&quot;);
+	$(&quot;.tabbed-box .tabs li a:eq(&quot;+thisTab+&quot;)&quot;).addClass(&quot;active&quot;);
+	$(&quot;.tabbed-box .tabbed-content&quot;).hide();
+	$(&quot;.tabbed-box .tabbed-content:eq(&quot;+thisTab+&quot;)&quot;).show();
+	currentTab = thisTab;
+}</pre>
+<p>I start out by declaring a global variable that I&#8217;ll use throughout the script: currentTab. The currentTab variable will hold the index (an internal counter, like in an array) of the tab we&#8217;re currently on. It will also serve later to decide which tab we open by default. </p>
+<p>Our function looks more complicated than it is. It requires one variable to be passed it: the clickedTab variable, otherwise known as the tab the user just clicked on. It then calculates the index of that tab (if it was the 3rd tab, the index would be 2) and saves that number as thisTab.</p>
+<p>Next, the script cycles through all our tabs and removes any instances of the &#8220;active&#8221; class if finds, before cycling through a second time and applying the active class to the tab that has the same index number as the tab that was clicked on (in other words, the same tab). This ensures we only ever have one active tab at a time. Then we cycle through our content boxes, hiding them all before cycling through again and showing only the one box that has the same index as our tab&#8230; meaning if the third tab was clicked, the third box will open. That bit of math is what saves us from having to apply IDs to all of our tabs and content boxes. Then we set the currentTab variable to our newly open tab&#8217;s index.</p>
+<p>Now that our function is written, we can get our tabbed box ready for prime time:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$(&quot;.tabs li:eq(0) a&quot;).css(&quot;border-left&quot;, &quot;none&quot;);
+	
+	$(&quot;.tabbed-box .tabs li a&quot;).click(function() { 
+		openTab($(this)); return false; 
+	});
+	
+	$(&quot;.tabbed-box .tabs li a:eq(&quot;+currentTab+&quot;)&quot;).click()
+});</pre>
+<p>The first line in our document ready function removes the left border of the first tab. Our CSS handled this for all browsers but IE6, but this bit of code takes care of IE6 as well. </p>
+<p>Next, I&#8217;ve written a click function that will fire any time anyone clicks on any of our tabs. It only has two parts. First, it fires the openTab function, sending it a variable called &#8220;$(this)&#8221;. In jQuery, the $(this) variable in a function is always populated with the element on which the function was applied. So if the user clicks on the 2nd tab, our $(this) variable would contain that element. The &#8220;return false&#8221; after our function prevents the browser from trying to go to whatever we put in our anchor&#8217;s href.</p>
+<p>And last but certainly not least, our final line forces a click on the tab with an ID that matches currentTab. In my example, that&#8217;s the first tab, but you can set currentTab to whatever you&#8217;d like to start, so long as currentTab is at least one less than the total number of tabs (since we start counting at zero).</p>
+<p><a href="../../example/tabbed-box/index.html">And with that, we have a functioning tabbed box!</a></p>
+<p><a href="../../example/tabbed-box/index.html">You can see this box in action here.</a> The demo contains all the XHTML, CSS and jQuery you need to get this box up and running on your own site. </p>
+<p>My next article will cover some advanced tricks you can do with this box, like getting it to cycle through automatically to catch the user&#8217;s eye&#8230; and how to stop the box from cycling once it has the user&#8217;s attention. To be sure to catch the article, you may want to subscribe to my newsfeed. </p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			81 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9339">
+		<article id="comment-9339" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/06299b90680f804ef55917317c8bb3f0?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Zach </cite><a href="index.html#comment-9339"><time datetime="2009-01-18T17:36:05+00:00">Jan. 18, 2009 @ 5:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great article, I&#8217;ve been looking for something like this.  You should consider doing some video tutorials as well.  I&#8217;m more of a visual learner than anything.  Thanks again though!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9341">
+		<article id="comment-9341" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/062707cfd1399d53c99bd0fd2a718224?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.raymondselda.com/' rel='external nofollow' class='url'>Raymond Selda</a> </cite><a href="index.html#comment-9341"><time datetime="2009-01-19T21:22:34+00:00">Jan. 19, 2009 @ 9:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very nice tabs you got there! Thank you for sharing this.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9342">
+		<article id="comment-9342" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f4581b02597eb0f692324d5658a1e4a9?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.h2ok.de' rel='external nofollow' class='url'>Ole</a> </cite><a href="index.html#comment-9342"><time datetime="2009-01-20T02:35:54+00:00">Jan. 20, 2009 @ 2:35 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nicely done!<br />
+But you should hide the content just via javascript. Because if javascript is disabled, you even can&#8217;t see the content&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9343">
+		<article id="comment-9343" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f6ecd1f2fc3b9dac451961285ed3788e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.twitter.com/LucPestille' rel='external nofollow' class='url'>Luc</a> </cite><a href="index.html#comment-9343"><time datetime="2009-01-20T04:16:32+00:00">Jan. 20, 2009 @ 4:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>You might want to also have jQuery automatically open up the right tab (my tab list was called #tabnav) from the anchor in the URL: (hopefully this will show the code)&#8230;</p>
+<p>//auto-click tabs from URL<br />
+var tablink = document.location.toString();<br />
+  if (tablink.match(&#8216;#&#8217;)) { // the URL contains an anchor<br />
+  // click the navigation item corresponding to the anchor<br />
+  var tabanchor = &#8216;#&#8217; + tablink.split(&#8216;#&#8217;)[1];<br />
+  $(&#8216;#tabnav li a[href="' + tabanchor + '"]&#8216;).click();<br />
+ return false;<br />
+}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9345">
+		<article id="comment-9345" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/99991dbfeb6de5c7cb3734afdd3b0900?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Njohnson </cite><a href="index.html#comment-9345"><time datetime="2009-01-20T09:10:27+00:00">Jan. 20, 2009 @ 9:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is great, however, it doesn&#8217;t seem to be keyboard accessible.  It would not be accessible to screenreaders.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9351">
+		<p>Pingback: <a href='http://www.jaceju.net/blog/?p=386' rel='external nofollow' class='url'>網站製作學習誌 &raquo; [Web] 連結分享</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9352">
+		<p>Pingback: <a href='http://www.robglazebrook.com/blog/2009/01/22/happy-hallothanchristmanewyear/' rel='external nofollow' class='url'>robglazebrook.com &raquo; Blog Archive &raquo; Happy Hallothanchristmanewyear!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9356">
+		<p>Pingback: <a href='http://www.andysowards.com/blog/nerdy-daily-links/daily-links-122' rel='external nofollow' class='url'>Daily Links | AndySowards.com :: Professional Web Design, Development, Programming, Hacks, Downloads, Math and being a Web 2.0 Hipster?</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9358">
+		<p>Pingback: <a href='http://page2.wordpress.com/2009/01/24/links-for-2009-01-24/' rel='external nofollow' class='url'>links for 2009-01-24 &laquo; Page 2</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9359">
+		<p>Pingback: <a href='../../index.html?p=363' rel='external nofollow' class='url'>Advanced jQuery Tabbed Box Techniques</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9363">
+		<p>Pingback: <a href='http://designm.ag/tutorials/jquery-navigation/' rel='external nofollow' class='url'>25 jQuery Tutorials for Improved Navigation Menus</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9365">
+		<p>Pingback: <a href='http://folkspants.com/links/my-web-notables-43' rel='external nofollow' class='url'>My web notables&#8230; | Folks Pants: Tailor Made Internet</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9368">
+		<p>Pingback: <a href='http://student-geeks.com/blog/2009/01/css/build-a-tabbed-box-with-css-and-jquery/' rel='external nofollow' class='url'>Student Geeks - Build a Tabbed Box with CSS and jQuery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9369">
+		<article id="comment-9369" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7e3fdd341f8934e0dd2df649b1b5a917?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://mycapetown.biz' rel='external nofollow' class='url'>Christopher Brunsdon</a> </cite><a href="index.html#comment-9369"><time datetime="2009-01-28T03:19:19+00:00">Jan. 28, 2009 @ 3:19 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks bud. I need to implement this  in some code today and my JS is rusty.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9370">
+		<article id="comment-9370" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fff67acd424240025bec0bf59a27e620?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://budurl.com/vvbp' rel='external nofollow' class='url'>Rahul</a> </cite><a href="index.html#comment-9370"><time datetime="2009-01-28T03:40:08+00:00">Jan. 28, 2009 @ 3:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is very nice tabs and simple explanations too.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9372">
+		<article id="comment-9372" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2308d929fd63d8944a3c005adb8ddf31?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.firvan.com' rel='external nofollow' class='url'>sky</a> </cite><a href="index.html#comment-9372"><time datetime="2009-01-28T09:15:16+00:00">Jan. 28, 2009 @ 9:15 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Woooow..this tips is so cool.. thank u Rob</p>
+<p><a href="http://www.cssnewbie.com/build-a-tabbed-box-with-css-and-jquery/comment-page-1/www.firvan.com" rel="nofollow">Tips &amp; Trick Computer and Internet</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9373">
+		<article id="comment-9373" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/59153cc4ccd97bdd42558f93e655d03d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.gavinwill.me.uk' rel='external nofollow' class='url'>gavin</a> </cite><a href="index.html#comment-9373"><time datetime="2009-01-28T09:46:37+00:00">Jan. 28, 2009 @ 9:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>You could condense this page if you had a tabbed box to show the ccs, xhtml etc in tabs ! :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9375">
+		<p>Pingback: <a href='http://www.webstockbox.com/css/creating-a-tabbed-box-with-css-and-jquery/' rel='external nofollow' class='url'>Creating a Tabbed Box with CSS and jQuery - WebStockBox</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9384">
+		<p>Pingback: <a href='http://www.moralfibre.co.za/2009/02/05/jquery-tips-tricks-resources/' rel='external nofollow' class='url'>My Little List of jQuery Tips, Tricks and Resources | Moral Fibre</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9392">
+		<article id="comment-9392" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f615763e38bd8b5fb998f1d5fa9ec5e3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">jfherring </cite><a href="index.html#comment-9392"><time datetime="2009-02-09T16:55:30+00:00">Feb. 9, 2009 @ 4:55 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>or you could just go to ui.jquery.com and use the one that&#8217;s already built&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9401">
+		<p>Pingback: <a href='http://gregbajan.com/blog/?p=24' rel='external nofollow' class='url'>The Words from a Bajan &raquo; Blog Archive &raquo; Build a Tabbed Box with CSS and jQuery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9406">
+		<article id="comment-9406" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e5fb7facd961848386dd72fd63fa8891?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.spiced2.com' rel='external nofollow' class='url'>Thomas Fjordside</a> </cite><a href="index.html#comment-9406"><time datetime="2009-02-15T10:28:37+00:00">Feb. 15, 2009 @ 10:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Really nice tabs, thanks for sharing. jQuery is fast becoming my favorite js library.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9478">
+		<article id="comment-9478" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/45752a7b5cdc2cbeaf03789daffbf9ac?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Marc </cite><a href="index.html#comment-9478"><time datetime="2009-03-16T09:43:41+00:00">Mar. 16, 2009 @ 9:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice tabs tutorial.<br />
+Someone ever thought about having multiple such tabboxes on one page?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9552">
+		<article id="comment-9552" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7f27dcdb4bb5e2a337db74cc242d5c3e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Kiran Byajankar </cite><a href="index.html#comment-9552"><time datetime="2009-04-02T09:34:08+00:00">Apr. 2, 2009 @ 9:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much for this tutorial. I was looking for this kind of tabs done in jQuery for long time. I needed it for one of my Intranet projects. I added onclick event to open certain tab from outside link. It works great. </p>
+<p>Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9599">
+		<p>Pingback: <a href='http://www.templatelite.com/100-popular-jquery-plugins/' rel='external nofollow' class='url'>&raquo; 100 Popular jQuery Examples, Plugins and Tutorials</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9629">
+		<article id="comment-9629" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/271e893db6cda508ad9a241262ff5324?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Naminder </cite><a href="index.html#comment-9629"><time datetime="2009-04-22T06:37:28+00:00">Apr. 22, 2009 @ 6:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I used the same set of tabbing twice on the same page, and it is causing problems, is it somehow possible to use this, for more than one tabbing?</p>
+<p>Thanks in advance</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9639">
+		<article id="comment-9639" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/45752a7b5cdc2cbeaf03789daffbf9ac?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Marc </cite><a href="index.html#comment-9639"><time datetime="2009-04-23T06:10:55+00:00">Apr. 23, 2009 @ 6:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Naminder</p>
+<p>I have multiple tabs on one page&#8230;.I did it the ruff way :)<br />
+one function for eacht tab &#8230;<br />
+like Function tab1 .. tabbedbox1&#8230;Function tab2 .. tabbedbox2&#8230;</p>
+<p>hmm&#8230;well&#8230;it works :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9701">
+		<p>Pingback: <a href='http://www.zionews.net/news/advanced-jquery-tabbed-box-techniques/' rel='external nofollow' class='url'>ZioNews &raquo; Advanced jQuery Tabbed Box Techniques</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9716">
+		<article id="comment-9716" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/96c37e73b5750f0bcfce6951a3981cdd?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Naminder </cite><a href="index.html#comment-9716"><time datetime="2009-05-15T00:37:47+00:00">May. 15, 2009 @ 12:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I got the idea and used it in a different way and used it 4 times on same page without creating different function for it. </p>
+<p>Great Idea</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9754">
+		<p>Pingback: <a href='http://www.brainstorming.ba/?p=488' rel='external nofollow' class='url'>25 jQuery Tutorials for Improved Navigation Menus | brainstorming magazine | use the brain to get ideas</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9762">
+		<p>Pingback: <a href='http://www.colorrage.com/blog/2009/06/advanced-jquery-tabbed-box-techniques/' rel='external nofollow' class='url'>Colorrage Blog &raquo; Blog Archive &raquo; Advanced jQuery Tabbed Box Techniques</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9835">
+		<article id="comment-9835" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f69d69ed94aa04057e3d0269f9c71e80?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Karen </cite><a href="index.html#comment-9835"><time datetime="2009-07-16T15:56:02+00:00">Jul. 16, 2009 @ 3:56 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great tutorial with very clear explanation.  Does everything I was trying to do! Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9950">
+		<article id="comment-9950" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/03d0e9538f7667b03f3f26c007eb2265?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">ChrissyG </cite><a href="index.html#comment-9950"><time datetime="2009-09-10T08:01:04+00:00">Sep. 10, 2009 @ 8:01 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@ Kiran Byajankar: RE Opening from outside url</p>
+<p>I also would like to do this but don&#8217;t know how to get the tabs to open on the relevant tab from a url. How exactly did you do that?</p>
+<p>Or anyone for that matter I am not the greatest at javascript and just want to be able to link to the page but a certain tab open depending on what link I use.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10044">
+		<article id="comment-10044" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d0321737b9f29131f789e4ccff3de88?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">susie </cite><a href="index.html#comment-10044"><time datetime="2009-10-19T18:04:55+00:00">Oct. 19, 2009 @ 6:04 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Used the instructions and code above on a test page and end up with extra space between the tabs. The 302 box size does not work with 100px tabs: it wraps the tabs. When I try decreasing the tab size incrementally, I get gaps between the tabs. To test this, I put a colored bg in the tabs. The result is white, color, white, color, white, color, white. It doesn&#8217;t matter how long the heading name is of each tab: the text will just extend beyond the color BG.</p>
+<p>Any clues? I think I did everything, step-by-step, that you posted.<br />
+??<br />
+Thank you.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10046">
+		<article id="comment-10046" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d0321737b9f29131f789e4ccff3de88?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Susie </cite><a href="index.html#comment-10046"><time datetime="2009-10-20T11:34:53+00:00">Oct. 20, 2009 @ 11:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Problems: The first-child tab indents and the last tab runs off the end, beyond the limits of the box. Can someone help me find a solution to that?<br />
+Thank you,<br />
+Susie</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10058">
+		<article id="comment-10058" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cb3a676cb4aefad98ed21de481a955dc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://aspergeria.ning.com' rel='external nofollow' class='url'>James Lassan</a> </cite><a href="index.html#comment-10058"><time datetime="2009-10-27T14:45:55+00:00">Oct. 27, 2009 @ 2:45 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>brilliant idea, just what i was looking for, im not sure that i did the coding right could you perhaps send me the full code? <a href="mailto:jameslassan@googlemail.com">jameslassan@googlemail.com</a> cheers, from, James Lassan</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10082">
+		<article id="comment-10082" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b2e04c64fb4ddbcd0351b5e2d90193da?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://vn.myblog.yahoo.com/lesinhtien' rel='external nofollow' class='url'>free style</a> </cite><a href="index.html#comment-10082"><time datetime="2009-11-12T23:41:44+00:00">Nov. 12, 2009 @ 11:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>cool tab!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10094">
+		<p>Pingback: <a href='http://tympanus.net/codrops/2009/09/11/42-jquery-navigation-based-techniques/' rel='external nofollow' class='url'>42 jQuery Navigation based Techniques | Codrops</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10154">
+		<p>Pingback: <a href='http://jbloo.com/?p=98' rel='external nofollow' class='url'>Build a Tabbed Box with CSS and jQuery &laquo; Jbloo</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10156">
+		<article id="comment-10156" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/63ac2d850d20744bb0c4ef64fc6d0eb9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Rajinder </cite><a href="index.html#comment-10156"><time datetime="2009-12-17T15:20:11+00:00">Dec. 17, 2009 @ 3:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great Tut,</p>
+<p>Does anyone have the java code to add multiple tabbed boxes to one page? I am not sure how to add separate functions. (new to java) :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10203">
+		<p>Pingback: <a href='http://WebDesignExpert.Me/2010/01/07/web-design-proposal-contracts/' rel='external nofollow' class='url'>web design proposal contracts | WebDesignExpert.Me</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10763">
+		<article id="comment-10763" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cf3546393b721dde5386bf18c87c6620?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">annox </cite><a href="index.html#comment-10763"><time datetime="2010-01-25T12:46:16+00:00">Jan. 25, 2010 @ 12:46 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>you need to add a rel tag to each element in the tabs<br />
+<a href="index.html#" rel="nofollow">header1</a><br />
+<a href="index.html#" rel="nofollow">header2</a><br />
+<a href="index.html#" rel="nofollow">header3</a><br />
+<a href="index.html#" rel="nofollow">header4</a><br />
+Here header1 and header2 will work separate to header3 and header4 as they are &#8220;grouped&#8221; by the rel value.</p>
+<p>Also, you need to add the same rel value to each of their tabbed-contents. In this example, box1 for header1 and header2&#8242;s content; and box3 for header3 and header4&#8242;s.</p>
+<p>or</p>
+<p>Finally this javascript should work:</p>
+<p>var currentTab = 0; // Set to a different number to start on a different tab.<br />
+var namesTab = ["box1", "box2"];</p>
+<p>function openTab(clickedTab) {<br />
+	var thisTab = $(&#8220;.tabbed-box .tabs a&#8221;).index(clickedTab);<br />
+	var thisRel = clickedTab.attr(&#8220;rel&#8221;);</p>
+<p>	$(&#8220;.tabbed-box .tabs li a[rel='"+thisRel+"']&#8220;).removeClass(&#8220;active&#8221;);<br />
+	$(&#8220;.tabbed-box .tabs li a:eq(&#8220;+thisTab+&#8221;)&#8221;).addClass(&#8220;active&#8221;);<br />
+	$(&#8220;.tabbed-box .tabbed-content[rel='"+thisRel+"']&#8220;).hide();<br />
+	$(&#8220;.tabbed-box .tabbed-content:eq(&#8220;+thisTab+&#8221;)&#8221;).show();<br />
+	currentTab = thisTab;<br />
+}</p>
+<p>$(document).ready(function() {<br />
+	$(&#8220;.tabs li:eq(0) a&#8221;).css(&#8220;border-left&#8221;, &#8220;none&#8221;);</p>
+<p>	$(&#8220;.tabbed-box .tabs li a&#8221;).click(function() {<br />
+		openTab($(this)); return false;<br />
+	});</p>
+<p>	for (i=0; i&lt;namesTab.length; i++)<br />
+		$(&quot;.tabbed-box .tabs li a[rel=&#039;&quot;+namesTab[i]+&quot;&#039;]:eq(&quot;+currentTab+&quot;)&quot;).click()<br />
+});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11231">
+		<p>Pingback: <a href='http://www.5s6c.com/?p=47' rel='external nofollow' class='url'>五色六彩</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11262">
+		<p>Pingback: <a href='http://acrisdesign.com/2010/03/25-excellent-jquery-tutorials-for-navigation-menu/' rel='external nofollow' class='url'>25 Excellent jQuery Tutorials for Navigation Menu &laquo; AcrisDesign &#8211; Web Design Resources and Inspiration</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12580">
+		<p>Pingback: <a href='http://kenno1.net/2010/04/11/100-popular-jquery-examples-plugins-and-tutorials/' rel='external nofollow' class='url'>100 Popular jQuery Examples, Plugins and Tutorials</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12764">
+		<p>Pingback: <a href='http://nagpurcolors.com/?p=1519' rel='external nofollow' class='url'>jQuery Plugins - Nagpur City</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12808">
+		<article id="comment-12808" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9d3aeff72faa174f0aba3dd5b7835908?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Murshid Muzamil </cite><a href="index.html#comment-12808"><time datetime="2010-06-26T01:42:52+00:00">Jun. 26, 2010 @ 1:42 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great post. i think this will be useful as well. how to select a tab from a text link instead of clicking a tab itself. I modified your code as below. see my example at,</p>
+<p><a href="http://code.google.com/p/jquerytabfromlink/downloads/detail?name=JQUERY-Tabs.zip&#038;can=2&#038;q=#makechanges" rel="nofollow">http://code.google.com/p/jquerytabfromlink/downloads/detail?name=JQUERY-Tabs.zip&#038;can=2&#038;q=#makechanges</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12831">
+		<article id="comment-12831" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/ff141a8e91c66296a6241b639e104e01?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.shoppinghermes.com' rel='external nofollow' class='url'>hermes kelly bag</a> </cite><a href="index.html#comment-12831"><time datetime="2010-07-08T21:22:36+00:00">Jul. 8, 2010 @ 9:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>[...] them. The technique involves some editing a couple of lines from the document ready function. 72. Build a Tabbed Content with CSS and jQuery – This technique outlines the steps required to easily customize to fit the size and color [...]</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12874">
+		<p>Pingback: <a href='http://miamibeachwebdesigner.com/2010/07/23/37-amazing-tutorials-for-jquery-navigation-menus/' rel='external nofollow' class='url'>37 Amazing Tutorials for jQuery Navigation Menus</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13133">
+		<p>Pingback: <a href='http://corpocrat.com/2010/12/04/30-best-jquery-tutorials-plugins-for-beginners/' rel='external nofollow' class='url'>30+ Best jQuery Tutorials &amp; Plugins for Beginners</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../../index.html?p=355#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='355' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="acb644cafe" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=33" title="Permalink to: Intelligent Navigation Bars with JavaScript and CSS">
+                    Intelligent Navigation Bars with JavaScript and CSS                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">I’ve developed a trick over the years that I’ve used on a number of websites now for making my sites’ navigation bars “intelligent” or “self-aware.”... <a href="../../index.html?p=33" class="more-link" title="Permalink to: Intelligent Navigation Bars with JavaScript and CSS">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1245/1344 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:10:37 by W3 Total Cache -->

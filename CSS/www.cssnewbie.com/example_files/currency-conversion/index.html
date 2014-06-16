@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Newbie Example: Currency Conversion</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+function toUSD(number) {
+    var number = number.toString(), 
+    dollars = number.split('.')[0], 
+    cents = (number.split('.')[1] || '') +'00';
+    dollars = dollars.split('').reverse().join('')
+        .replace(/(\d{3}(?!$))/g, '$1,')
+        .split('').reverse().join('');
+    return '$' + dollars + '.' + cents.slice(0, 2);
+}
+
+$(function() {
+	$('#convert').click(function() { alert('Converted to: '+toUSD($('#number').val())); return false; });
+});
+</script>
+<style>
+#wrap {
+	width: 75%;
+	margin: 20px auto;
+	font: 1em/1.5 Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>Currency Conversion Script</h1>
+  <p>Enter a number in the box below and click Convert to see it rendered in US dollars.</p>
+  <p><input type="text" id="number" /> <a href="index.html#" id="convert">Convert!</a>
+  <p><a href="../../index.html?p=635">Return to the original article.</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://tympanus.net/codrops/2011/01/03/parallax-slider/ -->
+<html dir="ltr" lang="en-US" class=" js canvas fontface generatedcontent"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Parallax Slider with jQuery   Codrops_files/XYxRCoAgEAUvlKx1hU4iumWRrrwnRLfPfoP5m2G8REuwxp61qF_kpDAPVoNOs9yG1KCk2wzFlVDDrpDIkfXn0sn_B5-qxoij9Rc.css" media="all">
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Parallax Slider with jQuery | Codrops</title>
+				<link rel="stylesheet" type="text/css" href="./Parallax Slider with jQuery   Codrops_files/codrops.css">
+		<link rel="stylesheet" type="text/css" media="print" href="./Parallax Slider with jQuery   Codrops_files/codrops_print.css">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="shortcut icon" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/favicon.ico">
+
+		 			
+		
+		
+					<!--single syntax highlighter-->
+			<script src="./Parallax Slider with jQuery   Codrops_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Parallax Slider with jQuery   Codrops_files/large"></script><script type="text/javascript" async="" src="./Parallax Slider with jQuery   Codrops_files/ga.js"></script><script src="./Parallax Slider with jQuery   Codrops_files/shCore.js"></script>
+			<script src="./Parallax Slider with jQuery   Codrops_files/shBrushXml.js"></script>
+			<script src="./Parallax Slider with jQuery   Codrops_files/shBrushCss.js"></script>
+			<script src="./Parallax Slider with jQuery   Codrops_files/shBrushPhp.js"></script>
+			<script src="./Parallax Slider with jQuery   Codrops_files/shBrushSql.js"></script>
+			<script src="./Parallax Slider with jQuery   Codrops_files/shBrushJScript.js"></script>		
+			<script>
+				SyntaxHighlighter.defaults['auto-links'] = false;
+				SyntaxHighlighter.defaults['toolbar'] = false;
+				SyntaxHighlighter.all();
+			</script>
+			   
+		<link rel="alternate" type="application/rss+xml" title="Codrops » Parallax Slider with jQuery Comments Feed" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/feed/">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var fm_user_I18n = {"ajaxurl":"http:\/\/tympanus.net\/codrops\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/userscripts.js"></script>
+<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/jquery.js"></script>
+<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tympanus.net/codrops/xmlrpc.php?rsd">
+<link rel="prev" title="Portfolio Zoom Slider with jQuery" href="http://tympanus.net/codrops/2010/12/27/portfolio-zoom-slider/">
+<link rel="next" title="Collective: Form cloning jQuery plugin" href="http://tympanus.net/codrops/2011/01/03/collective-form-cloning-jquery-plugin/">
+<link rel="shortlink" href="http://tympanus.net/codrops/?p=3222">
+
+<!-- All in One SEO Pack 2.1.5 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<meta name="description" content="Happy New Year! We will kick start 2011 with a vibrant image slider tutorial. We will make use of the parallax principle to move different backgrounds when we">
+
+<meta name="keywords" content="parallax, jquery, slider, rotation, slideshow">
+
+<link rel="canonical" href="./Parallax Slider with jQuery   Codrops_files/Parallax Slider with jQuery   Codrops.html">
+<!-- /all in one seo pack -->
+		<script src="./Parallax Slider with jQuery   Codrops_files/search.js"></script>
+
+		<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-7243260-2']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
+
+				<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/modernizr.custom.70736.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/css3-mediaqueries.js"></script>
+			<link rel="stylesheet" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/css/ie.css"/>
+		<![endif]-->
+		<!--[if lt IE 8 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/iconfonts.js"></script>
+		<![endif]-->
+		<noscript>
+			
+		</noscript>
+	<script type="text/javascript" async="" src="./Parallax Slider with jQuery   Codrops_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_af25dfd2f1908889af7a1aa5f4dcbd9e" src="./Parallax Slider with jQuery   Codrops_files/s_af25dfd2f1908889af7a1aa5f4dcbd9e.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1243201{width:100%;display:block}div.bsap_1243201 a{width:125px}div.bsap_1243201 a img{padding:0}div.bsap_1243201 a em{font-style:normal}div.bsap_1243201 a{background: rgba(255, 255, 255, 0.5); padding: 10px;display:block;font-size:11px;color:#888;margin:0 10px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1243201 img{border:0;}div.bsap_1243201 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; text-align: center; background: rgba(255,255,255,0.5); line-height: 1200%; width: 125px; height: 125px;}div.bsap_1243201 a.adhere:hover{color: #7e95aa;}div.bsap_1243201 a{line-height:100%}div.bsap_1243201 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1243201 a.adhere{width:123px;height:123px}div.bsap_1243201 img.s{height:0;width:0}div.bsap_1248599{width:100%;display:block}div.bsap_1248599 a{width:125px}div.bsap_1248599 a img{padding:0}div.bsap_1248599 a em{font-style:normal}div.bsap_1248599 a{display:block;font-size:11px;color:#888;margin:0px 10px 10px 15px;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1248599 img{border:0;}div.bsap_1248599 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; border: 1px solid #C8D0E1; text-align: center; background: #D9E3EC; line-height: 1200%;}div.bsap_1248599 a.adhere:hover{color: #7E95AA;}div.bsap_1248599 a{line-height:100%}div.bsap_1248599 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1248599 a.adhere{width:123px;height:123px}div.bsap_1248599 img.s{height:0;width:0}div.bsap_1277316{width:100%;display:block}div.bsap_1277316 a{width:728px}div.bsap_1277316 a img{padding:0}div.bsap_1277316 a em{font-style:normal}div.bsap_1277316 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1277316 img{border:0;clear:right;}div.bsap_1277316 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1277316 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1277316 a{line-height:100%}div.bsap_1277316 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1277316 a.adhere{width:726px;height:88px}div.bsap_1277316 img.s{height:0;width:0}div.bsap_1277316{line-height:9px}div.bsap_1277316 .bsap_adhere2,div.bsap_1277316 iframe{float:left}div.bsap_1277316 .bsap_adhere2 a{height:90px;width:20px;background:url(http://s3.buysellads.com/ac/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px}</style></head>
+	<body>
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+			(function(){
+				var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+				(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+			})();
+		</script>
+		<!-- END BuySellAds.com Ad Code -->	
+		<div class="ct-container">
+			<header class="ct-header">
+				<div class="ct-inner ct-cf">
+
+											<div class="ct-branding">
+							<a class="ct-logo" href="http://tympanus.net/codrops" rel="home">Codrops</a>
+						</div>
+					
+					<div class="ct-nav-wrapper">
+						<nav class="ct-nav-main">
+						   <ul>
+								<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+								<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+								<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+								<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+								<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="ct-header-items-right ct-cf">
+						<div class="ct-search" id="ct-search">
+							<form method="get" id="searchform" action="http://tympanus.net/codrops/">
+								<div class="ct-search-input-wrap"><input class="ct-search-input" placeholder="Search on Codrops..." type="text" value="" name="s" id="s"></div>
+								<input class="ct-search-submit" type="submit" id="go" value=""><span class="ct-icon-search"></span>
+							</form>
+						</div>
+						<ul class="ct-connect">
+							<li><a class="ct-icon-feed" href="http://feeds2.feedburner.com/tympanus"><span>Rss Feed</span></a></li>
+							<li><a class="ct-icon-mail" href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US"><span>Email Updates</span></a></li>
+							<li><a class="ct-icon-twitter" href="http://www.twitter.com/codrops"><span>Codrops on Twitter</span></a></li>
+							<li><a class="ct-icon-facebook" href="http://www.facebook.com/pages/Codrops/159107397912"><span>Codrops on Facebook</span></a></li>
+							<li><a class="ct-icon-google-plus" href="https://plus.google.com/101095823814290637419" rel="publisher"><span>Codrops on Google+</span></a></li>
+						    <li><a class="ct-icon-github" href="https://github.com/codrops"><span>Codrops on Github</span></a></li>
+						</ul>
+					</div><!--/ct-header-items-right-->
+
+				</div><!-- ct-inner -->
+			</header><div class="ct-content">
+    <div class="ct-inner">		
+		
+								<div class="ct-main ct-main-post  " id="ct-main" role="main">
+					<div class="ct-post">
+						<article id="post-3222" class="post-3222 post type-post status-publish format-standard hentry category-tutorials tag-jquery tag-parallax tag-rotation tag-slider tag-slideshow">
+							<header>
+								<div class="ct-subline entry-meta">
+									In <a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a>
+																		by <span class="byline author vcard"><a href="http://tympanus.net/codrops/author/crnacura/" title="Posts by Mary Lou" rel="author">Mary Lou</a></span>
+																		<time pubdate="pubdate">January 3, 2011</time>
+									<a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/#comments" title="Comment on Parallax Slider with jQuery">93 Comments</a>																										</div>
+								<div class="clr"></div>
+								<h1 class="ct-h-shd entry-title">
+									Parallax Slider with jQuery																	</h1>	
+							</header>		
+							<div class="ct-post-content">
+								<div class="ct-post-excerpt"> Happy New Year! We will kick start 2011 with a vibrant image slider tutorial. We will make use of the parallax principle to move different backgrounds when we slide to an image in order to create some nice perspective. This will give a great depth to the whole slider when it’s in […]</div>								<div class="ct-ad-article-wrapper">
+										<div class="ct-ad-article">
+																						<img class="ct-ad-img" src="./Parallax Slider with jQuery   Codrops_files/advertisement.jpg">
+												
+											<div id="bsap_1277316" class="bsap_1277316 bsap"><a href="http://stats.buysellads.com/click.go?z=1277316&b=2708330&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9867657178547233&link=http://www.wix.com/eteamhtml/pro-designers2?utm_campaign=ma_tympanus.net&experiment_id=ma_tympanus.net_728bluecube3html5_prodesign2html" onmouseover="window.status = &#39;http://www.wix.com/eteamhtml/pro-designers2?utm_campaign=ma_tympanus.net&amp;experiment_id=ma_tympanus.net_728bluecube3html5_prodesign2html&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Free Website Builder" id="bsa_2708330" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/107659-1337520212.png" width="728" height="90" alt="Free Website Builder"></a></div>
+										</div>
+									</div>
+								
+								<p><a target="_blank" href="http://tympanus.net/Tutorials/ParallaxSlider/"><img src="./Parallax Slider with jQuery   Codrops_files/parallax_slider.jpg" alt="" title="parallax_slider" width="580" height="315" class="aligncenter size-full wp-image-3226"></a><br>
+<a class="demo" href="http://tympanus.net/Tutorials/ParallaxSlider/" target="_blank">View demo</a><a class="download" href="http://tympanus.net/Tutorials/ParallaxSlider/ParallaxSlider.zip">Download source</a></p>
+<p>Happy New Year! We will kick start 2011 with a vibrant image slider tutorial. We will make use of the parallax principle to move different backgrounds when we slide to an image in order to create some nice perspective. This will give a great depth to the whole slider when it’s in motion. </p>
+<p>The wonderful images are taken from Tetsumo’s Flickr Photo Stream: <a target="_blank" href="http://www.flickr.com/photos/tetsumo/">http://www.flickr.com/photos/tetsumo/</a></p>
+<p>So, let’s start!</p>
+<div class="ct-ad-article-wrapper ct-ad-article-wrapper-in"><div class="ct-ad-article"><img class="ct-ad-img" src="./Parallax Slider with jQuery   Codrops_files/advertisement.jpg"><div id="bsap_1279993" class="bsap_1279993 bsap"><iframe width="728" height="90" id="ad_3916284_frame" src="./Parallax Slider with jQuery   Codrops_files/raw_cb354f56e6453c38f69543af337c4317.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe></div><div style="clear:both;"></div></div></div>
+<h3>The Markup</h3>
+<p>The HTML structure is going to consist of a main container with the class “pxs_container”. We will add a wrapper for the three different backgrounds which we will animate differently to create the parallax. The background images will have some transparency since we want to see them moving on top of each other.</p>
+<p>We will also add a loading element and the two unordered lists for the full images and the thumbnails. Further, we will add the navigation elements.</p>
+<pre class="brush:xml">&lt;div id="pxs_container" class="pxs_container"&gt;
+	&lt;div class="pxs_bg"&gt;
+		&lt;div class="pxs_bg1"&gt;&lt;/div&gt;
+		&lt;div class="pxs_bg2"&gt;&lt;/div&gt;
+		&lt;div class="pxs_bg3"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="pxs_loading"&gt;Loading images...&lt;/div&gt;
+	&lt;div class="pxs_slider_wrapper"&gt;
+		&lt;ul class="pxs_slider"&gt;
+			&lt;li&gt;&lt;img src="images/1.jpg" alt="First Image" /&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;img src="images/2.jpg" alt="Second Image" /&gt;&lt;/li&gt;
+			...
+		&lt;/ul&gt;
+		&lt;div class="pxs_navigation"&gt;
+			&lt;span class="pxs_next"&gt;&lt;/span&gt;
+			&lt;span class="pxs_prev"&gt;&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;ul class="pxs_thumbnails"&gt;
+			&lt;li&gt;&lt;img src="images/thumbs/1.jpg" alt="First Image" /&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;img src="images/thumbs/2.jpg" alt="Second Image" /&gt;&lt;/li&gt;
+			...
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>Now, let’s take a look at the style.</p>
+<h3>The CSS</h3>
+<p>We will start with the main container. Since we will use the whole page for the width of the slider, we will set it to 100%. It will be of position relative because we will set all the element inside to position absolute (and we want them to be positioned relative to the container and not the page): </p>
+<pre class="brush:css">.pxs_container{
+	width:100%;
+	height:420px;
+	position:relative;
+	border-top:7px solid #333;
+	border-bottom:7px solid #333;
+	overflow:hidden;
+	-moz-box-shadow:0px 0px 7px #000;
+	-webkit-box-shadow:0px 0px 7px #000;
+	box-shadow:0px 0px 7px #000;
+}
+</pre>
+<p>The wrapper for the divs that will contain the parallax backgrounds will have a repeated background image. This image is just a simple gradient:</p>
+<pre class="brush:css">.pxs_bg{
+	background:transparent url(../images/bg.png) repeat top left;
+}
+</pre>
+<p>The divs inside of the wrapper will share the following style properties:</p>
+<pre class="brush:css">.pxs_bg div{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:420px;
+	background-repeat:repeat;
+	background-position:top left;
+	background-color:transparent;
+}
+</pre>
+<p>The width will be set dynamically in the JavaScript. The single background divs will have all a different background image:</p>
+<pre class="brush:css">.pxs_bg .pxs_bg1{
+	background-image:url(../images/bg1.png);
+}
+.pxs_bg .pxs_bg2{
+	background-image:url(../images/bg2.png);
+}
+.pxs_bg .pxs_bg3{
+	background-image:url(../images/bg3.png);
+}
+</pre>
+<p>We will also set the left value of these divs dynamically. But we will come back to that later. Let’s take a look at the other elements’ style.</p>
+<p>The following wrapper will be invisible in the beginning:</p>
+<pre class="brush:css">.pxs_slider_wrapper{
+	display:none;
+}
+</pre>
+<p>It contains all the elements that we want to load in the beginning, so once loading is done, we will show the wrapper and all its content.</p>
+<p>Let’s reset the style for both lists:</p>
+<pre class="brush:css">.pxs_container ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+</pre>
+<p>The main idea for the slider list is that we make a really long list with all the li elements having a width of the whole window. So, what you see on screen of the slider is actually one whole li. We will set the width of the ul dynamically to be the window width times the number of images in the list. Making the li elements float left and the correct width of the ul will ensure that the li elements are lined up next to each other:</p>
+<pre class="brush:css">ul.pxs_slider{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:420px;
+}
+ul.pxs_slider li{
+	height:420px;
+	float:left;
+	position:relative;
+}
+</pre>
+<p>The slider image inside of the li will be centered horizontally by applying auto margins to the left and right:</p>
+<pre class="brush:css">ul.pxs_slider li img{
+	display:block;
+	margin:35px auto 0px auto;
+	-moz-box-shadow:0px 0px 7px #222;
+	-webkit-box-shadow:0px 0px 7px #222;
+	box-shadow:0px 0px 7px #222;
+	border: 8px solid transparent;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+</pre>
+<p>Adding a transparent border and a box shadow will create a glass like effect around the image.</p>
+<p>The thumbnails list will be positioned absolutely, too. We add a left of 50% because we want to center it, by dynamically setting its width and a negative left margin in the JavaScript:</p>
+<pre class="brush:css">ul.pxs_thumbnails{
+	height:35px;
+	position:absolute;
+	top:320px;
+	left:50%;
+}
+ul.pxs_thumbnails li{
+	position:absolute;
+	display:block;
+}
+</pre>
+<p>We’ll add a white border around the thumbnails and give them a slick box shadow:</p>
+<pre class="brush:css">ul.pxs_thumbnails li img{
+	border: 5px solid #FFFFFF;
+	-moz-box-shadow:1px 1px 7px #555;
+	-webkit-box-shadow:1px 1px 7px #555;
+	box-shadow:1px 1px 7px #555;
+	cursor:pointer;
+	display:block;
+	opacity:0.7;
+}
+</pre>
+<p>The current image’s thumbnails should be completely opaque:</p>
+<pre class="brush:css">ul.pxs_thumbnails li.selected img{
+	opacity:1.0;
+}
+</pre>
+<p>The common style of the two navigation spans is the following:</p>
+<pre class="brush:css">.pxs_navigation span{
+	position:absolute;
+	width:30px;
+	height:60px;
+	-moz-box-shadow:0px 0px 2px #000;
+	-webkit-box-shadow:0px 0px 2px #000;
+	box-shadow:0px 0px 2px #000;
+	top:145px;
+	opacity:0.6;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	cursor:pointer;
+}
+.pxs_navigation span:hover{
+	opacity:0.9;
+}
+</pre>
+<p>Let’s add an arrow to each navigation span:</p>
+<pre class="brush:css">.pxs_navigation span.pxs_prev{
+	background:#000 url(../images/prev.png) no-repeat center center;
+}
+.pxs_navigation span.pxs_next{
+	background:#000 url(../images/next.png) no-repeat center center;
+}
+</pre>
+<p>We will set the left (pxs_prev) and the right (pxs_next) value dynamically in order to stick to the left and right side of the image.</p>
+<p>And finally, we will style the loading element which will be centered:</p>
+<pre class="brush:css">.pxs_loading{
+	color:#fff;
+	font-size:20px;
+	padding:15px 15px 15px 50px;
+	position:absolute;
+	background:#333 url(../images/ajax-loader.gif) no-repeat 10px 50%;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	opacity:0.7;
+	width:180px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin-left:-90px;
+}
+</pre>
+<p>And that’s all the style! Now, let’s add some kick-ass jQuery!</p>
+<h3>The JavaScript</h3>
+<p>The main idea of this slider is to slide the images (obviously) and to animate the three backgrounds differently to create some perspective. So, when we, for example, slide to the next image, we will animate the left value of the slider ul to minus the window width (because that’s the width of one li). We will also animate the background div that is visually the top-most background, but the animation will only be half of the window width. The background behind that one will move one quarter of the window width and so on. So the background which is “more far” will move less, just what the parallax principle describes.</p>
+<p>We want to create a plugin out of this script, so we will initially define some options. We will start by caching the most important elements. </p>
+<pre class="brush:js">(function($) {
+	$.fn.parallaxSlider = function(options) {
+		var opts = $.extend({}, $.fn.parallaxSlider.defaults, options);
+		return this.each(function() {
+			var $pxs_container 	= $(this),
+			o 				= $.meta ? $.extend({}, opts, $pxs_container.data()) : opts;
+			
+			//the main slider
+			var $pxs_slider		= $('.pxs_slider',$pxs_container),
+			//the elements in the slider
+			$elems			= $pxs_slider.children(),
+			//total number of elements
+			total_elems		= $elems.length,
+			//the navigation buttons
+			$pxs_next		= $('.pxs_next',$pxs_container),
+			$pxs_prev		= $('.pxs_prev',$pxs_container),
+			//the bg images
+			$pxs_bg1		= $('.pxs_bg1',$pxs_container),
+			$pxs_bg2		= $('.pxs_bg2',$pxs_container),
+			$pxs_bg3		= $('.pxs_bg3',$pxs_container),
+			//current image
+			current			= 0,
+			//the thumbs container
+			$pxs_thumbnails = $('.pxs_thumbnails',$pxs_container),
+			//the thumbs
+			$thumbs			= $pxs_thumbnails.children(),
+			//the interval for the autoplay mode
+			slideshow,
+			//the loading image
+			$pxs_loading	= $('.pxs_loading',$pxs_container),
+			$pxs_slider_wrapper = $('.pxs_slider_wrapper',$pxs_container);
+				
+			//first, preload all the images
+			var loaded		= 0,
+			$images		= $pxs_slider_wrapper.find('img');
+				
+			$images.each(function(){
+				var $img	= $(this);
+				$('&lt;img/&gt;').load(function(){
+					++loaded;
+					if(loaded	== total_elems*2){
+						$pxs_loading.hide();
+						$pxs_slider_wrapper.show();
+							
+						//width of an image
+						//(assuming all images have the same sizes)
+						var one_image_w		= $pxs_slider.find('img:first').width();
+				
+						/*
+						set the width of the slider,
+						of each one of its elements, and of the
+						navigation buttons
+						 */
+						setWidths($pxs_slider,
+						$elems,
+						total_elems,
+						$pxs_bg1,
+						$pxs_bg2,
+						$pxs_bg3,
+						one_image_w,
+						$pxs_next,
+						$pxs_prev);
+				
+						/*
+						set the widths of the thumbs
+						and spread them evenly
+						 */
+						$pxs_thumbnails.css({
+							'width'			: one_image_w + 'px',
+							'margin-left' 	: -one_image_w/2 + 'px'
+						});
+						var spaces	= one_image_w/(total_elems+1);
+						$thumbs.each(function(i){
+							var $this 	= $(this);
+							var left	= spaces*(i+1) - $this.width()/2;
+							$this.css('left',left+'px');
+								
+							if(o.thumbRotation){
+								var angle 	= Math.floor(Math.random()*41)-20;
+								$this.css({
+									'-moz-transform'	: 'rotate('+ angle +'deg)',
+									'-webkit-transform'	: 'rotate('+ angle +'deg)',
+									'transform'			: 'rotate('+ angle +'deg)'
+								});
+							}
+							//hovering the thumbs animates them up and down
+							$this.bind('mouseenter',function(){
+								$(this).stop().animate({top:'-10px'},100);
+							}).bind('mouseleave',function(){
+								$(this).stop().animate({top:'0px'},100);
+							});
+						});
+							
+						//make the first thumb to be selected
+						highlight($thumbs.eq(0));
+							
+						//slide, when clicking the navigation buttons
+						$pxs_next.bind('click',function(){
+							++current;
+							if(current &gt;= total_elems)
+								if(o.circular)
+									current = 0;
+							else{
+								--current;
+								return false;
+							}
+							highlight($thumbs.eq(current));
+							slide(current,
+							$pxs_slider,
+							$pxs_bg3,
+							$pxs_bg2,
+							$pxs_bg1,
+							o.speed,
+							o.easing,
+							o.easingBg);
+						});
+						$pxs_prev.bind('click',function(){
+							--current;
+							if(current &lt; 0)
+								if(o.circular)
+									current = total_elems - 1;
+							else{
+								++current;
+								return false;
+							}
+							highlight($thumbs.eq(current));
+							slide(current,
+							$pxs_slider,
+							$pxs_bg3,
+							$pxs_bg2,
+							$pxs_bg1,
+							o.speed,
+							o.easing,
+							o.easingBg);
+						});
+				
+						/*
+						clicking a thumb will slide to the respective image
+						 */
+						$thumbs.bind('click',function(){
+							var $thumb	= $(this);
+							highlight($thumb);
+							//if autoplay interrupt when user clicks
+							if(o.auto)
+								clearInterval(slideshow);
+							current 	= $thumb.index();
+							slide(current,
+							$pxs_slider,
+							$pxs_bg3,
+							$pxs_bg2,
+							$pxs_bg1,
+							o.speed,
+							o.easing,
+							o.easingBg);
+						});
+				
+					
+				
+						/*
+						activate the autoplay mode if
+						that option was specified
+						 */
+						if(o.auto != 0){
+							o.circular	= true;
+							slideshow	= setInterval(function(){
+								$pxs_next.trigger('click');
+							},o.auto);
+						}
+				
+						/*
+						when resizing the window,
+						we need to recalculate the widths of the
+						slider elements, based on the new window width;
+						we need to slide again to the current one,
+						since the left of the slider is no longer correct
+						 */
+						$(window).resize(function(){
+							w_w	= $(window).width();
+							setWidths(
+								$pxs_slider,
+								$elems,
+								total_elems,
+								$pxs_bg1,
+								$pxs_bg2,
+								$pxs_bg3,
+								one_image_w,
+								$pxs_next,
+								$pxs_prev
+								);
+							slide(
+								current,
+								$pxs_slider,
+								$pxs_bg3,
+								$pxs_bg2,
+								$pxs_bg1,
+								1,
+								o.easing,
+								o.easingBg
+								);
+						});
+
+					}
+				}).error(function(){
+					alert('here')
+				}).attr('src',$img.attr('src'));
+			});				
+		});
+	};
+	
+	//the current window width
+	var w_w				= $(window).width();
+	
+	var slide			= function(current,
+	$pxs_slider,
+	$pxs_bg3,
+	$pxs_bg2,
+	$pxs_bg1,
+	speed,
+	easing,
+	easingBg){
+		var slide_to	= parseInt(-w_w * current);
+		$pxs_slider.stop().animate({
+			left	: slide_to + 'px'
+		},speed, easing);
+		$pxs_bg3.stop().animate({
+			left	: slide_to/2 + 'px'
+		},speed, easingBg);
+		$pxs_bg2.stop().animate({
+			left	: slide_to/4 + 'px'
+		},speed, easingBg);
+		$pxs_bg1.stop().animate({
+			left	: slide_to/8 + 'px'
+		},speed, easingBg);
+	}
+	
+	var highlight		= function($elem){
+		$elem.siblings().removeClass('selected');
+		$elem.addClass('selected');
+	}
+	
+	var setWidths		= function($pxs_slider,
+	$elems,
+	total_elems,
+	$pxs_bg1,
+	$pxs_bg2,
+	$pxs_bg3,
+	one_image_w,
+	$pxs_next,
+	$pxs_prev){
+		/*
+		the width of the slider is the window width
+		times the total number of elements in the slider
+		 */
+		var pxs_slider_w	= w_w * total_elems;
+		$pxs_slider.width(pxs_slider_w + 'px');
+		//each element will have a width = windows width
+		$elems.width(w_w + 'px');
+		/*
+		we also set the width of each bg image div.
+		The value is the same calculated for the pxs_slider
+		 */
+		$pxs_bg1.width(pxs_slider_w + 'px');
+		$pxs_bg2.width(pxs_slider_w + 'px');
+		$pxs_bg3.width(pxs_slider_w + 'px');
+		
+		/*
+		both, the right and left of the
+		navigation next and previous buttons will be:
+		windowWidth/2 - imgWidth/2 + some margin 
+		(not to touch the image borders)
+		 */
+		var position_nav	= w_w/2 - one_image_w/2 + 3;
+		$pxs_next.css('right', position_nav + 'px');
+		$pxs_prev.css('left', position_nav + 'px');
+	}
+	
+	$.fn.parallaxSlider.defaults = {
+		auto			: 0,
+		speed			: 1000,
+		easing			: 'jswing', 
+		easingBg		: 'jswing', 
+		circular		: true, 
+		thumbRotation	: true 
+	};
+	//easeInOutExpo,easeInBack
+})(jQuery);
+</pre>
+<p>We also add the following script to initiate our slider:</p>
+<pre class="brush:js">$(function() {
+	var $pxs_container	= $('#pxs_container');
+	$pxs_container.parallaxSlider();
+});
+</pre>
+<p>The options for the slider are the following:</p>
+<ul>
+<li>auto: How many seconds to periodically slide the content. If set to 0 then autoplay is turned off.</li>
+<li>speed: Speed of each slide animation</li>
+<li>easing: Easing effect for the slide animation</li>
+<li>easingBg: Easing effect for the background animation</li>
+<li>circular: Circular slider</li>
+<li>thumbRotation: The thumbs will be randomly rotated</li>
+</ul>
+<p>And that’s all! We hope you enjoyed the tutorial and find it useful!</p>
+<p><a class="demo" href="http://tympanus.net/Tutorials/ParallaxSlider/" target="_blank">View demo</a><a class="download" href="http://tympanus.net/Tutorials/ParallaxSlider/ParallaxSlider.zip">Download source</a></p>
+<div class="googlead"><!-- wp_ad_camp_1 --></div>
+								
+																	<div class="ct-post-nav">
+										<div class="ct-post-prev">        
+											<strong>Previous:</strong><br> <a href="http://tympanus.net/codrops/2010/12/27/portfolio-zoom-slider/" rel="prev">Portfolio Zoom Slider with jQuery</a>  
+										</div>
+										<div class="ct-post-next">
+											<strong>Next:</strong><br> <a href="http://tympanus.net/codrops/2011/01/03/collective-form-cloning-jquery-plugin/" rel="next">Collective: Form cloning jQuery plugin</a>  
+										</div>
+										<div class="clr"></div>
+									</div> <!-- ct-post-nav -->
+																
+							</div>
+						</article>
+						<p class="ct-tags">
+							Tagged with: <a href="http://tympanus.net/codrops/tag/jquery/" rel="tag">jQuery</a> <a href="http://tympanus.net/codrops/tag/parallax/" rel="tag">parallax</a> <a href="http://tympanus.net/codrops/tag/rotation/" rel="tag">rotation</a> <a href="http://tympanus.net/codrops/tag/slider/" rel="tag">slider</a> <a href="http://tympanus.net/codrops/tag/slideshow/" rel="tag">slideshow</a>						</p>
+						<div class="clr"></div>
+					</div>
+
+											<div class="ct-row">
+							<div class="ct-author-info ct-box">
+								<div class="ct-author-avatar">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/1b17d4931f914ee75c7f5e5dc7b17734" class="avatar avatar-80 photo" height="80" width="80">								</div>
+								<div class="ct-author-page-desc">
+									<h4><a href="http://tympanus.net/codrops/author/crnacura/" title="Posts by Mary Lou" rel="author">Mary Lou</a></h4>
+									<p>
+										Mary Lou (Manoela Ilic) is a freelance web designer and developer with a passion for interaction design. She studied Cognitive Science and Computational Logic and has a weakness for the smell of freshly ground peppercorns.									</p>
+									<p class="ct-author-page-url"><strong>View all contributions by <a href="http://tympanus.net/codrops/author/crnacura/" title="Posts by Mary Lou" rel="author">Mary Lou</a></strong></p>
+																		<p class="ct-author-page-url">
+										<strong>Website: </strong>
+										<a href="http://tympanus.net/" target="_blank">http://tympanus.net/</a>
+									</p>
+									<div>
+										<ul class="ct-social-profiles">
+											<li><strong>Social Links: </strong></li>
+																																		<li><a class="ct-social-twitter" href="http://twitter.com/crnacura">http://twitter.com/crnacura<span>Manoela on Twitter</span></a></li>
+																																		<li><a class="ct-social-gplus" href="https://plus.google.com/u/0/113366454254432649763/?rel=author">https://plus.google.com/u/0/113366454254432649763/<span>Manoela on Google Plus</span></a></li>
+																																		<li><a class="ct-social-dribbble" href="http://dribbble.com/crnacura">http://dribbble.com/crnacura<span>Manoela on Dribbble</span></a></li>
+																																		<li><a class="ct-social-facebook" href="http://www.facebook.com/manoela.ilic">http://www.facebook.com/manoela.ilic<span>Manoela on Facebook</span></a></li>
+																																		<li><a class="ct-social-forrst" href="http://forrst.com/people/codrops">http://forrst.com/people/codrops<span>Manoela on Forrst</span></a></li>
+																																													<li><a class="ct-social-linkedin" href="http://www.linkedin.com/in/manoela">http://www.linkedin.com/in/manoela<span>Manoela on LinkedIn</span></a></li>
+																																																																														<li><a class="ct-social-zerply" href="http://zerply.com/crnacura">http://zerply.com/crnacura<span>Manoela on Zerply</span></a></li>
+																					</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+
+						<h2 class="ct-letterpress">Related Articles</h2>
+						<div class="ct-related-post ct-row-float cf">
+							
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/01/15/3d-image-gallery-room/">
+												<img width="300" height="162" src="./Parallax Slider with jQuery   Codrops_files/3DGalleryRoom-300x162.jpg" class="attachment-medium wp-post-image" alt="3D Gallery Room">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/01/15/3d-image-gallery-room/">3D Image Gallery Room</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/07/03/interactive-particles-slideshow/">
+												<img width="300" height="162" src="./Parallax Slider with jQuery   Codrops_files/InteractiveParticlesSlideshow-300x162.png" class="attachment-medium wp-post-image" alt="InteractiveParticlesSlideshow">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/07/03/interactive-particles-slideshow/">Interactive Particles Slideshow</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/04/23/fullscreen-layout-with-page-transitions/">
+												<img width="300" height="162" src="./Parallax Slider with jQuery   Codrops_files/FullscreenLayoutPageTransitions-300x162.jpg" class="attachment-medium wp-post-image" alt="FullscreenLayoutPageTransitions">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/04/23/fullscreen-layout-with-page-transitions/">Fullscreen Layout with Page Transitions</a></h3>
+									</div>
+												
+														</div>
+
+						
+										<div class="ct-row-wrapper">
+						<div class="ct-row">
+							
+<div class="ct-sharing ct-box">
+	<h4>Stay connected with us:</h4>
+	<div class="ct-link-list">
+		<a href="http://feeds2.feedburner.com/tympanus" class="ct-link-list-rss">Grab the <strong>RSS Feed</strong></a>
+		<a href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US" class="ct-link-list-mail">Get <strong>email updates</strong></a>
+		<a href="http://www.twitter.com/codrops" class="ct-link-list-twitter">Follow us on <strong>Twitter</strong></a>
+		<a href="http://www.facebook.com/pages/Codrops/159107397912" class="ct-link-list-fb">Join us on <strong>Facebook</strong></a>
+		<a href="https://plus.google.com/101095823814290637419/?prsrc=3" class="ct-link-list-gplus">Add us on <strong>Google+</strong></a>
+	</div>
+</div>
+							<div class="ct-bottom-ads ct-box">
+								<span class="ct-small-text">Advertisement</span>
+								<!-- BSA Zone Code -->
+								<div id="bsap_1248599" class="bsap_1248599 bsap"><a href="http://stats.buysellads.com/click.go?z=1248599&b=1248692&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.998691079672426&link=http://www.foxyhare.com" onmouseover="window.status = &#39;http://www.foxyhare.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Foxyhare Hosting Services" id="bsa_1248692" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/57016-1302600028.gif" width="125" height="125" alt="Foxyhare Hosting Services"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=1474716&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.30764886271208525&link=http://bit.ly/getfoobar" onmouseover="window.status = &#39;http://bit.ly/getfoobar&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="jQuery Notification Bar Plugin" id="bsa_1474716" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/74474-1314892081.png" width="125" height="125" alt="jQuery Notification Bar Plugin"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=4746180&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.17814733530394733&link=http://www.digicrafts.com.hk/components/JSPolaroidGallery?utm_source=tympanus.net&utm_medium=display&utm_content=banner&utm_campaign=" onmouseover="window.status = &#39;http://www.digicrafts.com.hk/components/JSPolaroidGallery?utm_source=tympanus.net&amp;utm_medium=display&amp;utm_content=banner&amp;utm_campaign=&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="Polaroid Gallery jQuery Plug-ins" id="bsa_4746180" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/222079-1399780121.jpg" width="125" height="125" alt="Polaroid Gallery jQuery Plug-ins"></a></div>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</div>
+					
+						<section id="comments" class="ct-comments">
+	
+		
+			<div class="ct-commenttitle ct-cf">
+			<h2 id="comments-title">
+				<span>Feedback</span>
+				<sup>93</sup>
+			</h2>
+						<span class="ct-closed-right">Comments are closed.</span>
+					</div>
+		
+				<nav class="ct-commentnav">
+			<a class="prev page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-4/#comments">« Previous</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-1/#comments">1</a>
+<span class="page-numbers dots">…</span>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-3/#comments">3</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-4/#comments">4</a>
+<span class="page-numbers current">5</span> 
+		</nav>
+		
+		<ol class="ct-commentlist">
+							<li class="comment even thread-even depth-1" id="li-comment-339188">
+					<article id="comment-339188" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/05eade5b8c5993cf0680a71deabe662c" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Sean T</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-339188" class="ct-commenttime"><time pubdate="" datetime="2011-12-20T12:13:40+00:00">December 20, 2011 at 12:13</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">1</div>
+												<div class="ct-commentcontent">
+														<p>Hi Mary Lou,</p>
+<p>This is awesome, really great effect, thanks for sharing!</p>
+<p>I am looking at integrating this into sites and was wondering is there is a quick and easy way to switch off the thumbnails?</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-340180">
+					<article id="comment-340180" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/991b05f8df84019056a267a9cfde6779" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">mahimahi</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-340180" class="ct-commenttime"><time pubdate="" datetime="2011-12-20T22:01:21+00:00">December 20, 2011 at 22:01</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">2</div>
+												<div class="ct-commentcontent">
+														<p>hi! this is so great and i really want to use it but everytime i try to put it on my site, whenever i open the window i get a dialogue box that says “here” and then doesn’t load the images…</p>
+<p>it just keeps loading -_- it’s quite frustrating because i just want to get it to work. any thoughts?</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-345497">
+					<article id="comment-345497" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/53f7e24dd4f84b7d83e14d176ee91b0a" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Bob Gregor</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-345497" class="ct-commenttime"><time pubdate="" datetime="2011-12-23T05:40:44+00:00">December 23, 2011 at 05:40</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">3</div>
+												<div class="ct-commentcontent">
+														<p>Thank you for the AWESOME tutorial. I have improved on the jQuery plugin and made a public repo on github:<br>
+<a href="http://circletr.ee/c" rel="nofollow">http://circletr.ee/c</a></p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-385445">
+					<article id="comment-385445" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/80adf6c21ebf3ec1283434af5ca3a980" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">saber</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-385445" class="ct-commenttime"><time pubdate="" datetime="2012-01-09T16:23:14+00:00">January 9, 2012 at 16:23</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">4</div>
+												<div class="ct-commentcontent">
+														<p>hi thankyou for jquery can i use in commercial i want to create software and sell it  and this jquery can hel me ?</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-392886">
+					<article id="comment-392886" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/f8ded8f2fcf04e37350a643fe7963bd7" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">ow</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-392886" class="ct-commenttime"><time pubdate="" datetime="2012-01-12T20:49:52+00:00">January 12, 2012 at 20:49</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">5</div>
+												<div class="ct-commentcontent">
+														<p>Is there a way when the slide reaches the end it scrolls to the right instead of going back to left to get to the first image?</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-392936">
+					<article id="comment-392936" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/86dbd55f8f1edf0a32934bbc966cae1b" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Fabrizio</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-392936" class="ct-commenttime"><time pubdate="" datetime="2012-01-12T21:14:26+00:00">January 12, 2012 at 21:14</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">6</div>
+												<div class="ct-commentcontent">
+														<p>Hello Congratulation<br>
+It is a very very amazing script and tutorial.</p>
+<p>But I have a question :</p>
+<p>Is it normal that when I change the number of automatic parameter (autoplay), the animation comes to run very slowly like a bug?</p>
+<p>Is anyone know the solution to run this slider in autoplay ?</p>
+<p>I changed auto:0 in auto:3 but …</p>
+<p>Thank you</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-395422">
+					<article id="comment-395422" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/f8ded8f2fcf04e37350a643fe7963bd7" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">ow</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-395422" class="ct-commenttime"><time pubdate="" datetime="2012-01-13T21:20:21+00:00">January 13, 2012 at 21:20</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">7</div>
+												<div class="ct-commentcontent">
+														<p>Fabrizio try auto:5100</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-395685">
+					<article id="comment-395685" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/86dbd55f8f1edf0a32934bbc966cae1b" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Fabrizio</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-395685" class="ct-commenttime"><time pubdate="" datetime="2012-01-14T00:22:25+00:00">January 14, 2012 at 00:22</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">8</div>
+												<div class="ct-commentcontent">
+														<p>Thank you very much.</p>
+<p>It is the solution !</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-398328">
+					<article id="comment-398328" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/60f58f54d9b536fb980f9813c1d99ebf" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Joseph Buarao</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-398328" class="ct-commenttime"><time pubdate="" datetime="2012-01-15T07:45:26+00:00">January 15, 2012 at 07:45</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">9</div>
+												<div class="ct-commentcontent">
+														<p>Hi,</p>
+<p>can i use this to my premium template? btw, I got a problem in ie7..</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-409469">
+					<article id="comment-409469" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/b8064f264e787f11cf3c2d5d8eed9444" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Kyle Lanning</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-409469" class="ct-commenttime"><time pubdate="" datetime="2012-01-20T19:13:37+00:00">January 20, 2012 at 19:13</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">10</div>
+												<div class="ct-commentcontent">
+														<p>Awesome slider! Here’s how it looks on our Orchard ASP.net platform site.<br>
+We temporally disabled the some of background images as we’re designing them.<br>
+<a href="http://www.tktlc.com/" rel="nofollow">http://www.tktlc.com</a></p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-414887">
+					<article id="comment-414887" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Parallax Slider with jQuery   Codrops_files/f385d2811d77945da139bbe7d07a440f" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Idus</span> <a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-5/#comment-414887" class="ct-commenttime"><time pubdate="" datetime="2012-01-26T13:12:27+00:00">January 26, 2012 at 13:12</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">11</div>
+												<div class="ct-commentcontent">
+														<p>What a great tutorial and I liked to make  a website of this instead of a ‘gallery’. Coul you help me with how I can use  ‘div’ container instead of images with this tutorial? </p>
+<p>Thanks<br>
+idus</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+		</ol>
+		<p class="ct-small-text fright">
+						<span class="ct-closed-right">Comments are closed.</span>
+					</p>
+				<nav class="ct-commentnav">
+			 <a class="prev page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-4/#comments">« Previous</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-1/#comments">1</a>
+<span class="page-numbers dots">…</span>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-3/#comments">3</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/01/03/parallax-slider/comment-page-4/#comments">4</a>
+<span class="page-numbers current">5</span> 
+		</nav>
+				
+
+
+		<div class="ct-comment-form">	
+						<div class="clr"></div>
+	</div>
+
+</section><!-- #comments -->
+				</div>
+				<aside class="ct-sidebar">		
+	<div class="ct-ads">
+		<div class="ct-ads-info">
+			<h4>Advertisement</h4>
+			<a href="http://tympanus.net/codrops/advertise/" class="ct-advertise-here">
+				<i class="ct-icon-info"></i>
+				<span>Advertise Here</span>
+			</a>
+		</div>
+		<div id="bsap_1275127" class="bsap_1275127 bsap"><a href="http://stats.buysellads.com/click.go?z=1275127&b=4626647&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.607404290465638&link=http://www.animatron.com" onmouseover="window.status = &#39;http://www.animatron.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="HTML5 Animation Made Easy" id="bsa_4626647" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/218809-1397859143.jpg" width="300" height="250" alt="HTML5 Animation Made Easy"></a><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/17086/zone/1275127?utm_source=site_17086&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1275127">advertise here</a></div></div>
+		<div id="bsap_1243201" class="bsap_1243201 bsap"><a href="http://stats.buysellads.com/click.go?z=1243201&b=4739583&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.40812217560596764&link=http://themeforest.net/item/mx-responsive-multipurpose-wordpress-theme/6601113?ref=ThemeFocus" onmouseover="window.status = &#39;http://themeforest.net/item/mx-responsive-multipurpose-wordpress-theme/6601113?ref=ThemeFocus&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="2014 The Powerful WordPress Theme - MX - Retina Responsive Multi-Purpose Theme" id="bsa_4739583" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/205210-1389848050.jpg" width="125" height="125" alt="2014 The Powerful WordPress Theme - MX - Retina Responsive Multi-Purpose Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=2449843&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8044793573208153&link=http://www.elegantthemes.com/gallery/divi/" onmouseover="window.status = &#39;http://www.elegantthemes.com/gallery/divi/&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Premium WordPress Themes" id="bsa_2449843" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/200737-1386792759.jpg" width="125" height="125" alt="Premium WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3821743&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.4943382570054382&link=http://www.gojs.net/latest/index.html?utm_source=codrops&utm_medium=m125x125&utm_term=canvas&utm_content=euler-overlay&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=codrops&amp;utm_medium=m125x125&amp;utm_term=canvas&amp;utm_content=euler-overlay&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="This is the GoJS Euler Diagram sample." id="bsa_3821743" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/184537-1377106984.png" width="125" height="125" alt="This is the GoJS Euler Diagram sample."></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=562176&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.615806623827666&link=http://www.dreamtemplate.com/?ref=bsa" onmouseover="window.status = &#39;http://www.dreamtemplate.com/?ref=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="Premium Website Templates &amp; WordPress Themes" id="bsa_562176" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/178447-1373139325.gif" width="125" height="125" alt="Premium Website Templates &amp; WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4349855&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.3461848055012524&link=http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco" onmouseover="window.status = &#39;http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="X WordPress Theme" id="bsa_4349855" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/208038-1391789985.png" width="125" height="125" alt="X WordPress Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=1699101&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.2077755096834153&link=https://www.billgrid.com/index?a=codrops" onmouseover="window.status = &#39;https://www.billgrid.com/index?a=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad6 even" title="Online quote, invoice and expense and time management - BillGrid.com" id="bsa_1699101" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/82233-1320521466.jpg" width="125" height="125" alt="Online quote, invoice and expense and time management - BillGrid.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3198884&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.31122029293328524&link=http://bloggingexperiment.com/best-wordpress-themes" onmouseover="window.status = &#39;http://bloggingexperiment.com/best-wordpress-themes&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad7 odd" title="Best WordPress Themes" id="bsa_3198884" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/207298-1391377208.png" width="125" height="125" alt="Best WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3361297&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.837119037983939&link=https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&utm_medium=banner&utm_campaign=responsive" onmouseover="window.status = &#39;https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&amp;utm_medium=banner&amp;utm_campaign=responsive&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad8 even" title="PSD2HTML.com" id="bsa_3361297" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/205745-1390225509.png" width="125" height="125" alt="PSD2HTML.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4367289&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.4480024389922619&link=http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&utm_medium=display&utm_content=codrops125v1&utm_campaign=codrops" onmouseover="window.status = &#39;http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&amp;utm_medium=display&amp;utm_content=codrops125v1&amp;utm_campaign=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad9 odd" title="Bizness Apps - Take Your Clients Mobile!" id="bsa_4367289" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/208529-1392144430.jpg" width="125" height="125" alt="Bizness Apps - Take Your Clients Mobile!"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4531388&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.3604066784027964&link=http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart" onmouseover="window.status = &#39;http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad10 even" title="Klaus - Retina Multi-Purpose WordPress Theme" id="bsa_4531388" target="_blank"><img src="./Parallax Slider with jQuery   Codrops_files/214046-1395474464.png" width="125" height="125" alt="Klaus - Retina Multi-Purpose WordPress Theme"></a></div>
+		<div class="clr"></div>
+	</div>
+		
+	<div class="ct-widget-wrapper">
+									<div class="ct-widget ct-widget-coll">
+					<h5>Latest News:</h5>
+					                <article id="post-19024" class="post-19024 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-115/" class="">Collective #115</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-115/" class="ct-trans">
+                            <img width="75" height="105" src="./Parallax Slider with jQuery   Codrops_files/Collective_115.png" class="attachment-thumbnail wp-post-image" alt="Collective 115">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       WebComponents.org * Make a Bubble Map * Quill * rangeslider.js * Physical Typography * Beginner's Guide to Node.js...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-115/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18975" class="post-18975 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-114/" class="">Collective #114</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-114/" class="ct-trans">
+                            <img width="75" height="105" src="./Parallax Slider with jQuery   Codrops_files/Collective114.png" class="attachment-thumbnail wp-post-image" alt="Collective114">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       CSS Shapes 101 * Web Fundamentals * Velocity.js * GestureKit * Panoramic * Codassium...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-114/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+            				</div>
+									<div class="clr"></div>
+			
+		
+		<div class="ct-widget ct-widget-default">
+			<h5>Hot on Codrops:</h5>
+			                <article id="post-18828" class="post-18828 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-button tag-circular tag-progress tag-svg">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="ct-trans">
+                            <img width="105" height="105" src="./Parallax Slider with jQuery   Codrops_files/AnimatedProgressButton-105x105.jpg" class="attachment-thumbnail wp-post-image" alt="AnimatedProgressButton">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="">How to Create a Circular Progress Button</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18780" class="post-18780 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-form tag-transition tag-ui">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="ct-trans">
+                            <img width="105" height="105" src="./Parallax Slider with jQuery   Codrops_files/minimalform1-105x105.png" class="attachment-thumbnail wp-post-image" alt="minimalform">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="">Minimal Form Interface</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18632" class="post-18632 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-animation tag-inspiration tag-slideshow">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="ct-trans">
+                            <img width="105" height="105" src="./Parallax Slider with jQuery   Codrops_files/ItemTransitions1-105x105.png" class="attachment-thumbnail wp-post-image" alt="ItemTransitions">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="">Inspiration for Item Transitions</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+            					</div>
+		
+		<div class="ct-widget" id="md-widget">
+			<h5>From Mightydeals</h5>
+			<div>
+				<script type="text/javascript">
+					(function() {
+					  var url = 'http://www.mightydeals.com/widgets/large?width=280&ref=codropswidget';
+					  document.write('<div id="md-large-widget"></div>');
+					  var s = document.createElement('script'), s1 = document.getElementsByTagName('script')[0];
+					  s.type = 'text/javascript';
+					  s.async = true;
+					  s.src = url;
+					  s1.parentNode.insertBefore(s, s1);
+					})();
+				</script><div id="md-large-widget"><style type="text/css"> #md-large-widget-content{ display:inline-block; font-family:Arial; text-align:left;} .md-wg-deal-image {width:100%; margin-bottom: 5px;}  .md-wg-timer-block { font-size: 11px; color:#727a80; margin-top: 5px;}  .mdWidgetDigit {margin-right: 1px; display:inline-block;}  .mdWidgetWord {margin-right: 5px; display:inline-block;}  .md-wg-deal-link {font-weight: bold; font-size:15px; color:#57207c; text-decoration: none; line-height: 17px;} .md-wg-deal-link:hover {color:#f05028;}</style><div id="md-large-widget-content" style="width:280px;"><a href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget" class="">		<img alt="" class="md-wg-deal-image" style="width:280px;" src="./Parallax Slider with jQuery   Codrops_files/csshero.jpg"></a><a class="md-wg-deal-link" href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget">	<span>Easily Customize WordPress Themes with No Code - only $14!</span></a><div id="md-wg-timer-block" class="md-wg-timer-block">Ends:	<span id="md-wg-time-left-label" class="md-wg-time-left-label"><span class="mdWidgetDigit">7</span><span class="mdWidgetWord">days</span><span class="mdWidgetDigit">15</span><span class="mdWidgetWord">hours</span><span class="mdWidgetDigit">31</span><span class="mdWidgetWord">min</span><span class="mdWidgetDigit">41</span><span class="mdWidgetWord">sec</span></span></div></div></div>		
+			</div>
+		</div>
+	</div>
+
+    		
+    	<div class="clr"></div>
+</aside>
+
+				<div class="clr"></div>
+				<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/plusone.js" gapi_processed="true"></script>
+			    </div>
+</div>
+		<footer class="ct-footer">
+			
+			<div class="ct-inner ct-cf">
+				<nav class="ct-cf">
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+						<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+						<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+						<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+						<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/news/">News</a></li>
+						<li><a href="http://tympanus.net/codrops/category/giveaways/">Giveaways</a></li>
+						<li><a href="http://tympanus.net/codrops/category/freebies/">Freebies</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/about/">About</a></li>
+						<li><a href="http://tympanus.net/codrops/contact/">Contact</a></li>
+						<li><a href="http://tympanus.net/codrops/archives/">Archives</a></li>
+						<li><a href="http://tympanus.net/codrops/deals/">Deals</a></li>
+						<li><a href="http://tympanus.net/codrops/advertise/">Advertise</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="http://tympanus.net/codrops/licensing/">License</a></li>
+						<li><a href="http://tympanus.net/codrops/credits/">Credits</a></li>
+						<li><a href="http://tympanus.net/codrops/impressum/">Impressum</a></li>
+					</ul>
+				</nav>
+				<div class="ct-items ct-cf">
+					<div class="ct-item ct-copyright">
+						<span>© Codrops 2014 by</span> 
+						<a href="http://tympanus.net/" title="Tympanus">Tympanus</a>
+					</div>
+					<div class="ct-item ct-cdn">
+						<span>Content delivered by</span>
+						<a href="http://tracking.maxcdn.com/c/24359/3968/378" title="Content Distribution Network" target="blank">Content Distribution Network</a>
+						<img height="1" width="1" src="./Parallax Slider with jQuery   Codrops_files/378">
+					</div>	
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="./Parallax Slider with jQuery   Codrops_files/comment-reply.min.js"></script>
+		</div><!--ct-container-->
+	
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+Content Delivery Network via codropspz.tympanus.netdna-cdn.com
+
+ Served from: tympanus.net @ 2014-05-13 13:52:30 by W3 Total Cache --></body></html>

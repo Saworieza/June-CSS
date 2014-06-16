@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://www.html5rocks.com/en/mobile/responsivedesign/ -->
+<html lang="en" dir="ltr" itemscope="" itemtype="http://schema.org/Article" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths adownload webaudio no-battery blobconstructor contenteditable cors csscalc cssfilters mediaqueries no-regions classlist datalistelem details texttrackapi track filereader filesystem fullscreen getusermedia gamepads xhr2 quotamanagement performance raf no-stylescoped websocketsbinary no-webintents todataurljpeg todataurlwebp webp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta property="twitter:account_id" content="1593210261">
+  <!-- Copyright (c) 2012 Google Inc.
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *     http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *
+   * Author: Brad Frost - brad@bradfrostweb.com
+   *
+   * 
+   *
+  -->
+  <title>Creating a Mobile-First Responsive Web Design - HTML5 Rocks</title>
+  <meta name="description" content="Responsive web design gives web creators some tools for making layouts that respond to any screen size. This article uses fluid grids, flexible images and media queries to get the layout looking great regardless of the size of the device&#39;s screen dimensions.">
+  <meta name="keywords" content="html5,html 5,html5 demos,html5 examples,javascript,css3,notifications,geolocation,web workers,apppcache,file api,filereader,indexeddb,offline,audio,video,drag and drop,chrome,sse,mobile">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <link rel="shortcut icon" href="http://www.html5rocks.com/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="HTML5 Rocks RSS" href="http://feeds.feedburner.com/html5rocks">
+
+  <meta itemprop="name" content="Creating a Mobile-First Responsive Web Design - HTML5 Rocks">
+  <meta itemprop="description" content="Responsive web design gives web creators some tools for making layouts that respond to any screen size. This article uses fluid grids, flexible images and media queries to get the layout looking great regardless of the size of the device&#39;s screen dimensions.">
+  
+  <meta itemprop="image" content="http://www.html5rocks.com/static/images/html5rocks-logo-wings.png">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ChromiumDev">
+  <meta name="twitter:creator" content="@brad_frost">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Creating a Mobile-First Responsive Web Design - HTML5 Rocks">
+  <meta property="og:url" content="http://www.html5rocks.com/en/mobile/responsivedesign/">
+  <meta property="og:description" content="Responsive web design gives web creators some tools for making layouts that respond to any screen size. This article uses fluid grids, flexible images and media queries to get the layout looking great regardless of the size of the device&#39;s screen dimensions.">
+  <meta property="og:image" content="http://www.html5rocks.com/static/images/profiles/bradfrost.png">
+  <meta property="og:site_name" content="HTML5 Rocks - A resource for open web HTML5 developers">
+  
+
+  
+  <link rel="author" href="https://www.google.com/profiles/103751101313992876152">
+  
+  
+  <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
+
+  
+
+  
+    
+    <link rel="stylesheet" media="all" href="http://www.html5rocks.com/static/css/v2-combined.min.css?20131111">
+    
+
+    
+  
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800|Source+Code+Pro" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="http://www.html5rocks.com/static/images/identity/HTML5_Badge_64.png">
+  <link rel="apple-touch-icon-precomposed" href="http://www.html5rocks.com/static/images/identity/HTML5_Badge_64.png">
+
+  <script type="text/javascript" src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/count.js" async=""></script><script type="text/javascript" async="" src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/ga.js"></script><script src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/modernizr.custom.82437.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5-els.js"></script>
+  <![endif]-->
+
+  
+
+<script async="" src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/count-data.js"></script></head>
+<body data-href="mobile-responsivedesign" onload="" class="article tutorial">
+
+  <header class="main" id="siteheader">
+    <h1 id="title">
+      <a href="http://www.html5rocks.com/en/" title="HTML5 Rocks">HTML5 Rocks</a>
+    </h1>
+    <a href="http://www.html5rocks.com/en/mobile/responsivedesign/#sitenav" id="navtoggle">Show navigation</a>
+
+    
+    <a id="toctoggle" href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc">Table of Contents</a>
+    
+
+    <nav id="sitenav">
+      <ul>
+        
+        <li id="home_menu"><a href="http://www.html5rocks.com/en/" class="home">Home</a></li>
+        
+        <li id="tutorials_menu"><a href="http://www.html5rocks.com/en/tutorials/?page=1" class="tutorials">Tutorials</a></li>
+        <li id="updates_menu"><a href="http://www.html5rocks.com/en/updates/" class="updates">Updates</a></li>
+        <li id="contrib_menu"><a href="https://github.com/html5rocks/www.html5rocks.com/blob/master/CONTRIBUTING.md" target="_blank">Contribute</a></li>
+        <li id="slides_menu"><a href="http://www.html5rocks.com/en/slides" class="slides">Slides</a></li>
+        <li id="resources_menu"><a href="http://www.html5rocks.com/en/resources" class="resources">Resources</a></li>
+      </ul>
+    </nav>
+
+    
+    <nav class="toc" id="toc">
+      <h1>Table of Contents</h1>
+
+      <ul><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-introduction">Introduction</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-theneed">The Need for Adaptivity</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-theneed">What We're Making: The Humble Product Detail Page</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-structure">Structure</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-style">Style</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-behavior">Behavior</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-nextsteps">Next Steps</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-wrappingup">Wrapping Up</a></li></ul>
+
+      <h1 class="visible-title">Localizations:</h1>
+      <ul>
+        
+          <li><a href="https://github.com/html5rocks/www.html5rocks.com/blob/master/CONTRIBUTING.md">Contribute one</a></li>
+        
+      </ul>
+    </nav>
+    
+  </header>
+
+  <div class="body-content">
+    
+
+  <section class="title">
+
+    
+
+    <section class="title-text container">
+      
+      <h1>Creating a Mobile-First Responsive Web Design</h1>
+      
+      
+
+      <a href="http://www.html5rocks.com/en/" class="watermark">HTML5 Rocks</a>
+    </section>
+  </section>
+
+  <article class="content-wrapper">
+
+    <section class="container">
+
+      
+
+      <div class="article-meta sticky" id="article-meta" style="top: 22px;">
+        <nav class="toc">
+          <h1>Table of Contents</h1>
+
+          <ul><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-introduction">Introduction</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-theneed">The Need for Adaptivity</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-theneed">What We're Making: The Humble Product Detail Page</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-structure">Structure</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-style">Style</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-behavior">Behavior</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-nextsteps">Next Steps</a></li><li><a href="http://www.html5rocks.com/en/mobile/responsivedesign/#toc-wrappingup">Wrapping Up</a></li></ul>
+        </nav>
+
+        <aside class="localizations">
+          <h1>Localizations</h1>
+          <ul>
+            
+              <li><a href="https://github.com/html5rocks/www.html5rocks.com/blob/master/CONTRIBUTING.md">Contribute one</a></li>
+            
+          </ul>
+        </aside>
+      </div>
+      
+
+      <div class="content" id="article-content">
+
+        <section class="byline">
+
+          <div class="byline-content">
+            
+            <section class="author-images">
+              <a href="http://www.html5rocks.com/profiles/#bradfrost">
+                <img src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/bradfrost.png" itemprop="photo" alt="Brad Frost" title="Brad Frost">
+              </a>
+
+              
+            </section>
+
+            <section class="meta">
+              <div class="authors">
+                <strong>By</strong> <a href="http://www.html5rocks.com/profiles/#bradfrost">Brad Frost</a>
+                
+              </div>
+
+              
+
+              <div class="date">
+                <time pubdate=""><strong>Published:</strong> April 16th, 2012</time>
+                
+                <time class="updated"><strong>Updated:</strong> April 16th, 2012</time>
+                <span><strong>Comments:</strong> <a href="http://www.html5rocks.com/en/mobile/responsivedesign/#disqus_thread" class="load-comments" data-disqus-identifier="http://www.html5rocks.com/mobile/responsivedesign/">100</a></span>
+              </div>
+
+              <div id="notcompatible" class="hidden">
+                Your browser may not support the functionality in this article.
+              </div>
+            </section>
+            <div class="clear"></div>
+
+            
+          </div>
+        </section>
+
+        
+<h2 id="toc-introduction">Introduction</h2>
+
+<p>We're going to walk through how to create an adaptive web experience that's designed mobile-first. This article and <a href="http://bradfrostweb.com/demo/mobile-first/">demo</a> will go over the following:</p>
+
+<ul>
+
+  <li>Why we need to create mobile-first, responsive, adaptive experiences</li>
+  <li>How to structure HTML for an adaptive site in order to optimize performance and prioritize flexibility</li>
+  <li>How to write CSS that defines shared styles first, builds up styles for larger screens with media queries, and uses relative units</li>
+  <li>How to write unobtrusive Javascript to conditionally load in content fragments, take advantage of touch events and geolocation</li>
+  <li>What we could do to further enhance our adaptive experience</li>
+</ul>
+
+<h2 id="toc-theneed">The Need for Adaptivity</h2>
+
+<p>As the web landscape becomes increasingly complex, it's becoming extremely important to deliver solid web experiences to a growing number of contexts. Thankfully, <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive web design</a> gives web creators some tools for making layouts that respond to any screen size. We'll use fluid grids, flexible images and media queries to get the layout looking great regardless of the size of the device's screen dimensions.</p>
+
+<p>However, mobile context is much more than just screen size. Our mobile devices are with us wherever we go, unlocking entire new use cases. Because we constantly have our mobile devices with us, connectivity can be all over the board, ranging from strong wi-fi signals on the couch to 3G or EDGE when out and about. In addition, touch screens open new opportunities to interact directly with content and mobile ergonomics lead to different considerations when designing layout and functionality.</p>
+
+<p>In order to create a site that's truly designed for mobile context and not just for small screens, we want to ensure that we tackle the many challenges of mobile development upfront.  The constraints of the mobile context force us to focus on what content is essential and how to present that content as quickly as possible. Building fast-loading, optimized experiences <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> has a trickle down (or up, depending on how you look at it) effect for tablet, desktop and other emerging contexts.</p>
+
+<h2 id="toc-theneed">What We're Making: The Humble Product Detail Page</h2>
+
+<p><b><a href="http://bradfrostweb.com/demo/mobile-first/">View the demo</a></b></p>
+
+<p>The demo we're making is a simple e-commerce product detail page for a fictitious t-shirt company. Why choose this? E-commerce sites can have many use cases across contexts. For example, <a href="http://googlemobileads.blogspot.com/2011/12/look-back-at-2011.html">70% of smartphone owners use their mobile phones to influence in-store purchases</a>. So while we'll make sure that purchasing the product is as easy as possible, we'll also try to make the product reviews accessible and utilize the user's location to enhance the mobile experience.</p>
+
+<h2 id="toc-structure">Structure</h2>
+
+<p>Authoring lean, semantic HTML5 markup keeps adaptive experiences manageable and accessible, and also provides opportunities for enhanced experiences (quick example: using <a href="http://diveintohtml5.info/forms.html">proper HTML5 input types</a> brings up the appropriate virtual keyboard on many touch devices). Semantic markup is extremely portable and can be accessed by many mobile devices, tablets, desktop browsers and future web-enabled devices, regardless of feature set or capability.</p>
+
+<h3 id="toc-structure-viewport">Setting the viewport</h3>
+
+<p>In order to accommodate for sites not optimized for mobile screens, many modern mobile browsers set a larger browser viewport, which allows for better viewing of non-mobile-optimized sites. Users can then pinch-to-zoom in on the content they want.  That's fine for non-mobile experiences, but because we're optimizing our experience for mobile browsers, we'll use the <a href="https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">viewport meta tag</a> to set the screen width to the device width:</p>
+
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+
+<p>It's important to note that we're not disabling the user's ability to zoom the page (which you could do by adding user-scalable=no to the content attribute), even though we're optimizing the content for small screens. It's recommended to keep user zooming enabled to keep things as accessible as possible. However, there are use cases to disable user-zooming, such as if you're including <a href="http://bradfrostweb.com/blog/mobile/fixed-position/">fixed positioned elements</a>.</p>
+
+<h3 id="toc-structure-fragments">Content fragments</h3>
+
+<p>In order to keep the experience as lightweight as possible and to improve the perceived loading time, we're creating two additional HTML documents for our auxiliary content, reviews.html andrelated.html. Because this content isn't required for the main use case (buying the product) and includes a number of images, we won't load it by default to keep the initial page size down. By default the content is accessible via links on the page, but if a certain level of javascript support is present, we'll <a href="http://24ways.org/2011/conditional-loading-for-responsive-designs">conditionally load the content</a> when the user requests it or when the resolution reaches a certain breakpoint.</p>
+
+<h3 id="toc-structure-specialchars">HTML Special Characters</h3>
+
+<p>A simple technique to reduce the need for background images (thereby saving HTTP requests) is to use HTML special characters for simple shapes. In the case of our rating stars, we're using &amp;#9733; to create a solid star (★) and &amp;#9734; to create empty stars (☆) for our ratings. And because it's HTML and not an image, it stays crisp even on high resolution screens.</p>
+
+<h3 id="toc-structure-teluri">The tel: URI Scheme</h3>
+
+<p>Another simple yet effective technique we're including in our footer is a clickable link to the customer service number. This is accomplished by using the tel URI scheme, which looks like this:</p>
+
+<pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"tel:+18005550199"</span><span class="tag">&gt;</span><span class="pln">1-800-555-0199</span><span class="tag">&lt;/a&gt;</span></pre>
+
+<p>We sometimes forget that <a href="http://bradfrostweb.com/blog/mobile/a-tel-tale-sign/">mobile devices can make phone calls</a>, and also that some desktop configurations can launch VoIP applications to initiate a phone call. We're including an easy way for users to facilitate a phone call, which in some cases might make sense (i.e. a mobile user who might prefer finishing the transaction over the phone versus going through a checkout flow on their mobile device).</p>
+
+<p>Now that we have a strong, semantic foundation in place, let's move onto adding style enhancements.</p>
+
+<h2 id="toc-style">Style</h2>
+
+<p>When crafting our CSS, we'll do everything in our power to keep things lightweight and as fluid as possible. We understand that all these devices have many different screen sizes, and that tomorrow's devices won't have the same resolutions as today's. Because screen size is an unknown, we'll use the content itself to determine how the layout should adjust to its container.</p>
+
+<h3 id="toc-style-separatesheet">Separate style sheet for larger screens</h3>
+
+<p>We're creating two separate CSS files, style.css and enhanced.css in order to deliver basic styles for screens less than 40.5em and using media queries to serve up enhanced styles for screens larger than 40.5em.</p>
+
+<pre class="prettyprint"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"style.css"</span><span class="pln"> </span><span class="atn">media</span><span class="pun">=</span><span class="atv">"screen, handheld"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"enhanced.css"</span><span class="pln"> </span><span class="atn">media</span><span class="pun">=</span><span class="atv">"screen  and (min-width: 40.5em)"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="com">&lt;!--[if (lt IE 9)&amp;(!IEMobile)]&gt;
+&lt;link rel="stylesheet" type="text/css" href="enhanced.css" /&gt;
+&lt;![endif]--&gt;</span></pre>
+
+<p>We're using the conditional code &lt;!--[if (lt IE 9)&amp;(!IEMobile)]&gt; in order to serve up enhanced.css to non-mobile versions of IE less than version 9, which unfortunately don't support media queries. While this method does indeed add an HTTP request to the mix, it <a href="http://adactio.com/journal/4494/">gives us greater flexibility over our styles</a>. Alternately, we could use <a href="https://github.com/scottjehl/Respond">respond.js</a> to deliver enhanced styles to IE.</p>
+
+<p>We're using the em unit instead of px to maintain consistency with the rest of our relative units and account for user settings like zoom level.  Also, the content should determine the breakpoint (we're using 40.5em as a breakpoint) because device dimensions are too varied and are always changing so are therefore <a href="http://designshack.net/articles/css/responsive-design-why-youre-doing-it-wrong/#comment-42221">unreliable</a>.</p>
+
+<h3 id="toc-style-mobilefirst">Mobile-First Styles</h3>
+
+<p>Starting with baseline shared styles and introducing more advanced layout rules when screen size permits keeps code simpler, smaller and more maintainable. Here's just a quick example to demonstrate this point:</p>
+
+<pre class="prettyprint"><span class="com">/*Large screen styles first - Avoid*/</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">product</span><span class="pun">-</span><span class="pln">img </span><span class="pun">{</span><span class="pln">
+  width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">%;</span><span class="pln">
+  </span><span class="kwd">float</span><span class="pun">:</span><span class="pln"> left</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">40.5em</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.</span><span class="pln">product</span><span class="pun">-</span><span class="pln">img </span><span class="pun">{</span><span class="pln">
+    width</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">auto</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">float</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>We want to avoid complexity as much as we can, so here's what a mobile-first approach looks like:</p>
+
+<pre class="prettyprint"><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">40.5em</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.</span><span class="pln">product</span><span class="pun">-</span><span class="pln">img </span><span class="pun">{</span><span class="pln">
+    width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">%;</span><span class="pln">
+    </span><span class="kwd">float</span><span class="pun">:</span><span class="pln"> left</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>Instead of declaring large screen rules first only to override them for smaller screens, we'll simply define rules as more real estate becomes available. The web by default is a fluid thing so we'll do our best to work with it instead of against it. It's important to note that some mobile browsers (Symbian browsers, Blackberry &lt;OS 6.0, Netfront, WP7 pre-Mango, etc) don't support media queries, so serving base styles by default reaches more devices and browsers. As <a href="http://www.slideshare.net/bryanrieger/rethinking-the-mobile-web-by-yiibu">Bryan Rieger puts it</a>, "the absence of support for @media queries is in fact the first @media query."</p>
+
+<h3 id="toc-style-mediaqueries">Applying Media Queries</h3>
+
+<p>We're continuing our mobile-first style when we apply our media queries. Our related product list starts off two to a row, but increases to 3 in a row when the screen size is at least 28.75em wide (roughly the size of mobile phones in landscape mode) and then to 6 to a row when the screen size is at least 40.5em (roughly tablets in portrait mode or small desktop screens).</p>
+
+<pre class="prettyprint"><span class="com">/*Default styles*/</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">related</span><span class="pun">-</span><span class="pln">products li </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">float</span><span class="pun">:</span><span class="pln"> left</span><span class="pun">;</span><span class="pln">
+  width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">%;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/*Display 3 per row for medium displays (like mobile phones in landscape or smaller tablets)*/</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">28.75em</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.</span><span class="pln">related</span><span class="pun">-</span><span class="pln">products li </span><span class="pun">{</span><span class="pln">
+    width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">33.3333333</span><span class="pun">%;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="com">/*Display 6 to a row for large displays (like medium tablets and up) */</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">40.5em</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.</span><span class="pln">related</span><span class="pun">-</span><span class="pln">products li </span><span class="pun">{</span><span class="pln">
+    width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">16.6666667</span><span class="pun">%;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>Assuming small screen by default allows us to support more platforms and also makes it easy add more breakpoints without having to modify existing styles.  Defining styles as they're needed also keeps file size down, reduces complexity and keeps code more maintainable.</p>
+
+<h3 id="toc-style-relativeunits">Using Relative Units</h3>
+
+<p>We're using percentages and em units in our design in order to keep things as flexible as possible. Relative units are far more compatible with the tremendous variance brought on by screen size, pixel density and zoom level.</p>
+
+<p>While media queries are responsive web design's secret sauce, we want our <a href="http://www.alistapart.com/articles/fluidgrids/">fluid grids</a> to do most of the work. Maintaining a whole slew of set-width styles across many media queries can become unwieldy, so we'll make sure the stylesheet's foundation is entirely flexible. Ethan Marcotte <a href="http://www.alistapart.com/articles/fluidgrids/">provides a formula</a> for converting dimensions and font sizes from pixel-based to relative units:</p>
+
+<pre class="prettyprint"><span class="pln">target </span><span class="pun">÷</span><span class="pln"> context </span><span class="pun">=</span><span class="pln"> result</span></pre>
+
+<h3 id="toc-style-usingcss">Using CSS to Reduce Requests</h3>
+
+<p>Too many HTTP requests can be a <a href="http://speakerdeck.com/u/tkadlec/p/optimizing-for-mobile-performance">huge killer for performance</a>, especially on mobile. We're incorporating some CSS techniques to save HTTP requests which will improve the site's performance. Using <a href="http://css-tricks.com/css3-gradients/">CSS gradients</a> instead of background images reduces the amount of image requests and gives us more control over the design. We're including the appropriate vendor prefixes to ensure maximum compatibility (there are <a href="http://www.colorzilla.com/gradient-editor/">tools</a> for this) and hoping that one day that these rules will become standardized to save us some time.</p>
+
+<pre class="prettyprint"><span class="com">/*Using CSS gradients instead of background images*/</span><span class="pln">
+header</span><span class="pun">[</span><span class="pln">role</span><span class="pun">=</span><span class="str">"banner"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  position</span><span class="pun">:</span><span class="pln"> relative</span><span class="pun">;</span><span class="pln">
+  background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#111; </span><span class="pln">
+  background</span><span class="pun">:</span><span class="pln"> </span><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#including_a_mixin" id="tooltip1574.5" target="_blank" data-tooltip="/*Vendor prefixes required. Try Compass/SASS.*/
+-webkit-linear-gradient ...
+   -moz-linear-gradient ...
+    -ms-linear-gradient ...
+     -o-linear-gradient ...
+        linear-gradient ..." role="tooltip" aria-describedby="tooltip1574.5" class="noexternal tooltip"><span class="pun">+</span><span class="property"><span class="pln">linear</span><span class="pun">-</span><span class="pln">gradient</span></span><span class="pln"> </span><span class="pun">(</span><span class="pln">top</span><span class="pun">,</span><span class="pln"> </span><span class="com">#111 0%, #222 100%);</span></a><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>We're also using <a href="http://bradfrostweb.com/demo/mobile-first/article.html">data URIs</a> instead of background images for some of the smaller icons (for icons like search, social features and location). While data URIs might look a bit ugly and can increase up the stylesheet file size, the reduction of requests results in a <a href="http://tech.groups.yahoo.com/group/mobile-web/message/609">faster perceived download time</a>.</p>
+
+<pre class="prettyprint"><span class="com">/*Using a Data URI for Background Image*/</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">find</span><span class="pun">-</span><span class="pln">nearby </span><span class="pun">{</span><span class="pln">
+  background</span><span class="pun">:</span><span class="pln"> url</span><span class="pun">(</span><span class="pln">data</span><span class="pun">:</span><span class="pln">image</span><span class="pun">/</span><span class="pln">png</span><span class="pun">;</span><span class="pln">base64</span><span class="pun">,</span><span class="pln">iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAADHmlDQ1BJQ0MgUHJvZmlsZQAAeAGFVN9r01AU</span><span class="pun">/</span><span class="pln">tplnbDhizpnEQk</span><span class="pun">+</span><span class="pln">aJFuZFN0Q5y2a1e6zVrqNrchSJumbVyaxiTtfrAH2YtvOsV38Qc</span><span class="pun">++</span><span class="typ">QcM2YNve5INxhRh</span><span class="pun">+</span><span class="typ">KyIIkz2IrOemzRNJ1MDufe73</span><span class="pun">/</span><span class="pln">nuOSfn5F6g</span><span class="pun">+</span><span class="typ">XFa0xQvDxRVU0</span><span class="pun">/</span><span class="typ">FwvzE5BTf8gFeHEMr</span><span class="pun">/</span><span class="typ">GhNi4YWSiZHQA</span><span class="pun">/</span><span class="typ">Tsnnvs</span><span class="pun">/</span><span class="typ">MOHsZsdO5v36v</span><span class="pun">+</span><span class="pln">Y9WalQwR8BwgvpQ1xCLhWaBpXNR0E</span><span class="pun">+</span><span class="typ">DWie</span><span class="pun">+</span><span class="pln">dMTXCzUxzWKcECR9nOG9jgeGMjSOWZjQ1QJoJwgfFQjpLuEA4mGng8w3YzoEU5CcmqZIuizyrRVIv5WRFsgz28B9zg</span><span class="pun">/</span><span class="typ">JfsKiU6Zut5xCNbZoZTtF8it4fOX1wjOYA1cE</span><span class="pun">/</span><span class="typ">Xxi9QbidcFg246M1fkLNJK4RJr3n7nRpmO1lmpdZKRIlHCS8YlSuM2xp5gsDiZrm0</span><span class="pun">+</span><span class="lit">30UJKwnzS</span><span class="pun">/</span><span class="pln">NDNZ8</span><span class="pun">+</span><span class="typ">PtUJUE6zHF9fZLRvS6vdfbkZMH4zU</span><span class="pun">+</span><span class="pln">pynWf0D</span><span class="pun">+</span><span class="pln">vff1corleZLw67QejdX0W5I6Vtvb5M2mI8PEd1E</span><span class="pun">/</span><span class="pln">A0hCgo4cZCjgkUIMYZpjxKr4TBYZIkqk0ml0VHmyONY7KJOW7RxHeMlfDrheFvVbsrj24Pue3SXXjrwVhcW3o9hR7bWB6bqyE5obf3VhpaNu4Te55ZsbbasLCFH</span><span class="pun">+</span><span class="pln">iuWxSF5lyk</span><span class="pun">+</span><span class="typ">CUdd1NuaQU5f8dQvPMpTuJXYSWAy6rPBe</span><span class="pun">+</span><span class="typ">CpsCk</span><span class="pun">+</span><span class="pln">FF8KXv9TIzt6tEcuAcSw</span><span class="pun">+</span><span class="pln">q55TzcbsJdJM0utkuL</span><span class="pun">+</span><span class="pln">K9ULGGPmQMUNanb4kTZyKOfLaUAsnBneC6</span><span class="pun">+</span><span class="pln">biXC</span><span class="pun">/</span><span class="pln">XB567zF3h</span><span class="pun">+</span><span class="pln">rkIrS5yI47CF</span><span class="pun">/</span><span class="typ">VFfCHwvjO</span><span class="pun">+</span><span class="typ">Pl</span><span class="pun">+</span><span class="lit">3b4hhp9u</span><span class="pun">+</span><span class="lit">02TrozFa67vTkbqisXqUj9sn9j2OqhMZsrG</span><span class="pun">+</span><span class="pln">sX5WCCu0omNqSrN0TwADJW1Ol</span><span class="pun">/</span><span class="typ">MFk</span><span class="pun">+</span><span class="lit">8RhAt8iK4tiY</span><span class="pun">+</span><span class="pln">rYleQTysKb5kMXpcMSa9I2S6wO4</span><span class="pun">/</span><span class="pln">tA7ZT1l3maV9zOfMqcOkb</span><span class="pun">/</span><span class="pln">cPrLjdVBl4ZwNFzLhegM3XkCbB8XizrFdsfPJ63gJE722OtPW1huos</span><span class="pun">+</span><span class="typ">VqvbdC5bHgG7D6vVn8</span><span class="pun">+</span><span class="pln">q1d3n5H8LeKP8BqkjCtbCoV8yAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgICAgPHJkZjpCYWcvPgogICAgICAgICA8L2RjOnN1YmplY3Q</span><span class="pun">+</span><span class="typ">CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY</span><span class="pun">+</span><span class="typ">CjwveDp4bXBtZXRhPgrlPw1BAAABGUlEQVQoFXWSvU4CQRRGdwydxWYLXkCp7ayIhMYIRPEJtDOGAG8AFY1vQOigZi202cQYY4XFJiRYWm2NsbE2LOfbnYlbwE0O3</span><span class="pun">/</span><span class="lit">2bO8PMemma</span><span class="pun">+</span><span class="pln">uAJ7AjuILHco8eurl6jwBhTonAOHfiFMzDwDgGM4YXePzf5gsQHXGsAFsKj9dv4C2gpLjFdx</span><span class="pun">+</span><span class="pln">jBA4knVLbKxdPAZ3o2xF30S9vqzDUKN65pl9I8Ix9rQWIbYvSThSMbZ0LjAOcETuFQf1aLZE7z6P9X</span><span class="pun">+</span><span class="typ">QNbNwp0dVUm36J7jZ2mFJda</span><span class="pun">+</span><span class="typ">QoBiSs0Mx0DhoW4iV</span><span class="pun">+</span><span class="typ">GyF1ri0BXd8lOiDeH0Pqq6cqzWvHhGiR1vB</span><span class="pun">+</span><span class="pln">og477Bpo8gYgB2cMVP40KBb3JGr6hDxXtZPG3KYiAhJlWaikAAAAASUVORK5CYII</span><span class="pun">=)</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">repeat </span><span class="lit">100</span><span class="pun">%</span><span class="pln"> </span><span class="lit">43</span><span class="pun">%;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<h2 id="toc-behavior">Behavior</h2>
+
+<p>Now that we have our structure and style in place, we'll add JavaScript enhancements to add functionality to the navigation, image gallery and auxiliary content.</p>
+
+<h3 id="toc-behavior-navigation">Navigation</h3>
+
+<p>Navigation can be especially tricky for adaptive experiences. Top navigation is common for desktop sites, but top navigation can crowd the screen and push down the primary content on small screens. We want to highlight the product and not the site navigation, so we'll do our best to get the navigation out of the way.
+in our markup we've created a list called #nav-anchors, which will be used to toggle the visibility of the navigation and search bar for small screens.</p>
+
+<pre class="prettyprint"><span class="tag">&lt;ul</span><span class="pln">  </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"nav-anchors"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"nav-anchors"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#nav"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"menu-anchor"</span><span class="tag">&gt;</span><span class="pln">Menu</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+  </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#search"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"search-anchor"</span><span class="tag">&gt;</span><span class="pln">Search</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"search"</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search reveal"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;fieldset&gt;</span><span class="pln">
+    </span><span class="tag">&lt;legend&gt;</span><span class="pln">Search the Site</span><span class="tag">&lt;/legend&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"search"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"Search Store"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Search"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/fieldset&gt;</span><span class="pln">
+</span><span class="tag">&lt;/form&gt;</span><span class="pln">
+</span><span class="tag">&lt;nav</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"nav"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"nav reveal"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"navigation"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">T-shirts</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+    </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Hoodies</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+    </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Pants</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;/nav&gt;</span></pre>
+
+<p>We'll add a resize listener which will determine whether there's enough room to show the navigation and search bar.</p>
+
+<pre class="prettyprint"><span class="pln">$</span><span class="pun">(</span><span class="pln">w</span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> </span><span class="com">//Update dimensions on resize</span><span class="pln">
+  sw </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">documentElement</span><span class="pun">.</span><span class="pln">clientWidth</span><span class="pun">;</span><span class="pln">
+  sh </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">documentElement</span><span class="pun">.</span><span class="pln">clientHeight</span><span class="pun">;</span><span class="pln">
+  checkMobile</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+  
+</span><span class="com">//Check if Mobile</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> checkMobile</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  mobile </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">sw </span><span class="pun">&gt;</span><span class="pln"> breakpoint</span><span class="pun">)</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">mobile</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">//If Not Mobile</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">'[role="tabpanel"],#nav,#search'</span><span class="pun">).</span><span class="pln">show</span><span class="pun">();</span><span class="pln"> </span><span class="com">//Show full navigation and search</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">//Hide </span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">$</span><span class="pun">(</span><span class="str">'#nav-anchors a'</span><span class="pun">).</span><span class="pln">hasClass</span><span class="pun">(</span><span class="str">'active'</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      $</span><span class="pun">(</span><span class="str">'#nav,#search'</span><span class="pun">).</span><span class="pln">hide</span><span class="pun">();</span><span class="pln"> </span><span class="com">//Hide full navigation and search</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<h3 id="toc-behavior-gallery">Image Gallery</h3>
+
+<p>By default the image gallery is simply a large image with thumbnail images that click through to their larger counterparts. This means that they're accessible to browsers and devices with poor or no JavaScript support.</p>
+
+<pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"product-img"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-img"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;figure</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"img-container"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"img-container"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"images/product_img_1.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"Super Ffly T-shirt"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/figure&gt;</span><span class="pln">
+  </span><span class="tag">&lt;nav&gt;</span><span class="pln">
+    </span><span class="tag">&lt;ul&gt;</span><span class="pln">
+      </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"images/product_img_1.jpg"</span><span class="tag">&gt;&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"images/product_img_1_thumb.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"Super Ffly Men's Shirt"</span><span class="pln"> </span><span class="tag">/&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+      </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"images/product_img_2.jpg"</span><span class="tag">&gt;&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"images/product_img_2_thumb.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"Super Ffly Women's Shirt"</span><span class="pln"> </span><span class="tag">/&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+      </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"images/product_img_3.png"</span><span class="tag">&gt;&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"images/product_img_3_thumb.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"Ffly Logo"</span><span class="pln"> </span><span class="tag">/&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/nav&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+
+<p>We'll build an image carousel from the available thumbnail images:</p>
+
+<pre class="prettyprint"><span class="kwd">function</span><span class="pln"> buildGallery</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  container</span><span class="pun">.</span><span class="pln">html</span><span class="pun">(</span><span class="str">'&lt;div id="img-list"&gt;&lt;ul /&gt;&lt;/div&gt;'</span><span class="pun">);</span><span class="pln">
+  imgList </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#img-list'</span><span class="pun">);</span><span class="pln">
+  nav</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'a:first'</span><span class="pun">).</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">'active'</span><span class="pun">);</span><span class="pln">
+  
+  </span><span class="com">//For Each Navigation Link</span><span class="pln">
+  nav</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">).</span><span class="pln">each</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> $this </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> href </span><span class="pun">=</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'href'</span><span class="pun">);</span><span class="pln">
+      
+    </span><span class="com">//Prepare list item with image source in data attribute</span><span class="pln">
+    arr </span><span class="pun">+=</span><span class="pln"> </span><span class="str">'&lt;li data-imgsrc="'</span><span class="pun">+</span><span class="pln">href</span><span class="pun">+</span><span class="str">'"&gt;&lt;/li&gt;'</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+  
+  </span><span class="com">//Append to #img-list</span><span class="pln">
+  imgList</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'ul'</span><span class="pun">).</span><span class="pln">append</span><span class="pun">(</span><span class="pln">arr</span><span class="pun">);</span><span class="pln">
+      
+  </span><span class="com">//Nav Thumbnail Click</span><span class="pln">
+  nav</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'click'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'a'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> pos </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">parent</span><span class="pun">().</span><span class="pln">index</span><span class="pun">();</span><span class="pln">
+    e</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span><span class="pln">
+    loadImg</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">swipeEnabled</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      mySwipe</span><span class="pun">.</span><span class="pln">slide</span><span class="pun">(</span><span class="pln">index</span><span class="pun">,</span><span class="pln"> </span><span class="lit">300</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    updateNav</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>To enhance the experience further, we're using <a href="http://www.modernizr.com/">Modernizr</a> to detect for the presence of touch events and CSS transitions, and if they are supported, we'll load in a library called <a href="http://swipejs.com/">SwipeJS</a> to make a touch-friendly image carousel.</p>
+
+<pre class="prettyprint"><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+  test</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">touch </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">csstransitions</span><span class="pun">,</span><span class="pln">
+  yep</span><span class="pun">:</span><span class="pln"> </span><span class="str">'js/swipe.js'</span><span class="pun">,</span><span class="pln">
+  complete</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">touch </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">csstransitions</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      swipeEnabled </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+      buildSwipe</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+
+</span><span class="com">//Build Swipe Carousel</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> buildSwipe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">//Initialize Swipe.js</span><span class="pln">
+  w</span><span class="pun">.</span><span class="pln">mySwipe </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Swipe</span><span class="pun">(</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'img-list'</span><span class="pun">),</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    callback</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">,</span><span class="pln"> index</span><span class="pun">,</span><span class="pln"> elem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      updateNav</span><span class="pun">(</span><span class="pln">index</span><span class="pun">);</span><span class="pln">
+      loadImg</span><span class="pun">(</span><span class="pln">index </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> 
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>We now have an accessible image gallery with added enhancements for touch-enabled devices.</p>
+
+<h3 id="toc-behavior-relatedcontent">Related Content</h3>
+
+<p>In order to keep Initial page size down, we're not loading auxiliary content, namely the related t-shirts and product reviews, by default. Instead, they exist as their own HTML pages, which are accessed by links as a default behavior.</p>
+
+<pre class="prettyprint"><span class="tag">&lt;section</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"aux related-products"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"related-products"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;header</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"tab-related"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"related.html"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;h2&gt;</span><span class="pln">Similar T-shirts</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/header&gt;</span><span class="pln">
+</span><span class="tag">&lt;/section&gt;</span><span class="pln">
+</span><span class="tag">&lt;section</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"aux reviews"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"reviews"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;header</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"tab-reviews"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"reviews.html"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;h2&gt;</span><span class="pln">8 Reviews</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+      </span><span class="tag">&lt;ol</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"star"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"on"</span><span class="tag">&gt;</span><span class="pln">&amp;#9733;</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+        </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"on"</span><span class="tag">&gt;</span><span class="pln">&amp;#9733;</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+        </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"on"</span><span class="tag">&gt;</span><span class="pln">&amp;#9733;</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+        </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"on"</span><span class="tag">&gt;</span><span class="pln">&amp;#9733;</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+        </span><span class="tag">&lt;li&gt;</span><span class="pln">&amp;#9734;</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/ol&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/header&gt;</span><span class="pln">
+</span><span class="tag">&lt;/section&gt;</span></pre>
+
+<p>We'll pull in the related content when one of two conditions are met:
+When a small-screen user clicks the related shirts or product reviews links
+When the screen has enough room to load in the auxiliary content.</p>
+
+<pre class="prettyprint"><span class="com">//Check if Mobile</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> checkMobile</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">sw </span><span class="pun">&gt;</span><span class="pln"> breakpoint</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    mobile </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> </span><span class="com">//Not Mobile</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    mobile </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln"> </span><span class="com">//Mobile</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">mobile</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">//If Not Mobile</span><span class="pln">
+    loadAux</span><span class="pun">();</span><span class="pln"> </span><span class="com">//Load auxiliary content</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">//Set up Auxiliary content</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> loadAux</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> $aux </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'.aux'</span><span class="pun">);</span><span class="pln">
+  $aux</span><span class="pun">.</span><span class="pln">each</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">index</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> $this </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> auxLink </span><span class="pun">=</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> auxFragment </span><span class="pun">=</span><span class="pln"> auxLink</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'href'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> auxContent </span><span class="pun">=</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'[role=tabpanel]'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">auxContent</span><span class="pun">.</span><span class="pln">size</span><span class="pun">()===</span><span class="lit">0</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">hasClass</span><span class="pun">(</span><span class="str">'loaded'</span><span class="pun">)===</span><span class="kwd">false</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      loadContent</span><span class="pun">(</span><span class="pln">auxFragment</span><span class="pun">,</span><span class="pln">$this</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loadContent</span><span class="pun">(</span><span class="pln">src</span><span class="pun">,</span><span class="pln">container</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">// Load Tab Content</span><span class="pln">
+  container</span><span class="pun">.</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">'loaded'</span><span class="pun">);</span><span class="pln">
+  $</span><span class="pun">(</span><span class="str">'&lt;div role="tabpanel" /&gt;'</span><span class="pun">).</span><span class="pln">load</span><span class="pun">(</span><span class="pln">src </span><span class="pun">+</span><span class="str">' #content &gt; div'</span><span class="pun">,</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">appendTo</span><span class="pun">(</span><span class="pln">container</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<p>note: we're using screen size to determine when to load in content, but this is in no way perfect. Keep an eye out for <a href="http://davidbcalhoun.com/2010/using-navigator-connection-android">navigator.connection</a> for a better way to determine whether it's worth introducing extra content.</p>
+
+<h3 id="toc-behavior-geolocation">Geolocation</h3>
+
+<p>Leveraging user location to deliver enhanced experiences is an important aspect of mobile development. Thankfully geolocation is one of the best supported Features across mobile browsers (as well as most desktop browsers). The fallback functionality could be a simple form where the user simply inputs their ZIP code to find store near them.</p>
+
+<h2 id="toc-nextsteps">Next Steps</h2>
+
+<h3 id="toc-nextsteps-adaptiveimages">Adaptive Images</h3>
+
+<p>Our demo isn't incorporating many large images, but it's best practice to load in mobile optimized images by default then conditionally load in larger images only when needed. There are <a href="http://www.cloudfour.com/responsive-imgs-part-2/">lots of different techniques for responsive images</a>, both client-side and server side. We've done a lot so far to be mindful of performance, and optimizing images is an easy way to optimize performance even further.</p>
+
+<h3 id="toc-nextsteps-lessjs">Less JS</h3>
+
+<p>Keeping pages as lightweight as possible is important for performance, so we should look to optimize scripts as much as possible. We're using the <a href="http://jquery.com/">jQuery</a> library for our demo, but we're definitely not using all of it.  We could look into using <a href="http://code.google.com/closure/compiler/">Closure Compiler</a> to strip out unused bits of the library to keep things as lightweight as possible while still taking advantage of what jQuery offers. Alternately, we could look into <a href="http://microjs.com/">micro-frameworks</a> like <a href="http://zeptojs.com/">Zepto.js</a> and others, but they typically don't necessarily offer the best cross-browser support. Writing vanilla Javascript could avoid additional heft but can be more difficult to author and harder to maintain. Ultimately, each approach has its pros and cons, just be sure to consider the tradeoffs when making these decisions.</p>
+
+<h3 id="toc-nextsteps-offline">Offline Access</h3>
+
+<p>It's increasingly important to make sure web experiences are accessible offline, especially when considering mobile users with variable connectivity. Thankfully, <a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/">appcache</a> and <a href="http://www.html5rocks.com/en/features/offline">other offline techniques</a> gives us a way to keep our resources accessible even when the user is offline.</p>
+
+<h2 id="toc-wrappingup">Wrapping Up</h2>
+
+<p>We've created an experience that is mindful to user context and adapts both layout and functionality based the browser and device's features. We've also set up a foundation that can adapt to future devices and browsers. Here's some key takeaways:</p>
+
+<ul>
+  <li>Author semantic HTML5 markup as a foundation for adaptive experiences.</li>
+  <li>Create mobile first CSS to keep things lightweight, simple and maintainable.</li>
+  <li>Use relative units like ems and percentages to keep styles as fluid and flexible as possible.</li>
+  <li>Let content determine the breakpoints for media queries.</li>
+  <li>Exploit opportunities to reduce HTTP requests by conditionally-loading content and using HTML characters, CSS gradients, Data URIs and more</li>
+  <li>Author unobtrusive javascript and use tools like Modernizr to detect features.</li>
+  <li>Take advantage of mobile-centric features like touch events, telephone links and geolocation to deliver enhanced experiences to mobile users.</li>
+</ul>
+
+<p>Creating adaptive experiences allows your content to go more places, which means more opportunities to reach potential customers wherever they may be. By adhering to the principles of progressive enhancement and addressing constraints first, we're laying a <a href="http://futurefriend.ly/">future-friendly</a> foundation that gives our site a better chance of working in future browsers and environments.</p>
+
+
+      </div>
+    </section>
+  </article>
+
+  
+  <section class="disqus pattern-bg-lighter">
+
+    <div id="disqus" class="container">
+
+      <h2>Comments</h2>
+
+      <div id="disqus_thread">
+
+        <a href="http://www.html5rocks.com/en/mobile/responsivedesign/#disqus_thread" class="load-comments" data-disqus-identifier="http://www.html5rocks.com/mobile/responsivedesign/">100</a>
+
+      </div>
+    </div>
+
+    <noscript>
+      &lt;p class="center"&gt;
+        &lt;strong&gt;
+          &lt;a href="http://disqus.com/?ref_noscript"&gt;Please enable JavaScript to view the comments powered by Disqus.&lt;/a&gt;
+        &lt;/strong&gt;
+      &lt;/p&gt;
+    </noscript>
+
+    <script>
+
+      var disqus_shortname = 'html5rocks';
+      var disqus_identifier = 'http://www.html5rocks.com/mobile/responsivedesign/';
+      var disqus_url = 'http://www.html5rocks.com/mobile/responsivedesign/';
+      var disqus_developer = 0;
+
+      var disqus_config = function () {
+        var funky_language_code_mapping = {
+          'de': 'de_inf',
+          'es': 'es_ES',
+          'pt': 'pt_EU',
+          'sr': 'sr_CYRL',
+          'sv': 'sv_SE',
+          'zh': 'zh_HANT'
+        };
+        this.language = funky_language_code_mapping['en'] ||
+                        'en';
+
+        this.callbacks.onReady = [ function () {
+                                      try {
+                                        _gaq.push(['_trackEvent', 'View comments']);
+                                      } catch(err){}
+                                   } ];
+        this.callbacks.onNewComment = [ function (comment) {
+                                          try {
+                                            _gaq.push(['_trackEvent', 'Commented']);
+                                          } catch(err){}
+                                        } ];
+      };
+
+      window.addEventListener('load', function(e) {
+
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        c.async = true;
+
+        var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+        sp.insertBefore(c, s);
+
+        if (window.location.hash === '#disqus_thread')
+          loadComments();
+
+      }, false);
+
+      var disqus_loaded = false;
+      function loadComments() {
+
+        if (disqus_loaded)
+          return;
+
+        disqus_loaded = true;
+
+        _gaq.push(['_trackEvent', 'Interactions', 'Comments', 'Comments Loaded']);
+
+        var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+
+        var disqusContainer = document.getElementById('disqus');
+        disqusContainer.classList.add('active');
+
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        sp.insertBefore(dsq, s);
+      }
+
+      function outgoing(url) {
+        try {
+          _gaq.push(['_trackEvent', 'Outbound Links' , url]);
+        } catch(err){}
+      }
+      // Open external links (also that don't have a target defined) in a new tab.
+      var externLinks = document.querySelectorAll('article.tutorial a[href^="http"]:not([target])');
+      for(var i = 0, a; a = externLinks[i]; ++i) {
+        a.target = '_blank';
+        a.addEventListener('click', new Function('outgoing(' + '"' + a.href.replace(/.*?:\/\//g, "") + '"' + ');'));
+      }
+
+      var loadCommentsButtons = document.querySelectorAll('.load-comments');
+      for(var l = 0; l < loadCommentsButtons.length; l++)
+        loadCommentsButtons[l].addEventListener('click', loadComments);
+
+    </script>
+  </section>
+  
+
+  <footer>
+    <div class="container">
+
+      
+        <h1>Next steps</h1>
+
+        
+
+        <aside class="panel share">
+          <h2>Share</h2>
+
+            <a href="https://twitter.com/share?url=http://www.html5rocks.com/mobile/responsivedesign/&text=Creating%20a%20Mobile-First%20Responsive%20Web%20Design&lang=en&via=ChromiumDev&related=ChromiumDev" class="twitter" target="_blank">Twitter</a>
+
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.html5rocks.com/mobile/responsivedesign/" class="facebook" target="_blank">Facebook</a>
+
+            <a href="https://plus.google.com/share?url=http://www.html5rocks.com/mobile/responsivedesign/" class="gplus" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;">Google+</a>
+
+        </aside>
+
+        <aside class="panel rss">
+          <h2>Subscribe</h2>
+          <p>Enjoyed this article? Grab the <a href="http://feeds.feedburner.com/html5rocks">RSS feed</a> and stay up-to-date.</p>
+        </aside>
+
+      
+
+      <p class="licensing">
+      
+        Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
+      
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+    window.isCompatible = function() {
+      
+
+    };
+
+    if (isCompatible() === false) {
+      document.getElementById('notcompatible').className = '';
+    }
+
+    function _prettyPrint() {
+      if (typeof customPrettyPrintLanguage != 'undefined') {
+        customPrettyPrintLanguage();
+      }
+      prettyPrint();
+    }
+  </script>
+  <script async="" src="./Creating a Mobile-First Responsive Web Design - HTML5 Rocks_files/prettify.min.js" onload="_prettyPrint()"></script>
+
+
+  </div>
+
+  <script>
+  (function() {
+
+    // Kill feedburner and marketing tracking arguments, but let them register
+    // before we do it.
+    setTimeout(function() {
+      if (/^\?utm_/.test(document.location.search) &&
+          window.history.replaceState) {
+        window.history.replaceState(
+            {}, '', document.location.href.replace(/\?utm_.*/, ''));
+      }
+    }, 2000);
+
+    var siteHeader = document.getElementById('siteheader');
+    var navToggle = document.getElementById('navtoggle');
+    var siteNav = document.getElementById('sitenav');
+
+    function toggle(target, forceActive) {
+
+      if (typeof toc !== 'undefined') {
+        // Switch off whichever one is not the
+        // current target
+        if (target === toc)
+          siteNav.classList.remove('active');
+        else
+          toc.classList.remove('active');
+      }
+
+      // Toggle if no force parameter is set
+      if (typeof forceActive === 'undefined') {
+        target.classList.toggle('active');
+      } else {
+        if (forceActive)
+          target.classList.add('active');
+        else
+          target.classList.remove('active');
+      }
+
+      // now find out what the set state ended up being
+      var isActive = target.classList.contains('active');
+
+      if (isActive)
+        siteHeader.classList.add('expanded');
+      else
+        siteHeader.classList.remove('expanded');
+
+    }
+
+    navToggle.addEventListener('click', function(e) {
+      toggle(siteNav);
+      e.preventDefault();
+    });
+
+    
+
+    var tocToggle = document.getElementById('toctoggle');
+    var toc = document.getElementById('toc');
+    var articleMeta = document.getElementById('article-meta');
+    var articleContent = document.getElementById('article-content');
+    var articleMetaHeight = 0;
+    var articleMetaMaxY = 0;
+    var articleMetaMinY = 0;
+    var articleContentPadding = 200;
+
+    var tocLinks = document.querySelectorAll('.toc a');
+    for (var t = 0; t < tocLinks.length; t++)
+      tocLinks[t].addEventListener('click', onTocLinkClick);
+
+    tocToggle.addEventListener('click', function(e) {
+      toggle(toc);
+      e.preventDefault();
+    });
+
+    toc.addEventListener('click', function(e) {
+      if (e.target !== siteNav)
+        toggle(toc, false);
+    });
+
+    function onTocLinkClick() {
+      _gaq.push(['_trackEvent', 'Interactions', 'TOC', 'TOC Clicked']);
+    }
+
+    function setMinScrollYFromMetaY() {
+      var scrollPosition = window.scrollY;
+
+      var articleMetaBounds = articleMeta.getBoundingClientRect();
+      var articleMetaTop = Math.max(352,
+          articleMetaBounds.top - 20 + scrollPosition);
+
+      articleMetaHeight = articleMetaBounds.bottom - articleMetaBounds.top;
+      articleMetaMinY = articleMetaTop;
+    }
+
+    function setMaxScrollYFromContentHeight() {
+
+      var scrollPosition = window.scrollY;
+
+      var articleContentBounds = articleContent.getBoundingClientRect();
+      var articleContentTop = articleContentBounds.top + scrollPosition;
+      var articleContentHeight = articleContentBounds.bottom - articleContentBounds.top;
+
+      articleMetaMaxY = articleContentTop +
+          articleContentHeight -
+          articleMetaHeight -
+          articleContentPadding;
+
+    }
+
+    function onScroll(e) {
+
+      if (window.scrollY >= articleMetaMinY) {
+
+        articleMeta.classList.add('sticky');
+
+        var articleMetaTop = 22 - Math.max(0, window.scrollY - articleMetaMaxY);
+        articleMeta.style.top = articleMetaTop + 'px';
+
+      } else {
+        articleMeta.classList.remove('sticky');
+        articleMeta.style.top = 'auto';
+      }
+    }
+
+    if (articleMeta.getBoundingClientRect) {
+      setMinScrollYFromMetaY();
+      setMaxScrollYFromContentHeight();
+      document.addEventListener('scroll', onScroll);
+      window.addEventListener('load', setMaxScrollYFromContentHeight, false);
+    }
+
+    
+  })();
+  </script>
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15028909-1']);
+  _gaq.push(['_setSiteSpeedSampleRate', 50]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+
+
+</body></html>

@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906 -->
+<html id="top" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js-ready" lang="en" dir="ltr" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div class="kxhead" data-id="I2gAOUHz" style="display:none;"><span class="kxtag kxinvisible" data-id="27701" data-alias="Krux Load Segments v2"><script id="LR1" type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/client.js"></script><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/3"></script><script type="text/javascript">
+// DFP premium
+(function(require) {
+  var store = require('store');
+  var _ = require('util');  
+  var segments;
+  
+  function handleUserDataResponse(r) {
+    // Handle the response as usual.
+    segments.handleUserDataResponse(r);
+    
+    // Override localStorage.kxuser with a case-insensitive value for DFP premium.
+    // This will get read by the interchange direct snippet for Krux.user
+    // and Krux.dfpKeyValues
+    if(r.kuid_long) {
+      store.set('user', r.kuid_long, store.DAYS*30);
+    }
+  }
+  
+  // Our own fetch uses our own handleResponse
+  function fetch() {
+    var options = {
+      url: _.get('url_userData'),
+      data: {pubid: _.get('pubid')},
+      callback: 'kxjsonp_userData',
+      done: handleUserDataResponse
+    };
+    if(!segments.readTechFromStore()) {
+      options.data.technographics = 1;
+    }
+    require('http').jsonp(options);  
+  }
+  
+  
+  if(!store.get('segWait')) {
+    // disable segments.fetch and use our own
+    _.set('segWait', 1, store.MINUTES*5);
+    _.onOnce('dom:load', fetch);
+    _.fire('user_data_fetch_scheduled');
+  }
+  
+  // Finally, require segments as usual.
+  segments = require('segments');
+}(Krux.require));
+</script></span><span class="kxtag kxinvisible" data-id="28966" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//p.acxiom-online.com/pixel/sci",
+      data: {
+          uid: kuid,
+          _kdpid: 'f19b7626-3732-4dcc-bac5-8d2c937dae9a',
+          pid: 3021
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="27698" data-alias="Krux Track Social"><script type="text/javascript">Krux('social.init');</script></span><span class="kxtag kxinvisible" data-id="27699" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="27700" data-alias="Krux Geographic Data provider tag"></span><span class="kxtag kxinvisible" data-id="30067" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "https://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30068" data-alias="IXI Digital (Open Market) provider tag"><script>
+  Krux('require:http').pixel({
+    url: "//s.ixiaa.com/digi/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif"
+  });
+</script></span><span class="kxtag kxinvisible" data-id="30069" data-alias="DataLogix provider tag"><script>
+(function() {
+  // krxd.nexac.com throws SSL cert errors so only fire this tag
+  // on HTTP pages
+  if (location.protocol == "http:") {
+      var Krux = window.Krux;
+      var kuid = Krux('get', 'user');
+      if (kuid) {
+         var u = "http://krxd.nexac.com/dlx.gif?_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&kuid=" + kuid;
+         (new Image()).src = u;
+      }
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30070" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28099" data-alias="eXelate Media provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//loadm.exelator.com/load",
+      data: {
+          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',
+          buid: kuid,
+          p: '204',
+          g: '270',
+          j: '0'
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="28758" data-alias="CreativeBloq DTC"><script>
+loc = location.href.substr(location.href.indexOf('http://')+7,256);
+if(loc.length - loc.indexOf('/') > 1) {
+	path_loc = loc.substr(loc.indexOf('/')+1,256).split('/');
+	if(path_loc[0] == 'apple') {Krux('set', 'section', 'Apple Products');}
+	else if(path_loc[0] == 'gadgets') {Krux('set', 'section', 'Gadgets');}
+	else if(path_loc[0] == 'photography') {Krux('set', 'section', 'Photography');}
+} else {
+	Krux('set', 'section', 'Home Page');
+}
+</script></span><span class="kxtag kxinvisible" data-id="30814" data-alias="DataXu User Match"><script>
+(function(){
+        var kuid = Krux('get', 'user');
+        if (kuid) {
+            var dxu_url = '//i.w55c.net/ping_match.gif?st=Krux&rurl=http://beacon.krxd.net/usermatch.gif?partner=dataxu&uid=_wfivefivec_';
+           var i = new Image();
+           i.src = dxu_url;
+        }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="30820" data-alias="Appnexus Extension User Match"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  var cbust = Math.round(new Date().getTime() / 1000);
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//ib.adnxs.com/pxj",
+      data: {
+          bidder: '140',
+          seg: '381342',
+          action: "setuid('" + kuid + "')",
+          bust: cbust
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="29302" data-alias="AdX user sync"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid && typeof kuid != 'undefined') {
+      var prefix = location.protocol == 'https:' ? "https:" :"http:";
+      var r_url = prefix + '//cm.g.doubleclick.net/pixel'
+      var kurl = prefix + '//apiservices.krxd.net/um?partner=google&r=' + r_url;
+      var i = new Image();
+      i.src = kurl;
+  }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28130" data-alias="DTC v1: basic info for training"><script>
+// Using UrlPath 1 to produce page attribute url_path_1
+Krux('scrape', { "page_attr_url_path_1": {url_path: "1"}});
+// Using UrlPath 2 to produce page attribute url_path_2
+Krux('scrape', { "page_attr_url_path_2": {url_path: "2"}});
+// Using Cookie asi_segs to produce user attribute cookie_asi_segs
+Krux('scrape', { "user_attr_cookie_asi_segs": {cookie: "asi_segs"}});
+// Using Cookie rsi_segs to produce user attribute cookie_rsi_segs
+Krux('scrape', { "user_attr_cookie_rsi_segs": {cookie: "rsi_segs"}});
+</script></span></div><script async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/gatrack.js"></script><script async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/controltag.js.ae7f2374304abe49e3ec18a3fb32755f"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/linkid.js" id="undefined"></script><script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/6117.js" async="" type="text/javascript"></script><script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/cb=gapi.loaded_1" async=""></script><script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/cb=gapi.loaded_0" async=""></script><script async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/all-v1.js"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/analytics.js"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/controltag"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/socialize.js">[object Object]</script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/widgets.js"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/in.js"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/ga.js"></script><script async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/gtm.js"></script><script type="text/javascript" async="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/widget.js"></script><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/get" async=""></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+          <meta name="google-site-verification" content="zUiAEoV0xWpyLLW0GL5nEjlImdsOhYen-XH8Bh5rRRw">
+              <meta name="msvalidate.01" content="DD1D5DE15ADB83A7C7A75936197CB88F">
+    
+    
+    <script async="" type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/gpt.js"></script><script class="kxint" type="text/javascript"> 
+        window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]); 
+        (function(){  
+              
+            function  retrieve(n){  
+                var m,  k='kx'+n; 
+                if  (window.localStorage) { 
+                        return  window.localStorage[k]  ||  ""; 
+                } else  if  (navigator.cookieEnabled) { 
+                        m = document.cookie.match(k+'=([^;]*)');  
+                        return  (m  &&  unescape(m[1])) ||  ""; 
+                } else  { 
+                        return  ''; 
+                } 
+            } 
+      
+            Krux.user = retrieve('user'); 
+            Krux.segments = retrieve('segs')  ? retrieve('segs').split(',') : []; 
+              
+            //  DFP Premium 
+            var dfpp  = []; 
+            if  (Krux.user) { 
+                dfpp.push('khost='  + encodeURIComponent(location.hostname)); 
+                dfpp.push('kuid=' + Krux.user); 
+            } 
+            for (var  i = 0;  i < Krux.segments.length; i++ ) { 
+                dfpp.push('ksg='  + Krux.segments[i]);  
+            } 
+            Krux.dfppKeyValues  = dfpp.length ? dfpp.join(';')  + ';' : ''; 
+              
+        })(); 
+    </script> 
+
+    
+<link rel="shortcut icon" href="http://media.creativebloq.futurecdn.net/sites/all/themes/creativebloq_redesign/favicon.ico" type="image/x-icon">
+<script type="text/javascript">var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+(function() { var gads = document.createElement("script"); gads.async = true; gads.type = "text/javascript"; var useSSL = "https:" == document.location.protocol; gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js"; var node = document.getElementsByTagName("script")[0]; node.parentNode.insertBefore(gads, node);})();</script>
+<!-- AUDIENCESCIENCE AD TAG CODE --><script type="text/javascript">var asi_segs = []; var segs_beg = document.cookie.indexOf("asi_segs="); if (segs_beg >= 0) { segs_beg = document.cookie.indexOf("=", segs_beg) + 1; if (segs_beg > 0) { var segs_end = document.cookie.indexOf(";", segs_beg); if (segs_end == -1) { segs_end = document.cookie.length } asi_segs = document.cookie.substring(segs_beg, segs_end).split("|") } } if ((asi_segs == null) || (asi_segs.length == 0)) { asi_segs = "null" } ;</script><!-- END AUDIENCESCIENCE AD TAG CODE -->
+<script type="text/javascript">googletag.cmd.push(function() {
+dfp_leaderboard = googletag.defineSlot("/8644/Design_CreativeBloQ/tutorial", [[728,90],[970,66],[970,90],[970,250]], "dfp-ad-leaderboard")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","1");
+dfp_mpu1 = googletag.defineSlot("/8644/Design_CreativeBloQ/tutorial", [300,250], "dfp-ad-mpu1")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","2");
+dfp_skyscraper = googletag.defineSlot("/8644/Design_CreativeBloQ/tutorial", [[160,600],[300,600]], "dfp-ad-skyscraper")
+  .addService(googletag.pubads())
+  .setTargeting("pos","3");
+dfp_oop_background = googletag.defineOutOfPageSlot("/8644/Design_CreativeBloQ/tutorial", "dfp-ad-background")
+  .addService(googletag.pubads())
+  .setTargeting("oop","skin")
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","4");
+dfp_oop_overlay = googletag.defineOutOfPageSlot("/8644/Design_CreativeBloQ/tutorial", "dfp-ad-overlay")
+  .addService(googletag.pubads())
+  .setTargeting("oop","overlay")
+  .setTargeting("pos","5");
+dfp_inline_advert_mpu_body_1 = googletag.defineSlot("/8644/Design_CreativeBloQ/tutorial", [300,250], "dfp-ad-advert_mpu_body_1")
+  .addService(googletag.pubads())
+  .setTargeting("pos","6");
+dfp_leaderboardmobile = googletag.defineSlot("/8644/Design_CreativeBloQ/tutorial", [320,50], "dfp-ad-leaderboardmobile")
+  .addService(googletag.pubads())
+  .setTargeting("format","roadblock")
+  .setTargeting("pos","1");
+googletag.pubads().setTargeting("ksg",  Krux.segments);
+googletag.pubads().setTargeting("kuid", Krux.user); 
+googletag.pubads().setTargeting("khost",  encodeURIComponent(location.hostname)); 
+googletag.pubads().setTargeting("asi", asi_segs);
+googletag.pubads().setTargeting("kw", ["CSS3","JavaScript","netmag","Web design","How to"]);
+googletag.pubads().setTargeting("articleid", "2906");
+googletag.pubads().enableAsyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();});
+</script>
+<meta name="description" content="Knowledge needed: Intermediate CSS, HTML, JavaScript Requires: jQuery, Modernizr Project time: 1 hour">
+<link rel="canonical" href="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Getting CSS animations to trigger at the right time   CSS3   Creative Bloq.html">
+<meta name="revisit-after" content="1 day">
+<link rel="image_src" href="http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/imagecache/v2_article_image/articles/article/2013/01/image2-2.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CreativeBloQ">
+<meta name="twitter:url" content="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906">
+<meta name="twitter:title" content="Getting CSS animations to trigger at the right time">
+<meta name="twitter:image" content="http://media.creativebloq.futurecdn.net/sites/creativebloq.com/files/imagecache/v2_article_image/articles/article/2013/01/image2-2.jpg">
+<meta name="twitter:description" content="Karl Schellenberg demonstrates how to stagger full-site animations with CSS3 and JavaScript through page scrolling.">
+<meta name="twitter:creator" content="@http://www.twitter.com/CreativeBloq">
+<title>Getting CSS animations to trigger at the right time | CSS3 | Creative Bloq</title>
+<meta name="description" content="Karl Schellenberg demonstrates how to stagger full-site animations with CSS3 and JavaScript through page scrolling.">
+<meta name="keywords" content="CSS3,JavaScript,netmag,Web design,Tutorial,How to">
+<link rel="canonical" href="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Getting CSS animations to trigger at the right time   CSS3   Creative Bloq.html">
+<script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/modernizr-2.6.2-respond-1.1.0.min.js"></script><script async="" type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/pubads_impl_39.js"></script>
+<script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/saved_resource"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/css_646761e397a3cd3b7f0ae8a5382ac057.css">
+    <link href="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/future_branding.min.css" rel="stylesheet" type="text/css">
+
+        
+    <!-- Maxymiser script start -->
+    <script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/mmcore.js"></script><script id="mmcore.1" type="text/javascript" charset="utf-8" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/saved_resource(1)"></script>
+    <!-- Maxymiser script end -->
+  <script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/osd.js"></script><script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/nonSecureAnonymousFramework"></script><script async="" defer="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/317817.js"></script><style type="text/css">.ob-tcolor{color:rgb(51, 51, 51)} .ob-lcolor{color:rgb(255, 90, 20)} .ob-bgtcolor{background-color:rgb(51, 51, 51)} .item-link-container:hover .ob-tcolor{border-color:rgb(51, 51, 51)}</style><style type="text/css">* html #li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link{height:1% !important;}#li_ui_li_gen_1400326672110_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link:link, #li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link:visited, #li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link:hover, #li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1400326672110_0 a#li_ui_li_gen_1400326672110_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-logo{background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-logo, #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-logo{}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title, #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title{}.IN-shadowed #li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title{}.IN-shadowed #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title, .IN-shadowed #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title{}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text, #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title-text, #li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title-text *{color:#000 !important;}#li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title-text, #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title-text, #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title-text *, #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title-text *{color:#666 !important;}#li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title #li_ui_li_gen_1400326672110_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text, .success #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1400326672110_0 #li_ui_li_gen_1400326672110_0-title{}.success #li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title-text, .success #li_ui_li_gen_1400326672110_0.hovered #li_ui_li_gen_1400326672110_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title, .success #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title-text, .success #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title-text, .success #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title-text *, .success #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1400326672110_0.clicked #li_ui_li_gen_1400326672110_0-title, .IN-shadowed .success #li_ui_li_gen_1400326672110_0.down #li_ui_li_gen_1400326672110_0-title{}#li_ui_li_gen_1400326672131_1-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1400326672131_1.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:-150px top !important;}#li_ui_li_gen_1400326672131_1-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:38px !important;}#li_ui_li_gen_1400326672131_1-container.IN-empty #li_ui_li_gen_1400326672131_1-inner.IN-top {background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -20px !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1400326672131_1-container.IN-empty #li_ui_li_gen_1400326672131_1-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1400326672131_1-container.IN-hidden #li_ui_li_gen_1400326672131_1 {display:none !important;}* html #li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link{height:1% !important;}#li_ui_li_gen_1400326672143_2{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link:link, #li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link:visited, #li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link:hover, #li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1400326672143_2 a#li_ui_li_gen_1400326672143_2-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-logo{background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-logo, #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-logo{}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title, #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title{}.IN-shadowed #li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title{}.IN-shadowed #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title, .IN-shadowed #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title{}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text, #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text em{font-style:italic !important;}#li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title-text, #li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title-text *{color:#000 !important;}#li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title-text, #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title-text, #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title-text *, #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title-text *{color:#666 !important;}#li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title #li_ui_li_gen_1400326672143_2-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text, .success #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1400326672143_2 #li_ui_li_gen_1400326672143_2-title{}.success #li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title-text, .success #li_ui_li_gen_1400326672143_2.hovered #li_ui_li_gen_1400326672143_2-title-text *{color:#000 !important;}.success #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title, .success #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title-text, .success #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title-text, .success #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title-text *, .success #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1400326672143_2.clicked #li_ui_li_gen_1400326672143_2-title, .IN-shadowed .success #li_ui_li_gen_1400326672143_2.down #li_ui_li_gen_1400326672143_2-title{}#li_ui_li_gen_1400326672151_3-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1400326672151_3.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:-150px top !important;}#li_ui_li_gen_1400326672151_3-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:38px !important;}#li_ui_li_gen_1400326672151_3-container.IN-empty #li_ui_li_gen_1400326672151_3-inner.IN-top {background-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -20px !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1400326672151_3-container.IN-empty #li_ui_li_gen_1400326672151_3-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1400326672151_3-container.IN-hidden #li_ui_li_gen_1400326672151_3 {display:none !important;}</style><style type="text/css">#future-gigya-login td, #future-gigya-login table {width:auto;font-size:1px;vertical-align:top;border-collapse:separate;border:none; padding:0px;margin:0px;} #future-gigya-login {}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script async="" type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/seg"></script></head>
+  <body class="not- page-node node-type-article   i18n-en placeholder-support" itemscope="" itemtype="http://schema.org/WebPage" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/hub(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="gigya_ruler" style="visibility: hidden; position: absolute; margin: 0px; padding: 0px; line-height: 11px; font-family: arial; font-size: 11px; white-space: nowrap; width: auto; overflow: hidden; display: none;"><span id="gigya_ruler_text"></span></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/dgdTycPTSRj.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/dgdTycPTSRj(1).html" style="border: none;"></iframe></div></div></div><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/ako"></script><iframe src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/gigIDsProxy.html" style="width: 30px; height: 10px; position: absolute; top: -1000px; left: -1000px;"></iframe><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 10px; padding-right: 20px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden;" class=""></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position:absolute; width:9999px; visibility:hidden; display:none"></div></div><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/512619250.js"></script><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/pcx.js"></script>
+    <!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+          <div class="block block-future_dfp" id="block-future_dfp-background">
+      <div class="content"><div id="dfp-ad-background" class="dfp-tag-wrapper" style="display: none;">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-background");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_3__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_3" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_3" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_3__hidden__" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_3__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe>
+</div>
+</div>
+</div>        <div id="container">
+      <div class="wrap social">
+        <nav id="menu-site-nav"><header class="assistive-text">View content by tag</header>
+          <ul class="menu">
+            <li class="leaf first link-features"><a href="http://www.creativebloq.com/tag/feature" title="">Features</a></li>
+            <li class="leaf link-news"><a href="http://www.creativebloq.com/tag/news" title="">News</a></li>
+            <li class="leaf link-tutorials"><a href="http://www.creativebloq.com/tag/tutorial" title="">Tutorials</a></li>
+            <li class="leaf link-opinion"><a href="http://www.creativebloq.com/tag/opinion" title="">Opinion</a></li>
+            <li class="leaf link-interviews"><a href="http://www.creativebloq.com/tag/interview" title="">Interviews</a></li>
+            <li class="leaf last link-videos"><a href="http://www.creativebloq.com/tag/video" title="">Videos</a></li>
+          </ul>
+        </nav>
+
+        <ul class="header_icons">
+          <li class="twitter"><a href="http://twitter.com/creativebloq"><span class="FIR">Twitter<span></span></span></a></li>
+          <li class="facebook"><a href="http://www.facebook.com/creativebloq"><span class="FIR">Facebook<span></span></span></a></li>
+          <li class="pintrest"><a href="http://pintrest.com/creativebloq"><span class="FIR">Pintrest<span></span></span></a></li>
+          <li class="youtube"><a href="http://www.youtube.com/creativebloq"><span class="FIR">YouTube<span></span></span></a></li>
+          <li class="google_plus"><a href="https://plus.google.com/111587549431808172126"><span class="FIR">Google+<span></span></span></a></li>
+          <li class="future"><a href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#future_company_footer"><span class="FIR">Future<span></span></span></a></li>
+        </ul>
+      </div>
+
+      <header id="header" role="banner">
+        <div class="main_nav">
+          <div class="wrap">
+            <div class="content">
+              <a id="nav-btn-open" class="nav-btn" title="Open Menu" href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#header">Open Menu</a>
+              <a id="nav-btn-close" class="nav-btn" title="Close Menu" href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#top">Close Menu</a>
+              <div id="site-logo"><h1><a href="http://www.creativebloq.com/" title="Homepage">Creative Bloq</a></h1></div>
+                          </div><!-- content -->
+                      <nav role="navigation" class="nav" id="nav">
+            <ul class="user-opts">
+              <li class="user-search">
+                <a class="expand" href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#site-search" data-toggle="block"><i class="cb-icon-search"></i></a>
+                <div id="site-search" class="searchblock superblock closed">
+                  <form action="http://www.creativebloq.com/search" accept-charset="UTF-8" method="get" id="future-search-block-form" class="search-form">
+                    <input type="text" maxlength="255" name="term" id="search-term" value="" placeholder="Search" class="cb-search search-text">
+                    <input type="submit" value="Search" class="btn btn-search">
+                  </form>
+                </div>
+              </li>
+                            <li class="user-login">
+              <a href="http://www.creativebloq.com/user/login?destination=css3%2Fgetting-css-animations-trigger-1132906"><i class="cb-icon-profile">Login</i></a>              </li>
+                          </ul>
+            <ul class="primary" id="main-menu">
+              <li class="menu-home home"><a href="http://www.creativebloq.com/">Home</a></li>
+              <li class="menu-graphic-design"><a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a></li>
+              <li class="menu-web-design"><a href="http://www.creativebloq.com/tag/Web-design">Web design</a></li>
+              <li class="menu-3d"><a href="http://www.creativebloq.com/tag/3D">3D</a></li>
+              <li class="menu-audiovisual"><a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a></li>
+              <li class="menu-typography extra-mob"><a href="http://www.creativebloq.com/tag/Typography">Typography</a></li>
+              <li class="menu-branding extra-mob"><a href="http://www.creativebloq.com/tag/Branding">Branding</a></li>
+							<li class="menu-illustration extra-mob"><a href="http://www.creativebloq.com/tag/illustration">Illustration</a></li>
+              <li>
+                <a class="expand" href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#more-block" data-target="block">More… <i class="cb-icon-menu-arrow"></i></a>
+                <div id="more-block" class="superblock closed">
+                  <ul class="shortlist">
+                    <li class="block-title">
+                      <h5>Most Popular</h5>
+                    </li>
+                    <li><a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Web-design">Web design</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/3D">3D</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/Inspiration">Inspiration</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/typography">Typography</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/branding">Branding</a></li>
+                    <li><a href="http://www.creativebloq.com/tag/illustration">Illustration</a></li>
+                  </ul>
+                  <div class="longlist">
+                    <div class="inner scroll-pane jspScrollable" tabindex="0" style="overflow: hidden; padding: 0px; width: 649px;">
+                                          <div class="jspContainer" style="width: 649px; height: 411px;"><div class="jspPane" style="padding: 0px; left: 0px; width: 649px;"><div class="view view-tag-menu view-id-tag_menu view-display-id-taxonomy_menu_block view-dom-id-176f6e516c93d04ba2f1d897c26316e9">
+    
+  
+  
+      <div class="view-content">
+        <ul>      <li class="block-title"><h5>3</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/3D">3D</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3D-modelling">3D modelling</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3D-printing">3D printing</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/3ds-Max">3ds Max</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>A</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Adobe">Adobe</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Advertising">Advertising</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/After-Effects">After Effects</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Agencies">Agencies</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Android">Android</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Animation">Animation</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/App-design">App design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Apple">Apple</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Art-direction">Art direction</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Audiovisual">Audiovisual</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>B</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Behance">Behance</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Blender">Blender</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Branding">Branding</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Business">Business</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>C</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Career">Career</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Character-design">Character design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Cinema-4D">Cinema 4D</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Comics">Comics</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Create-Now">Create Now</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Creative-Cloud">Creative Cloud</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Creativity">Creativity</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/CSS3">CSS3</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>D</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Design">Design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Dreamweaver">Dreamweaver</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>E</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Education">Education</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>F</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Flash">Flash</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>G</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Gadgets">Gadgets</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Gamification">Gamification</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Graphic-design">Graphic design</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>H</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Hardware">Hardware</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/HTML5">HTML5</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>I</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Illustration">Illustration</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Illustrator">Illustrator</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/InDesign">InDesign</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Infographic">Infographic</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Inspiration">Inspiration</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Interview">Interview</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/iPad">iPad</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/iPhone">iPhone</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>J</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/JavaScript">JavaScript</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Jobs">Jobs</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/jQuery">jQuery</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>L</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Logo-design">Logo design</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>M</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Maya">Maya</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Microsoft">Microsoft</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Mobile">Mobile</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Moleskine">Moleskine</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Motion-graphics">Motion graphics</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Movies">Movies</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>N</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Navigation">Navigation</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/News">News</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>O</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Opinion">Opinion</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/OS-X">OS X</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>P</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Packaging">Packaging</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Photography">Photography</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Photoshop">Photoshop</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Portfolios">Portfolios</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Posters">Posters</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Premiere-Pro">Premiere Pro</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Print-design">Print design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Product-design">Product design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Productivity">Productivity</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>Q</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Q%2526A">Q&amp;A</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>R</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Review">Review</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>S</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Self-promotion">Self promotion</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Showcase">Showcase</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Showreel">Showreel</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Street-art">Street art</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Studio">Studio</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>T</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Tutorial">Tutorial</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Twitter">Twitter</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Typography">Typography</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>U</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/UX">UX</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>V</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Video">Video</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Video-games">Video games</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Video-production">Video production</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>W</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/Wallpapers">Wallpapers</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Web-design">Web design</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Weekly">Weekly</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/Wireframes">Wireframes</a>  </li>
+          <li>  
+          <a href="http://www.creativebloq.com/tag/WordPress">WordPress</a>  </li>
+      </ul>  <ul>      <li class="block-title"><h5>Z</h5></li>
+            <li>  
+          <a href="http://www.creativebloq.com/tag/ZBrush">ZBrush</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div></div><div class="jspHorizontalBar"><div class="jspCap jspCapLeft"></div><div class="jspTrack" style="width: 651px;"><div class="jspDrag" style="width: 96px;"><div class="jspDragLeft"></div><div class="jspDragRight"></div></div></div><div class="jspCap jspCapRight"></div></div></div></div><!-- .inner -->
+                  </div><!-- .longlist -->
+                </div>
+              </li>
+            </ul>
+            <ul class="other">
+              <li class="menu-jobs-board last">
+                <a href="http://jobs.creativebloq.com/" title="">Jobs</a>
+              </li>
+              <li>
+                <a class="expand" href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#magazines-block" data-toggle="block">Magazines<i class="cb-icon-menu-arrow"></i></a>
+                <div id="magazines-block" class="superblock closed">
+                  <div class="view view-magazines view-id-magazines view-display-id-magazine_menu_block view-dom-id-2c45317bb042a54a16935011ca28f38c">
+    
+  
+  
+      <div class="view-content">
+          <ul class="magazines">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+          <a href="http://www.creativebloq.com/3d-world-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/maythreewidget.jpg" alt="" title="" width="133" height="172" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/3d-world-magazine" class="btn-cover">3D World</a>  </li>
+          <li class="views-row views-row-2 views-row-even">  
+          <a href="http://www.creativebloq.com/computer-arts-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/art227coversmall.jpg" alt="" title="" width="133" height="180" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/computer-arts-magazine" class="btn-cover">Computer Arts</a>  </li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+          <a href="http://www.creativebloq.com/net-magazine" class="imagecache imagecache-v2_magazine_image imagecache-linked imagecache-v2_magazine_image_linked"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/netmay.jpg" alt="" title="" width="133" height="172" class="imagecache imagecache-v2_magazine_image"></a>    
+          <a href="http://www.creativebloq.com/net-magazine" class="btn-cover">net magazine</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>                  <ul class="shortlist">
+                    <li class="block-title"><h5>Other Products</h5></li>
+                    <li><a href="http://www.myfavouritemagazines.co.uk/design-bookazines/">Special Editions</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          </div><!-- .wrap -->
+        </div>
+      </header>
+      <div id="header_top" class="wrap above-header">
+        
+                  <nav id="menu-site-nav"><header class="assistive-text">View content by tag</header><ul class="menu"><li class="leaf first link-features"><a href="http://www.creativebloq.com/tag/feature" title="">Features</a></li>
+<li class="leaf link-news"><a href="http://www.creativebloq.com/tag/news" title="">News</a></li>
+<li class="leaf link-tutorials"><a href="http://www.creativebloq.com/tag/tutorial" title="">Tutorials</a></li>
+<li class="leaf link-opinion"><a href="http://www.creativebloq.com/tag/opinion" title="">Opinion</a></li>
+<li class="leaf link-interviews"><a href="http://www.creativebloq.com/tag/interview" title="">Interviews</a></li>
+<li class="leaf last link-videos"><a href="http://www.creativebloq.com/tag/video" title="">Videos</a></li>
+</ul></nav>
+<div class="block block-future_dfp" id="block-future_dfp-leaderboard">
+      <div class="content"><div id="dfp-ad-leaderboard" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-leaderboard");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_0" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div class="block block-future_dfp" id="block-future_dfp-leaderboardmobile" style="display: none;">
+      <div class="content"><div id="dfp-ad-leaderboardmobile" class="dfp-tag-wrapper"></div>
+</div>
+</div>        
+      </div>
+      <div id="page-canvas"><!-- important: for mobile off-canvas navigation, must be after header -->
+        <div class="grid">
+          <div id="main-content" class="page-content">
+            <section class="article-listing-section">
+
+              
+              
+                                            
+              
+                                            <div id="hp-intel"><h3>Sponsored by</h3><ul><li class="intel"><span class="FIR">Intel<span></span></span></li><li class="hp"><span class="FIR">HP<span></span></span></li></ul></div>              
+              
+                <nav class="next-prev clearfix">
+    <h3 id="next-prev-nav">Previous and Next articles</h3>
+          <a href="http://www.creativebloq.com/branding/jewellery-designs-get-some-blingin-branding-5132905" class="prev">
+        <article class="">
+                      <figure>
+              <img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/trigprim.jpg" alt="" title="" width="130" height="73" class="imagecache imagecache-v2_teaser_image">            </figure>
+                    <h4>Beautiful geometric branding for custom jewellery </h4>
+        </article>
+      </a>
+              <a href="http://www.creativebloq.com/infographic/informative-infographic-reveals-harmful-effects-smoking-5132907" class="next">
+        <article class="">
+                      <figure>
+              <img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/smokingmain.jpg" alt="" title="" width="130" height="73" class="imagecache imagecache-v2_teaser_image">            </figure>
+                    <h4>Stylish infographic puts a new spin on anti-smoking</h4>
+        </article>
+      </a>
+      </nav>
+
+<article class="node node-article" itemscope="" itemtype="http://schema.org/Article">
+  <header>
+          <h4><span class="tag">CSS3</span><span class="topic tag">How to</span></h4>
+            <h1 class="title" itemprop="name"><span>Getting CSS animations to trigger at the right time</span></h1>
+          <div class="submitted">
+  <div class="submitted-info">
+    <span><time datetime="2013-01-17T00:00:00+00:00" class="js-hide"><span class="submitted-date">Jan 17, 2013</span> <span class="submitted-time">00:00 am</span></time></span>
+    <span class="submitted-comment-count comment-count-0"><a href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#comments-list" class="std-link">Be the first to comment</a></span>
+  </div>
+      
+<div class="share-links">
+	<h3>Share this article</h3>
+	<ul>
+					<li class="twitter-button">
+				<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/tweet_button.1400006231.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 62px;"></iframe>			
+			</li>
+					
+					<li class="facebook-button">
+				<iframe src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:51px; height:62px;" allowtransparency="true"></iframe>			
+			</li>
+					
+					
+			<li class="googleplus-button">
+				<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I0_1400326670517" name="I0_1400326670517" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>		
+			</li>
+					
+					
+			<li class="linkedin-button">
+				<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326672131_1-container" class="IN-top"><span id="li_ui_li_gen_1400326672131_1" class="IN-top"><span id="li_ui_li_gen_1400326672131_1-inner" class="IN-top"><span id="li_ui_li_gen_1400326672131_1-content" class="IN-top">1</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326672110_0"><a id="li_ui_li_gen_1400326672110_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1400326672110_0-logo">in</span><span id="li_ui_li_gen_1400326672110_0-title"><span id="li_ui_li_gen_1400326672110_0-mark"></span><span id="li_ui_li_gen_1400326672110_0-title-text">Share</span></span></a></span></span></span><script type="in/share+init" data-counter="top"></script>		
+			</li>
+		
+		
+			</ul>
+</div>  </div>    
+                  <div class="main-image">
+                    <img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/image2-2_original.jpg" alt="Getting CSS animations to trigger at the right time" title="Getting CSS animations to trigger at the right time" width="535" height="300" class="imagecache imagecache-v2_article_image">        </div>
+          
+  </header>
+
+  <div class="content">
+
+                  <h2 class="strapline">
+          Karl Schellenberg demonstrates how to stagger full-site animations with CSS3 and JavaScript through page scrolling.        </h2>
+            
+    
+    
+    <div class="copy">
+      <ul>
+	<li><strong>Knowledge needed:</strong> Intermediate <a href="http://www.creativebloq.com/web-design/examples-css-912710" target="_blank">CSS</a>, <a href="http://www.creativebloq.com/web-design-tips/examples-of-html5-1233547" target="_blank">HTML</a>, <a href="http://www.creativebloq.com/web-design/examples-of-javascript-1233964" target="_blank">JavaScript</a></li>
+	<li><strong>Requires:</strong> jQuery, Modernizr</li>
+	<li><strong>Project time:</strong> 1 hour</li>
+</ul>
+<p><a href="http://mos.creativebloq.com/tutorials/2013/Net%20mag/Getting%20CSS%20animations%20to%20trigger%20at%20the%20right%20time/netmag-staggering-fullsite-animations-with-css3-and-javascript-through-page-scrolling.zip"><strong>Support file 1</strong></a></p>
+<div class="future_dfp-inline_ad">
+   <h4 class="dfp-ad-advert_mpu_body_1">Advertisement</h4>
+  <div id="dfp-ad-advert_mpu_body_1" class="dfp-tag-wrapper">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("dfp-ad-advert_mpu_body_1");});</script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_5__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_5" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_5" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+  </div>
+</div>
+<p>When we redeveloped our new website, we decided to use <a href="http://www.creativebloq.com/css3/animation-with-css3-712437" target="_blank">CSS3 animations</a> to provide an impressive and interactive site experience. However, we struggled to time the animations to trigger at the right time.&nbsp;</p>
+<p>Because animated elements "below the fold" (depending on the screen resolution) animate on page load, some animations had already played before the user had chance to scroll to them.&nbsp;</p>
+<figure class="captioned-image" style="width:535px"><img alt="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Image1.jpg" style="width:535px">
+	<figcaption>3magine’s homepage. The slider animations start immediately after preloading, but only if they are visible</figcaption>
+</figure>
+
+<p>To prevent this, we delay the animations until the user can see them. The animations trigger as the user scrolls down and the elements come into view, which creates a staggered effect. To do this we used specific classes for CSS3 Transitions and some JavaScript to trigger the correct elements during scrolling.</p>
+<figure class="captioned-image" style="width:535px"><img alt="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Image2.jpg" style="width:535px">
+	<figcaption>When the page first loads, the elements “below” the fold do not animate until scrolled</figcaption>
+</figure>
+<p>This is supported on any modern browser with CSS3 Transitions support.</p>
+<p>Here’s the loading code we placed at the end of the <strong>&lt;head&gt;</strong> element.</p>
+<p><strong>&nbsp;&nbsp;&nbsp; &lt;head&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script<br>
+	&nbsp;&nbsp;&nbsp; src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"&gt;&lt;/script&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src="http://www.3magine.com/wp-content/themes/3magine/js/jquery.appear-1.1.1.modified.js"&gt;&lt;/script&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Modernizr.csstransitions) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function preloadImages(imgs, callback) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cache = [],<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imgsTotal = imgs.length,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imgsLoaded = 0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(imgs).each(function (i, img) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cacheImage = document.createElement('img');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cacheImage.onload = function () {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (++imgsLoaded == imgsTotal) callback();<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cacheImage.src = $(img).attr('src');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cache.push(cacheImage);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $.fn.trans = function () {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = arguments[0],<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = arguments[1] || '';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (t) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $.each(this, function (i, e) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(['-webkit-', '-moz-', '-o-', '-ms-', '']).each(function (i, p) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(e).css(p + 'transition' + d, t);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write('&lt;link rel="stylesheet" href="animations.css" /&gt;');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(function(){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //preload images contained within elements that need to animate<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; preloadImages($('.services img, .featured img'), function () {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('.services, .featured').appear({<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; once: true,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forEachVisible: function (i, e) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(e).data('delay', i);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; appear: function () {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var delay = 150,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stagger = 800,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sequential_delay = stagger * parseInt($(this).data('delay')) || 0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(this).children().each(function (i, e) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(e).trans(i * delay + sequential_delay + 'ms', '-delay');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(this).removeClass('animationBegin');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/head&gt;</strong></p>
+<p>First, include all necessary JavaScript libraries, such as Modernizr, jQuery and a custom jQuery Appear script. We use Modernizr to test if the browser supports CSS3 Transitions. If so, the script executes. If not, the page loads as normal without animations taking place.</p>
+<figure class="captioned-image" style="width:535px"><img alt="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Image3.jpg" style="width:535px">
+	<figcaption>The JavaScript automatically calculated a sequential delay when multiple animated sections are simultaneously visible</figcaption>
+</figure>
+<p>The jQuery Appear plugin was originally written by Michael Hixon and modified by us specifically for our website. Get our modified version <a href="http://www.3magine.com/wp-content/themes/3magine/js/jquery.appear-1.1.1.modified.js">here</a>.</p>
+<p>If the browser supports CSS3 transitions we define two helper functions: <strong>preloadImages </strong>and <strong>trans</strong> jQuery extension.</p>
+<p>Below is the CSS code to animate this, which goes into <strong>animations.css</strong>. We use custom cubic-bezier easing as it looks better than the standard linear or default ease-in/out functions in CSS3. CSS easing animation tool,&nbsp;<a href="http://matthewlein.com/ceaser/">Ceaser</a>,&nbsp;will help you design your own easing functions.</p>
+<p><strong>&nbsp;&nbsp;&nbsp; .services.animationBegin &gt; * {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opacity:0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left:50px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -webkit-transition:all 0 linear 0 !important;&nbsp;&nbsp; /* rewind instantly */<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -moz-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -o-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ms-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp; .featured &gt; * {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position:relative;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opacity:1;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left:0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -webkit-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -moz-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -o-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ms-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -webkit-transform: rotate(0deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -moz-transform: rotate(0deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -o-transform: rotate(0deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ms-transform: rotate(0deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transition: rotate(0deg);<br>
+	&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp; .featured.animationBegin &gt; * {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opacity:0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left:50px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -webkit-transition:all 0 linear 0 !important;&nbsp;&nbsp; /* rewind instantly */<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -moz-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -o-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ms-transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transition:all 0 linear 0 !important;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -webkit-transform: rotate(45deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -moz-transform: rotate(45deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -o-transform: rotate(45deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -ms-transform: rotate(45deg);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transition: rotate(45deg);<br>
+	&nbsp;&nbsp;&nbsp; }</strong></p>
+<p>Why document.write? For browsers that lack CSS transitions support, CSS must be injected so the animation loads at the top of the page immediately after Modernizr tests support. We were reluctant to do anything IE-specific (for example, conditional comments) or try user agent sniffing because a lot of older versions of browsers, such as IE, display the layout fine but lack support for Transitions (and that’s what Modernizr is for).&nbsp;</p>
+<p>Document.write works cross-browser, including older versions of Opera. It's fast enough to prevent a ‘flash of unstyled content’ and display visible elements before the animations begin.</p>
+<p>This sets up two things: the first section of code, <strong>.services &gt; *</strong> dictates where we want the animation to end up. A similar selector, but with an <strong>.animationBegin</strong> class, dictates where the animation starts. Note that the parent element of the items that need to be animated actually starts with this class in its markup (shown above).</p>
+<p>The next few lines of code are executed when the entire document has loaded. The <strong>preloadImages</strong> function targets the images within the elements that will be animated and preloads them.</p>
+<p>This prevents animations loading before the target images are displayed in the browser. When all the images are loaded we call our jQuery Appear plugin, which does two things: first, it scans the currently visible elements on the page and sets a delay parameter on all the planned animated elements. Second, it attaches an appear event that triggers for all visible elements.</p>
+<p>This controls the staggering and delay given to each child element that’s to be animated. We’re using a conservative 150ms here, but, please, play around with this number to find the right delay for your website by changing the delay variable. Each successive child has this delay multiplied against the index of the each function: the first delay is 0, the second delay 150, the 3rd delay 300 and so on.</p>
+<p>Finally, and perhaps the most important bit, is that the parent UI’s <strong>animationBegin</strong> class is removed, which starts the animations.</p>
+<p>Here’s the HTML content we're animating using they CSS/JavaScript code explained above.</p>
+<p><strong>&nbsp;&nbsp;&nbsp; &lt;ul class="services animationBegin"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="imac-small"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;&lt;a href="http://www.3magine.com/wordpress-cms/"&gt;WordPress &amp;amp; CMS&lt;/a&gt;&lt;/h2&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="http://www.3magine.com/wordpress-cms/"&gt;&lt;span class="device"&gt;&lt;img width="162" height="92" src="http://www.3magine.com/wp-content/uploads/2012/04/tiny.png" class="attachment-post-thumbnail wp-post-image" alt="tiny" title="tiny" /&gt;&lt;/span&gt;&lt;/a&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="air-small"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;&lt;a href="http://www.3magine.com/ui-ux-design/"&gt;UI &amp;amp; UX Design&lt;/a&gt;&lt;/h2&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="http://www.3magine.com/ui-ux-design/"&gt;&lt;span class="device"&gt;&lt;img width="116" height="73" src="http://www.3magine.com/wp-content/uploads/2012/04/tiny2.png" class="attachment-post-thumbnail wp-post-image" alt="tiny" title="tiny" /&gt;&lt;/span&gt;&lt;/a&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...&lt;/p&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="ipad-small"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;&lt;a href="http://www.3magine.com/web-applications/"&gt;Web Applications&lt;/a&gt;&lt;/h2&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="http://www.3magine.com/web-applications/"&gt;&lt;span class="device"&gt;&lt;img width="88" height="118" src="http://www.3magine.com/wp-content/uploads/2012/04/web-applications-sample.png" class="attachment-post-thumbnail wp-post-image" alt="web-applications-sample" title="web-applications-sample" /&gt;&lt;/span&gt;&lt;/a&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;...when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="pro-small last"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;&lt;a href="http://www.3magine.com/social-networks/"&gt;Social Networks&lt;/a&gt;&lt;/h2&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="http://www.3magine.com/social-networks/"&gt;&lt;span class="device"&gt;&lt;img width="121" height="76" src="http://www.3magine.com/wp-content/uploads/2012/04/tiny3.png" class="attachment-post-thumbnail wp-post-image" alt="tiny" title="tiny" /&gt;&lt;/span&gt;&lt;/a&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;<br>
+	&nbsp;&nbsp;&nbsp; &nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class="featured animationBegin"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/featured-on.png" alt="Featured on"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/logos/cbc.png" alt="CBC Television"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/logos/techvibes.png" alt="Techvibes"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/logos/daytime.png" alt="Daytime Toronto"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/logos/den.png" alt="Dragon's Den"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="last"&gt;&lt;img src="http://www.3magine.com/wp-content/themes/3magine/images/logos/z.png" alt="Z103.5"&gt;&lt;/li&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;</strong></p>
+<p>This is really straightforward markup. In this case, it’s a list of services and then a “featured-on” list of logos.</p>
+<figure class="captioned-image" style="width:535px"><img alt="" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/Image5.jpg" style="width:535px">
+	<figcaption>‘Pinch’ the window and scroll down to see the animations delay</figcaption>
+</figure>
+<p>Click the link at the top of this page to see a working demo. The animated elements start off-screen and, when you scroll into view, become triggered.</p>
+<p><em>Karl Schellenberg, a lead programmer at <a href="http://www.3magine.com/">3magine</a>, has over 10 years of experience developing for the web. His philosophy is that no problem is too difficult. Outside of his work Karl’s computer-related hobbies include 3D rendering, animation and gaming.</em></p>
+<h4>Liked this? Read these!</h4>
+<ul>
+	<li>How to <a href="http://www.creativebloq.com/app-design/how-build-app-tutorials-12121473" target="_blank">build an app</a></li>
+	<li>Free <a href="http://www.creativebloq.com/typography/free-graffiti-fonts-11121160" target="_blank">graffiti font</a> selection</li>
+	<li><a href="http://www.creativebloq.com/digital-art/illustrator-tutorials-1232697" target="_blank">Illustrator tutorials</a>: amazing ideas to try today!</li>
+	<li>The ultimate guide to designing the <a href="http://www.creativebloq.com/graphic-design/pro-guide-logo-design-21221" target="_blank">best logos</a></li>
+	<li>The best free <a href="http://www.creativebloq.com/typography/best-free-web-fonts-1131610">web fonts</a> for designers</li>
+	<li>Useful and inspiring <a href="http://www.creativebloq.com/graphic-design/flyer-templates-1131645">flyer templates</a></li>
+	<li>The best <a href="http://www.creativebloq.com/3d/best-3D-movies-1233045">3D movies</a> of 2013</li>
+	<li>Discover what's next for <a href="http://www.creativebloq.com/3d/whats-next-augmented-reality-11121313">Augmented Reality</a></li>
+</ul>
+          </div>
+
+              
+    
+          
+          
+  </div>
+  <footer>
+              
+    
+          
+<div class="share-links">
+	<h3>Share this article</h3>
+	<ul>
+					<li class="twitter-button">
+				<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/tweet_button.1400006231(1).html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 62px;"></iframe>			
+			</li>
+					
+					<li class="facebook-button">
+				<iframe src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:51px; height:62px;" allowtransparency="true"></iframe>			
+			</li>
+					
+					
+			<li class="googleplus-button">
+				<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I1_1400326670542" name="I1_1400326670542" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/fastbutton(1).html" data-gapiattached="true" title="+1"></iframe></div>		
+			</li>
+					
+					
+			<li class="linkedin-button">
+				<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326672151_3-container" class="IN-top"><span id="li_ui_li_gen_1400326672151_3" class="IN-top"><span id="li_ui_li_gen_1400326672151_3-inner" class="IN-top"><span id="li_ui_li_gen_1400326672151_3-content" class="IN-top">1</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1400326672143_2"><a id="li_ui_li_gen_1400326672143_2-link" href="javascript:void(0);"><span id="li_ui_li_gen_1400326672143_2-logo">in</span><span id="li_ui_li_gen_1400326672143_2-title"><span id="li_ui_li_gen_1400326672143_2-mark"></span><span id="li_ui_li_gen_1400326672143_2-title-text">Share</span></span></a></span></span></span><script type="in/share+init" data-counter="top"></script>		
+			</li>
+		
+		
+			</ul>
+</div>    
+          <div class="article-tags">
+        <p>Tags:</p>
+        <div class="item-list"><ul><li class="first"><a href="http://www.creativebloq.com/tag/css3">CSS3</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/javascript">JavaScript</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/netmag">netmag</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/web-design">Web design</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/tutorial">Tutorial</a></li>
+<li class="first"><a href="http://www.creativebloq.com/tag/how-to">How to</a></li>
+</ul></div>      </div>
+        
+  </footer>
+
+  <meta itemprop="interactionCount" content="UserComments:0">
+
+</article>
+
+
+<div id="ob_holder" style="display: none;"><iframe id="ob_iframe" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/comScore.html" style="display: none; width: 1px; height: 1px;"></iframe></div><div class="OUTBRAIN" data-widget-id="AR_1" data-src="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906" data-ob-template="FutureRegional" data-ob-mark="true" data-browser="chrome" data-os="linux i686" data-dynload="" id="outbrain_widget_0" style="opacity: 1.9448100000000004;"><div class="ob_strip_container AR_1">
+	<span class="ob_empty"><wbr></span>
+<style type="text/css">
+.voterDiv .ob_bctrl{display:none;}
+.ob_pdesc IMG{border:none;}
+.AR_1 .ob_what{direction:ltr;text-align:right;clear:both;padding:5px 10px 0px;}
+.AR_1 .ob_what a{color:#999;font-size:10px;font-family:arial;text-decoration: none;}
+.AR_1 .ob_clear{clear:both;}
+.AR_1 .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16.png') no-repeat center top;display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-bottom:-2px;padding:0px 5px;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+.AR_1:hover .ob_amelia{background-position:center bottom;}
+	.AR_1 .ob_container{width:100%;position:relative;overflow:hidden;}
+.AR_1 .strip-img{width:145px;height:90px;border:none !important;margin:0px !important;display:block;padding:0px !important;}
+.AR_1 .item-link-container{text-decoration:none;}
+.AR_1 .strip-rec-link-title{font-size:13px;font-weight:normal;line-height:16px;}
+.AR_1 .strip-rec-link-source{font-size:12px;line-height:16px}
+.AR_1 .strip-like{padding-bottom:4px;font-size:14px;line-height:16px;height:20px;font-weight:bold;}
+.AR_1 .item-container a,.AR_1 .item-container a:hover,.AR_1 .item-container a:visited{border:medium none;text-decoration:none;}
+.AR_1 .ob_video{border:medium none;position:absolute;top:5px;left:5px}
+.AR_1 .ob-rec-link-img{position:relative;}
+.AR_1 .wbr:before {content: \"\200B\"}
+.AR_1 .ob_container_recs{width:100%;position:absolute;}
+.AR_1 .ob_container_recs A{display:inline;direction:ltr;text-align:left;}
+.AR_1 .ob-text-content A{width:100%;padding:0px 0px;}
+.AR_1 .ob-text-content{padding-top:6px;}
+.AR_1 .item-container A.ob-text-content{display:block;}
+.AR_1 .ob_container_recs .item-container{float:left;direction:ltr;width:147px;margin-bottom:300px;padding-right:12px;}
+.AR_1 .ob_container_recs .ob-last{padding-right:0px;}
+.AR_1 .ob_container_shadow_outer{position:static;width:100%;}
+.AR_1 .ob_container_shadow .item-container-shadow{position:static;overflow-x:hidden;width:0px;float:left;direction:ltr;}
+.AR_1 .ob_container_shadow .item-container{width:147px;visibility:hidden;float:left}
+	</style>
+<style type="text/css" class="ob-custom-css">
+.AR_1 .ob_container_recs .item-container {
+  padding-right: 9px;
+}
+.AR_1 .strip-rec-link-title {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: #333333;
+  font-family: Oswald,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+}
+body .AR_1 .item-link-container:hover .strip-rec-link-title{
+    color: #FF5A14;
+}
+.AR_1 .ob_container_recs .ob-last {
+  padding-right: 0;
+}
+.AR_1 .ob_source {
+  font-family: Oswald,Arial,sans-serif;
+  color: #333333;
+  font-size: 12px;
+}
+.AR_1 .ob_org_header {
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  color: #333333;
+  display: block;
+  font-family: Oswald,Arial,sans-serif;
+  font-size: 17.6px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.AR_1 .ob_what {
+  padding: 5px 0 10px;
+}
+</style>
+	<span class="ob_org_header">
+BEST FROM AROUND THE WEB
+</span>		    <div class="ob_container">
+	<div class="ob_container_recs">
+                        <a class="item-link-container ob-odd" href="http://school.keyartstudio.com/cake-decorating-tutorials/tutorial-the-watercolor-cookie-art/" data-redirect="http://paid.outbrain.com/network/redir?key=918ae4647300af9228bfa739393ace67&amp;rdid=616700960&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=0&amp;pc_id=24003731&amp;req_id=2ebf23eb2bc57ce296f898d43420102b&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=1603,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=44777&amp;origSrc=2968794&amp;did=772781502" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-0  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Tutorial: The Watercolor Cookie Art" class="strip-img" alt="Tutorial: The Watercolor Cookie Art" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/qIVlm-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Tutorial: The Watercolor Cookie Art</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Key Art Studio)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-even" href="http://mashable.com/2013/08/29/twitter-lead-generation-cards-2/" data-redirect="http://paid.outbrain.com/network/redir?key=d57b0ca7dbd0fb316c58cdad086e2ed8&amp;rdid=616700960&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=1&amp;pc_id=21606972&amp;req_id=2ebf23eb2bc57ce296f898d43420102b&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=1210,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=35204&amp;origSrc=2968794&amp;did=602811746" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-1  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Twitter Expands Lead Generation Cards to All Businesses" class="strip-img" alt="Twitter Expands Lead Generation Cards to All Businesses" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/enKs6-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Twitter Expands Lead Generation Cards to All Businesses</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Mashable)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-odd" href="http://www.forbes.com/sites/alexmorrell/2014/04/09/new-financing-round-for-australian-software-company-atlassian-turns-founders-into-billionaires/" data-redirect="http://paid.outbrain.com/network/redir?key=b8903599a623cf5d7cbc8495e40de2b6&amp;rdid=616700960&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=2&amp;pc_id=23849724&amp;req_id=2ebf23eb2bc57ce296f898d43420102b&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=2002,2003,2006&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=36101&amp;origSrc=2968794&amp;did=770143433" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-2  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" class="strip-img" alt="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/q7RUH-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Forbes)</span></span>    </div>
+    </div>
+        </div>
+</a>                    <a class="item-link-container ob-even" href="http://collaboristablog.com/2014/05/sensitive-information-risk-file-sync-share-security-issue/" data-redirect="http://paid.outbrain.com/network/redir?key=2af719c03dbfe6aba01f098248ae846c&amp;rdid=616700960&amp;type=RPM_/NA_ch2&amp;in-site=false&amp;idx=3&amp;pc_id=24485862&amp;req_id=2ebf23eb2bc57ce296f898d43420102b&amp;agent=blog_JS_rec&amp;recMode=11&amp;reqType=1&amp;wid=100&amp;imgType=2&amp;adsCats=2006,-1,-1&amp;refPub=1048&amp;prs=false&amp;scp=false&amp;reqIdx=0&amp;fcapElementId=46738&amp;origSrc=2968794&amp;did=778580009" onclick="" onmousedown="outbrain.recClicked(event,this);" target="_blank" rel="nofollow">
+    <div class="item-container ob-recIdx-3  item-container-ad  ob-last ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue" class="strip-img" alt="Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/qgqE5-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(CollaboristaBlog)</span></span>    </div>
+    </div>
+        </div>
+</a>            </div>
+<div class="ob_container_shadow_outer">
+    <div class="ob_container_shadow">
+                                    <div class="item-container-shadow ob-recIdx-0   ob-odd">
+    <div class="item-container ob-recIdx-0  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Tutorial: The Watercolor Cookie Art" class="strip-img" alt="Tutorial: The Watercolor Cookie Art" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/qIVlm-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Tutorial: The Watercolor Cookie Art</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Key Art Studio)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-1  ob-even">
+    <div class="item-container ob-recIdx-1  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Twitter Expands Lead Generation Cards to All Businesses" class="strip-img" alt="Twitter Expands Lead Generation Cards to All Businesses" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/enKs6-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Twitter Expands Lead Generation Cards to All Businesses</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Mashable)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-2   ob-odd">
+    <div class="item-container ob-recIdx-2  item-container-ad ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" class="strip-img" alt="Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/q7RUH-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Two 34-Year-Old Aussies Are Latest Techies To Become Billionaires Thanks To Sky High Financing Round</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(Forbes)</span></span>    </div>
+    </div>
+        </div>
+</div>                            <div class="item-container-shadow ob-recIdx-3  ob-even">
+    <div class="item-container ob-recIdx-3  item-container-ad  ob-last ">
+        <div class="ob-rec-link-img ob-tcolor">
+    <img onload="this.style.visibility=&#39;&#39;" width="145" height="90" title="Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue" class="strip-img" alt="Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/qgqE5-bkA-145x90.jpg" onerror="outbrain.imageError(this)">
+    </div>
+	<div class="ob-text-content">
+            <div class="strip-rec-link-title ob-tcolor">Your Sensitive Information Could Be at Risk: File Sync and Share Security Issue</div>
+        <div class="strip-rec-link-source ob-lcolor">
+        <span class="ob_source"> <span class="rec-src-link">(CollaboristaBlog)</span></span>    </div>
+    </div>
+        </div>
+</div>                        </div>
+</div>	</div>
+				<div class="ob_what">
+	
+	<a href="http://www.creativebloq.com/css3/getting-css-animations-trigger-1132906#" onmousedown="" onclick="OBR.extern.callWhatIs(&#39;http://www.outbrain.com/what-is/default/en&#39;,&#39;&#39;,500,450,true ,null);return false">
+		Recommended by <span class="ob_amelia" title="Outbrain"></span>
+	</a>
+</div>
+	
+</div></div>
+<script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/outbrain.js"></script>
+
+
+  <div id="comments-list">
+          <h4 class="std-hdr">
+                  <span>0</span> Comments              </h4>
+    
+    <noscript>
+    &lt;a href="/future/comments/2906" class="std-link"&gt;Click here to view the comments&lt;/a&gt;    </noscript>
+  </div>
+
+      <div id="comments-form" class="">
+      <form action="http://www.creativebloq.com/user/login?destination=css3%2Fgetting-css-animations-trigger-1132906#comments-form" accept-charset="UTF-8" method="post" id="user-login-comment-form">
+<div>
+	<div class="col">
+		<h4>Log in to Creative Bloq with your preferred social network to comment</h4>
+		<div id="future-gigya-login" gigid="showLoginUI" style="width: 220px; height: 60px;"><table width="100%" cellspacing="0" cellpadding="0" style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;background-color:transparent;vertical-align: middle; width: 220px; height: 60px;"><tbody><tr><td style="vertical-align:middle;margin:0px;padding:0px;border:0px;"><center><table style="margin:0px;padding:0px;border:0px;vertical-align:middle; height: 60px;width:100%" align="center" cellspacing="0" cellpadding="0"><tbody><tr style="height:99%"><td align="right" style="margin:0px;padding:0px;border:0px;vertical-align:middle;width:48%;text-align:right"><div align="right" style="text-align:right;width:auto"></div></td><td align="center" style="width:135px;margin:0px;padding:0px;border:0px;vertical-align:middle;white-space:nowrap" id="future-gigya-login_page"><table align="center" cellspacing="0" cellpadding="0" style="margin: 0px; padding: 0px; border: 0px;" id="future-gigya-login_p0"><tbody><tr><td align="center" style="margin:0px;padding:0px;border:0px;vertical-align:middle"><table align="center" cellspacing="0" cellpadding="0" style="margin:0px;padding:0px;border:0px;"><tbody><tr><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;facebook&#39;)" title="Facebook" alt="Facebook" style="zoom:1;cursor:pointer; width:30px;"><div gigid="facebook" style="width:30px; height:30px"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/facebook_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;twitter&#39;)" title="Twitter" alt="Twitter" style="zoom:1;cursor:pointer; width:30px;"><div gigid="twitter" style="width:30px; height:30px"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/twitter_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;padding-right:5px;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;googleplus&#39;)" title="Google+" alt="Google+" style="zoom:1;cursor:pointer; width:30px;"><div gigid="googleplus" style="width:30px; height:30px"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/googleplus_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td><td style="margin:0px;padding:0px;border:0px;line-height: normal;font-family:arial;font-size:11px;color:#9b9b9b;text-align:center;vertical-align:top"><center><div onmouseover="this.style.opacity=0.75;this.style.filter=&#39;alpha(opacity=75)&#39;" onmouseout="this.style.opacity=1;this.style.filter=&#39;&#39;;" onclick="gigya.socialize.plugins.login.providerClick(&#39;future-gigya-login&#39;,&#39;linkedin&#39;)" title="LinkedIn" alt="LinkedIn" style="zoom:1;cursor:pointer; width:30px;"><div gigid="linkedin" style="width:30px; height:30px"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/linkedin_30.png" style="width:30px;height:30px;position:static;margin:0" alt=""></div></div></center></td></tr></tbody></table></td></tr></tbody></table></td><td align="left" style="margin:0px;padding:0px;border:0px;vertical-align:middle;width:48%"></td></tr></tbody></table></center></td></tr></tbody></table></div>	</div>
+	<div class="col separator">
+		<strong>OR</strong>
+	</div>
+
+<div class="col last">
+	<h4>Log in with your Creative Bloq account</h4>
+	
+	<div class="form-row">
+	 <label for="comment-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="comment-name" size="15" value="" placeholder="Username" required="required" class="form-text required">
+	</div>
+	<div class="form-row">
+	 <label for="comment-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="comment-pass" maxlength="60" size="15" placeholder="Password" required="required" class="form-text required">
+	</div>
+	<div class="form-row">
+		</div>
+	<div class="buttons">
+		<input type="submit" name="op" id="edit-submit" value="Log in" class="form-submit">
+		<a href="http://www.creativebloq.com/user/password" class="std-link">Forgotten your username or password?</a>	</div>
+
+	<input type="hidden" name="form_build_id" id="form-cvUEbqh4MR9SSu0RoPl84M_Szo9CTiKd_7ms3BE0fSo" value="form-cvUEbqh4MR9SSu0RoPl84M_Szo9CTiKd_7ms3BE0fSo">
+<input type="hidden" name="form_id" id="edit--future-user-login-comment-form" value="user_login">
+</div>
+	
+<div class="footer">
+	<h4>Don't have an account?</h4>
+	<p>
+		Join now. It's completely free and takes seconds		<a href="http://www.creativebloq.com/user/register" class="form-submit">Join</a>	</p>
+</div>
+</div></form>
+      <input type="hidden" value="2906" id="article-id">
+    </div>
+  
+  
+  
+                                        </section>
+          </div>
+                      <div class="sidebar">
+              <div class="block block-views" id="block-views-carousel_widget-block_1">
+      <div class="content"><div class="carousel-widget with-border" style="height: 390px;">
+<h4 class="std-hdr">Magazine store</h4>
+	<div class="items" style="width: 1500px; left: -900px;"><div class="item views-row views-row-3 views-row-odd views-row-last cloned">
+    <a href="http://bit.ly/1hsQxvp" title="Buy in print or digital">
+	<img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/netmagnewmay.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1hsQxvp" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+		  <div class="item views-row views-row-1 views-row-odd views-row-first">
+    <a href="http://bit.ly/19d3ilD" title="Buy in print or digital">
+	<img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/art227coverswidget.jpg" alt="" title="" width="220" height="170" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/19d3ilD" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+  <div class="item views-row views-row-2 views-row-even">
+    <a href="http://bit.ly/1batwbI" title="Buy in print or digital">
+	<img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/maythreeworld.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1batwbI" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+  <div class="item views-row views-row-3 views-row-odd views-row-last">
+    <a href="http://bit.ly/1hsQxvp" title="Buy in print or digital">
+	<img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/netmagnewmay.jpg" alt="" title="" width="220" height="180" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/1hsQxvp" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div>
+	<div class="item views-row views-row-1 views-row-odd views-row-first cloned">
+    <a href="http://bit.ly/19d3ilD" title="Buy in print or digital">
+	<img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/art227coverswidget.jpg" alt="" title="" width="220" height="170" class="imagecache imagecache-carousel_widget_1 imagecache-default imagecache-carousel_widget_1_default"></a>
+<h5>SPRING SALE! Save up to 54%</h5>
+<a href="http://bit.ly/19d3ilD" title="Buy in print or digital" class="btn">
+	Buy in print or digital</a>
+  </div></div>
+	<div class="items-nav"><a class=""></a><a class=""></a><a class="active"></a></div>
+	<div class="carousel-arrow arrow-left prev disabled" style="display: block;"></div>
+	<div class="carousel-arrow arrow-right next disabled" style="display: block;"></div>
+  </div>
+</div>
+</div><div class="block block-future_dfp" id="block-future_dfp-mpu1">
+      <div class="content"><div id="dfp-ad-mpu1" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-mpu1");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_1__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_1" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_1" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div id="block-7" class="block">
+      <div class="rss_kicker">
+<h3>Subscribe to our RSS feed</h3>
+<p><a class="rss_all" href="http://www.creativebloq.com/rss">View all our feeds</a></p>
+<p>  <a href="http://feeds.feedburner.com/creativebloq/" class="rss_icon FIR">RSS icon<span></span></a>
+</p></div>
+</div><div id="jobs-widget" class="block">
+
+			<h4 class="std-hdr">Featured Jobs</h4>
+		
+	<div class="jb-wrap">
+<ul class="jobs-list">
+<li class="hero">
+<figure><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/saved_resource(2)" alt="Lead Digital Designer"></figure>
+<h5><a href="http://jobs.creativebloq.com/apply/18134/lead-digital-designer-/?TrackID=11228">Lead Digital Designer</a></h5>
+<p>London (Central), London (Greater)</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18075/technical-qa-lead-m-f-/?TrackID=11228">Technical QA Lead (m/f)</a></h5>
+<p>Germany</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18074/flash-developer-m-f-/?TrackID=11228">Flash Developer (m/f)</a></h5>
+<p>Hamburg</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18073/mobile-developer-c-m-f-/?TrackID=11228">Mobile Developer C++ (m/f)</a></h5>
+<p>Hamburg</p>
+</li>
+<li>
+<h5><a href="http://jobs.creativebloq.com/apply/18072/senior-php-developer-m-f-/?TrackID=11228">Senior PHP Developer (m/f)</a></h5>
+<p>Hamburg</p>
+</li>
+</ul>
+<form action="http://jobs.creativebloq.com/searchjobs" method="get">
+<input type="text" placeholder="SEARCH JOBS" id="Keywords" name="Keywords">
+<button type="submit" class="FIR">Search<span></span></button>
+</form>
+<a href="http://jobs.creativebloq.com/" class="all">Browse all Jobs</a>
+</div>
+</div><div id="recommended-widget" class="block">
+
+			<h4 class="std-hdr">Top design resources</h4>
+		
+	<div class="item-list"><ul class="std-list"><li class="first">	<h3><a href="http://www.creativebloq.com/graphic-design-tips/best-free-fonts-for-designers-1233380">Free fonts</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/inspiration/print-ads-1233780">Print ads</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/web-design-tips/mobile-apps/best-ipad-apps-1233629">Best iPad apps</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/photoshop/free-photoshop-brushes-11121140">Photoshop brushes</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/3d-tips/3d-animation/best-3d-movies-for-2012-1233045">Best 3D movies</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/graphic-design/improve-your-logo-design-21221">Logo design</a></h3>
+</li>
+<li>	<h3><a href="http://www.creativebloq.com/photoshop/photoshop-actions-912784">Photoshop actions</a></h3>
+</li>
+<li class="last">	<h3><a href="http://www.creativebloq.com/3d-tips/print-in-3d-1234034">Print in 3D</a></h3>
+</li>
+</ul></div>
+</div><div class="block block-future_dfp" id="block-future_dfp-skyscraper">
+      <div class="content"><div id="dfp-ad-skyscraper" class="dfp-tag-wrapper">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-skyscraper");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_2" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_2" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div><div id="advertorial_block_2" class="block">
+
+		
+	<a href="http://www.creativebloq.com/"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/transparent.gif" alt="" title="" width="300" height="20" class="imagecache imagecache-advertorial_item"></a>
+</div><div id="advertorial_block_3" class="block">
+
+		
+	<a href="http://www.pny.eu/"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/pny_300X100.gif" alt="PNY" title="PNY" width="300" height="100" class="imagecache imagecache-advertorial_item"></a>
+</div><div id="advertorial_block_4" class="block">
+
+		
+	<a href="http://www.digitaltutors.com/"><img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/animated_gif_ad.gif" alt="Digital tutors" title="Digital tutors" width="300" height="100" class="imagecache imagecache-advertorial_item"></a>
+</div>            </div>
+                            </div><!-- .grid -->
+        <!-- _FUTURE FOOTER_ -->
+        <footer id="footer">
+          <div class="footer-content">
+            
+<div id="menu-static-nav" class="block">
+   <h4></h4>
+   <ul class="menu"><li class="leaf first link-advertising"><a href="http://www.creativebloq.com/advertising" title="">Advertising</a></li>
+<li class="leaf link-about-us"><a href="http://www.creativebloq.com/about-us" title="">About us</a></li>
+<li class="leaf last link-contact"><a href="http://www.creativebloq.com/contact" title="">Contact</a></li>
+</ul></div>
+          </div>
+          <div id="future_company_footer"><div><ul class="foot_images"><li class="footer_logo" title="Future Publishing"><a href="http://www.futureplc.com/" class="future-logo">Future Publishing</a></li></ul><div class="text"><div class="backtotop"><a href="javascript:window.scrollTo(0,0);">Top&nbsp;▲</a></div><ul class="footertext"><li>Future is AOP &amp; PPA Digital Publisher of the Year and BMA Media Company of the Year.</li><li>Creative Bloq&nbsp;is part of Future plc, an international media group and leading digital publisher. We produce content across five core areas:</li></ul><ul class="category"><li><h6>Technology</h6><ul><li title="TechRadar"><a href="http://www.techradar.com/" title="Tech news">TechRadar</a></li><li title="T3"><a href="http://www.t3.com/" title="Technology news and gadget reviews">T3</a></li><li title="Mac|Life"><a href="http://www.maclife.com/" title="iPhone, iPad, Mac">Mac|Life</a></li><li title="Gizmodo UK"><a href="http://www.gizmodo.co.uk/" title="Tech news, from off the beaten track">Gizmodo UK</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/technology/" title="More...">More...</a></li></ul></li><li><h6>Entertainment</h6><ul><li title="CVG"><a href="http://www.computerandvideogames.com/" title="Game news and reviews">CVG</a></li><li title="PC Gamer"><a href="http://www.pcgamer.com/" title="PC games">PC Gamer</a></li><li title="GamesRadar"><a href="http://www.gamesradar.com/" title="Game cheats and news">GamesRadar</a></li><li title="Total Film"><a href="http://www.totalfilm.com/" title="Movie news">Total Film</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/entertainment/" title="More...">More...</a></li></ul></li><li><h6>Music</h6><ul><li title="MusicRadar"><a href="http://www.musicradar.com/" title="Music news">MusicRadar</a></li><li title="Guitarist"><a href="http://www.musicradar.com/guitarist" title="The guitar player&#39;s bible">Guitarist</a></li><li title="FutureMusic"><a href="http://www.musicradar.com/futuremusic" title="Technique and technology for making music">FutureMusic</a></li><li title="Rhythm"><a href="http://www.musicradar.com/rhythm" title="The UK&#39;s best-selling drum magazine">Rhythm</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/music/" title="More...">More...</a></li></ul></li><li><h6>Creative</h6><ul><li title="Digital Camera World"><a href="http://www.digitalcameraworld.com/" title="Digital Camera News, Reviews, Tips and Techniques">Digital Camera World</a></li><li title="Mollie Makes"><a href="http://www.molliemakes.com/" title="Making, collecting, thrifting, crafting">Mollie Makes</a></li><li title="Photography Week"><a href="http://photographyweek.digitalcameraworld.com/" title="The weekly iPad magazine for photographers">Photography Week</a></li><li title="The Simple Things"><a href="http://www.thesimplethings.com/" title="Celebrating the things that matter most">The Simple Things</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/creative/" title="More...">More...</a></li></ul></li><li><h6>Sport &amp; Auto</h6><ul><li title="BikeRadar"><a href="http://www.bikeradar.com/" title="Bikes and bike reviews">BikeRadar</a></li><li title="Cyclingnews"><a href="http://www.cyclingnews.com/" title="Pro cycling news and reviews">Cyclingnews</a></li><li title="Football Week"><a href="http://www.thefootballweek.net/" title="Get ahead of the game">Football Week</a></li><li title="TriRadar"><a href="http://www.triradar.com/" title="Triathlon Training, News &amp; Gear">TriRadar</a></li><li title="More..."><a href="http://www.futureplc.com/what-we-do/portfolios/sport-and-auto/" title="More...">More...</a></li></ul></li></ul><ul class="foot_legals"><li title="About Future"><a href="http://www.futureplc.com/about/" title="About Future" rel="nofollow">About Future</a></li><li title="Jobs"><a href="http://www.yourfuturejob.com/" title="Jobs in media" rel="follow">Jobs</a></li><li title="PR"><a href="http://www.futureplc.com/news/" title="Public Relations" rel="nofollow">PR</a></li><li title="Advertising"><a href="http://www.futureplc.com/what-we-do/advertising-solutions/" title="Advertising" rel="nofollow">Advertising</a></li><li title="Digital Future"><a href="http://advertising.digitalfuture.com/" title="Digital Future" rel="nofollow">Digital Future</a></li><li title="Privacy Policy"><a href="http://www.futureplc.com/privacy-policy/" title="Privacy Policy" rel="nofollow">Privacy Policy</a></li><li title="Cookies Policy"><a href="http://www.futureplc.com/cookies-policy/" title="Cookies Policy" rel="nofollow">Cookies Policy</a></li><li title="Terms &amp; Conditions"><a href="http://www.futureplc.com/terms-and-conditions/" title="Terms and Conditions" rel="nofollow">Terms &amp; Conditions</a></li><li title="Subscriptions"><a href="http://www.myfavouritemagazines.co.uk/" title="Buy magazines online" rel="follow">Subscriptions</a></li><li title="Investor Relations"><a href="http://www.futureplc.com/investors/" title="Investor Relations" rel="nofollow">Investor Relations</a></li><li title="Contact Future"><a href="http://www.futureplc.com/contact/" title="Contact Future" rel="nofollow">Contact Future</a></li></ul><p>© Future Publishing Limited, Beauford Court, 30 Monmouth Street, Bath BA1 2BW. All rights reserved. England and Wales company registration number 2008885.</p></div></div></div><style>@media all and (min-width: 970px){#future_company_footer{min-width: 970px;}}#future_company_footer>div{max-width: 970px;}</style>
+        </footer>
+        <!-- _FUTURE FOOTER_ -->
+      </div>
+    </div>
+    <!-- Future cookie bar (responsive) -->
+<div class="future-cookie-bar" style="display: block;">
+We use cookies on this website. By using this site, you agree that we may store and access cookies on your device.  Find out more and set your preferences <a href="http://www.futureplc.com/cookies-policy/">here</a>
+<a href="javascript:;" class="future-cookie-bar__dismiss is-reversed">x</a>
+</div>          <img src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/future.php" width="1" height="1" alt="site stat collection" style="display:block;position:absolute;bottom:0px;">
+    
+    <script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/js_ef1fe3b1da331919819014e4d23203d0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","future_gigya":{"conf":{"APIDomain":"cdn.gigya.com","APIKey":"2_36UDg3isn0w5FUf13fu1da12RyzHok_849O4EJKtiOh5TCH3T5WlE5yybqH9TprA","enabledProviders":"facebook,twitter,google,linkedin","redirectURL":"http:\/\/www.creativebloq.com\/user\/social-login?destination=css3\/getting-css-animations-trigger-1132906#comments-form","buttonsStyle":"standard","height":60,"width":220}},"future":{"conf":{"videoWidth":"535","videoHeight":"300"}}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function addEvent(obj, type, fn) {
+    if (obj.attachEvent) {
+      obj['e' + type + fn] = fn;
+      obj[type + fn] = function() {
+        obj['e' + type + fn](window.event);
+      }
+      obj.attachEvent('on' + type, obj[type + fn]);
+    } else
+      obj.addEventListener(type, fn, false);
+    }
+//--><!]]>
+</script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/sites/all/themes/creativebloq_redesign/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		
+		<script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.tools-scrollable.min.js"></script>
+		
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.cookie.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/cookie.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.touchwipe.min.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.jscrollpane.min.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/nav.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/form.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/main.js"></script>
+    <script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/jquery.sharrre.min.js"></script>
+
+          <script>
+                (function() {
+                  var cw = document.createElement('script');
+                  cw.type = 'text/javascript';
+                  cw.async = true;
+                  cw.src = '//static.creativebloq.futurecdn.net/sites/creativebloq.com/files/creative_network/widget.js';
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(cw, s);
+                })();
+      </script>
+    
+    <!-- Google Tag Manager -->
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-53T993"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-53T993');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- COMSCORE CODE --><script src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/sitestat.js"></script><!-- END COMSCORE CODE -->
+    <!-- START REVENUE SCIENCE API CODE --><script type="text/javascript" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/gw.js"></script><!-- END REVENUE SCIENCE API CODE -->
+
+    <script type="text/javascript">
+      ssUsr = '';
+      match = document.cookie.match(/FUTURE_USER=[0-9]+/);
+      if (match != null && match != undefined) {
+        match += '';
+        parts = match.split('=');
+        ssUsr = '&fp_uid=' + parts[1];
+      }
+    </script>
+
+    <script type="text/javascript">
+      ssurl = 'http://uk.sitestat.com/future/creativebloq/s?name=tutorial.article.getting-css-animations-trigger-right-time.17-01-2013.page&fp_tags=css3|javascript|netmag|web-design|how&fp_pagenum=1&fp_author=editor&fp_postdate=17-01-2013&fp_article_id=2906&category=tutorial' + ssUsr;
+      // <![CDATA[
+      function sitestat(u) {
+        var d = document, l = d.location;
+        ns_pixelUrl = u + "&ns__t=" + (new Date().getTime());
+        u = ns_pixelUrl + "&ns_c=" + ((d.characterSet) ? d.characterSet : d.defaultCharset) + "&ns_ti=" + escape(d.title) + "&ns_jspageurl=" + escape(l && l.href ? l.href : d.URL) + "&ns_referrer=" + escape(d.referrer);
+        var m = u.lastIndexOf("&");
+        if (u.length > 2000 && m >= 0) {
+          u = u.substring(0, m + 1) + "ns_cut=" + u.substring(m + 1, u.lastIndexOf("=")).substring(0, 40)
+        }
+        (d.images) ? new Image().src = u : d.write('<' + 'p><' + 'img src="' + u + '" height="1" width="1" alt="*"' + '><' + '/p>');
+      }
+      ;
+      sitestat(ssurl);
+      // ]]>
+    </script>
+    <noscript>&lt;p&gt;&lt;img src="http://uk.sitestat.com/future/creativebloq/s?name=tutorial.article.getting-css-animations-trigger-right-time.17-01-2013.page&amp;amp;fp_tags=css3|javascript|netmag|web-design|how&amp;amp;fp_pagenum=1&amp;amp;fp_author=editor&amp;amp;fp_postdate=17-01-2013&amp;amp;fp_article_id=2906&amp;amp;category=tutorial" height="1" width="1" alt="comscore"&gt;&lt;/p&gt;</noscript>
+
+    
+                  <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4832100-10']);
+        _gaq.push(['_setDomainName', '.creativebloq.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+      setTimeout(function() {
+        var a = document.createElement("script");
+        var b = document.getElementsByTagName('script')[0];
+        a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0009/6117.js";
+        a.async = true;
+        a.type = "text/javascript";
+        b.parentNode.insertBefore(a, b)
+      }, 1);
+    </script>
+
+          <script type="text/javascript">
+        var s = document.getElementsByTagName('script')[0];
+        (function() {
+
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            s.parentNode.insertBefore(po, s);
+  
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://platform.twitter.com/widgets.js';
+            s.parentNode.insertBefore(po, s);
+  
+              var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://platform.linkedin.com/in.js';
+            s.parentNode.insertBefore(po, s);
+  
+  
+  
+        })();
+      </script>
+    
+    
+              
+    <script>if(typeof enable_takeover == 'function') { enable_takeover() } </script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Drupal.behaviors.password = function () {};
+//--><!]]>
+</script>
+
+              <div class="block block-future_dfp" id="block-future_dfp-overlay">
+      <div class="content"><div id="dfp-ad-overlay" class="dfp-tag-wrapper" style="display: none;">
+  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-overlay");
+    });
+  </script><div id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_4__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_4" name="google_ads_iframe_/8644/Design_CreativeBloQ/tutorial_4" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>
+</div>    
+  
+
+<div style="display: none; visibility: hidden;">
+
+<script class="kxct" data-id="I2gAOUHz" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=!0;var a,c=(a=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(a[1]);b.src=/^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(c)?c:"disable"===c?"":("https:"===location.protocol?"https:":"http:")+"//cdn.krxd.net/controltag?confid\x3dI2gAOUHz";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+
+<script>window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){function b(a){a="kx"+a;return window.localStorage?window.localStorage[a]||"":navigator.cookieEnabled?(a=document.cookie.match(a+"\x3d([^;]*)"))&&unescape(a[1])||"":""}Krux.user=b("user");Krux.segments=b("segs")&&b("segs").split(",")||[]})();</script></div><div style="display: none; visibility: hidden;"><script>(function(c){var b=document,a=b.createElement("script");a.async=!0;a.defer=!0;a.src=c;b.getElementsByTagName("head")[0].appendChild(a)})((iatDev=-1<window.location.href.indexOf("iatDev\x3d1")||-1<document.cookie.indexOf("iatDev\x3d1"),"//"+("http:"!=window.location.protocol||iatDev?"s":"")+"data.captifymedia.com/317817.js?r\x3d"+1E16*Math.random()+"\x26m\x3d1112\x26a\x3d317817"+(iatDev?"\x26d\x3d1":"")));</script></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._ttf=window._ttf||[];_ttf.push({pid:22688,lang:"en",slot:".content p",format:"inread",minSlot:3,components:{mute:{delay:0},skip:{delay:0}}});(function(a){var b=a.getElementsByTagName("script")[0];a=a.createElement("script");a.async=!0;a.src="http://cdn.teads.tv/js/all-v1.js";b.parentNode.insertBefore(a,b)})(window.document);</script></div><iframe name="oauth2relay1535645305" id="oauth2relay1535645305" src="./Getting CSS animations to trigger at the right time   CSS3   Creative Bloq_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="iatDivInsert" style="display: none;"></div><iframe id="google_osd_static_frame_9387642869260" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

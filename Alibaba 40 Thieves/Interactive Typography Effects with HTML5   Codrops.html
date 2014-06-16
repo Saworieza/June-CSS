@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/ -->
+<html dir="ltr" lang="en-US" class=" js canvas fontface generatedcontent"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Interactive Typography Effects with HTML5   Codrops_files/XYxRCoAgEAUvlKx1hU4iumWRrrwnRLfPfoP5m2G8REuwxp61qF_kpDAPVoNOs9yG1KCk2wzFlVDDrpDIkfXn0sn_B5-qxoij9Rc.css" media="all">
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Interactive Typography Effects with HTML5 | Codrops</title>
+				<link rel="stylesheet" type="text/css" href="./Interactive Typography Effects with HTML5   Codrops_files/codrops.css">
+		<link rel="stylesheet" type="text/css" media="print" href="./Interactive Typography Effects with HTML5   Codrops_files/codrops_print.css">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="shortcut icon" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/favicon.ico">
+
+		 			
+		
+		
+					<!--single syntax highlighter-->
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Interactive Typography Effects with HTML5   Codrops_files/large"></script><script type="text/javascript" async="" src="./Interactive Typography Effects with HTML5   Codrops_files/ga.js"></script><script src="./Interactive Typography Effects with HTML5   Codrops_files/shCore.js"></script>
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/shBrushXml.js"></script>
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/shBrushCss.js"></script>
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/shBrushPhp.js"></script>
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/shBrushSql.js"></script>
+			<script src="./Interactive Typography Effects with HTML5   Codrops_files/shBrushJScript.js"></script>		
+			<script>
+				SyntaxHighlighter.defaults['auto-links'] = false;
+				SyntaxHighlighter.defaults['toolbar'] = false;
+				SyntaxHighlighter.all();
+			</script>
+			   
+		<link rel="alternate" type="application/rss+xml" title="Codrops » Interactive Typography Effects with HTML5 Comments Feed" href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/feed/">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var fm_user_I18n = {"ajaxurl":"http:\/\/tympanus.net\/codrops\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/userscripts.js"></script>
+<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/jquery.js"></script>
+<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tympanus.net/codrops/xmlrpc.php?rsd">
+<link rel="prev" title="Animated Buttons with CSS3" href="http://tympanus.net/codrops/2011/11/07/animated-buttons-with-css3/">
+<link rel="next" title="25 Fresh Examples of Beautiful Typeface Combinations in Web Design" href="http://tympanus.net/codrops/2011/11/12/25-fresh-examples-of-beautiful-typeface-combinations-in-web-design/">
+<link rel="shortlink" href="http://tympanus.net/codrops/?p=6297">
+
+<!-- All in One SEO Pack 2.1.5 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<meta name="description" content="With HTML5 gaining popularity, this tutorial outlines what is really just the tip of the iceberg that is interactive design. I will go over the development of">
+
+<meta name="keywords" content="html5, typography, interactive, canvas, letters, javascript">
+
+<link rel="canonical" href="./Interactive Typography Effects with HTML5   Codrops_files/Interactive Typography Effects with HTML5   Codrops.html">
+<!-- /all in one seo pack -->
+		<script src="./Interactive Typography Effects with HTML5   Codrops_files/search.js"></script>
+
+		<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-7243260-2']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
+
+				<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/modernizr.custom.70736.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/css3-mediaqueries.js"></script>
+			<link rel="stylesheet" href="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/css/ie.css"/>
+		<![endif]-->
+		<!--[if lt IE 8 ]>
+			<script type="text/javascript" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/themes/codropstheme02/js/iconfonts.js"></script>
+		<![endif]-->
+		<noscript>
+			
+		</noscript>
+	<script type="text/javascript" async="" src="./Interactive Typography Effects with HTML5   Codrops_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_af25dfd2f1908889af7a1aa5f4dcbd9e" src="./Interactive Typography Effects with HTML5   Codrops_files/s_af25dfd2f1908889af7a1aa5f4dcbd9e.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1243201{width:100%;display:block}div.bsap_1243201 a{width:125px}div.bsap_1243201 a img{padding:0}div.bsap_1243201 a em{font-style:normal}div.bsap_1243201 a{background: rgba(255, 255, 255, 0.5); padding: 10px;display:block;font-size:11px;color:#888;margin:0 10px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1243201 img{border:0;}div.bsap_1243201 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; text-align: center; background: rgba(255,255,255,0.5); line-height: 1200%; width: 125px; height: 125px;}div.bsap_1243201 a.adhere:hover{color: #7e95aa;}div.bsap_1243201 a{line-height:100%}div.bsap_1243201 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1243201 a.adhere{width:123px;height:123px}div.bsap_1243201 img.s{height:0;width:0}div.bsap_1248599{width:100%;display:block}div.bsap_1248599 a{width:125px}div.bsap_1248599 a img{padding:0}div.bsap_1248599 a em{font-style:normal}div.bsap_1248599 a{display:block;font-size:11px;color:#888;margin:0px 10px 10px 15px;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1248599 img{border:0;}div.bsap_1248599 a.adhere{color: #9DB0C1; text-transform: uppercase; font-size: 10px; border: 1px solid #C8D0E1; text-align: center; background: #D9E3EC; line-height: 1200%;}div.bsap_1248599 a.adhere:hover{color: #7E95AA;}div.bsap_1248599 a{line-height:100%}div.bsap_1248599 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1248599 a.adhere{width:123px;height:123px}div.bsap_1248599 img.s{height:0;width:0}div.bsap_1277316{width:100%;display:block}div.bsap_1277316 a{width:728px}div.bsap_1277316 a img{padding:0}div.bsap_1277316 a em{font-style:normal}div.bsap_1277316 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1277316 img{border:0;clear:right;}div.bsap_1277316 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1277316 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1277316 a{line-height:100%}div.bsap_1277316 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1277316 a.adhere{width:726px;height:88px}div.bsap_1277316 img.s{height:0;width:0}div.bsap_1277316{line-height:9px}div.bsap_1277316 .bsap_adhere2,div.bsap_1277316 iframe{float:left}div.bsap_1277316 .bsap_adhere2 a{height:90px;width:20px;background:url(http://s3.buysellads.com/ac/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px}</style></head>
+	<body>
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+			(function(){
+				var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+				(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+			})();
+		</script>
+		<!-- END BuySellAds.com Ad Code -->	
+		<div class="ct-container">
+			<header class="ct-header">
+				<div class="ct-inner ct-cf">
+
+											<div class="ct-branding">
+							<a class="ct-logo" href="http://tympanus.net/codrops" rel="home">Codrops</a>
+						</div>
+					
+					<div class="ct-nav-wrapper">
+						<nav class="ct-nav-main">
+						   <ul>
+								<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+								<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+								<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+								<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+								<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="ct-header-items-right ct-cf">
+						<div class="ct-search" id="ct-search">
+							<form method="get" id="searchform" action="http://tympanus.net/codrops/">
+								<div class="ct-search-input-wrap"><input class="ct-search-input" placeholder="Search on Codrops..." type="text" value="" name="s" id="s"></div>
+								<input class="ct-search-submit" type="submit" id="go" value=""><span class="ct-icon-search"></span>
+							</form>
+						</div>
+						<ul class="ct-connect">
+							<li><a class="ct-icon-feed" href="http://feeds2.feedburner.com/tympanus"><span>Rss Feed</span></a></li>
+							<li><a class="ct-icon-mail" href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US"><span>Email Updates</span></a></li>
+							<li><a class="ct-icon-twitter" href="http://www.twitter.com/codrops"><span>Codrops on Twitter</span></a></li>
+							<li><a class="ct-icon-facebook" href="http://www.facebook.com/pages/Codrops/159107397912"><span>Codrops on Facebook</span></a></li>
+							<li><a class="ct-icon-google-plus" href="https://plus.google.com/101095823814290637419" rel="publisher"><span>Codrops on Google+</span></a></li>
+						    <li><a class="ct-icon-github" href="https://github.com/codrops"><span>Codrops on Github</span></a></li>
+						</ul>
+					</div><!--/ct-header-items-right-->
+
+				</div><!-- ct-inner -->
+			</header><div class="ct-content">
+    <div class="ct-inner">		
+		
+								<div class="ct-main ct-main-post  " id="ct-main" role="main">
+					<div class="ct-post">
+						<article id="post-6297" class="post-6297 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-canvas tag-html5 tag-interactive tag-javascript tag-letters tag-typography">
+							<header>
+								<div class="ct-subline entry-meta">
+									In <a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a>
+																		by <span class="byline author vcard"><a href="http://tympanus.net/codrops/author/timholman/" title="Posts by Tim Holman" rel="author">Tim Holman</a></span>
+																		<time pubdate="pubdate">November 9, 2011</time>
+									<a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/#comments" title="Comment on Interactive Typography Effects with HTML5">36 Comments</a>																										</div>
+								<div class="clr"></div>
+								<h1 class="ct-h-shd entry-title">
+									Interactive Typography Effects with HTML5																	</h1>	
+							</header>		
+							<div class="ct-post-content">
+								<div class="ct-post-excerpt">With HTML5 gaining popularity, this tutorial outlines what is really just the tip of the iceberg&nbsp;that is interactive design. In this tutorial I will go over the development of dynamic, and generative banners&nbsp;to give your website that little extra wow!</div>								<div class="ct-ad-article-wrapper">
+										<div class="ct-ad-article">
+																						<img class="ct-ad-img" src="./Interactive Typography Effects with HTML5   Codrops_files/advertisement.jpg">
+												
+											<div id="bsap_1277316" class="bsap_1277316 bsap"><a href="http://stats.buysellads.com/click.go?z=1277316&b=3170540&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.3957478122320026&link=http://www.telerik.com/kendo-u/?utm_source=Codrops&utm_medium=banner&utm_campaign=BSA_KendoUI_codrops_728x90" onmouseover="window.status = &#39;http://www.telerik.com/kendo-u/?utm_source=Codrops&amp;utm_medium=banner&amp;utm_campaign=BSA_KendoUI_codrops_728x90&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Kendo UI for HTML5 sites and mobile apps" id="bsa_3170540" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/172443-1369072219.jpg" width="728" height="90" alt="Kendo UI for HTML5 sites and mobile apps"></a></div>
+										</div>
+									</div>
+								
+								<p><a href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/InteractiveTypographyEffects.jpg" alt="InteractiveTypographyEffects" width="580" height="315" class="aligncenter size-full wp-image-6415"></a><br>
+<a class="demo" href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/" target="_blank">View demo</a> <a class="download" href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/InteractiveTypographyEffects.zip">Download source</a> </p>
+<p>With HTML5 gaining popularity, this tutorial outlines what is really just the tip of the iceberg&nbsp;that is interactive design. I will go over the development of dynamic, and generative banners&nbsp;to give your website that little extra wow!</p>
+<p>If you are interested in reading&nbsp;more about the HTML5 spec, this is a great resource: <a title="Dive Into HTML5" href="http://diveintohtml5.info/" target="_blank">Dive Into HTML5 by Mark Pilgrim</a></p>
+<div class="ct-ad-article-wrapper ct-ad-article-wrapper-in"><div class="ct-ad-article"><img class="ct-ad-img" src="./Interactive Typography Effects with HTML5   Codrops_files/advertisement.jpg"><div id="bsap_1279993" class="bsap_1279993 bsap"><iframe width="728" height="90" id="ad_3916284_frame" src="./Interactive Typography Effects with HTML5   Codrops_files/raw_cb354f56e6453c38f69543af337c4317.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe></div><div style="clear:both;"></div></div></div>
+<h3>Markup</h3>
+<p>The HTML markup is very simple, since we will be doing all the work with JavaScript, on the canvas element:</p>
+<div><div id="highlighter_28203" class="syntaxhighlighter  html"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">canvas</code> <code class="html color1">id</code><code class="html plain">=</code><code class="html string">"banner"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">canvas</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<h3>JavaScript</h3>
+<p>As expected, it will be JavaScript doing all the heavy lifting here. But first and foremost, we will need to check if our users are using a&nbsp;modern browser that supports the canvas element. If it’s not supported, we want to dish up the next best thing: a static image. We will be using <a href="http://www.modernizr.com/" target="_blank">Modernizr</a> to check on this.</p>
+<h4>Variables</h4>
+<p>Let’s start defining some variables:</p>
+<div><div id="highlighter_337074" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js comments">//The words to be written on the banner</code></div><div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">keyword&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js string">"HONEY"</code><code class="js plain">,</code></div><div class="line number3 index2 alt2"><code class="js plain">canvas, context,&nbsp;&nbsp;&nbsp; </code></div><div class="line number4 index3 alt1"><code class="js plain">bgCanvas, bgContext,</code></div><div class="line number5 index4 alt2"><code class="js plain">density&nbsp;&nbsp;&nbsp;&nbsp; = 13,</code></div><div class="line number6 index5 alt1"><code class="js plain">particles&nbsp;&nbsp; = [],</code></div><div class="line number7 index6 alt2"><code class="js plain">colour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js string">'#fff0a4'</code><code class="js plain">,</code></div><div class="line number8 index7 alt1"><code class="js plain">mouse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = { x:0, y:0 },</code></div><div class="line number9 index8 alt2"><code class="js plain">isDrawing&nbsp;&nbsp; = </code><code class="js keyword">false</code><code class="js plain">,</code></div><div class="line number10 index9 alt1"><code class="js plain">canvasW, canvasH;</code></div></div></td></tr></tbody></table></div></div>
+<p>A little explanation: The <em>keyword</em> here is going to be the word which you want to display on the banner.</p>
+<p>The <em>canvas</em>, is a variable which will hold the HTML canvas element. This will be assigned later. The <em>context</em> is what allows us to drawn and write to the canvas.</p>
+<p>The <em>density</em> variable holds how many pixels we want to have (both horizontally and vertically) between each banner particle.</p>
+<p>The <em>particles array</em> will store all the particles and their respective settings.</p>
+<p>The <em>colour</em> variable is the colour that each particle will have.</p>
+<p>Finally, the <em>isDrawing</em> variable let’s us know if we are hovering over the banner, and the <em>canvasW</em> and <em>canvasH</em> are the canvas’ width and height respectively.</p>
+<h4>Setting up the banner</h4>
+<p>The first step is to call the reload function which we will also call on window resize:</p>
+<div><div id="highlighter_226767" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">this</code><code class="js plain">.initialize&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js keyword">function</code><code class="js plain">( canvas_id ) {</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">reload( canvas_id );</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">window.onresize = </code><code class="js keyword">function</code><code class="js plain">(event) {</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">reload( canvas_id );</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>In the reload function we initialize the <em>canvas</em> and <em>context</em> and set the respective sizes. Then we call the <em>prepare</em>, <em>setupParticles</em> and <em>draw</em> functions.</p>
+<div><div id="highlighter_695253" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">reload&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js keyword">function</code><code class="js plain">( canvas_id ) {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = document.getElementById( canvas_id );</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">( !window.HTMLCanvasElement ) </code><code class="js keyword">return</code> <code class="js keyword">false</code><code class="js plain">;</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = canvas.getContext(</code><code class="js string">'2d'</code><code class="js plain">);</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">canvasW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = window.innerWidth;</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">canvasH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 300;</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">canvas.width&nbsp;&nbsp;&nbsp; = canvasW;</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">canvas.height&nbsp;&nbsp; = canvasH;</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgCanvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = document.createElement(</code><code class="js string">'canvas'</code><code class="js plain">);</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgContext&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = bgCanvas.getContext(</code><code class="js string">'2d'</code><code class="js plain">);</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgCanvas.width&nbsp; = canvasW;</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgCanvas.height = canvasH;</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">prepare();</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">setupParticles();</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">draw();</code></div><div class="line number24 index23 alt1">&nbsp;</div><div class="line number25 index24 alt2"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>The first thing to note here, is that the function takes a string variable, which should match the element ID in the HTML.&nbsp;In our case, we would pass “canvas-banner”.</p>
+<p>As you can see, both, the background canvas and the main canvas are set to the same size. We will get into why we are using two canvas elements in the next section.</p>
+<h4>The Background Canvas</h4>
+<p><a href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/index2.html" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/example2.jpg" alt="example2" width="580" height="298" class="alignnone size-full wp-image-6388"></a></p>
+<p>Ok, now I have some explaining to do: The reason why we have two canvases here, is more or less the core of these banners. The background canvas is where you&nbsp;will be printing the text, or images. Afterwards, we will scan over the image data (pixel by pixel) of the canvas. If we run into a black pixel&nbsp;we will know that we have drawn on this location, and hence, will create a particle in its place.</p>
+<div><div id="highlighter_393241" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">prepare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js keyword">function</code><code class="js plain">() {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Chose the font, and size that we want.</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgContext.font = </code><code class="js string">"300px 'Jockey One'"</code><code class="js plain">;</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Fill the keyword text onto the canvas.</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">bgContext.fillText(keyword, ( canvasW / 2 ) - ( Math.round( bgContext.measureText(keyword).width/2 ) ) , 260 );</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number9 index8 alt2"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>The <em>fillText</em> command above, takes three parameters: The first being the text to write, the second and third being the x and y co-ordinates respectively.</p>
+<p>Next, we will create our particles. These will soon be drawn onto the main canvas, but for now, we will just store them in our particles array:</p>
+<div><div id="highlighter_763359" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">setupParticles&nbsp; = </code><code class="js keyword">function</code><code class="js plain">() {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">particles = [];&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Declare our local variables</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">imageData, image_Data, </code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">pixel,</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">width&nbsp;&nbsp; = 0,</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">slide&nbsp;&nbsp; = </code><code class="js keyword">false</code><code class="js plain">;</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Get the image data - from (0,0) to the edges of the canvas</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">imageData = bgContext.getImageData( 0, 0, canvasW, canvasH );</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">image_Data= imageData.data;</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">for</code><code class="js plain">( </code><code class="js keyword">var</code> <code class="js plain">height = 0; height &lt; canvasH; height += density ) {</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">++i;</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">slide&nbsp;&nbsp; = ((i % 2) == 0);</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">width&nbsp;&nbsp; = 0;</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">(slide == </code><code class="js keyword">true</code><code class="js plain">) {</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">width += 6;</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Iterate horizontally over the image data</code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">for</code><code class="js plain">( width; width &lt; canvasW; width += density ) {</code></div><div class="line number31 index30 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Get the pixel located at our current iteration</code></div><div class="line number33 index32 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">pixel = image_Data[ ( ( width + ( height * canvasW )) * 4 ) - 1 ];</code></div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number35 index34 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Pixel has been drawn on.</code></div><div class="line number36 index35 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code><code class="js plain">( pixel == 255 ) {</code></div><div class="line number37 index36 alt2">&nbsp;</div><div class="line number38 index37 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//Add the coodinates and colour to our particle array.</code></div><div class="line number39 index38 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">particles.push({</code></div><div class="line number40 index39 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">colour&nbsp; : colour,</code></div><div class="line number41 index40 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : width,</code></div><div class="line number42 index41 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : height</code></div><div class="line number43 index42 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">});</code></div><div class="line number44 index43 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number45 index44 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number46 index45 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number47 index46 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}&nbsp;&nbsp;&nbsp; </code></div><div class="line number48 index47 alt1"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>Yes, that is a large chunk of code, I’ll go over the tricky parts now.</p>
+<p>Really, all we are doing is looping over every n-th pixel, where n is the density set at the start.</p>
+<p><em>getImageData</em> takes four values, the x and y of the top left corner, as well as for the bottom right. In our case, we passed it two zeros (the very top left)&nbsp;and the canvas width and height, which are the coordinates of the very bottom right. It returns a very big list, containing the color data of every single pixel&nbsp;on the canvas. Why are we multiplying this by four? Because within this list, each pixel is represented by four values, red, green, blue and an alpha value.</p>
+<p>By default, all the canvas imageData contains, is a long list of zeros – by drawing on this canvas (in our case, using <em>fillText</em>), the pixels now contain proper color data.</p>
+<p>Finally, we have pushed the x and y coordinates into a simple dictionary, which we will now use to draw our banner.</p>
+<h4>Drawing the banner</h4>
+<p><a href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/index3.html" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/example3.jpg" alt="example3" width="580" height="298" class="alignnone size-full wp-image-6394"></a><br>
+Here, we finally pull everything together. With our list of x and y positions, stored in the particles array, we can draw out the banner.</p>
+<div><div id="highlighter_830510" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">draw = </code><code class="js keyword">function</code><code class="js plain">() {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.clearRect( 0, 0, canvasW, canvasH );</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">dx, dy, sqrDist,</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">scale = 1;</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">for</code> <code class="js plain">( </code><code class="js keyword">var</code> <code class="js plain">i = 0, len = particles.length; i &lt; len ; ++i ) {</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">...</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.beginPath();</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.moveTo( x, y - height / 2 );</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x + width / 2, y - height / 4 );</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x + width / 2, y + height / 4 );</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x, y + height / 2 );</code></div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x - width / 2, y + height / 4 );</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x - width / 2, y - height / 4 );</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.lineTo( x, y - height / 2 );&nbsp; </code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.closePath();</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">context.fill();</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number27 index26 alt2"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>We loop through each of the particles we stored previously to set the color and to draw a shape on that (x,y) point.</p>
+<p>With that, we have a very simple <em>static</em> banner… now for the fun part, let’s add some interactivity.</p>
+<h4>Adding Interactivity</h4>
+<p><a href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/index4.html" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/example4.jpg" alt="example4" width="580" height="298" class="alignnone size-full wp-image-6395"></a><br>
+The fun thing about this is that we can be as simple, or complex as we want. The first thing we will want to do though, is track the user’s mouse position while&nbsp;it is over the banner.</p>
+<div><div id="highlighter_37488" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">mouse = {x:0, y:0, o: </code><code class="js keyword">false</code><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>The mouse variable will be updated by two functions, one tracking the movement, and one tracking whether the mouse has left the canvas element:</p>
+<div><div id="highlighter_22950" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">MouseMove&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js keyword">function</code><code class="js plain">( e ) {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">mouse.x = e.offsetX || ( e.layerX - canvas.offsetLeft );</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">mouse.y = e.offsetY || ( e.layerY - canvas.offsetTop );</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code><code class="js plain">( !isDrawing ) {</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">isDrawing = </code><code class="js keyword">true</code><code class="js plain">;</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">drawTimeout = setTimeout( </code><code class="js keyword">function</code><code class="js plain">() {</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">draw();</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">isDrawing = </code><code class="js keyword">false</code><code class="js plain">;</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}, 60);</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number16 index15 alt1"><code class="js plain">};</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number18 index17 alt1"><code class="js keyword">var</code> <code class="js plain">MouseOut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </code><code class="js keyword">function</code><code class="js plain">(e) {</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">isDrawing = </code><code class="js keyword">false</code><code class="js plain">;&nbsp; </code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">clearTimeout( drawTimeout );</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">draw();</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number24 index23 alt1"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>In order to make these work, we also need to attach JavaScript events to our canvas element. These will go right back up into our <em>reload</em> function.</p>
+<div><div id="highlighter_361529" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">canvas.addEventListener(</code><code class="js string">'mousemove'</code><code class="js plain">, MouseMove, </code><code class="js keyword">false</code><code class="js plain">);</code></div><div class="line number2 index1 alt1"><code class="js plain">canvas.addEventListener(</code><code class="js string">'mouseout'</code><code class="js plain">, MouseOut, </code><code class="js keyword">false</code><code class="js plain">);</code></div></div></td></tr></tbody></table></div></div>
+<p>Now that we can track the mouse, we need to change up our draw function a little, based on how we want to interact with the mouse.</p>
+<div><div id="highlighter_179943" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">...</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="js keyword">var</code> <code class="js plain">p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = particles[i];</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="js plain">dx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = p.x - mouse.x;</code></div><div class="line number6 index5 alt1"><code class="js plain">dy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = p.y - mouse.y;</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="js comments">// distance from mouse to particle</code></div><div class="line number9 index8 alt2"><code class="js plain">sqrDist&nbsp;&nbsp;&nbsp;&nbsp; = Math.sqrt( dx * dx + dy * dy );</code></div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="js plain">( isDrawing ) ? scale = Math.max( Math.min( 3 - ( sqrDist / 10 ), 10 ), 1 ) : scale = 1;</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="js keyword">var</code> <code class="js plain">width&nbsp;&nbsp; = density / scale - 4,</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">height&nbsp; = density,</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = p.x,</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = p.y;</code></div><div class="line number17 index16 alt2">&nbsp;</div><div class="line number18 index17 alt1"><code class="js plain">context.fillStyle = p.colour;</code></div><div class="line number19 index18 alt2">&nbsp;</div><div class="line number20 index19 alt1"><code class="js plain">...</code></div></div></td></tr></tbody></table></div></div>
+<p>Above, we calculate the distance between the current particle and the mouse. Then we update the variable <em>scale</em> to fall between 1 (meaning no scaling) and the distance between the mouse and the particle (but not bigger than 10).</p>
+<p>All that’s left now, is to tell our canvas to draw at regular intervals, rather than just once at the start. At risk of getting too complicated I’m just going to keep&nbsp;it simple and use <em>setTimeouts</em> when the user hovers over the banner – but if you are interested in looking more into canvas animations, the function you will be looking for is <em><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/" target="_blank">requestAnimationFrame</a></em></p>
+<h4>Let’s get some color</h4>
+<p><a href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/index.html" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/example1.jpg" alt="" title="example1" width="580" height="298" class="alignnone size-full wp-image-6396"></a><br>
+We have a neat working banner, why not add a little color. Fortunately, we have already done most of the work here, we only need to change 2 lines.</p>
+<div><div id="highlighter_991673" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number2 index1 alt1"><code class="js comments">//A variable to store each of the colors we want to use</code></div><div class="line number3 index2 alt2"><code class="js keyword">var</code> <code class="js plain">colors = [</code><code class="js string">'#fff0a4'</code><code class="js plain">, </code><code class="js string">'#ffe98f'</code><code class="js plain">, </code><code class="js string">'#ffcf52'</code><code class="js plain">, </code><code class="js string">'#fbad1d'</code><code class="js plain">, </code><code class="js string">'#c48d1c'</code><code class="js plain">];</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">...</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="js comments">//When creating the particles, we assign a color from this list.</code></div><div class="line number8 index7 alt1"><code class="js plain">color: colors[Math.floor(Math.random() * colors.length)],</code></div></div></td></tr></tbody></table></div></div>
+<p>And there we have it! A unique, generative and colorful banner, made just for you. Take a look through the demos to see a few other examples, of just&nbsp;what you can do.</p>
+<p><a class="demo" href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/" target="_blank">View demo</a> <a class="download" href="http://tympanus.net/Tutorials/InteractiveTypographyEffects/InteractiveTypographyEffects.zip">Download source</a></p>
+<div class="googlead"><!-- wp_ad_camp_1 --></div>
+								
+																	<div class="ct-post-nav">
+										<div class="ct-post-prev">        
+											<strong>Previous:</strong><br> <a href="http://tympanus.net/codrops/2011/11/07/animated-buttons-with-css3/" rel="prev">Animated Buttons with CSS3</a>  
+										</div>
+										<div class="ct-post-next">
+											<strong>Next:</strong><br> <a href="http://tympanus.net/codrops/2011/11/12/25-fresh-examples-of-beautiful-typeface-combinations-in-web-design/" rel="next">25 Fresh Examples of Beautiful Typeface Combinations in Web Design</a>  
+										</div>
+										<div class="clr"></div>
+									</div> <!-- ct-post-nav -->
+																
+							</div>
+						</article>
+						<p class="ct-tags">
+							Tagged with: <a href="http://tympanus.net/codrops/tag/canvas/" rel="tag">canvas</a> <a href="http://tympanus.net/codrops/tag/html5/" rel="tag">html5</a> <a href="http://tympanus.net/codrops/tag/interactive/" rel="tag">interactive</a> <a href="http://tympanus.net/codrops/tag/javascript/" rel="tag">javascript</a> <a href="http://tympanus.net/codrops/tag/letters/" rel="tag">letters</a> <a href="http://tympanus.net/codrops/tag/typography/" rel="tag">typography</a>						</p>
+						<div class="clr"></div>
+					</div>
+
+											<div class="ct-row">
+							<div class="ct-author-info ct-box">
+								<div class="ct-author-avatar">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/cb947f0ebdde8d0f973741b366a51ed6" class="avatar avatar-80 photo" height="80" width="80">								</div>
+								<div class="ct-author-page-desc">
+									<h4><a href="http://tympanus.net/codrops/author/timholman/" title="Posts by Tim Holman" rel="author">Tim Holman</a></h4>
+									<p>
+										Tim Holman, an Australia based programmer, interested in new technology, the world and the future. Check out his web experiments in his interactive <a href="http://tholman.com/">portfolio</a>.									</p>
+									<p class="ct-author-page-url"><strong>View all contributions by <a href="http://tympanus.net/codrops/author/timholman/" title="Posts by Tim Holman" rel="author">Tim Holman</a></strong></p>
+																		<p class="ct-author-page-url">
+										<strong>Website: </strong>
+										<a href="http://tholman.com/" target="_blank">http://tholman.com/</a>
+									</p>
+									<div>
+										<ul class="ct-social-profiles">
+											<li><strong>Social Links: </strong></li>
+																																		<li><a class="ct-social-twitter" href="https://twitter.com/twholman">https://twitter.com/twholman<span>Tim on Twitter</span></a></li>
+																																																																																																																																														</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+
+						<h2 class="ct-letterpress">Related Articles</h2>
+						<div class="ct-related-post ct-row-float cf">
+							
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/03/07/hexaflip-a-flexible-3d-cube-plugin/">
+												<img width="300" height="162" src="./Interactive Typography Effects with HTML5   Codrops_files/Hexaflip-300x162.jpg" class="attachment-medium wp-post-image" alt="HexaFlip: A Flexible 3D Cube Plugin">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/03/07/hexaflip-a-flexible-3d-cube-plugin/">HexaFlip: A Flexible 3D Cube Plugin</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/">
+												<img width="300" height="162" src="./Interactive Typography Effects with HTML5   Codrops_files/TexturedText-300x162.jpg" class="attachment-medium wp-post-image" alt="TexturedText">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/12/02/techniques-for-creating-textured-text/">Techniques for Creating Textured Text</a></h3>
+									</div>
+												
+								
+									<div class="ct-box">
+										<div class="ct-latest-thumb-related">
+											<a href="http://tympanus.net/codrops/2013/10/30/medium-style-page-transition/">
+												<img width="300" height="162" src="./Interactive Typography Effects with HTML5   Codrops_files/MediumStylePageTransition-300x162.jpg" class="attachment-medium wp-post-image" alt="MediumStylePageTransition">											</a>
+										</div>
+										<h3><a href="http://tympanus.net/codrops/2013/10/30/medium-style-page-transition/">Medium-Style Page Transition</a></h3>
+									</div>
+												
+														</div>
+
+						
+										<div class="ct-row-wrapper">
+						<div class="ct-row">
+							
+<div class="ct-sharing ct-box">
+	<h4>Stay connected with us:</h4>
+	<div class="ct-link-list">
+		<a href="http://feeds2.feedburner.com/tympanus" class="ct-link-list-rss">Grab the <strong>RSS Feed</strong></a>
+		<a href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US" class="ct-link-list-mail">Get <strong>email updates</strong></a>
+		<a href="http://www.twitter.com/codrops" class="ct-link-list-twitter">Follow us on <strong>Twitter</strong></a>
+		<a href="http://www.facebook.com/pages/Codrops/159107397912" class="ct-link-list-fb">Join us on <strong>Facebook</strong></a>
+		<a href="https://plus.google.com/101095823814290637419/?prsrc=3" class="ct-link-list-gplus">Add us on <strong>Google+</strong></a>
+	</div>
+</div>
+							<div class="ct-bottom-ads ct-box">
+								<span class="ct-small-text">Advertisement</span>
+								<!-- BSA Zone Code -->
+								<div id="bsap_1248599" class="bsap_1248599 bsap"><a href="http://stats.buysellads.com/click.go?z=1248599&b=4717465&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9815721435006708&link=http://www.html5components.com/?utm_source=tympanus.net&utm_medium=display&utm_content=&utm_campaign=html5" onmouseover="window.status = &#39;http://www.html5components.com/?utm_source=tympanus.net&amp;utm_medium=display&amp;utm_content=&amp;utm_campaign=html5&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Download HTML5 Components" id="bsa_4717465" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/220959-1398992622.png" width="125" height="125" alt="Download HTML5 Components"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=1248692&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.0795175302773714&link=http://www.foxyhare.com" onmouseover="window.status = &#39;http://www.foxyhare.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Foxyhare Hosting Services" id="bsa_1248692" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/57016-1302600028.gif" width="125" height="125" alt="Foxyhare Hosting Services"></a><a href="http://stats.buysellads.com/click.go?z=1248599&b=1474716&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.010325352661311626&link=http://bit.ly/getfoobar" onmouseover="window.status = &#39;http://bit.ly/getfoobar&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="jQuery Notification Bar Plugin" id="bsa_1474716" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/74474-1314892081.png" width="125" height="125" alt="jQuery Notification Bar Plugin"></a></div>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</div>
+					
+						<section id="comments" class="ct-comments">
+	
+		
+			<div class="ct-commenttitle ct-cf">
+			<h2 id="comments-title">
+				<span>Feedback</span>
+				<sup>36</sup>
+			</h2>
+						<span class="ct-closed-right">Comments are closed.</span>
+					</div>
+		
+				<nav class="ct-commentnav">
+			<a class="prev page-numbers" href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-1/#comments">« Previous</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-1/#comments">1</a>
+<span class="page-numbers current">2</span> 
+		</nav>
+		
+		<ol class="ct-commentlist">
+							<li class="comment even thread-even depth-1" id="li-comment-266065">
+					<article id="comment-266065" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/032464692af6539a8231d0b553230d5e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Rockit Web</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-266065" class="ct-commenttime"><time pubdate="" datetime="2011-11-14T14:33:41+00:00">November 14, 2011 at 14:33</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">1</div>
+												<div class="ct-commentcontent">
+														<p>Beautiful examples. Looking forward to the demise of Flash – All hail HTML5! :)</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-266733">
+					<article id="comment-266733" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/cdfd09a7880f092e514dddb318cc0c23" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Boabramah Ernest</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-266733" class="ct-commenttime"><time pubdate="" datetime="2011-11-14T21:30:56+00:00">November 14, 2011 at 21:30</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">2</div>
+												<div class="ct-commentcontent">
+														<p>I still do not know if I should still make the decision to learn flash. I know flash is still going to be around for sometime but things like this makes you confuse.</p>
+<p>Good job Tim</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-269532">
+					<article id="comment-269532" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/4090dde3cb27a2dd0a0a5b957148d75d" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Cassia Santos</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-269532" class="ct-commenttime"><time pubdate="" datetime="2011-11-16T02:34:35+00:00">November 16, 2011 at 02:34</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">3</div>
+												<div class="ct-commentcontent">
+														<p>Hi<br>
+I can’t change the height , when i do the word is cropped , i end up with huge padding top :(</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-271021">
+					<article id="comment-271021" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/5e0c5deb6351c24b8ebfba5cbcdc95e7" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Chriz</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-271021" class="ct-commenttime"><time pubdate="" datetime="2011-11-16T17:42:09+00:00">November 16, 2011 at 17:42</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">4</div>
+												<div class="ct-commentcontent">
+														<p>Doesn’t work in Opera (latest) on Win7 (don’t stop loading), on ff no probs</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-273414">
+					<article id="comment-273414" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/45f10574960ba235e9a6c13933593259" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Michael van Hout</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-273414" class="ct-commenttime"><time pubdate="" datetime="2011-11-17T19:14:29+00:00">November 17, 2011 at 19:14</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">5</div>
+												<div class="ct-commentcontent">
+														<p>Amazing effect. Thanks for sharing!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-275804">
+					<article id="comment-275804" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/2494d339e80a2bc66ee1e6bcf8cc2950" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Sumeet Chawla</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-275804" class="ct-commenttime"><time pubdate="" datetime="2011-11-18T20:48:48+00:00">November 18, 2011 at 20:48</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">6</div>
+												<div class="ct-commentcontent">
+														<p>This is toooo awesome! You have an awesome creativity. I have been wanting to try out HTML5 Canvas for quite some time now and I guess I was waiting for something like this :P<br>
+Thanks!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-277386">
+					<article id="comment-277386" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/7aeed9bd1bf0e0943e5c57ab0e087d27" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Gaurav Mishra</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-277386" class="ct-commenttime"><time pubdate="" datetime="2011-11-19T16:16:13+00:00">November 19, 2011 at 16:16</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">7</div>
+												<div class="ct-commentcontent">
+														<p>your marketing strategy… generating lots of buzz!<br>
+Great Job!!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-277507">
+					<article id="comment-277507" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/c26300cb691ef2c1d04e534decf163b3" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">xTG</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-277507" class="ct-commenttime"><time pubdate="" datetime="2011-11-19T18:04:13+00:00">November 19, 2011 at 18:04</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">8</div>
+												<div class="ct-commentcontent">
+														<p>Interesting ! Ty for the tutorial. :)</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-278692">
+					<article id="comment-278692" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/26060faf148d2a821f61c55c5b14bb12" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">iZetta</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-278692" class="ct-commenttime"><time pubdate="" datetime="2011-11-20T10:20:15+00:00">November 20, 2011 at 10:20</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">9</div>
+												<div class="ct-commentcontent">
+														<p>Nice!!!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-336930">
+					<article id="comment-336930" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/da45b342b906ed21b3698b354f7bc627" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">180</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-336930" class="ct-commenttime"><time pubdate="" datetime="2011-12-19T11:17:38+00:00">December 19, 2011 at 11:17</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">10</div>
+												<div class="ct-commentcontent">
+														<p>jawdropper!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-339052">
+					<article id="comment-339052" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/49b4d574c3221b517f52b7eaaf846f1e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Daniel S</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-339052" class="ct-commenttime"><time pubdate="" datetime="2011-12-20T10:14:40+00:00">December 20, 2011 at 10:14</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">11</div>
+												<div class="ct-commentcontent">
+														<p>Awesome! I have to update my JS and Canvas Knowledge. Thanks for that!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-339176">
+					<article id="comment-339176" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/949ea1e84d00bcc689159d24466d796e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Leightsp</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-339176" class="ct-commenttime"><time pubdate="" datetime="2011-12-20T12:06:35+00:00">December 20, 2011 at 12:06</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">12</div>
+												<div class="ct-commentcontent">
+														<p>Really nice text effects and tutorial.<br>
+Does anyone know how I could intergrate this into a WordPress site?</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-407524">
+					<article id="comment-407524" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/0a27f01c5e5bfefee1c52daf0d3043b3" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Bhavin</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-407524" class="ct-commenttime"><time pubdate="" datetime="2012-01-19T17:24:36+00:00">January 19, 2012 at 17:24</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">13</div>
+												<div class="ct-commentcontent">
+														<p>Completely awesome</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-416152">
+					<article id="comment-416152" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/9717e8dad28743ce5d368c80c35081b8" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Dinesh Kumar Shaw</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-416152" class="ct-commenttime"><time pubdate="" datetime="2012-02-21T18:55:35+00:00">February 21, 2012 at 18:55</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">14</div>
+												<div class="ct-commentcontent">
+														<p>HTML5 Rocks. Thanks for sharing.</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment even thread-even depth-1" id="li-comment-418407">
+					<article id="comment-418407" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/68952cca8d9631003516ac20e2b39f25" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Rohit Rox</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-418407" class="ct-commenttime"><time pubdate="" datetime="2012-04-14T21:27:21+00:00">April 14, 2012 at 21:27</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">15</div>
+												<div class="ct-commentcontent">
+														<p>dat ws insane !!!  it is so amazing !! loved it !!</p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-419728">
+					<article id="comment-419728" class="ct-comment">
+						<footer class="comment-meta">
+							<div class="comment-author vcard">
+								<span class="ct-commentthumb">
+									<img alt="" src="./Interactive Typography Effects with HTML5   Codrops_files/055c8ee87fe0f213a8d469858320c91e" class="avatar avatar-60 photo" height="60" width="60">								</span>
+								<span class="ct-commentauthorname">Romain PETIT</span> <a href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-2/#comment-419728" class="ct-commenttime"><time pubdate="" datetime="2012-05-07T06:41:13+00:00">May 7, 2012 at 06:41</time></a>								
+							</div><!-- .comment-author .vcard -->
+						</footer>
+						<div class="ct-commentnumber">16</div>
+												<div class="ct-commentcontent">
+														<p>Hi, thanks for that outstanding tutorial.<br>
+I created another visual effect which got featured on my page.<br>
+See <a href="http://www.romainpetit.com/" rel="nofollow">http://www.romainpetit.com</a></p>
+						</div>
+
+						<div class="ct-commentreply">
+													</div><!-- .reply -->
+						<div class="ct-commentedit">
+												</div>
+						
+					</article><!-- #comment-## -->
+
+					</li><!-- #comment-## -->
+		</ol>
+		<p class="ct-small-text fright">
+						<span class="ct-closed-right">Comments are closed.</span>
+					</p>
+				<nav class="ct-commentnav">
+			 <a class="prev page-numbers" href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-1/#comments">« Previous</a>
+<a class="page-numbers" href="http://tympanus.net/codrops/2011/11/09/interactive-html5-typography/comment-page-1/#comments">1</a>
+<span class="page-numbers current">2</span> 
+		</nav>
+				
+
+
+		<div class="ct-comment-form">	
+						<div class="clr"></div>
+	</div>
+
+</section><!-- #comments -->
+				</div>
+				<aside class="ct-sidebar">		
+	<div class="ct-ads">
+		<div class="ct-ads-info">
+			<h4>Advertisement</h4>
+			<a href="http://tympanus.net/codrops/advertise/" class="ct-advertise-here">
+				<i class="ct-icon-info"></i>
+				<span>Advertise Here</span>
+			</a>
+		</div>
+		<div id="bsap_1275127" class="bsap_1275127 bsap"><a href="http://stats.buysellads.com/click.go?z=1275127&b=4415211&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.45021860767155886&link=http://www.shopify.com/?utm_source=tympanus.net&utm_medium=cpm&utm_content=&utm_campaign=buysell" onmouseover="window.status = &#39;http://www.shopify.com/?utm_source=tympanus.net&amp;utm_medium=cpm&amp;utm_content=&amp;utm_campaign=buysell&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Shopify: Beautiful Ecommerce Stores " id="bsa_4415211" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/210188-1393264007.jpg" width="300" height="250" alt="Shopify: Beautiful Ecommerce Stores "></a><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/17086/zone/1275127?utm_source=site_17086&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1275127">advertise here</a></div></div>
+		<div id="bsap_1243201" class="bsap_1243201 bsap"><a href="http://stats.buysellads.com/click.go?z=1243201&b=2449843&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6236151047050953&link=http://www.elegantthemes.com/gallery/divi/" onmouseover="window.status = &#39;http://www.elegantthemes.com/gallery/divi/&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Premium WordPress Themes" id="bsa_2449843" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/200737-1386792759.jpg" width="125" height="125" alt="Premium WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=562176&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6576513522304595&link=http://www.dreamtemplate.com/?ref=bsa" onmouseover="window.status = &#39;http://www.dreamtemplate.com/?ref=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Premium Website Templates &amp; WordPress Themes" id="bsa_562176" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/178447-1373139325.gif" width="125" height="125" alt="Premium Website Templates &amp; WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3198884&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.3634323123842478&link=http://bloggingexperiment.com/best-wordpress-themes" onmouseover="window.status = &#39;http://bloggingexperiment.com/best-wordpress-themes&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="Best WordPress Themes" id="bsa_3198884" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/207298-1391377208.png" width="125" height="125" alt="Best WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4739583&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8343132871668786&link=http://themeforest.net/item/mx-responsive-multipurpose-wordpress-theme/6601113?ref=ThemeFocus" onmouseover="window.status = &#39;http://themeforest.net/item/mx-responsive-multipurpose-wordpress-theme/6601113?ref=ThemeFocus&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="2014 The Powerful WordPress Theme - MX - Retina Responsive Multi-Purpose Theme" id="bsa_4739583" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/205210-1389848050.jpg" width="125" height="125" alt="2014 The Powerful WordPress Theme - MX - Retina Responsive Multi-Purpose Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3821743&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.25596754532307386&link=http://www.gojs.net/latest/index.html?utm_source=codrops&utm_medium=m125x125&utm_term=canvas&utm_content=euler-overlay&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=codrops&amp;utm_medium=m125x125&amp;utm_term=canvas&amp;utm_content=euler-overlay&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="This is the GoJS Euler Diagram sample." id="bsa_3821743" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/184537-1377106984.png" width="125" height="125" alt="This is the GoJS Euler Diagram sample."></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=1699101&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.08342900779098272&link=https://www.billgrid.com/index?a=codrops" onmouseover="window.status = &#39;https://www.billgrid.com/index?a=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad6 even" title="Online quote, invoice and expense and time management - BillGrid.com" id="bsa_1699101" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/82233-1320521466.jpg" width="125" height="125" alt="Online quote, invoice and expense and time management - BillGrid.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4349855&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9108078049030155&link=http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco" onmouseover="window.status = &#39;http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad7 odd" title="X WordPress Theme" id="bsa_4349855" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/208038-1391789985.png" width="125" height="125" alt="X WordPress Theme"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=2379651&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.33945417357608676&link=http://info.biznessapps.com/create-apps-easy?utm_source=buysellads&utm_medium=display&utm_content=codrops125&utm_campaign=codrops" onmouseover="window.status = &#39;http://info.biznessapps.com/create-apps-easy?utm_source=buysellads&amp;utm_medium=display&amp;utm_content=codrops125&amp;utm_campaign=codrops&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad8 even" title="Bizness Apps" id="bsa_2379651" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/120317-1344451285.jpg" width="125" height="125" alt="Bizness Apps"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=3361297&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9925035792402923&link=https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&utm_medium=banner&utm_campaign=responsive" onmouseover="window.status = &#39;https://www.psd2html.com/order-now.html?utm_source=tympanus.net/codrops&amp;utm_medium=banner&amp;utm_campaign=responsive&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad9 odd" title="PSD2HTML.com" id="bsa_3361297" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/205745-1390225509.png" width="125" height="125" alt="PSD2HTML.com"></a><a href="http://stats.buysellads.com/click.go?z=1243201&b=4531388&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.4442367828451097&link=http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart" onmouseover="window.status = &#39;http://themeforest.net/item/klaus-retina-multipurpose-wordpress-theme-/6250771?ref=Bluxart&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad10 even" title="Klaus - Retina Multi-Purpose WordPress Theme" id="bsa_4531388" target="_blank"><img src="./Interactive Typography Effects with HTML5   Codrops_files/214046-1395474464.png" width="125" height="125" alt="Klaus - Retina Multi-Purpose WordPress Theme"></a></div>
+		<div class="clr"></div>
+	</div>
+		
+	<div class="ct-widget-wrapper">
+									<div class="ct-widget ct-widget-coll">
+					<h5>Latest News:</h5>
+					                <article id="post-19024" class="post-19024 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-115/" class="">Collective #115</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-115/" class="ct-trans">
+                            <img width="75" height="105" src="./Interactive Typography Effects with HTML5   Codrops_files/Collective_115.png" class="attachment-thumbnail wp-post-image" alt="Collective 115">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       WebComponents.org * Make a Bubble Map * Quill * rangeslider.js * Physical Typography * Beginner's Guide to Node.js...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-115/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18975" class="post-18975 collective type-collective status-publish has-post-thumbnail hentry">
+					<h3><a href="http://tympanus.net/codrops/collective/collective-114/" class="">Collective #114</a></h3>
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/collective/collective-114/" class="ct-trans">
+                            <img width="75" height="105" src="./Interactive Typography Effects with HTML5   Codrops_files/Collective114.png" class="attachment-thumbnail wp-post-image" alt="Collective114">                        </a>
+                    </div>
+					
+                    <p class="ct-feat-excerpt">
+                       CSS Shapes 101 * Web Fundamentals * Velocity.js * GestureKit * Panoramic * Codassium...
+						<span> <a href="http://tympanus.net/codrops/collective/collective-114/">read more</a></span>
+                    </p>
+                    <div class="clr"></div>
+                </article>
+            				</div>
+									<div class="clr"></div>
+			
+		
+		<div class="ct-widget ct-widget-default">
+			<h5>Hot on Codrops:</h5>
+			                <article id="post-18828" class="post-18828 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-button tag-circular tag-progress tag-svg">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="ct-trans">
+                            <img width="105" height="105" src="./Interactive Typography Effects with HTML5   Codrops_files/AnimatedProgressButton-105x105.jpg" class="attachment-thumbnail wp-post-image" alt="AnimatedProgressButton">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/" class="">How to Create a Circular Progress Button</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18780" class="post-18780 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-form tag-transition tag-ui">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="ct-trans">
+                            <img width="105" height="105" src="./Interactive Typography Effects with HTML5   Codrops_files/minimalform1-105x105.png" class="attachment-thumbnail wp-post-image" alt="minimalform">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/" class="">Minimal Form Interface</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+                            <article id="post-18632" class="post-18632 post type-post status-publish format-standard has-post-thumbnail hentry category-playground tag-animation tag-inspiration tag-slideshow">
+					
+                    <div class="ct-latest-thumb">
+                        <a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="ct-trans">
+                            <img width="105" height="105" src="./Interactive Typography Effects with HTML5   Codrops_files/ItemTransitions1-105x105.png" class="attachment-thumbnail wp-post-image" alt="ItemTransitions">                        </a>
+                    </div>
+					<h3><a href="http://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/" class="">Inspiration for Item Transitions</a></h3>
+                   
+                    <div class="clr"></div>
+                </article>
+            					</div>
+		
+		<div class="ct-widget" id="md-widget">
+			<h5>From Mightydeals</h5>
+			<div>
+				<script type="text/javascript">
+					(function() {
+					  var url = 'http://www.mightydeals.com/widgets/large?width=280&ref=codropswidget';
+					  document.write('<div id="md-large-widget"></div>');
+					  var s = document.createElement('script'), s1 = document.getElementsByTagName('script')[0];
+					  s.type = 'text/javascript';
+					  s.async = true;
+					  s.src = url;
+					  s1.parentNode.insertBefore(s, s1);
+					})();
+				</script><div id="md-large-widget"><style type="text/css"> #md-large-widget-content{ display:inline-block; font-family:Arial; text-align:left;} .md-wg-deal-image {width:100%; margin-bottom: 5px;}  .md-wg-timer-block { font-size: 11px; color:#727a80; margin-top: 5px;}  .mdWidgetDigit {margin-right: 1px; display:inline-block;}  .mdWidgetWord {margin-right: 5px; display:inline-block;}  .md-wg-deal-link {font-weight: bold; font-size:15px; color:#57207c; text-decoration: none; line-height: 17px;} .md-wg-deal-link:hover {color:#f05028;}</style><div id="md-large-widget-content" style="width:280px;"><a href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget" class="">		<img alt="" class="md-wg-deal-image" style="width:280px;" src="./Interactive Typography Effects with HTML5   Codrops_files/csshero.jpg"></a><a class="md-wg-deal-link" href="http://www.mightydeals.com/deal/css-hero.html?ref=codropswidget">	<span>Easily Customize WordPress Themes with No Code - only $14!</span></a><div id="md-wg-timer-block" class="md-wg-timer-block">Ends:	<span id="md-wg-time-left-label" class="md-wg-time-left-label"><span class="mdWidgetDigit">7</span><span class="mdWidgetWord">days</span><span class="mdWidgetDigit">17</span><span class="mdWidgetWord">hours</span><span class="mdWidgetDigit">30</span><span class="mdWidgetWord">min</span><span class="mdWidgetDigit">50</span><span class="mdWidgetWord">sec</span></span></div></div></div>		
+			</div>
+		</div>
+	</div>
+
+    		
+    	<div class="clr"></div>
+</aside>
+
+				<div class="clr"></div>
+				<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/plusone.js" gapi_processed="true"></script>
+			    </div>
+</div>
+		<footer class="ct-footer">
+			
+			<div class="ct-inner ct-cf">
+				<nav class="ct-cf">
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/tutorials/">Tutorials</a></li>
+						<li><a href="http://tympanus.net/codrops/category/articles/">Articles</a></li>
+						<li><a href="http://tympanus.net/codrops/category/playground/">Playground</a></li>
+						<li><a href="http://tympanus.net/codrops/category/blueprints/">Blueprints</a></li>
+						<li><a href="http://tympanus.net/codrops/collective/">Collective</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/category/news/">News</a></li>
+						<li><a href="http://tympanus.net/codrops/category/giveaways/">Giveaways</a></li>
+						<li><a href="http://tympanus.net/codrops/category/freebies/">Freebies</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/about/">About</a></li>
+						<li><a href="http://tympanus.net/codrops/contact/">Contact</a></li>
+						<li><a href="http://tympanus.net/codrops/archives/">Archives</a></li>
+						<li><a href="http://tympanus.net/codrops/deals/">Deals</a></li>
+						<li><a href="http://tympanus.net/codrops/advertise/">Advertise</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://tympanus.net/codrops/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="http://tympanus.net/codrops/licensing/">License</a></li>
+						<li><a href="http://tympanus.net/codrops/credits/">Credits</a></li>
+						<li><a href="http://tympanus.net/codrops/impressum/">Impressum</a></li>
+					</ul>
+				</nav>
+				<div class="ct-items ct-cf">
+					<div class="ct-item ct-copyright">
+						<span>© Codrops 2014 by</span> 
+						<a href="http://tympanus.net/" title="Tympanus">Tympanus</a>
+					</div>
+					<div class="ct-item ct-cdn">
+						<span>Content delivered by</span>
+						<a href="http://tracking.maxcdn.com/c/24359/3968/378" title="Content Distribution Network" target="blank">Content Distribution Network</a>
+						<img height="1" width="1" src="./Interactive Typography Effects with HTML5   Codrops_files/378">
+					</div>	
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="./Interactive Typography Effects with HTML5   Codrops_files/comment-reply.min.js"></script>
+		</div><!--ct-container-->
+	
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+Content Delivery Network via codropspz.tympanus.netdna-cdn.com
+
+ Served from: tympanus.net @ 2014-05-13 09:51:06 by W3 Total Cache --></body></html>

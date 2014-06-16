@@ -1,0 +1,12 @@
+{% extends "page/page.html" %}
+
+{% block content %}
+	
+	{% if message != '' %}
+	<p>{{ message }}</p>
+	{% else %}
+	 	{% import 'helpers/form.html' as formHelper %}
+	 	{{ formHelper.draw( this, this.form ) }}
+	{% endif %}
+
+{% endblock content %}

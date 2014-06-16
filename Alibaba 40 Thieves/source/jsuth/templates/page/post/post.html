@@ -1,0 +1,16 @@
+{% extends "page/page.html" %}
+
+{% block content %}
+  {% set comments as hifi.get({
+		  'type': 'comment',
+		  'parent': this.id,
+		  'orderBy': 'publishedAt',
+		  'count': 100,
+		  'isApproved': true,
+		  'isSpam': false
+		})
+  %}
+
+  {% include 'common/comments/comments.html' with ['this': this, 'showComments': true, 'comments': comments] %}
+  
+{% endblock content %}

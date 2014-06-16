@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: Print-Friendly Images (printer friendly version)</title>
+<style media="screen">
+body {
+	font-size: 62.5%;
+	background-color: #eee; }
+#wrap {
+	width: 40em;
+	padding: 5em;
+	margin: 0 auto;
+	background-color: #fff;
+	font: 130%/1.3 Arial, Helvetica, sans-serif; }
+#logo {
+	background: #fff url(images/logo-screen.gif) no-repeat;
+	width: 150px;
+	height: 75px; }
+#logo img {
+	display: none; }
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="logo"><img src="images/logo-print.gif" width="150" height="75" /></div>
+	<h1>Printer-Friendly Logo</h1>
+	<p>This page HAS a printer-friendly logo. Print it out and compare it to the logo on <a href="screen.html">the not-so-friendly page.</a> Or <a href="../../index.html?p=166">head back to the original article.</a></p>
+	<p>Sed commodo fringilla pede. In hac habitasse platea dictumst. Quisque  ultrices. Pellentesque habitant morbi tristique senectus et netus et  malesuada fames ac turpis egestas. Praesent risus tortor, ornare at,  dignissim et, mattis eget, odio. Vivamus tempor gravida leo.  Pellentesque interdum.</p>
+	<p>Nunc ligula tellus, sagittis vitae, ultricies ultrices, venenatis sed,  urna. Quisque ultricies lectus ac est. Integer semper odio eleifend  libero. Cum sociis natoque penatibus et magnis dis parturient montes,  nascetur ridiculus mus. Quisque urna purus, dapibus ut, eleifend eget,  scelerisque in, libero. Quisque sollicitudin, risus et ullamcorper  faucibus, neque libero ultricies massa, sed convallis nibh pede nec  libero.</p>
+	<p>Proin eu odio eget justo pellentesque congue. Proin facilisis, velit  sed tristique iaculis, metus purus ultrices ligula, et facilisis diam  magna sit amet massa. Nulla facilisi. Nullam augue elit, gravida ut,  tempor nec, tempor nec, metus. Maecenas imperdiet enim et pede ultrices  placerat. Praesent id leo eget nunc rhoncus rhoncus. Cras bibendum  justo a purus. Quisque adipiscing felis id felis. Nam molestie  condimentum tortor.</p>
+</div>
+
+</body>
+</html>

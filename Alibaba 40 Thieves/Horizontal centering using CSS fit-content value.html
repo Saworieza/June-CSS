@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://red-team-design.com/horizontal-centering-using-css-fit-content-value/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Horizontal centering using CSS fit-content value</title>
+    <meta name="description" content="Read about an alternative approach on horizontal centering using the new CSS fit-content value.">
+    <meta name="google-site-verification" content="C5zdBQFWWh6uslnkcC0u_F5av9GyYt90auGayV4ELbM">
+    <link rel="stylesheet" href="http://red-team-design.com/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/redteamdesign">
+    <link rel="author" href="http://plus.google.com/114910105297465575018/posts">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  <script src="./Horizontal centering using CSS fit-content value_files/ga.js" id="ga"></script><script async="" src="./Horizontal centering using CSS fit-content value_files/embed.js"></script><script id="_adpacks_mktjs" type="text/javascript" src="./Horizontal centering using CSS fit-content value_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_a5f348233fceef06ba365ab392938d10" src="./Horizontal centering using CSS fit-content value_files/s_a5f348233fceef06ba365ab392938d10.js" async="async"></script><style type="text/css" id="bsa_css">.one{position:relative}.one .bsa_it_ad{display:block;padding:15px;border:1px solid #e1e1e1;background:#f9f9f9;font-family:helvetica,arial,sans-serif;line-height:100%;position:relative}.one .bsa_it_ad a{text-decoration:none}.one .bsa_it_ad a:hover{text-decoration:none}.one .bsa_it_ad .bsa_it_t{display:block;font-size:12px;font-weight:bold;color:#212121;line-height:125%;padding:0 0 5px 0}.one .bsa_it_ad .bsa_it_d{display:block;font-size:11px;color:#434343;font-size:12px;line-height:135%}.one .bsa_it_ad .bsa_it_i{float:left;margin:0 15px 10px 0}.one .bsa_it_p{display:block;text-align:right;position:absolute;bottom:10px;right:15px}.one .bsa_it_p a{font-size:10px;color:#666;text-decoration:none}.one .bsa_it_ad .bsa_it_p a:hover{font-style:italic}</style></head>
+  <!-- 
+         _        _ 
+   _ __ | |_   __| |
+  | '__|| __| / _` |
+  | |   | |_ | (_| |
+  |_|    \__| \__,_|
+
+  Build with Jekyll & Sass. Hosted on Github. 
+                    
+   -->
+  <body>
+  
+  <header role="banner" class="top-header">
+    <div class="container">
+      <div class="grid">
+        <div class="grid__col--30">
+          <a href="http://red-team-design.com/" class="rtd-logo">
+            RedTeamDesign
+          </a>
+        </div>
+        <div class="grid__col--70">
+          <nav role="navigation" class="rtd-nav">
+            <a class="visually-hidden" href="http://red-team-design.com/horizontal-centering-using-css-fit-content-value/#content">Skip to content</a>
+            <ul>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/">Home</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/archive/">Archive</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/about/">About</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/contact/">Contact</a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="master-header">
+    <div class="container">
+      <h1 class="master-head--title">Horizontal centering using CSS fit-content value</h1>
+    </div>
+  </div>    
+
+  <div class="master-content">
+    <div class="container">
+      <div class="grid">
+        <section class="grid__col--60 grid__col--push10" role="main" id="content">
+          
+
+<article class="single-post">
+
+  <time datetime="2013-03-06" class="post__time">
+    <small>06 Mar 2013</small>
+  </time>  
+
+  <p>The other day I read a good article on horizontal centering by <a href="http://www.456bereastreet.com/archive/201303/how_to_shrinkwrap_and_center_elements_horizontally/">Roger Johansson</a> in where he explains the shrinkwrapping effect. Basically, it's about one of the most common problems you can find in the wild, namely how to center a navigation bar which contains floated elements with undefined widths.</p>
+
+<p>As we all know, centering this kind of stuff can be quite tricky sometimes. With this common example in mind, Roger made an awesome list with solutions you can apply in order to achieve horizontal centering.</p>
+
+<p><img src="./Horizontal centering using CSS fit-content value_files/css-fit-content-value.png" alt="CSS fit-content value and horizontal centering"></p>
+
+<!-- more -->
+
+
+<h2>Just another possible approach</h2>
+
+<p>Recently, I found out that Firefox and Chrome both support <a href="http://dev.w3.org/csswg/css3-box/#the-width-and-height-properties">intrinsic widths</a> and one of the most interesting value for <code>width</code> seems to be the <code>fit-content</code> one. Also, in this article you'll see how <code>fit-content</code> can be a solution for solving the problem above.</p>
+
+<p>Apparently, <a href="http://www.w3.org/TR/CSS2/tables.html#table-display">just as on tables</a>, when you only need to add <code>auto</code> for left and right margins to center it horizontally, setting <code>width: fit-content;</code> to an element tells the browser the element's width is defined by its content and will not automatically size to fill its containing block.</p>
+
+<h2>Proper example</h2>
+
+<p>Now, with Roger's markup example:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>About us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Our products<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Customer support<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+
+<p>and the following CSS lines:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.center</span> <span class="nt">ul</span><span class="p">{</span>
+    <span class="k">width</span><span class="o">:</span> <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">fit</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">fit</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="n">fit</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>   
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>... you just got a new experimental solution for centering horizontally a navigation bar which contains floated elements within. Pretty straightforward, huh? Don't forget to check demo's page source to see the full styles.</p>
+
+<p><a href="http://red-team-design.com/wp-content/uploads/2013/03/horizontal-centering-using-css-fit-content-value-demo.html">View demo</a></p>
+
+<h2>Minimal browser support, but really promising though.</h2>
+
+<p>Despite the poor browser support at this time (Chrome and Firefox), this might be a good alternative to keep in mind for the future. Just think about the CSS Flexbox module, at the beginning the support was quite minimal and now it's getting wider and wider.</p>
+
+<p>Also, you should be aware that <code>fit-content</code> value is kinda experimental and it's not a final recommendation. It's available in W3C Editor's Draft and that means that specs might change in the future.</p>
+
+
+  <p>
+    Share this on: 
+    <a href="http://twitter.com/intent/tweet?text=Horizontal%20centering%20using%20CSS%20fit-content%20value&url=http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value&via=catalinred" target="_blank">Twitter</a> • 
+    <a href="http://plusone.google.com/_/+1/confirm?hl=en&url=http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value" target="_blank">Google+</a> • 
+    <a href="http://facebook.com/sharer/sharer.php?u=http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value" target="_blank">Facebook</a>
+  </p>
+
+  <hr class="bold">
+  <div class="grid">
+    <div class="grid__col--45 grid__col--push10">
+    
+      <a href="http://red-team-design.com/animenu-a-responsive-dropdown-navigation-made-with-sass" rel="prev" title="Animenu - a responsive dropdown navigation made with SASS" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-left"></i> Animenu - a responsive dropdown navigation made with SASS
+      </a>
+    
+    </div>
+    <div class="grid__col--45">
+    
+      <a href="http://red-team-design.com/becoming-a-better-developer" rel="prev" title="Thoughts on becoming a better developer" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-right"></i> Thoughts on becoming a better developer 
+      </a>
+    
+    </div>
+  </div>
+  <hr class="bold">
+
+  
+    <div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./Horizontal centering using CSS fit-content value_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 2492px !important;"></iframe></div>
+    <script>
+      var disqus_shortname = 'redteamdesign',
+          disqus_title = "Horizontal centering using CSS fit-content value",
+          disqus_url = "http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value";
+      (function() {
+          var dsq = document.createElement('script'); dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>   
+     
+
+</article>
+        </section>
+        <aside class="grid__col--30" role="complementary">
+          <div class="aside-module">
+            <h2 class="h4">
+              Get updates via 
+              <a href="http://feeds.feedburner.com/redteamdesign" class="rss-label">
+                <i class="fa fa-rss"></i> RSS
+              </a> or email:
+            </h2>
+            <form class="email-form" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;//feedburner.google.com/fb/a/mailverify?uri=redteamdesign&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+              <input type="email" name="email" class="email-form__text" placeholder="Your email address" required="">
+              <input type="submit" value="Go" class="email-form__submit">
+              <input type="hidden" value="redteamdesign" name="uri">
+              <input type="hidden" name="loc" value="en_US">
+            </form>
+          </div>
+          <div class="aside-module">
+            <script src="./Horizontal centering using CSS fit-content value_files/adpacks.js" id="_adpacks_js"></script><div id="bsap_1257097" class="bsap_1257097 bsap"><div class="bsa_it one"><div class="bsa_it_ad ad1 odd" id="bsa_4720811"><a href="http://stats.buysellads.com/click.go?z=1257097&b=4720811&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9992352274712175&link=http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI62J7F6BLYK7UCKBILKJWCTBDV" onmouseover="window.status = &#39;http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI62J7F6BLYK7UCKBILKJWCTBDV&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_i"><img src="./Horizontal centering using CSS fit-content value_files/G6NDC27ICWAI62J7F6BLYK7UCKBILKJWCTBDV" width="130" height="100" alt="Webydo"></span></a><a href="http://stats.buysellads.com/click.go?z=1257097&b=4720811&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9894251131918281&link=http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI62J7F6BLYK7UCKBILKJWCTBDV" onmouseover="window.status = &#39;http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI62J7F6BLYK7UCKBILKJWCTBDV&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_t">Webydo</span><span class="bsa_it_d">40K Professionals are Disrupting the Web Design Industry. Create Your FREE Site.</span></a><div style="clear:both"></div></div><span class="bsa_it_p"><a href="http://buysellads.com/buy/detail/40406/zone/1257097?utm_source=site_40406&utm_medium=website&utm_campaign=imagetext&utm_content=zone_1257097">ads by BSA</a></span></div></div>
+          </div>
+          <div class="aside-module">           
+            <ul class="aside-module--list">
+              <li><a href="http://crazycoolgadgets.com/">Gadget Magazine</a></li>
+              <li><a href="http://eugenoprea.com/google-analytics/">Google Analytics Course</a></li>
+              <li><a href="http://itxdesign.com/">ITX Design</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo" class="master-footer text-center">
+    <div class="container">
+      <a href="http://twitter.com/catalinred" rel="me nofollow">
+        <i class="fa fa-twitter fa-2x"></i>
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <a href="http://github.com/catalinred" rel="me nofollow">
+        <i class="fa fa-github fa-2x"></i>
+        <span class="visually-hidden">GitHub</span>
+      </a>
+      <a href="http://facebook.com/RedTeamDesign" rel="me nofollow">
+        <i class="fa fa-facebook fa-2x"></i>
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <a href="http://plus.google.com/u/0/114910105297465575018" rel="me nofollow">
+        <i class="fa fa-google-plus fa-2x"></i>
+        <span class="visually-hidden">Google+</span>
+      </a>
+      <a href="http://feeds.feedburner.com/redteamdesign" rel="me nofollow">
+        <i class="fa fa-rss fa-2x"></i>
+        <span class="visually-hidden">RSS</span>
+      </a>
+      <a href="http://dribbble.com/catalinred" rel="me nofollow">
+        <i class="fa fa-dribbble fa-2x"></i>
+        <span class="visually-hidden">Dribbble</span>
+      </a>
+      <a href="http://instagram.com/catalinred" rel="me nofollow">
+        <i class="fa fa-instagram fa-2x"></i>
+        <span class="visually-hidden">Instagram</span>
+      </a>
+      <a href="http://linkedin.com/in/catalinred" rel="me nofollow">
+        <i class="fa fa-linkedin fa-2x"></i>
+        <span class="visually-hidden">LinkedIn</span>
+      </a>
+      <hr>
+      © 2014 Catalin Rosu. Feel free to use the articles you may find here in your projects, with or without any attribution.
+    </div>
+  </footer>  
+
+  <script src="./Horizontal centering using CSS fit-content value_files/common.js"></script>
+
+  
+</body></html>

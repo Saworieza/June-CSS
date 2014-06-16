@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://red-team-design.com/beginner-javascript-gotchas/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>A beginner's list of JavaScript gotchas</title>
+    <meta name="description" content="This article contains a list of some JavaScript gotchas that every new JavaScript developer might find it useful.">
+    <meta name="google-site-verification" content="C5zdBQFWWh6uslnkcC0u_F5av9GyYt90auGayV4ELbM">
+    <link rel="stylesheet" href="http://red-team-design.com/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/redteamdesign">
+    <link rel="author" href="http://plus.google.com/114910105297465575018/posts">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  <script src="./A beginner's list of JavaScript gotchas_files/ga.js" id="ga"></script><script async="" src="./A beginner's list of JavaScript gotchas_files/embed.js"></script><script id="_adpacks_mktjs" type="text/javascript" src="./A beginner's list of JavaScript gotchas_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_a5f348233fceef06ba365ab392938d10" src="./A beginner's list of JavaScript gotchas_files/s_a5f348233fceef06ba365ab392938d10.js" async="async"></script><style type="text/css" id="bsa_css">.one{position:relative}.one .bsa_it_ad{display:block;padding:15px;border:1px solid #e1e1e1;background:#f9f9f9;font-family:helvetica,arial,sans-serif;line-height:100%;position:relative}.one .bsa_it_ad a{text-decoration:none}.one .bsa_it_ad a:hover{text-decoration:none}.one .bsa_it_ad .bsa_it_t{display:block;font-size:12px;font-weight:bold;color:#212121;line-height:125%;padding:0 0 5px 0}.one .bsa_it_ad .bsa_it_d{display:block;font-size:11px;color:#434343;font-size:12px;line-height:135%}.one .bsa_it_ad .bsa_it_i{float:left;margin:0 15px 10px 0}.one .bsa_it_p{display:block;text-align:right;position:absolute;bottom:10px;right:15px}.one .bsa_it_p a{font-size:10px;color:#666;text-decoration:none}.one .bsa_it_ad .bsa_it_p a:hover{font-style:italic}</style></head>
+  <!-- 
+         _        _ 
+   _ __ | |_   __| |
+  | '__|| __| / _` |
+  | |   | |_ | (_| |
+  |_|    \__| \__,_|
+
+  Build with Jekyll & Sass. Hosted on Github. 
+                    
+   -->
+  <body>
+  
+  <header role="banner" class="top-header">
+    <div class="container">
+      <div class="grid">
+        <div class="grid__col--30">
+          <a href="http://red-team-design.com/" class="rtd-logo">
+            RedTeamDesign
+          </a>
+        </div>
+        <div class="grid__col--70">
+          <nav role="navigation" class="rtd-nav">
+            <a class="visually-hidden" href="http://red-team-design.com/beginner-javascript-gotchas/#content">Skip to content</a>
+            <ul>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/">Home</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/archive/">Archive</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/about/">About</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/contact/">Contact</a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="master-header">
+    <div class="container">
+      <h1 class="master-head--title">A beginner's list of JavaScript gotchas</h1>
+    </div>
+  </div>    
+
+  <div class="master-content">
+    <div class="container">
+      <div class="grid">
+        <section class="grid__col--60 grid__col--push10" role="main" id="content">
+          
+
+<article class="single-post">
+
+  <time datetime="2013-12-08" class="post__time">
+    <small>08 Dec 2013</small>
+  </time>  
+
+  <p>I consider myself a novice when it comes to coding in JavaScript but lately I played a bit more with this language and stumbled upon a few random things I thought were worth sharing. So, if you are new to JavaScript or just don't know it as well as you would like, I hope you find this article useful.</p>
+
+<p><img src="./A beginner's list of JavaScript gotchas_files/JavaScript-gotchas.png" alt="JavaScript logo"></p>
+
+<!-- more -->
+
+
+<h2>0 == "0", even though 0 is falsy and "0" is truthy</h2>
+
+<p>At first sight, this is very odd, but once you read more about the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparison operators</a> this make sense. To avoid misunderstandings like this one, be sure to always use the strictly equal operator (===) to do this type of comparison. <a href="http://www.impressivewebs.com/why-use-triple-equals-javascipt/">Lous Lazaris</a> wrote an entire article on the unpredictable results that can occur when the equality comparison operator is not used the right way.</p>
+
+<div class="highlight"><pre><code class="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="s2">"0"</span><span class="p">);</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="s2">"0"</span><span class="p">);</span> <span class="c1">// false</span>
+</code></pre></div>
+
+
+<p>You may want to check this JavaScript <a href="http://zero.milosz.ca/">truth table</a> as well, but don't try to memorize it :)</p>
+
+<h2>1+2+"3" != "1"+"2"+3</h2>
+
+<p>JavaScript is quite tolerant when it's about strings and numbers, just think about the "+" operator, which both adds and concatenates. Unlike other programming languages that would shout at you when encountering the line above, JavaScript actually tries to solve this by assuming, at a time, that numbers are strings too.</p>
+
+<div class="highlight"><pre><code class="js"><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="s2">"3"</span> <span class="o">!=</span> <span class="s2">"1"</span><span class="o">+</span><span class="s2">"2"</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span> 
+<span class="c1">// 3+"3" != "12"+3</span>
+<span class="c1">// 33 !=123</span>
+</code></pre></div>
+
+
+<h2>JavaScript hoists variable and function declarations</h2>
+
+<p>The following code piece will run without problems because the JavaScript allows you to use the function before the point at which it was declared.</p>
+
+<div class="highlight"><pre><code class="js"><span class="nx">sayHello</span><span class="p">();</span> <span class="c1">//Call the function before its declaration</span>
+<span class="kd">function</span> <span class="nx">sayHello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>However, watch out for functions expressions and variable declarations! Although their declarations are hoisted as well, the function's definition and respectively the variable's initialization are not. If you want to read more, <a href="http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-javascript-hoisting-explained/">Jeffrey Way</a> and <a href="http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascript/">James Allardice</a> wrote some great articles on variable and function hoisting in JavaScript.</p>
+
+<h2>Omitting the var keyword</h2>
+
+<p>The <code>var</code> keyword helps defining a variable and optionally initializing it to a value. But, when you omit it, the code still works and the JavaScript interpreter displays no error. That happens because the respective variable will be created in the global scope and not in the local scope you defined it in. This kind of behavior is often described as a JavaScript pitfall and it's highly recommended to avoid it as it can create <a href="http://answers.oreilly.com/topic/2076-why-you-should-use-the-var-keyword-in-javascript/">unexpected results</a>.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+    <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'Hello'</span><span class="p">;</span> <span class="c1">// Declares and initialize foo, scoped to myFunction</span>
+    <span class="nx">bar</span> <span class="o">=</span> <span class="s1">'World!'</span><span class="p">;</span>     <span class="c1">// This works too, but the scope is global</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+<h2>The semicolon is optional, but...</h2>
+
+<p>You can go crazy and write JavaScript statements without caring about adding semicolons at the end. But there's a catch. Even though JavaScript automatically inserts semicolons at the end of each line, in some cases, especially if you're an <a href="http://en.wikipedia.org/wiki/Indent_style">Allman style</a> indentation fan, problems may appear.</p>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// OK</span>
+<span class="k">return</span> <span class="p">{</span>
+  <span class="s1">'ok'</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">};</span>
+
+<span class="c1">// not OK</span>
+<span class="k">return</span>
+<span class="p">{</span>
+  <span class="s1">'ok'</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+<p>Douglas Crockford gave the best example on this matter, and why should always use semicolons in the JavaScript code. At first sight, the above code pieces look like they do the same: return an object. In reality, the second one will fail because the returned value is <code>undefined</code>, due the automatic semicolon injection.</p>
+
+<div class="highlight"><pre><code class="js"><span class="k">return</span><span class="p">;</span> <span class="c1">// returns undefined</span>
+
+<span class="c1">// code block that does nothing</span>
+<span class="p">{</span> 
+  <span class="s1">'ok'</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Also, if you didn't already, you should try to adopt Douglas Crockford's <a href="http://javascript.crockford.com/code.html">JavaScript code convention</a>.</p>
+
+<h2>The console is your friend</h2>
+
+<p>You already know the <em>"Google is your friend"</em> phrase, with that in mind I'd say <em>"The console is your friend"</em> applies best in this case. The console object has some interesting methods you can use to debug your JavaScript code, the <code>log()</code> being by far the most known.</p>
+
+<p>I think the <code>console.log()</code> doesn't need any introduction anymore, its non-blocking behavior and nice formatting was a big plus comparing with <code>alert()</code>. The issue here is that, even though the <code>console.log</code> was implemented in IE8 and IE9, the <code>console</code> object somehow is not created until you toggle the DevTools.</p>
+
+<p>So, found out on my own skin that if you let any <code>console.log</code> calls in your code, it will break your code on browsers like <a href="http://www.red-team-design.com/how-to-solve-common-ie-bugs">IE8 and IE9</a>. After browsing for a solution, I found the following as a good and simple solution. Basically, if the <code>window</code> object does not have access to browser's debugging console, just override the <code>console.log</code> with a dummy function that does nothing at all.</p>
+
+<div class="highlight"><pre><code class="js"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">console</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3>Colorful log messages</h3>
+
+<p>But if logging methods like <code>log</code>, <code>info</code>, <code>error</code> &amp; warn are not enough to to distinguish your messages, you can try <a href="https://coderwall.com/p/fskzdw">adding your own styling</a> to the <code>log</code> messages.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">consoleStyling</span> <span class="o">=</span> <span class="s1">'background: #0f0; color: #fff; font-weight: bold;'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'%c A colorful message'</span><span class="p">,</span> <span class="nx">consoleStyling</span><span class="p">);</span>
+</code></pre></div>
+
+
+<h3>Debugging with console.table()</h3>
+
+<p>Again, if using <code>console.log()</code> feels too mainstream, you could try some advanced JavaScript debugging with <a href="http://blog.mariusschulz.com/2013/11/13/advanced-javascript-debugging-with-consoletable"><code>console.table()</code></a>. A very nice feature of console.table() is that it also works with objects.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">browsers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">chrome</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">"Chrome"</span><span class="p">,</span> <span class="nx">engine</span><span class="o">:</span> <span class="s2">"WebKit"</span> <span class="p">},</span>
+    <span class="nx">firefox</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">"Firefox"</span><span class="p">,</span> <span class="nx">engine</span><span class="o">:</span> <span class="s2">"Gecko"</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="nx">browsers</span><span class="p">);</span>
+</code></pre></div>
+
+
+<h2>Final words</h2>
+
+<p>When reading more about how JavaScript actually works, the following question will inevitably pop up in your head: <strong>Why does JavaScript have so many different ways to do the same thing?</strong> Maybe the answer is so we can choose our own way, with the best practices in mind.</p>
+
+<p>To get back, the above are just some things I got in mind when I wrote this article, but there are so many more. Thank you for reading and I'm looking forward to read your comments as well on what JavaScript pieces of code did you found as being the most intriguing.</p>
+
+
+  <p>
+    Share this on: 
+    <a href="http://twitter.com/intent/tweet?text=A%20beginner&%2339;s%20list%20of%20JavaScript%20gotchas&url=http://www.red-team-design.com/beginner-javascript-gotchas&via=catalinred" target="_blank">Twitter</a> • 
+    <a href="http://plusone.google.com/_/+1/confirm?hl=en&url=http://www.red-team-design.com/beginner-javascript-gotchas" target="_blank">Google+</a> • 
+    <a href="http://facebook.com/sharer/sharer.php?u=http://www.red-team-design.com/beginner-javascript-gotchas" target="_blank">Facebook</a>
+  </p>
+
+  <hr class="bold">
+  <div class="grid">
+    <div class="grid__col--45 grid__col--push10">
+    
+      <a href="http://red-team-design.com/position-sticky-might-be-the-next-best-thing" rel="prev" title="position: sticky might be the next best thing" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-left"></i> position: sticky might be the next best thing
+      </a>
+    
+    </div>
+    <div class="grid__col--45">
+    
+      <a href="http://red-team-design.com/data-uri-tools" rel="prev" title="Data URI conversion tools" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-right"></i> Data URI conversion tools 
+      </a>
+    
+    </div>
+  </div>
+  <hr class="bold">
+
+  
+    <div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./A beginner's list of JavaScript gotchas_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 1198px !important;"></iframe></div>
+    <script>
+      var disqus_shortname = 'redteamdesign',
+          disqus_title = "A beginner's list of JavaScript gotchas",
+          disqus_url = "http://www.red-team-design.com/beginner-javascript-gotchas";
+      (function() {
+          var dsq = document.createElement('script'); dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>   
+     
+
+</article>
+        </section>
+        <aside class="grid__col--30" role="complementary">
+          <div class="aside-module">
+            <h2 class="h4">
+              Get updates via 
+              <a href="http://feeds.feedburner.com/redteamdesign" class="rss-label">
+                <i class="fa fa-rss"></i> RSS
+              </a> or email:
+            </h2>
+            <form class="email-form" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;//feedburner.google.com/fb/a/mailverify?uri=redteamdesign&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+              <input type="email" name="email" class="email-form__text" placeholder="Your email address" required="">
+              <input type="submit" value="Go" class="email-form__submit">
+              <input type="hidden" value="redteamdesign" name="uri">
+              <input type="hidden" name="loc" value="en_US">
+            </form>
+          </div>
+          <div class="aside-module">
+            <script src="./A beginner's list of JavaScript gotchas_files/adpacks.js" id="_adpacks_js"></script><div id="bsap_1257097" class="bsap_1257097 bsap"><div class="bsa_it one"><div class="bsa_it_ad ad1 odd" id="bsa_4644885"><a href="http://stats.buysellads.com/click.go?z=1257097&b=4644885&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.10220463201403618&link=https://www.atlassian.com/software/jira?utm_source=buy-sell-ads&utm_medium=display&utm_content=meet-chet-rong&utm_campaign=agile-microsite" onmouseover="window.status = &#39;https://www.atlassian.com/software/jira?utm_source=buy-sell-ads&amp;utm_medium=display&amp;utm_content=meet-chet-rong&amp;utm_campaign=agile-microsite&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_i"><img src="./A beginner's list of JavaScript gotchas_files/200852-1386864729.png" width="130" height="100" alt="JIRA"></span></a><a href="http://stats.buysellads.com/click.go?z=1257097&b=4644885&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6611960523296148&link=https://www.atlassian.com/software/jira?utm_source=buy-sell-ads&utm_medium=display&utm_content=meet-chet-rong&utm_campaign=agile-microsite" onmouseover="window.status = &#39;https://www.atlassian.com/software/jira?utm_source=buy-sell-ads&amp;utm_medium=display&amp;utm_content=meet-chet-rong&amp;utm_campaign=agile-microsite&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_t">JIRA</span><span class="bsa_it_d">See why thousands of teams have chosen JIRA to track issues and manage projects.</span></a><div style="clear:both"></div></div><span class="bsa_it_p"><a href="http://buysellads.com/buy/detail/40406/zone/1257097?utm_source=site_40406&utm_medium=website&utm_campaign=imagetext&utm_content=zone_1257097">ads by BSA</a></span></div></div>
+          </div>
+          <div class="aside-module">           
+            <ul class="aside-module--list">
+              <li><a href="http://crazycoolgadgets.com/">Gadget Magazine</a></li>
+              <li><a href="http://eugenoprea.com/google-analytics/">Google Analytics Course</a></li>
+              <li><a href="http://itxdesign.com/">ITX Design</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo" class="master-footer text-center">
+    <div class="container">
+      <a href="http://twitter.com/catalinred" rel="me nofollow">
+        <i class="fa fa-twitter fa-2x"></i>
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <a href="http://github.com/catalinred" rel="me nofollow">
+        <i class="fa fa-github fa-2x"></i>
+        <span class="visually-hidden">GitHub</span>
+      </a>
+      <a href="http://facebook.com/RedTeamDesign" rel="me nofollow">
+        <i class="fa fa-facebook fa-2x"></i>
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <a href="http://plus.google.com/u/0/114910105297465575018" rel="me nofollow">
+        <i class="fa fa-google-plus fa-2x"></i>
+        <span class="visually-hidden">Google+</span>
+      </a>
+      <a href="http://feeds.feedburner.com/redteamdesign" rel="me nofollow">
+        <i class="fa fa-rss fa-2x"></i>
+        <span class="visually-hidden">RSS</span>
+      </a>
+      <a href="http://dribbble.com/catalinred" rel="me nofollow">
+        <i class="fa fa-dribbble fa-2x"></i>
+        <span class="visually-hidden">Dribbble</span>
+      </a>
+      <a href="http://instagram.com/catalinred" rel="me nofollow">
+        <i class="fa fa-instagram fa-2x"></i>
+        <span class="visually-hidden">Instagram</span>
+      </a>
+      <a href="http://linkedin.com/in/catalinred" rel="me nofollow">
+        <i class="fa fa-linkedin fa-2x"></i>
+        <span class="visually-hidden">LinkedIn</span>
+      </a>
+      <hr>
+      © 2014 Catalin Rosu. Feel free to use the articles you may find here in your projects, with or without any attribution.
+    </div>
+  </footer>  
+
+  <script src="./A beginner's list of JavaScript gotchas_files/common.js"></script>
+
+  
+</body></html>

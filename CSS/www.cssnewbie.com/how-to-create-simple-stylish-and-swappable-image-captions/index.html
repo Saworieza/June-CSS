@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>How To Create Simple, Stylish and Swappable Image Captions</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; How To Create Simple, Stylish and Swappable Image Captions Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CSS Newbie + Twitter = CushyCMS Pro Contest!' href='../index.html?p=449' />
+<link rel='next' title='A Full-Width Centered Navigation Bar' href='../index.html?p=472' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=457' />
+<link rel='shortlink' href='../index.html?p=457' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,225] -->
+<meta name="description" content="Most image captioning solutions in HTML are messy and tough to swap out later. This solution keeps your code clean and upgrades like a dream." />
+
+<meta name="keywords" content="image, captions, captioning, img title, figure caption, jquery, javascript, animated caption, image overlay,caption,css,javascript,jquery,semantics,advanced techniques,floats and positioning,images" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-457 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-457" class="post-457 post type-post status-publish format-standard hentry category-advanced-techniques category-floats-and-positioning category-images category-javascript tag-caption tag-css tag-image tag-javascript tag-jquery tag-semantics">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=457" title="Permalink to How To Create Simple, Stylish and Swappable Image Captions" rel="bookmark">How To Create Simple, Stylish and Swappable Image Captions</a>
+	</h2>
+	<div class="meta">
+		<p>Published December 3, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../example/image-captions/index.html"><img src="../wp-content/uploads/2009/12/image-captions.png" alt="Image Captions" title="Simple Image Captions: Click here to view a demo." width="500" height="250" class="alignnone size-full wp-image-460" /></a></p>
+<p>While they say a picture is worth a thousand words, not every image is self-explanatory. Sometimes a few words of description or context can make the difference between a confusing image and a clarifying one. That&#8217;s why image captions are often a good idea.</p>
+<p>I&#8217;ve always liked the idea of giving images captions, but I rarely do. And why not? It seems to me that most image caption solutions out there:</p>
+<ul>
+<li>Require a lot of excess HTML,</li>
+<li>Make it difficult to redesign (because of the rigidity, usually),</li>
+<li>Don&#8217;t make the relationship between image and caption clear, or</li>
+<li>All of the above.</li>
+</ul>
+<p>Today, I propose a solution that addresses many &mdash; if not all &mdash; of these concerns. <span id="more-457"></span> </p>
+<p><a href="../example/image-captions/index.html">You can view the demo here,</a> or read on for the why- and how-to.</p>
+<h3>How Not To Do Captions</h3>
+<p>An example of an old-school way to deal with image captions might look like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;table class=&quot;image-caption&quot;&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;img src=&quot;myimage.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;This is a caption for the image above.&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+<p>One thing this solution does well is make the relationship between the image and the caption clear: items in the same column of a table are (or at least should be) related in some way. </p>
+<p>However, it requires a ton of markup for something as simple as a line or two of related text. And let&#8217;s pretend you have a blog with 300 posts that contain images with this style of caption. What happens when, a year down the line, you decide the caption would look better above the image in the new design? There goes your weekend.</p>
+<p>Here&#8217;s another example that&#8217;s much cleaner, but has problems of its own:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;img src=&quot;myimage.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;p&gt;This image is swiped from Flickr.&lt;/p&gt;</pre>
+<p>This solution is nice and clean, but it makes a lot of assumptions. Your readers should assume, for example, that paragraphs following your images describe that image. Which may be true most of the time, but probably isn&#8217;t true all of the time. </p>
+<p>And while you could give that paragraph a certain class or ID to style it more like a caption, code-wise they&#8217;re still semantically unrelated.</p>
+<p>So what&#8217;s the solution?</p>
+<h3>The Goal</h3>
+<p>My goal was to create something that would:</p>
+<ul>
+<li>Retain some resemblance to good, semantic code,</li>
+<li>Keep my HTML as clean as possible, and</li>
+<li>Be easy to style and restyle at will.</li>
+</ul>
+<p>But in order to do any fancy CSS work, I&#8217;d need some hooks in my HTML. And adding more HTML makes it less clean, harder to revise in the future, and reduces my odds at keeping things semantically meaningful.</p>
+<p>To solve this thorny catch-22, I turned (yet again) to our good friend jQuery.</p>
+<h3>The Solution</h3>
+<p>In order to keep my HTML clean, I decided to limit myself to a traditional image tag. Nothing simpler, right?</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;img src=&quot;my_image.jpg&quot; alt=&quot;&quot; class=&quot;hascaption&quot; /&gt;</pre>
+<p>I also allowed myself the luxury of a special &#8220;hascaption&#8217; class, but if all the images were going to have captions, this wouldn&#8217;t even be necessary. But then where does the caption come from? Well, why not the image tag itself? </p>
+<p>Image tags have a &#8220;title&#8221; attribute which is supposed to contain extra information about the image. Extra, related information? That sounds like a caption to me! So let&#8217;s use it as such:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;img src=&quot;my_image.jpg&quot; alt=&quot;&quot; class=&quot;hascaption&quot; title=&quot;This is going to be my caption!&quot; /&gt;</pre>
+<p>Now our caption is contained within our image tag, which is about as semantically meaningful as you can get. And we&#8217;re off to a good start: all modern browsers display image titles as a &#8220;tooltip,&#8221; which is sort of a poor man&#8217;s caption. But we want ours to be fancier, and styleable (you can&#8217;t style tooltips).</p>
+<p>Here&#8217;s some jQuery that provides us a nice structure:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$(&quot;img.hascaption&quot;).each(function() {
+		$(this).wrap('&lt;div class=&quot;figure&quot;&gt;&lt;/div&gt;')
+		.after('&lt;p class=&quot;caption&quot;&gt;'+$(this).attr(&quot;title&quot;)+'&lt;/p&gt;')
+		.removeAttr('title');
+	});
+	$(&quot;.figure&quot;).width($(this).find('img').width());
+});</pre>
+<p>This code loops through our document and finds all the images with a class of &#8220;hascaption&#8221; and wraps them in a div called &#8220;figure&#8221;. Then it adds a paragraph after the image (inside the div) with a class of &#8220;caption&#8221;. It then fills the paragraph with the contents of the image&#8217;s title tag. Then it removes the title attribute to prevent the tooltip from competing with our caption (a bit extreme, but it works).</p>
+<p>And the last line of code is a little trick that makes the &#8220;figure&#8221; div the exact same width as our image, so it only takes up as much room as necessary. If you chose to float your div or specify a predetermined width in your CSS, you wouldn&#8217;t need this line.</p>
+<p>So now we have a rendered structure that looks more like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class=&quot;figure&quot;&gt;
+	&lt;img src=&quot;my_image.jpg&quot; alt=&quot;&quot; class=&quot;hascaption&quot; /&gt;
+	&lt;p class=&quot;caption&quot;&gt;This is going to be my caption!&lt;/p&gt;
+&lt;/div&gt;</pre>
+<p>This gives us plenty of hooks for some CSS/JS fun, but it didn&#8217;t require us to write any extra code by hand, and keeps our HTML looking clean. Anyone viewing the source will just see the original image tag, not the code above.</p>
+<p>And best of all, if a year from now we want the caption to go above the image, it&#8217;ll only take changing <em>one line of jQuery,</em> versus changing hundreds of articles manually.</p>
+<h3>Adding Some Flair</h3>
+<p>I wanted these captions to have a bit of flair: the caption should appear directly on top of the image when the user mouses over (close visual proximity providing relevance), but disappear when the mouse goes away (so as not to clutter or obscure the image). For that, I needed a couple more lines of jQuery:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$(&quot;img.hascaption&quot;).each(function() {
+		$(this).wrap('&lt;div class=&quot;figure&quot;&gt;&lt;/div&gt;')
+		.after('&lt;p class=&quot;caption&quot;&gt;'+$(this).attr(&quot;title&quot;)+'&lt;/p&gt;')
+		.removeAttr('title');
+	});
+	$(&quot;.figure&quot;).width($(this).find('img').width());
+	
+	$(&quot;.figure&quot;).mouseenter(function(){
+		$(this).find('.caption').slideToggle();
+	}).mouseleave(function(){
+		$(this).find('.caption').slideToggle();
+	});
+});</pre>
+<p>And some quick CSS:</p>
+<pre lang="css" escaped="true" line="1">.figure {
+	position: relative; }
+.figure p.caption {
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0;
+	width: 96%;
+	padding: 5px 3%;
+	background-color: #555;
+	color: #fff;
+	font-weight: bold; }
+</pre>
+<p><strong>Note:</strong> The CSS above has been modified slightly from the original to account for an IE7 bug.</p>
+<p>The jQuery is making use of the &#8220;mouseenter&#8221; and &#8220;mouseleave&#8221; functions built into jQuery. Whenever the mouse enters or leaves the space occupied by the &#8220;figure&#8221; div, the &#8220;slideToggle&#8221; function fires. </p>
+<p>I think slideToggle is pretty cool: it &#8220;slides&#8221; the content in if it&#8217;s not currently there, and slides the content out if it is already present: it toggles between the two states. </p>
+<p>The CSS is doing two primary things: setting a relative position on the figure div, and an absolute position on the caption paragraph. Then we just position the caption at the bottom-left of the figure using the power of absolute-inside-relative positioning (one of my favorite positioning tricks!). I gave the caption a nice dark background and made the text white and bold to provide plenty of contrast, but yours could be styled however you like. I&#8217;m also using a percentage width, plus a percentage padding on the left and right sides, to ensure the caption always stretches the entire width of the image.</p>
+<p><a href="../example/image-captions/index.html">View the whole thing in action.</a></p>
+<p>Admittedly, this is really just a proof-of-concept and could probably stand to be cleaned up a bit. If there&#8217;s any interest, I might post a follow-up article that makes this a little prettier.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			59 Responses		</h3>
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-13527">
+		<p>Pingback: <a href='http://www.smashingapps.com/2011/07/26/40-useful-css-tutorials-techniques-and-resources.html' rel='external nofollow' class='url'>40 Useful CSS Tutorials, Techniques And Resources | Free and Useful Online Resources for Designers and Developers</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13529">
+		<p>Pingback: <a href='http://www.68ds.com/2011/07/40-useful-layout-by-css-tutorials-including-techniques-and-resources/' rel='external nofollow' class='url'>40 Useful layout by CSS Tutorials including Techniques And Resources &laquo; 68Design &#8211; (68ds.com) Creative Design Transmitter</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13610">
+		<p>Pingback: <a href='http://www.downgraf.com/coding/html_css/45-powerful-cssjavascript-techniques/' rel='external nofollow' class='url'>45 Powerful CSS/JavaScript-Techniques &laquo; Downgraf &#8211; Design weblog for designers</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13850">
+		<article id="comment-13850" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cf9cb254911bfdde830be11e164db78f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://beben-koben.blogspot.com' rel='external nofollow' class='url'>Beben Koben</a> </cite><a href="comment-page-2/index.html#comment-13850"><time datetime="2011-11-11T14:16:03+00:00">Nov. 11, 2011 @ 2:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>background-color changes with it<br />
+background-color: rgba(0,0,0,.5);<br />
+hihihi ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13980">
+		<p>Pingback: <a href='http://tutorialmatrix.com/2012/02/15/how-to-create-simple-stylish-and-swappable-image-captions/' rel='external nofollow' class='url'>How To Create Simple, Stylish, and Swappable Image Captions | TutorialMatrix.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14019">
+		<p>Pingback: <a href='http://skytechgeek.com/2012/03/15-best-css-tutorials-to-enhance-web-design-skills/' rel='external nofollow' class='url'>15 Best CSS Tutorials to Enhance Web Design Skills | Sky Tech Geek</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14684">
+		<p>Pingback: <a href='http://howto.goodfav.com/five-useful-design-techniques-and-coding-solutions-for-web-designers-2754.html' rel='external nofollow' class='url'>Five Useful Design Techniques and Coding Solutions For Web Designers - Goodfav Howto</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14694">
+		<p>Pingback: <a href='http://howto.goodfav.com/45-powerful-cssjavascript-techniques-2860.html' rel='external nofollow' class='url'>45 Powerful CSS/JavaScript-Techniques - Goodfav Howto</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-15998">
+		<p>Pingback: <a href='http://www.int-business.com/45-powerful-cssjavascript-techniques' rel='external nofollow' class='url'>45 Powerful CSS/JavaScript-Techniques - Internet Business</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=457#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='457' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="52e633bd85" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=38" title="Permalink to: 5 Ways to Set Your Unordered Lists Apart">
+                    5 Ways to Set Your Unordered Lists Apart                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Unordered lists are one of the most pervasive elements on the web, probably just behind paragraphs and hyperlinks in terms of their bunny-like abundance. And... <a href="../index.html?p=38" class="more-link" title="Permalink to: 5 Ways to Set Your Unordered Lists Apart">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=457#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 732/818 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:56:04 by W3 Total Cache -->

@@ -1,0 +1,136 @@
+html {
+}
+body {
+    padding: 0px;
+    bbackground: whitesmoke  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAKUlEQVQIHWOuqqqSPHTo0Jffv3+j0Iz///9nwAaYQSqdnZ2/oEtSUQcAdmwj25LC0BIAAAAASUVORK5CYII=) repeat;
+    bbox-shadow: inset 0px 0px 15px rgba(0,0,0,.3);
+}
+.container {
+    padding: 10px;
+    margin: 0 10px;
+    background: white;
+}
+    
+
+/*************** Header ***************/
+.header {
+    position: relative;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+	.header h1 {
+		margin: 0 auto;
+		background: #2E78BC;
+		color: white;
+		font-size: 10px;
+		height: 80px;
+		width: 100px;
+		line-height: 140px;
+		text-align: center;
+		border-radius: 2px;
+		text-transform: uppercase;
+	}
+		.header h1 a {
+			color: white;
+            text-decoration: none;
+		}
+        .header h1 a:hover {
+            text-decoration: none;
+            background: transparent;
+        }
+        
+/*************** Navigation ***************/
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+    .navigation ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+        .navigation ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+/*************** Article ***************/
+.article {
+    margin-bottom: 60px;
+}
+    .article h1 {
+        margin-bottom: 20px;
+    }
+        .article h1 a {
+            color: black;
+        }
+        .article h1 a:visited {
+            color: black;
+        }
+    .meta {
+        font-size: 12px;
+        margin-bottom: 20px;
+        color: #999;
+    }
+        .article .meta time {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .article .meta a {
+            color: #666;
+        }
+    .article .copy {
+        padding-bottom: 20px;
+    }
+    .article footer {
+        position: relative;
+        margin-top: -15px;
+        border-bottom: 1px solid #eee;
+    }
+        .article footer .comments {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            right: 0px;
+            top: 10px;
+            height: 20px;
+            width: 80px;
+            line-height: 20px;
+            background: #fff;
+            color: #bbb;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10px;
+            border-radius: 2px;
+            border: 1px solid #eee;
+            text-shadow: 0px 0px 1px rgba(0,0,0,.1);
+            -webkit-transition: 500ms;
+        }
+            .article footer .comments:hover {
+                background: #2E78BC;
+                color: white;
+                text-decoration: none;
+                border-color: #2E78BC;
+            }
+
+/*************** Gallery ***************/
+.gallery ol{
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+    .gallery img {
+        width: 100%;
+    }
+.gallery .thumbs {
+    display: none;
+}
+
+/*************** Footer ***************/
+.footer {
+    clear: both;
+    color: #999;
+}

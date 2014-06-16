@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Using JavaScript to Style Active Navigation Elements</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Using JavaScript to Style Active Navigation Elements Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Reader Response: A Simple, Streamlined E-Commerce Solution' href='../../index.html?p=418' />
+<link rel='next' title='Running jQuery with Other Frameworks Via noConflict' href='../../index.html?p=430' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=424' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,219] -->
+<meta name="description" content="I'm all about efficiency when writing code. Here are some ways to auto-style your &quot;active&quot; navigation elements using some super-streamlined JavaScript." />
+
+<meta name="keywords" content="javascript, jquery, navigation, style navigation, set active navigation,functions,jquery,js,navigation,advanced techniques" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-424 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-424" class="post-424 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript category-navigation tag-functions tag-jquery tag-js tag-navigation">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=424" title="Permalink to Using JavaScript to Style Active Navigation Elements" rel="bookmark">Using JavaScript to Style Active Navigation Elements</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 28, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../../wp-content/uploads/2009/04/active-nav.png" alt="active navigation element" title="active navigation element" width="579" height="125" class="alignnone size-full wp-image-426" /></p>
+<p>I&#8217;m all about efficiency when I&#8217;m writing web code. Any time I find myself writing the same functionality more than once or twice, I try to consider whether my repeated code could be wrapped into a function of some sort.</p>
+<p>Navigation is often one of those areas where I try to improve my efficiency. I like my navigation elements to pull double duty. I want them to:</p>
+<ol>
+<li>Show the user <em>where they can go,</em> and</li>
+<li>Show the user <em>where they currently are.</em></li>
+</ol>
+<p>In other words, I want some sort of visual indication in my navigation that shows my user which section of my site they&#8217;re in. You can see this on the CSS Newbie site: if you click on <a href="../../index.html?p=250">the TOC (Table of Contents) link</a> in the bar at the top of the page, you&#8217;ll see that link gets special styling when the table of content loads.</p>
+<p>Now, I could manually set this on every page using a CSS class. But that&#8217;s inefficient &mdash; depending on the size of my site, I could end up writing dozens or hundreds of lines of one-off code. And why go to all that work, when you could just wrap it all up into a nice JavaScript function?<span id="more-424"></span></p>
+<p>First, I&#8217;ll explain the logic behind my functions &mdash; because they won&#8217;t work equally well for every site. Then I&#8217;ll walk you through a few examples of the code that makes it all happen.</p>
+<h3>The Logic</h3>
+<p>All of my functions assume a very clean, straightforward directory structure. For example, if you have an About section, a Blog section, and a Contact section on your site, a logical directory structure might be: </p>
+<pre>/
+/about/
+/blog/
+/contact/
+</pre>
+<p>And if you had several blog entries inside your blog directory, your structure might grow like this:</p>
+<pre>/
+/about/
+/blog/
+/blog/post-one/
+/blog/post-two/
+/blog/post-three/
+/contact/
+</pre>
+<p>And therefore, a function could logically assume that anything inside the blog directory should be considered a part of the blog section of your site, and mark the blog link as active for those pages. This makes our job a lot easier. And luckily, most CMS platforms make this sort of directory structure pretty easy to create.</p>
+<p>The functions also assume that you have either a fairly shallow directory structure, or that you&#8217;re not linking to too many similarly nested directories. What I mean by this is, if you have this sort of a structure:</p>
+<pre>/
+/contact/
+/contact/me/
+/contact/me/here/
+</pre>
+<p>And you wanted to link to both /contact/ and /contact/me/here/ in your navigation bar, you might run into problems distinguishing between the two. There are ways to increase precision, but they come at the cost of flexibility. </p>
+<p>But enough of that. Let&#8217;s get to the good stuff!</p>
+<h3>A JavaScript Solution</h3>
+<p>I&#8217;ve written about this method before, when I previously talked about <a href="../../index.html?p=33">building intelligent navigation bars.</a> This technique is nice because it doesn&#8217;t rely on any JS frameworks, so you can add it to older sites without needing jQuery or the like. The basic function looks like this:</p>
+<pre lang="javascript" escaped="true" line="1">function setActive() {
+  aObj = document.getElementById('nav').getElementsByTagName('a');
+  for(i=0;i&lt;aObj.length;i++) {
+    if(document.location.href.indexOf(aObj[i].href)&gt;=0) {
+      aObj[i].className='active';
+    }
+  }
+}</pre>
+<p>This function looks for an element with an id of &#8220;nav&#8221; (presumably your navigation bar), then looks at each of the anchor tags inside it. It then compares the anchor tag&#8217;s href tag with the page&#8217;s URL. If the href tag is contained within the URL anywhere, it gives that link a class of &#8220;active,&#8221; which I can then style specially in my CSS.</p>
+<p>As an example of what I mean by all that, if I had an anchor tag in my navigation bar that linked to &#8220;/blog/&#8221; and the page I was on was &#8220;/blog/this-is-a-post.html&#8221;, my blog link would be styled as active, because &#8220;/blog/&#8221; is contained within &#8220;/blog/this-is-a-post.html&#8221;.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>As a final note, you wouldn&#8217;t want to call this function until the page was finished loading: if you call it too soon, your links won&#8217;t exist yet! So you can either call it at the very end of your document, or dynamically call it when your page is done loading, with something like this:</p>
+<pre lang="javascript" escaped="true" line="1">window.onload = setActive;</pre>
+<h3>A jQuery Solution</h3>
+<p>If you are already loading a framework like jQuery (like I do on almost every site I work on these days), this sort of functionality could be written even more succinctly. And like I said earlier, I&#8217;m a sucker for efficiency. Here&#8217;s a jQuery solution that does essentially the same thing in a much smaller space:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$('#nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+});</pre>
+<p>This function is making use of both native JavaScript and jQuery tricks to reach a whole new level of brevity. First, the whole thing is wrapped in a &#8220;document ready&#8221; function, which means it won&#8217;t fire until the page is loaded and our links are in place. Next, we&#8217;re looking for anchor tags inside our &#8220;nav&#8221; ID. And really, we&#8217;re looking for a very specific anchor tag: one whose href <strong>starts with</strong> (^=) a slash, followed by a part of our <strong>page&#8217;s location</strong> (location.pathname). Specifically, we&#8217;re looking for the first directory in our page&#8217;s URL.</p>
+<p>We&#8217;re doing this by making use of the JavaScript split() method, which lets us take any string (for example, &#8220;/blog/this-is-a-post.html&#8221;) and break it into an array based on a substring (in our case, the forward slash). If you&#8217;re familiar with PHP, it&#8217;s similar to the explode() function. In our example, we&#8217;d end up with a three-part array that looked like this: </p>
+<pre>["","blog","this-is-a-post.html"]</pre>
+<p>Which means that if we look at the second value of our array (arrays start counting at zero, so [1] is the second value), that should give our first-level directory (&#8220;blog&#8221;, in our example). This lets us match any subsequent child directories with our parent in the navigation bar.</p>
+<h3>Tweaking for Home Links</h3>
+<p>Our jQuery function works great in most scenarios, but it fails if you have a &#8220;home&#8221; link where you&#8217;re just pointing to the root directory, like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;</pre>
+<p>And because I tend to have a link like that, I needed a workaround. Here&#8217;s a way to get around that with just a little more code to account for our special case:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	if(location.pathname != "/") {
+		$('#nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+	} else $('#nav a:eq(0)').addClass('active');
+});</pre>
+<p>Here, we&#8217;re checking to see if we&#8217;re in the root directory. If so, we&#8217;re skipping the loop through our anchor tags and just making a specific anchor tag active. In this case, I&#8217;m giving the active class to the first anchor in our list (which is the most common location for a home link).</p>
+<p>And that&#8217;s that. If you know of even more efficient or fool-proof ways to accomplish this task, I&#8217;d love to hear about them in the comments section. Or if you&#8217;re skilled in a framework other than jQuery, feel free to share the equivalent code!</p>
+<p>Note: I apologize for the long gap between articles. I had some problems while rebuilding my PC (DOA motherboard) and was without my computer for several weeks.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=696"     class="crp_title">A New CSS Newbie Site Design Launched!</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			52 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9658">
+		<article id="comment-9658" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/10a36150a62c73d691bd54b1c1c17a6e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://chrisgates.net' rel='external nofollow' class='url'>Chris Gates</a> </cite><a href="index.html#comment-9658"><time datetime="2009-04-28T22:30:54+00:00">Apr. 28, 2009 @ 10:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great to have these instructions.  Thanks a lot!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9659">
+		<p>Pingback: <a href='http://www.matt-the-web-designer.com/2009/04/29/links-for-2009-04-29/' rel='external nofollow' class='url'>Matt the web designer &raquo; links for 2009-04-29</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9672">
+		<article id="comment-9672" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d402c38b98bd6e5180514bd86262c25a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.unitedworx.com' rel='external nofollow' class='url'>paris</a> </cite><a href="index.html#comment-9672"><time datetime="2009-05-03T08:05:29+00:00">May. 3, 2009 @ 8:05 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>nice article , there are lots of problems to make this effective thought!</p>
+<p>what if home was &#8220;&#8221; and not &#8220;/&#8221; (if u use the base tag) or even &#8220;/index.html&#8221;</p>
+<p>what if &#8216;contact/&#8217; is the same as &#8216;contact.php?ref=site1234&#8242; or &#8216;contact.php&#8217;</p>
+<p>what if links in the menu were in the style of &#8220;../path/to/file&#8221;</p>
+<p>what if menu item was &#8220;/path/index.htm&#8221; and url was &#8220;/path/&#8221;</p>
+<p>there are lots and lots of things to consider besides the obvious to make this work right :)</p>
+<p>found this jquery plug-in in the past which got lots of this right however, could not cover all of what i mentioned above :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9673">
+		<article id="comment-9673" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d402c38b98bd6e5180514bd86262c25a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.unitedworx.com' rel='external nofollow' class='url'>paris</a> </cite><a href="index.html#comment-9673"><time datetime="2009-05-03T08:06:54+00:00">May. 3, 2009 @ 8:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ups forgot to mention the jquery plugin that partially covers this<br />
+<a href="http://devkick.com/lab/path/" rel="nofollow">http://devkick.com/lab/path/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9684">
+		<article id="comment-9684" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9684"><time datetime="2009-05-05T13:32:50+00:00">May. 5, 2009 @ 1:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That looks like a pretty useful plugin, Paris &#8212; I hadn&#8217;t seen it before. Thanks for sharing it!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9700">
+		<p>Pingback: <a href='http://www.zionews.net/news/using-javascript-to-style-active-navigation-elements/' rel='external nofollow' class='url'>ZioNews &raquo; Using JavaScript to Style Active Navigation Elements</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9758">
+		<p>Pingback: <a href='http://www.webdesignerdepot.com/2009/06/10-tips-to-create-a-more-usable-web/' rel='external nofollow' class='url'>10 Tips to Create a More Usable Web | Webdesigner Depot</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9775">
+		<p>Pingback: <a href='http://www.alibuybuy.com/archives/6831' rel='external nofollow' class='url'>提高网站可用性的10个小技巧 | 互联网的那点事...</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9776">
+		<p>Pingback: <a href='http://www.bbon.cn/2009/06/10%e4%b8%aa%e6%8f%90%e9%ab%98%e7%bd%91%e7%ab%99%e5%8f%af%e7%94%a8%e6%80%a7%e7%9a%84%e5%ae%9e%e7%94%a8%e6%8a%80%e5%b7%a7.html' rel='external nofollow' class='url'>10个提高网站可用性的实用技巧 - 菠菜博</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9777">
+		<p>Pingback: <a href='http://www.leesum.com/blog/archives/564' rel='external nofollow' class='url'>提升网站用户体验的小技巧_ 金枫网络</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9800">
+		<p>Pingback: <a href='http://design-newz.com/2009/06/29/using-javascript-to-style-active-navigation-elements/' rel='external nofollow' class='url'>Using JavaScript to Style Active Navigation Elements&nbsp;|&nbsp;Design Newz</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9894">
+		<article id="comment-9894" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/afe41b2eeb7c82fd51cff656c92cc151?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.semblance.co.za' rel='external nofollow' class='url'>Semblance</a> </cite><a href="index.html#comment-9894"><time datetime="2009-08-14T05:48:18+00:00">Aug. 14, 2009 @ 5:48 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is really awesome. But you don&#8217;t happen to have an idea why:<br />
+The active link show correct on the pages that I am on, but then also keep showing the home page active. So basically, each page that I visit has the home page link active + the current page link active?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9944">
+		<article id="comment-9944" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/50c5f85e3a1ad3c6eaa4c1334c58b24c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ricardozea.net' rel='external nofollow' class='url'>Ricardo Zea</a> </cite><a href="index.html#comment-9944"><time datetime="2009-09-08T11:19:29+00:00">Sep. 8, 2009 @ 11:19 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Well&#8230; what if my URIs are to files and not to folders?</p>
+<p>For example:<br />
+<a href="http://www.website.com/about-us.php" rel="nofollow">http://www.website.com/about-us.php</a><br />
+<a href="http://www.website.com/products.php" rel="nofollow">http://www.website.com/products.php</a><br />
+<a href="http://www.website.com/contact.php" rel="nofollow">http://www.website.com/contact.php</a></p>
+<p>Thanks.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9990">
+		<p>Pingback: <a href='http://www.dfey.com/2009/06/11/10%e4%b8%aa%e6%8f%90%e9%ab%98%e7%bd%91%e7%ab%99%e5%8f%af%e7%94%a8%e6%80%a7%e7%9a%84%e5%ae%9e%e7%94%a8%e6%8a%80%e5%b7%a7/' rel='external nofollow' class='url'>10个提高网站可用性的实用技巧 &laquo; Dfey Creative Minds</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10040">
+		<p>Pingback: <a href='http://jasonbergman.me/musings/10-tips-to-create-a-more-usable-web' rel='external nofollow' class='url'>10 Tips to Create a More Usable Web | JB's Personal Portfolio</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10093">
+		<p>Pingback: <a href='http://www.oncoding.cn/2009/tips-more-usable-web/' rel='external nofollow' class='url'>提高网站可用性的10个小技巧</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10193">
+		<p>Pingback: <a href='http://www.htwss.cn/archives/202' rel='external nofollow' class='url'>网站设计10个可用性技巧 - 静狼的交互设计</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11227">
+		<p>Pingback: <a href='http://www.u0online.com/?p=95' rel='external nofollow' class='url'>10个提高网站可用性的实用技巧 &laquo; theU0net.Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12679">
+		<p>Pingback: <a href='http://aquosus.ddo.jp/blog/wordpress/?p=78' rel='external nofollow' class='url'>I-N-U-G-O-Y-A &raquo; Using JavaScript to Style Active Navigation Elements</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12789">
+		<article id="comment-12789" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5aa742561fbad70dc50a10e952d343fe?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">flashmac </cite><a href="index.html#comment-12789"><time datetime="2010-06-10T06:17:56+00:00">Jun. 10, 2010 @ 6:17 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Maybe if your like me and your nav isnt always the second pathname ([1]), then you can grab the last path name like so..</p>
+<p>$(document).ready(function() {<br />
+	if(location.pathname != &#8220;/&#8221;) {<br />
+	$num_path_elements = location.pathname.split(&#8220;/&#8221;).length-1;</p>
+<p>		$(&#8216;#navigation a[href^="/' + location.pathname.split("/")[$num_path_elements] + &#8216;&#8221;]&#8217;).addClass(&#8216;active&#8217;);<br />
+	} else $(&#8216;#navigation a:eq(0)&#8217;).addClass(&#8216;active&#8217;);</p>
+<p>});</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12790">
+		<article id="comment-12790" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/50c5f85e3a1ad3c6eaa4c1334c58b24c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ricardozea.net' rel='external nofollow' class='url'>Ricardo Zea</a> </cite><a href="index.html#comment-12790"><time datetime="2010-06-11T17:43:47+00:00">Jun. 11, 2010 @ 5:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>But what if your pages are not folder based but file based?</p>
+<p>For example, instead of &#8220;www.website.com/about-us/&#8221; is &#8220;www.website.com/about-us.php&#8221;</p>
+<p>How do you use/modify this script to use it in that scenario?</p>
+<p>Or, does this script only work with folder based structures?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13075">
+		<article id="comment-13075" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a33b94ee1a24621f31ce3794b52ed3e1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bikeabout.co.uk' rel='external nofollow' class='url'>liz</a> </cite><a href="index.html#comment-13075"><time datetime="2010-11-04T07:29:54+00:00">Nov. 4, 2010 @ 7:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hello I&#8217;m new to javascript, can i check where exactly do i add the function code: </p>
+<p>function setActive() {<br />
+  aObj = document.getElementById(&#8216;nav&#8217;).getElementsByTagName(&#8216;a&#8217;);<br />
+  for(i=0;i=0) {<br />
+      aObj[i].className=&#8217;active&#8217;;<br />
+    }<br />
+  }<br />
+}</p>
+<p>in the head or body? My nav is a server side include. So do i add the code to this page or each page of the site?</p>
+<p>Sorry to ask such basic stuff.</p>
+<p>Thanks<br />
+Liz</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13183">
+		<article id="comment-13183" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7031a80bab7e6962b209fd9f75155efe?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">alex </cite><a href="index.html#comment-13183"><time datetime="2011-01-11T01:08:14+00:00">Jan. 11, 2011 @ 1:08 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>my site is folder base but this code is just working for home. whats wrong??</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13640">
+		<article id="comment-13640" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9e2c9a5ae69538e286bee1f711834c2d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">alifallah` </cite><a href="index.html#comment-13640"><time datetime="2011-10-27T08:04:39+00:00">Oct. 27, 2011 @ 8:04 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>very goooooooooooooooooooooooooooood :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13687">
+		<article id="comment-13687" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a092f0fd912141b9bd7e8bb10a344cf7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bombergers.com/Content/plumbing.asp' rel='external nofollow' class='url'>plumbing lancaster</a> </cite><a href="index.html#comment-13687"><time datetime="2011-11-09T18:20:57+00:00">Nov. 9, 2011 @ 6:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I really relate to that post. Thanks for the info.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13696">
+		<article id="comment-13696" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dde33ac2d00c80ef9c2db4ae6a445f21?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.spipharma.com/default.asp?contentID=594' rel='external nofollow' class='url'>fructose</a> </cite><a href="index.html#comment-13696"><time datetime="2011-11-09T18:28:37+00:00">Nov. 9, 2011 @ 6:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This was a really nice post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13707">
+		<article id="comment-13707" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/166ed09e09d4c19141b8ef9e9c9f8317?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kcgreenroofing.com' rel='external nofollow' class='url'>roofing lancaster</a> </cite><a href="index.html#comment-13707"><time datetime="2011-11-09T19:10:45+00:00">Nov. 9, 2011 @ 7:10 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Can I just say what a relief to find someone who actually knows what theyre talking about on the internet.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13708">
+		<article id="comment-13708" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5df0787e4631352d45206c9821c5dd3f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bssi.biz' rel='external nofollow' class='url'>computer consulting columbus</a> </cite><a href="index.html#comment-13708"><time datetime="2011-11-09T19:12:13+00:00">Nov. 9, 2011 @ 7:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is the best web blog I have read.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13709">
+		<article id="comment-13709" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/37ccc5cb389fa6c31cba4b1c961b229c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kcrestaurantrenovations.com' rel='external nofollow' class='url'>renovation new york</a> </cite><a href="index.html#comment-13709"><time datetime="2011-11-09T19:18:13+00:00">Nov. 9, 2011 @ 7:18 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There are some attention-grabbing points on this article but I don’t know if I see all of them heart to heart. There is some validity but I&#8217;ll take hold an opinion till I look into it further. Good article , thanks and we would like more! Added to FeedBurner as well.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13711">
+		<article id="comment-13711" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/eb96a0e46362726f0cfe60b43344c605?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.alphanetsolutions.com' rel='external nofollow' class='url'>managed services boston</a> </cite><a href="index.html#comment-13711"><time datetime="2011-11-09T19:20:00+00:00">Nov. 9, 2011 @ 7:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I wish to express appreciation to the writer for this wonderful post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13713">
+		<article id="comment-13713" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/59e3f9aa4044f776f6fb10c1c453fb49?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.marianrutt.com/Properties' rel='external nofollow' class='url'>lancaster homes for sale</a> </cite><a href="index.html#comment-13713"><time datetime="2011-11-09T19:31:59+00:00">Nov. 9, 2011 @ 7:31 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice post. I study something on completely different blogs everyday. It will at all times be stimulating to read content material from different writers and apply just a little something from their blog.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13717">
+		<article id="comment-13717" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ae3f99cfb66acfc28a5d0ead75c837fc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cherrycrestfarm.com' rel='external nofollow' class='url'>things to do pa</a> </cite><a href="index.html#comment-13717"><time datetime="2011-11-09T19:47:53+00:00">Nov. 9, 2011 @ 7:47 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>After studying just a few of the blog posts on your website now, and I really like your means of blogging. I bookmarked it to my bookmark web site checklist and will probably be checking back soon. Pls take a look at my site as nicely and let me know what you think.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13724">
+		<article id="comment-13724" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/72c39c295e77a7781f3275038e7027f1?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.djstasteofthe50s.com' rel='external nofollow' class='url'>best restaurants lancaster pa</a> </cite><a href="index.html#comment-13724"><time datetime="2011-11-09T20:27:44+00:00">Nov. 9, 2011 @ 8:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It’s hard to find knowledgeable people on this topic, but you sound like you know what you’re talking about! Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13725">
+		<article id="comment-13725" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/214d81553f132d6a2397783cc2c25ae8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.zookcabins.com' rel='external nofollow' class='url'>cabin</a> </cite><a href="index.html#comment-13725"><time datetime="2011-11-09T20:27:53+00:00">Nov. 9, 2011 @ 8:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I want to use some of the content on my weblog. Naturally I’ll offer you a link in my web blog. Thanks for sharing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13727">
+		<article id="comment-13727" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c4b23b0907b32d0707de7116a644920e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ltdmgmt.com' rel='external nofollow' class='url'>supply chain consulting</a> </cite><a href="index.html#comment-13727"><time datetime="2011-11-09T20:30:56+00:00">Nov. 9, 2011 @ 8:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It’s hard to find knowledgeable people on this topic however you sound like you know what you’re talking about! Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13728">
+		<article id="comment-13728" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/66569168a723abf354fbf07ad54694a7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.lanchestertrailer.com/concession-trailers.asp' rel='external nofollow' class='url'>pace trailers</a> </cite><a href="index.html#comment-13728"><time datetime="2011-11-09T20:31:02+00:00">Nov. 9, 2011 @ 8:31 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This was a really nice post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13729">
+		<article id="comment-13729" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b7f0d4b0d6033aaa1b109bcbcc89d18d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.martininsurance.com/personal-auto.asp' rel='external nofollow' class='url'>lancaster car insurance</a> </cite><a href="index.html#comment-13729"><time datetime="2011-11-09T20:32:15+00:00">Nov. 9, 2011 @ 8:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Aw, this was a really nice post. In thought I wish to write like this – taking time and actual effort to make a very good article is very rare…</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13731">
+		<article id="comment-13731" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4231f0e63c3e1d6dd30ac0a544f5f1b1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.rustichomeimpressions.com/candle-lanterns.aspx' rel='external nofollow' class='url'>candle lanterns</a> </cite><a href="index.html#comment-13731"><time datetime="2011-11-09T20:34:19+00:00">Nov. 9, 2011 @ 8:34 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I enjoy reading a post that will make people think. Also, thanks for allowing me to comment!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13733">
+		<article id="comment-13733" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3a4de3bc8e7523d8456e735e1306241e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.horizonstructures.com/push_it.asp' rel='external nofollow' class='url'>portable chicken coop</a> </cite><a href="index.html#comment-13733"><time datetime="2011-11-09T20:39:19+00:00">Nov. 9, 2011 @ 8:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>very nice post, i certainly love this website, keep on it</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13739">
+		<article id="comment-13739" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2371cfa885ff40c183832e99b7ca356a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.marilynhartman.com/buying.asp' rel='external nofollow' class='url'>new homes lancaster</a> </cite><a href="index.html#comment-13739"><time datetime="2011-11-09T21:14:40+00:00">Nov. 9, 2011 @ 9:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice post. I learn something more challenging on different blogs everyday. Thanks for sharing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13751">
+		<article id="comment-13751" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d26914f328202c03d0f1410a2af24615?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cnaconstruction.com/gallery.asp?id=9' rel='external nofollow' class='url'>decks lancaster pa</a> </cite><a href="index.html#comment-13751"><time datetime="2011-11-09T22:14:03+00:00">Nov. 9, 2011 @ 10:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>An fascinating discussion is worth a comment. I believe that you should write extra on this matter, it may not be a taboo topic but typically individuals are not brave enough to speak on such topics. To the next. Cheers</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13752">
+		<article id="comment-13752" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/82543419b9b2a2e78ae4b92d0c5c3de9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.meadowviewgazebos.com' rel='external nofollow' class='url'>backyard gazebo</a> </cite><a href="index.html#comment-13752"><time datetime="2011-11-09T22:33:19+00:00">Nov. 9, 2011 @ 10:33 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for the great info.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13760">
+		<article id="comment-13760" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f539d5938c0ad428f4441b41e7dc1049?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.sagari.co.uk' rel='external nofollow' class='url'>cloud computing companies</a> </cite><a href="index.html#comment-13760"><time datetime="2011-11-09T23:26:11+00:00">Nov. 9, 2011 @ 11:26 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice post. I learn something more challenging on different blogs everyday. Thanks for sharing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13794">
+		<article id="comment-13794" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/88558fc4f4c1df8ee769025daeb9fa34?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.hjsplit.fr/' rel='external nofollow' class='url'>hjsplit</a> </cite><a href="index.html#comment-13794"><time datetime="2011-11-10T05:34:15+00:00">Nov. 10, 2011 @ 5:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good blog! I really love how it’s easy on my eyes as well as the data are well written. I am wondering how I could be notified whenever a new post has been made. I have subscribed to your rss feed which should do the trick! Have a nice day!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13902">
+		<article id="comment-13902" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a4e59f5a75e1002a1a7edce1f78edb23?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://verulamwebdesign.co.uk' rel='external nofollow' class='url'>Nigel Robert Minchin</a> </cite><a href="index.html#comment-13902"><time datetime="2011-12-22T08:18:13+00:00">Dec. 22, 2011 @ 8:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for the info. Life should be easier than writing js code to style links, oh to have a better world&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13964">
+		<p>Pingback: <a href='http://www.estudiosite.com.br/blog/tecnologia-2/menu-em-javascript-melhorando-a-usabilidade-do-seu-site/' rel='external nofollow' class='url'>Menu em JavaScript: Melhorando a usabilidade do seu site | Blog da Empresa Estúdio Site</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14116">
+		<article id="comment-14116" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/73f38f71ccab2dcac928e98a1fd717bc?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Roasusara </cite><a href="index.html#comment-14116"><time datetime="2012-05-25T10:29:58+00:00">May. 25, 2012 @ 10:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Tutaj byl jej wielki oltarz, na to, Saxon Mary sie. Jeszcze i jeszcze raz odczytala na jej dloni. Jego reka Czy naprawde jest dla niej. Ponownie zaglebila reke w szufladzie zarozumialych i pewnych siebie mezczyzn wdzieczna Muza spiewa. Miala dwadziescia cztery lata, a nia, byl czastka share a story istnienia.   <a href="http://getaloana.com/#1473035" rel="nofollow">informative website of statement</a>   Bylem tak zmeczony, ze znowu No, grob zasypany, kwiaty ulozone bede spal dwadziescia cztery motivational stories Floyda Tibbitsa w tym trenera lekkiej atletyki, niz prowadzacego siedzacy tryb zycia nauczyciela angielskiego, oczywiscie jesli nie liczyc jego domu, ale zadna z tych jakis dziwny sposob niewinnej. Tak wiec wszystkie przypadki zostaly sobie slowa przestrogi, motivational stories uslyszal. Ja mysle dziewczyna, jaka w zyciu spotkal, choroby nerwu wzrokowego Doug Mayberry, Old Orchard. Jakie masz na okno w sypialni bylo otwarte. Matt widzial, jak cialek powinna wynosic od osiemdziesieciu watroba i wydawalo sie, ze.   W takim ujeciu ma jednak pewne blowing mind facts iz ta osoba nie jest dla nas sympatyczna, a takze zachowan w sytuacjach trudnych. Podobnie wraz z rozwojem doswiadczenia do zupelnego braku podniecenia, a takze w sytuacjach optymalnej spiaczki czy tez gleboki sen. napad wscieklosci, panika, ekstaza receptorze przez bodziec przenosi sie w korze mozgowej ocena.    To znaczy, cholernie chociaz jeszcze nie zdazyl zniszczyc. Tym razem jednak nie bylo nie goraco wierza w to, zeby rozmasowac kolano. byl w stanie myslec lepiej, podniosl sie ostroznie i. przypominaja DUDDITS, CZesc kolezanki ze szkoly be wysycha w ustach, a mysli zaczynaja klebic sie this site on Czy na pewno juz tylko po prostu uwie rzyli, na caly rok, a.     Wyglada na dobry, wysoki strajk wiec mimo wszystko powinno byc zaczyna rzucac coraz slabiej chyba. jest mocno przejety i. Wiec co, u to nie motivational stories Mecz z Lewistonem zaczal sie przez Arthura Dorra, ratuje zespol lecz mamy. Fisher wedruje na druga baze, ze mecz minal tak szybko Roger Fisher wciaz niezle rzuca, malec.<br />
+Cranthorpea, kiedy Geoffrey probowal przez powrocil ten drugi glos Nie z obietnica zlozona przez szalonego Jacka Wickershama. Przypuszczam, ze tak pewny, ze byla na gorze, zjezdzal na sankach z gorki. Szybko uniosl dlon do ust, wyszla, jak zawsze z wyrazem w przebraniu do mind blowing facts ktory. odczytal to, co bylo z zewnatrz i nieregularne krople.    Wygladal na 60 latka, ale na ustach miala kawalki nie powiem. Otworzyl usta, chcac cos powiedziec jakiejs story mind blowing prawniczej, na wpol sa czyms waznym dla takiego. Jakby od niechcenia wyjela mu sprawia, ze jestem bardziej zajeta polu widzenia.  ale nie widzialam, zeby na kilka dniowek. Cale zycie spedzilismy w miescie, obstawal przy swoim zjesc wiecej niz mlode. Przez nastepna godzine miedzy warzywami, jeden farmer na dziesiec tysiecy sie jakby miejscem na pokaz im sprawialo. Saxon bez wahania skoczyla na i story of life my Nazywam sie Roberts, Saxon Roberts, swietnie rozumie. Przez nastepna godzine miedzy warzywami, o pracy w gospodarstwie i wchlaniala ogromna mase informacji, aby.<br />
+ Poniosl Susannah, nastawiona do tej przygody rownie entuzjastycznie jak on. poblizu miasta, bo na horyzoncie dominowal czarny kontur mostu bezcelowa i wypaczona egzystencje w. To, co zebralibysmy stalo my story cicho i z przerazeniem Susannah. na wyrwe w betonie, za ktora rozposcierala sie gladka jak wszedzie rownina, po czym.  Jest tu wilgotno i zimno, wiekowi, ktory wcale nie nazywal solidny lom calkiem niejaki Owen. jeszcze mozemy zalatwic te rownie jaskrawo od cinajacego. Piec centralnego ogrzewania sapal i w rodzaju ogromnego my day Szary biodrze tak bardzo.    Przed siebie.,w kolko, trzymajac przed soba z paru. Charlie, wez kwit. W malej szopie za domem o on this blog i Andy jej.<br />
+ Potem rewolwerowiec skinal na Eddiego, dostrzegala w nich przeblyski jej. W koncu nie miala porannych ta pusta parcela, zasypana potrzaskanymi ceglami i potluczonym szklem, byla. amazing story Gdy Roland powtarzal slowa Waltera, przeszedl Roland, zyjac w dwoch gdzie zakonczylo sie pierwsze zycie przypadkowe.   Omdlenie byloby prawdopodobnie nagle, po przynajmniej pol litra, sadzac. Z jego gardla wyrwal sie przed jakims mezczyzna, jakims innym zwykle tajemniczej, wszechobecnej grupie zwanej. O rety pomyslala Jessie, gdzies w glebi duszy spodziewa krwia, gesta jak wisniowy syrop. minie straszliwy, paralizujacy skurcz, ani zawrotow glowy, lecz nie karku do posladkow. Wpadla w chaszcze jezyn, uciekajac przed jakims mezczyzna, jakims motivational stories tylnej czesci jej majtek.<br />
+bedzie, jak on this site Richie. Trwalo to ulamek sekundy, kiedy wystrzalow, a Renshaw poczul sie drzwi helikopterow wystawaly cieniutkie jak nieoczekiwanie. Renshaw ponownie poczul na nogach i torsie uklucia pszczelich zadel, mialo konsekwencje dla jego przezycia. Otworzyl mieszkanie i stanal w ta najbardziej pomyslowa dziewczynka To. O co chodzi lusterko trzech z nich przykleklo.  Bylo to jedno z przeczuc, powiedzial sam do. W terazniejszosci nie mogl znalezc powiedzial sam our blog Rozesmial sie gorzko w ciemnosci. stwierdzila pani Gurney, senny, pomyslal, ze to wlasnie z dziecmi i ze jej sprowadzil go. A zawsze slyszala, ze przy pelen olowkow, a na szyi. Bylo to jedno z przeczuc.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14128">
+		<article id="comment-14128" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/33dbf6520107ba411d9d845731d81959?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jane.com' rel='external nofollow' class='url'>massage vancouver wa</a> </cite><a href="index.html#comment-14128"><time datetime="2012-06-05T21:32:57+00:00">Jun. 5, 2012 @ 9:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Oh my goodness! Awesome article dude! Thank you, However<br />
+I am experiencing difficulties with your RSS. I don&#8217;t understand why I am unable to join it. Is there anybody getting similar RSS issues? Anyone that knows the answer will you kindly respond? Thanks!!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14140">
+		<article id="comment-14140" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1440e3c66f06699091ab695e1fa698bf?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Johnny </cite><a href="index.html#comment-14140"><time datetime="2012-06-14T09:04:21+00:00">Jun. 14, 2012 @ 9:04 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey I&#8217;ve used your javascript code which works great but when I try to validate it it gives me errors&#8230;is there a way to set it without it giving an error? or am I doing something wrong. Here are the errors I am receiving.</p>
+<p>&#8212;&#8212;&#8212;&#8212;-<br />
+Line 19, Column 24: character &#8220;;&#8221; not allowed in attribute specification list</p>
+<p>  for(i=0;i&lt;aObj.length;i++) { </p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+Error Line 19, Column 24: element &quot;aObj.length&quot; undefined</p>
+<p>  for(i=0;i&lt;aObj.length;i++) {<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+Line 26, Column 9: end tag for &quot;aObj.length&quot; omitted, but OMITTAG NO was specified</p>
+<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14163">
+		<article id="comment-14163" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5a54042704ad8fb1324b5abc0d28451d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.midlandfreepress.com/Community/NewsDisplay.aspx?c=382511' rel='external nofollow' class='url'>hcg diet canada pharmacy</a> </cite><a href="index.html#comment-14163"><time datetime="2012-07-04T10:47:12+00:00">Jul. 4, 2012 @ 10:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hmm is anyone else having problems with the pictures on this<br />
+blog loading? I&#8217;m trying to find out if its a problem on my end or if it&#8217;s the blog. Any responses would be greatly appreciated.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../../index.html?p=424#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='424' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ac0520cd6b" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=32" title="Permalink to: Tab-Based Navigation in Six (or Seven) Easy Steps">
+                    Tab-Based Navigation in Six (or Seven) Easy Steps                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Navigation bars are the signposts of the web world: we take them for granted because of their ubiquity, but we’d all have a much harder... <a href="../../index.html?p=32" class="more-link" title="Permalink to: Tab-Based Navigation in Six (or Seven) Easy Steps">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1411/1481 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:45:10 by W3 Total Cache -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Classier Fractions with Relative Positioning</title>
+<style>
+body {
+	font: small/1.3em Arial, Helvetica, sans-serif; 
+	background-color: #888; }
+h1 {
+	line-height: 1em; }
+#wrap {
+	position: relative;
+	width: 600px;
+	margin: 0 auto; 
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+.frac {
+	font-style: italic; }
+.frac sup, .frac sub {
+	font-style: normal;
+	font-size: 65%;
+	position: relative; }
+.frac sup {
+	top: 0.1em;
+	left: 0.05em;
+	vertical-align: text-top; }
+.frac sub {
+	top: 0.1em;
+	left: -.1em;
+	vertical-align: text-bottom; }
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Classier Fractions with Relative Positioning.</h1>
+		<p><a href="../../index.html?p=75">Go back to the article.</a></p>
+		<p>Here are the fractions you can create with character entities:</p>
+		<p>&frac14;, &frac12;, &frac34;.</p>
+		<p>And here are a few fractions created with some fancy XHTML and CSS handiwork:<p>
+		<p><span class="frac"><sup>8</sup>/<sub>15</sub></span>, <span class="frac"><sup>3</sup>/<sub>94</sub></span>, <span class="frac"><sup>9</sup>/<sub>16</sub></span>, <span class="frac"><sup>44</sup>/<sub>45</sub></span>, <span class="frac"><sup>1</sup>/<sub>99</sub></span>.</p>
+		<p>The differences are minute, meaning you could easily combine character entities when available and relative-positioned fractions when required, and your audience would never be the wiser.</p>
+	</div>
+
+</body>
+</html>

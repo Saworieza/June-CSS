@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{% set posts as hifi.get({'parent':this.id,'type':'page','orderBy':'-publishedAt'}) %}
+<rss version="2.0">
+	<channel>
+		<title>{{ settings.title|e }} | {{ this.title|e }}</title>
+		<link>http://{{ hifi.url.host }}{{ hifi.url.base }}</link>
+		<description>{{ this.seoDescription|e }}</description>
+		<language>en-us</language>
+		<copyright>Copyright {{ settings.title|e }}.</copyright>
+		<lastBuildDate>{{posts[0].publishedAt|date("r")}}</lastBuildDate>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<generator>HiFi</generator>
+		<managingEditor>{{ settings.email }}</managingEditor>
+		<webMaster>{{ settings.email }}</webMaster>
+		{% for post in posts %}
+		<item>
+			<title>{{ post.title|e }}</title>
+			<link>http://{{ hifi.url.host }}{{ post.url }}</link>
+			<description><![CDATA[{{ post.content }}]]></description>
+			<pubDate>{{ post.publishedAt|date("r") }}</pubDate>
+			<guid isPermaLink="true">http://{{ hifi.url.host }}{{ post.url }}</guid>
+			<category>HiFi</category>
+			<author>{{ post.author|e }}</author>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>

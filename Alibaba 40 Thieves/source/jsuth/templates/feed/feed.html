@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block body %}
+  {% for page in items %}
+  <article>
+    {% include "page/page-part.html" %}
+  </article>
+  {% endfor %}
+
+  {% if previousPage or nextPage %} 
+    <nav id="pagination"> 
+      {% if previousPage %}<a class="previous" href="{{ previousPage }}">Previous Page</a>{% endif %} 
+      {% if nextPage %}<a class="next" href="{{ nextPage }}">Next Page</a>{% endif %} 
+    </nav> 
+  {% endif %}
+  
+{% endblock body %}

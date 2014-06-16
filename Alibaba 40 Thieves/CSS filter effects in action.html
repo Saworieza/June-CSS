@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://red-team-design.com/css-filter-effects-in-action/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>CSS filter effects in action</title>
+    <meta name="description" content="In this article we’ll be using CSS filter effects and the CSS3 :not selector to create a small image gallery.">
+    <meta name="google-site-verification" content="C5zdBQFWWh6uslnkcC0u_F5av9GyYt90auGayV4ELbM">
+    <link rel="stylesheet" href="http://red-team-design.com/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/redteamdesign">
+    <link rel="author" href="http://plus.google.com/114910105297465575018/posts">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  <script src="./CSS filter effects in action_files/ga.js" id="ga"></script><script async="" src="./CSS filter effects in action_files/embed.js"></script><script id="_adpacks_mktjs" type="text/javascript" src="./CSS filter effects in action_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_a5f348233fceef06ba365ab392938d10" src="./CSS filter effects in action_files/s_a5f348233fceef06ba365ab392938d10.js" async="async"></script><style type="text/css" id="bsa_css">.one{position:relative}.one .bsa_it_ad{display:block;padding:15px;border:1px solid #e1e1e1;background:#f9f9f9;font-family:helvetica,arial,sans-serif;line-height:100%;position:relative}.one .bsa_it_ad a{text-decoration:none}.one .bsa_it_ad a:hover{text-decoration:none}.one .bsa_it_ad .bsa_it_t{display:block;font-size:12px;font-weight:bold;color:#212121;line-height:125%;padding:0 0 5px 0}.one .bsa_it_ad .bsa_it_d{display:block;font-size:11px;color:#434343;font-size:12px;line-height:135%}.one .bsa_it_ad .bsa_it_i{float:left;margin:0 15px 10px 0}.one .bsa_it_p{display:block;text-align:right;position:absolute;bottom:10px;right:15px}.one .bsa_it_p a{font-size:10px;color:#666;text-decoration:none}.one .bsa_it_ad .bsa_it_p a:hover{font-style:italic}</style></head>
+  <!-- 
+         _        _ 
+   _ __ | |_   __| |
+  | '__|| __| / _` |
+  | |   | |_ | (_| |
+  |_|    \__| \__,_|
+
+  Build with Jekyll & Sass. Hosted on Github. 
+                    
+   -->
+  <body>
+  
+  <header role="banner" class="top-header">
+    <div class="container">
+      <div class="grid">
+        <div class="grid__col--30">
+          <a href="http://red-team-design.com/" class="rtd-logo">
+            RedTeamDesign
+          </a>
+        </div>
+        <div class="grid__col--70">
+          <nav role="navigation" class="rtd-nav">
+            <a class="visually-hidden" href="http://red-team-design.com/css-filter-effects-in-action/#content">Skip to content</a>
+            <ul>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/">Home</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/archive/">Archive</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/about/">About</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/contact/">Contact</a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="master-header">
+    <div class="container">
+      <h1 class="master-head--title">CSS filter effects in action</h1>
+    </div>
+  </div>    
+
+  <div class="master-content">
+    <div class="container">
+      <div class="grid">
+        <section class="grid__col--60 grid__col--push10" role="main" id="content">
+          
+
+<article class="single-post">
+
+  <time datetime="2012-05-01" class="post__time">
+    <small>01 May 2012</small>
+  </time>  
+
+  <p>Ever since CSS filter effects landed in WebKit, I thought about theirs practical implementation. How will they fit with the current web design trends? At this time, my initial impressions are that the best way to showcase the power of CSS filters is something like an image gallery.</p>
+
+<p>With so many CSS filters to choose from, it will be fun to create image galleries in the future. Further in this article we'll create a simple image gallery using CSS filters and the CSS3 <code>:not</code> selector.</p>
+
+<p><img src="./CSS filter effects in action_files/css-filter-effects-in-action.png" alt="CSS filters"></p>
+
+<!-- more -->
+
+
+<p><a href="http://red-team-design.com/wp-content/uploads/2012/05/css-filter-effects-in-action-demo.html">View demo</a></p>
+
+<p>Whilst at the beginning we had just WebKit nightlies support, now you can view the filter effects using <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a> too. I encourage you to download it in order to view the <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">CSS filter effects</a> in action. Also, I'm pretty sure that soon we'll see filters support also in stable Chrome's releases.</p>
+
+<p>Here are the current filter effects: <code>grayscale</code>, <code>sepia</code>, <code>saturate</code>, <code>hue-rotate</code>, <code>opacity</code>, <code>invert</code>, <code>brightness</code>, <code>contrast</code>, <code>blur</code>, <code>drop-shadow</code>. Read more about them <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">here</a>.</p>
+
+<p>In this article we'll be using just the <code>blur</code> and <code>grayscale</code> effects in order to create our small gallery. Also, the CSS3 <code>:not</code> selector will help us here as you'll see below.</p>
+
+<h2>The HTML</h2>
+
+<p>Getting back to our image gallery, let's see how the markup looks like:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"gallery"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"1.jpg"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  ...
+  <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"6.jpg"</span><span class="nt">&gt;&lt;/li&gt;</span>      
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+
+
+<h2>The CSS</h2>
+
+<p>I think it's the first time in a long time when I don't have too many CSS lines to show you. This time, less is more :)</p>
+
+<p>The interesting part is related to the <code>.gallery:hover li:not(:hover)</code> selector. When you hover over the list, we'll assume you'll hover also over a list element and we'll apply some filters to the non hovered list elements.</p>
+
+<p><img src="./CSS filter effects in action_files/css-filter-effects-in-action-example.jpg" alt=""></p>
+
+<p><em>This is how the other images looks like when the tulip image is hovered.</em></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.gallery</span><span class="p">{</span>
+  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">50px</span> <span class="k">auto</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">642px</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="c">/* fix inline-block spacing */</span>
+<span class="p">}</span>
+
+<span class="nc">.gallery</span> <span class="nt">li</span><span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+    <span class="o">*</span><span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+    <span class="n">zoom</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">2px</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">5px</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">2px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">1</span><span class="p">);</span>
+    <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="p">;</span>        
+<span class="p">}</span>
+
+<span class="nc">.gallery</span><span class="nd">:hover</span> <span class="nt">li</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:hover</span><span class="o">)</span><span class="p">{</span>       
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">filter</span><span class="o">:</span> <span class="n">blur</span><span class="p">(</span><span class="m">2px</span><span class="p">)</span> <span class="n">grayscale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+    <span class="k">opacity</span><span class="o">:</span> <span class="o">.</span><span class="m">7</span><span class="p">;</span> <span class="c">/* fallback */</span>        
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>For this example I chose to use <code>inline-block</code> instead <code>float</code> and <code>font-size: 0</code> is my "kung-fu" move to <a href="http://css-tricks.com/fighting-the-space-between-inline-block-elements/">fight the space between inline-block elements</a>.</p>
+
+<p>Regarding degradation, here's my method:</p>
+
+<ul>
+<li><p>If the browser support CSS filters and <code>:not</code>, then apply filters and also decrease opacity.</p></li>
+<li><p>If the browser does not support CSS filters (currently all except Canary) but it does support the <code>:not</code>, then just decrease opacity.</p></li>
+<li><p>If the <a href="http://www.red-team-design.com/how-to-solve-common-ie-bugs">browser is too old</a> and does not support neither opacity nor <code>:not</code> <a href="http://caniuse.com/#search=:not">selector</a>, then do nothing.</p></li>
+</ul>
+
+
+<h2>Browser support</h2>
+
+<p>Here's the current support for the CSS filter effects: Chrome 20.0.1123.0 (currently Canary) and Webkit nightly.</p>
+
+<h2>Conclusion</h2>
+
+<p><strong>The future sounds good</strong>. We already have a Flexbox Module and CSS Filters, I like to think that in the near future we'll also have <a href="http://www.red-team-design.com/css-variables">variables</a> and the <a href="http://www.red-team-design.com/meet-the-css4-selectors">CSS parent selector</a> ready to use. Exciting times for web developers, don't you think so?</p>
+
+
+  <p>
+    Share this on: 
+    <a href="http://twitter.com/intent/tweet?text=CSS%20filter%20effects%20in%20action&url=http://www.red-team-design.com/css-filter-effects-in-action&via=catalinred" target="_blank">Twitter</a> • 
+    <a href="http://plusone.google.com/_/+1/confirm?hl=en&url=http://www.red-team-design.com/css-filter-effects-in-action" target="_blank">Google+</a> • 
+    <a href="http://facebook.com/sharer/sharer.php?u=http://www.red-team-design.com/css-filter-effects-in-action" target="_blank">Facebook</a>
+  </p>
+
+  <hr class="bold">
+  <div class="grid">
+    <div class="grid__col--45 grid__col--push10">
+    
+      <a href="http://red-team-design.com/interactive-menu-with-css3-jquery" rel="prev" title="Interactive menu with CSS3 &amp; jQuery" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-left"></i> Interactive menu with CSS3 &amp; jQuery
+      </a>
+    
+    </div>
+    <div class="grid__col--45">
+    
+      <a href="http://red-team-design.com/google-play-minimal-tabs-with-css3-jquery" rel="prev" title="Google Play&#39;s minimal tabs with CSS3 &amp; jQuery" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-right"></i> Google Play's minimal tabs with CSS3 &amp; jQuery 
+      </a>
+    
+    </div>
+  </div>
+  <hr class="bold">
+
+  
+    <div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./CSS filter effects in action_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 1622px !important;"></iframe></div>
+    <script>
+      var disqus_shortname = 'redteamdesign',
+          disqus_title = "CSS filter effects in action",
+          disqus_url = "http://www.red-team-design.com/css-filter-effects-in-action";
+      (function() {
+          var dsq = document.createElement('script'); dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>   
+     
+
+</article>
+        </section>
+        <aside class="grid__col--30" role="complementary">
+          <div class="aside-module">
+            <h2 class="h4">
+              Get updates via 
+              <a href="http://feeds.feedburner.com/redteamdesign" class="rss-label">
+                <i class="fa fa-rss"></i> RSS
+              </a> or email:
+            </h2>
+            <form class="email-form" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;//feedburner.google.com/fb/a/mailverify?uri=redteamdesign&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+              <input type="email" name="email" class="email-form__text" placeholder="Your email address" required="">
+              <input type="submit" value="Go" class="email-form__submit">
+              <input type="hidden" value="redteamdesign" name="uri">
+              <input type="hidden" name="loc" value="en_US">
+            </form>
+          </div>
+          <div class="aside-module">
+            <script src="./CSS filter effects in action_files/adpacks.js" id="_adpacks_js"></script><div id="bsap_1257097" class="bsap_1257097 bsap"><div class="bsa_it one"><div class="bsa_it_ad ad1 odd" id="bsa_4715307"><a href="http://stats.buysellads.com/click.go?z=1257097&b=4715307&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.6390751369763166&link=http://www.crocoblock.com/ver-2/?utm_source=adpacks&utm_medium=banner&utm_campaign=bsa" onmouseover="window.status = &#39;http://www.crocoblock.com/ver-2/?utm_source=adpacks&amp;utm_medium=banner&amp;utm_campaign=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_i"><img src="./CSS filter effects in action_files/220422-1398765463.jpg" width="130" height="100" alt="СrocoBlock"></span></a><a href="http://stats.buysellads.com/click.go?z=1257097&b=4715307&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8687064512632787&link=http://www.crocoblock.com/ver-2/?utm_source=adpacks&utm_medium=banner&utm_campaign=bsa" onmouseover="window.status = &#39;http://www.crocoblock.com/ver-2/?utm_source=adpacks&amp;utm_medium=banner&amp;utm_campaign=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_t">СrocoBlock</span><span class="bsa_it_d">Stunning WordPress Themes for as low as $0.99</span></a><div style="clear:both"></div></div><span class="bsa_it_p"><a href="http://buysellads.com/buy/detail/40406/zone/1257097?utm_source=site_40406&utm_medium=website&utm_campaign=imagetext&utm_content=zone_1257097">ads by BSA</a></span></div></div>
+          </div>
+          <div class="aside-module">           
+            <ul class="aside-module--list">
+              <li><a href="http://crazycoolgadgets.com/">Gadget Magazine</a></li>
+              <li><a href="http://eugenoprea.com/google-analytics/">Google Analytics Course</a></li>
+              <li><a href="http://itxdesign.com/">ITX Design</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo" class="master-footer text-center">
+    <div class="container">
+      <a href="http://twitter.com/catalinred" rel="me nofollow">
+        <i class="fa fa-twitter fa-2x"></i>
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <a href="http://github.com/catalinred" rel="me nofollow">
+        <i class="fa fa-github fa-2x"></i>
+        <span class="visually-hidden">GitHub</span>
+      </a>
+      <a href="http://facebook.com/RedTeamDesign" rel="me nofollow">
+        <i class="fa fa-facebook fa-2x"></i>
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <a href="http://plus.google.com/u/0/114910105297465575018" rel="me nofollow">
+        <i class="fa fa-google-plus fa-2x"></i>
+        <span class="visually-hidden">Google+</span>
+      </a>
+      <a href="http://feeds.feedburner.com/redteamdesign" rel="me nofollow">
+        <i class="fa fa-rss fa-2x"></i>
+        <span class="visually-hidden">RSS</span>
+      </a>
+      <a href="http://dribbble.com/catalinred" rel="me nofollow">
+        <i class="fa fa-dribbble fa-2x"></i>
+        <span class="visually-hidden">Dribbble</span>
+      </a>
+      <a href="http://instagram.com/catalinred" rel="me nofollow">
+        <i class="fa fa-instagram fa-2x"></i>
+        <span class="visually-hidden">Instagram</span>
+      </a>
+      <a href="http://linkedin.com/in/catalinred" rel="me nofollow">
+        <i class="fa fa-linkedin fa-2x"></i>
+        <span class="visually-hidden">LinkedIn</span>
+      </a>
+      <hr>
+      © 2014 Catalin Rosu. Feel free to use the articles you may find here in your projects, with or without any attribution.
+    </div>
+  </footer>  
+
+  <script src="./CSS filter effects in action_files/common.js"></script>
+
+  
+</body></html>

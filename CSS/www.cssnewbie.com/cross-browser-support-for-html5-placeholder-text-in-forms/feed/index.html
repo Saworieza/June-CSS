@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Cross-Browser Support for HTML5 Placeholder Text in Forms</title>
+	<atom:link href="http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/</link>
+	<description>Web Development Tutorials, Tips &#38; Techniques</description>
+	<lastBuildDate>Thu, 03 Apr 2014 01:33:55 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.8.1</generator>
+	<item>
+		<title>By: Huy</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-3/#comment-16111</link>
+		<dc:creator><![CDATA[Huy]]></dc:creator>
+		<pubDate>Thu, 03 Apr 2014 01:33:55 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-16111</guid>
+		<description><![CDATA[This is a very useful function.
+Perfect! Thanks]]></description>
+		<content:encoded><![CDATA[<p>This is a very useful function.<br />
+Perfect! Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Erickb</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15919</link>
+		<dc:creator><![CDATA[Erickb]]></dc:creator>
+		<pubDate>Thu, 19 Dec 2013 15:11:23 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15919</guid>
+		<description><![CDATA[thanks]]></description>
+		<content:encoded><![CDATA[<p>thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ibi khan</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15918</link>
+		<dc:creator><![CDATA[ibi khan]]></dc:creator>
+		<pubDate>Thu, 19 Dec 2013 14:36:58 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15918</guid>
+		<description><![CDATA[to make text areas also work change
+
+$(function() {
+if(!$.support.placeholder) {
+var active = document.activeElement;
+$(‘:text, textarea’).focus(function () {
+if ($(this).attr(‘placeholder’) != ” &amp;&amp; $(this).val() == $(this).attr(‘placeholder’)) {
+$(this).val(”).removeClass(‘hasPlaceholder’);
+}
+}).blur(function () {
+if ($(this).attr(‘placeholder’) != ” &amp;&amp; ($(this).val() == ” &#124;&#124; $(this).val() == $(this).attr(‘placeholder’))) {
+$(this).val($(this).attr(‘placeholder’)).addClass(‘hasPlaceholder’);
+}
+});
+$(‘:text, textarea’).blur();
+$(active).focus();
+$(‘form’).submit(function () {
+$(this).find(‘.hasPlaceholder’).each(function() { $(this).val(”); });
+});
+}
+});]]></description>
+		<content:encoded><![CDATA[<p>to make text areas also work change</p>
+<p>$(function() {<br />
+if(!$.support.placeholder) {<br />
+var active = document.activeElement;<br />
+$(‘:text, textarea’).focus(function () {<br />
+if ($(this).attr(‘placeholder’) != ” &amp;&amp; $(this).val() == $(this).attr(‘placeholder’)) {<br />
+$(this).val(”).removeClass(‘hasPlaceholder’);<br />
+}<br />
+}).blur(function () {<br />
+if ($(this).attr(‘placeholder’) != ” &amp;&amp; ($(this).val() == ” || $(this).val() == $(this).attr(‘placeholder’))) {<br />
+$(this).val($(this).attr(‘placeholder’)).addClass(‘hasPlaceholder’);<br />
+}<br />
+});<br />
+$(‘:text, textarea’).blur();<br />
+$(active).focus();<br />
+$(‘form’).submit(function () {<br />
+$(this).find(‘.hasPlaceholder’).each(function() { $(this).val(”); });<br />
+});<br />
+}<br />
+});</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Erickb</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15874</link>
+		<dc:creator><![CDATA[Erickb]]></dc:creator>
+		<pubDate>Wed, 04 Dec 2013 10:21:02 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15874</guid>
+		<description><![CDATA[It works fine but not for  textarea  , how can I add it ?
+
+thank you]]></description>
+		<content:encoded><![CDATA[<p>It works fine but not for  textarea  , how can I add it ?</p>
+<p>thank you</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: AJ</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15868</link>
+		<dc:creator><![CDATA[AJ]]></dc:creator>
+		<pubDate>Sat, 30 Nov 2013 10:59:19 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15868</guid>
+		<description><![CDATA[Thanks a lot !!!
+
+Works perfectly for me in IE.]]></description>
+		<content:encoded><![CDATA[<p>Thanks a lot !!!</p>
+<p>Works perfectly for me in IE.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: majid</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15632</link>
+		<dc:creator><![CDATA[majid]]></dc:creator>
+		<pubDate>Wed, 23 Oct 2013 21:35:51 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15632</guid>
+		<description><![CDATA[hi, I tried your code on my site. I have entered the code on my site which does work but i can&#039;t login now. some how your code stop the password attribute field working. if i remove your code my login works but when i re-enter it stop working.
+
+Can you please check your code again.
+
+i&#039;m using ie 10 and chrome same thing happens]]></description>
+		<content:encoded><![CDATA[<p>hi, I tried your code on my site. I have entered the code on my site which does work but i can&#8217;t login now. some how your code stop the password attribute field working. if i remove your code my login works but when i re-enter it stop working.</p>
+<p>Can you please check your code again.</p>
+<p>i&#8217;m using ie 10 and chrome same thing happens</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: bustaramz</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15557</link>
+		<dc:creator><![CDATA[bustaramz]]></dc:creator>
+		<pubDate>Tue, 10 Sep 2013 15:20:54 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15557</guid>
+		<description><![CDATA[Thank you for the code!
+Great solution :)
+
+
+following for textarea: 
+
+
+$(function() {
+	if(!$.support.placeholder) { 
+		var active = document.activeElement;
+		$(&#039;textarea&#039;).focus(function () {
+			if ($(this).attr(&#039;placeholder&#039;) != &#039;&#039; &amp;&amp; $(this).val() == $(this).attr(&#039;placeholder&#039;)) {
+				$(this).val(&#039;&#039;).removeClass(&#039;hasPlaceholder&#039;);
+			}
+		}).blur(function () {
+			if ($(this).attr(&#039;placeholder&#039;) != &#039;&#039; &amp;&amp; ($(this).val() == &#039;&#039; &#124;&#124; $(this).val() == $(this).attr(&#039;placeholder&#039;))) {
+				$(this).val($(this).attr(&#039;placeholder&#039;)).addClass(&#039;hasPlaceholder&#039;);
+			}
+		});
+		$(&#039;textarea&#039;).blur();
+		$(active).focus();
+		$(&#039;form&#039;).submit(function () {
+			$(this).find(&#039;.hasPlaceholder&#039;).each(function() { $(this).val(&#039;&#039;); });
+		});
+	}
+});]]></description>
+		<content:encoded><![CDATA[<p>Thank you for the code!<br />
+Great solution :)</p>
+<p>following for textarea: </p>
+<p>$(function() {<br />
+	if(!$.support.placeholder) {<br />
+		var active = document.activeElement;<br />
+		$(&#8216;textarea&#8217;).focus(function () {<br />
+			if ($(this).attr(&#8216;placeholder&#8217;) != &#8221; &amp;&amp; $(this).val() == $(this).attr(&#8216;placeholder&#8217;)) {<br />
+				$(this).val(&#8221;).removeClass(&#8216;hasPlaceholder&#8217;);<br />
+			}<br />
+		}).blur(function () {<br />
+			if ($(this).attr(&#8216;placeholder&#8217;) != &#8221; &amp;&amp; ($(this).val() == &#8221; || $(this).val() == $(this).attr(&#8216;placeholder&#8217;))) {<br />
+				$(this).val($(this).attr(&#8216;placeholder&#8217;)).addClass(&#8216;hasPlaceholder&#8217;);<br />
+			}<br />
+		});<br />
+		$(&#8216;textarea&#8217;).blur();<br />
+		$(active).focus();<br />
+		$(&#8216;form&#8217;).submit(function () {<br />
+			$(this).find(&#8216;.hasPlaceholder&#8217;).each(function() { $(this).val(&#8221;); });<br />
+		});<br />
+	}<br />
+});</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: sindhupriya</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15549</link>
+		<dc:creator><![CDATA[sindhupriya]]></dc:creator>
+		<pubDate>Thu, 05 Sep 2013 12:12:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15549</guid>
+		<description><![CDATA[How can we place placeholder for text area?]]></description>
+		<content:encoded><![CDATA[<p>How can we place placeholder for text area?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Robin</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15534</link>
+		<dc:creator><![CDATA[Robin]]></dc:creator>
+		<pubDate>Wed, 28 Aug 2013 19:30:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15534</guid>
+		<description><![CDATA[You can also go for the super short no-jQuery method of checking for attribute compatibility:
+
+Object.prototype.hasAttr = function (attr) {
+    return (attr in this);
+}
+
+var input = document.createElement(&quot;input&quot;);
+var blnHasSupport = input.hasAttr(&quot;placeholder&quot;);]]></description>
+		<content:encoded><![CDATA[<p>You can also go for the super short no-jQuery method of checking for attribute compatibility:</p>
+<p>Object.prototype.hasAttr = function (attr) {<br />
+    return (attr in this);<br />
+}</p>
+<p>var input = document.createElement(&#8220;input&#8221;);<br />
+var blnHasSupport = input.hasAttr(&#8220;placeholder&#8221;);</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Brad</title>
+		<link>http://www.cssnewbie.com/cross-browser-support-for-html5-placeholder-text-in-forms/comment-page-2/#comment-15526</link>
+		<dc:creator><![CDATA[Brad]]></dc:creator>
+		<pubDate>Thu, 22 Aug 2013 16:00:21 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=621#comment-15526</guid>
+		<description><![CDATA[Works great in every version of IE, thanks!  Super simple, and does the job.]]></description>
+		<content:encoded><![CDATA[<p>Works great in every version of IE, thanks!  Super simple, and does the job.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 366/369 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 07:52:36 by W3 Total Cache -->

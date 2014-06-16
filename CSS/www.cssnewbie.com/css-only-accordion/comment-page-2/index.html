@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The CSS-Only Accordion Effect</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; The CSS-Only Accordion Effect Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Writing CSS Shorthand' href='../../index.html?p=85' />
+<link rel='next' title='Great Resources Elsewhere: April 5 to April 11' href='../../index.html?p=104' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=90' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,196] -->
+<meta name="description" content="Accordion effects are all over the web these days, but this one is pure HTML and CSS - no JavaScript required!" />
+
+<meta name="keywords" content="css accordion, accordion menu, accordion div, css accordion menu,accordion,advanced,div,float,hover,advanced techniques,floats and positioning" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-90 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-90" class="post-90 post type-post status-publish format-standard hentry category-advanced-techniques category-floats-and-positioning tag-accordion tag-advanced tag-div tag-float tag-hover">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=90" title="Permalink to The CSS-Only Accordion Effect" rel="bookmark">The CSS-Only Accordion Effect</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 9, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../../example/css-only-accordion/horizontal.html"><img src="../../wp-content/uploads/2008/04/accordion-400.gif" alt="" /></a></p>
+<p class="note"><strong>Update: </strong><a href="../../index.html?p=311">I&#8217;ve created an advanced version of this technique that works in IE6! Read more here.</a></p>
+<p>The Accordion Effect is fast becoming one of the most commonly used (and perhaps abused?) effects of the Web 2.0 world. Most JavaScript frameworks make such an effect fairly easy to pull off – heck, <a href="http://mootools.net/">MooTools</a> even built their reputation on it in the early days. So what makes <em>this </em>accordion effect special? <strong>It doesn’t require a single line of JavaScript.</strong></p>
+<p>First off, what is an “accordion” effect? Generally speaking, the accordion effect takes several larger elements and then compresses them into a small space so that only a small portion (like a heading) of most or all of the elements is visible. Then, when the user interacts with that element &#8212; either by clicking on it or maybe only mousing over &#8212; the accordion expands so that the element of interest is visible, and the other elements shrink down automatically. When it’s in use, it looks a bit like an accordion expanding and contracting: hence the name.</p>
+<p>Our accordion will work exactly the same way: all of the elements will be partially visible when the user loads the page. And then when they mouse over a particular section, it will instantly expand – and the other elements will contract – to make reading more easy.</p>
+<p><img src="../../wp-content/uploads/2008/04/accordion-example1-400.gif" alt="example of accordion effect before and after the user mouses over it" /></p>
+<p>So how do we accomplish this trick? First, we start with our XHTML, which just consists of a couple of divs with some IDs applied:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div id=&quot;accordion&quot;&gt;
+	&lt;div id=&quot;part1&quot;&gt;
+		&lt;p&gt;This text is in part 1.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;part2&quot;&gt;
+		&lt;p&gt;This text is in part 2.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;part3&quot;&gt;
+		&lt;p&gt;This text is in part 3.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;part4&quot;&gt;
+		&lt;p&gt;This text is in part 4.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>My first div defines where my accordion starts and ends. The divs nested inside are just parts of my accordion – they don’t even technically need IDs unless I want to style them differently. That’s all the XHTML it takes!</p>
+<p>So now, let’s start building our accordion. We start by defining the physical limitations of our space:</p>
+<pre lang="css" escaped="true" line="1">#accordion { 
+	width: 500px; 
+	margin: 100px auto; }</pre>
+<p>All I’ve done is give my accordion a specific width and centered it in the page for a nice visual effect. Now, I have to create the default state for the divs inside of my accordion:</p>
+<pre lang="css" escaped="true" line="1">#accordion div {
+	float: left;
+	width:25%;
+	height: 300px;
+	overflow: hidden;}</pre>
+<p>This snippet floats all of my divs to the left and gives them a specific width and height. I’ve chosen a width of 25% because I have four elements in my accordion, so they all split that width up evenly by default. If I’d had five elements, I would have used 20%, and so on. My height of 300 pixels also becomes the height of my accordion div.</p>
+<p>The overflow: hidden part here is also crucially important. This is what prevents my divs from either resizing to fit their content or spilling their content out of the containing div and onto our page. It also creates a nice visual effect&#8230; people will wonder what content they’re missing, and will mouse over the area to investigate.</p>
+<p><img src="../../wp-content/uploads/2008/04/accordion-example2-400.gif" alt="extra text is hidden from the user, inspiring curiosity." /></p>
+<p>So now that we’ve created our default state, we need to create our hover or “active” state. This requires two CSS rules. The first looks like this:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">#accordion:hover div { width: 20px; }</pre>
+<p>We’re using the :hover pseudo-class here in a pretty creative way – we’re telling all of the divs <em>inside</em> of the div we’re hovering over to change. Specifically, we’re shrinking them all down to 20 pixels to make room for our expanded accordion section. So now we just need to make sure it expands:</p>
+<pre lang="css" escaped="true" line="1">#accordion:hover div:hover {
+	width: 440px;
+	overflow: auto; }</pre>
+<p>The :hover pseudo-class comes into play here again. Now, we’re applying styles to an element we’re hovering over, inside of an element we’re hovering over. We’re styling this element differently than our others by giving it a specific width – 440 pixels, i.e. 500 pixels minus the 20 pixels taken up by our other three divs – and setting its overflow to “auto.” These two classes cause our active div to expand, and then give it a scroll bar if the content is too long.</p>
+<p>And that’s all there is to creating a CSS-only accordion box! <a href="../../example/css-only-accordion/horizontal.html">If you’d like to see it in action, click here.</a> The only change I’ve made to the full version is I’ve added a few background styles and some interior padding to each of the accordion sections to make them stand out and look a little more attractive.</p>
+<p>This example creates a horizontal accordion box. But it’s just as easy to create a vertically oriented accordion. All we really need to do is eliminate the floats on our nested divs and turn most of our width tags into height tags. Here is the markup:</p>
+<pre lang="css" escaped="true" line="1">#accordion {
+	width: 500px;
+	height: 400px;
+	margin: 20% auto; }
+#accordion div {
+	height:25%;
+	overflow: hidden;}
+#accordion:hover div {
+	height: 20px; }
+#accordion:hover div:hover {
+	height: 340px;
+	overflow: auto; }</pre>
+<p><a href="../../example/css-only-accordion/vertical.html">And you can see it in action here.</a></p>
+<p>As with any trick this cool, there are some caveats. Most significantly: <strong>this technique does not work in IE6,</strong> (<a href="../../index.html?p=311"><strong>update:</strong> now works in IE6! Read more here</a>) because IE6 doesn’t support hover states on anything other than anchors. Therefore, you <em>can</em> make it work if you’re willing to make a sacrifice: if you wrap all of your divs in anchor tags, and then apply the hover state to those anchors instead of your divs, the technique should work the same (I haven’t tried it, though). However, that wouldn’t be particularly semantic or valid, so I’m not showing it here.</p>
+<p>Also, if you apply any padding or borders to your #accordion div, that can cause some problems. The border and padding are part of your div, and therefore part of your :hover class. However, if you’re hovering over the containing div’s padding, you <em>aren’t</em> hovering over one of the sections of your accordion – meaning all of your interior divs will shrink down to their smallest size, and none will grow to fill the space. It took me half an hour of debugging to figure this one out. :)</p>
+<p>So there you have it. Use it, share it, love it. And let me know in the comments if you come up with a particularly interesting or attractive implementation – mine is obviously pretty simple!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			196 Responses		</h3>
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-9605">
+		<p>Pingback: <a href='http://sixrevisions.com/css/30-exceptional-css-navigation-techniques/' rel='external nofollow' class='url'>30 Exceptional CSS Navigation Techniques</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9609">
+		<p>Pingback: <a href='http://cocre.com/?p=562' rel='external nofollow' class='url'>30种时尚的CSS网站导航条 | 酷壳</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9616">
+		<p>Pingback: <a href='http://burningfav.wordpress.com/2009/04/19/30%e4%b8%aa%e7%89%b9%e6%ae%8a%e7%9a%84css%e5%af%bc%e8%88%aa%e6%8a%80%e6%9c%af/' rel='external nofollow' class='url'>30个特殊的CSS导航技术 &laquo; Burning Fav&#8217;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9618">
+		<p>Pingback: <a href='http://yodspica.eu/yodspica_blog/2009/04/19/30-exceptional-css-navigation-techniques/' rel='external nofollow' class='url'>30 Exceptional CSS Navigation Techniques | Blog YODspica Ltd</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9620">
+		<p>Pingback: <a href='http://blog.wujianrong.com/?p=638' rel='external nofollow' class='url'>Kevinwu&#8217;s Weblog &raquo; Blog Archive &raquo; 30个使用纯CSS完成的强大实践的优秀CSS技术和实例 css gallery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9621">
+		<p>Pingback: <a href='http://livefont.wordpress.com/2009/04/20/30-exceptional-css-navigation-techniques/' rel='external nofollow' class='url'>30 Exceptional CSS Navigation Techniques &laquo; Livefont Interactive</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9628">
+		<p>Pingback: <a href='http://nvmind.com/blog/?p=67' rel='external nofollow' class='url'>Nvmind. | Interfaces in PHP, MySQL, XHTML/CSS, ActionScript and other technologies / 30 Exceptional CSS Navigation Techniques</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9636">
+		<p>Pingback: <a href='http://www.pengblog.com/css-25-magic-samples-you.html' rel='external nofollow' class='url'>神奇的CSS-25个样本迷死你 | 鹏博客</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9640">
+		<p>Pingback: <a href='http://cocre.com/?p=648' rel='external nofollow' class='url'>22个不错的CSS技术 | 酷壳</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9641">
+		<article id="comment-9641" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4801f5daf515c11a4f852ff5a37e9151?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.forgotten-souls.com' rel='external nofollow' class='url'>Doug</a> </cite><a href="index.html#comment-9641"><time datetime="2009-04-23T11:43:06+00:00">Apr. 23, 2009 @ 11:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I was wondering if it was possible to set one of the columns to be wide on page load. And when ever the bar is not hovered that one column is always bigger. I hope this is understandable.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9647">
+		<p>Pingback: <a href='http://blog.thinkstd.com/xml_html_css_js_ajax/30exceptionalcsstechniquesandexamples.html' rel='external nofollow' class='url'>Think Studio &raquo; Blog Archive &raquo; 30 Exceptional CSS Techniques and Examples</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9648">
+		<p>Pingback: <a href='http://www.designurimagination.com/blog/2009/04/26/30-exceptional-css-navigation-techniques/' rel='external nofollow' class='url'>30 Exceptional CSS Navigation Techniques | Designurimagination Blog - Let Your Imagination Fly</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9660">
+		<p>Pingback: <a href='http://webdesignchennai.wordpress.com/2009/04/29/30-css-navigation-techniques/' rel='external nofollow' class='url'>30 CSS Navigation Techniques &laquo; Webdesignchennai&#8217;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9668">
+		<p>Pingback: <a href='http://arbent.net/blog/40-outstanding-css-techniques-and-tutorials' rel='external nofollow' class='url'>40 Outstanding CSS Techniques And Tutorials | Arbenting</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9674">
+		<p>Pingback: <a href='http://www.365bibei.com/?p=129' rel='external nofollow' class='url'>365必备资讯网 &raquo; Blog Archive &raquo; 25个高级CSS技巧教程</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9681">
+		<p>Pingback: <a href='http://robertsky123.toypark.in/archives/30-css-navigation-technology.html' rel='external nofollow' class='url'>Loves sunshine &raquo; Blog Archive &raquo; 30+css导航技术</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9686">
+		<p>Pingback: <a href='http://www.jsssc.cn/30-special-css-navigation-technique/' rel='external nofollow' class='url'>jsssc - 30个特殊的CSS导航技术</a> </p>
+	</li><!-- #comment-## -->
+	<li class="trackback odd alt thread-odd thread-alt depth-1" id="comment-9796">
+		<p>Pingback: <a href='http://www.faqpal.com/story/2640' rel='external nofollow' class='url'>You are now listed on FAQPAL</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9799">
+		<p>Pingback: <a href='http://www.webhostingsecretrevealed.com/web-hosting-knowledge/10-css-tutorials-that-will-make-your-website-looks-cool/' rel='external nofollow' class='url'>10 CSS tutorials that will make your website looks cool</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9810">
+		<p>Pingback: <a href='http://www.sonichtml.com/blog/?p=231' rel='external nofollow' class='url'>30个特殊的CSS导航技术 &laquo; SonicHtml工作室- PSD转HTML / XHTML,CSS / W3C验证 / 多浏览器支持 / WordPress模板 / Joomla模板</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9812">
+		<p>Pingback: <a href='http://design-tutplus.com/2009/07/10-css-tricks-that-make-website-looks-cool-instantly/' rel='external nofollow' class='url'>Design-Tut+ &raquo; 10 CSS tricks that make website looks cool instantly!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9833">
+		<p>Pingback: <a href='http://doad.000space.com/10-css-tricks-that-make-website-looks-cool-instantly/' rel='external nofollow' class='url'>Technology Blog / 10 CSS tricks that make website looks cool instantly.</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9898">
+		<p>Pingback: <a href='http://paranimage.com/25-advanced-css-skills-tutorial/' rel='external nofollow' class='url'>25个高级CSS技巧教程 | 帕兰映像</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9912">
+		<p>Pingback: <a href='http://www.cssdose.com/2009/08/26/10-amazing-css-techniques/' rel='external nofollow' class='url'>10 Amazing CSS Techniques | CSSDOSE</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10025">
+		<article id="comment-10025" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/36c5f574f3aef59f0fc70572e668579a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://promotium.com' rel='external nofollow' class='url'>Nenad</a> </cite><a href="index.html#comment-10025"><time datetime="2009-10-10T06:01:54+00:00">Oct. 10, 2009 @ 6:01 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Honestly, I&#8217;m not impressed in any way. First it breaks in Opera and second it doesn&#8217;t look good anyway.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10028">
+		<p>Pingback: <a href='http://www.humin.com.cn/22-good-css-page-special-effects-technology.html' rel='external nofollow' class='url'>22个不错的CSS网页特效技术 | 无名小站</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10029">
+		<p>Pingback: <a href='http://www.humin.com.cn/30-stylish-css-site-navigation-bar.html' rel='external nofollow' class='url'>30款时尚酷酷的CSS导航条 | 无名小站</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10072">
+		<p>Pingback: <a href='http://theme-center.com/2009/11/05/discover-the-%e2%80%9ccool%e2%80%9d-of-css-25-advanced-css-techniques/' rel='external nofollow' class='url'>Discover the “Cool” of CSS: 25 Advanced CSS Techniques | Theme Center</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10074">
+		<p>Pingback: <a href='http://www.topcss.cn/?p=72' rel='external nofollow' class='url'>[转]30个优秀的CSS实例</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10079">
+		<article id="comment-10079" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fff67acd424240025bec0bf59a27e620?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://bit.ly/16Mflq' rel='external nofollow' class='url'>Rahul - Web Guru</a> </cite><a href="index.html#comment-10079"><time datetime="2009-11-11T07:25:04+00:00">Nov. 11, 2009 @ 7:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I just wish there was a horizontal menu for this one. ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10087">
+		<p>Pingback: <a href='http://theme-center.com/2009/11/19/10-css-tricks-that-make-website-looks-cool-instantly/' rel='external nofollow' class='url'>10 CSS tricks that make website looks cool instantly! | Theme Center</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10088">
+		<p>Pingback: <a href='http://theme-center.com/2009/11/19/30-exceptional-css-techniques-and-examples/' rel='external nofollow' class='url'>30 Exceptional CSS Techniques and Examples | Theme Center</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10095">
+		<p>Pingback: <a href='http://www.tipbox.net/blog/2009/11/23/30-exceptional-css-techniques-and-examples/' rel='external nofollow' class='url'>30 Exceptional CSS Techniques and Examples @ tipBOX.net</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10100">
+		<article id="comment-10100" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/397f0db2c94ec98da4825ce254c6a395?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://lehollandaisvolant.net' rel='external nofollow' class='url'>Flying Dutchman</a> </cite><a href="index.html#comment-10100"><time datetime="2009-11-30T12:19:48+00:00">Nov. 30, 2009 @ 12:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Amazing !<br />
+I am a css-only fan too, but this is one off the most beautifull trick I saw.</p>
+<p>Can permit me to suggest you to use the CSS3 &#8220;transition:;&#8221; property (works in firefox 3.6 with -moz- and in Chrome and Safari with -webkit-).<br />
+So you can give animation to your effet :<br />
+It will no more be instantly but the accordion effect will be gradual (I am maybe not very comprehensive, &#8217;cause I am can&#8217;t speak very good english…).</p>
+<p>You can see some animation effect on my home page, in the head menu (with Chrome, safari or Firefox 3.6).</p>
+<p>I hope I have help you a bit^^</p>
+<p>Long live css^^&#8221;<br />
+And I repeat, I find your effect amazing !</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10180">
+		<p>Pingback: <a href='http://pengfubing.com/content/wordpress/30-good-css-cases.html' rel='external nofollow' class='url'>30个精选优秀的CSS实例 | 伟景博客</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10187">
+		<p>Pingback: <a href='http://www.52ebuy.com/archives/42' rel='external nofollow' class='url'>享受生活 &raquo; 22个不错的CSS技术</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10188">
+		<p>Pingback: <a href='http://www.52ebuy.com/archives/34' rel='external nofollow' class='url'>享受生活 &raquo; 30种时尚的CSS网站导航条</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10659">
+		<p>Pingback: <a href='http://huedesigner.wordpress.com/2010/01/22/10-top-notch-css-editors/' rel='external nofollow' class='url'>10 Top-Notch CSS Editors &laquo; HUE Designer</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10903">
+		<p>Pingback: <a href='http://emptycup.cn/index.php/archives/437' rel='external nofollow' class='url'>30个酷炫的CSS导航菜单 - 空杯网（EmptyCup.cn）- 前端设计资源分享!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11202">
+		<p>Pingback: <a href='http://blog.informativecomputersolutions.com/?p=321' rel='external nofollow' class='url'>Saint John Web Design | Informative Computer Solutions &raquo; Blog Archive &raquo; The Best CSS Newbie Articles of 2009</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11206">
+		<p>Pingback: <a href='http://a.parsons.edu/~zeravivm/s10/osd/jkhurd1/02/09/dumplings/' rel='external nofollow' class='url'>Dumplings! &#8211; Open Source Design - Spring10</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11225">
+		<p>Pingback: <a href='http://yuekuan.com/2010/02/20/2051.html' rel='external nofollow' class='url'>精选30个国外优秀的CSS技术和实例【翻译】 &laquo; 悦宽网</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11926">
+		<p>Pingback: <a href='http://s92067.gridserver.com/blog/40-outstanding-css-techniques-and-tutorials' rel='external nofollow' class='url'>40 Outstanding css Techniques And Tutorials &raquo; Arbenting - The Act of Being Creative</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12578">
+		<p>Pingback: <a href='http://www.techtrack.com.cn/1256.html' rel='external nofollow' class='url'>30个酷炫的CSS导航菜单 | Techtrack - 专注前端设计，分享科技资讯</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12597">
+		<article id="comment-12597" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a7bf121ff29c67f31c4d858c81d36570?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jordanwalker.net' rel='external nofollow' class='url'>Jordan Walker</a> </cite><a href="index.html#comment-12597"><time datetime="2010-04-16T09:21:20+00:00">Apr. 16, 2010 @ 9:21 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great to see a detailed article on CSS3. Thanks much!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12599">
+		<p>Pingback: <a href='http://designdefine.wordpress.com/2010/04/17/improve-your-css-skills-with-pure-css/' rel='external nofollow' class='url'>Improve Your CSS Skills With Pure CSS &laquo; Designdefine&#39;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12610">
+		<p>Pingback: <a href='http://huyrua.wordpress.com/2010/04/19/improve-your-css-skills-with-pure-css-ui-components/' rel='external nofollow' class='url'>Improve Your CSS Skills With Pure CSS UI Components &laquo; Huy Nguyen&#39;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12641">
+		<p>Pingback: <a href='http://www.w3ctag.com/blog/ajax-help/improve-your-css-skills-with-pure-css-ui-components' rel='external nofollow' class='url'>Improve Your CSS Skills With Pure CSS UI Components Ajax Help W3C Tag</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12650">
+		<article id="comment-12650" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cb27820abb73b6e7882a7a9b35f5b32f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.namakusurya.com' rel='external nofollow' class='url'>Surya Adi Sapoetra</a> </cite><a href="index.html#comment-12650"><time datetime="2010-04-29T03:10:43+00:00">Apr. 29, 2010 @ 3:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>cool tutorial&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12653">
+		<article id="comment-12653" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/df626edfce8ddc13702ec0b57a4898e9?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://inyourear.org' rel='external nofollow' class='url'>johny why</a> </cite><a href="index.html#comment-12653"><time datetime="2010-04-29T17:10:52+00:00">Apr. 29, 2010 @ 5:10 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks for this!</p>
+<p>here&#8217;s a simpler method, which works on all browsers i&#8217;ve tested so far (and i expect it to work in IE6 with the .htc trick mentioned above and here: <a href="http://www.xs4all.nl/~peterned/csshover.html" rel="nofollow">http://www.xs4all.nl/~peterned/csshover.html</a></p>
+<p>my method-<br />
+   -eliminates your accordion margin, that&#8217;s unnecessary, just an aesthetic call which complicates your demo.<br />
+   -eliminates one of your hovers, works without it<br />
+   -eliminates your &#8216;clear:both&#8217; div at the bottom of the accordion, works without it<br />
+   -eliminates your accordion height, unnecessary for accordion functioning, that just pushes down content below the accordion even when the accordion is closed, leaving an empty gap below the accordion. someone might want that, but it&#8217;s an aesthetic call, and makes your code here more difficult to understand.</p>
+<p>here&#8217;s the complete css:<br />
+#accordion {<br />
+	width: 500px;<br />
+}</p>
+<p>#accordion div {<br />
+	height:60px;<br />
+	overflow: hidden;<br />
+}</p>
+<p>#accordion div:hover {<br />
+	height: auto;<br />
+}</p>
+<p>i was helped by the poster here: <a href="http://welovecss.com/showthread.php?s=20f8fc7c3bc1a456e906dde7837b927f&#038;p=20980#post20980" rel="nofollow">http://welovecss.com/showthread.php?s=20f8fc7c3bc1a456e906dde7837b927f&#038;p=20980#post20980</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="../comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"><a href="../comment-page-3/index.html#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='90' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="75c7f13cb3" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=42" title="Permalink to: 5 Steps to a More Organized Style Sheet">
+                    5 Steps to a More Organized Style Sheet                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">One of the nice things about languages like CSS is that you don’t have to write them in any specific way. For example, you could... <a href="../../index.html?p=42" class="more-link" title="Permalink to: 5 Steps to a More Organized Style Sheet">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 901/1159 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-12 06:36:07 by W3 Total Cache -->

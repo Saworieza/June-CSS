@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CSS Newbie Example: Test for Border-Radius Support</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+jQuery(function() {
+	jQuery.support.borderRadius = false;
+	jQuery.each(['BorderRadius','MozBorderRadius','WebkitBorderRadius','OBorderRadius','KhtmlBorderRadius'], function() {
+		if(document.body.style[this] !== undefined) jQuery.support.borderRadius = true;
+		return (!jQuery.support.borderRadius);
+	});
+});
+$(function() {
+	if($.support.borderRadius) { 
+		$('#infobox').text('Hurrah! Your browser supports border-radius! Enjoy!');
+	} else { 
+		$('#infobox').text('No border-radius support. What a square browser! (get it?)');
+	}
+});
+</script>
+<style>
+body {
+	font: x-large/1.4 Georgia, "Times New Roman", Times, serif;
+	text-align: center; }
+#infobox {
+	width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	color: #333;
+	background-color: #09c;
+	border: 4px solid #333;
+	/* Our massive border-radius stack. */
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+</style>
+</head>
+<body>
+	<p>Test in different browsers to see the results.</p>
+	<p><a href="../../index.html?p=585">View the original article.</a></p>
+	<div id="infobox">
+		The results go here.	
+	</div>
+</body>
+</html>

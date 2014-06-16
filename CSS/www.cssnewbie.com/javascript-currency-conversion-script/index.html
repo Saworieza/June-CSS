@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>A JavaScript Currency Conversion Script</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; A JavaScript Currency Conversion Script Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Cross-Browser Support for HTML5 Placeholder Text in Forms' href='../index.html?p=621' />
+<link rel='next' title='Making a Sphere in CSS' href='../index.html?p=649' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=635' />
+<link rel='shortlink' href='../index.html?p=635' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,206] -->
+<meta name="description" content="Crafting formatted currency in JavaScript (with comma, decimals, etc) is not easy. This function simplifies the process." />
+
+<meta name="keywords" content="javascript, currency, currencies, convert, conversion, js, commas, usd, money,commas,conversion,convert,currency,money,usd,quick tip" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-635 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-635" class="post-635 post type-post status-publish format-standard hentry category-javascript category-quick-tip tag-commas tag-conversion tag-convert tag-currency tag-javascript tag-money tag-usd">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=635" title="Permalink to A JavaScript Currency Conversion Script" rel="bookmark">A JavaScript Currency Conversion Script</a>
+	</h2>
+	<div class="meta">
+		<p>Published November 28, 2011 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../wp-content/uploads/2011/11/currency-convert-example.png" alt="" width="500" height="100" class="alignnone size-full wp-image-641" /></p>
+<p>It turns out that converting random numbers into formatted currency (with dollar signs, commas, and periods) is more difficult in JavaScript than I would have expected. There&#8217;s no built-in function for it, and it&#8217;s something I run into a lot. The function I wrote has worked well for me on a couple of projects now, so I thought I&#8217;d share it with you-all.</p>
+<p>The little JavaScript function below does exactly one thing: it converts numbers (integers, floats, strings, whatever) into formatted currency. My example is in US dollars, but it&#8217;d be a quick change to make it work for other currencies as well.</p>
+<h3>The Problem This Solves</h3>
+<p>I wrote this script because I had to display dollar amounts in a &#8220;friendly&#8221; format in several places on a website, but I wasn&#8217;t being handed friendly numbers by the server. The numbers never included commas, of course. But there&#8217;s also the problem of whole-dollar and multiple-of-ten-cent amounts: I would have &#8220;500&#8243; when the user would expect &#8220;500.00&#8243;, or &#8220;250.2&#8243; when the user would expect &#8220;250.20&#8243;.<span id="more-635"></span></p>
+<h3>The JavaScript</h3>
+<p>First the script, then the explanation.</p>
+<pre lang="javascript" escaped="true">function toUSD(number) {
+    var number = number.toString(), 
+    dollars = number.split('.')[0], 
+    cents = (number.split('.')[1] || '') +'00';
+    dollars = dollars.split('').reverse().join('')
+        .replace(/(\d{3}(?!$))/g, '$1,')
+        .split('').reverse().join('');
+    return '$' + dollars + '.' + cents.slice(0, 2);
+}</pre>
+<h3>The Explanation</h3>
+<p>The function expects to be passed one variable: the number you wanted converted. I first convert it to a string for easier manipulation. From that, I create a few more variables. The &#8220;dollars&#8221; variable is everything before the decimal point. The &#8220;cents&#8221; variable is everything after the decimal point, plus a couple of extra zeroes just to be safe (we&#8217;ll lop off extra zeroes later). If there is no decimal point, cents becomes &#8220;00&#8243;.</p>
+<p>Next, I do a whole heck of a lot of manipulation to the dollars string. This is all to add the commas in the correct places. I&#8217;ll walk through each of the manipulations one by one to show you what we have after each one. We&#8217;ll assume we have an initial dollar string of &#8220;123456&#8243;.</p>
+<p><strong>dollars.split(&#8221;)</strong> converts our string into an array of individual digits:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre>["1", "2" ,"3" , "4", "5", "6"]</pre>
+<p><strong>.reverse()</strong> reverses our array:</p>
+<pre>["6", "5", "4", "3", "2", "1"]</pre>
+<p><strong>.join(&#8221;)</strong> turns our array back into a single string again:</p>
+<pre>"654321"</pre>
+<p><strong>.replace(/(\d{3}(?!$))/g, &#8216;$1,&#8217;)</strong> is a complicated (for me) regular expression that basically says &#8220;add a comma to the end of every group of three numbers, unless it is the last group of three numbers (to avoid trailing commas)&#8221;:</p>
+<pre>"654,321"</pre>
+<p><strong>.split(&#8221;)</strong> converts our newly comma&#8217;d string to an array again:</p>
+<pre>["6", "5", "4", ",", "3", "2", "1"]</pre>
+<p><strong>.reverse()</strong> puts the numbers back in the proper order:</p>
+<pre>["1", "2", "3", ",", "4", "5", "6"]</pre>
+<p><strong>.join(&#8221;)</strong> makes them a string again:</p>
+<pre>"123,456"</pre>
+<p>After that, all we do is return our manipulated number with a dollar sign out front and a decimal point between dollars and cents (and I&#8217;m using slice to only return the first two digits in the cents string).</p>
+<h3>How To Internationalize</h3>
+<ul>
+<li>If your currency of choice uses periods instead of commas as a thousands-place divider, change &#8216;$1,&#8217; in the replace function to be &#8216;$1.&#8217; Instead.</li>
+<li>If you use a comma instead of a period between dollars and cents, change &#8220;dollars + &#8216;.&#8217;&#8221; in the return line to read &#8220;dollars + &#8216;,&#8217;&#8221; instead. If you are starting with a number that uses a comma to denote a decimal, you&#8217;d also need to change the dollars and cents variables to have &#8220;.split(&#8216;,&#8217;)&#8221; instead of &#8220;.split(&#8216;.&#8217;)&#8221;. </li>
+<li>To use something other than a dollar sign in the currency, simply replace the &#8216;$&#8217; in the return line with your currency sign.</li>
+</ul>
+<h3>See a Demo</h3>
+<p>If you&#8217;d like to see it in action, <a href="../example/currency-conversion/index.html">here&#8217;s a demo.</a></p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			13 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-13863">
+		<article id="comment-13863" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c96b5375a1419f0255c957ab0fda3d55?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Shane rutter </cite><a href="comment-page-1/index.html#comment-13863"><time datetime="2011-11-28T17:16:07+00:00">Nov. 28, 2011 @ 5:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you for this, think I will find this very useful in futur projects. I&#8217;ve came across this issue many times.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13947">
+		<article id="comment-13947" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/63b6f3cefdea95b5b965c9a4af1122c7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jonathan Barratt </cite><a href="comment-page-1/index.html#comment-13947"><time datetime="2012-01-22T09:51:57+00:00">Jan. 22, 2012 @ 9:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for sharing, just what I needed in a pinch! :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13988">
+		<article id="comment-13988" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fe1cf68062a83f700921351929119d84?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.andremoves.com' rel='external nofollow' class='url'>man van</a> </cite><a href="comment-page-1/index.html#comment-13988"><time datetime="2012-02-18T04:12:08+00:00">Feb. 18, 2012 @ 4:12 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great thanks for sharing this with us thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14028">
+		<article id="comment-14028" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7ffaffbbfefdf1e025ee51c64261a61e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">ED </cite><a href="comment-page-1/index.html#comment-14028"><time datetime="2012-03-19T18:24:02+00:00">Mar. 19, 2012 @ 6:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yes, thanks. Great explanation.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14033">
+		<article id="comment-14033" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c80b288c873d1c20659ada314c8336c9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://keryx.se/' rel='external nofollow' class='url'>Lars Gunther</a> </cite><a href="comment-page-1/index.html#comment-14033"><time datetime="2012-03-21T18:43:44+00:00">Mar. 21, 2012 @ 6:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I suggested a number format CSS declaration to the CSS WG a couple of years ago. So far zero interest. <a href="http://wiki.csswg.org/ideas/content-formatting" rel="nofollow">http://wiki.csswg.org/ideas/content-formatting</a></p>
+<p>The problem with separating numbers using commas is that you can no longer read the value using JavaScript, which is bad for some applications.</p>
+<p>In Sweden we use a space, which also mean that numbers may get split across several lines, unless one remembers to use non-breaking space&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14181">
+		<p>Pingback: <a href='http://ralookuh.com/2011/12/read-javascript-currency-conversion-script/' rel='external nofollow' class='url'>To Read &#8211; A JavaScript Currency Conversion Script | Ralookuh</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14510">
+		<article id="comment-14510" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6c4f53d70b9c86771a18e2744b3d511a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Mario </cite><a href="comment-page-1/index.html#comment-14510"><time datetime="2013-01-30T10:42:46+00:00">Jan. 30, 2013 @ 10:42 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Your function does not handle negative numbers properly.<br />
+INPUT: -100<br />
+OUTPUT: $-,100.00</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15102">
+		<article id="comment-15102" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/260184d19f32b5a7516dae80955fbb51?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.grantee.info' rel='external nofollow' class='url'>peruke</a> </cite><a href="comment-page-1/index.html#comment-15102"><time datetime="2013-04-09T22:42:00+00:00">Apr. 9, 2013 @ 10:42 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Keep working ,terrific job!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15221">
+		<article id="comment-15221" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dc6b999124525346e68797a791b01fb9?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://techBuddha.in' rel='external nofollow' class='url'>Nitin Gautam</a> </cite><a href="comment-page-1/index.html#comment-15221"><time datetime="2013-04-28T01:56:38+00:00">Apr. 28, 2013 @ 1:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for sharing this :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15232">
+		<article id="comment-15232" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dcda45bcb4e243fc1d65e92001ca6d82?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Geoff </cite><a href="comment-page-1/index.html#comment-15232"><time datetime="2013-05-02T16:42:51+00:00">May. 2, 2013 @ 4:42 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Mario and OP<br />
+To fix the negative number problem you simply add another negative lookahead to the regex. So the new replace is .replace(/(\d{3}(?!$)(?!-))/g, &#8216;$1,&#8217;). Note the (?!-).</p>
+<p>Thanks for sharing this OP, helped me out.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15276">
+		<article id="comment-15276" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/10e6f9a60f0fb82d092bd658f6b6f369?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Saveesh </cite><a href="comment-page-1/index.html#comment-15276"><time datetime="2013-05-24T02:10:16+00:00">May. 24, 2013 @ 2:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks , it helped me lot</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-15978">
+		<p>Pingback: <a href='http://warwebdev.com/2014/02/bouncing-balls-in-the-html5-canvas/' rel='external nofollow' class='url'>Bouncing Balls in the HTML5 Canvas | WarWebDev</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-15991">
+		<p>Pingback: <a href='https://www.lunariumdesign.com/bouncing-balls-in-the-html5-canvas/' rel='external nofollow' class='url'>Bouncing Balls in the HTML5 Canvas | Lunarium Design</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=635#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='635' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b3cb0bc2ad" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=33" title="Permalink to: Intelligent Navigation Bars with JavaScript and CSS">
+                    Intelligent Navigation Bars with JavaScript and CSS                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">I’ve developed a trick over the years that I’ve used on a number of websites now for making my sites’ navigation bars “intelligent” or “self-aware.”... <a href="../index.html?p=33" class="more-link" title="Permalink to: Intelligent Navigation Bars with JavaScript and CSS">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=635#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 871/925 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 18:45:34 by W3 Total Cache -->

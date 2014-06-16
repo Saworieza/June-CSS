@@ -1,0 +1,61 @@
+/** default styles **/
+* { margin: 0; padding: 0; }
+html { height: 101%; }
+
+body { font-family: Arial, Tahoma, sans-serif; font-size: 62.5%; line-height: 1; background: #eeeeee; }
+
+a { color: #5484a7; text-decoration: none; }
+a:hover { text-decoration: none; color: #356080; }
+
+nav { display: block; height: 60px; background: #434951 url('img/top-bg.gif') repeat-x; }
+.wrap, nav .wrap { width: 710px; display: block; margin: 0 auto; }
+
+nav #menu-l { list-style: none; margin-left: -1px; }
+nav #menu-l li { float: left; padding: 0px 11px; }
+nav #menu-l li a { display: block; float: left; line-height: 55px; color: #bcbebc; font-size: 1.3em; text-decoration: none; }
+nav #menu-l li a:hover { color: #eee; }
+
+nav #menu-l li.floatr { float: right; margin-right: 40px; }
+
+
+ul.subsortnav { list-style: none; border-bottom: 1px solid #e7e7e7; height: 50px; margin-bottom: 15px; }
+ul.subsortnav li { line-height: 50px; font-size: 1.4em; float: left; display: block; padding: 0px 13px; }
+ul.subsortnav li a { color: #a3aab0; font-weight: bold; text-decoration: none; }
+ul.subsortnav li a:hover { color: #72777d; }
+
+ul.subsortnav li a.sel { color: #343434; }
+
+h2 { color: #777; font-weight: normal; font-size: 1.6em; margin-bottom: 18px; }
+h2 strong { color: #333; font-weight: bold; }
+h2 a { color: #5484a7; text-decoration: none; font-weight: bold; font-size: 0.8em; }
+
+ol.dribbble { list-style: none; }
+ol.dribbble li { width: 220px; height: 210px; margin-right: 15px; float: left; }
+ol.dribbble li.rowstart { clear: left; }
+
+ol.dribbble li div.shot { 
+  position: relative;
+  display: block;
+  clear: left;
+  margin-bottom: 8px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+ol.dribbble li div.shot img { padding: 10px; }
+
+ol.dribbble li span.meta { font-size: 1.2em; display: block; font-weight: bold; padding-left: 6px; }
+ol.dribbble li span.meta a { text-decoration: none; display: block; }
+ol.dribbble li span.meta img.avatar { float: left; margin-right: 6px; margin-top: -3px; }
+
+
+footer { background: #fff; border-top: 1px solid #ddd; padding: 22px 0; }
+footer p { font-size: 1.3em; font-weight: normal; color: #787878; }
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

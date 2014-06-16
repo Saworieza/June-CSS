@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: equalHeight jQuery Plugin in Action</title>
+<style>
+	body {
+		font: small/1.3em Arial, Helvetica, sans-serif; }
+	#wrap {
+		background-color: white;
+		width: 810px;
+		margin: 0 auto; }
+	.block {
+		width: 240px;
+		margin: 0 10px 10px 0;
+		padding: 10px;
+		background-color: #09f;
+		float: left; }
+</style>
+<script language="javascript" type="text/javascript" src="../../js/jquery/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="jquery.equalheights.js"></script>
+<script>
+$(document).ready(function() {
+	$("#fixem").click(function() { $(".block").equalHeights(); });
+	$("#breakem").click(function() { $(".block").css("height","auto")});
+});
+</script>
+</head>
+<body>
+	<div id="wrap">
+	<h1>Equal Height Columns with jQuery</h1>
+		<p>Use the buttons below to see the equalHeights plugin in action. Or, <a href="../../index.html?p=292">go to the CSS Newbie article.</a></p>
+		
+		<p><button id="fixem">Fix the blocks!</button>
+		<button id="breakem">Restore the blocks.</button></p>
+		
+		<div class="block">
+			1. This is a small block of text.
+		</div>
+		<div class="block">
+			2. This is a much larger block of text, which takes up much more vertical space by default. However, with a bit of jQuery magic, all these blocks could become the same size.
+		</div>
+		<div class="block">
+			3. Another tiny block.
+		</div>
+		<div class="block">
+			4. We were expecting this block to be on the far left, but because the block in the middle is so large, our "float: left" property isn't behaving how we probably expected.
+		</div>
+		<div class="block">
+			5. Now our nice, neat columns are all messed up. This simply won't do.
+		</div>
+		<div class="block">
+			6. Luckily, the equalHeights plugin gives us a easy fix without having to resort to specifying a fixed height in our CSS.
+		</div>
+	</div>
+
+</body>
+</html>

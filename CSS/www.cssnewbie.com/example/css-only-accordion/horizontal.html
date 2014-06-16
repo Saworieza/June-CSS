@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS-Only Accordion Effect: Horizontal Accordian</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: </h2>
+	<h2 class="source title">Source Code: <a href="horizontal.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/css-only-accordion/horizontal.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSS-Only Accordion Effect: Horizontal Accordian&lt;/title&gt;
+&lt;style&gt;
+body {
+   font: small/1.2 Arial, Helvetica, sans-serif; }
+#accordion {
+   width: 500px;
+   margin: 100px auto; }
+#accordion div {
+   float: left;
+   width:25%;
+   height: 300px;
+   overflow: hidden;}
+#accordion:hover div {
+   width: 20px; }
+#accordion:hover div:hover {
+   width: 440px;
+   overflow: auto; }
+
+#spring {
+   background-color: #CCFF99; }
+#summer {
+   background-color:#FF6633; }
+#autumn {
+   background-color: #FFCC00; }
+#winter {
+   background-color:#99FFFF; }
+h1 {
+   font-size: 150%;
+   margin: 10px 10px .2em 25px; }
+p {
+   margin: 1em 25px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id=&quot;accordion&quot;&gt;
+      &lt;div id=&quot;spring&quot;&gt;
+         &lt;h1&gt;Spring&lt;/h1&gt;
+         &lt;p&gt;Spring begins in the northern hemisphere around the months of March, April, May, or as reckoned astronomically extending from the vernal equinox. As in summer, the axis of the Earth is tilted toward the Sun and the length of daylight rapidly increases. The northern hemisphere begins to warm significantly causing new plant growth to &quot;spring forth,&quot; giving the season its name. Snow begins to melt and streams swell with runoff and spring rains. Most flowering plants bloom this time of year, in a long succession sometimes beginning even when snow is still on the ground, and continuing into early summer. In normally snowless areas &quot;spring&quot; may begin as early as February during warmer years, with subtropical areas having very subtle differences, and tropical ones none at all. Subarctic areas may not experience &quot;spring&quot; at all until May or even June, or December in the outer Antarctic.&lt;/p&gt;
+         &lt;p&gt;Severe weather most often occurs during the spring, when warm air begins to invade from lower latitudes while cold air is still pushing from the polar regions. Flooding is also most common in and near mountainous areas during this time of year because of snowmelt, many times accelerated by warm rains. In the United States, Tornado Alley is most active by far this time of year, especially since the Rocky Mountains prevent the surging hot and cold air masses from spreading eastward and instead force them directly at each other. Besides tornadoes, supercell thunderstorms can also produce dangerously large hail and very high winds, for which a severe thunderstorm warning or tornado warning is usually issued. Even more so than winter, the jet streams play an important role in severe weather in the springtime.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;summer&quot;&gt;
+         &lt;h1&gt;Summer&lt;/h1&gt;
+         &lt;p&gt;The seasons are considered by some Western countries to start at the equinoxes and solstices, based on astronomical reckoning. In North American-printed English-language calendars, based on astronomy, summer begins on the day of the summer solstice and ends on the day of the autumn equinox. When it is summer in the Southern Hemisphere, it is winter in the Northern Hemisphere, and vice versa.&lt;/p&gt;
+         &lt;p&gt;But, because the seasonal lag is less than 1/8 of a year (except near large bodies of water), the meteorological start of the season, which is based on average temperature patterns, precedes by about three weeks the start of the astronomical season. According to meteorology, summer is the whole months of December, January, and February in the Southern Hemisphere, and the whole months of June, July, and August in the Northern Hemisphere. This meteorological definition of summer also aligns with commonly viewed notion of summer as the season with the longest (and warmest) days of the year, in which the daylight predominates, through varying degrees. The use of astronomical beginning of the seasons means that spring and summer have an almost equal pattern of the length of the days, with spring lengthening from the equinox to the solstice and summer shortening from the solstice to the equinox, while meteorological summer encompasses the build up to the longest day and decline thereafter, so that summer has many more hours of daylight than spring.&lt;/p&gt;
+         &lt;p&gt;Today, the meteorological reckoning of the seasons is used in Australia, Denmark, the former USSR and by many people in the United Kingdom, but the astronomical definition is still more frequently used in the United States.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;autumn&quot;&gt;
+         &lt;h1&gt;Autumn&lt;/h1&gt;
+         &lt;p&gt;Autumn (also known as fall in North American English) is one of the four temperate seasons. Autumn marks the transition from summer into winter. In the northern hemisphere, the start of autumn is generally considered to be around September, and in the southern hemisphere, its beginning is considered to be around March. There exist, however, different definitions of autumn, some of which are based on the months of the year while others are based on the equinox and solstice.&lt;/p&gt;
+         &lt;p&gt;During autumn, deciduous trees shed their leaves. Leaves change to a yellowish, reddish or brownish hue before falling. Such coloured leaves have come to be colloquially called &quot;fall foliage&quot; in North America. In temperate zones, autumn is the season during which most crops are harvested. It is also the season during which days get shorter and cooler and the nights get longer.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;winter&quot;&gt;
+         &lt;h1&gt;Winter&lt;/h1&gt;
+         &lt;p&gt;Winter is one of the four seasons of temperate zones. North American calendars go by astronomy and state that winter begins on the winter solstice and ends on the vernal equinox. Calculated meteorologically, it begins and ends earlier (typically at the start of the month with the equinox or solstice) and is the season with the shortest days and the lowest temperatures. Either way, it generally has cold weather and, especially in the higher latitudes or altitudes, snow and ice. The coldest average temperatures of the season are typically experienced in January in the Northern Hemisphere and in July in the Southern Hemisphere.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;float: none; clear: both; height: 0;&quot;&gt; &lt;/div&gt;
+   &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

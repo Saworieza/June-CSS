@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Simple, Stylish and Swappable Image Captions</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: <a href="../../index.html?p=457">(Read the CSS Newbie article)</a></h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/image-captions/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSS Newbie Example: Simple, Stylish and Swappable Image Captions&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+   $(&quot;img.hascaption&quot;).each(function() {
+      $(this).wrap('&lt;div class=&quot;figure&quot;&gt;&lt;/div&gt;')
+      .after('&lt;p class=&quot;caption&quot;&gt;'+$(this).attr(&quot;title&quot;)+'&lt;/p&gt;')
+      .removeAttr('title');
+   });
+   $(&quot;.figure&quot;).width($(this).find('img').width());
+      
+   $(&quot;.figure&quot;).mouseenter(function(){
+      $(this).find('.caption').slideToggle();
+   }).mouseleave(function(){
+      $(this).find('.caption').slideToggle();
+   });
+});
+&lt;/script&gt;
+&lt;style&gt;
+   body {
+      font: small/1.4 Arial, Helvetica, sans-serif; }
+   #wrap {
+      width: 500px;
+      margin: 0 auto; }
+   .figure {
+      position: relative; }
+   .figure p.caption {
+      display: none;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 94%;
+      margin: 0;
+      padding: 5px 3%;
+      background-color: #555;
+      color: #fff;
+      font-weight: bold; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;
+   &lt;h1&gt;Simple, Stylish and Swappable Image Captions&lt;/h1&gt;
+   &lt;p&gt;The example below uses a simple image tag and title attribute to create an easy, semantic image captioning system with the help of jQuery (and some CSS to make things prettier).&lt;/p&gt;
+   &lt;p&gt;Mouse over the image below to view its corresponding caption!&lt;/p&gt;
+   &lt;p&gt;&lt;a href=&quot;http://www.cssnewbie.com/how-to-create-simple-stylish-and-swappable-image-captions/&quot;&gt;You can view the original article here.&lt;/a&gt;&lt;/p&gt;
+
+   &lt;img src=&quot;http://farm4.static.flickr.com/3314/3314211481_4e00a1f471.jpg&quot; width=&quot;500&quot; height=&quot;250&quot; class=&quot;hascaption&quot; title=&quot;Mentions of 'Martha Stewart' (red) versus 'Darfur' (blue) from 2004 - 2009 in the New York Times. Visualization by Jer Thorp (blprnt_van).&quot; /&gt;
+   
+   &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This code has been modified slightly from the original to work in IE7.&lt;/p&gt;
+   
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

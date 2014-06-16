@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example - Happy 4th of July!</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: </h2>
+	<h2 class="source title">Source Code: <a href="http://www.cssnewbie.com/example/us-flag/?url=/us-flag?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/us-flag?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source?source" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSSnewbie Example - Happy 4th of July!&lt;/title&gt;
+&lt;style&gt;
+   body {
+      font-family: &quot;Lucida Sans Regular&quot;;
+      margin: 0;
+      padding: 0; }
+   #flag {
+      width: 398px;
+      border: 1px solid #ddd;
+      margin: 0 auto;
+      position: relative; }
+   .blue {
+      width: auto !important;
+      width: 180px; /* IE6 doesn't like our auto width. */
+      background-color: #00348c;
+      color: #fff;
+      text-align: center;
+      padding: 2px 0 5px 8px !important;
+      padding: 2px 0 5px 0; /* Font sizing issues in IE6 make padding a problem. */
+      position: absolute;
+      top: 0;
+      left: 0; }
+   .blue p {
+      letter-spacing: 12px;
+      height: 14px;
+      font-size: 20px;
+      line-height: 14px;
+      margin: 0; }
+    p.stripe {
+       height: 19px;
+      font-weight: bold;
+       text-align: right;
+      padding: 0 5px;
+      margin: 0; }
+   .red {
+      color: #f70029;
+      background-color: #f70029; }
+   .red::-moz-selection {
+      color: #fff;
+      background-color: #f70029; }
+   .red::selection {
+      color: #fff;
+      background-color: #f70029; }
+   .white {
+      color: #fff;
+      background-color: #fff; }
+   .white::-moz-selection {
+      color: #000;
+      background-color: #fff; }
+   .white::selection {
+      color: #000;
+      background-color: #fff; }
+      
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id=&quot;flag&quot;&gt;
+      &lt;div class=&quot;blue&quot;&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+         &lt;p&gt;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&amp;#9733;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;red stripe&quot;&gt;Have a Fun,&lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt;Safe, and Happy&lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt;Independence Day!&lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt; &lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt; &lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt;Created by Rob&lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt;at CSSnewbie.com.&lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt; &lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt; &lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt;For more cool&lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt;CSS tricks, tips,&lt;/p&gt;
+      &lt;p class=&quot;white stripe&quot;&gt;and tutorials, visit:&lt;/p&gt;
+      &lt;p class=&quot;red stripe&quot;&gt;http://www.cssnewbie.com/&lt;/p&gt;
+   &lt;/div&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

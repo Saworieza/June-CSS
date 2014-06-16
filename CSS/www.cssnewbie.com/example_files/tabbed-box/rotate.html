@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Tabbed Box Using jQuery</title>
+<style>
+	* { margin: 0; padding: 0; }
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 62.5%; }
+	p { margin: 1em 0; }
+	#wrap {
+		width: 500px;
+		font-size: 1.2em;
+		margin: 3em auto; }
+	.tabbed-box {
+		width: 302px;
+		background: #fff url(tabbed-body-bg.jpg) repeat-x bottom;
+		border: 1px solid #ddd; }
+	.tabbed-box .tabs li {
+		list-style: none;
+		float: left; }
+	.tabbed-box .tabs li a {
+		display: block;
+		width: 100px;
+		padding: 5px 0;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		color: #888;
+		background: #fff url(tabbed-tab-bg.jpg) repeat-x bottom; 
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;}
+	.tabbed-box .tabs li:first-child a {
+		border-left: none; }
+	.tabbed-box .tabs li a:hover {
+		color: #333; }
+	.tabbed-box .tabs li a:focus {
+		outline: none; }
+	.tabbed-box .tabs li a.active, .tabbed-box .tabs li a.active:hover {
+		background: #fff;
+		color: #333;
+		border-bottom: 1px solid #fff; }
+	.tabbed-content {
+		padding: 3em 1em 1em 1em;
+		display: none; }
+</style>
+<script language="javascript" type="text/javascript" src="../../js/jquery/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="../../js/jquery/jquery.equalheights.js"></script>
+<script>
+var rotateSpeed = 5000; // Milliseconds to wait until switching tabs.
+var currentTab = 0; // Set to a different number to start on a different tab.
+var numTabs; // These two variables are set on document ready.
+var autoRotate;
+
+function openTab(clickedTab) {
+	var thisTab = $(".tabbed-box .tabs a").index(clickedTab);
+	$(".tabbed-box .tabs li a").removeClass("active");
+	$(".tabbed-box .tabs li a:eq("+thisTab+")").addClass("active");
+	$(".tabbed-box .tabbed-content").hide();
+	$(".tabbed-box .tabbed-content:eq("+thisTab+")").show();
+	currentTab = thisTab;
+}
+
+function rotateTabs() {
+	var nextTab = (currentTab == (numTabs - 1)) ? 0 : currentTab + 1;
+	openTab($(".tabbed-box .tabs li a:eq("+nextTab+")"));
+}
+
+$(document).ready(function() {
+	$(".tabbed-content").equalHeights();
+	numTabs = $(".tabbed-box .tabs li a").length;
+	
+	$(".tabbed-box .tabs li a").click(function() { 
+		openTab($(this)); return false; 
+	});
+	
+	autoRotate = setInterval("rotateTabs()", rotateSpeed);	
+	$(".tabbed-box .tabs li a:eq("+currentTab+")").click()	
+});
+</script>
+
+</head>
+<body>
+<div id="wrap">
+	<div class="tabbed-box">
+		<ul class="tabs">
+			<li><a href="rotate.html#">Reader Faves</a></li>
+			<li><a href="rotate.html#">Rob&rsquo;s Faves</a></li>
+			<li><a href="rotate.html#">CSS Primer</a></li>
+		</ul>
+		<div class="tabbed-content">
+			<p>Here's my content for tab 1</p>
+			<p>Here's my content for tab 1</p>
+			<p>Here's my content for tab 1</p>
+		</div>
+		<div class="tabbed-content">
+			<p>Here's my content for tab 2</p>
+			<p>Here's my content for tab 2</p>
+			<p>Here's my content for tab 2</p>
+			<p>Here's my content for tab 2</p>
+		</div>
+		<div class="tabbed-content">
+			<p>Here's my content for tab 3</p>
+			<p>Here's my content for tab 3</p>
+			<p>Here's my content for tab 3</p>
+			<p>Here's my content for tab 3</p>
+			<p>Here's my content for tab 3</p>
+ 		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

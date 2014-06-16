@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Advanced CSS Accordion Effect</title>
+<script src="../../js/jquery/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	$("#accordion, #accordion div").mouseover(function() {
+		$(this).addClass("hover");
+	}).mouseout(function() {
+		$(this).removeClass("hover");
+	});
+});
+</script>
+<style>
+body {
+	font: small/1.2 Arial, Helvetica, sans-serif;
+	width: 500px;
+	margin: 0 auto; }
+#accordion {
+	width: 500px;
+	margin: 100px auto; }
+#accordion div {
+	float: left;
+	width:25%;
+	height: 300px;
+	overflow: hidden;}
+#accordion:hover div, #accordion.hover div {
+	width: 20px; }
+#accordion:hover div:hover, #accordion.hover div.hover {
+	width: 440px;
+	overflow: auto; }
+
+#spring {
+	background-color: #CCFF99; }
+#summer {
+	background-color:#FF6633; }
+#autumn {
+	background-color: #FFCC00; }
+#winter {
+	background-color:#99FFFF; }
+h1 {
+	font-size: 150%;
+	margin: 10px 10px .2em 25px; }
+p {
+	margin: 1em 25px; }
+</style>
+</head>
+<body>
+	<h1>Advanced CSS Accordion Effect</h1>
+	<p>This accordion effect works on all modern browsers with no JavaScript, and in IE6 with a bit of JavaScript magic. <a href="../../index.html?p=311">For more information, see the original article here.</a></p>
+	<div id="accordion">
+		<div id="spring">
+			<h1>Spring</h1>
+			<p>Spring begins in the northern hemisphere around the months of March, April, May, or as reckoned astronomically extending from the vernal equinox. As in summer, the axis of the Earth is tilted toward the Sun and the length of daylight rapidly increases. The northern hemisphere begins to warm significantly causing new plant growth to "spring forth," giving the season its name. Snow begins to melt and streams swell with runoff and spring rains. Most flowering plants bloom this time of year, in a long succession sometimes beginning even when snow is still on the ground, and continuing into early summer. In normally snowless areas "spring" may begin as early as February during warmer years, with subtropical areas having very subtle differences, and tropical ones none at all. Subarctic areas may not experience "spring" at all until May or even June, or December in the outer Antarctic.</p>
+			<p>Severe weather most often occurs during the spring, when warm air begins to invade from lower latitudes while cold air is still pushing from the polar regions. Flooding is also most common in and near mountainous areas during this time of year because of snowmelt, many times accelerated by warm rains. In the United States, Tornado Alley is most active by far this time of year, especially since the Rocky Mountains prevent the surging hot and cold air masses from spreading eastward and instead force them directly at each other. Besides tornadoes, supercell thunderstorms can also produce dangerously large hail and very high winds, for which a severe thunderstorm warning or tornado warning is usually issued. Even more so than winter, the jet streams play an important role in severe weather in the springtime.</p>
+		</div>
+		<div id="summer">
+			<h1>Summer</h1>
+			<p>The seasons are considered by some Western countries to start at the equinoxes and solstices, based on astronomical reckoning. In North American-printed English-language calendars, based on astronomy, summer begins on the day of the summer solstice and ends on the day of the autumn equinox. When it is summer in the Southern Hemisphere, it is winter in the Northern Hemisphere, and vice versa.</p>
+			<p>But, because the seasonal lag is less than 1/8 of a year (except near large bodies of water), the meteorological start of the season, which is based on average temperature patterns, precedes by about three weeks the start of the astronomical season. According to meteorology, summer is the whole months of December, January, and February in the Southern Hemisphere, and the whole months of June, July, and August in the Northern Hemisphere. This meteorological definition of summer also aligns with commonly viewed notion of summer as the season with the longest (and warmest) days of the year, in which the daylight predominates, through varying degrees. The use of astronomical beginning of the seasons means that spring and summer have an almost equal pattern of the length of the days, with spring lengthening from the equinox to the solstice and summer shortening from the solstice to the equinox, while meteorological summer encompasses the build up to the longest day and decline thereafter, so that summer has many more hours of daylight than spring.</p>
+			<p>Today, the meteorological reckoning of the seasons is used in Australia, Denmark, the former USSR and by many people in the United Kingdom, but the astronomical definition is still more frequently used in the United States.</p>
+		</div>
+		<div id="autumn">
+			<h1>Autumn</h1>
+			<p>Autumn (also known as fall in North American English) is one of the four temperate seasons. Autumn marks the transition from summer into winter. In the northern hemisphere, the start of autumn is generally considered to be around September, and in the southern hemisphere, its beginning is considered to be around March. There exist, however, different definitions of autumn, some of which are based on the months of the year while others are based on the equinox and solstice.</p>
+			<p>During autumn, deciduous trees shed their leaves. Leaves change to a yellowish, reddish or brownish hue before falling. Such coloured leaves have come to be colloquially called "fall foliage" in North America. In temperate zones, autumn is the season during which most crops are harvested. It is also the season during which days get shorter and cooler and the nights get longer.</p>
+		</div>
+		<div id="winter">
+			<h1>Winter</h1>
+			<p>Winter is one of the four seasons of temperate zones. North American calendars go by astronomy and state that winter begins on the winter solstice and ends on the vernal equinox. Calculated meteorologically, it begins and ends earlier (typically at the start of the month with the equinox or solstice) and is the season with the shortest days and the lowest temperatures. Either way, it generally has cold weather and, especially in the higher latitudes or altitudes, snow and ice. The coldest average temperatures of the season are typically experienced in January in the Northern Hemisphere and in July in the Southern Hemisphere.</p>
+		</div>
+		<div style="float: none; clear: both; height: 0;"> </div>
+	</div>
+
+</body>
+</html>

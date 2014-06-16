@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://red-team-design.com/css-3d-folding-list-with-social-buttons/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>CSS 3D folding list with social buttons</title>
+    <meta name="description" content="Draw users&#39; attention by using CSS 3D transforms in order to simulate a folding list with social buttons.">
+    <meta name="google-site-verification" content="C5zdBQFWWh6uslnkcC0u_F5av9GyYt90auGayV4ELbM">
+    <link rel="stylesheet" href="http://red-team-design.com/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/redteamdesign">
+    <link rel="author" href="http://plus.google.com/114910105297465575018/posts">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  <script src="./CSS 3D folding list with social buttons_files/ga.js" id="ga"></script><script async="" src="./CSS 3D folding list with social buttons_files/embed.js"></script><script id="_adpacks_mktjs" type="text/javascript" src="./CSS 3D folding list with social buttons_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_a5f348233fceef06ba365ab392938d10" src="./CSS 3D folding list with social buttons_files/s_a5f348233fceef06ba365ab392938d10.js" async="async"></script><style type="text/css" id="bsa_css">.one{position:relative}.one .bsa_it_ad{display:block;padding:15px;border:1px solid #e1e1e1;background:#f9f9f9;font-family:helvetica,arial,sans-serif;line-height:100%;position:relative}.one .bsa_it_ad a{text-decoration:none}.one .bsa_it_ad a:hover{text-decoration:none}.one .bsa_it_ad .bsa_it_t{display:block;font-size:12px;font-weight:bold;color:#212121;line-height:125%;padding:0 0 5px 0}.one .bsa_it_ad .bsa_it_d{display:block;font-size:11px;color:#434343;font-size:12px;line-height:135%}.one .bsa_it_ad .bsa_it_i{float:left;margin:0 15px 10px 0}.one .bsa_it_p{display:block;text-align:right;position:absolute;bottom:10px;right:15px}.one .bsa_it_p a{font-size:10px;color:#666;text-decoration:none}.one .bsa_it_ad .bsa_it_p a:hover{font-style:italic}</style></head>
+  <!-- 
+         _        _ 
+   _ __ | |_   __| |
+  | '__|| __| / _` |
+  | |   | |_ | (_| |
+  |_|    \__| \__,_|
+
+  Build with Jekyll & Sass. Hosted on Github. 
+                    
+   -->
+  <body>
+  
+  <header role="banner" class="top-header">
+    <div class="container">
+      <div class="grid">
+        <div class="grid__col--30">
+          <a href="http://red-team-design.com/" class="rtd-logo">
+            RedTeamDesign
+          </a>
+        </div>
+        <div class="grid__col--70">
+          <nav role="navigation" class="rtd-nav">
+            <a class="visually-hidden" href="http://red-team-design.com/css-3d-folding-list-with-social-buttons/#content">Skip to content</a>
+            <ul>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/">Home</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/archive/">Archive</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/about/">About</a>
+                </li>
+              
+                
+                
+                
+                <li class="">
+                  <a href="http://red-team-design.com/contact/">Contact</a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="master-header">
+    <div class="container">
+      <h1 class="master-head--title">CSS 3D folding list with social buttons</h1>
+    </div>
+  </div>    
+
+  <div class="master-content">
+    <div class="container">
+      <div class="grid">
+        <section class="grid__col--60 grid__col--push10" role="main" id="content">
+          
+
+<article class="single-post">
+
+  <time datetime="2013-01-27" class="post__time">
+    <small>27 Jan 2013</small>
+  </time>  
+
+  <p>CSS 3D transforms are just awesome. I've seen before some cool and inspiring implementations in the wild and still I can't believe I didn't had the chance to write an article on this topic 'til now.</p>
+
+<p>So, what's the idea for this article? Let's say you own a blog, I was thinking about having a nice looking 3D folding list that contains the main social buttons and when people reach at the end of an article, the initial folded list would smoothly unfold. This could be helpful if you want to draw users' attention, something like: <em>"Hey, did you like my article? Connect with me!"</em>.</p>
+
+<p><img src="./CSS 3D folding list with social buttons_files/css-3d-folding-list-with-social-buttons.png" alt="CSS 3D folding list with social buttons"></p>
+
+<!-- more -->
+
+
+<p><a href="http://red-team-design.com/wp-content/uploads/2013/01/css-3d-folding-list-with-social-buttons-demo.html">View demo</a></p>
+
+<h2>The HTML</h2>
+
+<p>The markup is built using an unordered list which contains snippets and links for each social network. Also, the heading will be able to toggle the folding list.</p>
+
+<p>Each <code>li</code> has an HTML hook class attribute for using color coding: blue for Twitter, orange for RSS and so forth. The <code>fontawesome-*</code> ones are responsible for rendering the social icons using <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"connect"</span><span class="nt">&gt;</span>Connect with me<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"folding folded"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fb"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            [Facebook snippet]
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"fontawesome-facebook"</span><span class="nt">&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tw"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            [Twitter snippet]
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"fontawesome-twitter"</span><span class="nt">&gt;&lt;/a&gt;</span> 
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            [Google+ snippet]
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"fontawesome-google-plus"</span><span class="nt">&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"rss"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            [Simple RSS link]
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"fontawesome-rss"</span><span class="nt">&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+
+
+<h2>The JavaScript</h2>
+
+<p>We'll need some jQuery to manipulate the folding list and <a href="http://modernizr.com/">Modernizr</a> for CSS 3D transforms detection.</p>
+
+<p>As you can see below, the code will be executed only if <code>csstransforms3d</code> HTML class is added by Modernizr. The advantage here is that the rest of jQuery code will not be executed on browsers that do not support CSS 3D transforms.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(){</span>            
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'csstransforms3d'</span><span class="p">))</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">foldingList</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.folding'</span><span class="p">),</span>
+            <span class="nx">foldingListHeight</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.folding'</span><span class="p">).</span><span class="nx">height</span><span class="p">();</span>
+            <span class="nx">topElemOffset</span> <span class="o">=</span> <span class="nx">foldingList</span><span class="p">.</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span><span class="p">,</span>
+            <span class="c1">// Function responsible for unfolding the list</span>
+            <span class="nx">unfold</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">foldingList</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'folded'</span><span class="p">)){</span>
+                        <span class="nx">foldingList</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'folded'</span><span class="p">);</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span> <span class="mi">500</span><span class="p">);</span>
+            <span class="p">}</span>
+
+        <span class="c1">// Fold/Unfold the list</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'.connect'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">foldingList</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">'folded'</span><span class="p">);</span>
+        <span class="p">})</span>
+        <span class="c1">// If needed, unfold the list right away</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">topElemOffset</span> <span class="o">&lt;=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">height</span><span class="p">()</span> <span class="o">-</span> <span class="nx">foldingListHeight</span><span class="p">)</span>
+            <span class="nx">unfold</span><span class="p">();</span>
+        <span class="c1">// Check whether to unfold the list when scrolling/resizing</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"scroll resize"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="kd">var</span> <span class="nx">th</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>               
+            <span class="k">if</span> <span class="p">(</span><span class="nx">th</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">()</span> <span class="o">+</span> <span class="nx">th</span><span class="p">.</span><span class="nx">height</span><span class="p">()</span> <span class="o">-</span> <span class="nx">foldingListHeight</span>  <span class="o">&gt;=</span>  <span class="nx">topElemOffset</span><span class="p">)</span>
+                <span class="nx">unfold</span><span class="p">();</span>               
+        <span class="p">})</span>
+    <span class="p">}</span>
+
+<span class="p">})()</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+
+<h2>The CSS</h2>
+
+<p>If you're willing to read more about CSS 3D Transforms, then you should try <a href="http://desandro.github.com/3dtransforms/">Intro to CSS 3D transforms</a>, I can't recommend it enough.</p>
+
+<p>For simplicity's sake, I will not include below all the vendor prefixed properties. You'll find them all in the demo.</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.folding</span> <span class="p">{</span>              
+    <span class="k">list-style-type</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folding</span> <span class="p">{</span>
+    <span class="n">perspective</span><span class="o">:</span> <span class="m">700px</span><span class="p">;</span> 
+<span class="p">}</span>       
+
+<span class="nc">.folding</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="k">padding-left</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="k">border-left</span><span class="o">:</span> <span class="m">30px</span> <span class="k">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folding</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="n">transition</span><span class="o">:</span> <span class="n">ease</span> <span class="m">.15s</span> <span class="n">all</span><span class="p">;</span>      
+<span class="p">}</span>       
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folding</span> <span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="o">:</span> <span class="m">-1px</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotateX</span><span class="p">(</span><span class="m">10</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folding</span> <span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">odd</span><span class="o">)</span> <span class="p">{</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotateX</span><span class="p">(</span><span class="m">-10</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span>       
+
+<span class="nc">.folding</span> <span class="nc">.fb</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#3959a6</span><span class="p">;</span>
+<span class="p">}</span>   
+
+<span class="nc">.folding</span> <span class="nc">.tw</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#2fc6ff</span><span class="p">;</span>
+<span class="p">}</span>   
+
+<span class="nc">.folding</span> <span class="nc">.gp</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span><span class="m">#d84d30</span><span class="p">;</span>
+<span class="p">}</span>   
+
+<span class="nc">.folding</span> <span class="nc">.rss</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ff7e09</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.rss-link</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="k">font</span><span class="o">:</span> <span class="m">.9em</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.folding</span> <span class="nc">.content</span> <span class="p">{</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">15px</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folded</span> <span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="o">:</span> <span class="m">-75px</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotateX</span><span class="p">(</span><span class="m">75</span><span class="n">deg</span><span class="p">);</span>
+    <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="p">)</span> <span class="m">50</span><span class="o">%,</span>
+                          <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,.</span><span class="m">5</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folded</span> <span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">odd</span><span class="o">)</span> <span class="p">{</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotateX</span><span class="p">(</span><span class="m">-75</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.folded</span> <span class="nc">.content</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Folding list heading */</span>
+<span class="nc">.connect</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">12px</span> <span class="m">0</span> <span class="m">12px</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="k">border-left</span><span class="o">:</span> <span class="m">30px</span> <span class="k">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">2</span><span class="p">);</span>
+    <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+    <span class="k">font</span><span class="o">:</span> <span class="k">bold</span> <span class="m">.9em</span> <span class="s1">'Lucida sans unicode'</span><span class="o">,</span><span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#555</span><span class="p">;</span>
+<span class="p">}</span>       
+
+<span class="nc">.csstransforms3d</span> <span class="nc">.connect</span> <span class="p">{</span> 
+    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64[shortened])</span><span class="p">;</span>
+    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">:</span> <span class="m">-24px</span> <span class="k">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3>Font Awesome styles</h3>
+
+<p>Besides the above styles, we'll need to include also the custom web font we're using it here for the social icons. Including a font for these icons might seem overwhelming, but if you're already using it in your project or website, this will come in handy.</p>
+
+<p>For this example, I chose to include it using <a href="http://weloveiconfonts.com/">WeLoveFontIcons</a> service made by Tim Pietrusky. Also, be aware because last time I checked, Firefox <a href="http://www.red-team-design.com/firefox-doesnt-allow-cross-domain-fonts-by-default">didn’t allow cross-domain fonts by default</a>.</p>
+
+<div class="highlight"><pre><code class="css">   
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">"fontawesome-"</span><span class="o">]:</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="o">:</span> <span class="s1">'FontAwesome'</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">55px</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">-15px</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">"fontawesome-"</span><span class="o">]</span><span class="nd">:hover</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+<span class="p">}</span>    
+</code></pre></div>
+
+
+<h2>Optimised async loading of cross-domain scripts</h2>
+
+<p>When you need to deal with multiple scripts for different tools or social stuff, this is a winner. I use <a href="https://gist.github.com/1025811">this snippet</a> almost all the time and I highly recommend it.</p>
+
+<div class="highlight"><pre><code class="js"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">script</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">js</span><span class="p">,</span> 
+        <span class="nx">fjs</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">script</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span> <span class="p">{</span><span class="k">return</span><span class="p">;}</span>
+            <span class="nx">js</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+            <span class="nx">js</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+            <span class="nx">id</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">js</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">);</span>
+            <span class="nx">fjs</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span><span class="p">);</span>
+        <span class="p">};</span>
+    <span class="c1">// Google+ button</span>
+    <span class="nx">add</span><span class="p">(</span><span class="s1">'https://apis.google.com/js/plusone.js'</span><span class="p">);</span>
+    <span class="c1">// Facebook SDK</span>
+    <span class="nx">add</span><span class="p">(</span><span class="s1">'//connect.facebook.net/en_US/all.js'</span><span class="p">,</span> <span class="s1">'facebook-jssdk'</span><span class="p">);</span>
+    <span class="c1">// Twitter SDK</span>
+    <span class="nx">add</span><span class="p">(</span><span class="s1">'//platform.twitter.com/widgets.js'</span><span class="p">,</span> <span class="s1">'twitter-wjs'</span><span class="p">);</span>
+<span class="p">}(</span><span class="nb">document</span><span class="p">,</span> <span class="err">'</span><span class="nx">script</span>
+</code></pre></div>
+
+
+<h2>jQuery tip</h2>
+
+<p>You can bind multiple events at once when using jQuery's <code>.on()</code>. In this case, we had to use the same code when scrolling or resize and this tip was very handy, considering DRY principle.</p>
+
+<div class="highlight"><pre><code class="css"><span class="err">$</span><span class="o">(</span><span class="nt">window</span><span class="o">)</span><span class="nc">.on</span><span class="o">(</span><span class="s2">"scroll resize"</span><span class="o">,</span> <span class="nt">function</span><span class="o">()</span><span class="p">{</span>
+    <span class="o">//</span> <span class="n">code</span> <span class="n">here</span>
+<span class="p">}</span><span class="o">)</span>
+</code></pre></div>
+
+
+<p>Check jQuery Fundamentals if you want to read more about <a href="http://jqfundamentals.com/chapter/events">Events and Event Delegation</a>.</p>
+
+<h2>The future sounds good</h2>
+
+<p>Think about the power of Modernizr tool translated to CSS. This is exactly what the upcoming <a href="http://dev.opera.com/articles/view/native-css-feature-detection-via-the-supports-rule/"><code>@supports</code></a> is willing to achieve: native CSS feature detection. Sounds cool, huh?</p>
+
+<h2>Graceful degradation</h2>
+
+<p>The nice part about this CSS 3D folding list is that it degrades into a simple list <a href="http://caniuse.com/transforms3d">when CSS 3D transforms are not available</a>, thanks to Modernizr and its features detection.</p>
+
+<p><img src="./CSS 3D folding list with social buttons_files/css-3d-folding-list-graceful-degradation.png" alt="CSS 3D folding list using graceful degradation"></p>
+
+<h3>Mozilla Firefox</h3>
+
+<p>Unfortunately, at this time on Firefox, the sides are a bit jagged when using CSS 3D transforms. Still, I'm very confident this will improve soon.</p>
+
+<h2>That's it!</h2>
+
+<p>I'm thinking to add this piece to the end of my articles too. Until then, I'm looking forward to read your thoughts on this article. Thanks for reading it!</p>
+
+
+  <p>
+    Share this on: 
+    <a href="http://twitter.com/intent/tweet?text=CSS%203D%20folding%20list%20with%20social%20buttons&url=http://www.red-team-design.com/css-3d-folding-list-with-social-buttons&via=catalinred" target="_blank">Twitter</a> • 
+    <a href="http://plusone.google.com/_/+1/confirm?hl=en&url=http://www.red-team-design.com/css-3d-folding-list-with-social-buttons" target="_blank">Google+</a> • 
+    <a href="http://facebook.com/sharer/sharer.php?u=http://www.red-team-design.com/css-3d-folding-list-with-social-buttons" target="_blank">Facebook</a>
+  </p>
+
+  <hr class="bold">
+  <div class="grid">
+    <div class="grid__col--45 grid__col--push10">
+    
+      <a href="http://red-team-design.com/things-you-may-not-have-known-about-html-css" rel="prev" title="Things you may not have known about HTML &amp; CSS" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-left"></i> Things you may not have known about HTML &amp; CSS
+      </a>
+    
+    </div>
+    <div class="grid__col--45">
+    
+      <a href="http://red-team-design.com/animenu-a-responsive-dropdown-navigation-made-with-sass" rel="prev" title="Animenu - a responsive dropdown navigation made with SASS" class="btn btn--full text-ellipsis">
+        <i class="fa fa-arrow-right"></i> Animenu - a responsive dropdown navigation made with SASS 
+      </a>
+    
+    </div>
+  </div>
+  <hr class="bold">
+
+  
+    <div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./CSS 3D folding list with social buttons_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 948px !important;"></iframe></div>
+    <script>
+      var disqus_shortname = 'redteamdesign',
+          disqus_title = "CSS 3D folding list with social buttons",
+          disqus_url = "http://www.red-team-design.com/css-3d-folding-list-with-social-buttons";
+      (function() {
+          var dsq = document.createElement('script'); dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>   
+     
+
+</article>
+        </section>
+        <aside class="grid__col--30" role="complementary">
+          <div class="aside-module">
+            <h2 class="h4">
+              Get updates via 
+              <a href="http://feeds.feedburner.com/redteamdesign" class="rss-label">
+                <i class="fa fa-rss"></i> RSS
+              </a> or email:
+            </h2>
+            <form class="email-form" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;//feedburner.google.com/fb/a/mailverify?uri=redteamdesign&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+              <input type="email" name="email" class="email-form__text" placeholder="Your email address" required="">
+              <input type="submit" value="Go" class="email-form__submit">
+              <input type="hidden" value="redteamdesign" name="uri">
+              <input type="hidden" name="loc" value="en_US">
+            </form>
+          </div>
+          <div class="aside-module">
+            <script src="./CSS 3D folding list with social buttons_files/adpacks.js" id="_adpacks_js"></script><div id="bsap_1257097" class="bsap_1257097 bsap"><div class="bsa_it one"><div class="bsa_it_ad ad1 odd" id="bsa_4644980"><a href="http://stats.buysellads.com/click.go?z=1257097&b=4644980&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.5731088353786618&link=https://www.atlassian.com/agile/?utm_source=buy-sell-ads&utm_medium=display&utm_content=meet-chet-rong&utm_campaign=agile-microsite" onmouseover="window.status = &#39;https://www.atlassian.com/agile/?utm_source=buy-sell-ads&amp;utm_medium=display&amp;utm_content=meet-chet-rong&amp;utm_campaign=agile-microsite&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_i"><img src="./CSS 3D folding list with social buttons_files/200117-1386346065.png" width="130" height="100" alt="Atlassian"></span></a><a href="http://stats.buysellads.com/click.go?z=1257097&b=4644980&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.4776391377672553&link=https://www.atlassian.com/agile/?utm_source=buy-sell-ads&utm_medium=display&utm_content=meet-chet-rong&utm_campaign=agile-microsite" onmouseover="window.status = &#39;https://www.atlassian.com/agile/?utm_source=buy-sell-ads&amp;utm_medium=display&amp;utm_content=meet-chet-rong&amp;utm_campaign=agile-microsite&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" target="_blank"><span class="bsa_it_t">Atlassian</span><span class="bsa_it_d">Meet Chet Rong, the world's worst Agile coach.</span></a><div style="clear:both"></div></div><span class="bsa_it_p"><a href="http://buysellads.com/buy/detail/40406/zone/1257097?utm_source=site_40406&utm_medium=website&utm_campaign=imagetext&utm_content=zone_1257097">ads by BSA</a></span></div></div>
+          </div>
+          <div class="aside-module">           
+            <ul class="aside-module--list">
+              <li><a href="http://crazycoolgadgets.com/">Gadget Magazine</a></li>
+              <li><a href="http://eugenoprea.com/google-analytics/">Google Analytics Course</a></li>
+              <li><a href="http://itxdesign.com/">ITX Design</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo" class="master-footer text-center">
+    <div class="container">
+      <a href="http://twitter.com/catalinred" rel="me nofollow">
+        <i class="fa fa-twitter fa-2x"></i>
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <a href="http://github.com/catalinred" rel="me nofollow">
+        <i class="fa fa-github fa-2x"></i>
+        <span class="visually-hidden">GitHub</span>
+      </a>
+      <a href="http://facebook.com/RedTeamDesign" rel="me nofollow">
+        <i class="fa fa-facebook fa-2x"></i>
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <a href="http://plus.google.com/u/0/114910105297465575018" rel="me nofollow">
+        <i class="fa fa-google-plus fa-2x"></i>
+        <span class="visually-hidden">Google+</span>
+      </a>
+      <a href="http://feeds.feedburner.com/redteamdesign" rel="me nofollow">
+        <i class="fa fa-rss fa-2x"></i>
+        <span class="visually-hidden">RSS</span>
+      </a>
+      <a href="http://dribbble.com/catalinred" rel="me nofollow">
+        <i class="fa fa-dribbble fa-2x"></i>
+        <span class="visually-hidden">Dribbble</span>
+      </a>
+      <a href="http://instagram.com/catalinred" rel="me nofollow">
+        <i class="fa fa-instagram fa-2x"></i>
+        <span class="visually-hidden">Instagram</span>
+      </a>
+      <a href="http://linkedin.com/in/catalinred" rel="me nofollow">
+        <i class="fa fa-linkedin fa-2x"></i>
+        <span class="visually-hidden">LinkedIn</span>
+      </a>
+      <hr>
+      © 2014 Catalin Rosu. Feel free to use the articles you may find here in your projects, with or without any attribution.
+    </div>
+  </footer>  
+
+  <script src="./CSS 3D folding list with social buttons_files/common.js"></script>
+
+  
+</body></html>

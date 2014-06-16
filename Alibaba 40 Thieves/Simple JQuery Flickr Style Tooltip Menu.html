@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<meta name="google-site-verification" content="zj-cqA-3pHuelMvPOQ4R_mx4guIipRxo7BzF5IdZq1o">
+	<title>Simple JQuery Flickr Style Tooltip Menu</title>
+    	<meta name="description" content=" » Simple JQuery Flickr Style Tooltip Menu  | blogging, design, tech, and web">
+	<meta charset="UTF-7">
+	<meta name="generator" content="WordPress">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="index" title="Superdit.com" href="http://superdit.com/">
+	<link rel="icon" href="http://superdit.com/wp-content/themes/superdit_wb_back/images/favicon.ico" type="image/x-icon">
+	<link rel="pingback" href="http://superdit.com/xmlrpc.php">
+	
+			<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" media="all" href="./Simple JQuery Flickr Style Tooltip Menu_files/style.css">
+    <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="http://superdit.com/wp-content/themes/superdit_wb_back/ie-only.css" />
+    <![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Superdit.com » Simple JQuery Flickr Style Tooltip Menu Comments Feed" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/feed/">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./Simple JQuery Flickr Style Tooltip Menu_files/pagenavi-css.css" type="text/css" media="all">
+<script src="./Simple JQuery Flickr Style Tooltip Menu_files/cb=gapi.loaded_1" async=""></script><script type="text/javascript" async="" src="./Simple JQuery Flickr Style Tooltip Menu_files/ga.js"></script><script type="text/javascript" async="" src="./Simple JQuery Flickr Style Tooltip Menu_files/buttons.js"></script><script src="./Simple JQuery Flickr Style Tooltip Menu_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery.js"></script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://superdit.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://superdit.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="WallpaperFX – Your One Stop Wallpaper Place" href="http://superdit.com/2011/01/25/wallpaperfx-your-one-stop-wallpaper-place/">
+<link rel="next" title="50 Free Circle Shape Textures" href="http://superdit.com/2011/01/27/50-free-circle-shape-textures/">
+<meta name="generator" content="WordPress 3.8.3">
+<link rel="shortlink" href="http://superdit.com/?p=4464">
+<script type="text/javascript">
+	window._wp_rp_static_base_url = 'http://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://superdit.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.3';
+	window._wp_rp_post_id = '4464';
+	window._wp_rp_num_rel_posts = '5';
+</script>
+
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[140,190] -->
+<meta name="description" content="In today post I try to create the flickr style tooltip drop down menu, I mean the drop down menu when you see in the detail image page, the challenge creating">
+
+<meta name="keywords" content="dropdown,flickr,menu,snippet,tooltip">
+
+<link rel="canonical" href="./Simple JQuery Flickr Style Tooltip Menu_files/Simple JQuery Flickr Style Tooltip Menu.html">
+<!-- /all in one seo pack -->
+<link rel="stylesheet" type="text/css" href="./Simple JQuery Flickr Style Tooltip Menu_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Simple JQuery Flickr Style Tooltip Menu_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+     <script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#nav-posts-recent").click(function() {
+                $(".widget-posts-nav").removeClass("posts-nav-clicked");
+                $(this).addClass("posts-nav-clicked");
+                $(".widget-post-common").hide();
+                $("#posts-recent").fadeIn("slow");
+                return false;
+            });
+            $("#nav-posts-random").click(function() {
+                $(".widget-posts-nav").removeClass("posts-nav-clicked");
+                $(this).addClass("posts-nav-clicked");
+                $(".widget-post-common").hide();
+                $("#posts-random").fadeIn("slow");
+                return false;
+            });
+            $("#nav-posts-popular").click(function() {
+                $(".widget-posts-nav").removeClass("posts-nav-clicked");
+                $(this).addClass("posts-nav-clicked");
+                $(".widget-post-common").hide();
+                $("#posts-popular").fadeIn("slow");
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body data-twttr-rendered="true">
+<div id="main">
+    <div id="header">
+        <div id="nav-categories">
+            <nav>
+                <ul>
+                    <li><a href="http://superdit.com/category/extjs">ExtJS</a></li>
+                    <li><a href="http://superdit.com/category/freebies">Freebies</a></li>
+                    <li><a href="http://superdit.com/category/inspiration">Inspiration</a></li>
+                    <li><a href="http://superdit.com/category/jquery">JQuery</a></li>
+                    <li><a href="http://superdit.com/category/wallpaper">Wallpaper</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="nav-logo">
+            <div id="logo-link" class="left">
+                <a href="http://superdit.com/">Superdit<span style="color:#084c8d;">.com</span></a>
+            </div>
+            <div id="fsearch" class="right">
+                <form action="http://superdit.com/" method="get" class="form-search">
+                    <input type="text" class="form-search-input" value="" name="s">
+                    <input type="submit" value="" class="form-search-submit">
+                </form>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+	<div class="container"><div id="content">
+			<div id="post-4464" class="single-post">
+			<article>
+				<h1 id="title"><a id="single-title" href="./Simple JQuery Flickr Style Tooltip Menu_files/Simple JQuery Flickr Style Tooltip Menu.html" title="Simple JQuery Flickr Style Tooltip Menu" rel="bookmark">Simple JQuery Flickr Style Tooltip Menu</a></h1>
+				<p class="dateauthor">
+                    January 26th, 2011 by <strong>aditia rahman</strong>
+                    /
+                    <a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#comments" title="Comment on Simple JQuery Flickr Style Tooltip Menu">8 Comments</a>                    &nbsp;
+                                    </p>
+<!--<div class="ads-under-post-title"><a href="http://www.tokokoo.com/" target="_blank" title="WordPress eCommerce Themes"><img src="http://superdit.com/ads/tokokoo_wordpress_ecommerce_themes.jpg"/></a></div>-->
+                <div id="share-top">
+
+
+
+                    <script src="./Simple JQuery Flickr Style Tooltip Menu_files/widgets.js" type="text/javascript"></script>
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Simple JQuery Flickr Style Tooltip Menu_files/tweet_button.1399599786.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 20px;"></iframe>
+                    &nbsp;
+                    <iframe src="./Simple JQuery Flickr Style Tooltip Menu_files/like.html" scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:45px; height:20px;  ">
+                    </iframe>
+                    &nbsp;
+                    <script src="./Simple JQuery Flickr Style Tooltip Menu_files/hostedbadge.php"></script>
+                    &nbsp;
+                    <script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/plusone.js" gapi_processed="true"></script>
+                    <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1399985643894" name="I0_1399985643894" src="./Simple JQuery Flickr Style Tooltip Menu_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+                </div>
+
+                <div class="post-content">
+					<p>In today post I try to create the <a title="Flickr" href="http://flickr.com/" target="_blank">flickr</a> style tooltip drop down menu, I mean the drop down menu when you see in the detail image page, the challenge creating this feature is the CSS, that contains gradient and manipulating box so that can look like a triangle in the tooltip menu after the main menu clicked.</p>
+<p style="text-align: center;"><a title="JQuery Flickr Tooltip Menu" href="./Simple JQuery Flickr Style Tooltip Menu_files/Simple JQuery Flickr Style Tooltip Menu.html" target="_blank"><img class="aligncenter size-full wp-image-4610" title="jquery flickr drop down menu" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery-flickr-menu.png" alt="jquery flickr drop down menu" width="334" height="164"></a></p>
+<p style="text-align: left;">I’m not creating exactly the same as flickr have, but just to exploring how to creating this cool flickr tooltip menu.</p>
+<p style="text-align: center;"><span id="more-4464"></span></p>
+<h6 style="text-align: center;"><a title="JQuery Flickr Tooltip Menu Demo" href="http://demo.superdit.com/jquery_flickr_tooltip_menu" target="_blank">View Demo</a> | <a title="JQuery Flickr Tooltip Menu Download Source" href="http://www.box.net/shared/pxtdg46dsg" target="_blank">Download Source</a></h6>
+<h6>The HTML Code</h6>
+<p>There are three main menu in this example, this three will be displayed after the page loaded, and the another three hidden menu inside a box, displayed after the second main menu clicked.</p>
+<div id="highlighter_244787" class="syntaxhighlighter  "><div class="bar    "><div class="toolbar"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_244787_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_244787" menu="false" src="http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">id</code><code class="plain">=</code><code class="string">"box"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"bt btleft"</code><code class="plain">&gt;&lt;</code><code class="keyword">span</code><code class="plain">&gt;&amp;#9734;&lt;/</code><code class="keyword">span</code><code class="plain">&gt; Favorite&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"bt btmiddle"</code><code class="plain">&gt;Actions &lt;</code><code class="keyword">span</code><code class="plain">&gt;&amp;#9660;&lt;/</code><code class="keyword">span</code><code class="plain">&gt;&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"bt btright"</code><code class="plain">&gt;Share this &lt;</code><code class="keyword">span</code><code class="plain">&gt;&amp;#9660;&lt;/</code><code class="keyword">span</code><code class="plain">&gt;&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">id</code><code class="plain">=</code><code class="string">"menu"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">id</code><code class="plain">=</code><code class="string">"triangle"</code><code class="plain">&gt;&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">id</code><code class="plain">=</code><code class="string">"tooltip_menu"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"menu_top"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">img</code> <code class="color1">src</code><code class="plain">=</code><code class="string">"img/1.png"</code><code class="plain">/&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">View all sizes</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">img</code> <code class="color1">src</code><code class="plain">=</code><code class="string">"img/2.png"</code><code class="plain">/&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">View slideshow</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"menu_bottom"</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">img</code> <code class="color1">src</code><code class="plain">=</code><code class="string">"img/3.png"</code><code class="plain">/&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">View Exif info</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div></div></div>
+<h6>The JQuery Code</h6>
+<p>The JQuery code is very simple just show and hide the hidden menu and change the class of the button that already clicked</p>
+<div id="highlighter_69910" class="syntaxhighlighter  "><div class="bar   "><div class="toolbar"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_69910_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_69910" menu="false" src="http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">$(</code><code class="keyword">function</code><code class="plain">() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">".btmiddle"</code><code class="plain">).click(</code><code class="keyword">function</code><code class="plain">() {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">($(</code><code class="string">".btmiddle"</code><code class="plain">).hasClass(</code><code class="string">"bt"</code><code class="plain">)) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">".btmiddle"</code><code class="plain">).removeClass(</code><code class="string">"bt"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">".btmiddle"</code><code class="plain">).addClass(</code><code class="string">"clicked"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">"#menu"</code><code class="plain">).show();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">".btmiddle"</code><code class="plain">).removeClass(</code><code class="string">"clicked"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">".btmiddle"</code><code class="plain">).addClass(</code><code class="string">"bt"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$(</code><code class="string">"#menu"</code><code class="plain">).hide();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">});</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">});</code></td></tr></tbody></table></div></div></div>
+<h6>The CSS Code</h6>
+<p>I try to separate the CSS code that I feel really important in this example, and on the bottom is the full code section</p>
+<p><strong>Creating the gradient</strong></p>
+<p>Firefox, Chrome and Safari really easy to creating gradient effect, currently opera cannot support this gradient effect, and for IE you need to declare the height of the element, otherwise it won’t work.</p>
+<div id="highlighter_360323" class="syntaxhighlighter  "><div class="bar   "><div class="toolbar"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_360323_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_360323" menu="false" src="http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">background</code><code class="plain">: -moz-linear-gradient(</code><code class="value">top</code><code class="plain">,&nbsp; </code><code class="value">#fff</code><code class="plain">,&nbsp; </code><code class="value">#f3f3f3</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">background</code><code class="plain">: -webkit-gradient(linear, </code><code class="value">left</code> <code class="value">top</code><code class="plain">, </code><code class="value">left</code> <code class="value">bottom</code><code class="plain">, from(</code><code class="value">#fff</code><code class="plain">), to(</code><code class="value">#f3f3f3</code><code class="plain">));</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="keyword">height</code><code class="plain">: </code><code class="value">20px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="comments">/* For Internet Explorer 5.5 - 7 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=</code><code class="value">#ffffff</code><code class="plain">, endColorstr=</code><code class="value">#f3f3f3</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="comments">/* For Internet Explorer 8 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">-ms-filter: </code><code class="string">"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f3f3f3)"</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+<p><strong>Tricking the triangle visiblity</strong></p>
+<p>Yes, yes, yes basically this is not the triangle, these are two div with <em>z-index</em> manipulation, I’m just using CSS rotate feature<strong> </strong>to make look like a triangle, and like always this not working on the IE (just wait for the stable IE 9)</p>
+<p style="text-align: center;"><strong><img class="aligncenter size-full wp-image-4617" title="jquery flickr menu triangle" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery-flickr-menu-triangle.png" alt="jquery flickr menu triangle" width="235" height="30"></strong></p>
+<p style="text-align: left;">But you can see on the image below, the disadvantage of using this is trick</p>
+<p style="text-align: center;"><strong><img class="aligncenter size-full wp-image-4627" title="jquery flickr menu thumb" src="./Simple JQuery Flickr Style Tooltip Menu_files/jquery-flickr-menu2.png" alt="jquery flickr menu thumb" width="235" height="50"><br>
+</strong></p>
+<div id="highlighter_165949" class="syntaxhighlighter  "><div class="bar      "><div class="toolbar"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_165949_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_165949" menu="false" src="http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">#triangle {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">1px</code> <code class="value">solid</code> <code class="value">#d9d9d9</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border-width</code><code class="plain">: </code><code class="value">2px</code> <code class="value">0</code> <code class="value">0</code> <code class="value">2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">:</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">height</code><code class="plain">:</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* for firefox, safari, chrome, etc. */</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-transform: rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-transform: rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-o-transform:rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">z-index</code><code class="plain">: </code><code class="value">1</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">position</code><code class="plain">: </code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">bottom</code><code class="plain">: </code><code class="value">-4px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin-left</code><code class="plain">: </code><code class="value">25px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#fff</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">#tooltip_menu {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#fff</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">: </code><code class="value">220px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">padding</code><code class="plain">: </code><code class="value">2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p><strong>The Full CSS Code</strong></p>
+<div id="highlighter_309862" class="syntaxhighlighter  "><div class="bar                                                                                     show"><div class="toolbar"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_309862_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_309862" menu="false" src="http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>001</code></td><td class="content"><code class="plain">* {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>002</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-family</code><code class="plain">: </code><code class="color1">Arial</code><code class="plain">, </code><code class="string">"Free Sans"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>003</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>004</code></td><td class="content"><code class="plain">#box {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>005</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin-top</code><code class="plain">: </code><code class="value">20px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>006</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>007</code></td><td class="content"><code class="plain">.bt, .clicked {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>008</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">height</code><code class="plain">: </code><code class="value">20px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>009</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">: </code><code class="value">#666</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>010</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-size</code><code class="plain">: </code><code class="value">13px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>011</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">padding</code><code class="plain">: </code><code class="value">4px</code> <code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>012</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">text-decoration</code><code class="plain">: </code><code class="value">none</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>013</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#f9f9f9</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>014</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>015</code></td><td class="content"><code class="plain">#box .bt {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>016</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -moz-linear-gradient(</code><code class="value">top</code><code class="plain">,&nbsp; </code><code class="value">#fff</code><code class="plain">,&nbsp; </code><code class="value">#f3f3f3</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>017</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -webkit-gradient(linear, </code><code class="value">left</code> <code class="value">top</code><code class="plain">, </code><code class="value">left</code> <code class="value">bottom</code><code class="plain">, from(</code><code class="value">#fff</code><code class="plain">), to(</code><code class="value">#f3f3f3</code><code class="plain">));</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>018</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>019</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 5.5 - 7 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>020</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=</code><code class="value">#ffffff</code><code class="plain">, endColorstr=</code><code class="value">#f3f3f3</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>021</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 8 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>022</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-ms-filter: </code><code class="string">"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f3f3f3)"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>023</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>024</code></td><td class="content"><code class="plain">#box .bt:hover {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>025</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#f3f3f3</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>026</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -moz-linear-gradient(</code><code class="value">top</code><code class="plain">,&nbsp; </code><code class="value">#fff</code><code class="plain">,&nbsp; </code><code class="value">#e9e9e9</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>027</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -webkit-gradient(linear, </code><code class="value">left</code> <code class="value">top</code><code class="plain">, </code><code class="value">left</code> <code class="value">bottom</code><code class="plain">, from(</code><code class="value">#fff</code><code class="plain">), to(</code><code class="value">#e9e9e9</code><code class="plain">));</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>028</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>029</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 5.5 - 7 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>030</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=</code><code class="value">#ffffff</code><code class="plain">, endColorstr=</code><code class="value">#e9e9e9</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>031</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 8 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>032</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-ms-filter: </code><code class="string">"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#e9e9e9)"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>033</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>034</code></td><td class="content"><code class="plain">#box .bt:active, .clicked {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>035</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#e9e9e9</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>036</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -moz-linear-gradient(</code><code class="value">top</code><code class="plain">,&nbsp; </code><code class="value">#e9e9e9</code><code class="plain">,&nbsp; </code><code class="value">#fff</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>037</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: -webkit-gradient(linear, </code><code class="value">left</code> <code class="value">top</code><code class="plain">, </code><code class="value">left</code> <code class="value">bottom</code><code class="plain">, from(</code><code class="value">#e9e9e9</code><code class="plain">), to(</code><code class="value">#fff</code><code class="plain">));</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>038</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>039</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 5.5 - 7 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>040</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=</code><code class="value">#e9e9e9</code><code class="plain">, endColorstr=</code><code class="value">#ffffff</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>041</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* For Internet Explorer 8 */</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>042</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-ms-filter: </code><code class="string">"progid:DXImageTransform.Microsoft.gradient(startColorstr=#e9e9e9, endColorstr=#ffffff)"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>043</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>044</code></td><td class="content"><code class="plain">.btleft {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>045</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">1px</code> <code class="value">solid</code> <code class="value">#e3e3e3</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>046</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: .</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>047</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: .</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>048</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: .</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>049</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>050</code></td><td class="content"><code class="plain">.btleft span {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>051</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-size</code><code class="plain">: </code><code class="value">15px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>052</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>053</code></td><td class="content"><code class="plain">.btmiddle {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>054</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">1px</code> <code class="value">solid</code> <code class="value">#e3e3e3</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>055</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border-width</code><code class="plain">: </code><code class="value">1px</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>056</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin</code><code class="plain">: </code><code class="value">0</code> <code class="value">-4px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>057</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>058</code></td><td class="content"><code class="plain">.btright {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>059</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">1px</code> <code class="value">solid</code> <code class="value">#e3e3e3</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>060</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: </code><code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>061</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: </code><code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>062</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: </code><code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>063</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>064</code></td><td class="content"><code class="plain">.btmiddle span, .btright span {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>065</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-size</code><code class="plain">: </code><code class="value">9px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>066</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">position</code><code class="plain">: </code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>067</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">top</code><code class="plain">: </code><code class="value">-2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>068</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>069</code></td><td class="content"><code class="plain">#menu {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>070</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin</code><code class="plain">: </code><code class="value">10px</code> <code class="value">0</code> <code class="value">0</code> <code class="value">100px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>071</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">display</code><code class="plain">: </code><code class="value">none</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>072</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>073</code></td><td class="content"><code class="plain">#triangle {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>074</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">1px</code> <code class="value">solid</code> <code class="value">#d9d9d9</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>075</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border-width</code><code class="plain">: </code><code class="value">2px</code> <code class="value">0</code> <code class="value">0</code> <code class="value">2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>076</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">:</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>077</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">height</code><code class="plain">:</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>078</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">/* for firefox, safari, chrome, etc. */</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>079</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-transform: rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>080</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-transform: rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>081</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-o-transform:rotate(</code><code class="value">45</code><code class="plain">deg);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>082</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">z-index</code><code class="plain">: </code><code class="value">1</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>083</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">position</code><code class="plain">: </code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>084</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">bottom</code><code class="plain">: </code><code class="value">-4px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>085</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin-left</code><code class="plain">: </code><code class="value">25px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>086</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#fff</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>087</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>088</code></td><td class="content"><code class="plain">#tooltip_menu {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>089</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#fff</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>090</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>091</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>092</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: .</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>093</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">: </code><code class="value">220px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>094</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>095</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>096</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">box-shadow: </code><code class="value">0px</code> <code class="value">0px</code> <code class="value">3px</code> <code class="plain">rgba(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,.</code><code class="value">5</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>097</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">padding</code><code class="plain">: </code><code class="value">2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>098</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>099</code></td><td class="content"><code class="plain">#tooltip_menu a {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>100</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">z-index</code><code class="plain">: </code><code class="value">2</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>101</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">padding</code><code class="plain">: </code><code class="value">0</code> <code class="value">0</code> <code class="value">7px</code> <code class="value">2px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>102</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">display</code><code class="plain">: </code><code class="value">block</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>103</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">text-decoration</code><code class="plain">: </code><code class="value">none</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>104</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">: </code><code class="value">#0066cc</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>105</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-size</code><code class="plain">: </code><code class="value">13px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>106</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>107</code></td><td class="content"><code class="plain">#tooltip_menu a:hover {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>108</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background</code><code class="plain">: </code><code class="value">#0066cc</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>109</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">: </code><code class="value">#fff</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>110</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>111</code></td><td class="content"><code class="plain">#tooltip_menu a img {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>112</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">position</code><code class="plain">: </code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>113</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">top</code><code class="plain">: </code><code class="value">5px</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>114</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>115</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>116</code></td><td class="content"><code class="plain">.menu_top {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>117</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: .</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>118</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: .</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>119</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: .</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code> <code class="value">0</code> <code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>120</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>121</code></td><td class="content"><code class="plain">.menu_bottom {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>122</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-webkit-border-radius: </code><code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>123</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">-moz-border-radius: </code><code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>124</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">border-radius: </code><code class="value">0</code> <code class="value">0</code> <code class="plain">.</code><code class="value">5em</code> <code class="plain">.</code><code class="value">5em</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>125</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<h6 style="text-align: center;"><a title="JQuery Flickr Tooltip Menu Demo" href="http://demo.superdit.com/jquery_flickr_tooltip_menu" target="_blank">View Demo</a> | <a title="JQuery Flickr Tooltip Menu Download Source" href="http://www.box.net/shared/pxtdg46dsg" target="_blank">Download Source</a></h6>
+									</div>
+			<article>
+
+			<div class="meta-container">
+                <div class="left">
+                    <div class="post-meta-categories cat-post">
+                        In: &nbsp;<a href="http://superdit.com/category/css/" title="View all posts in CSS" rel="category tag">CSS</a> / <a href="http://superdit.com/category/jquery/" title="View all posts in JQuery" rel="category tag">JQuery</a>                    </div>
+                    <div class="post-meta-categories">
+                        Tags: &nbsp;<a href="http://superdit.com/tag/dropdown/" rel="tag">dropdown</a>&nbsp;/&nbsp;<a href="http://superdit.com/tag/flickr/" rel="tag">flickr</a>&nbsp;/&nbsp;<a href="http://superdit.com/tag/menu/" rel="tag">menu</a>&nbsp;/&nbsp;<a href="http://superdit.com/tag/snippet/" rel="tag">snippet</a>&nbsp;/&nbsp;<a href="http://superdit.com/tag/tooltip/" rel="tag">tooltip</a>                     </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+		</article></article></div>
+
+        <div id="share-bottom">
+            <div id="share-icon">
+                <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Simple JQuery Flickr Style Tooltip Menu_files/tweet_button.1399599786(1).html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 20px;"></iframe>
+                &nbsp;
+                <iframe src="./Simple JQuery Flickr Style Tooltip Menu_files/like(1).html" scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:48px; height:21px;  ">
+                </iframe>
+                &nbsp;
+                <script src="./Simple JQuery Flickr Style Tooltip Menu_files/hostedbadge.php"></script>
+                &nbsp;
+                <div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I1_1399985643994" name="I1_1399985643994" src="./Simple JQuery Flickr Style Tooltip Menu_files/fastbutton(1).html" data-gapiattached="true" title="+1"></iframe></div>
+                &nbsp;
+                <a style="position:relative;top:-3px;" href="http://www.reddit.com/submit" onclick="window.location = &#39;http://www.reddit.com/submit?url=&#39; + encodeURIComponent(window.location); return false"> <img src="./Simple JQuery Flickr Style Tooltip Menu_files/spreddit7.gif" alt="submit to reddit" border="0"> </a>
+                <script type="text/javascript">
+                (function() {
+                var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'http://widgets.digg.com/buttons.js';
+                s1.parentNode.insertBefore(s, s1);
+                })();
+                </script>
+                <a class="DiggThisButton DiggCompact"></a>
+                
+                <a href="http://www.delicious.com/save" style="position:relative;top:-3px;" onclick="window.open(&#39;http://www.delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=&#39;+encodeURIComponent(&#39;http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/&#39;)+&#39;&amp;title=&#39;+encodeURIComponent(&#39;Simple JQuery Flickr Style Tooltip Menu&#39;),&#39;delicious&#39;, &#39;toolbar=no,width=550,height=550&#39;); return false;">
+                    <img src="./Simple JQuery Flickr Style Tooltip Menu_files/delicious.small.gif" height="15" width="15" title="Bookmark on Delicious" alt="Delicious">
+                </a>
+            </div>
+            <div id="div-related-post">
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Others You May Like</h3><ul class="related_post wp_rp" style="visibility: visible"><li><a href="http://superdit.com/2011/02/25/flickr-style-loading-animation-using-jquery/" class="wp_rp_title">Flickr Style Loading Animation Using JQuery</a></li><li><a href="http://superdit.com/2011/03/22/61-big-drop-down-menu-examples/" class="wp_rp_title">61 Big Drop Down Menu Examples</a></li><li><a href="http://superdit.com/2011/01/20/jquery-tooltip-plugins-and-tutorial-collection/" class="wp_rp_title">Jquery Tooltip Plugins and Tutorial Collection</a></li><li><a href="http://superdit.com/2010/10/05/extjs-custom-right-click-menu-in-dataview/" class="wp_rp_title">ExtJS: Custom Right Click Menu in Dataview</a></li><li><a href="http://superdit.com/2011/02/03/facebook-style-loading-bar-using-css-and-jquery/" class="wp_rp_title">Facebook Style Loading Bar Using CSS and JQuery</a></li></ul></div></div>
+</div>
+
+        </div>    
+
+		
+<!-- You can start editing here. -->
+
+<div id="comments">
+	<h3 id="comments-header">
+		<span class="left">8 Comments</span>
+		<span class="right"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#respond">Leave a Comment</a></span>
+        <span class="right"><a href="http://feeds.feedburner.com/Superdit">Subscribe RSS</a></span>
+		<div class="clear"></div>
+	</h3>
+
+	<div class="comment-paging">
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="clear"></div>
+	</div>
+
+	<ul class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-11385">
+				<div id="div-comment-11385" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/21b3eaf28789a5ee28e3a0ba4f031a0b" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://ajax.wespai.com/" rel="external nofollow" class="url">wespai</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-11385">
+			February 8, 2011 at 4:14 pm</a>		</div>
+
+		<p>Good plugin I love it!!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=11385#respond" onclick="return addComment.moveForm(&quot;div-comment-11385&quot;, &quot;11385&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15627">
+				<div id="div-comment-15627" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/e028eb98ecf9644a451894764a4e7f15" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://debt.atspace.cc/" rel="external nofollow" class="url">Ken Hoff</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-15627">
+			March 24, 2011 at 1:31 pm</a>		</div>
+
+		<p>Nice Menu Thanks</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=15627#respond" onclick="return addComment.moveForm(&quot;div-comment-15627&quot;, &quot;15627&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-19116">
+				<div id="div-comment-19116" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/476d0a4fb67770622b9f6582ea174976" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://www.think360studio.com/" rel="external nofollow" class="url">Think360 Studio - Web Design Company India</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-19116">
+			May 9, 2011 at 6:49 pm</a>		</div>
+
+		<p>you do a great job aditia rahman,<br>
+i really want you to keep up the good work..<br>
+cheers</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=19116#respond" onclick="return addComment.moveForm(&quot;div-comment-19116&quot;, &quot;19116&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-22462">
+				<div id="div-comment-22462" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/21a9d647be9681fdf3744854728348f7" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://acrookston.com/" rel="external nofollow" class="url">Andrew Crookston</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-22462">
+			June 22, 2011 at 5:07 am</a>		</div>
+
+		<p>Nice write-up.</p>
+<p>I have two suggestions for improvement:</p>
+<p>1. to the #tooltip_menu a css I would add:<br>
+position: relative;<br>
+z-index: 100;<br>
+To make it appear above the #triangle thus removing your “bug”.</p>
+<p>2. Modify the click action to:<br>
+$(“.btmiddle”).click(function(event) {<br>
+  e.preventDefault();<br>
+  … other code …<br>
+}<br>
+This would stop the event from firing and removing the # from the url. Doing this removes the need to click the Back button twice and you could put “real” urls in the <a>tag for non-javascript browsers to have the action button point to something useful!<br>
+I’m wondering how this would look in IE? There is a lot of Moz/Webkit/Opera specific css. Have you tried it in IE?</a></p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=22462#respond" onclick="return addComment.moveForm(&quot;div-comment-22462&quot;, &quot;22462&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-22463">
+				<div id="div-comment-22463" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/21a9d647be9681fdf3744854728348f7" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://acrookston.com/" rel="external nofollow" class="url">Andrew Crookston</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-22463">
+			June 22, 2011 at 5:08 am</a>		</div>
+
+		<p>That should say the &lt;a&gt;. Hopefully html entities work here. <img src="./Simple JQuery Flickr Style Tooltip Menu_files/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=22463#respond" onclick="return addComment.moveForm(&quot;div-comment-22463&quot;, &quot;22463&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-59019">
+				<div id="div-comment-59019" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/038f780bae7fdb7748ac8ad4ef00a3d2" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://www.alovilla.com/" rel="external nofollow" class="url">alovilla</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-59019">
+			November 24, 2011 at 5:29 am</a>		</div>
+
+		<p>congratulations. nice job</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=59019#respond" onclick="return addComment.moveForm(&quot;div-comment-59019&quot;, &quot;59019&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-132444">
+				<div id="div-comment-132444" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/225b274798f93a6b9bcf3b7d3396686a" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn"><a href="http://www.sky54.net/" rel="external nofollow" class="url">LO</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-132444">
+			July 20, 2012 at 3:27 pm</a>		</div>
+
+		<p>IE7 doesn’t display menu correctly!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=132444#respond" onclick="return addComment.moveForm(&quot;div-comment-132444&quot;, &quot;132444&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-138904">
+				<div id="div-comment-138904" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./Simple JQuery Flickr Style Tooltip Menu_files/0b1b315c481a721c8151ad6fc5cf1582" class="avatar avatar-48 photo" height="48" width="48">			<cite class="fn">JtSnow</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/comment-page-1/#comment-138904">
+			August 9, 2012 at 3:21 am</a>		</div>
+
+		<p>How to add more items</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/?replytocom=138904#respond" onclick="return addComment.moveForm(&quot;div-comment-138904&quot;, &quot;138904&quot;, &quot;respond&quot;, &quot;4464&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+	</ul>
+
+	<div class="comment-paging">
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="clear"></div>
+	</div>
+ 
+
+
+<div id="respond">
+    <h3>Leave a Comment</h3>
+    <div class="cancel-comment-reply">
+        <a rel="nofollow" id="cancel-comment-reply-link" href="http://superdit.com/2011/01/26/simple-jquery-flickr-style-tooltip-menu/#respond" style="display:none;">Click here to cancel reply.</a>    </div>
+
+    
+    <form action="http://superdit.com/wp-comments-post.php" method="post" id="commentform">
+
+        
+        <p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+            &nbsp;<label for="author">Name (required)</label></p>
+
+        <p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+            &nbsp;<label for="email">Mail (will not be published) (required)</label></p>
+
+        <p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+            &nbsp;<label for="url">Website</label></p>
+
+        
+        <!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+        <p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
+
+        <p><input name="submit" class="button large blue" type="submit" id="submit" tabindex="5" value="Submit Comment">
+        <input type="hidden" name="comment_post_ID" value="4464" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+        </p>
+        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="10fc9c42cd"></p>
+    </form>
+
+</div>
+        </div>
+
+	</div>
+<div id="sidebar">
+
+    <div style="margin-bottom:15px;">
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2612201447082363";
+/* Superdit.com / 300 x 250 */
+google_ad_slot = "1062144013";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+
+    <div class="widget-sidebar widget-posts">
+        <div class="widget-container-nav-posts">
+            <span class="widget-social-title">Subscribe &amp; Follow</span>
+            <div id="social-icons">
+                <a href="http://twitter.com/superdit"><img src="./Simple JQuery Flickr Style Tooltip Menu_files/twitter.png" title="Follow on Twitter" alt=""></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="http://feeds.feedburner.com/Superdit"><img src="./Simple JQuery Flickr Style Tooltip Menu_files/rss.png" title="Subscribe RSS Feedburner" alt=""></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="http://feedburner.google.com/fb/a/mailverify?uri=Superdit&loc=en_US"><img src="./Simple JQuery Flickr Style Tooltip Menu_files/mail.png" title="Sucscribe via Email" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="widget-sidebar widget-posts">
+        <div class="widget-container-nav-posts">
+            <a href="" id="nav-posts-recent" class="widget-posts-nav posts-link posts-nav-clicked">Recent</a>
+            <a href="" id="nav-posts-random" class="widget-posts-nav posts-link">Random</a>
+            <a href="" id="nav-posts-popular" class="widget-posts-nav posts-link">Popular</a>
+        </div>
+        <ul>
+        <h3>Posts</h3>
+            <div id="posts-recent" class="widget-post-common">
+                                    <li><a href="http://superdit.com/2013/01/10/showcase-40-ecommerce-websites-using-magento/">Showcase: 40 Ecommerce Websites Using Magento</a></li>
+                                    <li><a href="http://superdit.com/2013/01/09/10-blogs-to-learn-wordpress/">10 Blogs To Learn WordPress</a></li>
+                                    <li><a href="http://superdit.com/2013/01/04/the-importance-of-application-mockup-in-project/">The Importance of Application Mockup In Project</a></li>
+                                    <li><a href="http://superdit.com/2013/01/03/experiment-online-writable-book-using-jquery-plugins/">Experiment Online Writable Book Using Jquery Plugins</a></li>
+                                    <li><a href="http://superdit.com/2012/12/31/35-beautiful-sunset-wallpaper-pack/">35 Beautiful Sunset Wallpaper Pack</a></li>
+                                    <li><a href="http://superdit.com/2012/12/30/10-free-jquery-fullscreen-slideshow-plugins/">10 Free JQuery FullScreen Slideshow Plugins</a></li>
+                                    <li><a href="http://superdit.com/2012/12/27/jquery-image-animation-trick-with-mouse-position/">JQuery Image Animation Trick With Mouse Position</a></li>
+                                    <li><a href="http://superdit.com/2012/12/15/useful-sencha-touch-ux-plugins/">Useful Sencha Touch Ux Plugins</a></li>
+                            </div>
+
+            <div id="posts-random" class="widget-post-common">
+                                    <li><a href="http://superdit.com/2011/09/29/55-example-purple-business-cards-design/">55 Example Purple Business Cards Design</a></li>
+                                    <li><a href="http://superdit.com/2012/08/23/50-free-php-cms-you-might-never-heard-before/">50+ Free PHP CMS You Might Never Heard Before</a></li>
+                                    <li><a href="http://superdit.com/2011/08/20/create-image-gallery-using-sencha-touch/">Create Image Gallery Using Sencha Touch</a></li>
+                                    <li><a href="http://superdit.com/2010/09/11/dynamic-window-in-extjs/">Dynamic Window in ExtJS</a></li>
+                                    <li><a href="http://superdit.com/2010/02/23/beaatifull-open-suse-wallpaper/">Beautifull Open Suse Wallpaper</a></li>
+                                    <li><a href="http://superdit.com/2011/05/23/extjs-load-grid-from-another-grid/">ExtJS: Load Grid From Another Grid</a></li>
+                                    <li><a href="http://superdit.com/2011/09/24/create-simple-wordpress-mobile-theme-using-sencha-touch-part-1/">Create Simple WordPress Mobile Theme Using Sencha Touch – Part 1</a></li>
+                                    <li><a href="http://superdit.com/2011/04/29/create-simple-one-page-profile-with-jquery/">Create Simple One Page Profile With JQuery</a></li>
+                            </div>
+
+            <div id="posts-popular" class="widget-post-common">
+                                    <li><a href="http://superdit.com/2010/06/02/creating-register-and-login-form-using-extjs-and-codeigniter/">Creating Register and Login Form Using EXTJS and CodeIgniter</a></li>
+                                    <li><a href="http://superdit.com/2011/02/09/jquery-memory-game/">Jquery Memory Game</a></li>
+                                    <li><a href="http://superdit.com/2011/04/13/34-free-clean-html-css-website-layout-templates/">34 Free Clean HTML CSS Website Layout Templates</a></li>
+                                    <li><a href="http://superdit.com/2011/06/11/hover-image-zoom-with-jquery/">Hover Image Zoom With JQuery</a></li>
+                                    <li><a href="http://superdit.com/2009/07/22/big-list-of-php-framework/">Big List of PHP Framework</a></li>
+                                    <li><a href="http://superdit.com/2011/01/07/simple-guest-book-with-sencha-touch-and-php/">Simple Guest Book With Sencha Touch and PHP</a></li>
+                                    <li><a href="http://superdit.com/2011/04/02/drag-drop-shopping-cart-using-jquery/">Drag Drop Shopping Cart Using JQuery</a></li>
+                                    <li><a href="http://superdit.com/2010/07/13/crud-using-codeigniter-and-extjs-grid-part-3/">CRUD using CodeIgniter and EXTJS Grid Part 3</a></li>
+                            </div>
+        </ul>
+    </div>
+
+<!--
+    <div class="widget-sidebar widget-posts">
+        <div class="widget-container-nav-posts">
+            <span class="widget-social-title">Partner Links</span>
+        </div>
+		<ul>
+		<div class="widget-post-common">
+			<li><a href="http://www.rushprintingservices.com/" target="_blank">Print Services</a></li>
+		</div>
+		</ul>
+    </div> -->
+
+<div style="margin-bottom:15px;">
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2612201447082363";
+/* Superdit.com / 300 x 250 / 2 */
+google_ad_slot = "8574688631";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div> 
+
+    <div>
+        <div class="widget-area widget-sidebar alignleft" style="width:120px;">
+            <ul>
+                <h4>Categories</h4>
+                <ul>
+                	<li class="cat-item cat-item-85"><a href="http://superdit.com/category/blog/" title="View all posts filed under Blog">Blog</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://superdit.com/category/cms/" title="View all posts filed under CMS">CMS</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://superdit.com/category/codeigniter/" title="View all posts filed under Codeigniter">Codeigniter</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://superdit.com/category/concept/" title="View all posts filed under Concept">Concept</a>
+</li>
+	<li class="cat-item cat-item-161"><a href="http://superdit.com/category/css/" title="View all posts filed under CSS">CSS</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://superdit.com/category/design/" title="View all posts filed under Design">Design</a>
+</li>
+	<li class="cat-item cat-item-304"><a href="http://superdit.com/category/development/" title="View all posts filed under Development">Development</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://superdit.com/category/extjs/" title="View all posts filed under Extjs">Extjs</a>
+</li>
+	<li class="cat-item cat-item-131"><a href="http://superdit.com/category/freebies/" title="View all posts filed under Freebies">Freebies</a>
+</li>
+	<li class="cat-item cat-item-104"><a href="http://superdit.com/category/html-5/" title="View all posts filed under HTML 5">HTML 5</a>
+</li>
+	<li class="cat-item cat-item-81"><a href="http://superdit.com/category/icons/" title="View all posts filed under icons">icons</a>
+</li>
+	<li class="cat-item cat-item-117"><a href="http://superdit.com/category/inspiration/" title="View all posts filed under Inspiration">Inspiration</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://superdit.com/category/javascript/" title="View all posts filed under Javascript">Javascript</a>
+</li>
+	<li class="cat-item cat-item-62"><a href="http://superdit.com/category/jquery/" title="View all posts filed under JQuery">JQuery</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://superdit.com/category/photography/" title="View all posts filed under Photography">Photography</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://superdit.com/category/php/" title="View all posts filed under PHP">PHP</a>
+</li>
+	<li class="cat-item cat-item-116"><a href="http://superdit.com/category/sencha-touch/" title="View all posts filed under Sencha Touch">Sencha Touch</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="http://superdit.com/category/showcase/" title="View all posts filed under Showcase">Showcase</a>
+</li>
+	<li class="cat-item cat-item-93"><a href="http://superdit.com/category/tools/" title="View all posts filed under Tools">Tools</a>
+</li>
+	<li class="cat-item cat-item-244"><a href="http://superdit.com/category/tutorial/" title="View all posts filed under Tutorial">Tutorial</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://superdit.com/category/wallpaper/" title="View all posts filed under Wallpaper">Wallpaper</a>
+</li>
+	<li class="cat-item cat-item-151"><a href="http://superdit.com/category/websites/" title="View all posts filed under Websites">Websites</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://superdit.com/category/wordpress/" title="View all posts filed under Wordpress">Wordpress</a>
+</li>
+ 
+                </ul>
+            </ul>
+        </div>
+        <div class="alignright">
+            <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-2612201447082363";
+        /* Superdit.com / Skyscraper */
+        google_ad_slot = "0207025590";
+        google_ad_width = 160;
+        google_ad_height = 600;
+        //-->
+        </script>
+        <script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/show_ads.js">
+        </script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div><!--sidebar-->	<div class="clear"></div>
+	</div>
+	<div id="footer"><footer>
+		<div class="container">
+			<div id="footer-content">
+				<div class="nav left"><nav>
+					<div class="menu"><ul><li class="page_item page-item-2"><a href="http://superdit.com/about/">About</a></li><li class="page_item page-item-8286"><a href="http://superdit.com/archive/">Archive</a></li><li class="page_item page-item-1748"><a href="http://superdit.com/contact/">Contact</a></li></ul></div>
+				</nav></div><!--#nav-footer-->
+                <div id="footer-desc" class="right">
+                    © 2014 <a href="http://superdit.com/" title="blogging, design, tech, and web">Superdit.com</a> designed by <a href="http://superdit.com/">Aditia Rahman</a>
+                </div>
+
+<a href="" style="color:#333333; font-size: 5px;">
+</a>
+                <div class="clear"></div>
+			</div>
+		</div>
+	</footer></div>
+    <script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/shCore.js"></script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/shBrushXml.js"></script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/shBrushJScript.js"></script>
+<script type="text/javascript" src="./Simple JQuery Flickr Style Tooltip Menu_files/shBrushCss.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeDefault.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://superdit.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = true;
+	SyntaxHighlighter.all();
+</script>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18351589-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+<iframe name="oauth2relay567315024" id="oauth2relay567315024" src="./Simple JQuery Flickr Style Tooltip Menu_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

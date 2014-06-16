@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<!-- saved from url=(0339)http://disqus.com/embed/comments/?base=default&disqus_version=fac6cc9e&f=redteamdesign&t_u=http%3A%2F%2Fwww.red-team-design.com%2Fbeginner-javascript-gotchas&t_e=A%20beginner%27s%20list%20of%20JavaScript%20gotchas&t_d=A%20beginner%27s%20list%20of%20JavaScript%20gotchas&t_t=A%20beginner%27s%20list%20of%20JavaScript%20gotchas&s_o=default#2 -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+        
+    </style>
+
+<link rel="stylesheet" href="http://a.disquscdn.com/next/styles/lounge.076d091f1ae2decc432a3d910a22a78f.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common/config" src="config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common.bundle" src="common.73e80c762f9d9219b347aed46f520b04.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge.bundle" src="lounge.68e26ab337a9ebb400e5ef9663d45786.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://www.google-analytics.com/ga.js" src="ga.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://b.scorecardresearch.com/beacon.js" src="beacon.js"></script><style id="css_1399988182002"></style><!--<base target="_parent" href="http://red-team-design.com/beginner-javascript-gotchas/">--><base href="." target="_parent"><link rel="stylesheet" href="http://a.disquscdn.com/next/styles/discovery.ae5ffdbdfc56d9b80578f94ca774aa2f.css"><script src="event.js" async="" charset="UTF-8"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//a.disquscdn.com/next/discovery.adc65004b5de614f9cd036495ba1ca0a.js" src="discovery.adc65004b5de614f9cd036495ba1ca0a.js"></script><script src="event(1).js" async="" charset="UTF-8"></script><script src="event(2).js" async="" charset="UTF-8"></script></head>
+<body style="">
+    
+    <!--[if lte IE 8]>
+<script src="//a.disquscdn.com/1399942257/build/vendor/ie8.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="//a.disquscdn.com/1399942257/build/vendor/ie9.js"></script>
+<![endif]-->
+
+    
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/fac6cc9e"
+}</script>
+
+    
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"isReadOnly":null,"audienceSyncVerified":false,"canReply":true,"notificationCount":null,"mustVerifyEmail":false},"features":{},"forum":{"name":"RedTeamDesign","founder":"95835068","settings":{"canEnableSponsoredComments":false,"hasCustomAvatar":false,"allowAnonPost":true,"allowMedia":false,"moderatorText":"","typeface":"auto","promotedDiscoveryEnabled":false,"discoveryMax":false,"ssoRequired":false,"discoveryLocked":false,"audienceSyncEnabled":false,"organicDiscoveryEnabled":true,"backplaneEnabled":false,"discoveryThumbnailsEnabled":false,"colorScheme":"auto","sponsoredCommentsEnabled":false,"linkAffiliationEnabled":false},"url":"","favicon":{"permalink":"http://disqus.com/api/forums/favicons/redteamdesign.jpg","cache":"//a.disquscdn.com/1399942257/images/favicon-default.png"},"language":"en","avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/redteamdesign.jpg?size=32","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/redteamdesign.jpg?size=92","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"}},"pk":2859462,"id":"redteamdesign"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":9,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1395454322,"posts":[{"isFlagged":false,"forum":"redteamdesign","parent":null,"author":{"username":"disqus_0SbWMNIOw4","about":"","name":"Ryan Johnson","url":"","isAnonymous":false,"rep":1.232862,"profileUrl":"http://disqus.com/disqus_0SbWMNIOw4/","reputation":1.232862,"location":"San Antonio, TX","isPrivate":false,"isPrimary":true,"joinedAt":"2014-02-28T19:10:47","id":"96798884","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar32.jpg?1395037900"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar92.jpg?1395037900","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar92.jpg?1395037900"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Firefox doesn't have console.table(), by the way.  At least not in Firefox 27.0.1","createdAt":"2014-02-28T19:11:05","id":"1264782749","thread":"2299964359","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Firefox doesn't have console.table(), by the way.  At least not in Firefox 27.0.1\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":1264782749,"author":{"username":"catalinred","about":"","name":"catalinred","url":"","isAnonymous":false,"rep":1.240654,"profileUrl":"http://disqus.com/catalinred/","reputation":1.240654,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2014-02-21T20:23:58","id":"95835068","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/catalinred.jpg","cache":"//a.disquscdn.com/uploads/users/9583/5068/avatar32.jpg?1398155565"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/catalinred.jpg","cache":"//a.disquscdn.com/uploads/users/9583/5068/avatar92.jpg?1398155565","large":{"permalink":"http://disqus.com/api/users/avatars/catalinred.jpg","cache":"//a.disquscdn.com/uploads/users/9583/5068/avatar92.jpg?1398155565"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Ryan, but that's not true. It works perfectly, it just don't display \"index\" column as Chrome does.","createdAt":"2014-02-28T19:18:28","id":"1264792857","thread":"2299964359","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Ryan, but that's not true. It works perfectly, it just don't display \"index\" column as Chrome does.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":1264792857,"author":{"username":"disqus_0SbWMNIOw4","about":"","name":"Ryan Johnson","url":"","isAnonymous":false,"rep":1.232862,"profileUrl":"http://disqus.com/disqus_0SbWMNIOw4/","reputation":1.232862,"location":"San Antonio, TX","isPrivate":false,"isPrimary":true,"joinedAt":"2014-02-28T19:10:47","id":"96798884","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar32.jpg?1395037900"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar92.jpg?1395037900","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_0SbWMNIOw4.jpg","cache":"//a.disquscdn.com/uploads/users/9679/8884/avatar92.jpg?1395037900"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Vanilla Firefox did not have the functionality. I had to install FireBug to get console.table().","createdAt":"2014-03-01T08:18:07","id":"1265503568","thread":"2299964359","depth":2,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Vanilla Firefox did not have the functionality. I had to install FireBug to get console.table().\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":null,"author":{"username":"mrizvandi","about":"","name":"mRizvandi","url":"http://mrizvandi.com/","isAnonymous":false,"rep":1.220843,"profileUrl":"http://disqus.com/mrizvandi/","reputation":1.220843,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2014-02-04T16:29:02","id":"93507616","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/mrizvandi.jpg","cache":"//a.disquscdn.com/uploads/users/9350/7616/avatar32.jpg?1399146297"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/mrizvandi.jpg","cache":"//a.disquscdn.com/uploads/users/9350/7616/avatar92.jpg?1399146297","large":{"permalink":"http://disqus.com/api/users/avatars/mrizvandi.jpg","cache":"//a.disquscdn.com/uploads/users/9350/7616/avatar92.jpg?1399146297"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"there are some useful information for me.\nthanks","createdAt":"2014-02-27T12:45:55","id":"1262822287","thread":"2299964359","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>there are some useful information for me.\u003cbr>thanks\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":null,"author":{"name":"phangia","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar32.png","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Good article","createdAt":"2014-01-13T09:44:17","id":"1255365409","thread":"2299964359","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Good article\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":null,"author":{"name":"Andrews","url":"http://www.slimtop10.com/","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar32.png","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I agree with you except the first sentence that you are novoice on coding. Thanks for sharing your thoughts. I have learned a lot from your coding tips.","createdAt":"2014-01-04T22:45:38","id":"1255365410","thread":"2299964359","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>I agree with you except the first sentence that you are novoice on coding. Thanks for sharing your thoughts. I have learned a lot from your coding tips.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":null,"author":{"name":"Octavian Nita","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar32.png","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"... and [] != [] yields true as does ['x'] == 'x' and also new Boolean(false)... :)\r\n\r\nI am in a situation similar to yours, trying to make sense out of the inner workings of JavaScript and I've found \u003ca href=\"http://javascript.info/tutorial/object-conversion\" rel=\"nofollow\">this\u003c/a> to be very helpful and \u003ca href=\"http://www.amazon.com/JavaScript-Pocket-Reference-OReilly/dp/1449316859/ref=sr_1_sc_1?ie=UTF8&#38;qid=1386754903&#38;sr=8-1-spell&#38;keywords=javascript+pocket+erference\" rel=\"nofollow\">this\u003c/a> to be very complete.\r\n\r\nRegards, Tavi","createdAt":"2013-12-11T14:43:10","id":"1255365406","thread":"2299964359","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>... and [] != [] yields true as does ['x'] == 'x' and also new Boolean(false)... :)\u003c/p>\u003cp>I am in a situation similar to yours, trying to make sense out of the inner workings of JavaScript and I've found \u003ca href=\"http://javascript.info/tutorial/object-conversion\" rel=\"nofollow\">this\u003c/a> to be very helpful and \u003ca href=\"http://www.amazon.com/JavaScript-Pocket-Reference-OReilly/dp/1449316859/ref=sr_1_sc_1?ie=UTF8&amp;qid=1386754903&amp;sr=8-1-spell&amp;keywords=javascript+pocket+erference\" rel=\"nofollow\">this\u003c/a> to be very complete.\u003c/p>\u003cp>Regards, Tavi\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":1255365406,"author":{"name":"Catalin Rosu","url":"http://www.red-team-design.com/","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar32.png","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Thanks for your comment Tavi, I guess I should have mentioned http://wtfjs.com/ as well. :)","createdAt":"2013-12-13T12:30:35","id":"1255365415","thread":"2299964359","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Thanks for your comment Tavi, I guess I should have mentioned \u003ca href=\"http://wtfjs.com/\" rel=\"nofollow\">http://wtfjs.com/\u003c/a> as well. :)\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"redteamdesign","parent":1255365415,"author":{"name":"Octavian Nita","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar32.png","cache":"//a.disquscdn.com/1399942257/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1399942257/images/noavatar92.png","cache":"//a.disquscdn.com/1399942257/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Good resource, I didn't know about it... Wow -- much more gotchas that I would've imagined!","createdAt":"2013-12-13T15:10:45","id":"1255366709","thread":"2299964359","depth":2,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Good resource, I didn't know about it... Wow -- much more gotchas that I would've imagined!\u003c/p>","isSpam":false,"isHighlighted":false,"points":0}],"thread":{"feed":"http://redteamdesign.disqus.com/a_beginner8217s_list_of_javascript_gotchas/latest.rss","uploadAdd":"//redteamdesign.disqus.com/thread/a_beginner8217s_list_of_javascript_gotchas/async_media_upload/","identifiers":["6718 http://www.red-team-design.com/?p=6718"],"dislikes":0,"likes":0,"message":"","id":"2299964359","createdAt":"2014-02-21T20:32:19","category":"2902063","clean_title":"A beginner\u2019s list of JavaScript gotchas","userScore":0,"moderators":[95835068],"isDeleted":false,"hasStreaming":false,"uploadRemove":"//redteamdesign.disqus.com/thread/a_beginner8217s_list_of_javascript_gotchas/async_media_remove/","isClosed":false,"link":"http://www.red-team-design.com/beginner-javascript-gotchas","slug":"a_beginner8217s_list_of_javascript_gotchas","forum":"redteamdesign","author":"95835068","posts":9,"userSubscription":false,"title":"A beginner&#8217;s list of JavaScript gotchas","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+    <script src="lounge.load.js"></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="discovery-top" data-tracking-area="discovery-north"></div>
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+
+<nav class="nav nav-primary">
+<ul>
+<li class="tab-conversation active">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-role="post-count" class="publisher-nav-color" data-nav="conversation"><span class="comment-count">
+
+9 comments
+
+</span>
+
+
+<span class="comment-count-placeholder">
+Comments
+</span></a>
+</li>
+<li class="tab-community">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="publisher-nav-color" data-nav="community" id="community-tab">
+
+
+<span class="community-name">
+
+<strong>RedTeamDesign</strong>
+
+</span>
+
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="dropdown user-menu" data-role="logout"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+
+<span>
+Login
+</span>
+
+
+</span> <span class="caret"></span>
+</a>
+
+<ul class="dropdown-menu">
+
+
+
+
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="auth:google">Google</a>
+</li>
+
+
+
+
+
+
+
+</ul></li>
+<li class="notification-menu" data-role="notification-menu"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="notification-container" data-action="auth:disqus">
+<span class="notification-icon icon-disqus"></span></a></li>
+</ul>
+</nav>
+
+</header>
+
+
+
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+
+<li data-role="post-sort" class="dropdown sorting">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="dropdown-toggle" data-nav="conversation" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="selected">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="sort" data-sort="popular">Best</a>
+</li>
+
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="sort" data-sort="desc">Newest</a>
+</li>
+
+<li>
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="sort" data-sort="asc">Oldest</a>
+</li>
+</ul>
+</li>
+
+
+<li id="thread-votes" class="favorite pull-right">
+<!-- rendered dynamically -->
+<div class="thread-likes" data-role="vote-button"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="upvote" title="Favorite this discussion">
+<span class="label">Favorite</span>
+<span class="icon-star"></span>
+<span class="icon-check"></span>
+</a></div></li>
+
+<li id="thread-share-menu" class="dropdown share-menu">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="label">Share</span> <span class="icon-export"></span>
+</a>
+<ul class="share-menu dropdown-menu pull-right">
+<li class="share">Share this discussion on
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="http://red-team-design.com/beginner-javascript-gotchas/#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="http://red-team-design.com/beginner-javascript-gotchas/#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="posts">
+
+<div id="form"><form class="reply"><div class="alert error" style="display:none" role="alert">
+<a class="close" data-action="dismiss-alert" title="Dismiss">×</a>
+<span></span>
+</div>
+
+<div class="postbox">
+<div class="avatar">
+
+<span class="user">
+<img data-role="user-avatar" src="noavatar92.d1dee965677e7cc8d58afe004a6d8282.png">
+</span>
+
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="-1" role="textbox" aria-multiline="true" contenteditable="true" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="suggestions">
+<li class="header">
+<h5>in this conversation</h5>
+</li>
+</ul></div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+
+
+</ul>
+
+
+</div>
+</div>
+
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Sign in with</h6>
+
+<ul data-role="login-menu" class="services login-buttons">
+
+
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google"><i class="icon-google-plus-circle"></i></button>
+</li>
+<li class="auth-signup">
+<button type="button" data-action="auth:disqus" title="Disqus">Sign up for Disqus</button>
+</li>
+</ul>
+
+</div>
+
+<div class="guest">
+<h6 class="guest-form-title">
+
+or pick a name
+
+</h6>
+
+<div class="what-is-disqus help-icon">
+<div id="rules" class="tooltip show">
+<h3>Disqus is a conversation network</h3>
+<ul>
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="http://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" maxlength="30">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" placeholder="Password" name="password">
+</p>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as guest
+</label>
+</div>
+
+
+</div>
+</div>
+<div class="proceed">
+
+<button type="submit" class="btn submit" aria-label="Post"><span class="icon-proceed"></span></button>
+<button type="submit" class="btn next" aria-label="Next"><span class="icon-proceed"></span></button>
+
+</div>
+
+</section></div></div>
+
+</div></form></div>
+
+<button class="alert realtime" style="display: none;" data-role="realtime-notification">
+
+</button>
+
+
+<div id="no-posts" style="display: none;">Be the first to comment.</div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-1264782749"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/disqus_0SbWMNIOw4/" class="user" data-action="profile" data-user="96798884">
+<img data-role="user-avatar" data-user="96798884" src="noavatar92.png" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="profile" data-user="96798884" data-role="username">Ryan Johnson</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264782749" data-role="relative-time" class="time-ago" title="Friday, February 28 2014 10:11 PM">
+2 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Firefox doesn't have console.table(), by the way.  At least not in Firefox 27.0.1</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264782749">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1264782749">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1264792857"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/catalinred/" class="user" data-action="profile" data-user="95835068">
+<img data-role="user-avatar" data-user="95835068" src="noavatar92.png" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="profile" data-user="95835068" data-role="username">catalinred</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264782749" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Ryan Johnson</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264792857" data-role="relative-time" class="time-ago" title="Friday, February 28 2014 10:18 PM">
+2 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Ryan, but that's not true. It works perfectly, it just don't display "index" column as Chrome does.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264792857">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1264792857">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1265503568"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/disqus_0SbWMNIOw4/" class="user" data-action="profile" data-user="96798884">
+<img data-role="user-avatar" data-user="96798884" src="noavatar92.png" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="profile" data-user="96798884" data-role="username">Ryan Johnson</a></span>
+
+
+
+
+
+
+<span><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1264792857" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> catalinred</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1265503568" data-role="relative-time" class="time-ago" title="Saturday, March 1 2014 11:18 AM">
+2 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Vanilla Firefox did not have the functionality. I had to install FireBug to get console.table().</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1265503568">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1265503568">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul></li></ul></li></ul></li><li class="post" id="post-1262822287"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/mrizvandi/" class="user" data-action="profile" data-user="93507616">
+<img data-role="user-avatar" data-user="93507616" src="noavatar92.png" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="profile" data-user="93507616" data-role="username">mRizvandi</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1262822287" data-role="relative-time" class="time-ago" title="Thursday, February 27 2014 3:45 PM">
+3 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>there are some useful information for me.<br>thanks</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1262822287">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1262822287">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul></li><li class="post" id="post-1255365409"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">phangia</span>
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365409" data-role="relative-time" class="time-ago" title="Monday, January 13 2014 12:44 PM">
+4 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Good article</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365409">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1255365409">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul></li><li class="post" id="post-1255365410"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">Andrews</span>
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365410" data-role="relative-time" class="time-ago" title="Sunday, January 5 2014 1:45 AM">
+4 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I agree with you except the first sentence that you are novoice on coding. Thanks for sharing your thoughts. I have learned a lot from your coding tips.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365410">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1255365410">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul></li><li class="post" id="post-1255365406"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">Octavian Nita</span>
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365406" data-role="relative-time" class="time-ago" title="Wednesday, December 11 2013 5:43 PM">
+5 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>... and [] != [] yields true as does ['x'] == 'x' and also new Boolean(false)... :)</p><p>I am in a situation similar to yours, trying to make sense out of the inner workings of JavaScript and I've found <a href="http://javascript.info/tutorial/object-conversion" rel="nofollow">this</a> to be very helpful and <a href="http://www.amazon.com/JavaScript-Pocket-Reference-OReilly/dp/1449316859/ref=sr_1_sc_1?ie=UTF8&qid=1386754903&sr=8-1-spell&keywords=javascript+pocket+erference" rel="nofollow">this</a> to be very complete.</p><p>Regards, Tavi</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365406">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1255365406">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1255365415"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">Catalin Rosu</span>
+
+
+
+<span><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365406" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Octavian Nita</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365415" data-role="relative-time" class="time-ago" title="Friday, December 13 2013 3:30 PM">
+5 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Thanks for your comment Tavi, I guess I should have mentioned <a href="http://wtfjs.com/" rel="nofollow">http://wtfjs.com/</a> as well. :)</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365415">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1255365415">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1255366709"><div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">Octavian Nita</span>
+
+
+
+<span><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255365415" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Catalin Rosu</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255366709" data-role="relative-time" class="time-ago" title="Friday, December 13 2013 6:10 PM">
+5 months ago
+</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Good resource, I didn't know about it... Wow -- much more gotchas that I would've imagined!</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://red-team-design.com/beginner-javascript-gotchas/#comment-1255366709">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1255366709">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://red-team-design.com/beginner-javascript-gotchas/#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul></li></ul></li></ul></li></ul>
+
+<div class="load-more" data-role="more" style="display: none;">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="more-posts" class="btn">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<section id="community" data-tracking-area="main" style="display:none" data-role="main" data-outbound-link="embed:community" class="loading">
+
+</section>
+
+<section id="dashboard" style="display:none" data-role="main" data-tracking-area="main">
+
+
+<p style="line-height: 1.4">Nothing for you here ... yet. But as you comment with Disqus and follow
+other Disqus users, you will start to receive notifications here, as well as a personalized
+feed of activity by you and the people you follow. So get out there and participate in
+some discussions!</p>
+</section>
+
+<section id="profile" style="display:none" data-role="main" data-tracking-area="main">
+</section>
+
+<div id="discovery" data-tracking-area="discovery-south"></div>
+
+<div id="footer" data-tracking-area="footer">
+<ul>
+<li class="logo"><a href="http://disqus.com/" title="Powered by Disqus">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email"> 
+<div class="default">
+<a href="http://red-team-design.com/beginner-javascript-gotchas/#" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com"></div>
+</div>
+</li>
+<li class="install">
+<a href="https://disqus.com/websites/?utm_source=redteamdesign&utm_medium=Disqus-Footer" target="_blank">
+<i aria-hidden="true" class="icon-disqus"></i>
+<span class="clip">Add Disqus to your site</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>

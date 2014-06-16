@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: How To Emulate a Foreach Loop in JavaScript</title>
+	<atom:link href="http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/</link>
+	<description>Web Development Tutorials, Tips &#38; Techniques</description>
+	<lastBuildDate>Thu, 03 Apr 2014 01:33:55 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.8.1</generator>
+	<item>
+		<title>By: Júnior</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-15360</link>
+		<dc:creator><![CDATA[Júnior]]></dc:creator>
+		<pubDate>Mon, 08 Jul 2013 14:59:31 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-15360</guid>
+		<description><![CDATA[The right way is
+
+var i, k;
+for ( i = 0, k = var.length; i &lt; k; i++ ) {
+   // code;
+}
+
+Or:
+
+array.forEach(function(argument_name){
+    console.log(argument_name);
+});]]></description>
+		<content:encoded><![CDATA[<p>The right way is</p>
+<p>var i, k;<br />
+for ( i = 0, k = var.length; i &lt; k; i++ ) {<br />
+   // code;<br />
+}</p>
+<p>Or:</p>
+<p>array.forEach(function(argument_name){<br />
+    console.log(argument_name);<br />
+});</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Rob @ Forkoff</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-14314</link>
+		<dc:creator><![CDATA[Rob @ Forkoff]]></dc:creator>
+		<pubDate>Mon, 22 Oct 2012 10:33:32 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-14314</guid>
+		<description><![CDATA[I&#039;d certainly agree with tog000 on this one. I find MooTools to be my personal favorite JS framework anyway, but regardless, their &quot;.each()&quot; method of traversing arrays is by far the nicest to work with.]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;d certainly agree with tog000 on this one. I find MooTools to be my personal favorite JS framework anyway, but regardless, their &#8220;.each()&#8221; method of traversing arrays is by far the nicest to work with.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: manoj</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-14224</link>
+		<dc:creator><![CDATA[manoj]]></dc:creator>
+		<pubDate>Mon, 20 Aug 2012 12:14:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-14224</guid>
+		<description><![CDATA[thanks for provide notes... nice]]></description>
+		<content:encoded><![CDATA[<p>thanks for provide notes&#8230; nice</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Paul Mc Galey</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-14193</link>
+		<dc:creator><![CDATA[Paul Mc Galey]]></dc:creator>
+		<pubDate>Thu, 02 Aug 2012 12:14:34 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-14193</guid>
+		<description><![CDATA[I&#039;m surprised no-one has pointed out that this doesn&#039;t actually work! Specifically,
+
+this = &quot;Do Something Here&quot;;
+
+is illegal and throws an error - you can&#039;t assign to &#039;this&#039;, and even if you could, you wouldn&#039;t expect it to modify the original array (as &#039;this&#039; would be a reference to the string object, not into the array). You *can&#039;t* modify an array in-place with jQuery.each().
+
+If you don&#039;t mind creating a new array and really want to use jQuery you could use jQuery.map() like this:
+
+myArray = new Array(&quot;item 1&quot;, &quot;item 2&quot;, &quot;item 3&quot;);
+myArray = $.map(myArray, function() {
+    return &quot;Do Something Here&quot;;
+});]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m surprised no-one has pointed out that this doesn&#8217;t actually work! Specifically,</p>
+<p>this = &#8220;Do Something Here&#8221;;</p>
+<p>is illegal and throws an error &#8211; you can&#8217;t assign to &#8216;this&#8217;, and even if you could, you wouldn&#8217;t expect it to modify the original array (as &#8216;this&#8217; would be a reference to the string object, not into the array). You *can&#8217;t* modify an array in-place with jQuery.each().</p>
+<p>If you don&#8217;t mind creating a new array and really want to use jQuery you could use jQuery.map() like this:</p>
+<p>myArray = new Array(&#8220;item 1&#8243;, &#8220;item 2&#8243;, &#8220;item 3&#8243;);<br />
+myArray = $.map(myArray, function() {<br />
+    return &#8220;Do Something Here&#8221;;<br />
+});</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: JavaScript Interview Questions &#38; Answers: YourNextLeap</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-14171</link>
+		<dc:creator><![CDATA[JavaScript Interview Questions &#38; Answers: YourNextLeap]]></dc:creator>
+		<pubDate>Sat, 14 Jul 2012 09:39:56 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-14171</guid>
+		<description><![CDATA[[...] There is no ForEach loop in javascript. You can implement it though using this hack. [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] There is no ForEach loop in javascript. You can implement it though using this hack. [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Al Jey</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-14043</link>
+		<dc:creator><![CDATA[Al Jey]]></dc:creator>
+		<pubDate>Sat, 31 Mar 2012 08:32:19 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-14043</guid>
+		<description><![CDATA[The most efficient way to loop through array elements is like so:
+
+var arr=[5,4,3,2,1,0],
+    i=arr.length;
+for(;i--;){
+    console.log(arr[i])
+}
+
+Both variables are local, cached and there is minimum evaluation.
+The only thing to note here is that the loop starts at the end of an array.]]></description>
+		<content:encoded><![CDATA[<p>The most efficient way to loop through array elements is like so:</p>
+<p>var arr=[5,4,3,2,1,0],<br />
+    i=arr.length;<br />
+for(;i&#8211;;){<br />
+    console.log(arr[i])<br />
+}</p>
+<p>Both variables are local, cached and there is minimum evaluation.<br />
+The only thing to note here is that the loop starts at the end of an array.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Joel Selvadurai</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-13649</link>
+		<dc:creator><![CDATA[Joel Selvadurai]]></dc:creator>
+		<pubDate>Wed, 02 Nov 2011 19:52:55 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-13649</guid>
+		<description><![CDATA[Much better to use:
+
+for(var i in array) {
+   			
+   			array[i] = &#039;whatever&#039;;
+   			
+		}]]></description>
+		<content:encoded><![CDATA[<p>Much better to use:</p>
+<p>for(var i in array) {</p>
+<p>   			array[i] = &#8216;whatever&#8217;;</p>
+<p>		}</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gman</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-13187</link>
+		<dc:creator><![CDATA[gman]]></dc:creator>
+		<pubDate>Tue, 11 Jan 2011 22:59:39 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-13187</guid>
+		<description><![CDATA[Maybe the wrong place to put this but in answer to Chris&#039;s question
+
+The difference between i++ and ++i is as follows.
+
+The meaning of i++ is
+
+   var temp = i; i = i + 1; return temp;
+
+the meaning of ++i is
+
+   i = i + 1; return i;
+
+It&#039;s the creation of that temp that *may* take more time. In JavaScript I suspect most modern browsers can optimize away the need for temp unless you are using it. But ++ comes from C/C++ and in C++ the creation of temp might be some complex type and have side effects.
+
+So, best to just get in the habit of coding what you mean. If you want to increment i then use ++i. If you want to both increment i and get the result before you incremented it than use i++.]]></description>
+		<content:encoded><![CDATA[<p>Maybe the wrong place to put this but in answer to Chris&#8217;s question</p>
+<p>The difference between i++ and ++i is as follows.</p>
+<p>The meaning of i++ is</p>
+<p>   var temp = i; i = i + 1; return temp;</p>
+<p>the meaning of ++i is</p>
+<p>   i = i + 1; return i;</p>
+<p>It&#8217;s the creation of that temp that *may* take more time. In JavaScript I suspect most modern browsers can optimize away the need for temp unless you are using it. But ++ comes from C/C++ and in C++ the creation of temp might be some complex type and have side effects.</p>
+<p>So, best to just get in the habit of coding what you mean. If you want to increment i then use ++i. If you want to both increment i and get the result before you incremented it than use i++.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Saint John Web Design &#124; Informative Computer Solutions &#187; Blog Archive &#187; Build a Bare-Bones WordPress 2.8+ Widget</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-11199</link>
+		<dc:creator><![CDATA[Saint John Web Design &#124; Informative Computer Solutions &#187; Blog Archive &#187; Build a Bare-Bones WordPress 2.8+ Widget]]></dc:creator>
+		<pubDate>Sun, 07 Feb 2010 07:14:12 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-11199</guid>
+		<description><![CDATA[[...] How To Emulate a Foreach Loop in JavaScript [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] How To Emulate a Foreach Loop in JavaScript [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Saint John Web Design &#124; Informative Computer Solutions &#187; Blog Archive &#187; How To Create Simple, Stylish and Swappable Image Captions</title>
+		<link>http://www.cssnewbie.com/emulate-a-foreach-loop-in-javascript/comment-page-1/#comment-11196</link>
+		<dc:creator><![CDATA[Saint John Web Design &#124; Informative Computer Solutions &#187; Blog Archive &#187; How To Create Simple, Stylish and Swappable Image Captions]]></dc:creator>
+		<pubDate>Sun, 07 Feb 2010 04:32:15 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cssnewbie.com/?p=511#comment-11196</guid>
+		<description><![CDATA[[...] How To Emulate a Foreach Loop in JavaScript [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] How To Emulate a Foreach Loop in JavaScript [...]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 360/377 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-03 07:58:47 by W3 Total Cache -->

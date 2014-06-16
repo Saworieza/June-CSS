@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>5 Ways to Set Your Unordered Lists Apart</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; 5 Ways to Set Your Unordered Lists Apart Comments Feed" href="style-unordered-lists/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Articles Elsewhere: February 15 to February 22' href='index.html?p=36' />
+<link rel='next' title='Create a Microsoft Word-Style Outline with CSS' href='advanced-techniques/word-style-outline/index.html' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=38' />
+<link rel='shortlink' href='index.html?p=38' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,207] -->
+<meta name="description" content="Unordered lists are one of the most pervasive elements on the web, probably just behind paragraphs and hyperlinks in terms of their bunny-like abundance." />
+
+<meta name="keywords" content="css rules,lists" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-38 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-38" class="post-38 post type-post status-publish format-standard hentry category-css-rules category-lists">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=38" title="Permalink to 5 Ways to Set Your Unordered Lists Apart" rel="bookmark">5 Ways to Set Your Unordered Lists Apart</a>
+	</h2>
+	<div class="meta">
+		<p>Published February 25, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src='wp-content/uploads/2008/02/style-unordered-lists.gif' alt='Example of a styled unordered list' /></p>
+<p>Unordered lists are one of the most pervasive elements on the web, probably just behind paragraphs and hyperlinks in terms of their bunny-like abundance. And for good reason: bulleted (i.e., unordered) lists are a great way to convey a bunch of related information in a rather small space, which is often the preferred way to read on (and thus, write for) the internet.</p>
+<p>Last week, I showed you how to turn an ordinary, unassuming <a href="navigation/tab-based-navigation/index.html">unordered list into a navigation bar.</a> And then we <a href="navigation/intelligent-navigation/index.html">made that nav bar even cooler</a> with a bit of JavaScript. But sometimes, you just need a list to be a list. But that isn’t to say it has to be a <em>boring looking</em> list. Here are five different ways to style your unordered lists with CSS.</p>
+<h3>1: Change your Bullets</h3>
+<p>Sometimes, all your list needs is a new set of bullets to set it apart from all the other lists out there. For that, you’d turn to the list-style-type attribute, like so:</p>
+<pre lang="css" escaped="true" line="1">ul {
+	list-style-type: circle; 
+}</pre>
+<p>This sets your bullet type to a hollow circle, <a href="example/style-unordered-lists/index.html#one">as shown in this example.</a> And there are other list-style-types out there, as well. “Disc” is the default style, but “square” has a nice look, as well.</p>
+<h3>2: Add Margins and Padding</h3>
+<p>If you really want your list to stand out, you could do worse than to literally set it apart with a bit of margin and padding:</p>
+<pre lang="css" escaped="true" line="1">ul {
+	margin: 2em; 
+}
+ul li {
+	padding-left: 1em; 
+	margin-bottom: .5em; 
+}</pre>
+<p><a href="example/style-unordered-lists/index.html#two">As you can see in this example,</a> our first rule applies a 2 em margin to all four sides of our unordered list – moving it away from the surrounding paragraphs both vertically and horizontally. The left padding on the list item puts a little space between the bullet and the text, adding to the airy feel. The margin on the bottom of the list item opens a bit of space between the individual items in our list.</p>
+<h3>3: Use an Image</h3>
+<p>One of the easiest ways to make your lists truly unique (and to ensure they mesh well with your site’s design) is to use images instead of bullets. Here’s how to do it:</p>
+<pre lang="css" escaped="true" line="1">ul {
+	list-style-image: url(check.gif); 
+}</pre>
+<p>Easy, no? <a href="example/style-unordered-lists/index.html#three">Yet the effect is dramatic:</a> all of our list items now have a checked box next to them instead of a bullet. And it doesn’t have to be a checkbox, either – it could be anything your creative little heart desires. One caveat to this technique is to remember that, unlike the default bullet types, these images won’t grow and shrink with your items if your readers change the text size.</p>
+<h3>4: Borders, Backgrounds and the Hover Class</h3>
+<p>For a unique list style that doesn’t make use of images, you could always use borders, background colors, and the :hover pseudo-class to set your list apart:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">ul {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0; 
+}
+ul li {
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 10px 5px 20px;
+	border-bottom: 1px solid #ccc;
+	color: #666; 
+}
+ul li:hover {
+	color: #000;
+	background-color: #ddd; 
+}</pre>
+<p><a href="example/style-unordered-lists/index.html#four"><br />
+In this example,</a> we’re turning off the bullets altogether with a list-style: none rule, then styling the list items by changing their color, giving them a bit of padding, making them boldface, and setting a border along the bottom. Then, when the user hovers their mouse over the list item, it darkens slightly and we apply a pale gray background color, which would help the reader keep their place in a long list more easily.</p>
+<p>Of course, IE6 doesn’t recognize the :hover class on anything other than anchors, so if you needed this to show up in IE6, you’d need to apply an anchor to your text… which is why this technique is usually reserved for sidebar links or lists of similar ilk.</p>
+<h3>The Whole Shebang</h3>
+<p>Of course, why stop at just using <em>one</em> of these techniques, when you could apply several at once? Here’s our mega-styled list:</p>
+<pre lang="css" escaped="true" line="1">ul {
+	margin: 1.5em; 
+}
+ul li {
+	list-style-image: url(uncheck.gif);
+	border-bottom: 1px solid #ccc;
+	padding: .2em 0 .2em .5em;
+	font-weight: bold;
+	color: #666; 
+}
+ul li:hover {
+	cursor: pointer;
+	list-style-image: url(check.gif);
+	background-color: #f2f2f2;
+	color: #000; 
+}
+</pre>
+<p><a href="example/style-unordered-lists/index.html#five">In this attractive example,</a> we are:</p>
+<ul>
+<li>Setting a margin on the list to set it apart,</li>
+<li>Setting padding and a border on the list item,</li>
+<li>Using an image instead of a bullet,</li>
+<li>Changing the font-weight and color of the text, and</li>
+<li>Using the :hover pseudo-class to change the cursor type, set a new list image, apply a subtle background, and darken the text.</li>
+</ul>
+<p>Now that’s a nice looking list. Of course, as before, our hover elements won’t show up in IE6 (though IE7 will handle them fine). But our list is still pretty darn distinctive even without the hover class.</p>
+<p>These are just five of a nearly infinite variety of options. What techniques do you use to set your lists apart? Oh, and be sure to <a href="about/feed/index.html">subscribe to our feed,</a> because later this week I’ll show you a trick for styling nested <strong>ordered</strong> lists that really makes them more attractive and user-friendly.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			22 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-99">
+		<article id="comment-99" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c9910395cf0f46fdf8aac14f27884690?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://konstruktors.com/blog' rel='external nofollow' class='url'>Kaspars</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-99"><time datetime="2008-02-25T09:30:18+00:00">Feb. 25, 2008 @ 9:30 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob, this is a really nice and well written introductory article about HTML lists and how to style them. Beginning with very basic examples and combining them together at the end makes all of the concepts really easy to understand.</p>
+<p>HTML lists are indeed one of the main building blocks of today&#8217;s semantic web and it is therefore important to know the basics and not to be &#8220;afraid&#8221; of experimenting with them.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-100">
+		<article id="comment-100" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d8333ea779e4c5403687c02b54ac7304?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Justin </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-100"><time datetime="2008-02-25T09:46:07+00:00">Feb. 25, 2008 @ 9:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Don&#8217;t forget when applying margins and padding that IE and Firefox have different default marign/padding values for lists. That means it&#8217;s a good idea to explicitly set both the margin and padding on both ul and li, or to use one of those &#8220;whitespace reset&#8221; options.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-101">
+		<article id="comment-101" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6c092b61dbb3b6a4f142ae8b520d341d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.extraface.com' rel='external nofollow' class='url'>Dave C.</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-101"><time datetime="2008-02-25T10:09:59+00:00">Feb. 25, 2008 @ 10:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Here&#8217;s an oldie but a goodie on the same subject from A List Apart:<br />
+<a href="http://www.alistapart.com/articles/taminglists/" rel="nofollow">http://www.alistapart.com/articles/taminglists/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-102">
+		<article id="comment-102" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-102"><time datetime="2008-02-25T13:28:09+00:00">Feb. 25, 2008 @ 1:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p><strong>Kaspars:</strong> Thanks for the kind words. :)</p>
+<p><strong>Justin:</strong> Good point. That might have to come in a second article. In fact, it probably will come up in the next article. :)</p>
+<p><strong>Dave:</strong> Thanks for the link! It&#8217;s old, as you said, but still relevant information.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-112">
+		<p>Pingback: <a href='http://rudeworks.com/blog/miniposts/teoria-sobre-listas-en-css/' rel='external nofollow' class='url'>RUDEWORKS</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-529">
+		<article id="comment-529" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/47515c7d16161b8639244ddf56dde617?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://miamipartyboats.com' rel='external nofollow' class='url'>MPB</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-529"><time datetime="2008-04-03T00:58:07+00:00">Apr. 3, 2008 @ 12:58 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very useful, thanks for the tips :) Looking for the ordered list one as well.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-4247">
+		<p>Pingback: <a href='http://www.noupe.com/css/css-styled-lists-20-demos-tutorials-and-best-of.html' rel='external nofollow' class='url'>CSS-Styled Lists: 20+ Demos, Tutorials and Best Practices</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9340">
+		<p>Pingback: <a href='http://www.genealogy-computer-tips.com/how-to-design-the-perfect-list/' rel='external nofollow' class='url'>How To Design The Perfect List</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9517">
+		<article id="comment-9517" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cd5c89a96f1b248d6185707b19f2ca72?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mike-irving.co.uk' rel='external nofollow' class='url'>Mike Irving</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-9517"><time datetime="2009-03-27T04:41:47+00:00">Mar. 27, 2009 @ 4:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very interesting article here, thanks.</p>
+<p>Yes, the padding is a pain across diferent browsers, as can be the list-style-image positioning. Mike.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9671">
+		<p>Pingback: <a href='http://www.sura1.at/wordpress/2009/05/02/5-beispiele-wie-sie-ungeordnete-listen-formatieren-konnen/' rel='external nofollow' class='url'>5 Beispiele, wie Sie ungeordnete Listen formatieren können | Sura 1.at</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9710">
+		<p>Pingback: <a href='http://devsnippets.com/article/styling-your-lists.html' rel='external nofollow' class='url'>Styling your Lists: 20+ Brilliant How to&#8217;s and Best Practices | DevSnippets</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9711">
+		<article id="comment-9711" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8f8ff21a67437febebc70afd19364e95?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Peter </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-9711"><time datetime="2009-05-13T11:46:06+00:00">May. 13, 2009 @ 11:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice run through of list styling capabilities though I would avoid advocating list styling that simulates user interaction as it gives the user the false impression that a list serves as an input element.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9712">
+		<p>Pingback: <a href='http://n3t.ir/devsnippets/styling-your-lists-20-brilliant-how-to%e2%80%99s-and-best-practices.html' rel='external nofollow' class='url'>Styling your Lists: 20+ Brilliant How to’s and Best Practices</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9806">
+		<article id="comment-9806" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1f209c0fea2a8c4abf05815d3753f465?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://windoo.wordpress.com' rel='external nofollow' class='url'>web2000</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-9806"><time datetime="2009-07-03T15:26:47+00:00">Jul. 3, 2009 @ 3:26 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey useful tut you have here 5 ways to set your unordered lists apart &#8211; very pleasing results.. Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10617">
+		<p>Pingback: <a href='http://eagrapho.com/?p=1761' rel='external nofollow' class='url'>eagrapho &#187; Styling your Lists: 20+ Brilliant How to’s and Best Practices</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11121">
+		<p>Pingback: <a href='http://hsvtalk.com/wp/2009/05/styling-your-lists-20-brilliant-how-to%e2%80%99s-and-best-practices/' rel='external nofollow' class='url'>Styling your Lists: 20+ Brilliant How to’s and Best Practices - Huntsville Talk</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12991">
+		<p>Pingback: <a href='http://suras-weblog.at/wie-sie-mit-css-ungeordnete-listen-formatieren/' rel='external nofollow' class='url'>Wie Sie mit CSS ungeordnete Listen formatieren | Suras Weblog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13407">
+		<p>Pingback: <a href='http://www.separatista.net/forum/topic.php?id=4' rel='external nofollow' class='url'>Zajímavé články o WordPressu (v angličtině) &laquo; Fórum podpory WordPressu</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13528">
+		<p>Pingback: <a href='http://sacima.com/iphone-ipad-apps/resources-for-styling-lists/' rel='external nofollow' class='url'>Sacima鲨鳍马工作室 &raquo; Blog Archive &raquo; Resources for Styling Lists</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13533">
+		<p>Pingback: <a href='http://mgmt.noupe.com/tools/resources-for-styling-lists.html' rel='external nofollow' class='url'>Resources for Styling Lists - Noupe Design Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14065">
+		<article id="comment-14065" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b9ef117e1491546169f3fdae7e9d06f3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">wolf Larson </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-14065"><time datetime="2012-04-17T19:44:19+00:00">Apr. 17, 2012 @ 7:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very helpful. style is not my thing &#8230; ty</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14188">
+		<article id="comment-14188" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fba81a54cb97fca2a16585989687017f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.gifeasy.com' rel='external nofollow' class='url'>yuka</a> </cite><a href="style-unordered-lists/comment-page-1/index.html#comment-14188"><time datetime="2012-07-30T11:21:09+00:00">Jul. 30, 2012 @ 11:21 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good information for css unordered list style.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=38#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='38' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4cd93cb6be" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="advanced-techniques/word-style-outline/index.html" title="Permalink to: Create a Microsoft Word-Style Outline with CSS">
+                    Create a Microsoft Word-Style Outline with CSS                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">One of the most useful properties of both unordered lists (which we fancied up earlier this week) and ordered lists is their ability to nest... <a href="advanced-techniques/word-style-outline/index.html" class="more-link" title="Permalink to: Create a Microsoft Word-Style Outline with CSS">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=38#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 906/952 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:48:36 by W3 Total Cache -->

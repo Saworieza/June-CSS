@@ -1,0 +1,147 @@
+body, div, h1, h2, form, fieldset, input, textarea, footer, p, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+a {
+	text-decoration:none;
+	color: #fff;
+}
+ @font-face {
+ font-family: 'DeibiRegular';
+ src: url('deibi-webfont.eot');
+ src: url('deibi-webfont.eot?#iefix') format('embedded-opentype'), url('deibi-webfont.woff') format('woff'), url('deibi-webfont.ttf') format('truetype'), url('deibi-webfont.svg#DeibiRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+body {
+	font-family:'DeibiRegular', Helvetica, Arial, sans-serif;
+	background:#f2f2f2 url('images/bg.jpg');
+	color: #fff;
+	width:100%;
+}
+#wrap_out {
+	width:100%;
+	overflow-x:hidden;
+}
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+	z-index:1;
+	position:relative;
+}
+header {
+	display:block;
+z-index:2 position:relative;
+}
+header p {
+	display:block;
+	font-size:30px;
+	padding: 70px 60px 0px;
+	text-shadow: 0 0 40px #889473;
+}
+h1 {
+	text-align:center;
+	font-size:130px;
+	margin-top: 30px;
+	text-shadow: 0 0 60px #889473;
+}
+h1 em {
+	color: #f5f187;
+	font-style: normal;
+}
+#separation {
+	margin: 0 auto;
+	width: 592px;
+	z-index:-1;
+	position:relative;
+}
+#separation div {
+	text-align: center;
+	font-size: 72px;
+}
+#separation div:before, #separation div:after {
+	content: "";
+	background:  url('images/arrowsdown.png') no-repeat 10px 10px;
+	width: 99px;
+	height: 76px;
+	display:inline-block;
+}
+#separation em, a em {
+	color: #e3af32;
+	font-style: normal;
+}
+section {
+	position:relative;
+	margin-top: 120px;
+	display:block
+}
+.element {
+	position:absolute;
+	display:block;
+}
+.element div {
+	font-size:30px;
+	height:40px;
+	line-height:40px;
+	text-shadow: 0 0 10px #889473;
+}
+.element#coriander {
+	top:0px;
+	left:30px;
+	width: 286px;
+	height: 272px;
+}
+.element#rosemary {
+	top:40px;
+	left: 335px;
+	width: 370px;
+	height: 183px;
+}
+.element#chives {
+	top : 0px;
+	right:30px;
+	width: 197px;
+	height: 514px;
+}
+.element#lemonbalm {
+	left: 30px;
+	top:280px;
+	width:265px;
+	height: 233px;
+}
+.element#basil {
+	right: 255px;
+	top:250px;
+	width:368px;
+	height: 263px;
+	text-align:right;
+}
+.element p {
+	position:absolute;
+	display:block;
+	bottom:0px;
+	left:0;
+	background: #fff;
+	background: rgba(255, 255, 255, .8);
+	padding:20px;
+	color: #837c5b;
+	visibility:hidden;
+}
+.element#rosemary p {
+	bottom:40px;
+}
+.element:hover p {
+	visibility: visible;
+}
+a:hover em, .element:hover div {
+	color: #837c5b;
+	text-shadow: 0 0 10px #889473
+}
+footer {
+	margin-bottom: 10px;
+	text-align:center;
+	font-size: 30px;
+	display:block
+}

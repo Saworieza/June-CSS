@@ -1,0 +1,232 @@
+/*
+    gethifi.com - CSS Type Boilerplate
+    2010-11-12
+    v. 0.9
+    Author:Joel Sutherland (@JoelSutherland)
+    Liscenced under the MIT license
+
+    Type and Type Baseline
+    This stylesheet is designed to set up all text elements on a type baseline.
+    Using it ensures element coverage and ideally, clean type.
+   
+     Setup Instructions
+      *  ".content" is in front of all declarations.  This is so that it can
+         target only elements in a container.  Search/Replace to
+         change or eliminate.  It's probably best to eliminate so that you can
+         ensure this is used globally.
+      *  The default baseline is 20px.  Search/Replace 20px to adjust.
+      *  Once this is adjusted, it's also important to check the headers
+*/
+
+
+/* Standard Text */
+body, input, button, textarea {
+    font: normal 14px/20px "Cabin",helvetica,arial,sans-serif;
+    color: #333;
+}
+
+
+/* Block Baselines */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, pre, blockquote,
+textarea, button, .embed {
+    margin-bottom: 20px;
+}
+p, pre, blockquote {
+    white-space: pre;           /* CSS 2.0 */
+    white-space: pre-wrap;      /* CSS 2.1 */
+    white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+}
+img { display: block; }
+
+
+
+/* Headers */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    color: #000;
+}
+h1 {
+    font-size: 30px;
+    line-height: 33px;
+	color: #000;
+}
+	h1 a:link {
+		color: #000;
+	}
+	h1 a:hover {
+		text-decoration: none;
+		background: #fafafa;
+		color: #2E78BC;
+	}
+h2 {
+    font-size: 22px;
+    line-height: 22px;
+	margin: 30px 0 10px 0;
+}
+h3 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+h4 { 
+    font-size: 16px;
+	margin-bottom: 10px;
+}
+h5 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+h6 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+
+/* Paragraph Elements */
+a:link {
+    color: #2E78BC;
+    text-decoration: none;
+}
+a:active {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: gray;
+}
+sup, sub {
+    font-size: 80%;
+    line-height: 0;
+}
+sup {
+    vertical-align: super;
+}
+sub {
+    vertical-align: sub;
+}
+code {
+    font-family: Consolas, "Courier New", Courier, mono;
+}
+
+
+
+/* Block Elements */
+ul , ol{
+    font-size: 13px;
+	line-height: 18px;
+    margin-left: 30px;
+}
+ul li, ol li{
+	margin-bottom: 5px;
+}
+blockquote {
+	position: relative;
+    display: block;
+    padding: 0px 10px 0px 20px;
+	color: #666;
+	font-size: 13px;
+	line-height: 18px;
+}
+	blockquote:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 1px;
+		border: 1px solid rgba(0,0,0,.08);
+	}
+    blockquote p {
+        margin-bottom: 10px;
+    }
+    blockquote p:last-child {
+        margin-bottom: 0;
+    }
+pre {
+    font-family: Consolas, "Courier New", Courier, mono;
+    background-color: black;
+    background-color: rgba(0,0,0,.8);
+    color: #eee;
+    padding: 10px 20px;
+    font-size: 12px;
+    overflow-x: scroll;
+}
+.embed {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+
+/* Forms */
+form { 
+}
+    form p {
+        margin: 0;
+    }
+label {
+    display: block;
+    margin-bottom: 0;
+}
+    .checkbox input, .checkbox label {
+        display: inline;
+    }
+    .checkbox input {
+        vertical-align: baseline;
+    }
+input, textarea, select {
+    display: block;
+    margin: 4px 0 24px 0;
+}
+input[type=text], input[type=email], input[type=url], textarea {
+    width: 400px;
+    border: 1px solid;
+    border-color: #ccc;
+    border-color: rgba(0,0,0,.1);
+    height: 30px;
+    background: #fff;
+    background: rgba(255,255,255,.8);
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+textarea {
+    height: 150px; 
+    width: 450px;
+    font-size: 14px;
+    line-height: 16px;
+}
+fieldset.radio {
+    margin-bottom: 20px;
+}
+    fieldset.radio fieldset {
+        margin: 0 0 0 20px;
+    }
+        fieldset.radio fieldset label input {
+            display: inline;
+            line-height: 20px;
+            margin: 0;
+            vertical-align: baseline;
+        }
+label.error {
+    width: 400px;
+    text-align: right;
+    color: #aa0000;
+}
+label.error:before {
+    content: "▲ ";
+}
+input.error, textarea.error {
+    border-color: #aa0000;
+}

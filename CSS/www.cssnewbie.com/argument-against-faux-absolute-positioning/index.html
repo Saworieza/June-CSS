@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>An Argument Against Faux Absolute Positioning</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; An Argument Against Faux Absolute Positioning Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: June 20 to June 26' href='../index.html?p=156' />
+<link rel='next' title='Build an American Flag out of XHTML and CSS' href='../index.html?p=160' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=157' />
+<link rel='shortlink' href='../index.html?p=157' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,212] -->
+<meta name="description" content="Mr. Sol’s development of the Faux Absolute Positioning technique was born of frustration in trying to use the two dominant positioning techniques: absolute positioning and floats. However, I fear his cure might be worse than the disease." />
+
+<meta name="keywords" content="argument,debate,faux absolute positioning,positioning,response,tables,article responses" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-157 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-157" class="post-157 post type-post status-publish format-standard hentry category-article-responses tag-argument tag-debate tag-faux-absolute-positioning tag-positioning tag-response tag-tables">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=157" title="Permalink to An Argument Against Faux Absolute Positioning" rel="bookmark">An Argument Against Faux Absolute Positioning</a>
+	</h2>
+	<div class="meta">
+		<p>Published June 28, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href='http://alistapart.com/articles/fauxabsolutepositioning'><img src="../wp-content/uploads/2008/06/faux-400.gif" alt="" title="faux-400" width="400" height="120" class="alignnone size-full wp-image-159" /></a></p>
+<p>A week or so ago, Netherlands-based <a href="http://alistapart.com/articles/fauxabsolutepositioning">Eric Sol published an article on <em>A List Apart</em></a> titled “Faux Absolute Positioning,” where he outlines a new system of element positioning that he has developed. Shortly afterwards, a reader wrote to me and asked my opinions on the technique. In the spirit of <a href="../index.html?p=150">continuing the fantastic conversations we’ve been having on CSSnewbie</a> recently, I thought I would respond publicly so that others might have the option of offering their opinions as well. But if you haven’t read <a href="http://alistapart.com/articles/fauxabsolutepositioning">Eric’s article</a> yet, please do so before responding, so you have the full picture and not just my interpretation of things.</p>
+<p>Mr. Sol’s development of the Faux Absolute Positioning technique was born of frustration in trying to use the two dominant positioning techniques: <a href="../index.html?p=72" title="Harnessing CSS Positioning">absolute positioning elements,</a> and floating elements. His argument against using absolute positioning for page layout is that it causes any containing elements to collapse (because the element is pulled out of the document flow), which can cause all sorts of problems. This, I will entirely agree with. </p>
+<p>However, his argument against using floated elements is that content changes can cause the width of the element to change, which can in turn wreak havoc on float-based layouts. This is partially true. Left to its own devices, for example, a 500 pixel wide column containing a 550 pixel wide image will probably ruin a float-based layout. However, in practice simply applying a rule of “overflow: hidden” to that column would have eliminated any column-resizing problems in nearly all cases, simply cutting off the side of the image when it reached the edge of the column. And considering that using Faux Absolute Positioning relies on an understanding that “the content of the boxes may overlap,” but that “it’s better to risk overlap than risk breaking the whole layout,” I don’t understand what makes using “overflow: hidden” on floated elements so detrimental or different.</p>
+<p>But that isn’t my real concern with Eric’s argument for the technique. I’m most concerned with the XHTML structure required to actually <em>implement</em> the technique. As I’ve mentioned before, <a href="../index.html?p=138" title="Find Deprecated Elements with Diagnostic CSS Highlighting">I’m a bit of a code purist.</a> I believe in using the least amount of code to the greatest effect, and this is especially true when it comes to XHTML. A CSS file can be cached and reused by the browser over an entire website, reducing the strain on a user’s bandwidth. However, each new page a user visits requires them to download an entirely new XHTML page, regardless of how similar that page is to the previous one they visited. In my mind, this is the strongest argument behind switching from presentation-heavy HTML (tables, font tags, etc) to semantic XHTML (and using CSS for presentation) in the first place.</p>
+<p>Because of that, I wince when I see the XHTML used to implement the Faux Absolute Positioning technique. Take a look at the sample offered:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div id=&quot;canvas&quot;&gt;
+  &lt;div class=&quot;line&quot;&gt;
+    &lt;div class=&quot;item&quot; id=&quot;item1&quot;&gt;
+      &lt;div class=&quot;sap-content&quot;&gt;content here&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>Does that structure look strangely familiar? It should – it’s a table, converted into divs. The “canvas” div functions as the table container, while the “line” class of divs acts as rows and the “item” divs behave as table cells. In fact, this technique actually uses an <em>additional</em> div (“sap-content”) inside of each “cell,” bloating the code even further. Compare it to this table-based reimplementation: </p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="html4strict" escaped="true" line="1">&lt;table id=&quot;canvas&quot;&gt;
+  &lt;tr class=&quot;line&quot;&gt;
+    &lt;td class=&quot;item&quot; id=&quot;item1&quot;&gt;
+      &lt;div class=&quot;sap-content&quot;&gt;content here&lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+<p>Now, I understand that there is a semantics argument to be made here. Mr. Sol probably didn’t want to use a table because, semantically speaking, a table should contain tabular data and nothing more. But the problem is, the Faux Absolute Positioning technique simply <em>reimagines tables</em> using divs and classes rather than “tr” and “td” tags. </p>
+<p>The real benefit of the technique, Eric states, is that &#8220;we can align every item to a predefined position on the grid [...] but items still affect the normal flow,&#8221; and his  insistence on thinking of elements in a page as “cells in [a] grid” is telling: the author really just wants to use a table, but can’t justify it semantically. Thus, he develops a “semantic” alternative that, instead of suffering from non-semantic code, suffers from <a href="../index.html?p=51" title="Combating Classitis with Cascades and Sequential Selectors">divitis, classitis, and code bloat</a> instead.</p>
+<p>I wrote an article a couple of weeks back on <a href="../index.html?p=150" title="A Semantic List-Based CSS Calendar">building a calendar using lists instead of tables</a> that ended up sparking a great deal of thoughtful debate of the nature of calendars, the semantic meaning of tables, and the overuse of lists in modern web design. I plan to respond to that debate more fully next week in a separate article, but one point I plan to make then is worth mentioning now: I believe in using semantic code wherever possible, but I also believe in <em>minimizing</em> code wherever possible. One of the (several) reasons I was so intrigued by the possibility of a list-based calendar is that I knew I could create it with less XHTML than a table-based calendar would require, reducing the bandwidth costs of whatever website it was implemented on. </p>
+<p>The Faux Absolute Positioning technique, by contrast, requires <em>at least as much</em> XHTML as an equally complex table would require, and may actually require significantly <em>more</em> code because of the additional div inside each “cell.” Depending on the complexity of the site using this technique, we could be talking about 15% greater bandwidth costs on every single page of the website, compared to an identical site using a table for layout. Admittedly, the website could still tout a “table-less” design, at least in the narrowest definition of the phrase. But because of its insistence on rows, columns, and a clearly defined grid, it is at least a table in spirit, and may in fact be more complex and weighty than a table would be in practice. And if a designer is utterly committed to having the rows, columns, and cell-based grid that this technique permits, I would argue that the table tag deserves a second look, if for no other reason that to reduce page size.</p>
+<p>At the end of the article, the author does admit that this technique is probably only sufficiently rewarding to be used on rather complex page layouts. But if a site’s layout has reached the level of complexity wherein the only viable options are to use a table to create a grid or <em>reinvent</em> a table to the same end, perhaps it’s the design of the site, and not the code behind the site, that should be reconsidered.</p>
+<p>Now, I don’t want to be seen as attacking Mr. Sol’s person or work. I respect the amount of time it must have taken to develop the Faux Absolute Positioning technique and the ingenuity that went into the CSS. My goal here is to simply encourage a debate on the subject. And now that I’ve had my say, I would love to hear what you think about all this.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../index.html?p=800"     class="crp_title">The Pixelize jQuery Plugin</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			23 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-2995">
+		<article id="comment-2995" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ca2f1e15dda0ca27d74475fe508ddc15?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">peter </cite><a href="comment-page-1/index.html#comment-2995"><time datetime="2008-06-28T13:29:38+00:00">Jun. 28, 2008 @ 1:29 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&gt; “it’s better to risk overlap than risk breaking the<br />
+&gt; whole layout,” </p>
+<p>Or, this techniques absurdity in the nutshell. Show me *single* reader who prefers overlapping unreadable text to readable text with layout that may be a few pixel off compared to designer&#8217;s idea.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-3000">
+		<p>Pingback: <a href='http://www.sectionforyou.info/?p=27' rel='external nofollow' class='url'>Kitchen Stools at Diner Bars at Section4U</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3027">
+		<article id="comment-3027" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0d8b67f2d91113c4709819743fb325c1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.isuckatdesign.com' rel='external nofollow' class='url'>Heather</a> </cite><a href="comment-page-1/index.html#comment-3027"><time datetime="2008-06-28T18:59:16+00:00">Jun. 28, 2008 @ 6:59 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great perspective on the original article. I read the ALA article with interest, because in time-constraint situations, I&#8217;ve fallen back to the dreaded &#8220;table&#8221; to just get something done. Whether it&#8217;s my lack of CSS knowledge or my lack of development time is a matter of debate, but if we&#8217;re using semantic code just to reinvent the table, as you argue, maybe the table wasn&#8217;t so bad to begin with.</p>
+<p>Not nested tables, shudder the thought.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3032">
+		<article id="comment-3032" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d8333ea779e4c5403687c02b54ac7304?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Justin </cite><a href="comment-page-1/index.html#comment-3032"><time datetime="2008-06-28T19:30:55+00:00">Jun. 28, 2008 @ 7:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>While I try to avoid them, I don&#8217;t think tables are necessarily bad for a significantly-complex form — the very thing inspiring Mr. Sol’s CSS technique. It’s certainly arguable that forms are tabular data.</p>
+<p>However, he does also mention that his use case involved dragging and dropping elements onto a canvas. To me, that implies that not only was the technique designed to maintain layout, it was also designed to be easily manipulable by script. I know I’ve certainly used less-than-semantic markup for scriptability in the past, and in some cases, it’s unavoidable.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3080">
+		<article id="comment-3080" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/682faadeab84b4d59ea62fd635691dbd?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.getincss.ru' rel='external nofollow' class='url'>Olga</a> </cite><a href="comment-page-1/index.html#comment-3080"><time datetime="2008-06-29T02:00:47+00:00">Jun. 29, 2008 @ 2:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yes, it&#8217;s like tables, but.. It really works.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3172">
+		<article id="comment-3172" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://css-tricks.com' rel='external nofollow' class='url'>Chris Coyier</a> </cite><a href="comment-page-1/index.html#comment-3172"><time datetime="2008-06-29T17:40:02+00:00">Jun. 29, 2008 @ 5:40 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m not sure I&#8217;d say the technique is as problematic as using tables for layout, but I agree that it&#8217;s a little heavy on wrapping divs.</p>
+<p>With a complex layout using tables, if you were to just yank out a &lt;td&gt; at the top of the layout, it would probably be a huge disaster and ruin the entire layout. The elements in a layout using this faux absolute positioning aren&#8217;t quite that fragile, you can remove them and resize them with a bit more layout resiliency.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3179">
+		<article id="comment-3179" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c64a99fbbc7785e6cf9588a8777ba083?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://nimbupani.com/blog' rel='external nofollow' class='url'>Divya</a> </cite><a href="comment-page-1/index.html#comment-3179"><time datetime="2008-06-29T18:52:15+00:00">Jun. 29, 2008 @ 6:52 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I agree with you. I think the key to the faux absolute positioning working was &#8220;overflow:hidden&#8221; which would make any &#8220;floated&#8221; element work without those bloated divs. I did not see any merit over using usual techniques.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3231">
+		<article id="comment-3231" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/21cccc253e81751405ea393ce1e8d9e5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.keanrichmond.com' rel='external nofollow' class='url'>Kean Richmond</a> </cite><a href="comment-page-1/index.html#comment-3231"><time datetime="2008-06-30T02:58:48+00:00">Jun. 30, 2008 @ 2:58 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If you know what your doing there nothing wrong with floats. Floats all the way!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3245">
+		<article id="comment-3245" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e83e686ee50c24365f17590053d7dc87?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://krijnhoetmer.nl/' rel='external nofollow' class='url'>Krijn Hoetmer</a> </cite><a href="comment-page-1/index.html#comment-3245"><time datetime="2008-06-30T05:54:17+00:00">Jun. 30, 2008 @ 5:54 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>And with tables your source order is important. With this faux positioning thingy it isn&#8217;t.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3321">
+		<article id="comment-3321" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e832fcb5f78fa10508645efd1f8f85c5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://drx.a-blast.org/~drx/' rel='external nofollow' class='url'>drx</a> </cite><a href="comment-page-1/index.html#comment-3321"><time datetime="2008-07-01T00:34:51+00:00">Jul. 1, 2008 @ 12:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The problem with &#8220;overflow: hidden&#8221; is that it cuts off overflows on all sides of the box. Usually you want to cut off the overflow only on the right side and expand the box dynamically downwards.</p>
+<p>Also, if you want to use floats with liquid layouts, most of the time you will end up with the same amount of wrapping divs.</p>
+<p>In short, this method isn&#8217;t ideal but floats suck as well :) I would much more prefer that paddings are not added to the width of a box, as it is with the current box model. If the padding would really go inside a box, it would be trivial to write stuff like</p>
+<p>width:30%;<br />
+padding: 0.5em 1em;</p>
+<p>and have the next container with 70% width float next to it. But the praised standards go in another direction. Until this works, anything is just a hack.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3440">
+		<article id="comment-3440" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cc9ea3ae6329d9e88adfba76a542735a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://kendsnyder.com' rel='external nofollow' class='url'>Ken Snyder</a> </cite><a href="comment-page-1/index.html#comment-3440"><time datetime="2008-07-01T14:56:26+00:00">Jul. 1, 2008 @ 2:56 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>One thing you didn&#8217;t consider is that Eric came up with this method to address the pains of creating apps that allow wysiwyg content building. It is very difficult to programmatically build tables to surround content that users drag to arbitrary positions.</p>
+<p>Also, as was hinted above, tables require that data be in columns with the same width in every row. Yes, you can use colspan and rowspan, but in complex layouts you&#8217;ve lost a lot of the semantic meaning of rows and columns.</p>
+<p>Eric didn&#8217;t have any great examples, but I imagine FAP is a great choice when it comes to magazine-type layouts. Sit down with a magazine or newspaper and try to slice it semantically into a grid. Then imagine that the text on that page is dynamically generated so you don&#8217;t know how much space the text will occupy.</p>
+<p>Similarly, it is hard to make magazine-type layouts with floats or absolute positioning, especially if you don&#8217;t know the exact length of the text copy.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-3442">
+		<p>Pingback: <a href='http://kendsnyder.com/archives/12-Flexible,-Grid-Like-Layouts-in-CSS.html' rel='external nofollow' class='url'>Flexible, Grid-Like Layouts in CSS - Ken Snyder</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3499">
+		<article id="comment-3499" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0b772f94d0fbd2ab5d1e774fff886846?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Rowan </cite><a href="comment-page-1/index.html#comment-3499"><time datetime="2008-07-01T20:45:14+00:00">Jul. 1, 2008 @ 8:45 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There are dozens of IE6 bugs caused by basic floats that are very difficult to work around, or require several hacks to fix. The good thing about FAP is that it completely (?) negates all these issues and it doesn&#8217;t require browser-specific or bloated CSS.</p>
+<p>FAP is best used for multi-column layouts, not for replacing tables. I can&#8217;t believe it would increase the size of your HTML by &#8220;15%&#8221;, as you only need to use it once for the overall layout. That comes to about 150 bytes of data on its own, with the CSS being roughly 500 bytes. Of course one may decide to use the technique all over their pages, but no one should need it that much.</p>
+<p>Some people don&#8217;t like having &#8220;too many&#8221; divs in their HTML, but everyone has to throw in a wrapper div here or there. Adding two or so extra wrappers won&#8217;t hurt in any significant way.</p>
+<p>In my opinion, Divitis is only a problem in cases where headings and lists (etc) are wrapped in divs instead of their respective elements.</p>
+<p>When you&#8217;re working with a flexible CMS and producing several websites every week with wildly varied layouts, you&#8217;ll be grateful when you can avoid changing the HTML and just work from stylesheets.</p>
+<p>I&#8217;ve tried virtually every type of layout over the years; tables, floats, negative margins, etc, and so far FAP has been the most stable and flexible method I&#8217;ve come across.</p>
+<p>If you don&#8217;t encounter any issues with your current layouts, then simply ignore Faux Absolute Positioning. For those who can&#8217;t put up with all the browser quirks, you should give this a try at least.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3598">
+		<article id="comment-3598" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob</a> </cite><a href="comment-page-1/index.html#comment-3598"><time datetime="2008-07-02T07:51:46+00:00">Jul. 2, 2008 @ 7:51 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great comments so far, all!</p>
+<p>I will admit that this sort of a technique would probably be a godsend if you were building a dynamic layout, wherein the pieces had to be movable by the user. I can see where this technique would make things vastly easier there. And I think Chris made a good point where ~removing~ elements from the page would be easier using this technique than with tables.</p>
+<p>However, I don&#8217;t agree that this technique is better simply because it doesn&#8217;t require as much CSS, or as many CSS-based fixes for IE. CSS files are cached: they&#8217;re loaded once by the browser, and then not downloaded again until a new version of the file comes along. That means you download a CSS file once, and you&#8217;re good for the rest of the site.</p>
+<p>By comparison, you&#8217;re stuck downloading every page of a website, regardless of how similar in XHTML they are. As such, if I&#8217;m going to have bloated code somewhere, I&#8217;d vastly prefer it in the CSS than in the XHTML, if purely for bandwidth reasons.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-3636">
+		<article id="comment-3636" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/777c0f2a34f55946b72a7987f22a6145?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jeffreyrichardson.publishpath.com' rel='external nofollow' class='url'>Jeffrey</a> </cite><a href="comment-page-1/index.html#comment-3636"><time datetime="2008-07-02T13:22:06+00:00">Jul. 2, 2008 @ 1:22 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I work at a company that offers a pretty amazing cms. When im cutting that cms there are some cases that i need to anticipate certain things that a client may do. They are putting in the content not me. I have an idea and a comp and thats it. This technique has actually came in really handy. On clients pages i dont use it on every one i used floats but when it comes to certain things sometimes its tables or nothing and im not going to put a table inside the cms where the client will be putting content. </p>
+<p>I understand what you are saying but the few times i have used this i felt a little better knowing i used css and not a table. I have nothing against tables i&#8217;ve just went through the everything in a table stage and its not pretty. Even with this extra bit of code no one who i&#8217;ve worked with has had any trouble going through the document. </p>
+<p>The one layout i did use it for all my content was a strange idea i had when i saw eric meyer slantastic.  I used that layout with Eric Sol&#8217;s faux absolute positioning. I could then style the elements how i needed them and they would be easy to use in a cms without any overlapping at the footer.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4616">
+		<article id="comment-4616" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1b3094b519daee876a12eff25adc1dec?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ShaverAssociates.net' rel='external nofollow' class='url'>Rob</a> </cite><a href="comment-page-1/index.html#comment-4616"><time datetime="2008-07-10T00:41:36+00:00">Jul. 10, 2008 @ 12:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Since you did not provide detailed working examples, I can not evaluate your clams. I&#8217;d really like to see the code you would use to create the two examples in the ALA Faux Positioning article.</p>
+<p>I do know that I can not afford the time to test my designs on every browser under the sun. Since I&#8217;m trying to write code that can dynamically generate CSS and XHTML, I&#8217;d be quite interested in your technique if it avoids all the browser dependencies and has sufficient flexibility for what I&#8217;m doing.</p>
+<p>Peace,</p>
+<p>Rob:-]</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-4875">
+		<article id="comment-4875" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/589a66b3f4b9514fd14c40d680b11c72?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.tanfa.co.uk/css/layouts/flexi_floats/' rel='external nofollow' class='url'>Suzy</a> </cite><a href="comment-page-1/index.html#comment-4875"><time datetime="2008-07-11T05:06:51+00:00">Jul. 11, 2008 @ 5:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s not quite new &#8211; similar to my own &#8220;Flexi-Floats&#8221; and <a href="http://blog.html.it/layoutgala/" rel="nofollow">http://blog.html.it/layoutgala/</a></p>
+<p>(note: the hacks in mine are no longer required either &#8211; I wrote that back in 2003/2004 when NN6 and IE/Mac were still a support issue ;))</p>
+<p>Your perspective, might also be a little skewed. When you say that this uses more divs than a table structure, it doesn&#8217;t. You include the canvas div as equivalent of the &lt;table&gt; element.. I would venture that it&#8217;s not it&#8217;s simply a wrapper div. If you were to have more than one table on the page to gain the non-nested but differing columns/grid look it would be different:</p>
+<p>[table class="line"]<br />
+[tr class="item" id="item1"]<br />
+[td class="sap-content"]content here</p>
+<p>and where is a table&#8217;s flexibility when it comes to re-ordering the columns (per Layout Gala) or the dragging flexibility the author says he needed</p>
+<p>Floats weren&#8217;t built for layout anymore than tables were, it&#8217;s a hat tip to authors like Eric that at least there&#8217;s a choice :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8378">
+		<article id="comment-8378" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9b19a1afc21996201ff19f27f72140ec?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">tZ </cite><a href="comment-page-1/index.html#comment-8378"><time datetime="2008-08-29T10:44:22+00:00">Aug. 29, 2008 @ 10:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I agree with many of things your saying here. However, there are also ways which this technique can be implemented in a purists form. The wrapper is [optional]. You can avoid the wrapper by adding the padding to the items instead. However, if you do this you will need to account for it in your margins. It all comes down to the way the technique is implemented. I&#8217;m sure every purists here has build a similar structure just not with the same intension. That is really all that technique amounts to is a structure. If you have a similar structure using block level elements you can easily implement the technique without &#8220;unsemantic&#8221; mark-up.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8985">
+		<article id="comment-8985" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4be78df81ad9ae7ff119df062e82b5fb?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Cristian Deschamps </cite><a href="comment-page-1/index.html#comment-8985"><time datetime="2008-11-27T12:33:38+00:00">Nov. 27, 2008 @ 12:33 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I really like your point of vue.</p>
+<p>I do semantic and ligher code possible, and my mantra is KISS. Keep it stupid simple.</p>
+<p>Like in physics, simple idea always win. </p>
+<p>thanks<br />
+-Cristian</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9081">
+		<article id="comment-9081" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6b481393e1830913fec451d3c60e7b9d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Debi </cite><a href="comment-page-1/index.html#comment-9081"><time datetime="2008-12-12T14:47:00+00:00">Dec. 12, 2008 @ 2:47 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have read all of the comments on the ALA article &amp; about half of the one here, but to date Eric&#8217;s FAP is the only &#8220;tableless fluid/dynamic multi column layout I&#8217;ve found that works w/o floats &#8211; something I need to reserve for content and image layout. Whenever I&#8217;ve used floats for multi column layouts, I&#8217;ve encountered numerous problems with placing images in newsletter articles, bios, etc. My only problem with it is what was mentioned in the ALA article&#8217;s discussion that editors such as Dreamweaver do not show any of the actual content (due to the negative positioning?) until you preview in the browser. I&#8217;m redesigning a site &amp; am not sure I want to do the entire site in code view only. Any suggestions?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9086">
+		<article id="comment-9086" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-1/index.html#comment-9086"><time datetime="2008-12-13T11:37:47+00:00">Dec. 13, 2008 @ 11:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Debi: I&#8217;ve heard a rumor that the latest version of Dreamweaver (CS4) uses a far superior rendering engine to its predecessors. I don&#8217;t have a copy myself, so I can&#8217;t check (I&#8217;m two versions behind now), but if so that might solve your problem.</p>
+<p>Can anyone verify that Dreamweaver CS4 can accurately display complex layouts?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9918">
+		<article id="comment-9918" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ca64c761b30b96c7eb73651c1546ee9b?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Nick </cite><a href="comment-page-1/index.html#comment-9918"><time datetime="2009-08-28T13:30:53+00:00">Aug. 28, 2009 @ 1:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The only thing you forgot to mention in your article (and I didn&#8217;t read all the response posts) is the FAP&#8217;s ability to have liquid columns. Tables cannot.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13482">
+		<article id="comment-13482" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/824c649f3014f67107908deeacbf89e3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://codey.com.au' rel='external nofollow' class='url'>ian</a> </cite><a href="comment-page-1/index.html#comment-13482"><time datetime="2011-06-29T00:15:09+00:00">Jun. 29, 2011 @ 12:15 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Now its 3 years later and if your like me your doing mobile ipad and screens which require adaptive /responsive css and flexible containers. Tables in my shop are for tables period. Not layout.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=157#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='157' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9848c0601a" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=228" title="Permalink to: jQuery-Based Popout Ad: Part 3">
+                    jQuery-Based Popout Ad: Part 3                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">The previous article in this series explained how to take CSS- and XHTML-based advertisement we had developed and animate it using the jQuery JavaScript library. Today, we're going to expand our jQuery a bit to make our ad a little bit more user-friendly. <a href="../index.html?p=228" class="more-link" title="Permalink to: jQuery-Based Popout Ad: Part 3">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=157#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 993/1084 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-25 21:43:23 by W3 Total Cache -->

@@ -1,0 +1,1087 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Show/Hide Content with CSS and JavaScript</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Show/Hide Content with CSS and JavaScript Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Resources Elsewhere: April 25 to May 02' href='../../index.html?p=111' />
+<link rel='next' title='7 Tips for Replacing the Font Tag' href='../../index.html?p=115' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=112' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,208] -->
+<meta name="description" content="Use JavaScript and CSS to quickly and easily hide content on your page, and then show it again with a click of the mouse." />
+
+<meta name="keywords" content="show hide javascript, show hide css, hide content, show content, ,advanced,css,javascript,message box,advanced techniques" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-112 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-112" class="post-112 post type-post status-publish format-standard hentry category-advanced-techniques category-javascript tag-advanced tag-css tag-javascript tag-message-box">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=112" title="Permalink to Show/Hide Content with CSS and JavaScript" rel="bookmark">Show/Hide Content with CSS and JavaScript</a>
+	</h2>
+	<div class="meta">
+		<p>Published May 5, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../../example/showhide-content/index.html" title="Click to see this technique in action."><img src="../../wp-content/uploads/2008/05/showhide-400.gif" alt="" title="" width="400" height="128" class="alignnone size-full wp-image-114" /></a></p>
+<p>There are plenty of reasons why you might feel the urge to wax verbose on your website’s front page: to prevent your users from having to click through to a new page to find your information, to avoid having to reload the page, or even to improve your front page’s SEO. But just because your front page is text-heavy doesn’t mean it all needs to be visible at once.</p>
+<p>Today’s tutorial will show you how to hide away extra bits of content using CSS and JavaScript, to be revealed at the click of a button. This is a great technique, because displaying the additional content doesn’t require a refresh or navigation to a new page and all your content is still visible to search engine bots that don’t pay any attention to CSS or JavaScript.</p>
+<p>We’ll start with structuring our XHTML appropriately: </p>
+<pre lang="html4strict" escaped="true" line="1">&lt;p&gt;...This is all visible content... 
+&lt;a href=&quot;#&quot; id=&quot;example-show&quot; class=&quot;showLink&quot; 
+onclick=&quot;showHide('example');return false;&quot;&gt;See more.&lt;/a&gt;
+&lt;/p&gt;
+&lt;div id=&quot;example&quot; class=&quot;more&quot;&gt;
+	&lt;p&gt;...This content is hidden by default...&lt;/p&gt;
+	&lt;p&gt;&lt;a href=&quot;#&quot; id=&quot;example-hide&quot; class=&quot;hideLink&quot; 
+	onclick=&quot;showHide('example');return false;&quot;&gt;Hide this content.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+<p>There are three things of importance here: the “show” anchor, the “hide” anchor, and our “hidden” div. Each has been given an ID and a class. The IDs are used by our JavaScript to locate and style the items appropriately. I’m then using the classes to set our “default” CSS. Technically you could just use the IDs the set that CSS as well, but if you wanted more than one hidden section on your page, that could get messy.</p>
+<p>You’ll notice in the code above that all of our IDs are fairly similar. This is a trick I’m using to simplify our JavaScript, as you’ll see later on down the road, so I suggest doing something similar. The class names have no relationship to the JavaScript whatsoever, and could really be whatever you wanted them to be.</p>
+<p>It’s also important to note that we’re calling our JavaScript using the “onclick” call, and passing it the name of our hidden div. Our JavaScript will use that single variable to do the rest of the work.</p>
+<p>Now that we have our XHTML in place, let’s put together our default CSS:</p>
+<pre lang="css" escaped="true" line="1">.more {
+	display: none;
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666; }
+a.showLink, a.hideLink {
+	text-decoration: none;
+	color: #36f;
+	padding-left: 8px;
+	background: transparent url('down.gif') no-repeat left; }
+a.hideLink {
+	background: transparent url('up.gif') no-repeat left; }
+a.showLink:hover, a.hideLink:hover {
+	border-bottom: 1px dotted #36f; }</pre>
+<p>I’m technically doing far more styling than is necessary here, mostly for aesthetic purposes. The only truly important style is the “display: none;” rule on our .more class. This hides our extra content by default. The rest of the CSS simply adds a border to our div (the border is hidden by the display rule, but becomes visible later) and fancied up our show/hide anchors by putting down/up arrows next to them and replacing the standard underline with a dotted border. You could style these yourself however you like, and everything would still work just fine.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>Next comes the JavaScript, which looks far more complicated than it is:</p>
+<pre lang="javascript" escaped="true" line="1">function showHide(shID) {
+	if (document.getElementById(shID)) {
+		if (document.getElementById(shID+'-show').style.display != 'none') {
+			document.getElementById(shID+'-show').style.display = 'none';
+			document.getElementById(shID).style.display = 'block';
+		}
+		else {
+			document.getElementById(shID+'-show').style.display = 'inline';
+			document.getElementById(shID).style.display = 'none';
+		}
+	}
+}</pre>
+<p>Our JavaScript is doing four things here:</p>
+<ol>
+<li>It checks to see if it can find an element with an ID that matches the variable we passed it.</li>
+<li>If so, it checks to see if our “show” link is visible (this is where the ID naming convention starts to matter).</li>
+<li>If the “show” link is visible, that means our content is still hidden. The JavaScript then hides the link and displays our hidden content.</li>
+<li>If the “show” link is hidden, that means our extra content is currently visible. So it just reverses course, displaying our link again and hiding our extra content.</li>
+</ol>
+<p>And that’s it! <a href="../../example/showhide-content/index.html">You can see a working example in action here.</a></p>
+<p>Our job has been made much simpler by a few tricksy tricks. First off, we’re using the same function to show and hide our content, which saves us a bit of coding time. Our function simply checks on the state of things: if things are hidden, it shows them, and vice-versa. </p>
+<p>Second, by using a defined schema for our element IDs (“example,” “example-show,” and “example-hide,” in our example above), we only need to pass our JavaScript a single variable. It then uses that variable to find all of our other elements and style them appropriately.</p>
+<p>And finally, we put our “hide this content” anchor <em>inside</em> the hidden div. This means that we never have to set its display property: it’s hidden when the container is hidden, and visible when the container is. That saves us two lines of JavaScript and at least one line of CSS.</p>
+<p>This technique could be used in loads of situations. Say for example that you have a WordPress blog and the front page shows excerpts instead of the full article. You could use this technique to have the whole article on the front page for the search engines to find, visible to your users at the click of a button. Or maybe you have a complex form that could use some detailed in-page explanation, but you don’t always want the help content visible, eating up real estate when some users already know what to do. Or&#8230; well, anything, really. Let me know if you come up with any creative uses!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			132 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-13018">
+		<article id="comment-13018" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/de7f488a08880a3a3914e2ad79be1913?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.midian.cz/' rel='external nofollow' class='url'>Filip</a> </cite><a href="index.html#comment-13018"><time datetime="2010-10-11T16:44:41+00:00">Oct. 11, 2010 @ 4:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Rob!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13074">
+		<article id="comment-13074" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8cc33c7562fafa5e7122e1cb6faa4534?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.punarvasu.org' rel='external nofollow' class='url'>Punarvasu</a> </cite><a href="index.html#comment-13074"><time datetime="2010-11-04T00:59:16+00:00">Nov. 4, 2010 @ 12:59 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you for the script.. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13138">
+		<article id="comment-13138" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8f1c11ac7238895790234255aa4fc7c3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://programmingitch.blogspot.com' rel='external nofollow' class='url'>Mike Miller</a> </cite><a href="index.html#comment-13138"><time datetime="2010-12-06T21:38:27+00:00">Dec. 6, 2010 @ 9:38 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice article &#8211; short, sweet and to the point.  Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13171">
+		<article id="comment-13171" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c2e68925d43ba5900197b22f2e4499f3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Peter </cite><a href="index.html#comment-13171"><time datetime="2011-01-05T20:20:30+00:00">Jan. 5, 2011 @ 8:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much. This is very good knowledge indeed.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13182">
+		<article id="comment-13182" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9012c4f4afc155647adbc2f18d58f654?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.had2know.com/calculators.html' rel='external nofollow' class='url'>Sylvia</a> </cite><a href="index.html#comment-13182"><time datetime="2011-01-10T15:57:18+00:00">Jan. 10, 2011 @ 3:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is such a simple and elegant solution for making a drop down menu and cleaning up a cluttered page.  We adapted this code to streamline our online calculator index. Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13189">
+		<article id="comment-13189" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b2adbe8218ecb73d2aad3399cb28dfa9?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.drinksmeister.dk' rel='external nofollow' class='url'>Bo</a> </cite><a href="index.html#comment-13189"><time datetime="2011-01-12T08:56:56+00:00">Jan. 12, 2011 @ 8:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks! worked in 5 mins. Great job!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13232">
+		<article id="comment-13232" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8be42b0584a2d3dce421dd54dab6e7f3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.loun.cz' rel='external nofollow' class='url'>Tom</a> </cite><a href="index.html#comment-13232"><time datetime="2011-02-01T07:06:30+00:00">Feb. 1, 2011 @ 7:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It works fine. Thank you!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13274">
+		<article id="comment-13274" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5645b73a8b67964faa12a6f634e87c08?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">John </cite><a href="index.html#comment-13274"><time datetime="2011-02-16T10:18:19+00:00">Feb. 16, 2011 @ 10:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>On our site the page opens with the hidden text as visible.  When I click &#8220;Hide this content&#8221; it does hide.</p>
+<p>How can I provide a link that opens the page with the text that is supposed to be hidden actually hidden when the page opens?  Thx&#8230;JD</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13279">
+		<article id="comment-13279" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2606deac96f4f85c2be0f816c0f40174?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://techadictos.com' rel='external nofollow' class='url'>tech</a> </cite><a href="index.html#comment-13279"><time datetime="2011-02-21T22:54:54+00:00">Feb. 21, 2011 @ 10:54 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>excelent tip! thanks a lot for sharing!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13308">
+		<article id="comment-13308" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1c84f332b9a07b81659cd8f67aef39d0?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.blog.bdnetsoul.com' rel='external nofollow' class='url'>Tamim</a> </cite><a href="index.html#comment-13308"><time datetime="2011-03-09T16:28:55+00:00">Mar. 9, 2011 @ 4:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>nice site..thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13391">
+		<article id="comment-13391" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0ff371b2fba99002481cf09e99f5d4fa?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ladybugseo.com' rel='external nofollow' class='url'>seochick</a> </cite><a href="index.html#comment-13391"><time datetime="2011-04-20T17:35:15+00:00">Apr. 20, 2011 @ 5:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I am afraid I will blow up my site &#8211; where do I insert the code mentioned above? If I am using wordpress, do I go into my style.css or in the php files in header.php and add the javascript? I would appreciate any help!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13403">
+		<p>Pingback: <a href='http://www.socialsignal.com/blog/rob-cottingham/want-stop-election-night-tweeting-appeal-online-culture' rel='external nofollow' class='url'>Want to stop election-night tweeting? Appeal to online culture | Social Signal</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13405">
+		<article id="comment-13405" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/73b98222657e4eaabca7a354187ac522?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jasong-designs.com' rel='external nofollow' class='url'>Jason Gonzalez</a> </cite><a href="index.html#comment-13405"><time datetime="2011-04-28T20:09:32+00:00">Apr. 28, 2011 @ 8:09 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>First I wanted to say that this is an awesome script.</p>
+<p>I had the same issue as others above when I applied the script to a heading tag (an h2). In Firefox 3.6 and Internet Explorer 7, it rendered correctly, but in Chrome the h2 tag was jumping down to a new heading line below when showing the hidden content.</p>
+<p>I may have found a solution. In the if/else statement in the javascript code, I changed the display to block under the else part of the statement:</p>
+<p>else {<br />
+document.getElementById(shID+&#8217;-show&#8217;).style.display = &#8216;inline&#8217;;<br />
+&#8230;<br />
+}</p>
+<p>changed to</p>
+<p>else {<br />
+document.getElementById(shID+&#8217;-show&#8217;).style.display = &#8216;block&#8217;;<br />
+&#8230;<br />
+}</p>
+<p>I tested in all three browsers and this seemed to work.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13410">
+		<article id="comment-13410" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/17363d5a9bf290e02e559c0b94b75d0b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">senan </cite><a href="index.html#comment-13410"><time datetime="2011-05-01T07:48:41+00:00">May. 1, 2011 @ 7:48 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great<br />
+thnkx</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13415">
+		<article id="comment-13415" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/589c6390ebffda351fa822c2a87b6a14?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.google.com/' rel='external nofollow' class='url'>Wimpy</a> </cite><a href="index.html#comment-13415"><time datetime="2011-05-04T03:31:26+00:00">May. 4, 2011 @ 3:31 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>And I thought I was the sensilbe one. Thanks for setting me straight.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13445">
+		<article id="comment-13445" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7bafade2443f7a965dc2f4abe53db9c3?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ledlightingnet.com' rel='external nofollow' class='url'>shangshi119</a> </cite><a href="index.html#comment-13445"><time datetime="2011-05-19T12:44:33+00:00">May. 19, 2011 @ 12:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi there, I have set this up on multiple items on one page. I was wondering, is there to make it so that if say I click on List 1 and it shows the rows, then I go to the List 2, and when I click on show, it will automatically hide the List 1? Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13453">
+		<article id="comment-13453" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e39432e2470ed923b79b3ea795168cbc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.riak.uk.com' rel='external nofollow' class='url'>Riak</a> </cite><a href="index.html#comment-13453"><time datetime="2011-05-27T08:23:55+00:00">May. 27, 2011 @ 8:23 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Wow thanks for this great tutorial just what I need. Thankyou keep up the good work. I have book marked your site.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13467">
+		<article id="comment-13467" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/18132141b82b55d60921025f747983fa?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">marwan </cite><a href="index.html#comment-13467"><time datetime="2011-06-18T05:56:50+00:00">Jun. 18, 2011 @ 5:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi , gr8 script, one comment , I tried to use an image for the view more instead of text, but when i try to hide the content the image collapses, it shrinks the image. any help greatly appreciated.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13469">
+		<article id="comment-13469" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4c4668870b266d4d82e6cba7ce5999c8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://tradestationsystem.info' rel='external nofollow' class='url'>tradestation trading systems</a> </cite><a href="index.html#comment-13469"><time datetime="2011-06-19T04:03:17+00:00">Jun. 19, 2011 @ 4:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>32937 Trudy March 1989 tradestation automated trading</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13476">
+		<article id="comment-13476" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d86ea8d4d6f3d1d1930de70d9562a5d5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.andremoves.com' rel='external nofollow' class='url'>removals</a> </cite><a href="index.html#comment-13476"><time datetime="2011-06-22T17:27:44+00:00">Jun. 22, 2011 @ 5:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks for the tips i will use it on my site</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13477">
+		<article id="comment-13477" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d86ea8d4d6f3d1d1930de70d9562a5d5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">movers in London </cite><a href="index.html#comment-13477"><time datetime="2011-06-22T17:36:32+00:00">Jun. 22, 2011 @ 5:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great post thanks for the tips i liked it</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13490">
+		<article id="comment-13490" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d2e6922055c22ca93ab14ba35129fa6?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">pythonalex </cite><a href="index.html#comment-13490"><time datetime="2011-07-07T04:29:23+00:00">Jul. 7, 2011 @ 4:29 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you so much! It work at 100%!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13507">
+		<article id="comment-13507" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/28aff20b45478c9673dffc75672fcde6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">sachin </cite><a href="index.html#comment-13507"><time datetime="2011-07-18T01:22:44+00:00">Jul. 18, 2011 @ 1:22 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Rob,<br />
+This is very simple and nice script to use&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13545">
+		<article id="comment-13545" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/617c16a85df29a32dcf51c462b62a305?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.Jelbee.tk/' rel='external nofollow' class='url'>JeLBee</a> </cite><a href="index.html#comment-13545"><time datetime="2011-08-07T17:44:36+00:00">Aug. 7, 2011 @ 5:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Is it possible to show the first line sentence when hiding the content then show the full text when showing the whole content of a div?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13558">
+		<article id="comment-13558" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b3b3d6590b49fd09d0d9cd70f31b3f64?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://freyalalau.nl' rel='external nofollow' class='url'>Freya</a> </cite><a href="index.html#comment-13558"><time datetime="2011-08-17T15:01:53+00:00">Aug. 17, 2011 @ 3:01 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>Great short script, thank you!<br />
+But is there an easy way to show the content by default instead of hide it?</p>
+<p>Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13569">
+		<p>Pingback: <a href='http://www.seekphp.com/how-to-reveal-information-when-clicking-on-a-buttontext/' rel='external nofollow' class='url'>How to reveal information when clicking on a button/text? | SeekPHP.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13614">
+		<article id="comment-13614" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a9c35178c309236733d060adc2eb58d7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://dimosnovakis.gr/' rel='external nofollow' class='url'>Dimos Novakis</a> </cite><a href="index.html#comment-13614"><time datetime="2011-10-05T10:55:52+00:00">Oct. 5, 2011 @ 10:55 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you! Wotking great for me. Just used it in my website&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13635">
+		<article id="comment-13635" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/028c29552d566c5882c7d7aa50d71e10?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.temptationsdirect.co.uk' rel='external nofollow' class='url'>Stephen</a> </cite><a href="index.html#comment-13635"><time datetime="2011-10-23T06:33:53+00:00">Oct. 23, 2011 @ 6:33 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>Great article and it is working great. However I am trying to make a modification where the content is shown by default and the user then has the option of hiding it.</p>
+<p>Any ideas?</p>
+<p>Steve</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13641">
+		<article id="comment-13641" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/83fd77aea1af74f2e51305fa914a944a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.chatswoodpilates.com.au' rel='external nofollow' class='url'>Andrew</a> </cite><a href="index.html#comment-13641"><time datetime="2011-10-28T00:38:27+00:00">Oct. 28, 2011 @ 12:38 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>I have implement the code on this page <a href="http://www.chatswoodpilates.com.au/about" rel="nofollow">http://www.chatswoodpilates.com.au/about</a> but for some reason it is always expanded by default and shows the full page text.</p>
+<p>Click Show less info at the bottom works so not sure why this would not.</p>
+<p>Any help would be appreciated.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-13642">
+		<article id="comment-13642" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-13642"><time datetime="2011-10-28T08:05:57+00:00">Oct. 28, 2011 @ 8:05 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Andrew, it looks like you&#8217;re missing the one critical line of CSS: the &#8220;display: none&#8221; rule on the .more class. This is what hides the additional content by default. Once you add that, everything should be great!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13645">
+		<article id="comment-13645" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/83fd77aea1af74f2e51305fa914a944a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Andrew </cite><a href="index.html#comment-13645"><time datetime="2011-10-29T18:36:36+00:00">Oct. 29, 2011 @ 6:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank Rob that fixed it.</p>
+<p>Strangely enough I had copied the code from the example above which did contain:</p>
+<p>.more {	display: none;</p>
+<p>but I had to take the space out next to &#8220;none&#8221; for it to work:</p>
+<p>.more {<br />
+	display:none;</p>
+<p>Thanks again ;&gt;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13651">
+		<article id="comment-13651" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/471bda4195f518d42d83b6e130bbf72e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.100webhosting.com' rel='external nofollow' class='url'>Jasmine</a> </cite><a href="index.html#comment-13651"><time datetime="2011-11-03T04:38:58+00:00">Nov. 3, 2011 @ 4:38 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Wow, great tips. I am designing a page, where I need to hide a button by default, and only displays it when user enters something in a text box. I am using part of your code here. Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13665">
+		<article id="comment-13665" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/db7d426e4b32e76be43a62824eba5c04?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Amber </cite><a href="index.html#comment-13665"><time datetime="2011-11-09T17:13:54+00:00">Nov. 9, 2011 @ 5:13 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you so much. This has been so very helpful. I don&#8217;t actually know how to write code but can edit it well enough to make it work if I have a starting point. I was hoping to have sub-menus hidden too, and though my mind is completely warped now, I was able to modify this to do sub-items too, so there were hidden items to show within each hidden item. Thanks so much!!! You are awesome!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13847">
+		<article id="comment-13847" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0cfd98301405c41075c14dddd2ed58eb?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://currentcouponcodes.org/hostmonster-coupon/' rel='external nofollow' class='url'>HostMonster Coupon</a> </cite><a href="index.html#comment-13847"><time datetime="2011-11-10T10:58:42+00:00">Nov. 10, 2011 @ 10:58 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>What did you use to design your blog? It&#8217;s really awesome can you send me an email and let me know?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13868">
+		<article id="comment-13868" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/90ea7f2b91d41cb41acfae0367b25d46?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">jeya </cite><a href="index.html#comment-13868"><time datetime="2011-12-01T00:23:51+00:00">Dec. 1, 2011 @ 12:23 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,</p>
+<p>Thanks for your code.. it was awesome&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13973">
+		<article id="comment-13973" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7aa79ba606ca529d420b01e094afc618?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://healingscents.info' rel='external nofollow' class='url'>Michael Hembree</a> </cite><a href="index.html#comment-13973"><time datetime="2012-02-11T17:30:57+00:00">Feb. 11, 2012 @ 5:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This was an excellent article and very easy to implement. I am a complete noob to writing javascript, but I found an improvement for use on my website. I had lengthy bit of hidden text that when shown, read, and hidden again, would force the user to scroll back up. I discovered the window.scrollTo() method and added to the end of the else statement. Now the window automatically scrolls back up when the text is hidden again. Really Cool!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13986">
+		<article id="comment-13986" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2ff57bf2af006c5a93f324f70fa2f199?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">chuong </cite><a href="index.html#comment-13986"><time datetime="2012-02-17T21:11:19+00:00">Feb. 17, 2012 @ 9:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I really like your tutorial. Very easy to implement. I was wondering if there is a way to show the content first and then click on the link to hide it.</p>
+<p>The reason is that I am designing a website with a full screen slideshow running in the background. I want the content to load along with the background, then if the visitors just want to see the background then they can click on hide content button. </p>
+<p>I&#8217;ve been try to figure this out but am not able to.</p>
+<p>Thanks,<br />
+Chuong</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14035">
+		<article id="comment-14035" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e42736ee8f9f1cf49e9f54a41ea58bae?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Brett </cite><a href="index.html#comment-14035"><time datetime="2012-03-26T16:01:17+00:00">Mar. 26, 2012 @ 4:01 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>First of all, thanks for the tutorial. It is an elegant solution for hiding multiple lists, and I have used it on my site for several months now to hide separate category lists in my navigation menu.</p>
+<p>I did have one question: is there an easy way to write and read a cookie so that the user&#8217;s preference of show/hide for a given list can be remembered across pages on my site (i.e. I&#8217;m using it on a navigation box that remains the same) or when the current page is refreshed?</p>
+<p>Thanks!<br />
+Brett</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14066">
+		<article id="comment-14066" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/255dff88a4ce57d38af063cbe267daa5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://javiermayor.es' rel='external nofollow' class='url'>Javimayor</a> </cite><a href="index.html#comment-14066"><time datetime="2012-04-18T05:08:45+00:00">Apr. 18, 2012 @ 5:08 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Excellent post, simply and very functional. Thanks a lot from spain</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14068">
+		<article id="comment-14068" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d3b34206d8259402984ccebde3bb9e13?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://crosswordsguru.com' rel='external nofollow' class='url'>Crossword solver</a> </cite><a href="index.html#comment-14068"><time datetime="2012-04-22T10:00:19+00:00">Apr. 22, 2012 @ 10:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank for this script. I just discover this website :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14085">
+		<article id="comment-14085" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5792320554488a7c2cc1d3d6dbca036f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mindprice.com' rel='external nofollow' class='url'>Martin</a> </cite><a href="index.html#comment-14085"><time datetime="2012-05-08T14:40:40+00:00">May. 8, 2012 @ 2:40 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thank you very much for the simply script. I was confused for using multiple link. but after read more, all you need to make a different with (example-show, example-hide, example)<br />
+into (example1-show, example1-hide, example1)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14135">
+		<p>Pingback: <a href='http://hkjrltt.wordpress.com/2012/06/11/show-and-hide-divs/' rel='external nofollow' class='url'>Show and Hide Div&#8217;s &laquo; Harriet&#039;s Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14137">
+		<article id="comment-14137" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0f016d9ad2a1023b83c0aed3f16442c7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Yoxi </cite><a href="index.html#comment-14137"><time datetime="2012-06-12T09:10:18+00:00">Jun. 12, 2012 @ 9:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much! Great feature made simple! Cooool!  ;o))</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14141">
+		<article id="comment-14141" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/53de1ba0e71f37ecc5563b2831b26611?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Len Humbird </cite><a href="index.html#comment-14141"><time datetime="2012-06-14T12:14:42+00:00">Jun. 14, 2012 @ 12:14 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Question: How do you make this default as show, rather than hide? I&#8217;ve been switching lines around trying to understand how it works, but no avail.</p>
+<p>Thanks for the great javascript and css. I tested it out and it works great. Going to use it for my personal resume and samples website.</p>
+<p>LH.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14164">
+		<article id="comment-14164" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9c40e4fee6ceda6920b468cfa1683ea4?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Harsh </cite><a href="index.html#comment-14164"><time datetime="2012-07-05T04:50:09+00:00">Jul. 5, 2012 @ 4:50 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yuppi&#8230;&#8230; Thanks for sharing such a good and nice script and CSS.. it works great and easy to implement. i put in a website which i m making for client and it looks too gud&#8230; Thanks again&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14170">
+		<article id="comment-14170" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c2313f8b2284d3eb620d07733fb21d89?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.visitorbazaar.com' rel='external nofollow' class='url'>rk</a> </cite><a href="index.html#comment-14170"><time datetime="2012-07-13T07:03:05+00:00">Jul. 13, 2012 @ 7:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I like this<br />
+-www.visitorbazaar.com</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14186">
+		<article id="comment-14186" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f77edfd8417dd6bc8b5a33e78ace684c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://listtag.com' rel='external nofollow' class='url'>mick</a> </cite><a href="index.html#comment-14186"><time datetime="2012-07-29T04:16:09+00:00">Jul. 29, 2012 @ 4:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>As Martin first said, in order to make multiple show-hide links:</p>
+<p>Take all the keywords &#8220;example&#8221;, and change them to &#8220;example1&#8243;. For the next show-hide link, change all the &#8220;example&#8221; to &#8220;example2&#8243; and so forth.</p>
+<p>I&#8217;d like to prevent the link from hiding, but am unsure of how to properly do that. Thank you cssnewbie this script is simply marvelous.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14187">
+		<article id="comment-14187" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/edfcef807a35a1ffacaad0d594d470ba?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://lasve.com' rel='external nofollow' class='url'>mick</a> </cite><a href="index.html#comment-14187"><time datetime="2012-07-29T04:44:31+00:00">Jul. 29, 2012 @ 4:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I sort of figured out how to keep the link</p>
+<p>if (document.getElementById(shID+&#8217;-show&#8217;).style.display != &#8216;none&#8217;) {<br />
+         document.getElementById(shID+&#8217;-show&#8217;).style.display != &#8216;none&#8217;;</p>
+<p>Just add another ! which was previously &#8220;style.display = &#8216;none&#8217;;&#8221;</p>
+<p>The only problem I&#8217;m getting with this is the hide link button then doesn&#8217;t function. Any ideas?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14201">
+		<p>Pingback: <a href='http://community.epages.com/help-how-do-i/3695-short-text.html#post27976' rel='external nofollow' class='url'>short text</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14252">
+		<article id="comment-14252" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d539aecb817900b8b3703904707e28d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.pnrenquiry.in' rel='external nofollow' class='url'>pnr status</a> </cite><a href="index.html#comment-14252"><time datetime="2012-09-11T06:59:04+00:00">Sep. 11, 2012 @ 6:59 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good tutorial.I use jquery which is more simple and compact than javascript.This is my code:</p>
+<p>$(&#8216;#read_more&#8217;).click(function(){<br />
+    $(&#8216;#my_text&#8217;).toggleClass(&#8216;ellipsis&#8217;);<br />
+});​<br />
+This is my css:<br />
+.ellipsis {<br />
+    white-space: nowrap;<br />
+    overflow: hidden;<br />
+    text-overflow: ellipsis;<br />
+    -o-text-overflow: ellipsis;<br />
+    -moz-binding: url(&#8216;http://seancannon.com/_test/ellipsis.xml#ellipsis&#8217;);<br />
+}</p>
+<p>#my_text {<br />
+    font-family:arial;<br />
+    color:#333;<br />
+    font-size:10px;<br />
+    width:80%;<br />
+}</p>
+<p>#read_more {<br />
+    border:1px solid #000;<br />
+    background-color:#CCC;<br />
+    cursor:pointer;<br />
+    width:100px;<br />
+    text-align:center;<br />
+}​</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="../comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"><a href="../../index.html?p=112#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='112' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="73a3f382ab" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=418" title="Permalink to: Reader Response: A Simple, Streamlined E-Commerce Solution">
+                    Reader Response: A Simple, Streamlined E-Commerce Solution                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Today I come to you with my arms wide open &mdash; and my shoulders caught somewhere between a slump and a shrug. I've been tearing my hair out over the last couple of months looking for the perfect ecommerce solution. I've come up short. <a href="../../index.html?p=418" class="more-link" title="Permalink to: Reader Response: A Simple, Streamlined E-Commerce Solution">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1525/1688 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:11:11 by W3 Total Cache -->

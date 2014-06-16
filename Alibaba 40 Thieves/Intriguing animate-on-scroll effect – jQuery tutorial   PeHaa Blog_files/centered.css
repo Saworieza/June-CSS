@@ -1,0 +1,6 @@
+#top-menu, #main-menu, #subcat-menu, #middle, #footer, #copyright, #header{
+	margin: 0 auto;
+}
+#header {
+	padding:0;
+}

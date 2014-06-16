@@ -1,0 +1,21 @@
+
+
+.header {
+	position: relative;
+	margin-bottom: 10px;
+}
+	.header h1, .header h1 a {
+		display: block;
+	}
+
+.navigation {
+	position: relative;
+	padding-top: 10px;
+}
+	.navigation ul {
+		line-height: 30px;
+		height: 30px;
+	}
+        .navigation ul li {
+            margin: 0 15px;
+        }

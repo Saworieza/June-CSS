@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tab-Based Navigation in Six (or Seven) Easy Steps</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Tab-Based Navigation in Six (or Seven) Easy Steps Comments Feed" href="../../tab-based-navigation/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Great Articles Elsewhere: February 08 to February 15' href='../../index.html?p=35' />
+<link rel='next' title='Intelligent Navigation Bars with JavaScript and CSS' href='../../index.html?p=33' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../../index.html?p=32' />
+<link rel='shortlink' href='../../index.html?p=32' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,216] -->
+<meta name="description" content="Navigation bars are the signposts of the web world: we take them for granted because of their ubiquity, but we’d all have a much harder time getting a" />
+
+<meta name="keywords" content="navigation" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-32 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-32" class="post-32 post type-post status-publish format-standard hentry category-navigation">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=32" title="Permalink to Tab-Based Navigation in Six (or Seven) Easy Steps" rel="bookmark">Tab-Based Navigation in Six (or Seven) Easy Steps</a>
+	</h2>
+	<div class="meta">
+		<p>Published February 18, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src='../../wp-content/uploads/2008/02/tab-based-navigation.gif' alt='example of tab-based navigation' /></p>
+<p>Navigation bars are the signposts of the web world: we take them for granted because of their ubiquity, but we’d all have a much harder time getting around without them. On most websites, nav bars hold a position of honor near the very top of the page, meaning they’re one of the first things your users see upon entering your site. As such, there’s a lot of pressure on navigation bars to look clean, act sophisticated, and ply the client’s wife with small talk and Manhattans while you close the deal.</p>
+<p>Because of all that pressure, a lot of designers turn to the Tools of Yesteryear to ensure their navigation looks exactly the way they expect it to. Table cells, flash buttons, images, and (shudder) image maps make far too common an appearance at the top of otherwise respectable websites.</p>
+<p>But you don’t need all that! Here’s a simple tutorial on how to create a perfectly respectable tabbed navigation bar with clean, happy XHTML and a few lines of CSS. I’m using tabs because I’m fond of them, but you could adapt these techniques to create whatever sort of navigation you’d like.</p>
+<p>We’ll start with an unordered list, like so:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul id="nav"&gt;
+	&lt;li&gt;&lt;a href="/about/"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="/contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="/archives/"&gt;Our Archives&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="/free/"&gt;Free Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>Why an unordered list? Well, because when you get right down to it, what is a nav bar but a list of links, given in no semantically vital order? Nothing, I tell you. Nothing. Once we have our list, we <a href="../../example/tab-based-navigation/index.html?example=1">have a page that looks something like this.</a> I’ve applied a couple other styles to my body tag (moved the text away from the edges, set a font family, and given my page a top border), but as you can see, our navigation list is Plain Jane.</p>
+<p>The next thing we’ll need to do is move our navigation to where we want it. I want my tabs to look like they’re coming out of that border I’ve applied to the body, so let’s move the list to the top right corner:</p>
+<pre lang="css" escaped="true" line="1">ul#nav {
+	position: absolute;
+	top: 10px;
+	right: 0; }</pre>
+<p>The “position: absolute;” rule pulls our list out of the normal flow of the document so that we can put it wherever we want. I then use a couple of other rules to move it 10 pixels from the top (i.e., the width of my border) and place it right along the right side of the page. If you wanted your navigation on the left, a rule of “left: 0;” would do the trick. </p>
+<p>But <a href="../../example/tab-based-navigation/index.html?example=2">our list still looks like a list</a> (in everything but IE), and we can’t have that. The first step along the road to total list domination is to remove the margins, padding, and bullets that make our list so list-like. We’ll append our previous rule, so it now reads thusly:</p>
+<pre lang="css" escaped="true" line="1">ul#nav {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0; }</pre>
+<p>This is fairly straightforward: the “list-style” rule removes the bullets from our list, and then we set our margins and padding to zero to make the list fit snug against our top border, <a href="../../example/tab-based-navigation/index.html?example=3">as you can see here.</a></p>
+<p>Next up, we’ll put our list items in a single horizontal row. This is accomplished with a single rule:</p>
+<pre lang="css" escaped="true" line="1">ul#nav li {
+	float: left; }</pre>
+<p><a href="../../example/tab-based-navigation/index.html?example=4">As you can see,</a> our list items are now arranged horizontally. Now let’s use some CSS magic to make them look a little more like tabs:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">ul#nav li a {
+	display: inline;
+	float: left;
+	padding: 8px 5px 3px 5px;
+	margin-right: 5px;
+	background-color: #034a7f; }</pre>
+<p>We’re modifying the anchor tag here instead of the &lt;li&gt; tag for one primary reason: we want the entire tab to act as a link, not just the text portion. By applying our padding and background color to the anchor tag instead of the list item, we make our entire tab clickable. <a href="../../example/tab-based-navigation/index.html?example=5">You can see the effect here. </a></p>
+<p>Oh, and that bit at the top about displaying inline and floating left? Well, that’s what we in the biz like to call a “hack.” The two rules are working together to accomplish a single task: to make Internet Explorer 6 play nicely. The “float: left” property reminds IE6 that we want our clickable area to take up all the space we’ve given it, not just the text part – without this statement, only the text (and not the whole tab) is clickable in IE. But floating the links also introduces some weird spacing problems in IE: the browser suddenly decides to start doubling the size of our margins (<a href="http://www.positioniseverything.net/explorer/doubled-margin.html">more on that can be found here</a>). But the “display: inline” rule reminds Internet Explorer that we really want all these elements in a snug little row, so no extra margin gets inserted.</p>
+<p>Of course, after all that work our tabs are still a little tough to read, so let’s apply a couple more styles to our links:</p>
+<pre lang="css" escaped="true" line="1">ul#nav li a {
+	display: inline;
+	float: left;
+	padding: 8px 5px 3px 5px;
+	margin-right: 5px;
+	background-color: #034a7f;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none; }</pre>
+<p>This change is basic, but effective. I set the text color to white, the font weight to bold, and used “text-decoration: none;” to remove the underline from our tabs. <a href="../../example/tab-based-navigation/index.html?example=6">The change is a big improvement.</a></p>
+<p>Now, we could be done here, but I like to add a touch of interactivity to my tabs. Another benefit of making the tabs out of our anchor tags is that anchor tags respond to the :hover state in <em>all</em> browsers&#8230; including Internet Explorer (even though it ignores it everywhere else). So let’s add some style to our hover states:</p>
+<pre lang="css" escaped="true" line="1">ul#nav li a:hover {
+	padding-top: 12px;
+	background-color: #075a97; }</pre>
+<p>And just like that, <a href="../../example/tab-based-navigation/index.html?example=7">our navigation bar responds to interaction.</a> Hover your cursor over the tabs and watch how they drop down and change color in response to your every whim. That little touch of interactivity helps ensure your users know exactly what they’re clicking on, and adds a touch of sophistication to the top of your page. And better still, the tabs (and text within) grow and shrink automatically when your users change the page’s text size – I’d like to see an image map do that! With these simple styles in your bag of tricks, your client’s wife doesn’t stand a chance.</p>
+<p>If you found this post useful, <strong>watch for a follow-up article later in the week</strong>, where I’ll show you how to make your navigation elements “self-aware” with just a touch of JavaScript and a couple extra CSS rules. If that sounds interesting, <a href="../../about/feed/index.html">subscribe to the feed.</a> If that sounds scary, you’ve watched too many Terminator movies.</p>
+<p><strong>Update:</strong> You can <a href="../intelligent-navigation/index.html">read the second article in this two-part series here.</a></p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			15 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-58">
+		<article id="comment-58" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d8333ea779e4c5403687c02b54ac7304?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Justin </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-58"><time datetime="2008-02-18T14:26:46+00:00">Feb. 18, 2008 @ 2:26 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How many Terminator movies are too many?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-59">
+		<article id="comment-59" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d7a43d4370304424204a6a58f49d524a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob</a> </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-59"><time datetime="2008-02-18T19:39:15+00:00">Feb. 18, 2008 @ 7:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Well, I&#8217;d say that if you have to ask the question, it&#8217;s probably too many. :) But I promise the technique itself, while cool, isn&#8217;t too dangerous, and the odds of it leading to intelligent killer machines rampaging through time is really quite slim.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-162">
+		<article id="comment-162" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4e7edba17dee4c2f7f09071ae5e82d8f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">kenny </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-162"><time datetime="2008-03-02T18:50:56+00:00">Mar. 2, 2008 @ 6:50 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi this is all good but.. just using a php script </p>
+<p>is a lot simpler</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-163">
+		<article id="comment-163" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4e7edba17dee4c2f7f09071ae5e82d8f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">kenny </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-163"><time datetime="2008-03-02T18:51:35+00:00">Mar. 2, 2008 @ 6:51 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>//</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-246">
+		<article id="comment-246" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/41de1f825fe79ecd8dbc502d6565ada1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Another_Rob </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-246"><time datetime="2008-03-06T05:43:58+00:00">Mar. 6, 2008 @ 5:43 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very useful, thank you.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4492">
+		<article id="comment-4492" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4b82a79e3f4c970f994461832be83d8f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sh </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-4492"><time datetime="2008-07-09T02:23:29+00:00">Jul. 9, 2008 @ 2:23 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank u so much! It worked fantastically!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9469">
+		<article id="comment-9469" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/690b099967694b1d387c533582273f69?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://harbour-side.co.uk' rel='external nofollow' class='url'>Revision</a> </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-9469"><time datetime="2009-03-12T19:19:04+00:00">Mar. 12, 2009 @ 7:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I wonder if one misunderstanding leads to another. The code can more properly be written as:</p>
+<p>ul#nav {<br />
+	position: absolute;<br />
+	top: 10px;<br />
+	right: 0;<br />
+	list-style: none;<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	overflow: auto;<br />
+	}</p>
+<p>ul#nav li {<br />
+	float: left;  }</p>
+<p>ul#nav li a {<br />
+/*	display: inline;<br />
+	float: left;*/<br />
+	display: block;<br />
+	padding: 13px 5px 7px 5px;<br />
+/*	line-height: 2em;*/<br />
+	margin-right: 5px;<br />
+	background-color: #034a7f;<br />
+	color: #fff;<br />
+	font-weight: bold;<br />
+	text-decoration: none; }</p>
+<p>Where it starts to get skewed with this attempt create a horizontal menu is the missing [overflow: auto;] declaration on the ul element. This declaration forces the ul parent to wrap around the floated li children, the use of the succeeding float of the a element is then not required (actually gets in the way in some browsers). And why is the [display: inline;] declaration there I wonder?</p>
+<p>Now, the a element (normally an inline element) can usefully get the [display: block] declaration added. This then allows vertical settings (margins, padding etc.) to apply properly. Is this why line-height was included &#8211; because padding was not giving the required vertical spacing? I don&#8217;t know but set the top and bottom padding values as shown and line-height setting is redundant.</p>
+<p>To end: in this example, because the ul element has [position: absolute;] which takes it out of the normal document flow, then [overflow: auto;] is not needed but I included it for completeness.<br />
+Regards<br />
+Revision</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9470">
+		<article id="comment-9470" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/690b099967694b1d387c533582273f69?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://harbour-side.co.uk' rel='external nofollow' class='url'>Revision</a> </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-9470"><time datetime="2009-03-14T00:22:10+00:00">Mar. 14, 2009 @ 12:22 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Couldn&#8217;t rest until I worked out why the display: inline; and line-height declarations were in the original. Well, they were there to make IE6 (and earlier) work of course! I started from a standards compliant browser and then forgot that IE6 is still being used, regrettably. So, here&#8217;s code that should work in most browsers (with the lines that fix IE6 all beginning with an underscore &#8211; meaning only IE6 reads them &#8211; all other browsers ignore them):</p>
+<p>ul#nav {<br />
+	position: absolute;<br />
+	top: 10px;<br />
+	right: 0;<br />
+	list-style: none;<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	overflow: auto;<br />
+	_height: 1%;<br />
+	}</p>
+<p>ul#nav li {<br />
+	float: left;<br />
+	}</p>
+<p>ul#nav li a {<br />
+	display: block;<br />
+	_position: relative;<br />
+	_display: inline-block;<br />
+	padding: 13px 5px 7px 5px;<br />
+	margin-right: 5px;<br />
+	background-color: #034a7f;<br />
+	color: #fff;<br />
+	font-weight: bold;<br />
+	text-decoration: none; }</p>
+<p>ul#nav li a:hover {<br />
+	padding-top: 17px;<br />
+	background-color: #075a97; }</p>
+<p>One final IE6 quirk. If you upload this to your host and run the file in IE6 it is fine. If you run it locally, then you may need to refresh the page before the menu will appear (tried the peekaboo fixes and they don;t work).</p>
+<p>This only applies if the menu is positioned absolutely. If it is in the normal flow, it is fine. Can anyone suggest why?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9930">
+		<p>Pingback: <a href='../../index.html?p=444' rel='external nofollow' class='url'>A Super Simple Horizontal Navigation Bar</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10034">
+		<p>Pingback: <a href='http://css.duckzland.info/?p=56' rel='external nofollow' class='url'>A Super Simple Horizontal Navigation Bar | CSS Heaven</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-11180">
+		<p>Pingback: <a href='http://informativecomputersolutions.com/mikecapson-blog/?p=316' rel='external nofollow' class='url'>Mike Capson &raquo; Blog Archive &raquo; A Super Simple Horizontal Navigation Bar</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11192">
+		<p>Pingback: <a href='http://blog.informativecomputersolutions.com/?p=316' rel='external nofollow' class='url'>Saint John Web Design | Informative Computer Solutions &raquo; Blog Archive &raquo; A Super Simple Horizontal Navigation Bar</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11209">
+		<article id="comment-11209" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/787e88ea4c1b5638162551a8b6706ee5?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.arrowheadservice.com' rel='external nofollow' class='url'>Mike</a> </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-11209"><time datetime="2010-02-11T19:18:09+00:00">Feb. 11, 2010 @ 7:18 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Not sure why but the changes you made broke it in IE, and it doesn&#8217;t respond as well in other browsers Revision. Perhaps we shouldn&#8217;t fix what isn&#8217;t broken?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13463">
+		<article id="comment-13463" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6dbe8d52e37c41597bd2b322a2e608f5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://woz.wooning-bi.nl' rel='external nofollow' class='url'>sjaak Wooning</a> </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-13463"><time datetime="2011-06-15T02:17:34+00:00">Jun. 15, 2011 @ 2:17 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It is partly working for me. The tab based menu bar looks perfect. Also the hoover works just fine. The selected also. </p>
+<p>There is just one tiny thing that irritates me a lot.<br />
+I want the menu that is selected stay selected. When i click it it is selected. But i want the menu item to be selected all the time.</p>
+<p>ai added the javascript into my masterpage but it doesn&#8217;t seem to work.</p>
+<p>can you help me out. I like the solution it looks so easy to do.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13894">
+		<article id="comment-13894" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/865106d919fadfb347f42b686726e4ce?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jason </cite><a href="../../tab-based-navigation/comment-page-1/index.html#comment-13894"><time datetime="2011-12-17T20:27:10+00:00">Dec. 17, 2011 @ 8:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>A lot of these articles are really helpful, and this one could be as well.<br />
+I am a complete newb and the examples would help me out a lot. Unfortunately, the examples are not functioning because all of the source codes and results are the same.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../../index.html?p=32#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='32' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="33b40242e9" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=225" title="Permalink to: jQuery-Based Popout Ad: Part 2">
+                    jQuery-Based Popout Ad: Part 2                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Part 2 of our series is going to build on what we accomplished last week. Namely, we’re going to take the ad we built last week and animate it, as well as provide the user with a means to open and close the ad. <a href="../../index.html?p=225" class="more-link" title="Permalink to: jQuery-Based Popout Ad: Part 2">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../../index.html?p=32#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 821/870 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:55:38 by W3 Total Cache -->

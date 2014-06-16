@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Cross-Browser Rounded Buttons with CSS3 and jQuery</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Cross-Browser Rounded Buttons with CSS3 and jQuery Comments Feed" href="cross-browser-rounded-buttons/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Test for Border-Radius Support' href='index.html?p=585' />
+<link rel='next' title='Intelligent Select Box Filtering' href='index.html?p=611' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=591' />
+<link rel='shortlink' href='index.html?p=591' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,217] -->
+<meta name="description" content="I needed to replace dozens Photoshop-generated rounded buttons with a HTML/CSS/JS equivalent. This solution is simple, clean, and works in all modern browsers." />
+
+<meta name="keywords" content="border-radius, border radius, rounded corners, rounded buttons, rounded corners ie, rounded corners css, css buttons,advanced,css,javascript,jquery,js,navigation,positioning,tutorial,advanced techniques,floats and positioning" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-591 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-591" class="post-591 post type-post status-publish format-standard hentry category-advanced-techniques category-floats-and-positioning tag-advanced tag-border-radius tag-css tag-javascript tag-jquery tag-js tag-navigation tag-positioning tag-tutorial">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=591" title="Permalink to Cross-Browser Rounded Buttons with CSS3 and jQuery" rel="bookmark">Cross-Browser Rounded Buttons with CSS3 and jQuery</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 22, 2010 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="example/cross-browser-rounded-buttons/index.html"><img src="wp-content/uploads/2010/04/rounded-corners-beauty-shot.png" alt="" title="Cross-Browser Rounded Buttons" width="500" height="175" class="alignnone size-full wp-image-592" /></a></p>
+<p>So here&#8217;s the scenario: I was tasked with replacing several dozen Photoshop-generated rounded buttons for a larger site with an HTML/CSS/JS equivalent. Prior, any time anyone wanted to change text on a button (and it seemed to happen often), a graphic designer had to fire up Photoshop, modify a file, adjust for size, output an image, and pass that file off to the person building the page. It was an involved process for something that should have been simple.</p>
+<p>So let&#8217;s make it simple!</p>
+<p>Right away I knew that I wanted to present as simple a solution for the developer as I could. I didn&#8217;t want to force them to use tons of extra markup in their HTML to pull this trick off. This was a piece of cake in modern browsers, as you&#8217;ll see in a moment. Unfortunately, this site also has a large IE user base, so I needed to account for less-modern browsers as well.</p>
+<h3>Border-Radius for Those Who Can</h3>
+<p>I decided I wanted to use border-radius for the rounded buttons for any browsers that could support it. I also decided that I wanted to create a single class, &#8220;button,&#8221; for any buttons, and it should work more-or-less the same on anchor tags, button tags, and &#8220;submit-type input tags. <span id="more-591"></span></p>
+<p>In short, my HTML should be as simple as this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;a href=&quot;link.html&quot; class=&quot;button&quot;&gt;A Button!&lt;/a&gt;
+&lt;button class=&quot;button&quot;&gt;Also A Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;button&quot; value=&quot;Das Button&quot; /&gt;</pre>
+<p>Input and button tags are admittedly tricky, as I&#8217;ve mentioned elsewhere. For this exercise we&#8217;ll ignore most of that and not worry about pixel-perfect results. Really, really close is good enough for me on this one.</p>
+<p>My CSS for those happy modern browsers looks like this:</p>
+<pre lang="css" escaped="true" line="1">.button {
+	display: inline-block;
+	line-height: 1;
+	padding: 7px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	background-color: #39c;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+input.button, button.button {
+	border: 0px none;
+}</pre>
+<p>The display: inline-block makes our button behave like a block-level element (width, height, padding and the rest), while still staying &#8220;in line&#8221;. Our border-radius is set at the bottom: 5px, all around. We use vendor-prefixed rules first, for Mozilla, Webkit, and Khtml browsers. Then we finish with the &#8220;standard&#8221; border-radius rule, which is currently supported by Opera 10.5. We also have a separate rule to remove the default border on input and button tags. The rest is just text and color styling.</p>
+<p>And just like that, we have nice rounded buttons that work in Safari, Chrome, Firefox and even the latest version of Opera! So who missed the party bus? Our old friend Internet Explorer, of course (and Opera browsers older than two months, as well). The client wasn&#8217;t comfortable giving those users square buttons, so I had to do something, and step one of that something is being able to tell which browsers can&#8217;t handle border-radius.</p>
+<h3>Sniff the Diff</h3>
+<p>This is where that <a href="index.html?p=585">test for border-radius support</a> that I built last week suddenly comes in handy. I simply include a small jQuery function, run the test, and I can now tell whether or not the browser supports border-radius (vendor prefixed or otherwise). If you missed my article last week, I&#8217;d <a href="index.html?p=585">be sure to check that out before going any further.</a></p>
+<p>With the help of my $.support.borderRadius object, I can now write some jQuery to treat those browsers that don&#8217;t support border-radius differently.</p>
+<h3>Modify the DOM</h3>
+<p>There&#8217;s no good way to fake rounded corners in Internet Explorer without resorting to images. However, that doesn&#8217;t mean we&#8217;re stuck with creating a one-size-fits-all button image and dealing with inflexibility.  Really, the only part of the button we&#8217;re worried about changing is the borders. So let&#8217;s just worry about them!</p>
+<p>We&#8217;re going to use jQuery to create a structure that looks like this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;div class=&quot;buttonwrap&quot;&gt;
+	&lt;div class=&quot;tl&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;tr&quot;&gt;&lt;/div&gt;
+	&lt;a href=&quot;link.html&quot; class=&quot;button&quot;&gt;Our Button&lt;/a&gt;
+	&lt;div class=&quot;bl&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;br&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>The buttonwrap div acts as a container for the rest of our elements, and will be relative positioned (but not moved) to turn it into a positioned parent, <a href="index.html?p=72">letting us move objects around inside it.</a> The four corner divs are then absolutely positioned on top of our button and moved to the four corners (&#8220;tl&#8221; for top-left and so on).</p>
+<p>Here&#8217;s the jQuery that gets it done:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="javascript" escaped="true" line="1">jQuery(function() {
+	jQuery.support.borderRadius = false;
+	jQuery.each(['BorderRadius','MozBorderRadius','WebkitBorderRadius','OBorderRadius','KhtmlBorderRadius'], function() {
+		if(document.body.style[this] !== undefined) jQuery.support.borderRadius = true;
+		return (!jQuery.support.borderRadius);
+	});
+});
+$(function() {
+	if(!$.support.borderRadius) {
+		$('.button').each(function() {
+			$(this).wrap('&lt;div class=&quot;buttonwrap&quot;&gt;&lt;/div&gt;')
+			.before('&lt;div class=&quot;corner tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner tr&quot;&gt;&lt;/div&gt;')
+			.after('&lt;div class=&quot;corner bl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner br&quot;&gt;&lt;/div&gt;');
+		});
+	}
+});</pre>
+<p>If the browser doesn&#8217;t support border-radius, we wrap our buttons in the buttonwrap div, then insert our four corner divs. Admittedly, we could have put all the corners in a row, but I like the idea of putting them in the same order they&#8217;ll appear visually. And sure, it&#8217;s five extra divs in our DOM&#8230; but they&#8217;re not in our HTML. I&#8217;m comfortable with that trade-off in this situation.</p>
+<p>Now we need just two more pieces: the CSS to position everything properly, and the image that will let us fake our corners. Let&#8217;s deal with the image first.</p>
+<h3>One Image to Round Them All</h3>
+<p>You&#8217;ll be amazed at how simple this turned out to be (at least, I was!). We only need one teeny tiny image to round all four of our corners.</p>
+<p>In my situation, I was dealing with dozens of buttons, some of different colors, but all on a white background. Because of that, I realized what I needed was a transparent PNG: white on the outside &#8220;background&#8221; area, and transparent on the inside to let my CSS button background color show through. And because my corners were all rounded the same amount, what I really needed in each corner was a quarter of a circle.</p>
+<p>So what I did was open up Photoshop and create a 10px by 10px image. Then I gave it a white background, used the elliptical marquee tool to draw a circle in the center, and then deleted the center out (no feathering, but with anti-aliasing). </p>
+<p><img src="wp-content/uploads/2010/04/creating-rounded-corner-image.png" alt="" title="Creating a faux rounded corner in Photoshop" width="500" height="300" class="alignnone size-full wp-image-593" /></p>
+<p>If you only had a single button color but multiple background colors, I&#8217;d still approach it the same basic way. I&#8217;d simply &#8220;select inverse&#8221; after creating my circle, delete the outside instead of the inside, and proceed the same.</p>
+<p>Once I saved the image as a 24-bit PNG, my total file size was 182 bytes. If I were using a fancier image program like Fireworks, <a href="http://mezzoblue.com/archives/2010/04/15/smaller_pngs/">I probably could have gotten the image size even smaller.</a> And admittedly, if you want the transparent PNG to work in IE6, you&#8217;ll need to use a PNG fix of some sort. But that&#8217;s outside the scope of this particular article. Google will assist in this one.</p>
+<p>Now, using the power of CSS background positioning, I can show just a quarter of that image in each of my corners. Here&#8217;s my final IE-friendly CSS:</p>
+<pre lang="css" escaped="true" line="1">.buttonwrap {
+	display: inline-block;
+	position: relative;
+	zoom: 1;
+	*display: inline;
+}
+.corner {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: transparent url(images/corner.png) no-repeat 0 0;
+}
+.tl { top: 0; left: 0; background-position: left top; }
+.tr { top: 0; right: 0; background-position: right top; }
+.bl { bottom: 0; left: 0; background-position: left bottom; }
+.br { bottom: 0; right: 0; background-position: right bottom; }</pre>
+<p><strong>Note:</strong> The &#8220;zoom&#8221; and &#8220;*display&#8221; rules above are a necessary hack that causes IE7 to mimic the inline-block property (which it does not implement correctly).</p>
+<p>So that&#8217;s it! <a href="example/cross-browser-rounded-buttons/index.html">Here&#8217;s a working example for you to try out.</a></p>
+<h3>Limitations</h3>
+<p>I&#8217;ll admit it: this solution isn&#8217;t perfect. Just pretty darn convenient for my situation. Some limitations include:</p>
+<ul>
+<li>IE6 requires a PNG fix, as I mentioned earlier.</li>
+<li>You&#8217;re stuck with either one button color, or one background color, per image. Additional classes and images could expand this, though.</li>
+<li>Corners are all the same radii.</li>
+<li>It&#8217;d be tougher (though not impossible) with a border on the button.</li>
+<li>It hasn&#8217;t made me coffee (yet).</li>
+</ul>
+<p>However, I expect this will be useful to someone else. I&#8217;ve already found two uses for it since I wrote the original code!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			87 Responses		</h3>
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-13201">
+		<p>Pingback: <a href='http://www.vitorbritto.com.br/blog/2011/01/dicas-truques-e-tutoriais-para-utilizar-css3/' rel='external nofollow' class='url'>Dicas, Truques e Tutoriais para utilizar CSS3 &raquo; vitorbritto &#8211; Visual and Interaction Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13218">
+		<p>Pingback: <a href='http://www.noupe.com/tutorial/css3-tutorials-to-brighten-up-your-day.html' rel='external nofollow' class='url'>CSS3 Tutorials to Brighten Up Your Day - Noupe Design Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13224">
+		<p>Pingback: <a href='http://diar.web.id/css3-tutorials-to-brighten-up-your-day/' rel='external nofollow' class='url'>Diar&#039;s Playground&raquo; CSS3 Tutorials to Brighten Up Your Day</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13227">
+		<article id="comment-13227" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2de524ba37e2e1786bf8d6c3a3f60b7a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Plippie </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13227"><time datetime="2011-01-31T04:44:01+00:00">Jan. 31, 2011 @ 4:44 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Why not use CSS3Pie ?<br />
+<a href="http://css3pie.com/" rel="nofollow">http://css3pie.com/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13244">
+		<article id="comment-13244" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/777c34cb19d0145f886c0e4a5a381a35?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cgbaran.com' rel='external nofollow' class='url'>Cgbaran</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13244"><time datetime="2011-02-03T12:56:08+00:00">Feb. 3, 2011 @ 12:56 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great tutorial thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13251">
+		<article id="comment-13251" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a2380dd0d20e1d9db821e2d52ab16e0e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">dpm </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13251"><time datetime="2011-02-08T20:39:27+00:00">Feb. 8, 2011 @ 8:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Has anyone actually tested this in IE6?</p>
+<p>It seems like a large fail from what I see&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13318">
+		<p>Pingback: <a href='http://furkanknyl.wordpress.com/2011/03/15/css-ile-buton-yapma/' rel='external nofollow' class='url'>Css ile buton yapma &laquo; furkanknyl</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13372">
+		<article id="comment-13372" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cd0fb9cb6461eef56a2958135b78b168?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.anuntul-online.eu' rel='external nofollow' class='url'>Bughy</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13372"><time datetime="2011-04-08T07:58:50+00:00">Apr. 8, 2011 @ 7:58 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is great Rob. It works great on some versions of IE!<br />
+@dpm : I test it, and not working good. But serios now&#8230;how many people do you think they still use IE6?? It&#8217;s old.</p>
+<p>One again: Nice JOB Rob!!!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13409">
+		<p>Pingback: <a href='http://blog.desmaksolutions.com/2011/04/css3-tutorials-to-brighten-up-your-day/' rel='external nofollow' class='url'>CSS3 Tutorials to Brighten Up Your Day - desmaksolutions.com | desmaksolutions.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13495">
+		<article id="comment-13495" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/073134d268ec1717a8f6ead5efcdccbc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Narendran </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13495"><time datetime="2011-07-14T08:25:42+00:00">Jul. 14, 2011 @ 8:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>But the rounded corner for the button is not working in IE8&#8230; Hv a look on it,&amp; get back me.</p>
+<p>Add ie.htc file for this</p>
+<p>Awaiting with regards,<br />
+Narendran,<br />
+9487693560,<br />
+Tweet me @MyNaren89.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13585">
+		<article id="comment-13585" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/29293f414e08f71a9457edf698807205?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.egermeier.com' rel='external nofollow' class='url'>Maciej Egermeier</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13585"><time datetime="2011-09-11T16:41:48+00:00">Sep. 11, 2011 @ 4:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There is a problem with this buttons on IE. If you turn on overflow:scroll on DIV where buttons are placed, DIV is scrolling content but buttons are in the same position :/</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13594">
+		<p>Pingback: <a href='http://stylishwebdesigner.com/150-excellent-css3-tutorials-to-make-you-a-stylish-web-designer/' rel='external nofollow' class='url'>150 Excellent CSS3 Tutorials To Make You A Stylish Web Designer</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13605">
+		<p>Pingback: <a href='http://www.stylishwebdesign.com/2011/09/29/great-css3-tutorials-to-help-make-you-design-a-stylish-web-site/' rel='external nofollow' class='url'>100 Great CSS3 Tutorials | Stylish Web Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13607">
+		<p>Pingback: <a href='http://www.jquery4u.com/plugins/10-jquery-enhanced-css-buttons/' rel='external nofollow' class='url'>10 jQuery Enhanced CSS Buttons | jQuery4u</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13656">
+		<p>Pingback: <a href='http://www.dreamincoloronline.com/css3-tutorials-to-enhance-your-work/' rel='external nofollow' class='url'>CSS3 Tutorials to enhance your work | Dreamincolor</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13859">
+		<p>Pingback: <a href='http://www.exceptionhandle.com/portal/scripts/javascript/20-beautiful-jquery-enhanced-css-button.htm' rel='external nofollow' class='url'>20 Beautiful jQuery Enhanced CSS Button | ExceptionHandle.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13860">
+		<p>Pingback: <a href='http://desdevweb.com/tips/tips-tricks-imrove-jquery/' rel='external nofollow' class='url'>Tips and Tricks To Imrove jQuery | DesDevWeb</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13904">
+		<p>Pingback: <a href='http://blog.e8it.net/36-best-css3-animation-demos/' rel='external nofollow' class='url'>36个精彩的CSS3动画[Demo演示] | 色落De Alex</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13905">
+		<p>Pingback: <a href='http://owebo.cn/blog/?p=262' rel='external nofollow' class='url'>[转载] 36个精彩的CSS3 动画demo演示 | 天豪军尚</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13934">
+		<p>Pingback: <a href='http://csstips.org/2012/01/12/css3%c2%a0tutorials/' rel='external nofollow' class='url'>CSS3 Tutorials &laquo; CSS Tips</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13989">
+		<article id="comment-13989" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fe1cf68062a83f700921351929119d84?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.andremoves.com' rel='external nofollow' class='url'>removals</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-13989"><time datetime="2012-02-18T04:13:57+00:00">Feb. 18, 2012 @ 4:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great info thanks for sharing it with us</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13995">
+		<p>Pingback: <a href='http://www.dzn.com/2012/02/21/19%e4%b8%aa%e5%80%bc%e5%be%97%e5%ad%a6%e4%b9%a0%e7%9a%84jquery%e5%92%8ccss%e6%8c%89%e9%92%ae%e6%95%99%e7%a8%8b/' rel='external nofollow' class='url'>19个值得学习的jQuery和CSS按钮教程 | 大智囊设计库</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14023">
+		<article id="comment-14023" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/74a702ec9871c39bde90a501b67122b7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://doubleheadeddog.com' rel='external nofollow' class='url'>ilanko</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-14023"><time datetime="2012-03-12T23:35:04+00:00">Mar. 12, 2012 @ 11:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>the demo page will turn this grate idea in to something awesome</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14030">
+		<article id="comment-14030" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/62512074c46eb7e187fed294c662a359?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.archi-arch.com' rel='external nofollow' class='url'>mahdi</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-14030"><time datetime="2012-03-20T08:52:24+00:00">Mar. 20, 2012 @ 8:52 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>your site  is perfect&#8230;</p>
+<p><a href="http://www.ghoflecad.ir" rel="nofollow">http://www.ghoflecad.ir</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-14097">
+		<article id="comment-14097" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4b113626e94f80db13529d0feb2b4740?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ahnafabid.com' rel='external nofollow' class='url'>Ahnaf</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-14097"><time datetime="2012-05-16T09:01:28+00:00">May. 16, 2012 @ 9:01 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very good tips. I was facing trouble for cross browser rounded corner.<br />
+Thank Rob.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14142">
+		<p>Pingback: <a href='http://desdevweb.com/css-2/40-jquery-css3-tutorials-techniques/' rel='external nofollow' class='url'>Informative jQuerry and CSS3 Lessons | DesDevWeb</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14234">
+		<p>Pingback: <a href='http://www.ismartop.com/wordpress/2012/08/30/%e7%84%a1%e6%96%99jquery%e3%83%9c%e3%82%bf%e3%83%b3%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3/' rel='external nofollow' class='url'>無料Jqueryボタンデザイン - ismartop blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14353">
+		<p>Pingback: <a href='http://www.zzzla.com/fen_xiang_19_ge_zhi_de_xue_xi_de_jquery_he_css_an_niu_jiao_cheng.html' rel='external nofollow' class='url'>分享19个值得学习的jQuery和CSS按钮教程 | 站长站</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14431">
+		<p>Pingback: <a href='http://www.bxjzn.com/36%e4%b8%aa%e7%b2%be%e5%bd%a9%e7%9a%84css3%e5%8a%a8%e7%94%bbdemo%e6%bc%94%e7%a4%ba/' rel='external nofollow' class='url'>36个精彩的CSS3动画demo演示 | 独孤若辉</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14434">
+		<p>Pingback: <a href='http://howtowebdesigneasily.com/2013/01/09/making_a_sphere_in_css/' rel='external nofollow' class='url'>Making a Sphere in CSS | How To Web Design Easily</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14436">
+		<p>Pingback: <a href='http://revolutionwebdesigns.co.uk/?p=107' rel='external nofollow' class='url'>Making a Sphere in CSS</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14440">
+		<p>Pingback: <a href='http://www.lunariumdesign.com/making-a-sphere-in-css/' rel='external nofollow' class='url'>Making a Sphere in CSS | Lunarium Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14471">
+		<p>Pingback: <a href='http://www.ocioi.com/57-latest-css3-technology-case-tutorial-description.html' rel='external nofollow' class='url'>57 latest CSS3 technology case tutorial description Web Page Design | Web Page Design Templates | Html5 Template</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14966">
+		<p>Pingback: <a href='http://desktop.onemac.net/2013/03/26/css3-tutorials/' rel='external nofollow' class='url'>CSS3 Tutorials</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-15514">
+		<article id="comment-15514" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b93f6693a39c97c21023b773d450c91f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jb-webs.com' rel='external nofollow' class='url'>martin</a> </cite><a href="cross-browser-rounded-buttons/comment-page-2/index.html#comment-15514"><time datetime="2013-08-13T07:37:10+00:00">Aug. 13, 2013 @ 7:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How you made this? Wow, I didn’t believe it and opened this in Internet Explorer, I made it even in 8 and wow, that works &#8211; dammed, I have to reconsider my scripts for <a href="http://jb-webs.com" rel="nofollow">http://jb-webs.com</a> &#8212; but well, thanks for this.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-15658">
+		<p>Pingback: <a href='http://thenewsblock.com/praesent-adipiscing-mi-eget-ipsum-imperdiet-elementum/' rel='external nofollow' class='url'>CSS3 Tutorials to Brighten Up Your Day | The News Block</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-15974">
+		<p>Pingback: <a href='http://smashmaterials.com/2014/20-best-css-tutorials-of-this-season/' rel='external nofollow' class='url'>20 Best CSS Tutorials of this Season | Smash Materials</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="cross-browser-rounded-buttons/comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=591#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='591' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="64fc647836" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="index.html?p=90" title="Permalink to: The CSS-Only Accordion Effect">
+                    The CSS-Only Accordion Effect                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Update: I&#8217;ve created an advanced version of this technique that works in IE6! Read more here. The Accordion Effect is fast becoming one of the... <a href="index.html?p=90" class="more-link" title="Permalink to: The CSS-Only Accordion Effect">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=591#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 960/1057 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-04-02 10:31:17 by W3 Total Cache -->

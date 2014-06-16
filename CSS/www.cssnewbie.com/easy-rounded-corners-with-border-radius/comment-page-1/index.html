@@ -1,0 +1,1023 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Easy Rounded Corners with Border-Radius</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Easy Rounded Corners with Border-Radius Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CSSnewbie Subscriber Contest!' href='../../index.html?p=203' />
+<link rel='next' title='Great Resources Elsewhere: August 1 to August 7' href='../../index.html?p=212' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=205' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,206] -->
+<meta name="description" content="The realm of CSS is a realm of boxes. However, the forthcoming CSS3 specification offers us a glimmer of hope in the form of rounded corners. And better yet, a few browsers already support rounded corners!" />
+
+<meta name="keywords" content="blockquote,border,border-radius,comment,css3,advanced techniques" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-205 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-205" class="post-205 post type-post status-publish format-standard hentry category-advanced-techniques tag-blockquote tag-border tag-border-radius tag-comment tag-css3">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=205" title="Permalink to Easy Rounded Corners with Border-Radius" rel="bookmark">Easy Rounded Corners with Border-Radius</a>
+	</h2>
+	<div class="meta">
+		<p>Published August 6, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-beauty.gif" alt="" title="rounded corners" width="400" height="187" class="alignnone size-full wp-image-206" /></a></p>
+<p>The realm of CSS is a realm of boxes. <a href="../../index.html?p=7" title="Understanding the CSS Box Model">Everything on the page is a box,</a> within a box, within a box. No wonder it&#8217;s so common for beginning CSS developers (or, in my case, poor graphic designers with too much CSS experience) to create boxy layouts!</p>
+<p>However, the forthcoming CSS3 specification offers us a glimmer of hope in the form of <strong>rounded corners</strong>. That&#8217;s right &mdash; once CSS3 is commonly supported, we&#8217;ll be able to childproof all those pointy edges and beautify the web in the process.</p>
+<p>And better yet, a few browsers already support rounded corners! As I&#8217;m writing this, you&#8217;re pretty much limited to Mozilla/Firefox and Safari 3. However, this list is bound to grow as time goes on, so it couldn&#8217;t hurt to start playing around with this feature. Especially considering that, in the browsers that don&#8217;t support rounded corners, nothing bad happens &mdash; the user just sees regular, square corners.</p>
+<p>For now, to get the code to work, you&#8217;re stuck using proprietary CSS tags: they won&#8217;t validate, but they&#8217;ll just be ignored by browsers that don&#8217;t support them. The code itself is pretty simple; for example, to create a div with nice rounded corners with a radius of 5 pixels, you&#8217;d just write something like this:</p>
+<pre lang="css" escaped="true" line="1">div.rounded {
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; }</pre>
+<p>And this rule will create a div that looks like this:</p>
+<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-div.gif" alt="" title="rounded-div" width="400" height="86" class="alignnone size-full wp-image-207" /></a></p>
+<p>The two properties of note here are &ldquo;-moz-border-radius&rdquo; and &ldquo;-webkit-border-radius.&rdquo; The former is how to specify the radius &mdash; number of pixels from a hypothetical center point to the edge of the circle created by the rounded corner (see the image below) &mdash; in Mozilla-based browsers. The latter is doing the same thing, but for Safari.</p>
+<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-detail.gif" alt="" title="rounded-detail" width="400" height="199" class="alignnone size-full wp-image-208" /></a></p>
+<p>The rule isn&#8217;t just limited to curving background colors, either. If you were to add a border to the element, the border would become rounded, as well. For example, <a href="../../index.html?p=174" title="Six Ways to Style Blockquotes">a block quote could be styled</a> like so:</p>
+<pre lang="css" escaped="true" line="1">blockquote {
+	margin: 1em 20px;
+	padding: 10px;
+	border: 2px solid #555;
+	background-color: #f2f2f2;
+	color: #555;
+	font-size: 140%;
+	text-align: justify;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px; }</pre>
+<p>Resulting in a block quote that has a lot of style, without relying on images to accomplish the task:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-blockquote.gif" alt="" title="rounded-blockquote" width="400" height="119" class="alignnone size-full wp-image-209" /></a></p>
+<p>And finally, you&#8217;re also not limited to either all rounded corners or none. Using this property, you can specify which corners you want rounded in your CSS. However, it&#8217;s important to note that the Firefox-based version of this rule has deviated a bit from the W3C standard, meaning it&#8217;s written slightly differently than the Safari-based rule. For example, consider these two rules used to round out the top-left corner of a box:</p>
+<pre lang="css" escaped="true" line="1">-moz-border-radius-topleft: 5px;
+-webkit-border-top-left-radius: 5px;</pre>
+<p>It&#8217;s a minor difference, in the grand scheme of things, but pretty critical if you want your rounded corners to show up where and how they should! Using the ability to round individual corners, you could generate fancy alert messages:</p>
+<pre lang="css" escaped="true" line="1">.alert {
+	border: 2px solid #fc0;
+	padding: 8px 10px;
+	font-size: 120%;
+	color: #c90;
+	font-weight: bold;
+	background-color: #ff9;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;	
+	-moz-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px; }</pre>
+<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-alert.gif" alt="" title="rounded-alert" width="400" height="82" class="alignnone size-full wp-image-210" /></a></p>
+<p>Or, you could apply rounded corners to three of the four edges of a user&#8217;s comment, resulting in a pseudo-voice bubble, all without a single image in sight:</p>
+<pre lang="css" escaped="true" line="1">.comment {
+	border: 1px solid #999;
+	background-color: #d8d8f4;
+	margin: 1em 40px;
+	padding: 15px;
+	-moz-border-radius-topleft: 15px;
+	-webkit-border-top-left-radius: 15px;	
+	-moz-border-radius-topright: 15px;
+	-webkit-border-top-right-radius: 8px; 	
+	-moz-border-radius-bottomleft: 15px;
+	-webkit-border-bottom-left-radius: 15px; }</pre>
+<p><a href='../../example/rounded-corners/index.html'><img src="../../wp-content/uploads/2008/08/rounded-comment.gif" alt="" title="rounded-comment" width="400" height="86" class="alignnone size-full wp-image-211" /></a></p>
+<p><a href="../../example/rounded-corners/index.html">You can see all of my examples in action here.</a> And these are just a few ways of the hundreds of ways you can harness the power of rounded corners with just a few lines of code. With techniques like this at our disposal, it&#8217;s easy to see why we&#8217;re all so eagerly awaiting CSS3!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			64 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-8318">
+		<article id="comment-8318" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ca2f1e15dda0ca27d74475fe508ddc15?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">xxx </cite><a href="index.html#comment-8318"><time datetime="2008-08-07T02:18:15+00:00">Aug. 7, 2008 @ 2:18 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Of course it *will* validate &#8212; this (&#8220;-vendor-something&#8221;) is standard mechanism for vendor-specific extensions.</p>
+<p>This blog is getting less informative every day :(</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-8320">
+		<article id="comment-8320" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-8320"><time datetime="2008-08-07T08:46:37+00:00">Aug. 7, 2008 @ 8:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>While it&#8217;s true, vaguely anonymous, that this is the &#8220;standard mechanism&#8221; for vendor-specific properties, I would encourage you to run the CSS property through the W3C&#8217;s CSS Validation Service: <a href="http://jigsaw.w3.org/css-validator/" rel="nofollow">http://jigsaw.w3.org/css-validator/</a></p>
+<p>You&#8217;ll see an error along the lines of &#8220;Property -moz-border-radius doesn&#8217;t exist.&#8221; Meaning that whether the border-radius property is &#8220;standard&#8221; or not, it doesn&#8217;t validate with the most commonly-used validation tool on the web. And that&#8217;s worth letting my readers know in advance!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8322">
+		<article id="comment-8322" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/21f4971707a00270b92e2ae791d5633d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">V1 </cite><a href="index.html#comment-8322"><time datetime="2008-08-08T06:05:28+00:00">Aug. 8, 2008 @ 6:05 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Stop hugging the w3 validations, its only a guideline that tells u if certain attributes are correctly implemented in to your web page, having a invalid style sheet and / or html does NOT mean your website sucks in all browsers.. It might be invalid to the so called made up w3c standards, but that doesn&#8217;t mean the attribute or element is invalid or wrong.. It would not even hurt your page..</p>
+<p>The validation really needs a upgrade to support this type of attributes.. </p>
+<p>These are not OFFICIAL rules of web design.. its some weird unofficial rule people think they should follow else they have failed everything in live.. ITS NOT THE END OF THE WORLD..</p>
+<p>Anyways nice article, just felt like posting that to make a little point&#8230; :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8328">
+		<article id="comment-8328" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/815f3d7867d9194872b8a0a0da29478c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://dowitcherdesigns.com' rel='external nofollow' class='url'>Amber Wallace</a> </cite><a href="index.html#comment-8328"><time datetime="2008-08-11T13:30:40+00:00">Aug. 11, 2008 @ 1:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is great.  Now how do we get the browsers to catch up, esp. IE?  Maybe a bit of dreaming on my part.</p>
+<p>I really enjoy this blog.  I need to redo my old-school (bad slices &#8211; ah!) site, but I use CSS for all new client sites and I really appreciate your articles! Wanted to let you know. :-)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-8369">
+		<article id="comment-8369" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8f8f530b192734bd513ff43d08f6f95c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.stefson.com' rel='external nofollow' class='url'>Stefson</a> </cite><a href="index.html#comment-8369"><time datetime="2008-08-25T03:39:32+00:00">Aug. 25, 2008 @ 3:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice article.<br />
+Don&#8217;t know why others are making such a big fuzz about it. Guess it&#8217;s easier to hate :)</p>
+<p>Good work.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8427">
+		<article id="comment-8427" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/99389c969ba18700492193149836108c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.bestinclass.com' rel='external nofollow' class='url'>Bill Lipa</a> </cite><a href="index.html#comment-8427"><time datetime="2008-09-19T18:21:30+00:00">Sep. 19, 2008 @ 6:21 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I wrote an article about using border-radius together with a corner image fallback for IE.  That way the modern browsers get pure, fast CSS, and IE still works.</p>
+<p><a href="http://www.bestinclass.com/blog/2008/simple-rounded-corners-with-css3-box-radius-and-fallback-for-ie/" rel="nofollow">http://www.bestinclass.com/blog/2008/simple-rounded-corners-with-css3-box-radius-and-fallback-for-ie/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9020">
+		<article id="comment-9020" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d314a6d87c1af95bc2a8dc2e4e7489fb?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">zach </cite><a href="index.html#comment-9020"><time datetime="2008-12-06T19:47:41+00:00">Dec. 6, 2008 @ 7:47 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>such a waste. this doesn&#8217;t even work in ie.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9212">
+		<article id="comment-9212" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/03795d379fbcd0abc2c974cf5a04b570?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kepriportal.com' rel='external nofollow' class='url'>Kepri</a> </cite><a href="index.html#comment-9212"><time datetime="2008-12-28T01:47:20+00:00">Dec. 28, 2008 @ 1:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Awesome, great tutorial. thanks for share.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9241">
+		<p>Pingback: <a href='http://www.castup.org/?p=690' rel='external nofollow' class='url'>12 Creative and Cool Uses for the CSS Border Property | Castup</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9257">
+		<article id="comment-9257" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3ddf044d0b699ab91b13f3c776f1fc3a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">praboth </cite><a href="index.html#comment-9257"><time datetime="2008-12-31T07:16:23+00:00">Dec. 31, 2008 @ 7:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Doesn&#8217;t work in IE6</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9334">
+		<article id="comment-9334" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6913de50228734760f7984e963ee4942?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Zenon </cite><a href="index.html#comment-9334"><time datetime="2009-01-17T17:39:15+00:00">Jan. 17, 2009 @ 5:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yeah really handy that 80% of internet users will still see a square!!!!!!!!!!!</p>
+<p>Or I could just do the same with a photoshop macro I created years ago, do the job in less than a second, and it works even if you use shitty mobile phone browsers without any script support.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9335">
+		<article id="comment-9335" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9335"><time datetime="2009-01-17T17:55:37+00:00">Jan. 17, 2009 @ 5:55 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It boggles the mind, Zenon. It really does.</p>
+<p>And the accuracy of your random &#8220;80%&#8221; statistic would vary wildly from website to website. For example, according to my logs on CSS Newbie, 79.13% of my users over the last month would have seen rounded corners if I had chosen to use this effect. Which is pretty close to the opposite of the number made up for your baseless statistics. </p>
+<p>Regardless, this effect should still only be used on present-day websites if the success of your design and your user&#8217;s experience does not hinge on the curvature of any particular corner.</p>
+<p>Then again, a similar argument could probably be made against JavaScript and Flash, really. But that&#8217;d just be crazy, right?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9347">
+		<article id="comment-9347" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/61e2c054559da82ee780ca2b4bc6b3a5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Beroken </cite><a href="index.html#comment-9347"><time datetime="2009-01-20T15:16:32+00:00">Jan. 20, 2009 @ 3:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This also works quite well with Google Chrome :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9350">
+		<article id="comment-9350" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/54144a4d68d08d059b0c873c418aab49?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.siddesigns.co.cc' rel='external nofollow' class='url'>sidhu</a> </cite><a href="index.html#comment-9350"><time datetime="2009-01-21T22:28:27+00:00">Jan. 21, 2009 @ 10:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>IT is great. But it is not working in IE</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9354">
+		<article id="comment-9354" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c8187eb388e2f2e939ec1b6388e88220?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Albert </cite><a href="index.html#comment-9354"><time datetime="2009-01-23T07:03:00+00:00">Jan. 23, 2009 @ 7:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Who gives a f..k about IE. Even IE7 sucks big time</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9366">
+		<article id="comment-9366" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/aac000bc68e0029ac7dd9faba98de702?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.dorela.com' rel='external nofollow' class='url'>Dorela</a> </cite><a href="index.html#comment-9366"><time datetime="2009-01-27T06:16:35+00:00">Jan. 27, 2009 @ 6:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice article, thanks for share.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9383">
+		<article id="comment-9383" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ab289bf1fdf3a46aaa909e2bdae72c86?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">VA_WebWmn </cite><a href="index.html#comment-9383"><time datetime="2009-02-03T16:30:11+00:00">Feb. 3, 2009 @ 4:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Rob for sharing your code. Does it really matter if it doesn&#8217;t work in IE&#8230;just use it if you want and bad ass bloggers keep nasty comments to yourselves.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9394">
+		<article id="comment-9394" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/86db1f209d40193a2f41cc2b5b2ff5d5?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://internetrealestatesuccess.com/' rel='external nofollow' class='url'>Jamey Bridges</a> </cite><a href="index.html#comment-9394"><time datetime="2009-02-10T01:10:07+00:00">Feb. 10, 2009 @ 1:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob,<br />
+Sure are some interesting comments :).  I think your resource on this subject is excellent. The examples are easy to follow, so easy you can copy and paste into one&#8217;s own website. Thanks for the good work on this one and your other posts.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9424">
+		<p>Pingback: <a href='../../index.html?p=380' rel='external nofollow' class='url'>CSS Art: The Flower</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9436">
+		<p>Pingback: <a href='http://carloshermoso.com/blog/2009/02/28/css-art-the-flower/' rel='external nofollow' class='url'>Blog - Freelance Web Design &amp; Portfolio - Carlos Hermoso &raquo; CSS Art: The Flower</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9456">
+		<article id="comment-9456" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/92624bfdd0d0bcdfe67e3134a2cd5dcb?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">doez </cite><a href="index.html#comment-9456"><time datetime="2009-03-10T04:21:07+00:00">Mar. 10, 2009 @ 4:21 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>ok thx BOSSSS</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9487">
+		<article id="comment-9487" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a67bdb2d3a365da1bc43f82b85aa2fb1?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Thiyagarajan Veluchamy </cite><a href="index.html#comment-9487"><time datetime="2009-03-19T05:56:24+00:00">Mar. 19, 2009 @ 5:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>hi<br />
+border-radius property not working inIE7</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9507">
+		<article id="comment-9507" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c31edb7c14822fb8d969fa56f1835978?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jeff </cite><a href="index.html#comment-9507"><time datetime="2009-03-25T19:00:49+00:00">Mar. 25, 2009 @ 7:00 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Wow, I can&#8217;t believe the amount of people saying &#8220;doesn&#8217;t work in IE&#8221;. Can&#8217;t you read?</p>
+<p>You could be more accurate though; border-radius is supported in Gecko and Webkit browsers, of which there are many more than just Firefox and Safari.</p>
+<p>I use this all the time to be frank and have done for quite some time—many companies are standardising on Fx as the in-house browser so we can use this for lightweight admin back ends, intranets and so on.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9694">
+		<p>Pingback: <a href='http://iturnkeywebsites.com/?p=805' rel='external nofollow' class='url'>CSS Art: The Flower &laquo; Internet Turnkey Websites</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9773">
+		<p>Pingback: <a href='http://www.colorrage.com/blog/2009/06/css-art-the-flower/' rel='external nofollow' class='url'>Colorrage Blog &raquo; Blog Archive &raquo; CSS Art: The Flower</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9891">
+		<article id="comment-9891" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2cb472793c88f3183d092f16481f362e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Rob H </cite><a href="index.html#comment-9891"><time datetime="2009-08-11T22:20:35+00:00">Aug. 11, 2009 @ 10:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you for the informative article!  I think it was important for you to mention the fact that the current vendor specific implementations are NOT valid CSS3.  Despite Mr. Anonymous&#8217;s apparent resentment for the &#8220;so called made up W3C&#8221;, I personally appreciate the validation service very much.  I think some collaboration on the part of browser brands is going to make the Internet alot more exciting and without a &#8220;so called&#8221; third party around to &#8220;make up&#8221; standards&#8230;you&#8217;ll have a slim chance of that happening.  I would much rather see an eventual adoption of the standard css3 &#8220;border-radius&#8221; property by all browsers than expect to continue to use several slightly different proprietary properties.  After all, judging by all the comments that point out that IE doesn&#8217;t support the examples given, people still don&#8217;t seem to understand what &#8220;vendor specific&#8221; means.  </p>
+<p>As for praboth&#8217;s comment about it not working in IE6&#8230;.does ANYTHING work right in IE6?  You might as well point out that jumping in the ocean will make you wet.  If anyone is still using IE6, they don&#8217;t deserve the Internet.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10010">
+		<article id="comment-10010" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/91e402f4fdf10e176445867171a674ee?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://salamanteri.homelinux.net/wordpress/' rel='external nofollow' class='url'>robsku</a> </cite><a href="index.html#comment-10010"><time datetime="2009-10-01T12:15:13+00:00">Oct. 1, 2009 @ 12:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I want to quote V1&#8242;s comment about w3c:<br />
+&#8220;These are not OFFICIAL rules of web design.. its some weird unofficial rule people think they should follow else they have failed everything in live..&#8221;</p>
+<p>I think this is one bizarre view. For one, there is no official rules of web design (V1 is right on this) and W3C has never claimed that there is (and here V1 was wrong). There is however standards for things like (X)HTML and CSS and W3C is an organization that defines these standards they call &#8220;W3C recommendations&#8221; (not &#8220;rules everyone must follow&#8221;). The main goal of W3C is web interoperability and what these standards guarantee is:<br />
+* Any browser that supports a standard will correctly show anything designed following that standard.<br />
+* Any page designed following standard at least enough to look good &amp; work is guaranteed to work on any browser supporting the used standard.<br />
+How web-sites should be designed is a never ending debate, but it seems that almost all of the web today (unlike in late 90&#8242;s) is designed so that they work on any modern browsers and look great, most of those that look broken on some browsers are still good enough to read/use and only rarely a web-page, even if using some browser specific stuff fails so that it looks really horrible or has broken functioning on any browser (and when they do the browser where things fail is usually IE, most likely v. 6 or older). This is thanks to the fact that browser vendors eventually began to support standards and dropped almost all documented browser specific stuff, especially those that when used would cause major difference in look/functioning in other browsers and also to designers that chose standards to be good because &#8220;designed for browser X&#8221; was realized to be very bad for business and because too many browsers have large enough percentage of user base that making sure that pages do not fail on those browsers became an important issue.</p>
+<p>Still there is nobody (that I know anyway) claiming that there are any official rules of web design (with exception that design-groups/companies usually have rules for how their pages are to be done) and nobody so deluded that he claims that everyone must follow such rules. There are however many kinds of opinions about good/bad ways of design.</p>
+<p>** My opinions on (non-)standard(s) and good/bad design **</p>
+<p>Whether the css-properties are standard or not (and browser specific ones never are) is not an issue unless you want your page to be 100% standard compliant.</p>
+<p>What really matters is how you use non-standard browser specific properties. If you use them in away that the page looks broken &#8211; or even worse, does not work &#8211; in other browsers, then you are most definitely doing things wrong. If all that your non-standard properties cause is a little different look (ie. normal square corners instead of rounded ones) then everything is fine.</p>
+<p>Personally IMHO it&#8217;s up to the designer to use whatever non-standard tricks just as well as javascript &amp; AJAX (which are not supported by all browsers and may be impossible to fully implement in some text-based and mobile browsers) but the page should degrade gracefully on old browsers. IMHO a web-mail application (for example) can be 100% designed with dynamical HTML, javascript &amp; AJAX calls, but a good designer would design the server side code so that if user enters with ie. Lynx the server will instead give the user a version that uses no scripts, looks at least readable on Lynx and good on Links and anything better and manages client/server interoperability with good old links that send GET request and forms that send POST requests and thus reload page recreating the page view according to users requests.<br />
+That is my opinion &#8211; unless you are designing for example a web app that you know to be always used in a defined environment &#8211; for example I&#8217;m doing a web application for my schools net administration boys and knowing it will never be ran in any other than IE, FF and maybe Chrome I&#8217;m using JavaScript+jQuery, CSS stylings, etc. extensively without caring about any other browsers as in this case it simply don&#8217;t matter even to 0.01% of users if it wont work on older or different browsers. All my public web projects are at least readable with Lynx and with Links they look as good as a page can in Links and while on modern browsers there is still quite a lot of CSS design, scripts, etc. I bet that my pages could be read even with old Mosaic browser &#8211; and that&#8217;s how it should be too :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-10045">
+		<p>Pingback: <a href='http://a.parsons.edu/~zeravivm/f09/osd/10/19/final-tutorial/' rel='external nofollow' class='url'>final tutorial &#8211; Open Source Design - fall09</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10265">
+		<article id="comment-10265" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fe3097734287f0b7a859278ff4b2305b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">anonymous </cite><a href="index.html#comment-10265"><time datetime="2010-01-11T04:04:09+00:00">Jan. 11, 2010 @ 4:04 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I can&#8217;t thank you enough for this. You&#8217;ve saved me a lot of time and frustration.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10423">
+		<article id="comment-10423" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/98e48e57eab6f5b950a72ba4eeac50ad?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocuri12.com' rel='external nofollow' class='url'>jocuri</a> </cite><a href="index.html#comment-10423"><time datetime="2010-01-15T04:04:52+00:00">Jan. 15, 2010 @ 4:04 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>So is there necessary to modify the code for complaint with css vadidator and be reading good by browsers?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10478">
+		<article id="comment-10478" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/71190ff10d20d49c0ce6de94f5715e76?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Pumpkin </cite><a href="index.html#comment-10478"><time datetime="2010-01-16T09:24:43+00:00">Jan. 16, 2010 @ 9:24 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That is great&#8230;!!!<br />
+Thanks a lot</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12592">
+		<p>Pingback: <a href='../../index.html?p=585' rel='external nofollow' class='url'>Test for Border-Radius Support</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12636">
+		<article id="comment-12636" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/43a2901c49e51d595a8711b709ff7db2?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Shell </cite><a href="index.html#comment-12636"><time datetime="2010-04-23T14:25:08+00:00">Apr. 23, 2010 @ 2:25 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Web Design should be consistent in all browsers, therefore, there should be a way to make this work for IE as well. Does anyone have that answer? I have to fight with a graphic designer over this and no way will they let our site go up, if it doesn&#8217;t look the same across all browsers.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-12637">
+		<article id="comment-12637" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-12637"><time datetime="2010-04-23T14:49:59+00:00">Apr. 23, 2010 @ 2:49 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Shell, </p>
+<p>While I disagree that everything must always be pixel-perfect across all browsers, as luck would have it, the article I wrote on CSS Newbie yesterday addresses cross-browser rounding!</p>
+<p>Check it out here: <a href="../../index.html?p=591" rel="nofollow">http://www.cssnewbie.com/cross-browser-rounded-buttons/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12676">
+		<article id="comment-12676" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8ff9367908b9ced86eb9dc11bf0c344a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://zandron.com' rel='external nofollow' class='url'>jaya</a> </cite><a href="index.html#comment-12676"><time datetime="2010-05-07T08:32:20+00:00">May. 7, 2010 @ 8:32 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The corner radius issue of IE gonna solve.</p>
+<p><a href="http://kbala.com/ie-9-supports-corner-radius/" rel="nofollow">http://kbala.com/ie-9-supports-corner-radius/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12687">
+		<article id="comment-12687" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/945a57809a0b97217a58f00303b01f1b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocuri2012.com' rel='external nofollow' class='url'>alex</a> </cite><a href="index.html#comment-12687"><time datetime="2010-05-13T07:07:29+00:00">May. 13, 2010 @ 7:07 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I search on google and in finally i found! Great Post!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12699">
+		<article id="comment-12699" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6a48dd1241062946eb7ddb9222d567da?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.extendstudio.com/product/flexipanels_css.html' rel='external nofollow' class='url'>Extend Studio</a> </cite><a href="index.html#comment-12699"><time datetime="2010-05-17T06:17:07+00:00">May. 17, 2010 @ 6:17 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>You can have a look as well at <a href="http://www.extendstudio.com/product/flexipanels_css.html" rel="nofollow"> FlexiPanels CSS</a> &#8211; a Dreamweaver extension that creates rounded corner CSS boxes without coding.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12766">
+		<article id="comment-12766" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7aa3f8e1e1dd674de91c473200175b13?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Stevo </cite><a href="index.html#comment-12766"><time datetime="2010-06-03T06:55:48+00:00">Jun. 3, 2010 @ 6:55 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice info, I wish webkit and mozilla could used the generic border-radius:5px; instead of making us double up on CSS rules, hopefully that will be the case when CSS3 starts properly rolling out.</p>
+<p>Its a real shame that IE is so far behind the game, the web will be a better place when they either step up or ship out.</p>
+<p>&#8230;can&#8217;t see why some people are stressing over this post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12937">
+		<article id="comment-12937" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f827574735753333651264c1f7b4ff36?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">John </cite><a href="index.html#comment-12937"><time datetime="2010-08-24T17:16:58+00:00">Aug. 24, 2010 @ 5:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There is a free border-radius generator here:<br />
+<a href="http://www.webestools.com/css3-border-radius-generator-moz-webkit-rounded-corner-code-maker.html" rel="nofollow">http://www.webestools.com/css3-border-radius-generator-moz-webkit-rounded-corner-code-maker.html</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12978">
+		<article id="comment-12978" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/53dd0c0af2141192c35d9f4140a0b46a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocurionlinegratis.ro' rel='external nofollow' class='url'>Jocuri gratis</a> </cite><a href="index.html#comment-12978"><time datetime="2010-09-19T05:02:21+00:00">Sep. 19, 2010 @ 5:02 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nice code, Rob! Thanks, I&#8217;m actually use it on a few projects. Keep up good work!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13104">
+		<article id="comment-13104" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3a749fcbdfb7d9a029b52dc699618210?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocuri-fete.info' rel='external nofollow' class='url'>Jocuri fete</a> </cite><a href="index.html#comment-13104"><time datetime="2010-11-17T13:27:39+00:00">Nov. 17, 2010 @ 1:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Actually, seems pretty easy to round corners with border radius&#8230; I&#8217;ll use this tehnique on my future projects!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13111">
+		<article id="comment-13111" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6a1ebc502d486b453789078e3e6e6ca9?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.shurikenmarketing.com' rel='external nofollow' class='url'>Shuriken</a> </cite><a href="index.html#comment-13111"><time datetime="2010-11-21T13:01:42+00:00">Nov. 21, 2010 @ 1:01 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Seems like indeed, IE doesn&#8217;t support this. We can only do it with images!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13117">
+		<article id="comment-13117" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/5811c375797b002a40388f16ea5339e7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocurica.ro/jocuri/logice' rel='external nofollow' class='url'>Jocuri logice</a> </cite><a href="index.html#comment-13117"><time datetime="2010-11-26T12:47:10+00:00">Nov. 26, 2010 @ 12:47 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s a great method, but there are another great ways to round corners with border-radius&#8230;</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13216">
+		<article id="comment-13216" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/20618faa32dde9bd494fb6341baa7c19?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.marirea-penisului.net' rel='external nofollow' class='url'>Marirea Penisului</a> </cite><a href="index.html#comment-13216"><time datetime="2011-01-25T03:01:11+00:00">Jan. 25, 2011 @ 3:01 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The given materials are one indicator that they really give care for the development and change process. I hope it will enhance more participation in the future. Thank you</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13252">
+		<article id="comment-13252" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/dd0ac2f30a5e6bd292e1849c52594def?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.edish-network.com' rel='external nofollow' class='url'>faizan ali</a> </cite><a href="index.html#comment-13252"><time datetime="2011-02-09T02:25:23+00:00">Feb. 9, 2011 @ 2:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>what about the IE radius border?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13368">
+		<article id="comment-13368" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1a0d428fa3d61f5a3f3b2dae08596446?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocuri-masini.in' rel='external nofollow' class='url'>Jocuri</a> </cite><a href="index.html#comment-13368"><time datetime="2011-04-06T11:28:25+00:00">Apr. 6, 2011 @ 11:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Congratulations for this article !</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13369">
+		<article id="comment-13369" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/74e6bc07cfe59fa08cc27e1765a42f5e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://salamanteri.dyndns.org/wordpress/' rel='external nofollow' class='url'>robsku</a> </cite><a href="index.html#comment-13369"><time datetime="2011-04-06T19:48:12+00:00">Apr. 6, 2011 @ 7:48 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>And if people complaining how IE 5.5 does not work with round borders:<br />
+1. It&#8217;s not a WYSIWYG language.<br />
+2. If you code to browser not supporting something then don&#8217;t use it. There are worse (major) problems with getting pages look same with old IE&#8217;s (even 8, dunno about 9).<br />
+   * Or, as I said, design you page to degrade gracefully. Allow older browsers to show square corners or make tricks by identifying browser on server side (PHP, Perl, whatever) code and provide different code for each. I even made my site 100% validated, but for IE, and only for IE it provides non-valid hack in CSS file (it&#8217;s style.css.php so it has CSS and PHP code, non-valid code for only IE &#8211; I use it to get transparency on PNG&#8217;s in IE6.</p>
+<p>If you don&#8217;t care about being 100% validated just make regular CSS only file for that and whatever tricks in your (X)HTML, just make sure not using any tricks that break pages.</p>
+<p>Not that hard.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13378">
+		<article id="comment-13378" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/367cc78eab62c4b6406fda66c27465a0?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocurimoto.us' rel='external nofollow' class='url'>Jocuri cu motoare</a> </cite><a href="index.html#comment-13378"><time datetime="2011-04-15T13:11:36+00:00">Apr. 15, 2011 @ 1:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Really true ,great post,thanks for this useful information :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13392">
+		<article id="comment-13392" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d78479faddd0706c6475737236964298?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.jocurile.us/' rel='external nofollow' class='url'>Jocuri</a> </cite><a href="index.html#comment-13392"><time datetime="2011-04-21T07:31:37+00:00">Apr. 21, 2011 @ 7:31 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Unfortunately this only works for webkit browsers like Mozilla and probably chrome, but for others?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13461">
+		<article id="comment-13461" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2d11b472b62d247637b4ab71ce1f8dca?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cujocuri.com' rel='external nofollow' class='url'>Jocuri</a> </cite><a href="index.html#comment-13461"><time datetime="2011-06-13T02:01:24+00:00">Jun. 13, 2011 @ 2:01 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Your article really helped me out with my new css studying, I have only few lines until finishing my project YEEEEEE ! :D</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../../index.html?p=205#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='205' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e46d78b481" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=444" title="Permalink to: A Super Simple Horizontal Navigation Bar">
+                    A Super Simple Horizontal Navigation Bar                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">In more cases than not, a simple, no-frills horizontal navigation bar is exactly what the doctor ordered. So today's tutorial is all about going back to basics. <a href="../../index.html?p=444" class="more-link" title="Permalink to: A Super Simple Horizontal Navigation Bar">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1464/1538 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:11:01 by W3 Total Cache -->

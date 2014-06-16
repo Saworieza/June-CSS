@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example: 5 CSSriffic Ways to Make Your Images Stand Out</title>
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(window).resize(function() {  
+		fullHeight = $(window).height();
+		headerHeight = $("#header").outerHeight();
+		footerHeight = $("#footer").outerHeight();
+		$("iframe.example, div.source").height((fullHeight-headerHeight-footerHeight-50)+"px");
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+function iframe_loaded() {
+	$("a",$("iframe.example")[0].contentWindow.document).attr("target","_top");
+}
+</script>
+<style>
+html {
+	font: 62.5%/1.4 Arial, Helvetica, sans-serif; }
+body {
+	font-size: 1.3em;
+	padding: 0 10px;
+	background-color: #b0e6ff; }
+#header, #footer {
+	width: 960px;
+	margin: 0 auto; }
+#header {
+	background: transparent url(../../img/cssnewbie_v2_logo.png) no-repeat 10px 5px; }
+#header p {
+	font-size: 150%; }
+h1, div.source {
+	font-family: "Courier New", Courier, monospace; }
+h1 {
+	margin: 0; }
+h1 a {
+	display: block;
+	width: 300px;
+	text-decoration: none;
+	margin: 0;
+	padding: 52px 0 25px 215px;
+	color: #253c93; }
+h1 span {
+	display: none; }
+h2 {
+	margin: 0; }
+h2 a {
+	font-size: 70%; }
+a {
+	color: #253c93; }
+.example, .source {
+	float: left; }
+.example {
+	width: 58%; }
+.source {
+	width: 40%; }
+iframe.example,div.source {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-color: #fff; }
+div.source {
+	border-left: 0px none;
+	padding: 0 0 0 1%;
+	overflow: auto; }
+div.source pre {
+	white-space: pre-wrap;
+	font-size: 12px; }
+#footer {
+ clear: both;
+ min-height: 125px;
+ text-align: center;
+ padding-top: 1px; }
+#footer p {
+	font-size: 140%;
+	line-height: 1.2;
+	margin: .5em 0;}
+#footer a {
+	float: left;
+	margin: .5em 1em 0 0; }
+#bsap_1239784 {
+	margin: .5em 0; }
+</style>
+</head>
+<body>
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+<div id="header">
+	<h1><a href="../../index.html"><span>CSS Newbie</span> &lt;example /&gt;</a></h1>
+</div>
+<div id="content">
+	<h2 class="example title">Live Example: <a href="../../css-rules/5-cssriffic-treatments-images/index.html">(Read the CSS Newbie article)</a></h2>
+	<h2 class="source title">Source Code: <a href="index.html?source" id="save-source">(Save the Source)</a></h2>
+	<iframe src="../../example_files/5-image-treatments/index.html" class="example" onload="iframe_loaded()"></iframe>
+	<div class="source"><pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
+&lt;title&gt;CSSnewbie Example: 5 CSSriffic Ways to Make Your Images Stand Out&lt;/title&gt;
+&lt;style&gt;
+/* These rules just style the page. */
+body {
+   font: small/1.3em Arial, Helvetica, sans-serif; 
+   background-color: #eee;
+}
+#wrap {
+   background-color: #fff;
+   border: 1px solid #ddd;
+   width: 40em;
+   margin: 0 auto;
+   padding: 1em 3em; 
+}
+h3 {
+   border-bottom: 1px solid #000;
+   margin: 3em 0 1em 0; 
+}
+.lines {
+   background-image: url(lines.gif); 
+}
+   
+/* These rules style the photos. */
+img.wrap {
+   float: right;
+   margin: 0 0 .5em 1em; 
+}
+img.photo {
+   border: 1px solid #999;
+   background-color: #fcfcfc;
+   padding: 4px; 
+}   
+img.deep {
+   border-left: 1px solid #ccc;
+   border-top: 1px solid #ccc;
+   border-right: 1px solid #888;
+   border-bottom: 1px solid #888;
+   background-color: #fcfcfc;
+   padding: 4px;
+}
+.shadowcolor {
+   float: left;
+   background-color: #aaa;
+}
+.shadowimage {
+   float: left;
+   background-image: url(shadow.png);
+}
+.shadowcolor img, .shadowimage img {
+   margin: -4px 4px 4px -4px;
+   background-color: #fcfcfc;
+   padding: 4px;
+   border-left: 1px solid #ccc;
+   border-top: 1px solid #ccc;
+   border-right: 1px solid #888;
+   border-bottom: 1px solid #888;
+   display: block; 
+   position: relative;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;
+   &lt;h2&gt;5 CSSriffic Ways to Make Your Images Stand Out&lt;/h2&gt;
+   &lt;p&gt;This page holds the examples of an article on CSSnewbie, which &lt;a href=&quot;/css-rules/5-cssriffic-treatments-images/&quot;&gt;you can find here.&lt;/a&gt; If you would like to see how these particular techniques are created, please read the article, and then view the source of this page.&lt;/p&gt;
+   &lt;a name=&quot;wrap&quot;&gt;&lt;/a&gt;&lt;h3&gt;The Wraparound Treatment&lt;/h3&gt;
+   &lt;img class=&quot;wrap&quot; src=&quot;http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg&quot; width=&quot;240&quot; height=&quot;165&quot; alt=&quot;frozen motivation&quot; /&gt;
+   &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum gravida pede vitae sapien. Donec placerat placerat orci. In lobortis feugiat metus. Fusce turpis ante, euismod eget, aliquam et, malesuada eget, ante. Vestibulum elit quam, fringilla sit amet, vehicula quis, sollicitudin id, dolor. Aliquam magna est, tempor sed, malesuada id, mollis vitae, elit. Vestibulum non turpis ut pede hendrerit interdum. Nunc ut ligula imperdiet erat auctor scelerisque. Aenean aliquet leo eget nisi. Aliquam erat volutpat. Nam cursus augue at augue accumsan dignissim. In sed orci a diam eleifend placerat. Mauris nisl leo, porta non, consequat vel, tempor nec, diam. Proin dapibus fringilla dolor. Nam sagittis. Donec aliquam consectetuer augue.&lt;/p&gt;
+   &lt;p&gt;&lt;a href=&quot;/css-rules/5-cssriffic-treatments-images/&quot;&gt;Back to the article.&lt;/a&gt;&lt;/p&gt;
+   &lt;a name=&quot;photo&quot;&gt;&lt;/a&gt;&lt;h3&gt;The Photo Treatment&lt;/h3&gt;
+   &lt;img class=&quot;photo&quot; src=&quot;http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg&quot; width=&quot;240&quot; height=&quot;165&quot; alt=&quot;frozen motivation&quot; /&gt;
+   &lt;p&gt;&lt;a href=&quot;/css-rules/5-cssriffic-treatments-images/&quot;&gt;Back to the article.&lt;/a&gt;&lt;/p&gt;
+   &lt;a name=&quot;depth&quot;&gt;&lt;/a&gt;&lt;h3&gt;The Depth Treatment&lt;/h3&gt;
+   &lt;img class=&quot;deep&quot; src=&quot;http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg&quot; width=&quot;240&quot; height=&quot;165&quot; alt=&quot;frozen motivation&quot; /&gt;
+   &lt;p&gt;&lt;a href=&quot;/css-rules/5-cssriffic-treatments-images/&quot;&gt;Back to the article.&lt;/a&gt;&lt;/p&gt;
+   &lt;a name=&quot;shadow1&quot;&gt;&lt;/a&gt;&lt;h3&gt;The Shadow Treatment&lt;/h3&gt;
+   &lt;div class=&quot;lines&quot;&gt;
+   &lt;div class=&quot;shadowcolor&quot;&gt;&lt;img src=&quot;http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg&quot; alt=&quot;frozen motivation&quot; width=&quot;240&quot; height=&quot;165&quot; /&gt;&lt;/div&gt;
+   &lt;p style=&quot;clear: both; padding: 1em 0;&quot;&gt;&lt;a href=&quot;#&quot;&gt;Back to the article.&lt;/a&gt;&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;a name=&quot;shadow2&quot;&gt;&lt;/a&gt;&lt;h3&gt;The Shadow Treatment, Part Two: Transparency!&lt;/h3&gt;
+   &lt;div class=&quot;lines&quot;&gt;
+   &lt;div class=&quot;shadowimage&quot;&gt;&lt;img src=&quot;http://farm1.static.flickr.com/47/106849468_da4cc96667_m.jpg&quot; alt=&quot;frozen motivation&quot; width=&quot;240&quot; height=&quot;165&quot; /&gt;&lt;/div&gt;
+   &lt;p style=&quot;clear: both; padding: 1em 0;&quot;&gt;&lt;a href=&quot;/css-rules/5-cssriffic-treatments-images/&quot;&gt;Back to the article.&lt;/a&gt;&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<div id="footer">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1239784" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+	<!-- END BuySellAds.com Zone Code -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2285776-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

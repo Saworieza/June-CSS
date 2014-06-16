@@ -1,0 +1,954 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>A Simple jQuery Stylesheet Switcher</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; A Simple jQuery Stylesheet Switcher Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='15 Surefire Ways to Break Your CSS' href='../../index.html?p=403' />
+<link rel='next' title='Reader Response: A Simple, Streamlined E-Commerce Solution' href='../../index.html?p=418' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=410' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,202] -->
+<meta name="description" content="Here's a quick and easy way to swap between multiple CSS files using just a couple of lines of jQuery." />
+
+<meta name="keywords" content="css, jquery, javascript, switch css, switch stylesheet, swap css, swap stylesheet, switch multiple css, change stylesheets, load css jquery,javascript,jquery,stylehseet,swap,switch,basic techniques,quick tip" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-410 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-410" class="post-410 post type-post status-publish format-standard hentry category-basic-techniques category-javascript category-quick-tip tag-css tag-javascript tag-jquery tag-stylehseet tag-swap tag-switch">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=410" title="Permalink to A Simple jQuery Stylesheet Switcher" rel="bookmark">A Simple jQuery Stylesheet Switcher</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 2, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../../example/stylesheet-switcher/index.html"><img src="../../wp-content/uploads/2009/04/stylesheeet-switcher.gif" alt="jQuery stylesheeet switcher" title="jQuery stylesheeet switcher" width="579" height="150" class="alignnone size-full wp-image-412" /></a></p>
+<p>There are lots of reasons you might want to offer your users more than one CSS file for your website:</p>
+<ul>
+<li>You want to offer a &#8220;stylish&#8221; low-contrast and an easy-to-read high-contrast version of your site.</li>
+<li>You have many low-vision readers and want to give them easy access to a customized stylesheet with a larger typeface.</li>
+<li>Your site is schizophrenic and you want to be able to change the look quickly.</li>
+</ul>
+<p>Whatever the reason, it&#8217;s amazingly easy to create a function that swaps between multiple stylesheets using jQuery.</p>
+<p>The first step of course is to build several different CSS files, which we&#8217;ll then swap between. Once that is done, we can dive into the XHTML and jQuery that makes the magic happen.<span id="more-410"></span></p>
+<h3>The XHTML</h3>
+<p>First, we need to create a set of links that will allow the user to swap between CSS files. You can make this as simple or as fancy as you&#8217;d like. For the sake of brevity, my links are simple:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul id=&quot;nav&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;/path/to/style1.css&quot;&gt;Default CSS&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;/path/to/style2.css&quot;&gt;Larger Text&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;/path/to/style3.css&quot;&gt;Something Different&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>Here I have three links, each with a &#8220;rel&#8221; attribute indicating which CSS file the link will load. Technically, I could have just as easily put this information in the &#8220;href&#8221; attribute, but I didn&#8217;t want to for one specific reason: if the user has JavaScript disabled and the CSS file is listed in the href, then clicking the link will send the user to the CSS file directly (not loading it like we intended). But our way, if JS is disabled, the user gets nothing at all: which is certainly preferable to the less savory alternative.</p>
+<h3>The jQuery</h3>
+<p>Like I promised, the jQuery is really simple:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() { 
+	$("#nav li a").click(function() { 
+		$("link").attr("href",$(this).attr('rel'));
+		return false;
+	});
+});</pre>
+<p>This function waits until the document is loaded (generally an important step when interacting with the DOM), then attaches a click function to each of our nav anchors. The function basically says, &#8220;when someone clicks on this link, replace the link (stylesheet) tag&#8217;s href attribute with the contents of this link&#8217;s rel attribute.&#8221;  The &#8220;return false&#8221; at the end just stops the browser from trying to follow the link.</p>
+<p>Of course, you might have to get more detailed if you have more than one link tag, for example, but that&#8217;s easily done by giving the link tag a class (&#8220;changeme,&#8221; for argument&#8217;s sake), and writing something like this:</p>
+<pre lang="javascript" escaped="true" line="1">$("link.changeme").attr("href",$(this).attr('rel'));</pre>
+<p>And while this stylesheet switcher is already complete, we might want to give it some memory: after all, your users might get annoyed if they have to switch their styles back to their preferences every time they visit your site. For that, we&#8217;ll need to set a cookie. And to make that easier, I&#8217;ll use <a href="http://plugins.jquery.com/project/Cookie">the jQuery cookie plugin</a> (which <a href="../../index.html?p=228">I&#8217;ve talked about previously when building a popout ad</a>).</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>With the plugin loaded, we can modify our jQuery thusly:</p>
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() { 
+	if($.cookie("css")) {
+		$("link").attr("href",$.cookie("css"));
+	}
+	$("#nav li a").click(function() { 
+		$("link").attr("href",$(this).attr('rel'));
+		$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+		return false;
+	});
+});</pre>
+<p>Now we have two statements. The first one checks as soon as the page is done loading to see if a cookie called &#8220;css&#8221; has been set. If so, it sets the stylesheet to be the one indicated in that cookie. Otherwise, it does nothing.</p>
+<p>Our click function is much the same, except after we set the stylesheet, we also set a cookie. This cookie doesn&#8217;t expire for an entire year (and each time the user changes their stylesheet preferences, it would reset this timer), giving them a good 365 of CSS bliss.</p>
+<h3>Fine Tuning</h3>
+<p>There is one minor annoyance with this stylesheet switcher: there&#8217;s generally a flash of the &#8220;default&#8221; CSS when the user loads the page. That&#8217;s because the script waits until the document is &#8220;ready&#8221; before switching the link&#8217;s href. There is a way around this: moving the first &#8220;if&#8221; statement outside of the document ready function, like so:</p>
+<pre lang="javascript" escaped="true" line="1">if($.cookie("css")) {
+	$("link").attr("href",$.cookie("css"));
+}
+$(document).ready(function() { 
+	$("#nav li a").click(function() { 
+		$("link").attr("href",$(this).attr('rel'));
+		$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+		return false;
+	});
+});</pre>
+<p>Generally speaking, you don&#8217;t want to run any jQuery until your document is ready. However, so long as your jQuery comes <em>after your link tag</em> in your document structure, like shown below, this shouldn&#8217;t be a major concern:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style1.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;jquery.cookie.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;... your jQuery goes here...&lt;/script&gt;</pre>
+<p>This means your jQuery will run before the document is done loading, and thus your link tag&#8217;s href will be swapped before your CSS has been applied. As I said before, it&#8217;s generally a bad idea to manipulate the DOM before document ready, but because we know the exact tag we want to manipulate and can place our jQuery below it in the DOM, we should be safe in this one specific instance.</p>
+<p><a href="../../example/stylesheet-switcher/index.html">Here&#8217;s an example if you would like to see this technique in action.</a></p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			76 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9555">
+		<article id="comment-9555" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ede1970a59ebac149c52edea1127aeb8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.technicallycoordinated.com/' rel='external nofollow' class='url'>Brett Shegogue</a> </cite><a href="index.html#comment-9555"><time datetime="2009-04-02T23:39:20+00:00">Apr. 2, 2009 @ 11:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great Article!  Would there be an easy way to tweak this so say a different stylesheet shows up depending on the current date?  Say if I want to have a different style sheet for different seasons?  Or would that be a completely different beast?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9559">
+		<article id="comment-9559" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9559"><time datetime="2009-04-03T08:46:17+00:00">Apr. 3, 2009 @ 8:46 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Brett,</p>
+<p>It could certainly be done (in a couple of different ways). And this idea would serve as a good base for that endeavor. But I think all that might be too much information for a comment. Perhaps it will result in another article in the near future! :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9561">
+		<article id="comment-9561" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ede1970a59ebac149c52edea1127aeb8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.technicallycoordinated.com/' rel='external nofollow' class='url'>Brett Shegogue</a> </cite><a href="index.html#comment-9561"><time datetime="2009-04-03T09:10:57+00:00">Apr. 3, 2009 @ 9:10 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yes, thats what I figured.  I am just starting out (less then a year in web development) and I am doing a small 3 page site for a local lawn service for $150.  So it is definitely more for the experience over the money.  I was considering making different style sheets for the seasons, but feel it may be too much time for my compensation.  </p>
+<p>Thanks for your help , I have been a subscriber for a couple of weeks now and really enjoy your stuff! Keep it up.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9563">
+		<p>Pingback: <a href='http://sodevious.net/2009/04/04/rss-link-love/' rel='external nofollow' class='url'>sodevious.net; design and resource blog &raquo; Blog Archive &raquo; RSS Link Love!</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9565">
+		<p>Pingback: <a href='http://designm.ag/news/a-simple-jquery-stylesheet-switcher/' rel='external nofollow' class='url'>A Simple jQuery Stylesheet Switcher</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9566">
+		<article id="comment-9566" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/87f5d63ba16414a639260b07423d9817?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://deconstructioncode.blogspot.com/' rel='external nofollow' class='url'>nady</a> </cite><a href="index.html#comment-9566"><time datetime="2009-04-04T12:00:28+00:00">Apr. 4, 2009 @ 12:00 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>nice tutorial &#8230; thanks.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9568">
+		<article id="comment-9568" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b9ed83c90d9eedc2ee6d8c7e8a263386?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Casper Bang </cite><a href="index.html#comment-9568"><time datetime="2009-04-05T10:03:48+00:00">Apr. 5, 2009 @ 10:03 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for the post. I just implemented something similar a few weeks ago (Not happy with the jquery-ui theme switcher) but did not solve the &#8220;page load reverts to default&#8221; problem. Thumbs up to your timing. ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9572">
+		<article id="comment-9572" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fff67acd424240025bec0bf59a27e620?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.budurl.com/vvbp/' rel='external nofollow' class='url'>Rahul</a> </cite><a href="index.html#comment-9572"><time datetime="2009-04-07T06:40:12+00:00">Apr. 7, 2009 @ 6:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Very interesting jquery feature of stylesheet switcher.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9575">
+		<p>Pingback: <a href='http://www.jaceju.net/blog/?p=423' rel='external nofollow' class='url'>網站製作學習誌 &raquo; [Web] 連結分享</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9678">
+		<article id="comment-9678" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cd83f5aa827ff5e2a2f65b6ec4072a2d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.scholarscorner.com' rel='external nofollow' class='url'>jefferis peterson</a> </cite><a href="index.html#comment-9678"><time datetime="2009-05-04T08:25:14+00:00">May. 4, 2009 @ 8:25 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I&#8217;m testing out your script on these 2 pages <a href="http://www.scholarscorner.com/debug.html" rel="nofollow">http://www.scholarscorner.com/debug.html</a> and debug2.html.  I used an older script on the rest of the site, but it doesn&#8217;t retain the user selection, I&#8217;m brand new to jQuery, thought I&#8217;ve developed for years. I&#8217;m not sure what I&#8217;m doing wrong but it doesn&#8217;t seem to be working. One question is, I don&#8217;t understand where you put the default CSS for the site. If all the links are relative by user selection, you&#8217;ll not have a CSS to  start with.<br />
+So I have<br />
+ in the header above the jQuery switcher function.  And my user selectable links only result in an # added to the page url:</p>
+<p>              <a href="index.html#" rel="nofollow">change to Black</a><br />
+              <a href="index.html#" rel="nofollow">change to White</a></p>
+<p>Any guidance appreciated.<br />
+Jeff</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9683">
+		<article id="comment-9683" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9683"><time datetime="2009-05-05T13:26:47+00:00">May. 5, 2009 @ 1:26 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Jefferis,</p>
+<p>I think the problem is in your document.ready script. You&#8217;re telling the script to look for my &#8216;default&#8217; (read: made up) navigation structure, which consists of an unordered list with an ID of &#8220;nav&#8221;. You don&#8217;t have any such element on your page. You&#8217;ll need to edit that $(&#8220;#nav li a&#8221;) bit to read something that actually exists on your page. Because your page&#8217;s navigation is so complex, you probably don&#8217;t want it checking all your navigation, so I&#8217;d suggest giving the specific subnav list a unique id (e.g., id=&#8221;styleswitch&#8221; or something), and then edit the jQuery to look for that instead (e.g., $(&#8220;#styleswitch li a&#8221;)).</p>
+<p>Also, you&#8217;ll need to specify one of the optional CSS files as your default. Just specify it in the head like you normally would. When the user makes a different selection (or if they have a different CSS file saved as their default), the page will switch over to their style as soon as it loads.</p>
+<p>Hope that helps!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9685">
+		<article id="comment-9685" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cd83f5aa827ff5e2a2f65b6ec4072a2d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.scholarscorner.com' rel='external nofollow' class='url'>jefferis peterson</a> </cite><a href="index.html#comment-9685"><time datetime="2009-05-05T14:42:27+00:00">May. 5, 2009 @ 2:42 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, thanks for the help.  Yes it works now but it will not work with the current navigation structure I have. I tried adding the id simply to the href but that will not work. I had to create an enclosing div ID on thesubmenu  li, which messes up the rest of the nav structure.  It works but looks like dirt&#8230; and it is non compliant. So, I&#8217;ll have to create a separate menu&#8230; but it does work. Thanks for the help.  I guess I couldn&#8217;t tell from the code and your description that the $nav was a generic default&#8230; :-)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9699">
+		<p>Pingback: <a href='http://www.add-info.com/lifestream/2009/05/08/daily-digest-for-20090508/' rel='external nofollow' class='url'>Daily Digest for 20090508 - lifestream@add</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9768">
+		<article id="comment-9768" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/4fec020d3e3894679c8546fa33985461?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.netwaver.com' rel='external nofollow' class='url'>Ramil</a> </cite><a href="index.html#comment-9768"><time datetime="2009-06-09T03:50:16+00:00">Jun. 9, 2009 @ 3:50 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for the great tutorial.</p>
+<p>I have a problem though. It will not work with @import on CSS, at least for me. I have two CSS file, style.css and style1.css. On style1.css, I just use @import url(&#8220;style.css&#8221;); and some classes that will change when it switches. If I switch to style1.css, no CSS applied to the my HTML document. Any ideas?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9774">
+		<article id="comment-9774" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9774"><time datetime="2009-06-09T08:26:00+00:00">Jun. 9, 2009 @ 8:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Ramil,</p>
+<p>My best suggestion when trying to use the @import command is, if you&#8217;re calling a stylesheet from inside another stylesheet, make sure the @import line is the <strong>very first</strong> line in your document. That line has to come first, before any CSS rules, any comments&#8230; anything at all.</p>
+<p>Good luck!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9789">
+		<article id="comment-9789" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a63ad26531b678b72d67a52ce31d449b?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.webtrafficroi.com' rel='external nofollow' class='url'>ZK@Web Marketing Blog</a> </cite><a href="index.html#comment-9789"><time datetime="2009-06-20T12:12:58+00:00">Jun. 20, 2009 @ 12:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It looks good but has a catch.<br />
+Every time you open an article page you will be in fact loading two pages(article.php and comment_new.php).<br />
+It does not include comment_new.php, it renders it, blocks, theme, everything.</p>
+<p>If you looking for performance then this hack is not a solution.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-10014">
+		<p>Pingback: <a href='http://www.neurosoftware.ro/programming-blog/blogposter/tutorial/create-a-better-jquery-stylesheet-switcher/' rel='external nofollow' class='url'>Create a better jQuery stylesheet switcher - Programming Blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10103">
+		<article id="comment-10103" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/be701035fdea5d56dc9ed657953ac254?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.clicknetworks.co.uk' rel='external nofollow' class='url'>Andy Beattie</a> </cite><a href="index.html#comment-10103"><time datetime="2009-12-01T20:43:47+00:00">Dec. 1, 2009 @ 8:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you very much for sharing your code. I have been looking at many solutions and yours is definately one of the best quality and the most thorough I have come across with very little in the way of limitation. I say this because of the cookie memory feature, as well as less requests and overhead than many of the solutions that require the page to load all stylesheets at once (check out the old ALA method with rel=&#8221;alternate&#8221;, it&#8217;s not as clean as yours nor as efficient). Who wants to drag those css files into the cache when they have not been requested? Certainly not me when I am trying to develop an efficient online application that loads as fast as possible.</p>
+<p>I made a slight modification in how I set up the framework, and this was to remove all colours from the base.css and to provide a default colour css file. Thus there are two style links in the head consisting of one large base.css with all formatting etc but no colour values, and then a couple of very small css files that feature only the selector names that I want to change colour. </p>
+<p>And for the ul nav links, I simply got rid of the text in the href links and made the colour an actual indicator like:</p>
+<p>.yellow { width:16px; height:16px; background:#FFCC00; text-decoration:none; display:inline-block;}<br />
+.blue {width:16px; height:16px;background:#6694E3; text-decoration:none; display:inline-block;}<br />
+.green {width:16px; height:16px;background: #728B2E; text-decoration:none; display:inline-block;}</p>
+<p> <a href="index.html#" rel="nofollow"></a><br />
+ <a href="index.html#" rel="nofollow"></a><br />
+ <a href="index.html#" rel="nofollow"></a></p>
+<p>This looks great and neat on the page and is very intuitive to the user. </p>
+<p>Once again Rob, thank you so much for the help, although I am an old css dog, having been in the game for about 8 years now, you have saved me many many hours. I look forward to reading more of your quality posts and sharing code with you in the future. </p>
+<p>Best Wishes!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-10814">
+		<article id="comment-10814" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b7878d5e733fc1a25b81c75d518c0949?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://anonymousprogrammer.com' rel='external nofollow' class='url'>anonymousprogrammer</a> </cite><a href="index.html#comment-10814"><time datetime="2010-01-27T18:19:36+00:00">Jan. 27, 2010 @ 6:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>THANK YOU!</p>
+<p>I was looking for a great way to swap stylesheets without loading them all initially in the head, and I never knew you could put a class on a  element.  Solves the problem perfectly!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10988">
+		<article id="comment-10988" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e78a160e8c632c59e9c6a4f5467f51ba?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.nrgtechnology.co.uk' rel='external nofollow' class='url'>IT Support Glasgow</a> </cite><a href="index.html#comment-10988"><time datetime="2010-01-31T09:28:50+00:00">Jan. 31, 2010 @ 9:28 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is a very intresting jquery stylesheet switcher.</p>
+<p>Giving little functions like this on your website or blog may bring users back.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-11210">
+		<article id="comment-11210" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c2a649a1a746750bca812fde142d65ac?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Rowan </cite><a href="index.html#comment-11210"><time datetime="2010-02-12T15:57:54+00:00">Feb. 12, 2010 @ 3:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have used the jquery styleswitcher to swap the css, BUT the style.css, which is the standard style (in wordpress) over-rides the over styles. I can modify the standard css so the new styles will apply the desired affect, but then the standard css, which will be seen first is stripped down and not at all the design! Help!</p>
+<p>Thanks, Rowan</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-11234">
+		<p>Pingback: <a href='http://0510ml.dk/2010/02/projects/tulm/dynamic-stylesheet-switching/' rel='external nofollow' class='url'>Dynamic Stylesheet switching &laquo; 0510ML</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12605">
+		<p>Pingback: <a href='http://www.adrianomeira.com/blog/?p=254' rel='external nofollow' class='url'>Adriano Meira &raquo; Trocando CSS e gravando em cookies com jQuery (Stylesheet Switcher)</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12673">
+		<p>Pingback: <a href='http://www.net-kit.com/10-practical-jquery-style-switchers/' rel='external nofollow' class='url'>10 Practical Jquery Style Switchers</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12674">
+		<article id="comment-12674" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/07926b332f12220d56a4a1145044358e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">olivier </cite><a href="index.html#comment-12674"><time datetime="2010-05-06T17:15:28+00:00">May. 6, 2010 @ 5:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you.<br />
+Unfortunately this isn&#8217;t working for me.</p>
+<p>Could it be because I have ids in my anchors?</p>
+<p><a href="index.html#" rel="nofollow">red</a><br />
+<a href="index.html#" rel="nofollow">yellow</a></p>
+<p>If not, how to debug it?<br />
+I&#8217;ve tried to put some &#8216;alert&#8217; but nothing is poping up.<br />
+And it looks like the cookie isn&#8217;t written either !</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12780">
+		<p>Pingback: <a href='http://designreviver.com/articles/themeswitcher-in-web-design-fantstic-examples-and-tutorials/' rel='external nofollow' class='url'>ThemeSwitcher in Web Design, Fantstic Examples and Tutorials | Design Reviver</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-12781">
+		<p>Pingback: <a href='http://patterninc.com/themeswitcher-in-web-design-fantstic-examples-and-tutorials/' rel='external nofollow' class='url'>Pattern Inc &raquo; ThemeSwitcher in Web Design, Fantstic Examples and Tutorials</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12783">
+		<p>Pingback: <a href='http://www.stohn.biz/themeswitcher-in-web-design-fantstic-examples-and-tutorials-2/' rel='external nofollow' class='url'>ThemeSwitcher in Web Design, Fantstic Examples and Tutorials</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12805">
+		<article id="comment-12805" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ecb5d251990882004d0a82dcb9571f1c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">ULLASMOHAN </cite><a href="index.html#comment-12805"><time datetime="2010-06-24T06:06:48+00:00">Jun. 24, 2010 @ 6:06 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Jquery is amazing..<br />
+Thankz for ur Tutorial</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12872">
+		<article id="comment-12872" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bc6b64194f9235ee2951840bd9f7cd1e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www,robbydesigns.com' rel='external nofollow' class='url'>RobbyDesigns</a> </cite><a href="index.html#comment-12872"><time datetime="2010-07-21T17:39:28+00:00">Jul. 21, 2010 @ 5:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great and simple article, nicely worded. I&#8217;m a designer more than a Dev but I am learning jquery so I know what&#8217;s possible and appreciate a good article well written, nice work.<br />
+Kudos to you!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-12925">
+		<article id="comment-12925" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9c726fed73417ac1f179590c835a6862?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jquery13.blogspot.com' rel='external nofollow' class='url'>Aman</a> </cite><a href="index.html#comment-12925"><time datetime="2010-08-18T11:48:13+00:00">Aug. 18, 2010 @ 11:48 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi</p>
+<p>I like this plugin.I have Also 10+ Jquery Style Switchers plugins please see:-</p>
+<p><a href="http://jquery13.blogspot.com/2010/08/10-jquery-style-switchers.html" rel="nofollow">http://jquery13.blogspot.com/2010/08/10-jquery-style-switchers.html</a></p>
+<p>Thanks<br />
+Aman</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12973">
+		<article id="comment-12973" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/aa20593bcc06b23d8f4f2516aa8372a3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Ant </cite><a href="index.html#comment-12973"><time datetime="2010-09-17T04:00:26+00:00">Sep. 17, 2010 @ 4:00 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good work. :)</p>
+<p>I seem to have a problem though. Everything works fine when I navigate to pages within the root of the site &#8211; the chosen css is retained. However, if I navigate to a page that&#8217;s within a folder in the root, the CSS is not loaded because it is looking for the CSS file from within that folder.</p>
+<p>e.g.</p>
+<p>Navigating around the root, from inspecting the DOM, the path is:<br />
+mySite/assets/myStyle.css</p>
+<p>Navigating to a folder within the root, it&#8217;s looking for the CSS from within that folder. Looking at the DOM, the path is:<br />
+mySite/newFolder/assets/myStyle.css</p>
+<p>Is there a way to solve this?</p>
+<p>Thanks a lot for any help. :)</p>
+<p>Cheers</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-12974">
+		<article id="comment-12974" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-12974"><time datetime="2010-09-17T10:16:59+00:00">Sep. 17, 2010 @ 10:16 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Ant,</p>
+<p>The simplest solution would be to use absolute paths for your CSS files. So instead of &#8220;mySite/assets/myStyle.css&#8221;, use &#8220;/mySite/assets/myStyle.css&#8221;. That forward slash at the beginning means &#8220;go all the way back to root,&#8221; and it works no matter how deep into your site you get.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-12986">
+		<p>Pingback: <a href='http://www.ar-wp.com/t25157.html#post99338' rel='external nofollow' class='url'>Anonymous</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13064">
+		<p>Pingback: <a href='http://www.joepettersson.com/development/php-style-sheet-switcher-with-cookies/' rel='external nofollow' class='url'>PHP style sheet switcher (with cookies) | JP.com</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13092">
+		<article id="comment-13092" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8ed48b740699b6ea59f194c3bdcee1f3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">KLM </cite><a href="index.html#comment-13092"><time datetime="2010-11-08T18:30:28+00:00">Nov. 8, 2010 @ 6:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m wondering, is it possible to call a style sheet based on a parameter in a querystring rather than an href?  Basically&#8230; if somesite.com?style=Larger then call that style sheet. I want to include the stylesheet parameter from an external link. THANKS!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13098">
+		<article id="comment-13098" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/fa2f389605d7eeaf6689bfb020e16c14?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.T-S-D.webs.com' rel='external nofollow' class='url'>TheFallenAngel</a> </cite><a href="index.html#comment-13098"><time datetime="2010-11-14T04:13:09+00:00">Nov. 14, 2010 @ 4:13 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi,<br />
+  Your tutorial is fairly good you explain it really well however I feel like there is something missing and thats the bit where you actually tell us where to put the HTML coding in our already made HTML coding I know where to put the links but I am not sure after that.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13135">
+		<article id="comment-13135" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e083846aa876da6fd608af4dde8670e6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.footprint-copy.co.uk' rel='external nofollow' class='url'>Printing Glasgow</a> </cite><a href="index.html#comment-13135"><time datetime="2010-12-05T09:09:22+00:00">Dec. 5, 2010 @ 9:09 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is a very interesting jquery stylesheet switcher.</p>
+<p>Giving little functions like this on your website or blog may bring users back.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13149">
+		<article id="comment-13149" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/18d2f52d900009bbcdc8064f1ffba406?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kjodle.net' rel='external nofollow' class='url'>Kenneth Odle</a> </cite><a href="index.html#comment-13149"><time datetime="2010-12-17T14:35:03+00:00">Dec. 17, 2010 @ 2:35 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is very close to what I am looking for, but is there a way to put the links into a drop-down menu? Thanks!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13186">
+		<article id="comment-13186" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/602d899734110f8e5af82612141cab53?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Adam </cite><a href="index.html#comment-13186"><time datetime="2011-01-11T09:40:49+00:00">Jan. 11, 2011 @ 9:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m trying to us this to load a theme css file while keeping my main css file loaded.</p>
+<p>The main css structure of my site and consists of a file containing about 1000 lines that I want to say loaded all the time.</p>
+<p>Then I&#8217;ve created a couple of themes css files that just change the sites colors, these files are each about 40 line each.</p>
+<p>Now I&#8217;m trying to implement this stylesheet switcher but every time I try it, it just unloads my main css file and activates one of the themes. </p>
+<p>How can I go about having one main css file that doesn&#8217;t change and have this switch only effect my theme files?</p>
+<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13204">
+		<article id="comment-13204" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f5afb7898648e52bb9441389a6387d32?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Preston </cite><a href="index.html#comment-13204"><time datetime="2011-01-21T08:34:18+00:00">Jan. 21, 2011 @ 8:34 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey, nice tutorial. But I have no problem. I&#8217;m using two stylesheets on the page (base.css and red.css) / OK?</p>
+<p>I want to change the red.css for blue.css but preserving base.css on page. </p>
+<p>How do I do this?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13242">
+		<p>Pingback: <a href='http://www.jquery4u.com/dynamic-css-2/jquery-change-css-file/' rel='external nofollow' class='url'>jQuery Change CSS File Dynamically | jQuery4u</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13289">
+		<article id="comment-13289" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1c54148c46bd07b028b289404b94f6de?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.alphabetix.net/blog' rel='external nofollow' class='url'>Kelly @ Alphabetix</a> </cite><a href="index.html#comment-13289"><time datetime="2011-02-26T16:40:24+00:00">Feb. 26, 2011 @ 4:40 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Of course this tutorial is so awesomely simple, and blows away my &#8220;Cookie&#8221; mind hole.  Thanks for sharing!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13293">
+		<article id="comment-13293" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f3e7c15a204409510dd1e60649d4351b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.berningdesign.com' rel='external nofollow' class='url'>Matt</a> </cite><a href="index.html#comment-13293"><time datetime="2011-02-28T13:50:16+00:00">Feb. 28, 2011 @ 1:50 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey Rob &#8211; Great tutorial &#8211; I am having the same problem as a couple other commenters. I need to have multiple stylesheets active at the same time. Your tutorial turns all stylesheets except the selected off. Do you have a solution for this? Thanks again</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13332">
+		<article id="comment-13332" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/43b288bcd466d064cc61c8384301764c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Alyssa </cite><a href="index.html#comment-13332"><time datetime="2011-03-23T16:30:11+00:00">Mar. 23, 2011 @ 4:30 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob,</p>
+<p>This is amazing. It works like a charm. The only thing is, it works when I&#8217;m playing around with it locally, but once I bring it live on the server, it doesn&#8217;t work. Do you have any solutions?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13377">
+		<article id="comment-13377" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/383e5e453558e3dcd23edb701cbe766d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://ovine.net' rel='external nofollow' class='url'>Andy</a> </cite><a href="index.html#comment-13377"><time datetime="2011-04-14T09:54:08+00:00">Apr. 14, 2011 @ 9:54 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks Rob, saved me a load of time with this css switcher!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13404">
+		<article id="comment-13404" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/2fd5e6f883f7ee2192318cfb4b90ee4c?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">damian </cite><a href="index.html#comment-13404"><time datetime="2011-04-28T16:05:07+00:00">Apr. 28, 2011 @ 4:05 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thank u &#8230;it is realy cool&#8230;one question&#8230;.if u dont mind&#8230;what should i do if i want one button to switch between two styles&#8230;.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13435">
+		<p>Pingback: <a href='http://peterwhittaker.wordpress.com/2011/05/13/css3-jquery-and-musicology-another-circle-for-understanding-western-notes/' rel='external nofollow' class='url'>CSS3, jQuery(), and musicology: Another &#8220;circle&#8221; for understanding Western notes&#8230;. &laquo; Peter Whittaker &#8211; Iconoclasm and irreverence</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13442">
+		<article id="comment-13442" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7b36b0c49f4764d5810056dace5d022c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.haydur.com/' rel='external nofollow' class='url'>Haydur</a> </cite><a href="index.html#comment-13442"><time datetime="2011-05-18T13:32:39+00:00">May. 18, 2011 @ 1:32 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>For Matt and others who are having trouble with this script affecting multiple stylesheets on the same document:</p>
+<p>You can limit the application of stylesheet switch by using JQuery selectors. For example, if you only want sheets with the common name &#8220;main&#8221; in them, i.e. &#8220;main1.css&#8221; and &#8220;main_blue.css&#8221;, you should change $(&#8220;link&#8221;).attr(&#8220;href&#8221;,$.cookie(&#8220;css&#8221;)); to $(&#8216;link[href*="main"]&#8216;).attr(&#8220;href&#8221;,$(this).attr(&#8216;rel&#8217;));</p>
+<p>You can also add custom attribute to your stylesheet tag and change the selector to something like $(&#8216;link[custom_attribute="attribute_val"]&#8216;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13478">
+		<article id="comment-13478" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ae27680d673f910e9091cbbb79acfe70?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">fabricio </cite><a href="index.html#comment-13478"><time datetime="2011-06-22T18:50:30+00:00">Jun. 22, 2011 @ 6:50 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great work!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../../index.html?p=410#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='410' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0677d9d0d7" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=166" title="Permalink to: Print-Friendly Images and Logos with CSS">
+                    Print-Friendly Images and Logos with CSS                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">One area where your website may look lackluster when printed is the images. It’s a simple problem of resolution. Images are always displayed on the web at 72dpi (dots per inch). However, there's a simple trick to sending a low-res version to the screen, and a high-res version to the printer. <a href="../../index.html?p=166" class="more-link" title="Permalink to: Print-Friendly Images and Logos with CSS">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1330/1416 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 01:12:31 by W3 Total Cache -->

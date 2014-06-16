@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSSnewbie Example - Happy 4th of July!</title>
+<style>
+	body {
+		font-family: "Lucida Sans Regular";
+		margin: 0;
+		padding: 0; }
+	#flag {
+		width: 398px;
+		border: 1px solid #ddd;
+		margin: 0 auto;
+		position: relative; }
+	.blue {
+		width: auto !important;
+		width: 180px; /* IE6 doesn't like our auto width. */
+		background-color: #00348c;
+		color: #fff;
+		text-align: center;
+		padding: 2px 0 5px 8px !important;
+		padding: 2px 0 5px 0; /* Font sizing issues in IE6 make padding a problem. */
+		position: absolute;
+		top: 0;
+		left: 0; }
+	.blue p {
+		letter-spacing: 12px;
+		height: 14px;
+		font-size: 20px;
+		line-height: 14px;
+		margin: 0; }
+	 p.stripe {
+	 	height: 19px;
+		font-weight: bold;
+	 	text-align: right;
+		padding: 0 5px;
+		margin: 0; }
+	.red {
+		color: #f70029;
+		background-color: #f70029; }
+	.red::-moz-selection {
+		color: #fff;
+		background-color: #f70029; }
+	.red::selection {
+		color: #fff;
+		background-color: #f70029; }
+	.white {
+		color: #fff;
+		background-color: #fff; }
+	.white::-moz-selection {
+		color: #000;
+		background-color: #fff; }
+	.white::selection {
+		color: #000;
+		background-color: #fff; }
+		
+</style>
+</head>
+<body>
+	<div id="flag">
+		<div class="blue">
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+			<p>&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+		</div>
+		<p class="red stripe">Have a Fun,</p>
+		<p class="white stripe">Safe, and Happy</p>
+		<p class="red stripe">Independence Day!</p>
+		<p class="white stripe"> </p>
+		<p class="red stripe"> </p>
+		<p class="white stripe">Created by Rob</p>
+		<p class="red stripe">at CSSnewbie.com.</p>
+		<p class="white stripe"> </p>
+		<p class="red stripe"> </p>
+		<p class="white stripe">For more cool</p>
+		<p class="red stripe">CSS tricks, tips,</p>
+		<p class="white stripe">and tutorials, visit:</p>
+		<p class="red stripe">http://www.cssnewbie.com/</p>
+	</div>
+
+
+</body>
+</html>

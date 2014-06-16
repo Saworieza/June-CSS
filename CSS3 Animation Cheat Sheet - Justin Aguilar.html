@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://www.justinaguilar.com/animations/index.html#download -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>CSS3 Animation Cheat Sheet - Justin Aguilar</title>
+
+  	<link rel="stylesheet" href="http://www.justinaguilar.com/animations/css/reset.css">
+  	<link rel="stylesheet" href="http://www.justinaguilar.com/animations/css/animations.css">
+  	<link rel="stylesheet" href="http://www.justinaguilar.com/animations/css/style.css">
+	
+  	<link rel="stylesheet" href="./CSS3 Animation Cheat Sheet - Justin Aguilar_files/stylesheet.css" type="text/css" charset="utf-8">
+
+  	<script src="./CSS3 Animation Cheat Sheet - Justin Aguilar_files/jquery-1.10.1.min.js"></script>
+
+  	<link href="./CSS3 Animation Cheat Sheet - Justin Aguilar_files/css" rel="stylesheet" type="text/css">
+  
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 id="logo-type"><a href="http://www.justinaguilar.com/animations/index.html">CSS3 Animation Cheat Sheet</a></h1>
+		<nav class="nav">
+			<ul>
+				<li class="hide"><a href="http://www.justinaguilar.com/animations/index.html#how">How it works</a></li>
+				<li><a href="http://www.justinaguilar.com/animations/scrolling.html">Examples</a></li>
+				<li><a href="./CSS3 Animation Cheat Sheet - Justin Aguilar_files/CSS3 Animation Cheat Sheet - Justin Aguilar.html">Download</a></li>
+				<li class="hide"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftwitter.com%2Fabout%2Fresources%2Fbuttons&text=Check%20out%20this%20awesome%20set%20of%20CSS3%20animations%20for%20your%20website&tw_p=tweetbutton&url=http%3A%2F%2Fwww.justinaguilar.com%2Fanimations%2F&via=JXTN" target="blank">Share</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="animation">
+
+		<div class="animation-container">
+			<div id="object" class="animate tossing"></div>
+		</div>
+
+		<div class="cta-wrapper">
+			<a href="http://www.justinaguilar.com/animations/scrolling.html" class="examples">See more examples →</a>
+		</div>
+
+	</section>
+
+
+	<section id="actions">
+
+		<div class="container">
+			<h2>Entrances</h2>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="slideUpBtn" class="button">Slide Up ↑</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="slideDownBtn" class="button">Slide Down ↓</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="slideLeftBtn" class="button">Slide Left ←</a>			
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="slideRightBtn" class="button">Slide Right →</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="slideExpandUpBtn" class="button">Slide Expand Up ↑</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="expandUpBtn" class="button">Expand Up ↑</a>		
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="fadeInBtn" class="button">Fade In</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="expandOpenBtn" class="button">Expand Open</a>			
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="bigEntranceBtn" class="button">Big Entrance</a>	
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="hatchBtn" class="button">Hatch</a>									
+
+			<h2>Misc</h2>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="bounceBtn" class="button">Bounce</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="pulseBtn" class="button">Pulse</a>		
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="floatBtn" class="button">Floating</a>		
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="tossingBtn" class="button">Tossing</a>
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="pullUpBtn" class="button">Pull Up ↑</a>	
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="pullDownBtn" class="button">Pull Down ↓</a>							
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="stretchLeftBtn" class="button">Stretch Left ←</a>	
+			<a href="http://www.justinaguilar.com/animations/index.html#" id="stretchRightBtn" class="button">Stretch Right →</a>					
+
+		</div>
+
+	</section>
+
+	<section id="how">
+
+		<div class="container">
+			<h2>How it works</h2>
+
+			<p>
+				The CSS3 Animation Cheat Sheet is a set of preset, plug-and-play animations for your web projects. All you need to do is add the stylesheet to your website and apply the premade CSS classes to the elements you want animated.
+			</p>	
+			<p>
+				The CSS3 Animation Cheat Sheet uses CSS3 @keyframes and works on 
+				<a href="http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">all the latest browsers</a> (that's IE 10).
+				Using CSS3 @keyframes, you don't have to worry about positioning the element to accomodate 
+				the animations - it will animate into place. Also for users with older browsers, the animated element will be visible 
+				and in place, even if the animation doesn't trigger. Below are instructions on how to get started.
+			</p>
+			
+			<h4>Add the animation stylesheet to the &lt;head&gt; element of your webpage:</h4>
+			
+			<pre><code class="no-corners">&lt;link rel="stylesheet" href="<span>css</span>/animations.css"&gt;</code></pre>
+			<div class="additional-info">
+				<p>Replace <span>css</span> with the name of the directory where the animation stylesheet is.</p>
+			</div>	
+
+			<h4>Add an animation class to the element you want animated:</h4>
+
+			<pre><code class="no-corners">&lt;div id="object" <span>class="slideUp"</span>&gt;</code></pre>
+
+			<div class="additional-info">
+				<p>Replace <span>slideUp</span> with the desired animation class.</p>
+			</div>								
+
+			<h4>For entrance animations, you need to make them invisible by adding the <span>visibility: hidden</span> property to the animated element:</h4>
+			<pre><code class="no-corners">#object{
+	background-color: #fe5652;
+
+	<span>visibility: hidden;</span>
+}</code></pre>
+
+			<div class="additional-info">
+				<p><span>visibility: hidden;</span> is used to hide elements before the animation is activated.</p>
+			</div>	
+
+			<p class="emphasis">
+				The values for these animations are relative to the element's size. That means bigger images have more exaggerated animations and smaller images have more subtle animations. While these animations are simple to implement, feel free to tweak values in the stylesheet to get the right effect.
+			</p>
+
+			<h2>Adding effects</h2>
+
+			<p>
+				By default, these animations will trigger when the page loads - even if the element is further down the page - 
+				but by using jQuery there are many ways you can activate the animations.
+				
+				<a href="http://www.justinaguilar.com/animations/scrolling.html">See how you can use these animations on your website</a>.
+			</p>
+
+			<h4>Add jQuery to the &lt;head&gt; element of your webpage:</h4>
+			
+			<pre><code>&lt;script src="http://code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script&gt;</code></pre>
+
+			<h4>Add this before the &lt;/body&gt; tag to trigger the animation when the user scrolls to the element:</h4>
+
+			<pre><code class="no-corners">&lt;script&gt;
+	$(window).scroll(function() {
+		$('<span>#animatedElement</span>').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos &lt; topOfWindow+<span class="modify">400</span>) {
+				$(this).addClass("<span>slideUp</span>");
+			}
+		});
+	});
+&lt;/script&gt;</code></pre>
+		<div class="additional-info">
+			<p>Replace <span>#animatedElement</span> with the ID or class of the element you want animated.</p>
+			<p>Replace <span>slideUp</span> with an animation class.</p>
+			<p><span class="modify">400</span> represents the space between the element and the top of the screen. The animation activates when the element is <span class="modify">400px</span> from the top of the screen. Increase this number to make the animaton activate sooner.</p>
+		</div>
+
+		<h4>Add this before the &lt;/body&gt; tag to trigger the animation when the user clicks on the element:</h4>
+			
+			<pre><code class="no-corners">&lt;script&gt;
+	$('<span>#animatedElement</span>').click(function() {
+		$(this).addClass("<span>slideUp</span>");
+	});
+&lt;/script&gt;</code></pre>
+
+		<div class="additional-info">
+			<p>Replace <span>#animatedElement</span> with the ID or class of the element you want animated.</p>
+			<p>Replace <span>slideUp</span> with an animation class.</p>
+		</div>
+			
+	</div>
+	
+	</section>
+
+
+	<section id="download">
+	
+		<div class="container">
+			<a href="http://www.justinaguilar.com/animations/css/animations.css" target="blank" class="download">Download</a>
+			<p>All you need is the .CSS file!</p>
+		</div>
+		
+	</section>
+	
+	<section id="contact">
+	
+		<div class="container">
+			<a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftwitter.com%2Fabout%2Fresources%2Fbuttons&text=Check%20out%20this%20awesome%20set%20of%20CSS3%20animations%20for%20your%20website&tw_p=tweetbutton&url=http%3A%2F%2Fwww.justinaguilar.com%2Fanimations%2F&via=JXTN" class="cta" target="blank">
+				<img src="./CSS3 Animation Cheat Sheet - Justin Aguilar_files/twitter-bird-light-bgs.png" alt="Twitter logo" class="pulse">
+			</a>
+			<h2>If you found this project useful, spread the word on Twitter!</h2>
+			<p class="contact">Direct your questions, comments, concerns, love letters, and cat videos to <a href="http://www.twitter.com/jxtn">@JXTN</a> or to my <a href="mailto:justin@justinaguilar.com">email</a>.</p>		
+		</div>
+		
+	</section>	
+	
+
+<script>
+
+	$(window).scroll(function() {
+		$('#examples-cta').each(function(){
+		var imagePos = $(this).offset().top;
+		
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideUp");
+			}
+		});
+	});
+
+</script>
+
+<script>
+
+		/*
+		ENTRANCES
+		*/
+		$('#slideUpBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();	
+					$('#object').addClass("slideUp");
+				});
+		});
+
+		$('#slideDownBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("slideDown");
+				});
+		});	
+
+		$('#slideLeftBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("slideLeft");
+				});
+		});		
+
+		$('#slideRightBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("slideRight");
+				});
+		});	
+
+		$('#slideExpandUpBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("slideExpandUp");
+				});
+		});	
+
+		$('#expandUpBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("expandUp");
+				});
+		});
+
+		$('#fadeInBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("fadeIn");
+				});
+		});
+
+		$('#expandOpenBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("expandOpen");
+				});
+		});		
+
+		$('#bigEntranceBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("bigEntrance");
+				});
+		});		
+
+		$('#hatchBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("hatch");
+				});	
+		});		
+
+
+		/*
+		MISC
+		*/
+
+		$('#bounceBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("bounce");
+				});	
+		});	
+
+		$('#pulseBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("pulse");
+				});	
+		});		
+
+		$('#floatBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("floating");
+				});	
+		});
+
+		$('#tossingBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("tossing");
+				});	
+		});		
+
+		$('#pullUpBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("pullUp");
+				});	
+		});
+
+		$('#pullDownBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("pullDown");
+				});	
+		});
+
+		$('#stretchLeftBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("stretchLeft");
+				});	
+		});
+
+		$('#stretchRightBtn').click(function() {
+			$(this).each(function(){
+					$('#object').removeClass();				
+					$('#object').addClass("stretchRight");
+				});	
+		});
+
+
+</script>
+
+
+
+</body></html>

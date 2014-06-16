@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/ -->
+<html class=" js svg inlinesvg svgclippaths" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="UTF-8">
+
+    <title>Understanding CSS Timing Functions | Smashing Magazine</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Win8 Tile -->
+    <meta name="application-name" content="Smashing Magazine">
+    <meta name="msapplication-TileColor" content="#e53b2c">
+    <meta name="msapplication-square70x70logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-70-70.png">
+    <meta name="msapplication-square150x150logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-150-150.png">
+    <meta name="msapplication-wide310x150logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-310-150.png">
+    <meta name="msapplication-square310x310logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-310-310.png">
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=5; cycle=1">
+
+    <link rel="apple-touch-icon-precomposed" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-57x57-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-72x72-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-114x114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/favicon.ico">
+
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="The CSS Timing Function Explained: It’s one of the less obvious animation-based CSS properties, whereas most of its counterparts are rather self-explanatory. Nevertheless, the gist of it is that it enables you to control and vary the acceleration of an animation — that is, it defines where the animation speeds up and slows down over the specified duration.">
+<link rel="canonical" href="./Understanding CSS Timing Functions   Smashing Magazine_files/Understanding CSS Timing Functions   Smashing Magazine.html">
+<link rel="publisher" href="https://plus.google.com/+SmashingMagazine%E2%80%8E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@smashingmag">
+<meta name="twitter:domain" content="Smashing Magazine">
+<meta name="twitter:creator" content="@Stephen_Greig">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/01-bezier-curve-ease.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/02-bezier-curve-drawing.gif">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/03-bezier-curve-ease-in-out.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/04-bezier-curve-ease.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/05-bezier-curve-ease-in-ease-out-500.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/06-bezier-curve-linear.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/07-cubic-bezier-site-500.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/08-custom-bezier-curve.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/09-custom-bezier-curve-outside-range.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/10-custom-bezier-curve-outside-range.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/11-bezier-curve-bouncing-balloon.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/12-steps-start-end.jpg">
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/04/13-frames-concept-500.gif">
+<meta name="twitter:description" content="The CSS Timing Function Explained: It’s one of the less obvious animation-based CSS properties, whereas most of its counterparts are rather self-explanatory. Nevertheless, the gist of it is that it enables you to control and vary the acceleration of an animation — that is, it defines where the animation speeds up and slows down over the specified duration.">
+<meta name="twitter:title" content="Understanding CSS Timing Functions - Smashing Magazine">
+<meta name="twitter:url" content="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine » Feed" href="http://www.smashingmagazine.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine » Comments Feed" href="http://www.smashingmagazine.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine » Understanding CSS Timing Functions Comments Feed" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/feed/">
+<link rel="stylesheet" id="main-css" href="./Understanding CSS Timing Functions   Smashing Magazine_files/main.min.css" type="text/css" media="all">
+<!--[if IE 8]>
+<link rel='stylesheet' id='ie8-css'  href='http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/stylesheets/ie8-nu.css' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/jquery.js"></script>
+<script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/thirdparty.min.js"></script>
+<link rel="shortlink" href="http://www.smashingmagazine.com/?p=181709">
+<link rel="canonical" href="./Understanding CSS Timing Functions   Smashing Magazine_files/Understanding CSS Timing Functions   Smashing Magazine.html">
+
+    <script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/spcjs.php"></script><script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/spc.php"></script><script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/fl.js"></script>
+
+    <script type="text/javascript">/* <![CDATA[ */  ads_postload();   /* ]]> */</script>
+
+    <script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/js"></script><script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/in.php"></script><script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/in(1).php"></script><script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/in(2).php"></script><script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/in(3).php"></script><script type="text/javascript" async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/in(4).php"></script></head>
+<body class="single single-post postid-181709 single-format-standard www-section">
+
+<a id="top"></a>
+<nav class="toplevel clearfix">
+	<div class="mini">
+		<h1><span class="sr">Smashing Magazine</span><a href="http://www.smashingmagazine.com/" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/logo.png" alt="Smashing Magazine" title="Jump to the front page"></a></h1>
+	</div>
+
+	<div class="mobile-nav-buttons">
+	<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#mobile-navigation" class="nav-toggle-button">Menu</a> <a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#mobile-search" class="search-toggle-button">Search</a>
+</div>     <ul id="menu-network-menu" class="network clearfix"><li class="current"><a href="http://www.smashingmagazine.com/" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/logo.png" alt="Smashing Magazine" title="Jump to the front page"></a></li><li id="menu-item-77918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77918 menu-item-books"><a href="http://www.smashingmagazine.com/books/">Books</a></li>
+<li id="menu-item-78659" class="cody menu-item menu-item-type-post_type menu-item-object-page menu-item-78659 menu-item-ebooks"><a href="http://www.smashingmagazine.com/ebooks/">eBooks</a></li>
+<li id="menu-item-85386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85386 menu-item-workshops"><a href="http://www.smashingmagazine.com/smashing-workshops/">Workshops</a></li>
+<li id="menu-item-2" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2 menu-item-job-board"><a href="http://jobs.smashingmagazine.com/">Job Board</a></li>
+</ul>
+<ul class="channels">
+	<li class="rss"><a href="http://www.smashingmagazine.com/feed/" title="Subscribe to our RSS-feed (1200K)">RSS</a></li>
+	<li class="fb"><a href="http://www.facebook.com/smashmag" title="Join our Facebook page! (190k)">Facebook</a></li>
+	<li class="tw"><a href="http://twitter.com/smashingmag" title="Follow us on Twitter! (767k)">Twitter</a></li>
+	<li class="nl"><a href="http://www.smashingmagazine.com/the-smashing-newsletter/" title="Subscribe to our Email Newsletter (175k)">Newsletter</a></li>
+</ul></nav>
+
+<div id="container">
+    <div class="fluid clearfix">
+        <div class="grid clearfix">
+
+	        <div class="mini-search wp-search-form clearfix">
+	<form id="search" method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+		<input name="q" type="text" placeholder="e.g. JavaScript">
+		<button class="search_submit" type="submit"><span class="first-type">Search</span></button>
+		<input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+		<input type="hidden" name="cof" value="FORID:10">
+		<input type="hidden" name="ie" value="UTF-8">
+	</form>
+</div>
+	        <div class="col sidebar">
+	            <nav class="sections"><ul id="menu-category-menu" class="clearfix"><li id="menu-item-116" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-116 menu-item-coding"><a href="http://www.smashingmagazine.com/category/coding/">Coding</a>
+<ul class="sub-menu">
+	<li id="menu-item-2014" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2014 menu-item-css"><a href="http://www.smashingmagazine.com/tag/css/">CSS</a></li>
+	<li id="menu-item-134810" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-134810 menu-item-html"><a href="http://www.smashingmagazine.com/tag/html/">HTML</a></li>
+	<li id="menu-item-2015" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2015 menu-item-javascript"><a href="http://www.smashingmagazine.com/tag/javascript/">JavaScript</a></li>
+	<li id="menu-item-2016" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2016 menu-item-techniques"><a href="http://www.smashingmagazine.com/tag/techniques/">Techniques</a></li>
+</ul>
+</li>
+<li id="menu-item-117" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-117 menu-item-design"><a href="http://www.smashingmagazine.com/category/design/">Design</a>
+<ul class="sub-menu">
+	<li id="menu-item-2017" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2017 menu-item-web-design"><a href="http://www.smashingmagazine.com/tag/web-design/">Web Design</a></li>
+	<li id="menu-item-2032" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2032 menu-item-typography"><a href="http://www.smashingmagazine.com/tag/typography/">Typography</a></li>
+	<li id="menu-item-2063" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2063 menu-item-inspiration"><a href="http://www.smashingmagazine.com/tag/inspiration/">Inspiration</a></li>
+	<li id="menu-item-2120" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2120 menu-item-business"><a href="http://www.smashingmagazine.com/tag/business/">Business</a></li>
+</ul>
+</li>
+<li id="menu-item-119" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-119 menu-item-mobile"><a href="http://www.smashingmagazine.com/category/mobile/">Mobile</a>
+<ul class="sub-menu">
+	<li id="menu-item-140532" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-140532 menu-item-responsive"><a href="http://www.smashingmagazine.com/tag/responsive/">Responsive</a></li>
+	<li id="menu-item-142132" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-142132 menu-item-iphone-ipad"><a href="http://www.smashingmagazine.com/tag/ios/">iPhone &amp; iPad</a></li>
+	<li id="menu-item-143596" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143596 menu-item-android"><a href="http://www.smashingmagazine.com/tag/android/">Android</a></li>
+	<li id="menu-item-143608" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143608 menu-item-design-patterns"><a href="http://www.smashingmagazine.com/tag/design-patterns/">Design Patterns</a></li>
+</ul>
+</li>
+<li id="menu-item-118" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-118 menu-item-graphics"><a href="http://www.smashingmagazine.com/category/graphics/">Graphics</a>
+<ul class="sub-menu">
+	<li id="menu-item-2264" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2264 menu-item-photoshop"><a href="http://www.smashingmagazine.com/tag/photoshop/">Photoshop</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-160 menu-item-fireworks"><a href="http://www.smashingmagazine.com/category/fireworks/">Fireworks</a></li>
+	<li id="menu-item-2283" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2283 menu-item-wallpapers"><a href="http://www.smashingmagazine.com/tag/wallpapers/">Wallpapers</a></li>
+	<li id="menu-item-2305" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2305 menu-item-freebies"><a href="http://www.smashingmagazine.com/tag/freebies/">Freebies</a></li>
+</ul>
+</li>
+<li id="menu-item-120" class="menu-item-uxdesign menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-120 menu-item-ux-design"><a href="http://www.smashingmagazine.com/category/uxdesign/">UX Design</a>
+<ul class="sub-menu">
+	<li id="menu-item-143609" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143609 menu-item-usability"><a href="http://www.smashingmagazine.com/tag/usability/">Usability</a></li>
+	<li id="menu-item-143610" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143610 menu-item-user-experience"><a href="http://www.smashingmagazine.com/tag/user-experience/">User Experience</a></li>
+	<li id="menu-item-143611" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143611 menu-item-ui-design"><a href="http://www.smashingmagazine.com/tag/ui/">UI Design</a></li>
+	<li id="menu-item-143612" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143612 menu-item-e-commerce"><a href="http://www.smashingmagazine.com/tag/e-commerce/">E-Commerce</a></li>
+</ul>
+</li>
+<li id="menu-item-121" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-121 menu-item-wordpress"><a href="http://www.smashingmagazine.com/category/wordpress/"><span class="long"><span>Word</span><span>Press</span></span><span class="short">WP</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-143677" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143677 menu-item-essentials"><a href="http://www.smashingmagazine.com/tag/essentials/">Essentials</a></li>
+	<li id="menu-item-143678" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143678 menu-item-techniques"><a href="http://www.smashingmagazine.com/tag/techniques-wp/">Techniques</a></li>
+	<li id="menu-item-143679" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143679 menu-item-plugins"><a href="http://www.smashingmagazine.com/tag/plugins/">Plugins</a></li>
+	<li id="menu-item-143680" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143680 menu-item-themes"><a href="http://www.smashingmagazine.com/tag/themes/">Themes</a></li>
+</ul>
+</li>
+</ul></nav>	        </div>
+            <div class="col main single">
+    <article class="post-181709 post type-post status-publish format-standard hentry category-coding category-css-popular tag-css tag-techniques tag-tools post">
+                    <h2><a href="./Understanding CSS Timing Functions   Smashing Magazine_files/Understanding CSS Timing Functions   Smashing Magazine.html" rel="bookmark" title="Read &#39;Understanding CSS Timing Functions&#39;">Understanding CSS Timing Functions</a></h2>
+                <ul class="postmetadata clearfix">
+            <li class="author">By <a rel="author" class="post-author" href="http://www.smashingmagazine.com/author/stephen-greig/?rel=author" title="Posts by Stephen Greig">Stephen Greig</a></li>
+                        <li class="date">April 15th, 2014</li>
+            <li class="tags"><a href="http://www.smashingmagazine.com/tag/css/">CSS</a>, <a href="http://www.smashingmagazine.com/tag/techniques/">Techniques</a>, <a href="http://www.smashingmagazine.com/tag/tools/">Tools</a></li>
+            <li class="comments"><a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comments" title="Comment on Understanding CSS Timing Functions">16 Comments</a> </li>
+                    </ul>
+                <div class="ad ed">
+            <span class="declare">Advertisement</span>
+            <div id="cad">
+                <script type="text/javascript">// <![CDATA[
+                    OA_show('Medium Rectangle');
+                // ]]> </script>
+            </div>
+        </div>
+                                    <p>People of the world, strap yourself in and hold on tight, for you are about to experience truly hair-raising excitement as you get to grips with the intricacies of the hugely interesting CSS timing function!</p>
+<p>OK, so the subject matter of this article probably hasn’t sent your blood racing, but all jokes aside, <strong>the timing function is a bit of a hidden gem</strong> when it comes to CSS animation, and you could well be surprised by just how much you can do with it.</p>
+<p>First of all, let’s set the scene and ensure we’re all familiar with the scenarios in which the timing function is relevant. As alluded to, the functionality becomes available when you’re working in the realm of CSS animation, which includes CSS transitions as well as keyframe-based animation. So, what exactly is it and what does it do?</p>
+<h3>The CSS Timing Function Explained</h3>
+<p>It’s one of the less obvious animation-based CSS properties, whereas most of its counterparts are rather self-explanatory. Nevertheless, the gist of it is that it enables you to control and vary the acceleration of an animation — that is, it defines where the animation speeds up and slows down over the specified duration.</p>
+<p>While it does not affect the actual duration of an animation, it could have profound effects on how fast or slow the user <em>perceives</em> the animation to be. If you’re not sold having learned of its actual purpose, then stick with me here because the timing-function property gets a lot more interesting than the definition suggests.</p>
+<p><strong>Note</strong>: There is no actual property named “timing-function.” When I refer to this “property,” I am actually referring to both the <code>transition-timing-function</code> and the <code>animation-timing-function</code> properties.</p>
+<p>Before moving on, let’s just familiarize ourselves with the syntax and where it fits into the whole process of defining an animation in CSS. To keep things simple, let’s use a CSS transition for this example. We’ll begin with the full array of transition properties:</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">transition-property</span><span class="token punctuation">:</span> background<span class="token punctuation">;</span>
+   <span class="token property">transition-duration</span><span class="token punctuation">:</span> 1s<span class="token punctuation">;</span>
+   <span class="token property">transition-delay</span><span class="token punctuation">:</span> .5s<span class="token punctuation">;</span>
+   <span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* This could, of course, be shortened to: */</span>
+<span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">transition</span><span class="token punctuation">:</span> background 1s .5s linear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The shorthand for defining a transition is fairly lenient, the only requirement for the order being that the delay parameter must be stated after the duration value (but not necessarily immediately after). Furthermore, the <code>transition-duration</code> value is the only one that is actually required for the code to function; and because the default values of the other parameters are adequate most of the time, your transitions seldom need to be anything more than the following snippet:</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">transition</span><span class="token punctuation">:</span> 1s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* This is the same as saying: */</span>
+<span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">transition</span><span class="token punctuation">:</span> all 1s 0s ease<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>But that’s a bit boring. While the defaults are often sufficient for standard hover events and such, if you’re working on something a little more substantial, then the timing function is a serious trick for fine-tuning an animation!</p>
+<p>Anyway, you now have an idea of what the timing function does. Let’s look at how it does it.</p>
+<h3>Looking Under the Hood</h3>
+<p>Many of you probably don’t look past the available keywords for the timing-function property, of which there are five: <code>ease</code> (the default), <code>ease-in</code>, <code>ease-out</code>, <code>ease-in-out</code> and <code>linear</code>. However, these keywords are simply shorthands for defining the Bézier curve.</p>
+<p>The what?!</p>
+<p>You might not be familiar with the term, but I’d wager that you’ve actually seen a Bézier curve — heck, if you’ve used graphical editing software, then you’ve probably even created one! That’s right, when you use the Pen or Path tool to create a nice smooth curve, then you’re drawing a Bézier curve! Anyway, to get to the point of this section, <strong>the Bézier curve is the magic behind the timing function</strong>; it basically describes the acceleration pattern on a graph.</p>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/01-bezier-curve-ease.jpg" alt="This Bézier curve translates to the ease keyword." title="This Bézier curve translates to the ease keyword."><br>
+<em>This Bézier curve translates to the <code>ease</code> keyword.</em></p>
+<p>If you’re anything like me the first time I saw a Bézier curve like this, then you might be wondering how on earth that curve could be formed from four points plotted on a graph! I couldn’t possibly tell you in words, but, fortunately, I have a particularly fantastic GIF to do the job for me, <a href="http://en.wikipedia.org/wiki/File:Bezier_3_big.gif">courtesy of Wikipedia</a>.</p>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/02-bezier-curve-drawing.gif" alt="A cubic Bézier curve being drawn." title="A cubic Bézier curve being drawn."><br>
+<em>A cubic Bézier curve being drawn (Image: <a href="http://en.wikipedia.org/wiki/File:Bezier_3_big.gif">Wikipedia</a>)</em></p>
+<p>Because this curve is formed from four points, we refer to it as a “cubic” Bézier curve, as opposed to a “quadratic” curve (three points) or a “quartic” curve (five points).</p>
+<h3>Introducing The cubic-bezier() Function</h3>
+<p>Now then, this is where things get really exciting, as I reveal that you can actually get access to this curve through the <code>cubic-bezier()</code> function, which can simply be used in place of the keywords of the timing-function property value. I appreciate that you may need a moment to contain your excitement…</p>
+<p>With the <code>cubic-bezier()</code> function, you can <strong>manipulate the Bézier curve whichever way you desire</strong>, creating completely custom acceleration patterns for your animation! So, let’s look at how this function works and how it enables you to create your very own Bézier curve.</p>
+<p>First, we know that the curve is formed by four points, which are referred to as point 0, point 1, point 2 and point 3. The other important thing to note is that the first and last points (0 and 3) are already defined on the graph, with point 0 always sitting at <code>0,0</code> (bottom left) and point 3 always sitting at <code>1,1</code> (top right).</p>
+<p>That leaves just point 1 and point 2 available for you to plot on the graph, which you can do using the <code>cubic-bezier()</code> function! The function takes four parameters, the first two being the x and y coordinates of point 1 and the latter two being the x and y coordinates of point 2.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(x, y, x, y)<span class="token punctuation">;</span>
+</code></pre>
+<p>To get comfortable with the syntax, as well as with how it creates the curve and with its physical effect on the animation, I’ll take you through the five timing-function keywords, their equivalent <code>cubic-bezier()</code> values and the resulting effect on the animation.</p>
+<h4>ease-in-out</h4>
+<p>Let’s start with the <code>ease-in-out</code> keyword because the logic behind this curve and how it translates to the animation are probably the easiest to understand.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* The cubic-bezier() equivalent of the ease-in-out keyword */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(.42, 0, .58, 1)<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/03-bezier-curve-ease-in-out.jpg" alt="A perfectly symmetrical Bézier curve, which means the animation will ease in to full speed and then ease out at exactly the same rate." title="A perfectly symmetrical Bézier curve, which means the animation will ease in to full speed and then ease out at exactly the same rate."><br>
+<em>A perfectly symmetrical Bézier curve, which means that the animation will ease in to full speed and then ease out at exactly the same rate.</em></p>
+<p>You can see that point 1 is positioned at 0.42 along the x-axis and at 0 on the y-axis, whereas point 2 is positioned at 0.58 on the x-axis and 1 on the y-axis. The result is a perfectly symmetrical Bézier curve, which means that the animation will ease in to full speed and then ease out at exactly the same rate; hence, the name of this keyword.</p>
+<p>If you look at the demo below, you will see the physical effect of the <code>ease-in-out</code> value, as well as how it compares to the other keyword values.</p>
+<div><iframe id="cp_embed_bHzqm" src="./Understanding CSS Timing Functions   Smashing Magazine_files/bHzqm.html" scrolling="no" frameborder="0" height="550" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script></p>
+<h4>Ease</h4>
+<p>The <code>ease</code> keyword is the default value of the CSS timing-function property, and it is actually quite similar to the previous one, although it eases in at a faster rate before easing out much more gradually.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* The ease keyword and its cubic-bezier() equivalent */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(.25, .1, .25, 1)<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/04-bezier-curve-ease.jpg" alt="The curve for the keyword ease, eases in at a faster pace before easing out much more gradually." title="The curve for the keyword ease, eases in at a faster pace before easing out much more gradually."><br>
+<em>The curve for the keyword <code>ease</code> eases in at a faster pace before easing out much more gradually.</em></p>
+<p>You can see a sharper incline in the curve initially, while the finish is more drawn out, which directly translates to the physical effect of this timing function on the animation. Don’t forget to refer to the earlier demo after reviewing each of these examples to compare the effects.</p>
+<h4>ease-in and ease-out</h4>
+<p>The <code>ease-in</code> and <code>ease-out</code> keywords are, unsurprisingly, exact opposites. The former eases in before maintaining full speed right through to the finish, while the latter hits full speed right off the bat before easing to a finish. The <code>ease-in-out</code> keyword that we looked at previously is, as logic would suggest, a perfect combination of these two Bézier curves.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* The ease-in keyword and its cubic-bezier() equivalent */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(.42, 0, 1, 1)<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* The ease-out keyword and its cubic-bezier() equivalent */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(0, 0, .58, 1)<span class="token punctuation">;</span>
+</code></pre>
+<p><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/05-bezier-curve-ease-in-ease-out.jpg" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/05-bezier-curve-ease-in-ease-out-500.jpg" alt="Bézier Curve for the ease-in keyword, left and the ease-out keyword, right." title="Bézier Curve for the ease-in keyword, left and the ease-out keyword, right."></a><br><em>Bézier curve for the <code>ease-in</code> keyword (left) and the <code>ease-out</code> keyword (right) (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/05-bezier-curve-ease-in-ease-out.jpg">Large version</a>)</em></p>
+<h4>Linear</h4>
+<p>The final keyword to address does not correspond to a curve at all. As the name implies, the <code>linear</code> timing-function value maintains the same speed throughout the animation, which means that the resulting Bézier curve (or lack of) would be just a straight line. There is simply no <strong>varying</strong> acceleration pattern to depict on the graph.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* The linear keyword and its cubic-bezier() equivalent */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(0, 0, 1, 1)<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/06-bezier-curve-linear.jpg" alt="The linear"><br><em>The <code>linear</code> timing-function value maintains the same speed throughout the animation.</em></p>
+<p>If you refer back to the demo, you will probably notice that, despite all of the examples having the exact same duration values, some of the animations appear to be slower than the others. Why is that? Well, to take the <code>ease-in-out</code> keyword as an example, we know that it starts and finishes at a slower pace, which means that it has to cover the middle ground of the animation at a much faster pace. This effectively ensures that we perceive the actual animation to be both shorter and faster, while, say, the linear animation appears longer and more drawn out.</p>
+<p>You might feel that this article is very slowly easing into its full pace (see what I did there?), so now it’s finally time to step things up a bit and look at how to use the <code>cubic-bezier()</code> function to create our own custom timing functions.</p>
+<h3>Creating Custom Acceleration Patterns With The cubic-bezier() Function</h3>
+<p>Now that we’ve seen how the keywords equate to the corresponding Bézier curves and seen their effect on the animation, let’s look at how to manipulate the curve to create custom acceleration patterns.</p>
+<p>You should now be able to plot points 1 and 2 on the graph using the <code>cubic-bezier()</code> function and have a pretty solid idea of how this will affect the animation. However, considering that you’re plotting points on a graph that you typically can’t see, obviously this could get very tedious very quickly.</p>
+<p>Fortunately, people like Lea Verou exist, who seemingly won’t rest until CSS development couldn’t be made any easier! Lea has developed the aptly named Cubic Bézier, which is basically a playground for creating completely custom Bézier curves and comparing them in action to the predefined keywords. What this means for you is that, instead of tediously editing the decimals in your <code>cubic-bezier()</code> functions, you can just visit <a href="http://cubic-bezier.com/">Cubic Bezier</a><sup class="print_only">1</sup> and play around with the curve until you’ve achieved the desired effect. Much more convenient.</p>
+<p><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/07-cubic-bezier-site.jpg" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/07-cubic-bezier-site-500.jpg" alt="Lea Verou&#39;s superbly useful cubic-bezier.com" title="Lea Verou&#39;s superbly useful cubic-bezier.com"></a><br>
+<em>Lea Verou’s superbly useful <a href="http://cubic-bezier.com/">Cubic Bézier</a><sup class="print_only">2</sup> (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/07-cubic-bezier-site.jpg">Large version</a>)</em></p>
+<p>The shorthand keywords give you great options for timing functions to start with, but the differences between them often appear minor. Only when you start to create custom Bézier curves will you realize the radical effect the timing function can have on an animation.</p>
+<p>Just look at the following working examples to see the extreme differences between the animations, despite all of them having the exact same duration values.</p>
+<div><iframe id="cp_embed_baFhH" src="./Understanding CSS Timing Functions   Smashing Magazine_files/baFhH.html" scrolling="no" frameborder="0" height="460" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<p>Let’s take a closer look at the first of these examples and try to understand why it produces such a radically different effect.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* cubic-bezier() values for first example from preceding demo page */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(.1, .9, .9, .1)<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/08-custom-bezier-curve.jpg" alt="Example for a custom Bézier curve." title="Example of a custom Bézier curve"><br>
+<em>Example of a custom Bézier curve</em></p>
+<p>The main difference between this timing function and the default keywords is the sharp inclines of the Bézier curve against the “progression” scale (the y-axis). This means that the animation progresses in short bursts, with a long gradual pause in the middle (where the curve levels out). This pattern contrasts starkly with what we’ve become used to with the timing-function keywords, which take the opposite approach, with the easing periods coming at the beginning or the end of the animation, rather than in the middle.</p>
+<p>With custom Bézier curves now in the bag, surely we have all but exhausted the capabilities of the <code>cubic-bezier()</code> function, right?! You’d think so, but this crafty beggar has got even more up its sleeve!</p>
+<h3>Getting Creative With Bézier Curves</h3>
+<p>Yep, it’s true: Bézier curves get even more exciting! Who’d have thought? The scope widens with the revelation that only the time scale (x-axis) is limited to the 0–1 range on the graph, whereas the progression scale (y-axis) can extend below and beyond the typical 0–1 range.</p>
+<p>The progression scale is exactly what you’d think it is, with the bottom end (0) marking the beginning of the animation and the top end (1) marking the end of the animation. Typically, the cubic Bézier curve always travels north along this progression scale at varying intensities until it reaches the end point of the animation. However, the ability to plot points 1 and 2 outside of this 0–1 range allows the curve to meander back <em>down</em> the progression scale, which actually causes reverse motion in the animation! As ever, the best way to understand this is through visuals:</p>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/09-custom-bezier-curve-outside-range.jpg" alt="Custom Bézier curve using value outside the typical 0-1 range." title="Custom Bézier curve using value outside the typical 0-1 range."><br>
+<em>A custom Bézier curve using a value outside of the typical 0–1 range</em></p>
+<p>You can see that point 2 is plotted outside of the typical 0–1 range at -0.5, which in turn pulls the curve downward. If you look at the following demo, you’ll see that this creates a bouncing effect in the middle of the animation.</p>
+<div><iframe id="cp_embed_kILDb" src="./Understanding CSS Timing Functions   Smashing Magazine_files/kILDb.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script></p>
+<p>Conversely, you could place this backward motion at the beginning of the animation and also make it temporarily run past its intended finishing point. Think of it like taking a couple of steps back to get a running start; then, at the end, your momentum carries you past your destination, causing you to take a couple of steps back to ensure that you arrive at the intended destination. Look at the working example to really understand what we’re talking about here. In addition, the Bézier curve that produces this effect can be seen below.</p>
+<div><iframe id="cp_embed_xcCqj" src="./Understanding CSS Timing Functions   Smashing Magazine_files/xcCqj.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script></p>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/10-custom-bezier-curve-outside-range.jpg" alt="Custom Bézier curve using value outside the typical 0-1 range." title="Custom Bézier curve using value outside the typical 0-1 range."><br>
+<em>A custom Bézier curve using a value outside of the typical 0–1 range</em></p>
+<p>You should now have a pretty good idea of how <code>cubic-bezier()</code> values outside of the typical 0–1 range can physically affect how an animation plays out. We can look at moving boxes all day long, but let’s finish this section with an example that clearly demonstrates this type of creative timing function.</p>
+<div><iframe id="cp_embed_vbqBh" src="./Understanding CSS Timing Functions   Smashing Magazine_files/vbqBh.html" scrolling="no" frameborder="0" height="600" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<p>That’s right: We’re animating a floating balloon! …What? Haven’t you always wanted to do that with CSS?</p>
+<p>The brief for this animation is to “add helium” to the balloon on click so that it floats to the “ceiling,” where it will bounce slightly before sticking to the top, as it naturally would. Using a <code>cubic-bezier()</code> value outside of the 0–1 range allows us to create the bounce and ultimately helps to produce a realistic effect. The following snippet shows the coordinates used in the <code>cubic-bezier()</code> function, and the resulting Bézier curve appears below that.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token comment" spellcheck="true">/* The cubic-bezier() values for the bouncing balloon */</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> cubic-bezier(.65, 1.95, .03, .32)<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/11-bezier-curve-bouncing-balloon.jpg" alt="Custom Bézier curve to emulate a bouncing balloon." title="Custom Bézier curve to emulate a bouncing balloon."><br>
+<em>A custom Bézier curve to emulate a bouncing balloon</em></p>
+<p>This example explains particularly well how the curve translates to the resulting animation because it reflects it almost perfectly. First, you can see that the curve travels from the beginning of the progression scale to the end in a straight line, indicating that the balloon travels from the start of the animation to the finish at a constant speed. Then, very similarly to the balloon, the curve bounces off the tip of the scale and goes into reverse before returning steadily and gradually to the top. All quite straightforward really!</p>
+<p>Once you’ve mastered the curve and the art of manipulating it to do what you want, you’ve nailed it.</p>
+<h3>Timing Functions And Keyframe-Based CSS Animation</h3>
+<p>One final thing to note before moving on (yes, there is more to cover!) is how timing functions behave when applied to CSS keyframe animation. The concepts are all exactly the same as those in the transition examples we’ve been working with so far, but with one exception that is important to be aware of: When you apply a timing function to a set of keyframes, it is executed <strong>per keyframe</strong>, rather than for the animation as a whole.</p>
+<p>To clarify, if you have four keyframes that move a box around four corners of a square, and you apply the “bouncing” timing function that we used in the earlier balloon example, then <em>each</em> of the four movements would experience the bounce, rather than the entire animation. Let’s see this in action and view the code.</p>
+<div><iframe id="cp_embed_rscGb" src="./Understanding CSS Timing Functions   Smashing Magazine_files/rscGb.html" scrolling="no" frameborder="0" height="400" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<pre class=" language-css"><code class=" language-css"><span class="token atrule">@keyframes square </span><span class="token punctuation">{</span>
+   <span class="token selector">25% </span><span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token selector">50% </span><span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span>400px<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token selector">75% </span><span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span>400px<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>     
+<span class="token punctuation">}</span>
+
+<span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">animation</span><span class="token punctuation">:</span> square 8s infinite cubic-bezier(.65, 1.95, .03, .32)<span class="token punctuation">;</span>
+   <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+   <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">/* Other styles */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note that if the <code>100%</code> keyframe isn’t defined, then the element will simply return to its original style, which is the desired result in this case, so defining it is not necessary. It is clearly evident from the demo that the timing function is applied to each of the four keyframes because they each appear to bounce off the walls of the container.</p>
+<p>If you need certain keyframes to take on a timing function that is different from the others, then go ahead and apply a separate timing-function value directly to the keyframe, as indicated in the following snippet.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token atrule">@keyframes square </span><span class="token punctuation">{</span> 
+   <span class="token selector">50% </span><span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+      <span class="token property">animation-timing-function</span><span class="token punctuation">:</span> ease-in-out<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Introducing The steps() Timing Function</h3>
+<p>Did you think we were done with timing functions? Ha, think again, pal! I told you that there’s a lot more to CSS timing functions than a few predefined easing functions!</p>
+<p>For this section, we can swap our curves for straight lines as we explore the concept of “stepping functions,” which are achieved through the <code>steps()</code> timing function.</p>
+<p>The <code>steps()</code> function is more of a niche tool, but it’s useful to have in the toolkit nonetheless. It enables you to break up an animation into steps, rather than the usual tweened motion that we’re used to. For example, if we wanted to animate a square moving 400 pixels to the right in four steps over 4 seconds, then the square would jump 100 pixels to the right every second, rather than animating in a continuous motion. Let’s examine the syntax that we’d need for this particular example, which should be an absolute breeze now that we’ve tackled the intricacies of the <code>cubic-bezier()</code> function!</p>
+<div><iframe id="cp_embed_Gwbry" src="./Understanding CSS Timing Functions   Smashing Magazine_files/Gwbry.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">transition</span><span class="token punctuation">:</span> 4s steps(4)<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">div:target </span><span class="token punctuation">{</span>
+   <span class="token property">left</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As you can see, it’s a simple matter of stating the number of steps to divide the animation into — but bear in mind that this number must be a positive integer, so no negatives or decimals. However, a second, optional parameter affords us slightly more control, the possible values for which are <code>start</code> and <code>end</code>, the latter being the default value.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token property">transition-timing-function</span><span class="token punctuation">:</span> steps(4, start)<span class="token punctuation">;</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> steps(4, end)<span class="token punctuation">;</span>
+</code></pre>
+<p>A value of <code>start</code> would run the animation at the beginning of each step, whereas a value of <code>end</code> would run the animation at the end of each step. Using the previous “moving box” example, the following image does a far better job of explaining the difference between these values.</p>
+<p><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/12-steps-start-end.jpg" alt="The difference between the start and end value in the steps() function." title="The difference between the start and end value in the steps() function"><br>
+<em>The difference between the start and end values in the <code>steps()</code> function.</em></p>
+<p>You can see that with a value of <code>start</code>, the animation begins as soon as it is triggered, whereas with a value of <code>end</code>, it begins at the end of the first step (in this case, one second after being triggered).</p>
+<p>And just to ensure that this overview is truly comprehensive, there are also two predefined keywords for the <code>steps()</code> function: <code>step-start</code> and <code>step-end</code>. The former is equivalent to <code>steps(1, start)</code>, and the latter is the same as <code>steps(1, end)</code>.</p>
+<h3>Creative Use Cases For Stepping Functions</h3>
+<p>OK, so you probably don’t have much of a need to animate a moving box in steps very often, but there are plenty of other cool uses for the <code>steps()</code> function. For example, if you have all of the sprites for a basic cartoon, then you could use this technique to play it through frame by frame, using just a couple of CSS properties! Let’s look at a demo and the code that makes it function.</p>
+<div><iframe id="cp_embed_tuvfp" src="./Understanding CSS Timing Functions   Smashing Magazine_files/tuvfp.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 125px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+   <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(images/sprite.jpg)</span> left<span class="token punctuation">;</span>
+   <span class="token property">transition</span><span class="token punctuation">:</span> 2s steps(16)<span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">/* The number of steps = the number of frames in the cartoon */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">div:target </span><span class="token punctuation">{</span>
+   <span class="token property">background-position</span><span class="token punctuation">:</span> -2000px 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>First, we have a small rectangular box (125 pixels wide), which has a background image (2000 pixels wide) containing 16 frames side by side. This background image is initially flush with the left edge of the box; so, all we need to do now is move the background image all the way to the left so that all 16 frames pass through the small rectangular window. With a normal animation, the frames would just slide in and out of view as the background image moves leftwards; however, with the <code>steps()</code> function, the background image can move to the left in 16 steps, ensuring that each of the 16 frames snaps in and out of view, as desired. And just like that, you are playing a basic cartoon using just a CSS transition!</p>
+<p><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/13-frames-concept.gif" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/13-frames-concept-500.gif" alt="This GIF demonstrates the concept of the background image passing through the window in steps" title="This GIF demonstrates the concept of the background image passing through the window in steps"></a><br>
+<em>This GIF demonstrates the concept of the background image passing through the “window” in steps, so that each frame snaps in and out of view. (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/04/13-frames-concept.gif">Large version</a>)</em></p>
+<p>Another creative use of the <code>steps()</code> function that I’ve found comes courtesy of Lea Verou (who else?), who has come up with a particularly clever typing animation, which I’ll break down for you now.</p>
+<div><iframe id="cp_embed_Blbcs" src="./Understanding CSS Timing Functions   Smashing Magazine_files/Blbcs.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<p>First, you need some text, and — unfortunately — you need to know exactly how many characters you’re working with because you’ll need to use this number in the CSS. Another requirement is that the font must be monospaced, so that all characters are exactly the same width.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">&lt;p&gt;smashingmag&lt;/p&gt;
+
+.text </span><span class="token punctuation">{</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 6.6em<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 11ch<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* Number of characters */</span>
+   <span class="token property">border-right</span><span class="token punctuation">:</span> .1em solid<span class="token punctuation">;</span>
+   <span class="token property">font</span><span class="token punctuation">:</span> 5em monospace<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The text we’re working with has 11 characters. With the help of the <code>ch</code> CSS unit, we can actually use this figure to define the width of the paragraph, although we should specify a fallback width for browsers that don’t support this unit. The paragraph is then given a solid black border on the right side, which will become the cursor. Now everything is in place; we just need to animate it, which is extremely simple.</p>
+<p>Two separate animations are required: one for the cursor and one for the typing. To achieve the former, all we need to do is make the black border blink, which couldn’t be simpler.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token atrule">@keyframes cursor </span><span class="token punctuation">{</span>
+   <span class="token selector">50% </span><span class="token punctuation">{</span>
+     <span class="token property">border-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.text </span><span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">/* existing styles */</span>
+   <span class="token property">animation</span><span class="token punctuation">:</span> cursor 1s step-end infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As intended, the black border simply switches between black and transparent and then loops continuously. This is where the <code>steps()</code> function is vital because, without it, the cursor would just fade in and out, rather than blink.</p>
+<p>Finally, the typing animation is just as simple. All we need to do is reduce the width of the paragraph to zero, before animating it back to full width in 11 steps (the number of characters).</p>
+<pre class=" language-css"><code class=" language-css"><span class="token atrule">@keyframes typing </span><span class="token punctuation">{</span>
+   <span class="token selector">from </span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.text </span><span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">/* existing styles */</span>
+   <span class="token property">animation</span><span class="token punctuation">:</span> typing 8s steps(11), 
+              cursor 1s step-end infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>With this single keyframe in place, the text will reveal itself one letter at a time over 8 seconds, while the black <code>border-right</code> (the cursor) will blink away continuously. The technique is very simple yet extremely effective.</p>
+<p>Just to add to this excellent use of the <code>steps()</code> function by Lea Verou, reversing the effect and making the text appear to be deleted is also a cinch. To achieve this, just change the keyframe keyword so that it reads <code>to</code> rather than <code>from</code>, and then add an <code>animation-fill-mode</code> parameter of <code>forwards</code> to the set of <code>animation</code> rules. This will ensure that once the text “deletes” (i.e. when the animation has finished), the text will remain deleted. Look at the demo below to see this in action.</p>
+<div><iframe id="cp_embed_LmohC" src="./Understanding CSS Timing Functions   Smashing Magazine_files/LmohC.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></div>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+<p>The downside to both of the examples featured in this section is that you must know the number of frames or characters beforehand in order to specify the right number of steps, and if this number changes at all, then you will need to alter the code as well. Still, the <code>steps()</code> function has shown its worth here and is another fantastic piece of functionality of the CSS timing function.</p>
+<h3>The Browser Support Situation</h3>
+<p>We’ve established that you can’t use a CSS timing function unless the browser supports CSS-based animation — namely, the CSS Transitions and CSS Animation (keyframe-based) modules. Fortunately, support is in pretty great shape these days.</p>
+<h4>Support for CSS Transitions</h4>
+<table class="table-overview">
+<tbody><tr>
+<td><strong>Browser</strong></td>
+<td><strong>Prefixed support</strong></td>
+<td><strong>Unprefixed support</strong></td>
+</tr>
+<tr>
+<td>Internet Explorer</td>
+<td>N/A</td>
+<td>10+</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>4+ (<code>-moz-</code>)</td>
+<td>16+</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>4+ (<code>-webkit-</code>)</td>
+<td>26+</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>3.1+ (<code>-webkit-</code>)</td>
+<td>6.1+</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>10.5+ (<code>-o-</code> prefix)</td>
+<td>12.1+</td>
+</tr>
+</tbody></table>
+<p>Although all current browser versions have dropped the prefix for transitions (which is awesome), you’d be wise to still include the <code>-webkit-</code> prefix to cater to old mobile browsers. I think the need to include the <code>-moz-</code> and <code>-o-</code> prefixes, however, has passed, as long as you progressively enhance, which you should be doing anyway!</p>
+<h4>Support for CSS Animation</h4>
+<table class="table-overview">
+<tbody><tr>
+<td><strong>Browser</strong></td>
+<td><strong>Prefixed support</strong></td>
+<td><strong>Unprefixed support</strong></td>
+</tr>
+<tr>
+<td>Internet Explorer</td>
+<td>N/A</td>
+<td>10+</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>5+ (<code>-moz-</code>)</td>
+<td>16+</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>4+ (<code>-webkit-</code>)</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>4+ (<code>-webkit-</code>)</td>
+<td>Not Supported</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>12 (<code>-o-</code> prefix), 15+ (<code>-webkit-</code> prefix)</td>
+<td>12.1 only (not supported since switch to WebKit)</td>
+</tr>
+</tbody></table>
+<p>Again, for keyframe animations, include only the <code>-webkit-</code> prefix alongside your unprefixed code.</p>
+<p>Evidently, browser support for CSS-based animation is in excellent shape, but support is slightly more fragmented when it comes to the nuances of timing functions. The following table explains in more detail.</p>
+<h4>Support for CSS Timing Functions</h4>
+<table class="table-overview">
+<tbody><tr>
+<td><strong>Browser</strong></td>
+<td><strong>Basic support</strong></td>
+<td><strong>cubic-bezier() outside of 0-1 range</strong></td>
+<td><strong>steps()</strong></td>
+</tr>
+<tr>
+<td>Internet Explorer</td>
+<td>10+</td>
+<td>10+</td>
+<td>10+</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>4+</td>
+<td>4+</td>
+<td>4+</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>4+</td>
+<td>16+</td>
+<td>8+</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>3.1+</td>
+<td>6+</td>
+<td>5.1+</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>10.5+</td>
+<td>12.1+</td>
+<td>12.1+</td>
+</tr>
+</tbody></table>
+<p>Again, although certain browsers have taken a little longer to support the full range of timing-function capabilities, you can see that support is now universal across current browser versions.</p>
+<h3>Summary</h3>
+<p>So, what have we learned about CSS timing functions? Time to recap.</p>
+<ul>
+<li>They define where an animation accelerates and decelerates.</li>
+<li>There is a great deal more to them than just the predefined keywords.</li>
+<li>You can create bounce effects with <code>cubic-bezier()</code> values outside of the 0–1 range.</li>
+<li>You can break an animation into any number of steps, rather than tweened motion.</li>
+<li>Browser support is in fantastic shape and ever improving.</li>
+</ul>
+<p>Finally, although these techniques are now supported across the board, this wouldn’t be an article about CSS3 techniques if I didn’t mention progressive enhancement. Always work from the bottom up; that is to say, ensure that your work is acceptable and accessible on devices and browsers that can’t deal with this functionality before enhancing for browsers that can cope with them.</p>
+<p>Other than that, go wild! Happy curving and stepping!</p>
+<h4>Other Resources</h4>
+<ul>
+<li>“<a href="http://cubic-bezier.com/">“Cubic Bézier</a><sup class="print_only">3</sup>,” Lea Verou<br>
+A playground for creating and comparing Bézier curves</li>
+<li>“<a href="https://developer.mozilla.org/en/docs/Web/CSS/timing-function">Timing Functions</a><sup class="print_only">4</sup>,” Mozilla Developer Network<br>
+A more technical overview of Bézier curves.</li>
+<li>“<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier Curves</a><sup class="print_only">5</sup>,” Wikipedia<br>
+More information</li>
+</ul>
+<p><em>(al, ml, il)</em></p>
+<p><script async="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ei.js"></script>	</p>
+                        	<div id="textadtarget"><script type="text/javascript">// <![CDATA[
+                    OA_show("Textad");
+            	// ]]> </script><div id="textad"><script type="text/javascript"><!--//<![CDATA[
+document.MAX_ct0 ='http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6259__zoneid=68__OXLCA=1__cb=13bc839420__oadest=';
+var m3_u = (location.protocol=='https:'?'https://auslieferung.commindo-media-ressourcen.de/www/delivery/ajs.php':'http://auslieferung.commindo-media-ressourcen.de/www/delivery/ajs.php');
+var m3_r = Math.floor(Math.random()*99999999999);
+if (!document.MAX_used) document.MAX_used = ',';
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?zoneid=94");
+document.write ('&amp;cb=' + m3_r);
+if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+document.write ("&amp;loc=" + escape(window.location));
+if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+if (document.context) document.write ("&context=" + escape(document.context));
+if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+}
+if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="./Understanding CSS Timing Functions   Smashing Magazine_files/ajs.php"></script><p style="padding: 2em 1.25em 1em 0; border-top: 1px solid rgba(0,0,0,0.05); margin-top: 2.25em; margin-bottom: 2em; overflow: hidden; "><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6607__zoneid=94__OXLCA=1__cb=e64b898675__oadest=http%3A%2F%2Fauslieferung.commindo-media-ressourcen.de%2Fwww%2Fdelivery%2Fck.php%3Foaparams%3D2__bannerid%3D6259__zoneid%3D68__OXLCA%3D1__cb%3D13bc839420__oadest%3Dhttp%3A%2F%2Fwww.smashingmagazine.com%2Fsmashing-book-4-new-perspectives%2F" style="border: none;" target="_blank"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/smb4-opt-mini.jpg" style="float: right; border-radius: 0.5em; max-width: 15% !important; padding: 0; margin-left: 1.5em; margin-top: 0;" alt="Smashing Book #4"></a> <span style="display: block; overflow: hidden;">It's done. The <a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6607__zoneid=94__OXLCA=1__cb=e64b898675__oadest=http%3A%2F%2Fauslieferung.commindo-media-ressourcen.de%2Fwww%2Fdelivery%2Fck.php%3Foaparams%3D2__bannerid%3D6259__zoneid%3D68__OXLCA%3D1__cb%3D13bc839420__oadest%3Dhttp%3A%2F%2Fwww.smashingmagazine.com%2Fbooks%2F%23the-smashing-book-4" target="_blank">Smashing Book #4</a>, our brand new book with smart techniques, ideas and approaches for front-end development and design. Written by respected designers and developers, neatly packed in a gorgeous hardcover. <a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6607__zoneid=94__OXLCA=1__cb=e64b898675__oadest=http%3A%2F%2Fauslieferung.commindo-media-ressourcen.de%2Fwww%2Fdelivery%2Fck.php%3Foaparams%3D2__bannerid%3D6259__zoneid%3D68__OXLCA%3D1__cb%3D13bc839420__oadest%3Dhttp%3A%2F%2Fwww.smashingmagazine.com%2Fsmashing-book-4-new-perspectives%2F" target="_blank">Get the book now</a>. </span></p><div id="beacon_e64b898675" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg.php" alt="" style="width: 0px; height: 0px;"></div>
+<noscript>&lt;a href='http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6259__zoneid=68__OXLCA=1__cb=13bc839420__oadest=http%3A%2F%2Fauslieferung.commindo-media-ressourcen.de%2Fwww%2Fdelivery%2Fck.php%3Fn%3Daf102b35%26amp%3Bcb%3D13bc839420' target='_blank'&gt;&lt;img src='http://auslieferung.commindo-media-ressourcen.de/www/delivery/avw.php?zoneid=94&amp;amp;cb=13bc839420&amp;amp;n=af102b35&amp;amp;ct0=http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6259__zoneid=68__OXLCA=1__cb=13bc839420__oadest=' border='0' alt='' /&gt;&lt;/a&gt;</noscript><div id="beacon_13bc839420" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(1).php" alt="" style="width: 0px; height: 0px;"></div></div>
+</div>
+	                    <div class="tagsdata longtags">
+            <a href="http://www.smashingmagazine.com/tag/css/">CSS</a>, <a href="http://www.smashingmagazine.com/tag/techniques/">Techniques</a>, <a href="http://www.smashingmagazine.com/tag/tools/">Tools</a>        </div>
+        <p><a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#top" class="backtotop single" title="Jump to the top of the page">↑ Back to top</a><a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F04%2F15%2Funderstanding-css-timing-functions%2F&source=tweetbutton&text=Understanding%20CSS%20Timing%20Functions&url=http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F04%2F15%2Funderstanding-css-timing-functions%2F&via=smashingmag" class="share-on-twitter single" title="Share on Twitter!">Share on Twitter</a></p>
+    </article><ul class="print_only_notelist"><li><h4>Footnotes:</h4></li><li><sup>1</sup> Cubic Bezier - http://cubic-bezier.com/</li><li><sup>2</sup> Cubic Bézier - http://cubic-bezier.com/</li><li><sup>3</sup> “Cubic Bézier - http://cubic-bezier.com/</li><li><sup>4</sup> Timing Functions - https://developer.mozilla.org/en/docs/Web/CSS/timing-function</li><li><sup>5</sup> Bézier Curves - http://en.wikipedia.org/wiki/B%C3%A9zier_curve</li></ul>	
+    <div class="bio clearfix">
+        <div class="gravatar">
+            <img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/b1abf9dd38819901a01b13bcbe85b540" class="avatar avatar-78 photo">        </div>
+        <div class="about">
+            <a rel="author" class="post-author" href="http://www.smashingmagazine.com/author/stephen-greig/?rel=author" title="Posts by Stephen Greig">Stephen Greig</a>            <p>Stephen specialises in design and front-end development, which is convenient as he works as a freelance Web Designer/Front-end guy out of Penarth in South Wales. Stephen has particular expertise in the more experimental and cutting edge CSS3 modules and is the author of extensive publication, <a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1118652630.html">CSS3 Pushing the Limits</a>. Follow him on <a href="http://twitter.com/stephen_greig">Twitter</a> or head over to his personal <a href="http://tangledindesign.com/">blog</a> to learn more.</p>
+        </div>
+    </div>
+    	<div class="related-articles clearfix">
+		<h2>Related Articles</h2>
+						<div class="ra clearfix">
+					<a class="post-picture" href="http://www.smashingmagazine.com/2014/04/23/cache-invalidation-strategies-with-varnish-cache/" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/post-thumb-fallback.png" alt="Cache Invalidation Strategies With Varnish Cache"></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/04/23/cache-invalidation-strategies-with-varnish-cache/">Cache Invalidation Strategies With Varnish Cache</a></h3>
+				</div>
+						<div class="ra clearfix">
+					<a class="post-picture" href="http://www.smashingmagazine.com/2014/04/22/rethinking-mobile-tutorials-which-patterns-really-work/" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/post-thumb-fallback.png" alt="Rethinking Mobile Tutorials: Which Patterns Really Work?"></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/04/22/rethinking-mobile-tutorials-which-patterns-really-work/">Rethinking Mobile Tutorials: Which Patterns Really Work?</a></h3>
+				</div>
+						<div class="ra clearfix">
+					<a class="post-picture" href="http://www.smashingmagazine.com/2014/04/17/after-editorially-alternative-collaborative-online-writing-tools/" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/post-thumb-fallback.png" alt="After Editorially: The Search For Alternative Collaborative Online Writing Tools"></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/04/17/after-editorially-alternative-collaborative-online-writing-tools/">After Editorially: The Search For Alternative Collaborative Online Writing Tools</a></h3>
+				</div>
+			</div>
+    
+<a id="comments"></a>
+
+<!-- Smashing Magazine - Comment spnsr ed spot -->
+<div class="singlepost advertisement">                                                                                                       
+    <span class="declare">Advertising</span>                                                                                                 
+    <div id="commentspnsrtarget"><script type="text/javascript">/* <![CDATA[ */ OA_show("Comment Sponsor"); /* ]]> */ </script><style type="text/css">
+div div.singlepost.advertisement span.declare {
+display: none;
+}
+</style><style type="text/css">.comment-job-board { margin: 2em 6% 2em 0; background: #FEFED3; padding: 1.25em 1em;	overflow: hidden; font: 1.2em/1.4em "Skolar Bold", Georgia, serif; }.comment-job-board a {display: block;color: #000;}.comment-job-board a span {padding-top:0.75em;display: block;font: 0.8em/1.4em "Proxima Nova Regular", Arial, sans-serif;}.comment-job-board a:focus, .comment-job-board a:active {background-color: transparent;}.comment-job-board img {float: right;margin: 0 0 0em 1em;}</style>
+<div class="comment-job-board"><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=4551__zoneid=26__OXLCA=1__cb=212ec9b8cc__oadest=http%3A%2F%2Fjobs.smashingmagazine.com%2F%3Futm_source%3Dsm%26utm_medium%3Dtextad%26utm_campaign%3Dinternal" target="_self" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/job-board-transparent.gif" style="border-radius: 5px; border: 1px solid rgba(0,0,0,0.05); padding: 7px; background-color: #fff; max-width: 95px !important;">Post your job listing in our Job Board!<span>If you're looking for a job or have a job opening to announce, post it in our job board and get noticed by professionals and well-respected companies. <b style="text-decoration: underline;font-family: Proxima Nova Bold, Proxima Nova, Arial">Submit a job listing</b>, and good luck!</span></a></div><div id="beacon_212ec9b8cc" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(2).php" alt="" style="width: 0px; height: 0px;"></div>
+</div>
+</div>
+
+<ul class="sub-tabs clearfix">
+    <li><a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#show-comments" class="active">16 Comments</a></li>
+    </ul>
+
+<div id="discussion" class="subtab-pages">
+    <div id="show-comments" style="display: block;">
+        	        <ol id="comments-overview" class="commentlist">
+					<li class="comment even thread-even depth-1 clearfix">
+		<span class="commentnumber">1</span>
+		<div class="comment" id="comment-263774">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/b08d04d9851714e4e5cfae73a328aef9" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">KidMang</h3>
+				<span class="datetime">
+					<a title="Commentlink #1" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-263774">
+						April 15, 2014 4:16 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Nice and informative article! I’m excited to use the steps( ) function for sprite animations.</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=263774#respond" onclick="return addComment.moveForm(&quot;comment-263774&quot;, &quot;263774&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_263774" class="inpsyde_extended_comments_rate positive">8</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="263774" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">2</span>
+		<div class="comment" id="comment-263838">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/3f83849b976e95383c67dd30b778635e" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Jesse Nichols</h3>
+				<span class="datetime">
+					<a title="Commentlink #2" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-263838">
+						April 15, 2014 4:25 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>This is a fantastic article! Thanks for the cubic bezier tool! Indeed, I have always stuck to the keywords and never ventured into custom patterns! I am excited to start trying some of this out!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=263838#respond" onclick="return addComment.moveForm(&quot;comment-263838&quot;, &quot;263838&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_263838" class="inpsyde_extended_comments_rate positive">2</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="263838" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment even depth-2 clearfix">
+		<span class="commentnumber">3</span>
+		<div class="comment" id="comment-263857">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/b1abf9dd38819901a01b13bcbe85b540(1)" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Stephen Greig</h3>
+				<span class="datetime">
+					<a title="Commentlink #3" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-263857">
+						April 15, 2014 5:16 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Glad you liked the article :-) But you have Lea Verou to thank for the fantastic cubic-bezier.com tool!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=263857#respond" onclick="return addComment.moveForm(&quot;comment-263857&quot;, &quot;263857&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_263857" class="inpsyde_extended_comments_rate positive">2</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="263857" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix">
+		<span class="commentnumber">4</span>
+		<div class="comment" id="comment-263895">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/3d64a47dfadf297f8e5cb0ecaafe333c" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Darwin Santos</h3>
+				<span class="datetime">
+					<a title="Commentlink #4" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-263895">
+						April 15, 2014 4:58 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>This is awesome!!! Animations with CSS, just what I’ve been waiting for!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=263895#respond" onclick="return addComment.moveForm(&quot;comment-263895&quot;, &quot;263895&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_263895" class="inpsyde_extended_comments_rate positive">2</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="263895" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">5</span>
+		<div class="comment" id="comment-263906">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/188706fcb1dc4583d3ee635e5e239fc3" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Roland</h3>
+				<span class="datetime">
+					<a title="Commentlink #5" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-263906">
+						April 15, 2014 5:27 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Very nice article! I’ve created a css/less-library to use the most common easing functions right out of the box ready for you to use. <a href="https://github.com/weaintplastic/easing-less" rel="nofollow">https://github.com/weaintplastic/easing-less</a></p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=263906#respond" onclick="return addComment.moveForm(&quot;comment-263906&quot;, &quot;263906&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_263906" class="inpsyde_extended_comments_rate positive">3</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="263906" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix">
+		<span class="commentnumber">6</span>
+		<div class="comment" id="comment-267361">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/32e32b44b9f7e7f5ae7b83897d794e47" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Michael Neil</h3>
+				<span class="datetime">
+					<a title="Commentlink #6" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-267361">
+						April 16, 2014 4:34 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>I can’t even think about easing without immediately thinking of Robert Penner. Anyone interested in learning more about easing needs to check out <a href="http://www.robertpenner.com/easing/" rel="nofollow">http://www.robertpenner.com/easing/</a>. The site may not be the prettiest but it will open your eyes to everything you’d ever wanted to know about the subject.</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=267361#respond" onclick="return addComment.moveForm(&quot;comment-267361&quot;, &quot;267361&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_267361" class="inpsyde_extended_comments_rate positive">3</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="267361" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">7</span>
+		<div class="comment" id="comment-270351">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/041d9af99cee6c6802e0b9b926ea0b3b" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Cianografia</h3>
+				<span class="datetime">
+					<a title="Commentlink #7" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-270351">
+						April 16, 2014 9:06 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Mind blowing … thanks for sharing this article.</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=270351#respond" onclick="return addComment.moveForm(&quot;comment-270351&quot;, &quot;270351&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_270351" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="270351" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix">
+		<span class="commentnumber">8</span>
+		<div class="comment" id="comment-279648">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/6dd49553f40e8269332a3ab8c13b3fbb" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">bug reporter</h3>
+				<span class="datetime">
+					<a title="Commentlink #8" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-279648">
+						April 16, 2014 7:32 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>any chance you could fix the broken conditional comment on your website?</p>
+<p><!--[if if IE 8]&gt; &lt;![endif]--></p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=279648#respond" onclick="return addComment.moveForm(&quot;comment-279648&quot;, &quot;279648&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_279648" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="279648" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-markus-seyfferth even depth-2 clearfix">
+		<span class="commentnumber">9</span>
+		<div class="comment" id="comment-280621">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/f6470080037f9a92e9eedb7c7eca3521" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Markus Seyfferth</h3>
+				<span class="datetime">
+					<a title="Commentlink #9" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-280621">
+						April 16, 2014 8:59 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Hi Bug Reporter, we’re already on it! Thanks for your patience and understanding!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=280621#respond" onclick="return addComment.moveForm(&quot;comment-280621&quot;, &quot;280621&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_280621" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="280621" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">10</span>
+		<div class="comment" id="comment-363608">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/83794b0ea1170a337e4782048cdaa928" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">liuyanghejerry</h3>
+				<span class="datetime">
+					<a title="Commentlink #10" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-363608">
+						April 21, 2014 3:57 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Good one! I also write a dynamic clock with pendulum waving using css3 animation &amp; steps: <a href="http://codepen.io/liuyanghejerry/details/FwKIx/" rel="nofollow">http://codepen.io/liuyanghejerry/details/FwKIx/</a></p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=363608#respond" onclick="return addComment.moveForm(&quot;comment-363608&quot;, &quot;363608&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_363608" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="363608" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="commentnumber">11</span>
+		<div class="comment" id="comment-381701">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/5939fa00cff76cb86a9a660bbf7178ff" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Chris Simmons</h3>
+				<span class="datetime">
+					<a title="Commentlink #11" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-381701">
+						April 22, 2014 5:10 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Any chance you could update to include mobile browser support as well? Ideally the big four: Android, iOS, Windows Phone and BlackBerry?</p>
+<p>Great article and somehow as always, perfectly timed!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=381701#respond" onclick="return addComment.moveForm(&quot;comment-381701&quot;, &quot;381701&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_381701" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="381701" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">12</span>
+		<div class="comment" id="comment-382676">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/360a230d0bea636a4590a5d0bc4d9621" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Simone</h3>
+				<span class="datetime">
+					<a title="Commentlink #12" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-382676">
+						April 22, 2014 7:01 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Thank you Stephen! So many things to do now :)</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=382676#respond" onclick="return addComment.moveForm(&quot;comment-382676&quot;, &quot;382676&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_382676" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="382676" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="commentnumber">13</span>
+		<div class="comment" id="comment-392534">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/3e3efad775aa031c6363473b0abefab3" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Redspark Technologies Pvt. Ltd.</h3>
+				<span class="datetime">
+					<a title="Commentlink #13" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-392534">
+						April 23, 2014 7:40 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Thanks a lot Stephen. There is so much to learn and implement..</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=392534#respond" onclick="return addComment.moveForm(&quot;comment-392534&quot;, &quot;392534&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_392534" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="392534" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">14</span>
+		<div class="comment" id="comment-392665">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/8f153c7bcf3ef5865370564513965cf4" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">DaveP</h3>
+				<span class="datetime">
+					<a title="Commentlink #14" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-392665">
+						April 23, 2014 8:41 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Thanks a lot Stephen, very interesting….<br>
+My first thought, would it be possible to create an HTML slide show using these techniques?</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=392665#respond" onclick="return addComment.moveForm(&quot;comment-392665&quot;, &quot;392665&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_392665" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="392665" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="commentnumber">15</span>
+		<div class="comment" id="comment-401690">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/71721b624a7fd05a4b10d9672cd10814" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">Gaëtan Renaudeau</h3>
+				<span class="datetime">
+					<a title="Commentlink #15" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-401690">
+						April 24, 2014 1:12 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>Very good read,</p>
+<p>I’ve made <a href="https://www.npmjs.org/package/bezier-easing" rel="nofollow">https://www.npmjs.org/package/bezier-easing</a> which is basically in case you need this easing function feature in JavaScript.</p>
+<p>Keep up the good work</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=401690#respond" onclick="return addComment.moveForm(&quot;comment-401690&quot;, &quot;401690&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_401690" class="inpsyde_extended_comments_rate positive">1</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="401690" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="commentnumber">16</span>
+		<div class="comment" id="comment-437742">
+		<div class="comment-author">
+			<img alt="" src="./Understanding CSS Timing Functions   Smashing Magazine_files/e94e312c6833c8365657a724253d8f0f" class="avatar avatar-38 photo">			<div class="authormeta">
+				<h3 class="comment-author">ChisWill</h3>
+				<span class="datetime">
+					<a title="Commentlink #16" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#comment-437742">
+						April 28, 2014 8:03 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="comment-text">
+			<p>that’s so cool!</p>
+		</div>
+		<div class="commentmeta">
+						<div class="reply"><a class="comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/?replytocom=437742#respond" onclick="return addComment.moveForm(&quot;comment-437742&quot;, &quot;437742&quot;, &quot;respond&quot;, &quot;181709&quot;)">Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_437742" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="437742" data-action="inpsyde_extended_comments_rate"><a class="rate_btn rate_btn_up" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="1" title="Vote up!"></a>
+<a class="rate_btn rate_btn_down" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" data-id="-1" title="Vote down!"></a></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	        </ol>
+            		    </div>
+
+	
+</div>
+
+
+<div id="respond">
+
+    <h3>Leave a Comment</h3>
+
+    <p class="desc">Yay! You've decided to leave a comment. That's fantastic! Please keep in mind that comments are moderated and <code>rel="nofollow"</code> is in use. So, please do not use a spammy keyword or a domain as your name, or else it will be deleted. Let's have a personal and meaningful conversation instead. Thanks for dropping by!</p>
+
+        
+            <a rel="nofollow" id="cancel-comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#respond" style="display:none;">Click here to cancel reply.</a>								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#respond" style="display:none;">Click here to cancel reply.</a></small></h3>
+									<form action="http://www.smashingmagazine.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+																										<div class="clearfix"><p class="input-half"><label for="comment_author">Your name<span class="required">*</span></label><input type="text" name="author" id="comment_author" value="" tabindex="1" class="input"></p>
+<p class="input-half"><label for="email">Your email<span class="required">*</span></label><input type="text" name="email" id="email" value="" tabindex="2" class="input"></p></div>
+												<div id="message-box"><div class="cancel-comment-reply right"><small></small></div><label for="comment">Your message<span class="required">*</span></label><textarea name="79800-comment" id="comment" rows="10" tabindex="4" class="input textarea"></textarea><textarea name="comment" style="display:none" rows="1" cols="1"></textarea></div>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Submit Comment">
+							<input type="hidden" name="comment_post_ID" value="181709" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<div id="inpsyde_extended_comments_preview_wrapper">
+	<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#" class="btn btn-primary" id="inpsyde_extended_comments_preview_button" role="button" aria-controls="inpsyde_extended_comments_preview_container" data-action="inpsyde_extended_comments_preview">Preview</a>
+	<div id="inpsyde_extended_comments_preview_container" aria-live="polite"></div>
+</div>					</form>
+							</div><!-- #respond -->
+			
+        
+</div>
+
+</div><!-- .col.main -->
+</div><!-- .grid -->
+<p><a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#top" class="backtotop" title="Jump to the top of the page">↑ Back to top</a></p>
+</div><!-- .fluid -->
+
+<div class="footer-navigation">
+
+<div class="mobile-nav" id="mobile-navigation">
+
+	<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#top" class="backtotop" title="Jump to the top of the page">↑ Back to top</a>
+
+	 <ul id="menu-smashing-mobile-network" class="mobile-nav-ul"><li class="mobile-nav-heading">Smashing Pages:</li><li id="menu-item-188956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188956 menu-item-books"><a href="http://www.smashingmagazine.com/books/">Books</a></li>
+<li id="menu-item-188957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188957 menu-item-ebooks"><a href="http://www.smashingmagazine.com/ebooks/">eBooks</a></li>
+<li id="menu-item-188955" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188955 menu-item-workshops"><a href="http://www.smashingmagazine.com/smashing-workshops/">Workshops</a></li>
+<li id="menu-item-188959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188959 menu-item-email-newsletter"><a href="http://www.smashingmagazine.com/the-smashing-newsletter/">Email Newsletter</a></li>
+<li id="menu-item-188961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-188961 menu-item-job-board"><a href="http://jobs.smashingmagazine.com/">Job Board</a></li>
+<li id="menu-item-188958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188958 menu-item-about-us-impressum"><a href="http://www.smashingmagazine.com/about/">About us / Impressum</a></li>
+</ul>
+	 <ul id="menu-mobile-categories" class="mobile-nav-ul"><li class="mobile-nav-heading">Categories:</li><li id="menu-item-181575" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-181575 menu-item-coding"><a href="http://www.smashingmagazine.com/category/coding/">Coding</a></li>
+<li id="menu-item-181576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181576 menu-item-design"><a href="http://www.smashingmagazine.com/category/design/">Design</a></li>
+<li id="menu-item-181580" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181580 menu-item-mobile"><a href="http://www.smashingmagazine.com/category/mobile/">Mobile</a></li>
+<li id="menu-item-181579" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181579 menu-item-graphics"><a href="http://www.smashingmagazine.com/category/graphics/">Graphics</a></li>
+<li id="menu-item-181577" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181577 menu-item-ux-design"><a href="http://www.smashingmagazine.com/category/uxdesign/">UX Design</a></li>
+<li id="menu-item-181578" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181578 menu-item-wordpress"><a href="http://www.smashingmagazine.com/category/wordpress/"><span class="long"><span>Word</span><span>Press</span></span><span class="short">WP</span></a></li>
+</ul></div><div class="mobile-search" id="mobile-search">
+
+  <a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/#top" class="backtotop" title="Jump to the top of the page">↑ Back to top</a>
+
+  <form id="searching" class="search-for-mobile" method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+    <div class="clearfix">
+      <input name="q" id="mobile-search-input" type="text" placeholder="e.g. CSS">
+      <button class="search_submit" type="submit">Search</button>
+      <input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+      <input type="hidden" name="cof" value="FORID:10">
+      <input type="hidden" name="ie" value="UTF-8">
+    </div>
+  </form>
+
+</div> <!-- Search form --></div>
+
+</div><!-- #container -->
+<div id="wpsidebar">
+
+	<div class="col side">
+
+		<div class="sm-search">
+
+			<form method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+				<label for="magazine-search">Search on Smashing Magazine</label>
+				<input id="magazine-search" name="q" type="text" placeholder="e.g. Responsive design">
+				<button class="search_submit" type="submit">Search</button>
+				<input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+				<input type="hidden" name="cof" value="FORID:10">
+				<input type="hidden" name="ie" value="UTF-8">
+			</form>
+
+		</div>
+
+		<div class="ed spnsrlistwrapper first-ad-container">
+
+							<span class="declare">Advertisement</span>
+				<span class="awithus"><a href="mailto:advertising@smashingmagazine.com" title="Advertise with us!" class="sprite ed-us">Advertise with us!</a></span>
+				<script type="text/javascript">/* <![CDATA[ */ SmashingAds.showSponsorList(3); /* ]]> */ </script><ul class="bnnr-list"><li class="double"><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7183__zoneid=77__OXLCA=1__cb=e481cf6a99__oadest=http%3A%2F%2Fwww.sitefinity.com%2Fcampaigns%2Freports%2Fforrester-report-mobile-app-or-mobile-web%3Futm_source%3Dsmashing-magazine%26utm_medium%3Dbanner%26utm_campaign%3Dsmmag-forrester-report" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai.php" alt="Complimentary Forrester Report" title="Complimentary Forrester Report" border="0"></a><div id="beacon_e481cf6a99" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(3).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7102__zoneid=24__OXLCA=1__cb=26c719d37c__oadest=https%3A%2F%2Fwww.zoho.com%2Fprojects%2F%3Futm_source%3Dsmashing_magazine%2F" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(1).php" alt="Online Project Management" title="Online Project Management" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7102__zoneid=24__OXLCA=1__cb=26c719d37c__oadest=https%3A%2F%2Fwww.zoho.com%2Fprojects%2F%3Futm_source%3Dsmashing_magazine%2F" target="_blank">Online Project Management</a><div id="beacon_26c719d37c" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(4).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6952__zoneid=24__OXLCA=1__cb=52e3d8ef4c__oadest=http%3A%2F%2Fwww.123rf.com%2F%3Fsrc%3Dsmashingmag%26utm_source%3DSmashingMag%26utm_medium%3DCPM%26utm_campaign%3DUS" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(2).php" alt="25 Million Stock Photos!" title="25 Million Stock Photos!" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6952__zoneid=24__OXLCA=1__cb=52e3d8ef4c__oadest=http%3A%2F%2Fwww.123rf.com%2F%3Fsrc%3Dsmashingmag%26utm_source%3DSmashingMag%26utm_medium%3DCPM%26utm_campaign%3DUS" target="_blank">25 Million Stock Photos!</a><div id="beacon_52e3d8ef4c" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(5).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6693__zoneid=24__OXLCA=1__cb=3fa3b1e703__oadest=https%3A%2F%2Fwww.psd2html.com%2Forder-now.html%3Futm_source%3Dsmashingmagazine.com%26utm_medium%3Dbanner%26utm_campaign%3Dresponsive" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(3).php" alt="PSD2HTML.com" title="PSD2HTML.com" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=6693__zoneid=24__OXLCA=1__cb=3fa3b1e703__oadest=https%3A%2F%2Fwww.psd2html.com%2Forder-now.html%3Futm_source%3Dsmashingmagazine.com%26utm_medium%3Dbanner%26utm_campaign%3Dresponsive" target="_blank">PSD2HTML.com</a><div id="beacon_3fa3b1e703" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(6).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><script src="./Understanding CSS Timing Functions   Smashing Magazine_files/adServer.bs"></script><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/img" style="position:absolute;left:0px;top:0px;"><a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.bs?cn=brd&FlightID=6080749&Page=&sessionid=5623551285310392482&PluID=0&EyeblasterID=12571350&Pos=417641199169988&ord=2019269988&sct=1&ncu=$$http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5981__zoneid=24__OXLCA=1__cb=4b732497f0__oadest=$$" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/e4e442ee-98b0-4eea-97e6-79fe9ca28e8c.jpg" title="" border="0"></a>
+<noscript>
+&lt;a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5981__zoneid=24__OXLCA=1__cb=4b732497f0__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080749%26Page%3D%26PluID%3D0%26Pos%3D928" target="_blank"&gt;&lt;img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&amp;FlightID=6080749&amp;Page=&amp;PluID=0&amp;Pos=928" border=0 width=200 height=125&gt;&lt;/a&gt;
+</noscript>
+<br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5981__zoneid=24__OXLCA=1__cb=4b732497f0__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080749%26Page%3D%26PluID%3D0%26Pos%3D6429" target="_blank">Create free stunning sites!</a><div id="beacon_4b732497f0" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(7).php" alt="" style="width: 0px; height: 0px;"></div>
+</li></ul>
+			
+		</div><!-- /.ed.spnsrlistwrapper -->
+
+		<div class="sidebartabs sm-search wg">
+
+      <h3>
+      	<a href="http://www.smashingmagazine.com/the-smashing-newsletter/" style="border: none;">
+      		<img src="./Understanding CSS Timing Functions   Smashing Magazine_files/smnl.png" alt="Smashing Newsletter"> Smashing Newsletter
+      	</a>
+      </h3>
+
+      <p>Subscribe to our email newsletter for useful tips and valuable resources, sent out every second Tuesday.</p>
+
+      <form action="http://smashingmagazine.us1.list-manage1.com/subscribe/post?u=16b832d9ad4b28edf261f34df&id=a1666656e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+        <input name="EMAIL" type="text" placeholder="email address">
+        <button class="search_submit" type="submit">Subscribe</button>
+      </form>
+
+    </div>
+
+          <div class="ed spnsrlistwrapper">
+          <script type="text/javascript">/* <![CDATA[ */ SmashingAds.showSponsorList(3); /* ]]> */ </script><ul class="bnnr-list"><li class="double"><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7184__zoneid=77__OXLCA=1__cb=74f8134529__oadest=http%3A%2F%2Fwww.sitefinity.com%2Fcampaigns%2Fsandbox%2Fdrag-and-drop-responsive-grid%3Futm_source%3Dsmashing-magazine%26utm_medium%3Dbanner%26utm_campaign%3Dsmmag_grid_green_banner" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(4).php" alt="Drag &amp; Drop Responsive Grid" title="Drag &amp; Drop Responsive Grid" border="0"></a><div id="beacon_74f8134529" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(8).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7295__zoneid=24__OXLCA=1__cb=cc2e617651__oadest=http%3A%2F%2Fbit.ly%2F1kd5nGu" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(5).php" alt="Leading Web Design Books​" title="Leading Web Design Books​" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7295__zoneid=24__OXLCA=1__cb=cc2e617651__oadest=http%3A%2F%2Fbit.ly%2F1kd5nGu" target="_blank">Leading Web Design Books​</a><div id="beacon_cc2e617651" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(9).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><script src="./Understanding CSS Timing Functions   Smashing Magazine_files/adServer(1).bs"></script><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/img" style="position:absolute;left:0px;top:0px;"><a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.bs?cn=brd&FlightID=6080755&Page=&sessionid=6594776820663784911&PluID=0&EyeblasterID=12571355&Pos=41764786215580&ord=1103715580&sct=1&ncu=$$http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5982__zoneid=24__OXLCA=1__cb=e7b8a37fd9__oadest=$$" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/e4e442ee-98b0-4eea-97e6-79fe9ca28e8c.jpg" title="" border="0"></a>
+<noscript>
+&lt;a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5982__zoneid=24__OXLCA=1__cb=e7b8a37fd9__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080755%26Page%3D%26PluID%3D0%26Pos%3D9258" target="_blank"&gt;&lt;img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&amp;FlightID=6080755&amp;Page=&amp;PluID=0&amp;Pos=9258" border=0 width=200 height=125&gt;&lt;/a&gt;
+</noscript>
+<br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5982__zoneid=24__OXLCA=1__cb=e7b8a37fd9__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080749%26Page%3D%26PluID%3D0%26Pos%3D6429" target="_blank">Create free stunning sites!</a><div id="beacon_e7b8a37fd9" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(10).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7383__zoneid=24__OXLCA=1__cb=3740c1b147__oadest=http%3A%2F%2Fwww.jotform.com%2F%3Futm_source%3Dsmashing%26utm_medium%3Dbanner%26utm_content%3Dlogo%26utm_campaign%3Dsmashing" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(6).php" alt="Online Form Builder" title="Online Form Builder" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7383__zoneid=24__OXLCA=1__cb=3740c1b147__oadest=http%3A%2F%2Fwww.jotform.com%2F%3Futm_source%3Dsmashing%26utm_medium%3Dbanner%26utm_content%3Dlogo%26utm_campaign%3Dsmashing" target="_blank">Online Form Builder</a><div id="beacon_3740c1b147" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(11).php" alt="" style="width: 0px; height: 0px;"></div>
+</li><li><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7297__zoneid=24__OXLCA=1__cb=e44f7b5160__oadest=http%3A%2F%2Ftheme.co%2Fx%2F" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(7).php" alt="30+ Demos - See It Live!" title="30+ Demos - See It Live!" border="0"></a><br><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7297__zoneid=24__OXLCA=1__cb=e44f7b5160__oadest=http%3A%2F%2Ftheme.co%2Fx%2F" target="_blank">30+ Demos - See It Live!</a><div id="beacon_e44f7b5160" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(12).php" alt="" style="width: 0px; height: 0px;"></div>
+</li></ul>
+      </div>
+    
+    <div class="sidebartabs self-promo">
+      <div>
+        <a href="http://www.smashingmagazine.com/books/#digital-adaptation" style="border: none;">
+          <img src="./Understanding CSS Timing Functions   Smashing Magazine_files/sidebar-digital-adaptation-paul-boag-v5-opt.png" alt="Digital Adaptation by Paul Boag">
+        </a>
+        <p>Nothing is more frustrating than <strong>stubborn management</strong>. That's why we published <a href="http://www.smashingmagazine.com/books/#digital-adaptation">Digital Adaptation</a>, a new book by Paul Boag on how to help management overcome legacy practices — for good.</p>
+        </div>
+      <div>
+        <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-sidebar" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/Smashing-Book-4-sidebar-transparent-opt.png" alt="Smashing Printed Books"></a>
+        <p>It's done. The <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-sidebar">Smashing Book #4</a>, our brand new book with smart <strong>front-end techniques</strong> and design approaches. Written by respected designers and developers, neatly packed in a gorgeous hardcover.</p>
+      </div>
+      <div>
+        <a href="http://www.smashingmagazine.com/ebooks/?pk_campaign=sb4-sidebar" style="border: none;">
+        	<img src="./Understanding CSS Timing Functions   Smashing Magazine_files/smashing-library-footer-new-opt.png" alt="Smashing Printed Books">
+        </a>
+				<p>Hungry for more content? Over 60 <strong>eBooks</strong> are waiting to be discovered in our lovely <a href="http://www.smashingmagazine.com/ebooks/?pk_campaign=sb4-sidebar">Smashing Library</a>. And guess what? You can watch Smashing Conference talks there, too.</p>
+			</div>
+		</div>
+
+      		<div class="ed spnsrlistwrapper">
+        	<script type="text/javascript">/* <![CDATA[ */ SmashingAds.showSponsorList(); /* ]]> */ </script><ul class="bnnr-list"><li class="double"><a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=7391__zoneid=77__OXLCA=1__cb=2eefe001a1__oadest=http%3A%2F%2Fwww.godaddy.com%2Fhosting%2Fwordpress-hosting.aspx%3Fisc%3Dsmag1wpsb%26ci%3D88548%26utm_campaign%3D1_managed_wp%26utm_source%3Dsmashing_magazine%26utm_medium%3DOther%252BOnline%26utm_content%3Dsmag1wpsb%26cvosrc%3Ddisplay.smashingmagazine.bca-1160_smashing_hosting_banners_410x125" target="_blank" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/ai(8).php" alt="" title="" border="0"></a><div id="beacon_2eefe001a1" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/lg(13).php" alt="" style="width: 0px; height: 0px;"></div><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/cvo.gif" alt="">
+</li></ul>
+  		</div>
+    
+		<div class="sidebartabs">
+      <div id="jobs" class="wg">
+        <h3>
+        	<a href="http://jobs.smashingmagazine.com/?pk_campaign=sm&piwik_kwd=widget" style="border: none;">
+        		<span>Smashing Job Board</span>
+        		<img src="./Understanding CSS Timing Functions   Smashing Magazine_files/sm-jobs.png" alt="Smashing Jobs">
+        	</a>
+        </h3>
+        <ul class="topiclist">
+          <li style="display:none;"></li>
+          <!-- Job Widget here - Uncomment to disable -->
+          <ul class="topiclist"><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/YOUdkX8NvHw/2412524">UI/UX Web Designer - Weill Cornell Medical College - (New York, New York) - FullTime</a><p>UI/UX Web Designer
+Position Summary
+
+Under direction from the Art Director and the Associate Director of Web Communications, the UI/UX Web Designer w...</p></li><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/d4VgjQhFzIw/2412521">Web Front-end Developer (WFED65) - Chicago Metropolitan Agency for Planning (CMAP) - (Chicago, Illinois) - FullTime</a><p>Company/Agency: Chicago Metropolitan Agency for Planning
+Job Category: Assistant 
+Experience Required: 0 – 3 years
+Salary Range: Commensurate ...</p></li></ul>          <!-- End of Job Widget - All the following content won't be loaded, when
+          the Job Widget is active but not functional -->
+        </ul>
+        <p class="view-more">
+        	<a href="http://jobs.smashingmagazine.com/?pk_campaign=sm&piwik_kwd=widget">View more job openings…</a>
+        </p>
+      </div><!-- /#jobs -->
+    </div><!-- /.sidebartabs -->
+
+    
+		<div id="sidebar_special">
+        <script type="text/javascript">/* <![CDATA[ */ OA_show("Sidebar Special 1"); /* ]]> */</script>
+        <script type="text/javascript">/* <![CDATA[ */ OA_show("Sidebar Special 2"); /* ]]> */</script>
+    </div>
+
+		<div class="two clearfix">
+			<div class="left">
+				<!--<div id="sidebaredtarget">-->
+
+				<div class="sidebar_sky">
+						<script type="text/javascript"> /* <![CDATA[ */ OA_show('Sidebar 1'); /* ]]> */ </script>
+				</div><!-- /.ed.sidebared -->
+
+				<!-- </div> -->
+
+				<div class="sidebar_sky">
+						<script type="text/javascript"> /* <![CDATA[ */ OA_show('Sidebar 2'); /* ]]> */ </script>
+				</div>
+			</div><!-- /.left -->
+		</div><!-- /.two -->
+
+    
+	</div><!-- .col.ads -->
+</div>
+
+<div id="footer">
+	
+<div class="contribute">
+	<div class="product clearfix">
+		<div class="product-image">
+			<a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/smashing-book-4-footer-opt.png" alt="Smashing Book #4"></a>
+		</div>
+		<div class="product-description">
+			<p><a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer"><strong>Smashing Book #4</strong></a><br>Get our brand new Smashing Book #4, available as print and eBook. <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer">Learn more...</a></p>
+		</div>
+	</div>
+</div>
+
+<div class="contribute">
+	<div class="product clearfix">
+		<div class="product-image">
+			<a href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/smashing-library-footer-new-opt.png" alt="The Smashing Library"></a>
+		</div>
+		<div class="product-description">
+			<p><a href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer"><strong>The Smashing Library</strong></a><br>Grab all published and upcoming Smashing eBooks, in one swoop. <a href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer">Learn more...</a></p>
+		</div>
+	</div>
+</div>
+
+<div class="contribute">
+	<div class="product clearfix">
+		<div class="product-image">
+			<a href="http://www.smashingmagazine.com/workshops/?pk_campaign=smashingmagazine-footer" style="border: none;"><img src="./Understanding CSS Timing Functions   Smashing Magazine_files/aarron-walter-footer.jpg" alt="Smashing Workshops"></a>
+		</div>
+		<div class="product-description">
+			<p><a href="http://www.smashingmagazine.com/workshops/?pk_campaign=smashingmagazine-footer"><strong>Smashing Workshops</strong></a><br>Join our hands-on full-day workshops, run by experts of the industry. Good stuff. <a href="http://www.smashingmagazine.com/workshops/?pk_campaign=smashingmagazine-footer">Learn more...</a></p>
+		</div>
+	</div>
+</div>	<p class="statement"><em>With a commitment to quality content for the design community.</em><br>Founded by Vitaly Friedman and Sven Lennartz. 2006-2014.<br>Made in Germany. ✎ <a href="http://www.smashingmagazine.com/write-for-us/">Write for us</a> – <a href="http://www.smashingmagazine.com/contact/">Contact us</a> – <a href="http://www.smashingmagazine.com/about/">Impressum</a>.</p>
+</div><!-- End of Footer -->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var iec_config = {"ajax_url":"http:\/\/www.smashingmagazine.com\/wp-admin\/admin-ajax.php?_wpnonce=82b4cc5680","slug":"inpsyde_extended_comments","l10n":{"rate_this_comment":"Rate this comment","rate_up":"Vote up!","rate_down":"Vote down!"},"selectors":{"preview":"inpsyde_extended_comments_preview","rating":"inpsyde_extended_comments_rating","rate_wrapper":"inpsyde_extended_comments_rate_wrapper","rate":"inpsyde_extended_comments_rate","rate_stars":"inpsyde_extended_comments_rate_stars","write":"inpsyde_extended_comments_write","preview_container":"inpsyde_extended_comments_preview_container","preview_button":"inpsyde_extended_comments_preview_button","preview_wrapper":"inpsyde_extended_comments_preview_wrapper","edit":"inpsyde_extended_comments_edit"}};
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var globals = {"wp_home":"http:\/\/www.smashingmagazine.com","wp_theme_url":"http:\/\/www.smashingmagazine.com\/wp-content\/themes\/smashing-magazine","wp_media_uploads_url":"http:\/\/www.smashingmagazine.com\/wp-content\/uploads","wp_www_smash_url":"http:\/\/www.smashingmagazine.com"};
+/* ]]> */
+</script>
+
+<script type="text/javascript">var elements=["http://www.smashingmagazine.com/wp-content/plugins/inpsyde-extended-comments/assets/js/comment.min.js","http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/javascripts/footnotes.min.js","http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/javascripts/prism-v1.js"];var downloadJSAtOnload=function(elements){if(toString.call(elements)!=="[object Array]"){return false}var i,element;for(i=0;i<elements.length;i++){element=document.createElement("script");element.src=elements[i];document.body.appendChild(element)}return true};if(window.addEventListener){window.addEventListener("load",function(){downloadJSAtOnload(elements)},false)}else{if(window.attachEvent){window.attachEvent("onload",function(){downloadJSAtOnload(elements)})}else{window.onload=function(){downloadJSAtOnload(elements)}}};
+if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(msViewportStyle)};
+</script>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(2727);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/2727ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+<script src="./Understanding CSS Timing Functions   Smashing Magazine_files/comment.min.js"></script><script src="./Understanding CSS Timing Functions   Smashing Magazine_files/footnotes.min.js"></script><script src="./Understanding CSS Timing Functions   Smashing Magazine_files/prism-v1.js"></script></body></html>

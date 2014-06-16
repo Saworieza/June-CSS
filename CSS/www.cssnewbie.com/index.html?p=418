@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Reader Response: A Simple, Streamlined E-Commerce Solution</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Reader Response: A Simple, Streamlined E-Commerce Solution Comments Feed" href="a-simple-streamlined-e-commerce-solution/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='A Simple jQuery Stylesheet Switcher' href='index.html?p=410' />
+<link rel='next' title='Using JavaScript to Style Active Navigation Elements' href='index.html?p=424' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=418' />
+<link rel='shortlink' href='index.html?p=418' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,225] -->
+<meta name="description" content="I'm looking for the perfect e-commerce solution, and I've come up short. My needs are simple and my readers savvy - perhaps we can find a solution together!" />
+
+<meta name="keywords" content="ecommerce, web 2.0 shopping cart, simple ecommerce, foxycart, magento, paypal, website payments pro, payflow gateway, discounts, templates,foxycart,payflow,paypal,poll,shopping cart,template,polls,resources" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-418 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-418" class="post-418 post type-post status-publish format-standard hentry category-ecommerce category-polls category-resources tag-ecommerce tag-foxycart tag-payflow tag-paypal tag-poll tag-shopping-cart tag-template">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=418" title="Permalink to Reader Response: A Simple, Streamlined E-Commerce Solution" rel="bookmark">Reader Response: A Simple, Streamlined E-Commerce Solution</a>
+	</h2>
+	<div class="meta">
+		<p>Published April 8, 2009 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p>Today, dear readers, I come to you with my arms wide open &mdash; and my shoulders caught somewhere between a slump and a shrug. I&#8217;ve been tearing my hair out over the last couple of months looking for the perfect ecommerce solution for my specific needs and wants. I&#8217;ve come up short.</p>
+<p>But it occurs to me that I have a lot of smart, savvy readers here on CSS Newbie &mdash; and maybe, just maybe, you&#8217;ll be able to help me find the perfect shopping cart. Below, I&#8217;ll explain specifically what I&#8217;m looking for (and a bit about what I&#8217;m <em>not</em> looking for, too). If you know of a cart that meets my needs &mdash; or even just some of them &mdash; <strong>please</strong> do not hesitate to let me know! I&#8217;m hoping that the comments on this article will prove as plentiful as Starbucks on the open prairie. And twice as useful.<span id="more-418"></span></p>
+<h3>I Want a Simple, User-Friendly Cart that Stays Out of My Way.</h3>
+<p>That about sums it up, really. But for more detail, here&#8217;s what I want/need in a cart:</p>
+<ul>
+<li><strong>A self-hosted solution.</strong> If it weren&#8217;t for this requirement, I think<a href="http://www.foxycart.com/"> Foxycart would be my #1 contender.</a> Consider that a hint &mdash; if you know of something Foxycart-eque, but is self-hosted instead, <em>please</em> let me know!</li>
+<li><strong>Supports everything <a href="https://www.paypal.com/">PayPal</a> has to offer.</strong> Specifically, I want something that can support <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_wp-pro-overview-outside&#038;nav=2.0.1">Website Payments Pro</a> and the <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside">Payflow Pro</a> gateway. This way I can handle payments on my site, but still take advantage of PayPal&#8217;s expertise, PCI compliance, and competitive pricing.</li>
+<li><strong>Flexible, <em>straightforward</em> templating.</strong> I am a front-end developer. Any cart solution that tries to stand between me and my code or that makes templating a holy hell isn&#8217;t a good solution. I want simple, straightforward flexibility. For example, I&#8217;ve been working with <a href="http://www.magentocommerce.com/">Magento</a> a lot recently, and while it has a lot of great features, it&#8217;s a <strong>huge</strong> pain to deviate too far from the standard build. Every small change requires updates in multiple disparate files and hours of time for a five-minute job. My ideal solution would let me build my pages however I wanted, and just drop in the &#8220;cart&#8221; functionality wherever I cared to do so.</li>
+<li><strong>Good support of downloadable products.</strong> The stores I&#8217;m building will have both hard and soft goods, so I need the cart to work equally smoothly with both.</li>
+<li><strong>Built for <a href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a> servers.</strong> The ideal solution would run on PHP/MySQL, but I would consider other LAMP-friendly options. Sorry, but ASP/.NET solutions aren&#8217;t a possibility for me.</li>
+<li><strong>A single product database.</strong> This solution will be running multiple stores, but several of the stores will share some products. In the interest of avoiding redundant data, I&#8217;d like to have a single product database that all my stores can draw from.</li>
+<li><strong>Access to the source.</strong> I don&#8217;t want to have to wait for a team halfway around the world or a community of volunteer developers to get around to building the functionality I need if I think I could tackle the project myself. If I can&#8217;t have access to the source itself, an exceptional plugin system would be a good alternative.</li>
+<li><strong>A flexible discounting system.</strong> I want to be able to offer (as a fake example) 20% off orders of $50 or more on certain products. I want to discount items if people buy two or more of the same product. I want sales that run for three weeks, and expire automatically. Or at least some of those things.</li>
+</ul>
+<p>That&#8217;s the basics of what I need, folks. That isn&#8217;t too much to ask, is it?</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>To summarize, <strong>I&#8217;m looking for a simple, straightforward shopping cart that makes templating a breeze, runs on PHP/MySQL, supports PayPal gateways, allows virtual goods and discounts, and is something I can install locally and modify.</strong> I do not need a solution that tries to be everything at once &mdash; it doesn&#8217;t have to contain a CMS, a catalog, or an inventory system. It doesn&#8217;t have to provide a newsletter, it needn&#8217;t compare items, and it shouldn&#8217;t try to walk my dog on Thursdays. I don&#8217;t want a jack-of-all-trades: I want a master of one (or two).</p>
+<p>I also want to clarify: <strong>this does not have to be a free solution.</strong> If you know of a commercial option that does all this, I would be <em>very</em> excited to hear about it.</p>
+<p>So! Let me know what you know in the comments below. Even if you know of a cart that fulfills <em>some</em> of these needs, I would be excited to hear about it &mdash; there&#8217;s always the chance I can customize it to do what I need from there.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			37 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9578">
+		<article id="comment-9578" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3d74d3c3e491cc73c5a1fabc7d6c882c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://GetANewBrowser.com' rel='external nofollow' class='url'>Andy Brudtkuhl</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9578"><time datetime="2009-04-08T11:12:40+00:00">Apr. 8, 2009 @ 11:12 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Check out WP-Commerce &#8211; a killer WordPress plugin -&gt; <a href="http://www.instinct.co.nz/e-commerce/" rel="nofollow">http://www.instinct.co.nz/e-commerce/</a></p>
+<p>I&#8217;ve been using it and seems to satisfy all your needs</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9582">
+		<article id="comment-9582" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7192a5a511bd8926c366f545f4fd030e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.chrispaul.ws' rel='external nofollow' class='url'>Chris</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9582"><time datetime="2009-04-08T11:55:40+00:00">Apr. 8, 2009 @ 11:55 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I don&#8217;t know one. But I would be interested as well. In the near future, I may just build one myself for fun.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9583">
+		<article id="comment-9583" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/38d5821b206f353a375a0bc203d9b637?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.hotpot.me' rel='external nofollow' class='url'>Erica Liabo</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9583"><time datetime="2009-04-08T12:05:45+00:00">Apr. 8, 2009 @ 12:05 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Ubercart yo ;)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9584">
+		<article id="comment-9584" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3785543bade130b2613346d12de80dfc?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cvwdesign.co.uk' rel='external nofollow' class='url'>Clive Walker</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9584"><time datetime="2009-04-08T13:08:55+00:00">Apr. 8, 2009 @ 1:08 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>We have used ecommercetemplates.com for a while now. Despite the name, the benefits of this software is their generic &#8216;template&#8217; can be integrated into a pre-designed website. The system just uses a series of PHP includes so it is relatively simple to integrate. Their system is now much more accessible and XHTML-validated than before and they do provide some CSS layouts although some of the core product display is still tables layout-based. On the plus side, I have found the software to be very flexible with a wide range of options that are easy to change. Pros and cons here I guess but I think they would cover a lot of what you have listed above. Email me direct if you have questions.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9585">
+		<article id="comment-9585" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9585"><time datetime="2009-04-08T14:00:30+00:00">Apr. 8, 2009 @ 2:00 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Erica: I&#8217;ve been doing some looking into Ubercart because I&#8217;ve heard good things about it. From the outset, the only thing I don&#8217;t like is that it ties me to a specific CMS (Drupal ain&#8217;t bad, but it is specific).</p>
+<p>Clive: Thanks for the link &#8212; I hadn&#8217;t heard of them before. I&#8217;ll need to do some digging to see how customizable the system looks to be. Initially, I&#8217;ll admit that I&#8217;m impressed. The site isn&#8217;t pretty, but the product looks pretty straightforward.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9586">
+		<article id="comment-9586" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/97471d444b493c39b3f15556685e6408?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.freedogsolutions.com' rel='external nofollow' class='url'>Brian</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9586"><time datetime="2009-04-08T14:12:17+00:00">Apr. 8, 2009 @ 2:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have had pretty good luck creating carts from scratch using the eCart app for Dreamweaver from Webassist.</p>
+<p>I know this is not a complete cart, and it more or less requires that you use Dreamweaver, but most of the basic carts I put together take an additional two hours of developmental time to integrate into an existing site.  How many times have you committed two hours to a preconfig cart only to be dissapointed with the results.</p>
+<p>PROS: You maintain complete control over the design of the site.  If you use DW templates, you can change the look of an entire site in minutes.  Tight integration with all aspects of Paypal, as well as other common gateways.  Built-in integration with various shippers.</p>
+<p>CONS:  Gotta have DW.  One of your requirements was complex discounting.  The wizard provided discounting is pretty simple.  Some PHP coding and you can expand that feature.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9587">
+		<p>Pingback: <a href='http://b2ctalk.wordpress.com/2009/04/04/b2b-copywriting-vs-b2c-copywriting/' rel='external nofollow' class='url'>B2B copywriting vs. B2C copywriting &laquo; B2C Talk</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9588">
+		<article id="comment-9588" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a63bdc931d517518380f1a6877324f9d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://maryalenn.com' rel='external nofollow' class='url'>Marya</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9588"><time datetime="2009-04-08T23:11:47+00:00">Apr. 8, 2009 @ 11:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I haven&#8217;t used this solution yet, but a colleague just turned me on to Interspire.  Seems to have all of the features you&#8217;re looking for.  It&#8217;s a paid solution where you pay a one-time license fee of $295-$1795 <a href="http://www.interspire.com/shoppingcart/features.php" rel="nofollow">http://www.interspire.com/shoppingcart/features.php</a>.</p>
+<p>I&#8217;ve been using Core Commerce for the last few months, and have been pretty pleased &#8211; <a href="http://www.corecommerce.com/ecommerce-software-features.html" rel="nofollow">http://www.corecommerce.com/ecommerce-software-features.html</a>.<br />
+It&#8217;s a hosted solution for $40-$180/month (depending on # of products).  Seems to have what you&#8217;re looking for, except I don&#8217;t think it has the multi store option.  Support has been pretty decent.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9589">
+		<article id="comment-9589" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/beff31b243e0e1d4dfd48658ef6bbea1?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ubercart.org' rel='external nofollow' class='url'>Ryan</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9589"><time datetime="2009-04-09T09:38:02+00:00">Apr. 9, 2009 @ 9:38 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey Rob,</p>
+<p>Just wanted to throw up a quick response.  I&#8217;m Ryan Szrama, the lead developer of Ubercart, and I&#8217;ll just say up front that I want Ubercart to continue to get simpler.  It just isn&#8217;t there yet, though I am at least not unhappy with where it is right now.  We know that some things aren&#8217;t user-friendly yet, but they&#8217;re at least manageable, and plans for the next round of development include improving the UI on top of features for which we had to start by nailing down the core functionality.</p>
+<p>So, that said, Ubercart is obviously self-hosted, though at this point we are requiring PHP 5.2.  (Per your comment, I&#8217;ll definitely see what Foxycart has to offer!)  Obviously this meets your requirement for running on a LAMP stack as well.  The source is licensed under GPL, so it&#8217;s yours to brand and redistribute if you so choose.  ; )</p>
+<p>We are a certified PayPal solution, meaning we have a fully developed PayPal module that ships with the core product and has been tested and verified by PayPal.  We support WPS, WPP, and Express Checkout out of the box.  There&#8217;s a patch in the works for recurring payment w/ WPP, and I&#8217;ve personally written a contributed module that offers Payflow Pro support.</p>
+<p>Modules?  What?  In case you&#8217;re unfamiliar, the reason Ubercart is tied to Drupal is because of the power and flexibility it offers as a modular, developer friendly CMS.  Ubercart isn&#8217;t just a switch you turn on.  It&#8217;s a package of modules that all offer different store functionality.  During installation, you can decide what to turn on for your store.  Modules even in core are written to interact with other modules in core.  For example, we have a shipping quotes module that allows you to get calculated shipping quotes into checkout.  Ubercart ships (hah) with a Flat Rate module and a USPS and UPS module for live rates.  Another developer wrote and released a FedEx module that plugs into the same system.  Another example is the payment sytem.  Ubercart ships with a payment module that supports multiple payment methods, one of them being the core credit card module.  This in turn allows you to enable a module specific to your payment gateway of choice, and we ship with modules for Authorize.Net, CyberSource, PayPal, Google Checkout, and 2Checkout.com.  The solutions for taking CC payments on your side have been developed with PCI compliance in mind, to the frustration of many of our users used to insecure payment solutions.  ; )</p>
+<p>So, instant, easy expansion of the feature-set with no core hacking.  That was hugely important to us coming from an osCommerce background.  As such, I hope it&#8217;s forgivable that we&#8217;d commit you to Drupal.</p>
+<p>Speaking of Drupal dependence, templating actually isn&#8217;t that difficult.  You do have to understand how Drupal theming works, but there are good books and actually solid documentation on it at drupal.org.  To whit &#8211; I just developed my first theme ever for a client.  I started with what&#8217;s called the Zen theme (<a href="http://drupal.org/project/zen" rel="nofollow">http://drupal.org/project/zen</a>) and was able to knock the positioning and a lot of the font styling out in an evening during the NCAA Championship game.  Drupal allows you great control of theming the components of your Drupal site, and since Ubercart sits in Drupal and uses the theme layer APIs properly, you have control over theming all the components of your cart.  Disclaimer: we&#8217;re not there yet, and our HTML / CSS out of the box isn&#8217;t there yet.  In fact, I&#8217;m dissatisfied with it and have a deal with Top Notch Themes (<a href="http://www.topnotchthemes.com" rel="nofollow">http://www.topnotchthemes.com</a>) where we&#8217;ll review and commit any style changes they recommend to make theming easier.  They&#8217;re actively developing high quality for Ubercart stores and selling them at an awesome price, and their help has proved invaluable thus far.  Furthermore, they developed a free post-installation store setup guide that they distribute through their site and licensed the Ubercart chapter of Lullabot&#8217;s O&#8217;Reilly Drupal book for distribution with every Ubercart theme they sell.</p>
+<p>Ahh, did I mention they&#8217;re using Ubercart to sell their themes as file downloads?  Since the alpha releases we&#8217;ve had support for file downloads, and it&#8217;s mainly due to the efforts of two of our core devs (one no longer around) and a guy named Erik from RiffTrax.  They&#8217;re Mike Nelson&#8217;s company (from Mystery Science Theater 3000) and they use Ubercart to sell tons of his Riff Trax, funny commentary for movies.  (I&#8217;ll also mention that they even allow users to upload and sell their own Riff Trax, a sweet customization of Ubercart enabled by the Market Place module that someone else developed.)  So, again, file download support isn&#8217;t perfect, but we have a developer actively &#8220;owning&#8221; that module to make sure it shines.</p>
+<p>Regarding multi-site stores, we&#8217;re treading into unexplored territory.  People have done it and are doing it (for example, see this write-up on Drupal.org for Row Eleven Win Co. &#8211; <a href="http://drupal.org/node/369398" rel="nofollow">http://drupal.org/node/369398</a>), but I&#8217;m not sure they&#8217;re doing it in the way you&#8217;re describing yet.  I actually do have a client who&#8217;s interested in this, so maybe a solution is closer than I know.  My basic idea is to use Drupal&#8217;s Domain Access module (<a href="http://drupal.org/project/domain" rel="nofollow">http://drupal.org/project/domain</a>) which allows you to run multiple sites off the same database.  You can theme them differently, show different products on different sites, but at the end of the day all orders should be possible through a single Drupal site (and by extension, a single Ubercart store).  I think the only snag I&#8217;ve come up with so far is allowing people to purchase products from multiple domains / sub-domains at the same time with this setup, but maybe that&#8217;s not important to you.</p>
+<p>And last&#8230; discounts.  The bane of our happy existence.  So many people want so many different things, that a flexible discount system that makes everyone happy is darned near impossible.  However, I&#8217;ve recently been using and working with Lyle, the project&#8217;s co-maintainer, to get a discount system that works through Ubercart&#8217;s core &#8220;Conditional Actions&#8221; system.  Don&#8217;t fret too much about what CA is&#8230; the short version is it allows you to configure actions to take place at different times if a set of conditions are met.  i.e. With the discount framework enabled on your site, when a product is loaded for display, you can add a discount to it based on the date, the user&#8217;s role (think reseller discounts), or any number of other conditions that CA comes with out of the box.  If a condition doesn&#8217;t exist, you can write one and expose it to CA, like I did for a client to apply a discount to a product based on the affiliate code a customer used when visiting his site.  Is this a perfect solution?  Nope.  CA itself isn&#8217;t a perfect solution, and its UI is one of the main things I was thinking about when I said our UI needs some work.  But it is flexible, it is embedded in Ubercart core (also governing things like shipping quotes, taxes, automated order workflow, etc.), and it gives a lot of power to users who can&#8217;t write a single line of code.</p>
+<p>So, to quote, &#8220;That’s the basics of what I need, folks. That isn’t too much to ask, is it?&#8221;</p>
+<p>It&#8217;s not too much to ask, but no one&#8217;s put it all together in a simple, user-friendly way yet.  We&#8217;re moving in that direction, but we&#8217;re doing it in the open as a community (read: we&#8217;re not getting there as fast as any of us would like).  We could sure use your help.  : )</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9590">
+		<article id="comment-9590" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/ede1970a59ebac149c52edea1127aeb8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://blog.technicallycoordinated.com/' rel='external nofollow' class='url'>Brett Shegogue</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9590"><time datetime="2009-04-09T12:38:02+00:00">Apr. 9, 2009 @ 12:38 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Not sure about the self-hosted thing (Seems like you are gonna have to be in control if you want something good), but Nettuts just had an article on Magento<br />
+<a href="http://net.tutsplus.com/tutorials/other/getting-started-with-magento-ecommerce/" rel="nofollow">http://net.tutsplus.com/tutorials/other/getting-started-with-magento-ecommerce/</a> </p>
+<p>And there is another solution called oxid car <a href="http://tinyurl.com/cqdjrx" rel="nofollow">http://tinyurl.com/cqdjrx</a></p>
+<p>I have just heard of these.  I have no experience with them</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9591">
+		<article id="comment-9591" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/11d8a305740133b42be0a00352ebeeef?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.angstmann.co.uk' rel='external nofollow' class='url'>Richard Angstmann</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9591"><time datetime="2009-04-10T05:11:35+00:00">Apr. 10, 2009 @ 5:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I would definitely suggest that Jshop Server (<a href="http://www.jshop.co.uk" rel="nofollow">http://www.jshop.co.uk</a>) is worth a look at. It covers many of the points you mention, self-hosted, PHP/MySQL, flexible discounting. A ton of Payment gateways, and great templating and use of tags. It is also in constant development which is always a good thing. Has a few quirks here and there, but I think most carts do. No dealbreakers though I don&#8217;t think.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9592">
+		<article id="comment-9592" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/729fabcbc9e735e6d364cd8d970fd297?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://sbahns.com' rel='external nofollow' class='url'>Sarah</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9592"><time datetime="2009-04-10T14:24:24+00:00">Apr. 10, 2009 @ 2:24 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Have you considered Prestashop?  I&#8217;ve been working with it a lately and have been very impressed with it.  At this time they don&#8217;t support multiple shops, but I understand that is coming. The biggest problem I have with it is a lack of documentation in English. That will change with time though.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9593">
+		<p>Pingback: <a href='http://www.bluewiremedia.com.au/blog/2009/04/weekly-round-up-5/' rel='external nofollow' class='url'>Bluewire Media Web Design Blog &raquo; Blog Archive &raquo; Weekly round-up</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9630">
+		<article id="comment-9630" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7192a5a511bd8926c366f545f4fd030e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.chrispaul.ws' rel='external nofollow' class='url'>Chris</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-9630"><time datetime="2009-04-22T12:41:03+00:00">Apr. 22, 2009 @ 12:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;d be interested to see which one you finally choose.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13663">
+		<article id="comment-13663" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1134f5a959d65003aa81db1dc3396136?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.zookcabins.com' rel='external nofollow' class='url'>log cabin</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13663"><time datetime="2011-11-09T17:12:39+00:00">Nov. 9, 2011 @ 5:12 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I need to verify with you here, which is not something I often do! I get pleasure from reading a website that may make people think. Additionally, thanks for permitting me to comment!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13667">
+		<article id="comment-13667" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/03a31c3adee8a57edc6ab1d057b39e3e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.kcgreenroofing.com' rel='external nofollow' class='url'>roofers york pa</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13667"><time datetime="2011-11-09T17:20:41+00:00">Nov. 9, 2011 @ 5:20 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>An interesting discussion is worth a comment. I think that it is best to write more on this matter, it might not be a taboo topic but generally people are not brave enough to talk on such topics. To the next. Cheers</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13671">
+		<article id="comment-13671" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/611bb5bccbddf50ea64d829ffdc1c443?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.sagari.co.uk' rel='external nofollow' class='url'>cloud computing vendors</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13671"><time datetime="2011-11-09T17:28:37+00:00">Nov. 9, 2011 @ 5:28 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>That was clever. I&#8217;ll be stopping back.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13674">
+		<article id="comment-13674" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/e7758d694c9903b7561ee668aed24f0e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.djstasteofthe50s.com' rel='external nofollow' class='url'>restaurants lancaster</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13674"><time datetime="2011-11-09T17:41:26+00:00">Nov. 9, 2011 @ 5:41 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s extremely useful for me. Big thumbs up for this blog post!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13675">
+		<article id="comment-13675" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0b7ff35a789302a24b7736e5ce390a7e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.meridianmortgagesolutions.net' rel='external nofollow' class='url'>mortgage rates indiana</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13675"><time datetime="2011-11-09T17:44:23+00:00">Nov. 9, 2011 @ 5:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good article , thanks and we want more! Added to FeedBurner as well</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13676">
+		<article id="comment-13676" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c5b4c19edb5847398d64d0a6923b8cce?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.martininsurance.com/personal-auto.asp' rel='external nofollow' class='url'>auto insurance lancaster pa</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13676"><time datetime="2011-11-09T17:45:46+00:00">Nov. 9, 2011 @ 5:45 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Youre so cool! I dont suppose Ive read anything like this before. So nice to find somebody with some original thoughts on this subject.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13682">
+		<article id="comment-13682" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f0ab00ddad3b653c37f2ba79ad3489ff?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.lanchestertrailer.com/concession-trailers.asp' rel='external nofollow' class='url'>pace trailers</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13682"><time datetime="2011-11-09T18:15:37+00:00">Nov. 9, 2011 @ 6:15 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It’s hard to find knowledgeable people on this topic, but you sound like you know what you’re talking about! Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13683">
+		<article id="comment-13683" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/875a0b7dd81dcfd6dd9922063986d7d2?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.meadowviewgazebos.com' rel='external nofollow' class='url'>patio gazebos</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13683"><time datetime="2011-11-09T18:16:28+00:00">Nov. 9, 2011 @ 6:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There may be a bundle to know about this. You made nice points also.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13685">
+		<article id="comment-13685" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/28833a68ea02393d82bbd829ae06d4ca?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ltdmgmt.com' rel='external nofollow' class='url'>supply chain consulting</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13685"><time datetime="2011-11-09T18:19:17+00:00">Nov. 9, 2011 @ 6:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Awesome job on this post.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13686">
+		<article id="comment-13686" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/874515fec1df6a980342c2af209cd1ac?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.horizonstructures.com/push_it.asp' rel='external nofollow' class='url'>portable chicken coops</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13686"><time datetime="2011-11-09T18:19:17+00:00">Nov. 9, 2011 @ 6:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>There are actually loads of details like that to take into consideration. That could be a great point to deliver.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13692">
+		<article id="comment-13692" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/61c55388b54cb256c8026c9e4fabd1b3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.rustichomeimpressions.com/candle-lanterns.aspx' rel='external nofollow' class='url'>candle lanterns</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13692"><time datetime="2011-11-09T18:25:08+00:00">Nov. 9, 2011 @ 6:25 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It’s hard to find knowledgeable people on this topic however you sound like you know what you’re talking about! Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13701">
+		<article id="comment-13701" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b0998f6ae8780e553c2eec8f2a88f602?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cnaconstruction.com/gallery.asp?id=9' rel='external nofollow' class='url'>decks lancaster pa</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13701"><time datetime="2011-11-09T18:53:17+00:00">Nov. 9, 2011 @ 6:53 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Youre so cool! I dont suppose Ive read anything like this before. So nice to find somebody with some original thoughts on this subject.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13703">
+		<article id="comment-13703" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/568ba331a2efb6cb7f37cc31e289ab47?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.marilynhartman.com/buying.asp' rel='external nofollow' class='url'>houses for sale lancaster pa</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13703"><time datetime="2011-11-09T18:57:31+00:00">Nov. 9, 2011 @ 6:57 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I desire to make use of some of the content material on my blog. Naturally I’ll offer you a link in my net blog. Thanks for sharing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13704">
+		<article id="comment-13704" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7049af2d288c7bb2264516212e85e5fd?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.angielski-online.info.pl' rel='external nofollow' class='url'>angielski online</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13704"><time datetime="2011-11-09T19:03:10+00:00">Nov. 9, 2011 @ 7:03 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Really   excellent  visual appeal on this website , I&#8217;d  value it 10 10.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13706">
+		<article id="comment-13706" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/c5a837159f1c2a543a056a48f16313a6?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://pacquiaoversusmarquez3live.blogspot.com' rel='external nofollow' class='url'>pacquiao vs marquez</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13706"><time datetime="2011-11-09T19:07:12+00:00">Nov. 9, 2011 @ 7:07 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>The subsequent time I learn a weblog, I hope that it doesnt disappoint me as a lot as this one. I mean, I do know it was my choice to learn, but I truly thought youd have something interesting to say. All I hear is a bunch of whining about something that you possibly can repair for those who werent too busy looking for attention.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13716">
+		<article id="comment-13716" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/af2ad91ed0f425c95056c2457a4c290b?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ezsolution.com' rel='external nofollow' class='url'>web design pa</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13716"><time datetime="2011-11-09T19:47:02+00:00">Nov. 9, 2011 @ 7:47 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for the great info.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13723">
+		<article id="comment-13723" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7b0b03807ac54fcff05b348f17843955?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.neighborhoodgreetings.net' rel='external nofollow' class='url'>chiropractic advertising</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13723"><time datetime="2011-11-09T20:26:33+00:00">Nov. 9, 2011 @ 8:26 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>You made some first rate points there. I searched on the internet for the problem and found most people will associate with with your website.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13810">
+		<article id="comment-13810" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7145571e25e14ea6126c21cfd379d729?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.ramizbayraktar.com/forum/profile.php?mode=viewprofile&#038;u=479213' rel='external nofollow' class='url'>Bob Kiefel</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13810"><time datetime="2011-11-10T07:36:53+00:00">Nov. 10, 2011 @ 7:36 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Lady Gaga cried for a week or so the second she uncovered just how well her most recently released album was able to sell.  The singer was incapable to keep her thoughts in check because she was so overcome as a result of the very good reaction to her LP ‘Born This Way’ when it was released last month.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13822">
+		<article id="comment-13822" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6841b8e0a93c07430148fe01c1bb32c8?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.hjsplit.fr/index.php' rel='external nofollow' class='url'>hjsplit</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13822"><time datetime="2011-11-10T08:39:22+00:00">Nov. 10, 2011 @ 8:39 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey, maybe this is a bit offf topic but in any case, I have been surfing about your blog and it looks really neat. impassioned about your writing. I am creating a new blog and hard-pressed to make it appear great, and supply excellent articles. I have discovered a lot on your site and I look forward to additional updates and will be back.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13828">
+		<article id="comment-13828" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/f0ae9b56f160d3d20d4cb58abc7a5868?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.autosubmitarticle.com/submitarticles.php?act=edit&#038;id=19863' rel='external nofollow' class='url'>Desire Malanado</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13828"><time datetime="2011-11-10T09:05:27+00:00">Nov. 10, 2011 @ 9:05 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Apple now has Rhapsody as an app, which is a great start, but it is currently hampered by the inability to store locally on your iPod, and has a dismal 64kbps bit rate. If this changes, then it will somewhat negate this advantage for the Zune, but the 10 songs per month will still be a big plus in Zune Pass&#8217; favor.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13832">
+		<article id="comment-13832" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6a0f78d2bc2235e1a3c04da9920c7f59?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.sportstvlivestreaming.com/pacquiao-vs-marquez-live-streaming/' rel='external nofollow' class='url'>pacquiao vs marquez live streaming</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13832"><time datetime="2011-11-10T09:17:54+00:00">Nov. 10, 2011 @ 9:17 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Oh my goodness! an incredible article dude. Thank you However I am experiencing issue with ur rss . Don’t know why Unable to subscribe to it. Is there anybody getting an identical rss downside? Anybody who knows kindly respond. Thnkx</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="trackback odd alt thread-odd thread-alt depth-1" id="comment-13846">
+		<p>Pingback: <a href='http://www.webwiki.de/www.apartment-berlin.com' rel='external nofollow' class='url'>apartments berlin</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13954">
+		<article id="comment-13954" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/498c833a477f32ff2cdce5381dadcdbd?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://denvang.com/real-deposit' rel='external nofollow' class='url'>invest liberty reserve</a> </cite><a href="a-simple-streamlined-e-commerce-solution/comment-page-1/index.html#comment-13954"><time datetime="2012-01-26T05:47:51+00:00">Jan. 26, 2012 @ 5:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Reader Response: A Simple, Streamlined E-Commerce Solution I was recommended this blog by my cousin. I&#8217;m not sure whether this post is written by him as no one else know such detailed about my trouble. You are wonderful! Thanks! your article about Reader Response: A Simple, Streamlined E-Commerce SolutionBest Regards Justin</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=418#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='418' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="21e374e4ed" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="index.html?p=240" title="Permalink to: Internet Explorer Bug Fix: Disappearing Positioned Anchors">
+                    Internet Explorer Bug Fix: Disappearing Positioned Anchors                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">A while back when I was working on developing the jQuery popout tutorials, I ran across a significant and annoying bug in Internet Explorer 6 and 7. Specifically, Internet Explorer does not respect the height and width properties of block-level, absolutely positioned anchor tags if they contain no content. <a href="index.html?p=240" class="more-link" title="Permalink to: Internet Explorer Bug Fix: Disappearing Positioned Anchors">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=418#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1240/1330 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 19:26:58 by W3 Total Cache -->

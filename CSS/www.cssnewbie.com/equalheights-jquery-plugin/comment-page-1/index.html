@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The EqualHeights jQuery Plugin</title>
+    <link rel="icon" href="../../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; The EqualHeights jQuery Plugin Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Equal Height Columns with jQuery' href='../../index.html?p=280' />
+<link rel='next' title='Advanced CSS Accordion Effect' href='../../index.html?p=311' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html#comments' />
+<link rel='shortlink' href='../../index.html?p=292' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,197] -->
+<meta name="description" content="After I wrote and published my last article on writing a function to equalize heights in jQuery, I realized that the function would probably make a really useful jQuery plugin. This is that plugin. This plugin is slightly more sophisticated than the function I wrote earlier this week." />
+
+<meta name="keywords" content="download,javascript,jquery,plugin,downloads" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-292 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../../index.html">Home</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-292" class="post-292 post type-post status-publish format-standard hentry category-downloads category-javascript tag-download tag-javascript tag-jquery tag-plugin">
+
+	<h2 class="entry-title">
+		<a href="../../index.html?p=292" title="Permalink to The EqualHeights jQuery Plugin" rel="bookmark">The EqualHeights jQuery Plugin</a>
+	</h2>
+	<div class="meta">
+		<p>Published December 10, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><a href="../../example/equal-heights/plugin.html"><img src="../../wp-content/uploads/2008/12/eh-plugin-main.gif" alt="" title="equalHeights Plugin" width="579" height="200" class="alignnone size-full wp-image-294" /></a></p>
+<p>After I wrote and published my last article on writing a function to <a href="../../index.html?p=280" title="Equal Height Columns with jQuery">equalize heights in jQuery,</a> I realized that the function would probably make a really useful jQuery plugin. This is that plugin.</p>
+<p>This is also my first attempt at a jQuery plugin, so I apologize in advance if I’ve done something painfully stupid (and painfully obvious) to any and all plugin veterans out there. Luckily, the functionality is extremely simple.</p>
+<p><a href="../../download/jquery.equalheights.js">You can download the plugin here (right-click and save the link).</a></p>
+<p><a href="../../example/equal-heights/plugin.html">You can see a demo of the plugin here.</a></p>
+<p>The plugin’s functionality is so simple because it’s designed to do only one thing: set all elements you specify to the same height.<span id="more-292"></span></p>
+<p>This plugin is slightly more sophisticated than the function I wrote earlier this week. Instead of being stuck setting all your columns to the height of the tallest element, you can also (optionally) specify a minimum and maximum height you want the element to be.</p>
+<p>For example:</p>
+<pre lang="javascript" escaped="true" line="1">$(".columns").equalHeights(100,300);</pre>
+<p>This would set all your elements to be at least 100px tall, but no more than 300px tall. If your tallest elements contain more than 300px worth of content, the containing element will still be resized, and a scroll bar will appear on the side of the element. If you only specify one number, that number will be treated like the minimum height, meaning all elements will be at least that number of pixels tall.</p>
+<p>You can also nestle the function inside of a chain, to keep your code minimalistic:</p>
+<pre lang="javascript" escaped="true" line="1">$(".columns").equalHeights().css("color","blue");</pre>
+<h3>Detailed Usage</h3>
+<p>For those not familiar with using jQuery plugins, here’s what you need to know.</p>
+<ol>
+<li>Load the jQuery library in your document’s head. That’ll look something like this:</li>
+<pre lang="html4strict" escaped="true" line="1">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</pre>
+</li>
+<li>Load the equalHeights plugin the same way. Be sure the plugin comes <em>after</em> (i.e., below) the main jQuery script&#8230; the function relies on jQuery already being loaded:
+<pre lang="html4strict" escaped="true" line="1">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;jquery.equalheights.js&quot;&gt;&lt;/script&gt;</pre>
+</li>
+<li>In order for the function to be able to calculate heights accurately, you’ll need to make sure it waits until the page is done loading before running. So wrap the function call (just like you should most all of your jQuery functions) in a $(docment).ready() function, like so:
+<pre lang="javascript" escaped="true" line="1">$(document).ready(function() {
+	$(".columns").equalHeights(100,300);
+});</pre>
+</li>
+</ol>
+<p>And that’s about all there is to it!</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<h3>Known Limitations</h3>
+<ul>
+<li>Sometimes this script has trouble accurately calculating heights in Internet Explorer if you’re trying to find the height of an element that contains images that don’t have heights set. Unless the height has been specified, the script seems to assume a height of zero.</li>
+<li>If you resize the text in your browser window, the blocks will not resize automatically. In some browsers, you would be able to fix this by calling the script again on resize, with something like:
+<pre lang="javascript" escaped="true" line="1">$(".columns").resize(function(){
+ 	$(".columns").equalHeights();
+});</pre>
+<p>However, I’m given to understand that this doesn’t work on Firefox, as the browser doesn’t report text resizes as a “real” resize. I&#8217;m currently not aware of a good workaround.</li>
+</ul>
+<h3>Worth Mentioning</h3>
+<p>I should point out that there is <a href="http://plugins.jquery.com/project/equal-height-elements">a similar jQuery plugin</a> out there already called equalHeight which has similar functionality. However, that plugin requires significantly more code and the author warns that it doesn’t work in Internet Explorer. I feel my contribution, which is very small and cross-browser compatible, is thus still worthwhile.</p>
+<p>Further, <a href="http://design.mellentine.com/">CSS Newbie reader Jared Mellentine</a> posted a similar jQuery function in <a href="../../index.html?p=280#comment-9042">the comments</a> of <a href="../../index.html?p=280" title="Equal Height Columns with jQuery">the previous Equal Heights article.</a> His functionality is slightly different than mine (his looks specifically for child elements, whereas mine assumes you’re specifying the elements you want to resize directly), but he did give me the idea of adding additional functionality to my plugin. So thanks, Jared!</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../../index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="../../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../../index.html?p=635"     class="crp_title">A JavaScript Currency Conversion Script</a></li><li><a href="../../index.html?p=761"     class="crp_title">Bouncing Balls in the HTML5 Canvas</a></li><li><a href="../../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			154 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-9055">
+		<article id="comment-9055" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6df9db0ace4cfd315296c344dc41ab1d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.managingsocialmedia.net' rel='external nofollow' class='url'>Bryce</a> </cite><a href="index.html#comment-9055"><time datetime="2008-12-10T20:11:39+00:00">Dec. 10, 2008 @ 8:11 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If only you had released this last week, you would&#8217;ve saved me a lot of heartache! Thankyou so much!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9058">
+		<article id="comment-9058" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6389bb2c2bbb646c766c03b08e0983dc?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://readingcirclebooks.com' rel='external nofollow' class='url'>CircleReader</a> </cite><a href="index.html#comment-9058"><time datetime="2008-12-11T02:40:39+00:00">Dec. 11, 2008 @ 2:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for this code, Rob. Your demo seems to be working just fine in FF3.1b2!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9060">
+		<article id="comment-9060" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8447ea984176d035731cba2898ed9d0e?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://crealup.com' rel='external nofollow' class='url'>Crealup</a> </cite><a href="index.html#comment-9060"><time datetime="2008-12-11T06:54:43+00:00">Dec. 11, 2008 @ 6:54 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>If I have the experience to do the same thing using jQuery dimensions, give me one good reason why this is a better solution :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9062">
+		<p>Pingback: <a href='http://www.roberthaverly.com/wordpress/?p=4' rel='external nofollow' class='url'>robert haverly &raquo; Equal Column Heights With jQuery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9064">
+		<article id="comment-9064" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7d0ddd5d0a22e9072dc2b18caaf77896?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Marina </cite><a href="index.html#comment-9064"><time datetime="2008-12-11T12:16:57+00:00">Dec. 11, 2008 @ 12:16 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is great. I found it by chance today that I was thinking how to go about solving this problem. Many thanks!<br />
+I had to change the scroll to visible though because for some reason when I set it to &#8216;make them all however the biggest box is&#8217;, the biggest box get a scrollbar.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9065">
+		<article id="comment-9065" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a67fdaa547fb4cf25f12580be230217d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Sérgio Jardim </cite><a href="index.html#comment-9065"><time datetime="2008-12-11T12:17:09+00:00">Dec. 11, 2008 @ 12:17 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is a nice plugin! Thanks a lot!<br />
+Cheers from Brazil.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9066">
+		<article id="comment-9066" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/20f0e3b493562dc3276050b31f16de3a?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://addicts.ro' rel='external nofollow' class='url'>andi</a> </cite><a href="index.html#comment-9066"><time datetime="2008-12-11T12:58:11+00:00">Dec. 11, 2008 @ 12:58 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>great, thanks. this is really useful.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9067">
+		<article id="comment-9067" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9067"><time datetime="2008-12-11T14:39:56+00:00">Dec. 11, 2008 @ 2:39 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for all the great responses, all. :)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9068">
+		<p>Pingback: <a href='http://minesa.wordpress.com/2008/12/11/links-for-2008-12-11/' rel='external nofollow' class='url'>links for 2008-12-11 &laquo; Minesa IT</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9072">
+		<p>Pingback: <a href='http://blog.bruno.locaweb.com.br/2008/12/11/links-for-2008-12-11/' rel='external nofollow' class='url'>rascunho &raquo; Blog Archive &raquo; links for 2008-12-11</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9077">
+		<p>Pingback: <a href='http://www.understandard.net/javascript/js001.html' rel='external nofollow' class='url'>要素の高さをそろえるjQueryプラグイン | jQuery | javascript | understandard.net</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9079">
+		<article id="comment-9079" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/96ac0c2e47563660f129abbf15de532d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mmo-talk.com' rel='external nofollow' class='url'>pSinke</a> </cite><a href="index.html#comment-9079"><time datetime="2008-12-12T05:14:59+00:00">Dec. 12, 2008 @ 5:14 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Awesome, this will be very useful in this project I&#8217;m about to start on. Thanks a bunch.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9082">
+		<article id="comment-9082" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/572a73cd4a99c8c806d7bb40367d1b4d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://alexd.adore.ro' rel='external nofollow' class='url'>AlexD</a> </cite><a href="index.html#comment-9082"><time datetime="2008-12-12T17:52:04+00:00">Dec. 12, 2008 @ 5:52 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello.</p>
+<p>I have tried to use it, but since i am new to the Jquery thing how do i specify exactly WHICH element to equalize, for example if i have 5 boxes but only want 4 of them to be equlized/changed sizes/etc how can i do with this piece of Jquery code you wrote.</p>
+<p>PS: i was using something very similar to this thing via normal javascript wihtout any libraries but it&#8217;s a lot longer given the fact that you have to type document.getElementById a lot of times.</p>
+<p>Thanks, hope you&#8217;ll answer.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9084">
+		<p>Pingback: <a href='http://www.ouvyt.com/weblog/?p=403' rel='external nofollow' class='url'>OUVYT &raquo; Blog Archive &raquo; Daily Del.icio.us</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9085">
+		<p>Pingback: <a href='http://www.w3planting.com/2008/12/same-height-elements-with-equalheights-jquery-plugin/' rel='external nofollow' class='url'>&nbsp; Same height elements with EqualHeights - jQuery Plugin&nbsp;by&nbsp;W3Planting</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9087">
+		<article id="comment-9087" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9087"><time datetime="2008-12-13T11:41:35+00:00">Dec. 13, 2008 @ 11:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Alex,</p>
+<p>What you need to do is give the four boxes you want to equalize the same class, and then apply the equalHeights function to just that class. So if you gave those for boxes a class of &#8220;resizeme&#8221;, your code would look something like this:</p>
+<p>$(&#8220;.resizeme&#8221;).equalHeights();</p>
+<p>Does that help? If you&#8217;re new to the idea of CSS classes, <a href="../../index.html?p=9" rel="nofollow">you can learn more about them here.</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9089">
+		<article id="comment-9089" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/572a73cd4a99c8c806d7bb40367d1b4d?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://alexd.adore.ro' rel='external nofollow' class='url'>Alexandru Dinulescu</a> </cite><a href="index.html#comment-9089"><time datetime="2008-12-13T12:21:22+00:00">Dec. 13, 2008 @ 12:21 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello.</p>
+<p>Thank you for your answer Rob, i have been doing webdevelopment for a couple of years but only now i am starting to get into the realm of JS. Your explanation was very clear and i appreciate you taking the time to respond.</p>
+<p>Best wishes.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9098">
+		<p>Pingback: <a href='http://www.jeremiahtolbert.com/2008/links-for-2008-12-14/' rel='external nofollow' class='url'>JeremiahTolbert.com &raquo; Blog Archive &raquo; links for 2008-12-14</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9100">
+		<p>Pingback: <a href='http://apramana.com/web/useful-links-15-12-2008/' rel='external nofollow' class='url'>Useful Links (15/12/2008) | Apramana</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9104">
+		<article id="comment-9104" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/34819639b768d9d24389033853c8d48f?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.lespacedunmatin.info/blog/' rel='external nofollow' class='url'>Olivier G.</a> </cite><a href="index.html#comment-9104"><time datetime="2008-12-15T12:06:02+00:00">Dec. 15, 2008 @ 12:06 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>&#8220;If you resize the text in your browser window, the blocks will not resize automatically.&#8221; : it will if you use min-height instead of height (exept for IE) (but heights between blocks will become different).</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9105">
+		<article id="comment-9105" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bc5a05e7a6824f0b9aa95d9b7a0b8beb?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://jquery.malsup.com' rel='external nofollow' class='url'>malsup</a> </cite><a href="index.html#comment-9105"><time datetime="2008-12-15T12:27:34+00:00">Dec. 15, 2008 @ 12:27 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob,<br />
+You&#8217;re missing the &#8216;var&#8217; keyword when declaring the &#8216;tallest&#8217; variable.  Other than that &#8211; looks good!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9108">
+		<p>Pingback: <a href='http://www.qmula.com/blog/rob-glazebrooks-equalheights-jquery-plugin/' rel='external nofollow' class='url'>Rob Glazebrook&#8217;s EqualHeights jQuery Plugin</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9111">
+		<p>Pingback: <a href='http://www.andysowards.com/blog/nerdy-daily-links/daily-links-91' rel='external nofollow' class='url'>Daily Links | AndySowards.com :: Professional Web Design, Development, Programming, Hacks, Downloads, Math and being a Web 2.0 Hipster?</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9118">
+		<article id="comment-9118" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/766bf37a190edc606e480d49c75c6acf?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://solarisdesign.ru' rel='external nofollow' class='url'>Eugene Kulikov</a> </cite><a href="index.html#comment-9118"><time datetime="2008-12-17T18:08:37+00:00">Dec. 17, 2008 @ 6:08 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<blockquote><p>However, I’m given to understand that this doesn’t work on Firefox, as the browser doesn’t report text resizes as a “real” resize. I’m currently not aware of a good workaround.</p></blockquote>
+<p>Hello. Here&#8217;s the solution for text resize detection in <a href="http://www.alistapart.com/articles/fontresizing" rel="nofollow">A list apart article</a>.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9132">
+		<article id="comment-9132" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7b873299e0f21bf8c5394f9576f79827?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">krish </cite><a href="index.html#comment-9132"><time datetime="2008-12-19T00:56:46+00:00">Dec. 19, 2008 @ 12:56 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Rob<br />
+This is great. I wonder how to make two columns of different width &#8211; for instance right col 600px width and left col width 120px &#8211; using this jqery plugin script. Can  you help me please.<br />
+Thank you<br />
+Krish</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9135">
+		<article id="comment-9135" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9135"><time datetime="2008-12-19T09:42:18+00:00">Dec. 19, 2008 @ 9:42 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Krish,</p>
+<p>You would just use CSS to make the two columns different size. I would suggest giving the two columns different IDs, but the same class. For example:</p>
+<p>&lt;div id=&#8221;col1&#8243; class=&#8221;column&#8221;&gt;&lt;/div&gt;<br />
+&lt;div id=&#8221;col2&#8243; class=&#8221;column&#8221;&gt;&lt;/div&gt;</p>
+<p>That way you can still use jQuery to find your &#8220;column&#8221; class, but can  make them look different according to their IDs.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9140">
+		<article id="comment-9140" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/161a4cc619398bea1e1714036ed122cf?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Dave </cite><a href="index.html#comment-9140"><time datetime="2008-12-19T17:00:21+00:00">Dec. 19, 2008 @ 5:00 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>To trigger resize in Firefox, try something like this:</p>
+<p>$(window).resize(function(){<br />
+  $(&#8220;.columns&#8221;).trigger(&#8220;resize&#8221;);<br />
+});</p>
+<p>Or you could call .equalHeights() from there directly.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9142">
+		<p>Pingback: <a href='http://www.5days.net/blog/?p=39' rel='external nofollow' class='url'>Enaka višina stolpcev z jQuery &laquo; 5days.net uradni blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9280">
+		<p>Pingback: <a href='http://www.jyau.com/2009/01/03/links-for-2009-01-03/' rel='external nofollow' class='url'>Jorge Yau &raquo; links for 2009-01-03 - Diseñador Web</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9300">
+		<p>Pingback: <a href='http://displayinline.net/javascript/tinggi-elemen-yang-seragam-dengan-equalheights-jquery-plugin/' rel='external nofollow' class='url'>Tinggi elemen yang seragam dengan EqualHeights jQuery Plugin | display:inline</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9323">
+		<article id="comment-9323" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6cfbd373bb1dd5f26c066c1fc7e68288?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://aurgasm.us' rel='external nofollow' class='url'>Paul Irish</a> </cite><a href="index.html#comment-9323"><time datetime="2009-01-13T12:07:17+00:00">Jan. 13, 2009 @ 12:07 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I wrote this and it does the job in most cases:</p>
+<p>$.fn.setAllToMaxHeight = function(){<br />
+  return this.height( Math.max.apply(this, $.map( this , function(e){ return $(e).height() }) ) )</p>
+<p>}</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9326">
+		<article id="comment-9326" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/9a445191a22e3db1ab3448711a9e4c3c?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.business.salford.ac.uk/index2.php' rel='external nofollow' class='url'>mark sanders</a> </cite><a href="index.html#comment-9326"><time datetime="2009-01-14T11:02:07+00:00">Jan. 14, 2009 @ 11:02 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hmm&#8230;.i&#8217;m currently seeing scrollbars (vertical and horizontal) in IE6.<br />
+they only disappear when I change the plugin so that overflow is hidden.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9327">
+		<article id="comment-9327" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9327"><time datetime="2009-01-14T11:12:59+00:00">Jan. 14, 2009 @ 11:12 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Mark, I&#8217;ve noticed that can sometimes happen in IE if the columns contain images that don&#8217;t have a specified width and height set. In most browsers, jQuery ends up receiving the computed height of the image. For some reason, however, IE doesn&#8217;t seem to send a computed height, but instead sends a height of zero&#8230; which results in shorter than necessary columns and therefore scrollbars.</p>
+<p>My recommendation on this is to set the height of images whenever possible to avoid this problem.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9328">
+		<article id="comment-9328" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/a5726130adfafdb2c890149a070b827d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Jamie Krug </cite><a href="index.html#comment-9328"><time datetime="2009-01-14T13:44:33+00:00">Jan. 14, 2009 @ 1:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>@Rob, thanks a bunch for this, very handy! Unfortunately my first implementation caused a vertical scrollbar to show up in Firefox (but fine in IE6/IE7). Who knows which CSS rule or quirk or whatever is causing this. I have height and width set on all images. Possibly related to relative font-size (em)? Anyway, I figured the quick fix for a non-JavaScript/CSS-guru such as myself is to simply set the overflow attribute to &#8220;visible&#8221; instead of auto (as you have it in your script). Or, I thought maybe just a couple pixels extra to the equalized height. So, here&#8217;s the revision of your script that I&#8217;m now using with success&#8230;</p>
+<p>/**<br />
+ * Revision: 1/14/2009, Jamie Krug<br />
+ * Changed signature to accept one optional argument (options) as an associative array to better support more optional &#8220;arguments&#8221; in a more readable fashion.<br />
+ * Added overflow option, to override default CSS declaration.<br />
+ * Added addToHeight option, to optionally pad tallest height (can be used as a quick fix in quirky situations where a couple extra pixels will avoid overflow).<br />
+ *<br />
+ * Example 1: $(&#8220;.cols&#8221;).equalHeights();<br />
+ * Example 2: $(&#8220;.cols&#8221;).equalHeights( { minHeight: 400 } );<br />
+ * Example 3: $(&#8220;.cols&#8221;).equalHeights( { minHeight: 100, maxHeight: 300 } );<br />
+ * Example 4: $(&#8220;.cols&#8221;).equalHeights( { overflow: &#8216;visible&#8217; } );<br />
+ * Example 5: $(&#8220;.cols&#8221;).equalHeights( { addToHeight: 3 } );<br />
+ *<br />
+ */</p>
+<p>(function($) {<br />
+	$.fn.equalHeights = function(optionsArg) {<br />
+		var options = { minHeight: 0, overflow: &#8216;auto&#8217;, addToHeight: 0 };<br />
+		for (var n in arguments[0]) { options[n] = arguments[0][n]; }<br />
+		var tallest = options.minHeight;<br />
+		this.each(function() {<br />
+			if($(this).height() &gt; tallest) {<br />
+				tallest = $(this).height();<br />
+			}<br />
+		});<br />
+		if((options.maxHeight) &amp;&amp; tallest &gt; options.maxHeight) tallest = options.maxHeight;<br />
+		tallest = tallest + options.addToHeight;<br />
+		return this.each(function() {<br />
+			$(this).height(tallest).css(&#8220;overflow&#8221;,options.overflow);<br />
+		});<br />
+	}<br />
+})(jQuery);</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9337">
+		<article id="comment-9337" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1066d36ce0936bf9db1804dc448e9320?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.chicagowebmanagement.com' rel='external nofollow' class='url'>Patrick Elward</a> </cite><a href="index.html#comment-9337"><time datetime="2009-01-18T12:40:17+00:00">Jan. 18, 2009 @ 12:40 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>So far, this thing ROCKS! I love it. I&#8217;m new to jquery and tried to combine your code with another jquery plug in, and am having some issues with it.</p>
+<p>You can see it here: <a href="http://www.awbworld.com/rounded3.php" rel="nofollow">http://www.awbworld.com/rounded3.php</a></p>
+<p>On IE, it fails to &#8216;move&#8217; the border to the bottom.<br />
+on FF, it looks fine.</p>
+<p>Any thoughts?<br />
+The source for rounded corners is here:<br />
+<a href="http://malsup.com/jquery/corner/" rel="nofollow">http://malsup.com/jquery/corner/</a></p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9355">
+		<article id="comment-9355" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1414cec73351ed76be4940cc70843069?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.zetetic.net' rel='external nofollow' class='url'>Billy Gray</a> </cite><a href="index.html#comment-9355"><time datetime="2009-01-23T09:47:29+00:00">Jan. 23, 2009 @ 9:47 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Cool plugin, dude, thanks ;-)</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9362">
+		<p>Pingback: <a href='http://noktaproje.wordpress.com/2009/01/26/en-iyi-javascript-kaynaklari/' rel='external nofollow' class='url'>En İyi JavaScript Kaynakları.. &laquo; Nokta Proje Blog | teknoloji ve internete dair herşey burada..</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9415">
+		<p>Pingback: <a href='http://www.urbanetics.com/uncategorized/calgary-web-design-44/' rel='external nofollow' class='url'>Calgary Web Design | Urbanetics Web Design</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9426">
+		<p>Pingback: <a href='http://www.digiwu.com/?p=15529' rel='external nofollow' class='url'>http://www.digiwu.com &raquo; Blog Archive &raquo; Ask SM [CSS/JS]: Divs of Equal Height, Dealing with IE 6</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9430">
+		<article id="comment-9430" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cc3f2da0c4682c14820a9c7d18f955a3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Natalie </cite><a href="index.html#comment-9430"><time datetime="2009-02-25T14:23:29+00:00">Feb. 25, 2009 @ 2:23 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Rob, I&#8217;ve made a Drupal module with your plugin. Do you mind if I publish it?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9433">
+		<article id="comment-9433" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/cc3f2da0c4682c14820a9c7d18f955a3?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Natalie </cite><a href="index.html#comment-9433"><time datetime="2009-02-25T17:36:48+00:00">Feb. 25, 2009 @ 5:36 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Rob, thanks, of course I mentioned you and your site in the module docs.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9434">
+		<article id="comment-9434" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/8ee029b8c35bc2d205b3c10ea8b2ebc7?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Paul </cite><a href="index.html#comment-9434"><time datetime="2009-02-26T18:43:47+00:00">Feb. 26, 2009 @ 6:43 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Rob,</p>
+<p>I&#8217;m a newbie building a web site based on Dave Woods CSS Fixed Footer,<a href="http://www.dave-woods.co.uk/index.php/css-fixed-footer/" rel="nofollow">http://www.dave-woods.co.uk/index.php/css-fixed-footer/</a> . When I apply your equal height plug-in the content, if longer than the page, rides up over the top of the footer, instead of behind it. Is there a way to fix that? </p>
+<p>Thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9440">
+		<p>Pingback: <a href='http://fentanyl.wordpress.com/2009/03/01/en-iyi-javascript-kaynaklari/' rel='external nofollow' class='url'>En İyi JavaScript Kaynakları &laquo; Popüler İnternet Kültürü</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9444">
+		<article id="comment-9444" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bf4f865520740937ab47fab07abfc39b?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.weblogr.fr' rel='external nofollow' class='url'>Oliv G.</a> </cite><a href="index.html#comment-9444"><time datetime="2009-03-03T05:41:24+00:00">Mar. 3, 2009 @ 5:41 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>A little improvment of your plugin that supports the padding and border sizes&#8230;</p>
+<p>(function($) {<br />
+	$.fn.equalHeights = function(minHeight, maxHeight) {<br />
+		var tallest = (minHeight) ? minHeight : 0;<br />
+		function addSize(elem,baseHeight,operation) {<br />
+			var border_top = parseInt(elem.css(&#8216;border-top-width&#8217;));<br />
+			var border_bottom = parseInt(elem.css(&#8216;border-bottom-width&#8217;));<br />
+			var padding_top = parseInt(elem.css(&#8216;padding-top&#8217;));<br />
+			var padding_bottom = parseInt(elem.css(&#8216;padding-bottom&#8217;));<br />
+			if (operation == &#8216;subtract&#8217;) {<br />
+				if (!isNaN(padding_top)) baseHeight -= padding_top;<br />
+				if (!isNaN(padding_bottom)) baseHeight -= padding_bottom;<br />
+				if (!isNaN(border_top)) baseHeight -= border_top;<br />
+				if (!isNaN(border_bottom)) baseHeight -= border_bottom;<br />
+			} else {<br />
+				if (!isNaN(padding_top)) baseHeight += padding_top;<br />
+				if (!isNaN(padding_bottom)) baseHeight += padding_bottom;<br />
+				if (!isNaN(border_top)) baseHeight += border_top;<br />
+				if (!isNaN(border_bottom)) baseHeight += border_bottom;<br />
+			}<br />
+			return baseHeight;<br />
+		}<br />
+		this.each(function() {<br />
+			var height = $(this).height();<br />
+			height = addSize($(this),height);<br />
+			if (height &gt; tallest) tallest = height;<br />
+		});<br />
+		if((maxHeight) &amp;&amp; tallest &gt; maxHeight) tallest = maxHeight;<br />
+		return this.each(function() {<br />
+			tallest2 = addSize($(this),tallest,&#8217;subtract&#8217;)<br />
+			$(this).height(tallest2);<br />
+		});<br />
+	}<br />
+})(jQuery);</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9543">
+		<article id="comment-9543" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/0bd3f1659369b19f0151ad8f6fb5fa7f?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Aaron </cite><a href="index.html#comment-9543"><time datetime="2009-03-30T09:20:42+00:00">Mar. 30, 2009 @ 9:20 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I&#8217;m trying to use this with the jQuery UI themes and can&#8217;t seem to get around the IEx v6 problem of the containers including images with undefined heights.</p>
+<p>My goal is to display text of an unknown length in buttons and to have all buttons in a given row have equal heights.  Therefore the height of the images is unknown ahead of time.  Any suggestions?  Perhaps something in this plugin to define the height of the images?</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-9544">
+		<article id="comment-9544" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9544"><time datetime="2009-03-30T10:26:07+00:00">Mar. 30, 2009 @ 10:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Aaron,</p>
+<p>I believe you can get around this problem by using $(window).onload() instead of $(document).ready(). Using document.ready results in your columns being set more quickly &#8212; but it runs before all of your images have been downloaded. By contrast, window.onload doesn&#8217;t fire until everything &#8212; including your images &#8212; is downloaded.</p>
+<p>The downside is you&#8217;ll have a second or two of unequal columns before the script fires. The upside is, your columns should work well, even in IE.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9604">
+		<p>Pingback: <a href='http://stign.no/archives/128' rel='external nofollow' class='url'>stign.no | Floating boxes with equal heights</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9622">
+		<article id="comment-9622" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/1eaf3d8d104628231c326ac0e5868cef?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mitmaro.ca' rel='external nofollow' class='url'>Tim</a> </cite><a href="index.html#comment-9622"><time datetime="2009-04-20T09:37:29+00:00">Apr. 20, 2009 @ 9:37 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I use this plugin on a page where most of the pages content is loaded using ajax. Of course when I loaded data dynamically my columns wouldn&#8217;t resize, as is expected.</p>
+<p>To fix this, you would think you would just call .equalHeights() whenever you added or removed data. However this doesn&#8217;t work, the reason being that the plugin sets the height of the elements on the first run and calling it again it uses these set heights to recalculate the values (at least in firefox, never tested IE).</p>
+<p>To get around this I just do .height(&#8216;auto&#8217;).equalHeights().</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-9623">
+		<article id="comment-9623" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="index.html#comment-9623"><time datetime="2009-04-20T11:30:00+00:00">Apr. 20, 2009 @ 11:30 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>This is a great tip, Tim. Thanks for sharing!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9689">
+		<article id="comment-9689" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/bf3ff3c1be5ed71b6cf9e95237b342f7?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.mcgwebdevelopment.com/' rel='external nofollow' class='url'>Matthew</a> </cite><a href="index.html#comment-9689"><time datetime="2009-05-07T16:58:46+00:00">May. 7, 2009 @ 4:58 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks, works in Fx and IE7. Fixed two separate sets of columns in minutes! Would have hated to use a table&#8230; Thanks again!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"></div>
+			<div class="nav-next"><a href="../comment-page-2/index.html#comments" >Newer Comments &rarr;</a></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='292' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="80b6292731" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../../index.html?p=369" title="Permalink to: How to Fix WordPress Feedburner Plugins After Converting to Google Feedburner">
+                    How to Fix WordPress Feedburner Plugins After Converting to Google Feedburner                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Google has been converting all Feedburner user accounts into Google accounts, which has been creating quite a few headaches. I thought I was done with them, until I noticed my counts still weren't showing up on my website. Google had changed the API, requiring a fix on my end. <a href="../../index.html?p=369" class="more-link" title="Permalink to: How to Fix WordPress Feedburner Plugins After Converting to Google Feedburner">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 1302/1532 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-11 19:11:48 by W3 Total Cache -->

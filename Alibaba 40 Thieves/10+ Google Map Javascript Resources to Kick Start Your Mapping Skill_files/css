@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(http://themes.googleusercontent.com/static/fonts/arvo/v6/WJ6D195CfbTRlIs49IbkFw.woff) format('woff');
+}

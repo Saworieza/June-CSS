@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS Newbie Gets a Facelift</title>
+    <link rel="icon" href="wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; CSS Newbie Gets a Facelift Comments Feed" href="css-newbie-gets-a-facelift/feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Internet Explorer Bug Fix: Disappearing Positioned Anchors' href='index.html?p=240' />
+<link rel='next' title='Equal Height Columns with jQuery' href='index.html?p=280' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='index.html?p=268' />
+<link rel='shortlink' href='index.html?p=268' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,193] -->
+<meta name="description" content="Welcome to the new and improved CSS Newbie! This new version of the site has been a long time in the making, so I’m very excited to finally have it ready for its grand unveiling. There are a few changes to the site that I’d like to point out." />
+
+<meta name="keywords" content="cssnewbie,design,facelift,redesign,site news" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-268 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-268" class="post-268 post type-post status-publish format-standard hentry category-site-news tag-cssnewbie tag-design tag-facelift tag-redesign">
+
+	<h2 class="entry-title">
+		<a href="index.html?p=268" title="Permalink to CSS Newbie Gets a Facelift" rel="bookmark">CSS Newbie Gets a Facelift</a>
+	</h2>
+	<div class="meta">
+		<p>Published December 1, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="wp-content/uploads/2008/11/cssnewbie-facelift.jpg" alt="" title="CSS Newbie Facelift" width="579" height="200" class="alignnone size-full wp-image-269" /></p>
+<p>Welcome to the new and improved CSS Newbie! This new version of the site has been a long time in the making, so I’m very excited to finally have it ready for its grand unveiling. And to make things extra auspicious, today is also the eight month anniversary of <a href="css-rules/book-style-chapter-intros/index.html">the site&#8217;s official launch on February 1, 2008.</a></p>
+<p>Before I go any further, I’d like to thank <a href="http://www.crawlspacemedia.com/">Jeremy Harrington of crawlspace|media</a> for designing the page you see before you (or, if you’re reading this in your RSS feed, you should really <a href="index.html">click through to the site proper</a>). Jeremy was extremely patient with my incessant tweaking, and I think the result is a very beautiful and functional site.</p>
+<p>Now, the main focus of CSS Newbie hasn’t changed. I’m still going to strive to produce quality articles on all matter of web development, with a focus on CSS in particular, but also including XHTML, JavaScript, and related frameworks, templates, and technologies. After all, CSS by itself isn’t much use without those other disciplines. </p>
+<p>That having been said, there are a few changes to the site that I’d like to take some time to point out. Hopefully, you’ll find them all beneficial (or at least not overly annoying).<br />
+<span id="more-268"></span></p>
+<h3>A Home Worth Coming Home To</h3>
+<p>The homepage of the new and improved CSS Newbie has a lot more information than it did previously. Before now, the homepage has always just featured the most recent article in its entirety. However, that sort of a layout assumes you either visit the site often enough to catch every single article I publish, or have some sort of a burning desire to go digging through the archives to see if you’ve missed anything recently.</p>
+<p>No more!</p>
+<p>The new homepage features a total of five recent articles instead of just one. However, to keep the page compact, I’ve shortened the amount of each article shown. The most recent article will generally get several paragraphs on the front page, with easy access to the rest of the article either by clicking on the title or the “read more” link below the content. The other four articles will feature descriptive excerpts, helping you decide which articles are most worth your time.</p>
+<h3>Find What You’re Looking For</h3>
+<p>Of course, there’s always the possibility that you really are one of those people that enjoys digging through website archives to see what you can find. To that end, I’ve built a CSS Newbie <a href="index.html?p=250">Table of Contents.</a> Every article I’ve ever written is available, organized by category. If the article is listed under more than one category, it’ll be listed more than once for increased findability. So go ahead – see what CSS Newbie has to offer!</p>
+<p>I’ve also added a search bar to the site’s sidebar – a search bar was a major oversight of mine in the last design. So if you have an idea of what sort of information you’re looking for, but can’t find it by article title in the table of contents, give the search bar a whirl – you might get lucky.</p>
+<h3>Enhancing the Conversation</h3>
+<p>I’ve always enjoyed getting comments on the articles I’ve written – the feedback is almost always beneficial in some way. And comments are still around, with the added benefit of <a href="http://en.gravatar.com/">gravatars</a> (Globally Recognized Avatars). If you have a gravatar associated with your email address, your photo will now appear next to your comment, making the whole process a lot more personable.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<p>I’ve also added mini-surveys (i.e., polls) to the website. Every once in a while, I’ll post a new survey to the site. It’s a chance for you to offer feedback on a wide variety of questions. The most recent survey will always be featured in the footer of the website, and I’ll try to remember to announce when I’ve released a new survey. Right now, you can offer feedback on what you think of the new design. Be sure to check it out and let me know!</p>
+<p>And if I’ve written an article that you’ve really found helpful, please consider submitting it to the social media site of your choice. To make that easier, I’ve added a ShareThis toolbar to the top of every article in the site. Save your favorite articles to Delicious, Ma.gnolia, or dozens of other social networks with the click of a single button.</p>
+<p>And speaking of social networks, if you’d like to take the conversation off CSS Newbie entirely, be sure to <a href="http://www.twitter.com/robbyg/">follow me on twitter.</a> I’ll warn you – I talk about things other than web development. But twitter is a great way to get to better know the person on the other side of the screen. I’d really like to get to know you-all better, so if you feel the same, <a href="http://www.twitter.com/robbyg/">send a follow my way.</a></p>
+<h3>Community News</h3>
+<p>Many sites these days have a community news section – a portion of the website set aside to allow the users to circulate new and interesting articles within the community. The new CSS Newbie is no different, but our community news section has a twist. I’m conducting what I’m considering an experiment in social media. Instead of coming to my site, filling out a form, and awaiting moderation to get your news published, all you have to do is bookmark the page in one of the popular bookmarking sites (currently <a href="http://www.delicious.com/">Delicious </a>or <a href="http://ma.gnolia.com/">Ma.gnolia</a>, possibly more to come), give it a short description and a tag of “cssnewbienews” and voila! Your article will appear on CSS Newbie within an hour.</p>
+<p>So, if you have an article that either you’ve written or you’ve found and really enjoyed, and you’d like to see it reach a wider audience, be sure to add the “cssnewbienews” tag when you bookmark it. If you use a different bookmarking service, contact me and let me know what it is, and I’ll see if I can get it added to the mix.</p>
+<h3>New Advertising Options</h3>
+<p>Redesigning the site allowed me to take some time to reconsider the advertising options available. I’ve made some tweaks that I think will benefit all involved&#8230; including reducing the cost of advertising. So if you have a message you want to get noticed, <a href="index.html?p=253">consider sponsoring CSS Newbie.</a> </p>
+<h3>And Much, Much More</h3>
+<p>Those are the highlights of the new site design, but there are of course many, many other tweaks and improvements scattered throughout the site. Let me know what you think! Leave a comment on this article, take the survey in the lower-right, send me a shout-out on twitter&#8230; I’m waiting to hear from you.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="index.html?p=696"     class="crp_title">A New CSS Newbie Site Design Launched!</a></li><li><a href="index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="index.html?p=730"     class="crp_title">Simple Table Column Highlighting</a></li><li><a href="index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			7 Responses		</h3>
+		<ol class="commentlist">
+				<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-8990">
+		<article id="comment-8990" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="css-newbie-gets-a-facelift/comment-page-1/index.html#comment-8990"><time datetime="2008-12-01T15:19:56+00:00">Dec. 1, 2008 @ 3:19 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey all,</p>
+<p>The comment form was a little borked this morning (I made a couple of last-minute tweaks to the form and accidentally deleted a required hidden field!), but it&#8217;s up and working now. I&#8217;d love to hear your comments.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8996">
+		<article id="comment-8996" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/23ea6518cd0ccf4b2cc51f876ccad970?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://freedomandmercy.com' rel='external nofollow' class='url'>gates2</a> </cite><a href="css-newbie-gets-a-facelift/comment-page-1/index.html#comment-8996"><time datetime="2008-12-02T11:26:49+00:00">Dec. 2, 2008 @ 11:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I like the opened up feeling.  Sweet!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-9007">
+		<article id="comment-9007" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/d1ac4d834197354142c06ba0370666d2?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://edward.sensite.net' rel='external nofollow' class='url'>Ed</a> </cite><a href="css-newbie-gets-a-facelift/comment-page-1/index.html#comment-9007"><time datetime="2008-12-03T17:44:09+00:00">Dec. 3, 2008 @ 5:44 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Looks great! I&#8217;d tighten up the main post line length a little bit but that&#8217;s just a reading preference. Looking forward to more articles.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9026">
+		<p>Pingback: <a href='index.html?p=280' rel='external nofollow' class='url'>Equal Height Columns with jQuery</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-9237">
+		<p>Pingback: <a href='http://www.castup.org/?p=687' rel='external nofollow' class='url'>Equal Height Columns with jQuery | Castup</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-9308">
+		<p>Pingback: <a href='index.html?p=349' rel='external nofollow' class='url'>Fixing a Bad Feedburner Subscriber Count</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13960">
+		<p>Pingback: <a href='http://ahttn.com/equal-height-columns-with-jquery/' rel='external nofollow' class='url'>Equal Height Columns with jQuery | Ahttn.com</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html?p=268#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='268' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="afd0c5fb4e" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="index.html?p=59">Using the CSS @import Rule</a></li><li><a href="example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="css-rules/book-style-chapter-intros/index.html" title="Permalink to: Book-style Chapter Introductions Using Pure CSS">
+                    Book-style Chapter Introductions Using Pure CSS                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">Do you remember all those wonderful hand-me-down children’s books from your childhood, or perhaps those dusty old tomes you’ve leafed through at a used bookstore... <a href="css-rules/book-style-chapter-intros/index.html" class="more-link" title="Permalink to: Book-style Chapter Introductions Using Pure CSS">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="index.html?p=6">Contact Rob</a></li>
+        			<li><a href="index.html?p=268#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 746/813 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 18:20:26 by W3 Total Cache -->

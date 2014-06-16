@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Fixing the IE6 Whitespace Bug</title>
+    <link rel="icon" href="../wp-content/themes/cssnewbie_v4/img/favicon-96x96.png" />
+    <link rel="pingback" href="../xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="CSS Newbie" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script src="../wp-content/themes/cssnewbie_v4/js/modernizr.custom.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="CSS Newbie &raquo; Fixing the IE6 Whitespace Bug Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='cssnewbiev4-style-css'  href='../wp-content/themes/cssnewbie_v4/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-styles-css'  href='../wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://www.cssnewbie.com/wp-content/plugins/font-awesome/assets/css/font-awesome-ie7.min.css?ver=3.2.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Easy CSS Dropdown Menus' href='../easy-css-dropdown-menu/index.html' />
+<link rel='next' title='Great Resources Elsewhere: May 08 to May 15' href='../index.html?p=124' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='../index.html?p=122' />
+<link rel='shortlink' href='../index.html?p=122' />
+<style type="text/css">
+ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+</style>	
+	
+<!-- All in One SEO Pack 2.1.2 by Michael Torbert of Semper Fi Web Design[151,196] -->
+<meta name="description" content="Sometimes when I’m building a vertical navigation menu Internet Explorer 6 will add a bunch of white space between the list items. So what’s going on, and how do we fix it?" />
+
+<meta name="keywords" content="bug,fix,hack,ie,whitespace,basic techniques,bugs and fixes" />
+
+<!-- /all in one seo pack -->
+</head>
+<body id="top" class="single single-post postid-122 single-format-standard">
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+	<div class="wrap">
+    	<div class="header" role="banner">
+        	<a href="../index.html"><h1 class="site-logo">CSS <strong>newbie</strong></h1></a>
+        	<h2 class="subtitle">A resource about building the modern web. Authored by Rob Glazebrook.</h2>
+        	<nav role="navigation">
+        		<ul>
+        			<li><a href="../index.html">Home</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><form action="../index.html" method="get" class="search-form">
+    <fieldset>
+        <label for="search">Search</label>
+        <input type="text" name="s" id="search" class="search-field" placeholder="Search..." value="" />
+        <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+    </fieldset>
+</form></li>
+        		</ul>
+        	</nav>
+        </div>
+        <div class="content grid grid-pad"><div class="col-2-3 well" role="main">
+<div class="ad top_banner_ad">
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1246791" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code -->
+</div>
+	<article id="post-122" class="post-122 post type-post status-publish format-standard hentry category-basic-techniques category-bugs-and-fixes tag-bug tag-fix tag-hack tag-ie tag-whitespace">
+
+	<h2 class="entry-title">
+		<a href="../index.html?p=122" title="Permalink to Fixing the IE6 Whitespace Bug" rel="bookmark">Fixing the IE6 Whitespace Bug</a>
+	</h2>
+	<div class="meta">
+		<p>Published May 14, 2008 by Rob Glazebrook.</p>
+	</div>	<div class="entry-content">
+		<p><img src="../wp-content/uploads/2008/05/whitespacebug.gif" alt="" title="whitespace bug - before and after" width="400" height="130" class="alignnone size-full wp-image-123" /></p>
+<p>Sometimes, when I’m building a vertical navigation menu (like the one pictured above), Internet Explorer 6 will fight with me in a fairly annoying way: it adds a bunch of white space between the list items (specifically, I think it’s adding space below each list item). This space isn’t a margin, and it isn’t padding&#8230; it’s just empty, un-selectable space. So what’s going on, and how do we fix it?</p>
+<p>The “what’s going on” part is simultaneously simple and perplexing: IE6 is treating all the empty space inside of your HTML lists – that is, the stuff between your closing &lt;/li&gt; and next opening &lt;li&gt;  tag &#8212; as real space. That’s the simple part. The confusing part is, why would it choose to interpret this space as “real,” when it ignores all of the other space between tags in pretty much every other situation out there? Well, that’s just IE6 for you, and that’s the perplexing bit.</p>
+<p>Luckily, there is a really easy solution to this problem. Actually, truth be told, there are <em>several</em> solutions. Depending on your situation, each might be the right fix for you.</p>
+<h3>Fix #1: Remove All Whitespace</h3>
+<p>This is the most arcane of all the solutions, but to be honest, it’s the one I’ve used most often in the past – because I didn’t know about the other solutions! If you remove the white space from your code, this prevents IE from having anything to screw up. Specifically, if you remove the white space between your closing list item and the next opening list item, and your last closing list item and the end of your list, this will fix the problem. So you just need to turn this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third One!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>Into this:</p>
+<pre lang="html4strict" escaped="true" line="1">&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;#&quot;&gt;Third One!&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</pre>
+<p>Like I said, this isn’t exactly an elegant solution. But it does work, and it can be useful in places when CSS isn&#8217;t entirely reliable (like in HTML emails).</p>
+<h3>Fix #2: Float the Anchor Tags</h3>
+<p><a href="http://www.hicksdesign.co.uk/journal/ie-whitespace-bug">Jon Hicks popularized this fix years ago.</a> Basically, you float the anchor tags left, and then clear them left as well, like so:</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<div class="adsert"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3282985160484862";
+/* Random In-Text Ad */
+google_ad_slot = "5567245830";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<pre lang="css" escaped="true" line="1">ul a {
+	display: block;
+	float: left;
+	clear: left; }</pre>
+<p>This causes your links to behave like floated elements, which naturally don’t have any space between them. Unfortunately, it also prevents your links from filling all the horizontal space available, which would make a mess of the example I used above, because I’m relying on that width to create a background color and a border. However, if your links don’t have any fancy hover states or borders, this solution would work just fine.</p>
+<h3>Fix #3: Apply a Bottom Border</h3>
+<p>Another useful solution is to apply a border to your list item. Why does this work? I have no idea. Does a border just anywhere work? Nope. It has to be applied to the bottom of the list item (or to all four sides, as long as the bottom is included):</p>
+<pre lang="css" escaped="true" line="1">ul li {
+	border-bottom: 1px solid #666; }</pre>
+<p>I suppose the logic on this one is that the space is on the bottom of the element, so specifying a definitive edge to the box causes IE6 to recognize the “real” end of the element. Whatever the reasoning, it works, and it’s a good solution if you don’t mind a pixel of extra space in between your elements in return for getting rid of the great swaths of space IE had introduced. And sometimes it even works in the design. In the image above, for example, the border between the items could just as easily be applied to the list item instead of the anchor (which is where I had placed it initially).</p>
+<h3>Fix #4: Use Display: Inline</h3>
+<p>In my experience, the most useful solution of the four is to force your list items to display inline, instead of as a block-level element (which they are by default):</p>
+<pre lang="css" escaped="true" line="1">ul li {
+	display: inline; }</pre>
+<p>As far as I can tell, this technique was first popularized by <a href="http://www.andybudd.com/archives/2003/12/css_crib_sheet_1_gaps_between_vertical_nav_elements_in_ie5/">Andy Budd waaay back in 2003</a> (of course, he was dealing with IE5 back then). I like this solution because it seems to do the least harm to my lists. It doesn’t add any additional space that I need to account for. It also doesn’t harm the size of my anchor tags: if I apply a “display: block” to my anchors, like I’ve done in the image above, my anchor will stretch out the “inline” list item to its standard size. </p>
+<p>Any of these solutions will remove the extra space from between list items in IE6. The key is simply to pick the fix that works best with your particular design.</p>
+<div id="crp_related" class="crp_related"><h3>Related Reading</h3><ul><li><a href="../index.html?p=649"     class="crp_title">Making a Sphere in CSS</a></li><li><a href="../index.html?p=704"     class="crp_title">Use a CSS Preprocessor</a></li><li><a href="../index.html?p=747"     class="crp_title">Embedding Video in a Responsive Site</a></li><li><a href="../index.html?p=762"     class="crp_title">Sizing Images Responsively</a></li><li><a href="../index.html?p=673"     class="crp_title">A Pure CSS Bouncing Ball</a></li></ul></div>
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>			</div><!-- .entry-content -->
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=rglazebrook"></script>
+<!-- AddThis Button END --></article>
+
+<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			64 Responses		</h3>
+		<ol class="commentlist">
+				<li class="pingback even thread-even depth-1" id="comment-13400">
+		<p>Pingback: <a href='http://www.wjmboss.cn/?p=1661' rel='external nofollow' class='url'>Ultimate IE6 Cheatsheet: How To Fix 25+ Internet Explorer 6 Bugs | Jim的blog</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-13438">
+		<p>Pingback: <a href='http://cg.am/item/levi/?p=8' rel='external nofollow' class='url'>IE6终极备忘：修复IE6下 25+ Bugs | levi</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13493">
+		<p>Pingback: <a href='http://www.clearboth.org/ultimate-ie6-cheatsheet-how-to-fix-25-internet-explorer-6-bugs/' rel='external nofollow' class='url'>IE6 커닝 페이퍼: IE6 버그 25+ 해결하는 방법 | Clearboth</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13582">
+		<article id="comment-13582" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7e4c3b62bf72fc398c5f64203ef44c7a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn">Nazar </cite><a href="comment-page-2/index.html#comment-13582"><time datetime="2011-09-10T06:26:46+00:00">Sep. 10, 2011 @ 6:26 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>i am facing a problem in ie6 white space but this is not a list menu it&#8217;s just a rounder box i took in three part tob , mid and bottom top and bottom size are fixed and mid is repeated after top i mead between top and mid there is white space bug fond &#8230;&#8230;&#8230;..</p>
+<p>please reply if anyone can help..</p>
+<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13583">
+		<article id="comment-13583" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/7e4c3b62bf72fc398c5f64203ef44c7a?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.thedesigncreation.com' rel='external nofollow' class='url'>Nazar</a> </cite><a href="comment-page-2/index.html#comment-13583"><time datetime="2011-09-10T06:27:28+00:00">Sep. 10, 2011 @ 6:27 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>i am facing a problem in ie6 white space but this is not a list menu it&#8217;s just a rounder box i took in three part top , mid and bottom top and bottom size are fixed and mid is repeated after top i mead between top and mid there is white space bug fond &#8230;&#8230;&#8230;..</p>
+<p>please reply if anyone can help..</p>
+<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-13584">
+		<article id="comment-13584" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/3042d8685dcce2d0a27009b0aa1b3073?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='../index.html' rel='external nofollow' class='url'>Rob Glazebrook</a>  <span>(Author)</span> </cite><a href="comment-page-2/index.html#comment-13584"><time datetime="2011-09-10T08:52:56+00:00">Sep. 10, 2011 @ 8:52 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Nazar, it could be any of several things you might want to look into: 1. Try removing the space in your code between the top and mid sections, so the closing tag of top and the opening tag of mid touch. 2. Double-check you don&#8217;t have any margins set on top or mid. 3. Having a margin set on something INSIDE mid could be causing a problem&#8230; I don&#8217;t recall the exact scenario, but sometimes the margins on elements inside of other elements will appear on the outside instead.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-13618">
+		<p>Pingback: <a href='http://levi.cg.am/?p=8' rel='external nofollow' class='url'>IE6终极备忘：修复IE6下 25+ Bugs at 乱炖</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13811">
+		<article id="comment-13811" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/629a516e53f51ae1f083712962fa2b7d?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.spar-mehr-geld.de' rel='external nofollow' class='url'>Camellia Brucken</a> </cite><a href="comment-page-2/index.html#comment-13811"><time datetime="2011-11-10T07:40:08+00:00">Nov. 10, 2011 @ 7:40 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Good post. I learn something very complicated on different blogs each day. It will always be stimulating to learn to read content from other writers and practice a little something from their store. I’d prefer to use some while using content on my web site whether you don’t thoughts. Natually I’ll give that you simply link on your internet blog. Thanks for sharing.</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-13992">
+		<article id="comment-13992" class="comment">
+			<img alt='' src='http://0.gravatar.com/avatar/6f1efd6fff17b090a7b026650b2e9522?s=100&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.12ee.com' rel='external nofollow' class='url'>lin</a> </cite><a href="comment-page-2/index.html#comment-13992"><time datetime="2012-02-19T20:31:24+00:00">Feb. 19, 2012 @ 8:31 pm</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>THANK YOU,it&#8217;s help me!</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14094">
+		<article id="comment-14094" class="comment">
+			<img alt='' src='http://1.gravatar.com/avatar/b8035ab0db5818e222983feb90fcd50e?s=100&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />			<header class="comment-meta comment-author vcard">
+				<cite class="fn"><a href='http://www.cheapguccisell.com/' rel='external nofollow' class='url'>messenger</a> </cite><a href="comment-page-2/index.html#comment-14094"><time datetime="2012-05-15T01:11:49+00:00">May. 15, 2012 @ 1:11 am</time></a>				<span class="reply">
+							</span><!-- .reply -->
+			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I always run into this problem Thank you</p>
+							</section><!-- .comment-content -->
+
+			
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14184">
+		<p>Pingback: <a href='http://www.caibird.com/archives/76' rel='external nofollow' class='url'>[转]IE6终极备忘：修复IE6下 25+ Bugs - caibird的博客</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14214">
+		<p>Pingback: <a href='http://www.zfanw.com/blog/fix-ie-css-bugs.html' rel='external nofollow' class='url'>IE 系列 CSS Bugs &#8211; 陈三·4月亮</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="comment-14378">
+		<p>Pingback: <a href='http://www.shulf.com/fusu/front-end/ie-25-bugs-fixed/' rel='external nofollow' class='url'>[转][译]IE6终极备忘：修复IE6下 25+ Bugs &raquo; FUSU的路途-关于生活关于成长-欢乐Coding-幸福生活-欢迎来我的博客</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-14492">
+		<p>Pingback: <a href='http://qintengfeidev.sinaapp.com/?p=34' rel='external nofollow' class='url'>IE6速记：如何解决Internet Explorer 6中的25+错误 | Dev</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+				<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading">Comment navigation</h1>
+			<div class="nav-previous"><a href="comment-page-1/index.html#comments" >&larr; Older Comments</a></div>
+			<div class="nav-next"></div>
+		</nav>
+		
+		
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../index.html?p=122#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cssnewbie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='122' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="1856585e8e" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Follow the conversation! Subscribe to these comments via e-mail.</label>
+	</p>
+
+
+					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area --></div>
+
+		<div class="col-1-3 sidebar" role="complementary">
+		<div id="text-3" class="widget widget_text">			<div class="textwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1283881" class="bsarocks bsap_3de9dd67d1e9d49a7cec8c1a10bdb917"></div>
+<!-- End BuySellAds Zone Code --></div>
+		</div><div id="dsgnwrks_google_top_posts_widgets-2" class="widget google_top_posts"><h3 class="widget-title">Popular on CSS Newbie</h3>
+<!-- using transient -->
+<ol><li><a href="../index.html?p=444">A Super Simple Horizontal Navigation Bar</a></li><li><a href="../index.html?p=59">Using the CSS @import Rule</a></li><li><a href="../example/showhide-content/index.html">CSS Newbie Example: Show/Hide Content</a></li><li><a href="../easy-css-dropdown-menu/index.html">Easy CSS Dropdown Menus</a></li><li><a href="../example/horizontal-menu/index.html">CSS Newbie Example: Super Simple Horizontal Navigation Bar</a></li></ol>
+<!-- using transient -->
+</div><div id="sticky-posts-2" class="widget widget_ultimate_posts"><h3 class="widget-title">From the Archives</h3><ul>
+          <li class="">
+
+            
+            <div class="upw-content">
+
+                              <p class="post-title">
+                  <a href="../index.html?p=322" title="Permalink to: 12 Creative and Cool Uses for the CSS Border Property">
+                    12 Creative and Cool Uses for the CSS Border Property                  </a>
+                </p>
+              
+              
+              
+                              <p class="post-excerpt">If CSS properties attended high school, you would never expect to see the border property sitting at the cool kids' table. Actually, you'd be surprised at just how cool the border property can be. Please take the following dozen exhibits as proof that the CSS border property is a lot cooler than we give it credit for. <a href="../index.html?p=322" class="more-link" title="Permalink to: 12 Creative and Cool Uses for the CSS Border Property">Read more →</a></p>
+              
+              
+              
+              
+              
+            </div>
+
+          </li>
+
+        </ul></div><div id="scfw-2" class="widget scfw"><h3 class="widget-title">Keep in Touch</h3><ul class="scfw_text_img" style="list-style:none;margin:0;padding:0;"><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/feedburner.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="../about/feed/index.html" title="Subscribe to RSS Feed">RSS Feed</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/email.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=cssnewbie" title="Subscribe to posts via Email">Subscribe via Email</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/twitter.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="http://twitter.com/robbyg" title="Follow robbyg on Twitter">Twitter</a></li><li style="background:url('../wp-content/plugins/subscribe-connect-follow-widget/images/16px/google-plus.png') no-repeat 0% 50%;padding-left:20px;font-size:14px;"><a href="https://plus.google.com/101980389733151181460" title="Google+">Google+</a></li></ul></div><div id="text-4" class="widget widget_text">			<div class="textwidget"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Sidebar Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3282985160484862"
+     data-ad-slot="3973803031"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>		</div><!-- .sidebar -->        </div> <!-- End .content -->
+        <footer class="grid grid-pad" role="contentinfo">
+        	<div class="col-2-3">
+        		<img src="../wp-content/themes/cssnewbie_v4/img/rob_change_launch_200x200.jpg" alt="" class="profilePic" />
+	        	<p>CSS Newbie has been authored and maintained by Rob Glazebrook since 2007. Rob lives and works in beautiful Des Moines, Iowa.</p>
+	        	<p>In addition to writing on CSS Newbie, Rob works for <a href="http://www.vocecommunications.com/">Voce Communications</a>, brews beer, raises chickens, runs, rows crew, and has adventures.</p>
+	        	<p>If you would like to contact Rob about a speaking engagement, freelance work, or excess beer disposal, please <a href="../index.html?p=6">use the contact form here.</a> If you have a question about a specific article, you would be better off posting a comment on the article itself.</p>
+	        	<p>
+        	</div>
+        	<div class="col-1-3">
+        		<ul>
+        			<li><a href="../index.html?p=253">Advertise on CSS Newbie</a></li>
+        			<li><a href="../index.html?p=250">Table of Contents</a></li>
+        			<li><a href="http://feeds.feedburner.com/cssnewbie/">Subscribe</a></li>
+        			<li><a href="../index.html?p=6">Contact Rob</a></li>
+        			<li><a href="../index.html?p=122#top">(back to the top)</a></li>
+        		</ul>
+        	</div>
+        </footer>
+    </div>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="../wp-content/themes/cssnewbie_v4/js/cssnewbie.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2285776-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 744/827 objects using disk
+
+ Served from: www.cssnewbie.com @ 2014-03-10 16:59:20 by W3 Total Cache -->

@@ -1,0 +1,47 @@
+{# Google Analytics Account ID #}{% set ga_account as 'UA-499901-84' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{% block title %}{{ settings.meta.title|e }}{% endblock %}</title>
+	<meta name="description" content="{{ settings.meta.description }}" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" type="text/css" href="{{ hifi.url.styles }}bergamo.css" />
+	{% block css %}{% css "reset,shCore,shThemeJsuth,type,retweets,style" min %}{% endblock css %}
+	<link rel="alternate" type="application/rss+xml" title="Blog" href="http://feeds.feedburner.com/JoelSutherland"/>
+	<link rel="icon" href="{{ hifi.url.images }}favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<div id="container">
+		<header role="banner">
+			<h1><a href="/">{{ settings.title|lower }}</a></h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/about">about</a> |</li>
+				<li><a id="blogbutton" href="/">blog</a> |</li>
+				<li><a href="/contact">contact</a> |</li>
+				<li><a href="http://feeds.feedburner.com/JoelSutherland">rss</a></li>
+			</ul>
+		</nav>
+	
+	 {% include "common/blog-dropdown.html" %}
+	 
+	 {% block body %}{% endblock %}
+	
+  </div><!-- container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+{% block js %}{% js "shCore,shBrushCss,shBrushJScript,shBrushPhp,shBrushXml,hifiapi,customRetweet.min,setup" min %}{% endblock js %}
+
+<script>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+var pageTracker = _gat._getTracker("{{ ga_account }}");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<article id="comment-{{ this.id }}">
+				<img alt="{{ this.author|e }}'s avatar" src='{{ this.email|gravatar(50) }}' height='44' width='44' />
+		<div class="meta">
+			<cite class="author">
+			 {% if this.url %}
+			   <a href='{{ this.url|e }}' rel='external nofollow' class='url'>{{ this.author|e }}</a></cite>
+			 {% else %}
+			   {{ this.author|e }}
+			 {% endif %}
+			<a class="time" href="#comment-{{ this.id }}"><time datetime="{{ this.publishedAt|date("Y-m-d\\TH:i") }}"> 
+			{{ this.publishedAt|date("n/j/Y") }}
+			</time></a>
+		</div>
+		<div class="comment">
+			<p>{{ this.content }}</p>
+		</div>
+	</article>

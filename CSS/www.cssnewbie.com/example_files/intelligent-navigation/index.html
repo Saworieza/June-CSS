@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Intelligent Navigation Bars with JavaScript and CSS</title>
+<style>
+body {
+	margin: 0;
+	padding: 0 50px;
+	border-top: 10px solid #075a97;
+	font: small/1.3em Arial, Helvetica, sans-serif; }
+#content {
+	width: 40em;
+	margin: 0 auto;
+	padding: 40px 0; }
+ul#nav {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0; }
+ul#nav li {
+	float: left;  }
+ul#nav li a {
+	display: inline;
+	float: left;
+	padding: 8px 5px 3px 5px;
+	line-height: 2em;
+	margin-right: 5px;
+	background-color: #034a7f;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none; }
+ul#nav li a:hover {
+	padding-top: 12px;
+	background-color: #075a97; }
+ul#nav li a.active {
+	padding-top: 15px;
+	background-color: #075a97;
+	border: 1px solid #333;
+	border-top: none; }
+</style>
+<script language="javascript" type="text/javascript">
+function setActive() {
+  aObj = document.getElementById('nav').getElementsByTagName('a');
+  for(i=0;i<aObj.length;i++) { 
+    if(document.location.href.indexOf(aObj[i].href)>=0) {
+      aObj[i].className='active';
+    }
+  }
+}
+window.onload = setActive;
+</script>
+</head>
+<body>
+	<div id="content">
+		<ul id="nav">
+			<li><a href="index.html?about">About Us</a></li>
+			<li><a href="index.html?contact">Contact Us</a></li>
+			<li><a href="index.html?archives">Our Archives</a></li>
+			<li><a href="index.html?free">Free Stuff</a></li>
+		</ul>
+		<h1>Our Website</h1>
+		<p>The "About" tab is set by default. Click the other tabs to see them become active.</p>
+		<p><a href="../../navigation/intelligent-navigation/index.html">Back to the CSSnewbie article.</a></p>
+
+		<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis  adipiscing vestibulum massa. Suspendisse sed lectus. Cras id mi.  Curabitur eget arcu. Sed eros. Morbi ante sapien, varius ac, vulputate  quis, suscipit vel, urna. Nunc quam. Vestibulum ac erat. Donec eget  augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices  posuere cubilia Curae; Suspendisse sed mauris. Praesent elementum  fringilla quam. Nam sollicitudin suscipit lacus. Nunc venenatis, ipsum  et adipiscing consequat, leo ante laoreet orci, quis sollicitudin pede  quam a quam. Nam tempor lacinia libero. Nulla fermentum felis a neque.  Cras cursus felis ut libero. Praesent purus. </p>
+		<p>In mauris. Pellentesque blandit rhoncus erat. Vestibulum ac nunc.  Duis nec velit et enim facilisis consequat. Lorem ipsum dolor sit amet,  consectetuer adipiscing elit. Vestibulum nec velit vel sem hendrerit  pulvinar. Fusce commodo ligula non urna. Maecenas aliquam. Maecenas non  lacus non tortor tempus volutpat. Vestibulum egestas leo facilisis  urna. </p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada  fames ac turpis egestas. Aenean varius hendrerit mi. Proin ante.  Curabitur consectetuer cursus ante. Nulla ultricies egestas lectus.  Nullam urna lacus, aliquet vel, facilisis nec, lobortis eu, velit.  Nulla libero nibh, aliquet sed, tempus vel, tristique eget, lectus.  Fusce sit amet massa in justo laoreet ultrices. Sed blandit arcu ac  odio. Quisque ac lectus non leo dapibus feugiat. Cras adipiscing purus. </p>
+		<p>Aenean metus augue, scelerisque at, accumsan at, bibendum eget,  lacus. Maecenas tempus, justo sit amet tristique vulputate, ipsum leo  ultrices tellus, in vestibulum est turpis bibendum dolor. Donec  convallis. Aliquam erat volutpat. Cras enim elit, ultricies vitae,  varius nec, dictum non, erat. Suspendisse auctor tempor lacus. Cum  sociis natoque penatibus et magnis dis parturient montes, nascetur  ridiculus mus. Suspendisse pellentesque suscipit lacus. Donec sed leo  id arcu semper porta. Mauris vulputate. Suspendisse lobortis diam in  augue. Proin sit amet urna. </p>
+		<p>Maecenas eu justo non pede suscipit facilisis. Duis aliquam est ac  nisi. Aenean lacus tortor, consequat vitae, venenatis tincidunt,  sodales quis, risus. Morbi mauris nunc, bibendum aliquam, condimentum  non, vestibulum id, sapien. Donec lacus. Cras lacinia mattis lorem. In  mi dolor, nonummy vitae, elementum vitae, congue id, pede. Nam eu  sapien. Pellentesque nibh. Ut laoreet pretium lorem. </p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/cb=gapi.loaded_1" async=""></script><script src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/cb=gapi.loaded_0" async=""></script><script async="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/pinit.js"></script><link rel="stylesheet" type="text/css" href="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/default.include.251ce8.css" media="all">
+
+	<title>Better Check Boxes with jQuery and CSS | Tutorialzine</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+
+	
+	<link rel="pingback" href="http://tutorialzine.com/xmlrpc.php">
+
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Tutorialzine » Better Check Boxes with jQuery and CSS Comments Feed" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/feed/">
+<link rel="stylesheet" id="highlight.css-css" href="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/highlight.tomorrow.css" type="text/css" media="all">
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tutorialzine.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tutorialzine.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Shutter Effect Portfolio with jQuery and Canvas" href="http://tutorialzine.com/2011/03/photography-portfolio-shutter-effect/">
+<link rel="next" title="App Engine Series #3: Using the Webapp Framework" href="http://tutorialzine.com/2011/03/app-engine-series-3-webapp-framework/">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/Better Check Boxes with jQuery and CSS   Tutorialzine.html">
+<link rel="shortlink" href="http://tutorialzine.com/?p=1397">
+<link rel="shortcut icon" type="image/x-icon" href="http://tutorialzine.com/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="Tutorialzine » Full Feed" href="http://feeds.feedburner.com/Tutorialzine">
+<meta property="og:site_name" content="Tutorialzine">
+<meta property="fb:admins" content="1674521632">
+<meta name="keywords" content="tutorialzine, tutorial zine, tzine, tutorials, freebies, resources, web development, webdev, demo, PHP, MySQL, jQuery, CSS, XHTML, jQuery UI, CSS3, HTML5, HTML, web design, webdesign">
+<meta name="description" content="In this short tutorial, we will be creating a replacement for the default browser checkboxes in the form of a simple jQuery plugin.">
+<link rel="image_src" href="http://cdn.tutorialzine.com/wp-content/uploads/2011/03/1397-150x150.jpg">
+<meta name="twitter:image" content="http://cdn.tutorialzine.com/wp-content/uploads/2011/03/1397-150x150.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tutorialzine">
+<meta name="twitter:url" content="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/">
+<meta name="twitter:title" content="Better Check Boxes with jQuery and CSS">
+<meta name="twitter:description" content="In this short tutorial, we will be creating a replacement for the default browser checkboxes in the form of a simple jQuery plugin.">
+<meta name="twitter:creator" content="@tutorialzine">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<script type="text/javascript" async="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/ga.js"></script><script type="text/javascript" async="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_fe75131c335e3bd42585d699208c59c8" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/s_fe75131c335e3bd42585d699208c59c8.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1251274{width:100%;display:block}div.bsap_1251274 a{width:125px}div.bsap_1251274 a img{padding:0}div.bsap_1251274 a em{font-style:normal}div.bsap_1251274 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1251274 img{border:0;clear:right;}div.bsap_1251274 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1251274 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1251274 a{line-height:100%}div.bsap_1251274 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1251274 a.adhere{width:123px;height:123px}div.bsap_1251274 img.s{height:0;width:0}</style></head>
+
+<body>
+
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+
+	<header>
+
+		<h1><a title="Home" href="http://tutorialzine.com/" id="logo">Tutorial<b>zine</b></a></h1>
+
+		
+		<nav class="Tutorials">
+			<a href="http://tutorialzine.com/category/tutorials/" class="active">Tutorials</a>
+			<a href="http://tutorialzine.com/category/articles/" class="">Articles</a>
+			<a href="http://tutorialzine.com/members/" class="">Member area</a>
+
+			<!-- <a href="http://www.zinescripts.com/" target="blank">Scripts</a> -->
+
+							<a href="http://tutorialzine.com/books/jquery-trickshots/" style="color:#f6ab29 !important" class="">The book</a>
+					</nav>
+
+		<a class="searchIcon">
+			<form action="http://tutorialzine.com/"><input type="text" placeholder="Search the site!" name="s"></form>
+		</a>
+
+	</header>
+
+<section id="content">
+		<aside id="sidebar">
+
+			<div class="sidebar-group about">
+				<p><b>Tutorialzine</b> is a site dedicated to bringing you the coolest web development tutorials and resources. Follow us!</p>
+				
+				<div class="social-icons">
+					<a href="http://twitter.com/Tutorialzine" class="twitter" target="_blank" data-hint="26,951+"></a>
+					<a href="http://www.facebook.com/Tutorialzine" class="facebook" target="_blank" data-hint="12,739+"></a>
+					<a class="googleplus" href="https://plus.google.com/102299652175684141333" target="_blank"></a>
+					<a href="http://feeds.feedburner.com/Tutorialzine" class="rss" target="_blank" data-hint="19,692+"></a>
+				</div>
+
+			</div>
+
+			<div class="sidebar-group adBlock">
+
+				<!-- BuySellAds.com Zone Code -->
+				<div id="bsap_1251274" class="bsap_1251274 bsap"><a href="http://stats.buysellads.com/click.go?z=1251274&b=4658398&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.4464007595088333&link=http://boldtask.com/services.php" onmouseover="window.status = &#39;http://boldtask.com/services.php&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Bold Task: Ultra Responsive Web Design" id="bsa_4658398" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/218701-1397774814.png" width="125" height="125" alt="Bold Task: Ultra Responsive Web Design"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=2925004&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.9151819450780749&link=http://www.bypeople.com/?utm_source=bsa&utm_medium=display&utm_content=banner05&utm_campaign=bsaTutsZine" onmouseover="window.status = &#39;http://www.bypeople.com/?utm_source=bsa&amp;utm_medium=display&amp;utm_content=banner05&amp;utm_campaign=bsaTutsZine&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="By People" id="bsa_2925004" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/141177-1353108659.jpg" width="125" height="125" alt="By People"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=3869775&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.5862355080898851&link=http://www.gojs.net/latest/index.html?utm_source=Tutorialzine&utm_medium=tr125x125&utm_term=canvas&utm_content=radial-overlay&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=Tutorialzine&amp;utm_medium=tr125x125&amp;utm_term=canvas&amp;utm_content=radial-overlay&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="GoJS radial graph sample" id="bsa_3869775" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/184538-1377108033.png" width="125" height="125" alt="GoJS radial graph sample"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4749907&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.05794133874587715&link=http://www.wpzoom.com/members/go.php?r=3371&i=l160&utm_source=tutorialzine.com&utm_medium=display&utm_content=&utm_campaign=turorialzine" onmouseover="window.status = &#39;http://www.wpzoom.com/members/go.php?r=3371&amp;i=l160&amp;utm_source=tutorialzine.com&amp;utm_medium=display&amp;utm_content=&amp;utm_campaign=turorialzine&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="ZOOM Builder - Drag &amp; Drop Page Builder for WordPress" id="bsa_4749907" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/222289-1399973085.png" width="125" height="125" alt="ZOOM Builder - Drag &amp; Drop Page Builder for WordPress"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4643509&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.26930166129022837&link=http://depositphotos.com/?ref=1255735&utm_source=buysellads&utm_medium=banner&utm_content=125_125_retro_logo&utm_campaign=tutorialzine.com" onmouseover="window.status = &#39;http://depositphotos.com/?ref=1255735&amp;utm_source=buysellads&amp;utm_medium=banner&amp;utm_content=125_125_retro_logo&amp;utm_campaign=tutorialzine.com&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="Stock Images" id="bsa_4643509" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/218076-1397470185.jpg" width="125" height="125" alt="Stock Images"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=4672583&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.2737060012295842&link=http://boldtask.com/work.php" onmouseover="window.status = &#39;http://boldtask.com/work.php&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad6 even" title="Bold Task: Ultra Responsive Web Design" id="bsa_4672583" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/218957-1398018747.jpg" width="125" height="125" alt="Bold Task: Ultra Responsive Web Design"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=3870011&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.815831912914291&link=https://www.psd2html.com/order-now.html?utm_source=tutorialzine.com&utm_medium=banner&utm_campaign=responsive" onmouseover="window.status = &#39;https://www.psd2html.com/order-now.html?utm_source=tutorialzine.com&amp;utm_medium=banner&amp;utm_campaign=responsive&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad7 odd" title="PSD2HTML.com" id="bsa_3870011" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/205745-1390225509.png" width="125" height="125" alt="PSD2HTML.com"></a><a href="http://stats.buysellads.com/click.go?z=1251274&b=562218&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8190546261612326&link=http://www.dreamtemplate.com/?ref=bsa" onmouseover="window.status = &#39;http://www.dreamtemplate.com/?ref=bsa&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad8 even" title="Premium Website Templates &amp; WordPress Themes" id="bsa_562218" target="_blank"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/178447-1373139325.gif" width="125" height="125" alt="Premium Website Templates &amp; WordPress Themes"></a></div>
+				<!-- END BuySellAds.com Zone Code -->
+
+				
+				<p class="ad">Looking for <a href="http://skillforge.com/courses/web-development/">Website Design Courses</a> you can take from anywhere? Visit SkillForge.com!</p>
+
+				<a href="http://www.maxcdn.com/" class="maxcdn" title="Accelerated by maxcdn" target="_blank">Accelerated by maxcdn</a>
+
+			</div>
+
+			<div class="sidebar-group posts">
+				<h5 class="active" data-tab="latest-tutorials">Latest Tutorials</h5>
+				<h5 data-tab="latest-articles">Latest Articles</h5>
+				<!-- <h5 data-tab="popular-posts">What's Hot</h5> -->
+
+				<ul id="latest-tutorials" class="active">
+										
+					<li>
+						<a href="http://tutorialzine.com/2014/04/responsive-shopping-cart-layout-twitter-bootstrap-3/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/shopping_cart_template-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="shopping_cart_template">							
+							<span class="title">Free Template: Responsive Shopping Cart</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/04/creative-company-bootstrap-template/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/creative_company-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="creative_company">							
+							<span class="title">Free Template: Creative Company Layout</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/03/nodejs-private-webchat/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/nodejs-realtime-chat-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="nodejs-realtime-chat">							
+							<span class="title">Realtime Chat with Node.js</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/technique-hiding-overflowing-text/">
+
+															<img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/default_thumb_small.png">
+							
+							<span class="title">My New Favorite Technique For Hiding Overflowing Text</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/writing-modular-javascript-browserify/">
+
+															<img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/default_thumb_small.png">
+							
+							<span class="title">Quick Tip: Write Modular JavaScript With Browserify</span>
+						</a>
+					</li>
+
+									</ul>
+
+				<ul id="latest-articles">
+										
+					<li>
+						<a href="http://tutorialzine.com/2014/04/10-mistakes-javascript-beginners-make/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/10-mistakes-javascript-beginners-make-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="10-mistakes-javascript-beginners-make">							
+							<span class="title">10 Mistakes That JavaScript Beginners Often Make</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2014/02/10-signs-that-you-are-an-awesome-web-developer/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/10-signs-awesome-web-developers-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="10-signs-awesome-web-developers">							
+							<span class="title">10 Signs That You Are An Awesome Web Developer</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/12/the-10-weirdest-programming-languages/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/weirdest-programming-languages-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="weirdest-programming-languages">							
+							<span class="title">The 10 Weirdest Programming Languages</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/11/a-quick-guide-to-web-storage/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/quick-guide-web-storage-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="quick-guide-web-storage">							
+							<span class="title">A Quick Guide to Web Storage</span>
+						</a>
+					</li>
+
+					
+					<li>
+						<a href="http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/">
+
+															<img width="100" height="100" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/12-awesome-css-features-100x100.jpg" class="attachment-tzthumb wp-post-image" alt="12-awesome-css-features">							
+							<span class="title">12 Awesome CSS3 Features That You Can Finally Start Using</span>
+						</a>
+					</li>
+
+									</ul>
+
+			</div>
+
+			<div class="sidebar-group fb">
+				<iframe src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:258px;background-color:#fefefe;" allowtransparency="true"></iframe>
+			</div>
+
+			<div class="sidebar-group twitter">
+				<h5 class="single">Best from <a href="https://twitter.com/Tutorialzine/" target="_blank">@Tutorialzine</a></h5>
+
+				<ul class="tweetFavList">
+			<li>
+				CodeCombat Battle - Learn to program by playing a game <a href="http://ttzn.co/1pTOohl" target="_blank">http://ttzn.co/1pTOohl</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">9</span>
+										<a href="http://twitter.com/Tutorialzine/status/462014936328437760" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Code Guide - Standards for developing flexible, durable, and sustainable HTML and CSS <a href="http://ttzn.co/1hidBZH" target="_blank">http://ttzn.co/1hidBZH</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">17</span>
+										<a href="http://twitter.com/Tutorialzine/status/461970866977665024" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Cool: Project Naptha - Browser extension that allows you to select text in any image <a href="http://ttzn.co/1u3gJBm" target="_blank">http://ttzn.co/1u3gJBm</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">6</span>
+										<a href="http://twitter.com/Tutorialzine/status/461652578766704640" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Useful: Buttons - A CSS and SASS button library with lots of styles <a href="http://ttzn.co/1gGkqFF" target="_blank">http://ttzn.co/1gGkqFF</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">10</span>
+										<a href="http://twitter.com/Tutorialzine/status/461608464511676416" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            
+			<li>
+				Progress.js - a small and themeable library for progress bars <a href="http://ttzn.co/R1Nf7J" target="_blank">http://ttzn.co/R1Nf7J</a>				<span>
+					<a href="http://twitter.com/Tutorialzine" target="_blank" title="Go to Tutorialzine&#39;s twitter page">Tutorialzine</a>
+
+											· <span title="Retweet Count">17</span>
+										<a href="http://twitter.com/Tutorialzine/status/461531950487187456" class="date" target="_blank">2 weeks ago</a>
+				</span>
+            </li>
+
+            </ul>
+				<div id="followTwitterButton"><iframe scrolling="no" frameborder="0" style="width:300px; height:20px" src="about:blank" allowtransparency="true"></iframe></div>
+
+			</div>
+
+		</aside>
+
+		<article id="post" class="leftPostCol">
+
+							<img class="featured" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/1397.jpg" alt="Better Check Boxes with jQuery and CSS">
+			
+			<div class="post-body">
+				<h2>Better Check Boxes with jQuery and CSS</h2>
+
+				<p class="post-info"><i class="icon-author"></i> Martin Angelov <i class="icon-cal"></i><time datetime="2011-03-14">March 14th, 2011</time></p>
+
+				<div class="tutorialButtons">
+											<a href="http://demo.tutorialzine.com/2011/03/better-check-boxes-jquery-css/" class="button green big" target="_blank">Demo</a>
+					
+											<a href="http://demo.tutorialzine.com/2011/03/better-check-boxes-jquery-css/jquery.tzCheckbox.zip" class="button blue big">Download</a>
+									</div>
+
+
+											<div id="adsenseAd" class="hide1340">
+								<script async="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/adsbygoogle.js"></script>
+								<!-- Tutorialzine Bellow Buttons Rect -->
+								<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1100319204652185" data-ad-slot="9621240023" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+							</div>
+				
+						
+				<p>In this short tutorial, we will be creating a replacement for the default browser checkboxes in the form of a simple jQuery plugin. It will progressively enhance your forms but at the same time fall back to the default controls if JavaScript is unavailable.</p>
+<h3>HTML</h3>
+<p>The first step is to lay down the structure of the underlying HTML document. We will need a form with checkboxes which we will later be replacing with their enhanced jQuery versions.</p>
+<h4>index.html</h4>
+<pre class="brush:html" data-lines="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+"><code class="html xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"Content-Type"</span> <span class="attribute">content</span>=<span class="value">"text/html; charset=utf-8"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">title</span>&gt;</span>Better Check Boxes with jQuery and CSS | Tutorialzine Demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"css/styles.css"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"jquery.tzCheckbox/jquery.tzCheckbox.css"</span> /&gt;</span>
+
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"page"</span>&gt;</span>
+
+    <span class="tag">&lt;<span class="title">form</span> <span class="attribute">method</span>=<span class="value">"get"</span> <span class="attribute">action</span>=<span class="value">"./"</span>&gt;</span>
+    	<span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    		<span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"ch_effects"</span>&gt;</span>Display effects: <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"ch_effects"</span> <span class="attribute">name</span>=<span class="value">"ch_effects"</span> <span class="attribute">data-on</span>=<span class="value">"Show effects"</span> <span class="attribute">data-off</span>=<span class="value">"Hide effects"</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        	<span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"ch_location"</span>&gt;</span>Enable location tracking: <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"ch_location"</span> <span class="attribute">name</span>=<span class="value">"ch_location"</span> <span class="attribute">checked</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"ch_showsearch"</span>&gt;</span>Include me in search results: <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"ch_showsearch"</span> <span class="attribute">name</span>=<span class="value">"ch_showsearch"</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"ch_emails"</span>&gt;</span>Email notifications: <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"ch_emails"</span> <span class="attribute">name</span>=<span class="value">"ch_emails"</span> <span class="attribute">data-on</span>=<span class="value">"ON"</span> <span class="attribute">data-off</span>=<span class="value">"OFF"</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery.tzCheckbox/jquery.tzCheckbox.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/script.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+<p>The main container element – the <code>#page</code> div, holds our form. Inside it is an unordered list with a number of <code>label</code> elements which describe the checkboxes. Something that is good from a usability standpoint, is that clicking a label will check/uncheck the corresponding checkbox (specified by the <em>for</em> attribute).</p>
+<p>Notice the HTML5 <code>data</code> attributes, specified on some of the labels. We are using these to attach custom data to every tag in an HTML5 document. In our case the attributes will determine the text labels of the on / off states of the checkbox replacements.</p>
+<p>And here is the markup of our replacement checkboxes:</p>
+<pre class="brush:html" data-lines="1
+2
+3
+4
+"><code class="html xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tzCheckBox checked"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tzCBContent"</span>&gt;</span>ON<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tzCBPart"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
+<p>When our plugin is called, it will loop through the checkboxes, and insert the HTML code you can see above after each one, while at the same time hiding the original. The <code>checked</code> class determines the styling of the checkbox replacement (on or off state).</p>
+<div id="attachment_1400" class="wp-caption alignnone" style="width: 630px"><a href="http://demo.tutorialzine.com/2011/03/better-check-boxes-jquery-css/"><img class="size-full wp-image-1400" title="Checkbox Replacements Explained" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/checkbox-replacement-explained.png" alt="Checkbox Replacements Explained" width="620" height="260"></a><p class="wp-caption-text">Checkbox Replacements Explained</p></div>
+<p>Now lets move on to the styling.</p>
+<h3>CSS</h3>
+<p>We are using a single transparent PNG background image to style the checkbox replacements. The top part of the image is the checked (on) state and the bottom – the off state. The width of the checkbox replacement grows with the text labels.</p>
+<h4>jquery.tzCheckbox.css</h4>
+<pre class="brush:css" data-lines="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+"><code class="css"><span class="class">.tzCheckBox</span><span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="function">url(<span class="string">'background.png'</span>)</span> no-repeat right bottom;</span></span>
+    <span class="rule"><span class="attribute">display</span>:<span class="value">inline-block;</span></span>
+    <span class="rule"><span class="attribute">min-width</span>:<span class="value"><span class="number">60</span>px;</span></span>
+    <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">33</span>px;</span></span>
+    <span class="rule"><span class="attribute">white-space</span>:<span class="value">nowrap;</span></span>
+    <span class="rule"><span class="attribute">position</span>:<span class="value">relative;</span></span>
+    <span class="rule"><span class="attribute">cursor</span>:<span class="value">pointer;</span></span>
+    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"><span class="number">14</span>px;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.tzCheckBox</span><span class="class">.checked</span><span class="rules">{
+    <span class="rule"><span class="attribute">background-position</span>:<span class="value">top left;</span></span>
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> <span class="number">14</span>px <span class="number">0</span> <span class="number">0</span>;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.tzCheckBox</span> <span class="class">.tzCBContent</span><span class="rules">{
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> white;</span></span>
+    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">31</span>px;</span></span>
+    <span class="rule"><span class="attribute">padding-right</span>:<span class="value"> <span class="number">38</span>px;</span></span>
+    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> right;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.tzCheckBox</span><span class="class">.checked</span> <span class="class">.tzCBContent</span><span class="rules">{
+    <span class="rule"><span class="attribute">text-align</span>:<span class="value">left;</span></span>
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">38</span>px;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.tzCBPart</span><span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="function">url(<span class="string">'background.png'</span>)</span> no-repeat left bottom;</span></span>
+    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">14</span>px;</span></span>
+    <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span>
+    <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">0</span>;</span></span>
+    <span class="rule"><span class="attribute">left</span>:<span class="value">-<span class="number">14</span>px;</span></span>
+    <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">33</span>px;</span></span>
+    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.tzCheckBox</span><span class="class">.checked</span> <span class="class">.tzCBPart</span><span class="rules">{
+    <span class="rule"><span class="attribute">background-position</span>:<span class="value">top right;</span></span>
+    <span class="rule"><span class="attribute">left</span>:<span class="value">auto;</span></span>
+    <span class="rule"><span class="attribute">right</span>:<span class="value">-<span class="number">14</span>px;</span></span>
+<span class="rule">}</span></span></code></pre>
+<p>The <em>.tzCheckBox</em> span is positioned as an inline-block, which keeps it on the same line as the surrounding text, while giving us the ability to style its margin and padding properties as a block element. It also has a relative positioning assigned, so we can use the sliding doors technique and show the <code>.tzCBPart</code> span with the remaining part of the background.</p>
+<p>Depending on whether we are displaying the on or off state, the <code>.tzCPContent</code> span is either aligned to the left or the right, with the appropriate paddings so that it makes its .tzCheckBox container span grow.</p>
+<div id="attachment_1401" class="wp-caption alignnone" style="width: 630px"><a href="http://demo.tutorialzine.com/2011/03/better-check-boxes-jquery-css/"><img class="size-full wp-image-1401" title="Better Checkboxes - jQuery Plugin" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/better-checkbox-jquery-plugin.png" alt="Better Checkboxes - jQuery Plugin" width="620" height="460"></a><p class="wp-caption-text">Better Checkboxes - jQuery Plugin</p></div>
+<p>Now it is time to build the actual jQuery plugin.</p>
+<h3>jQuery</h3>
+<p>We are going to name our plugin <code>tzCHeckbox</code>. It is going to take a JavaScript object, with a <code>labels</code> property as a parameter. This property is an array specifying the text labels displayed in the on / off state.</p>
+<h4>jquery.tzCheckbox.js</h4>
+<pre class="brush:js" data-lines="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+"><code class="javascript">(<span class="keyword">function</span>($){
+    $.fn.tzCheckbox = <span class="keyword">function</span>(options){
+
+        <span class="comment">// Default On / Off labels:</span>
+
+        options = $.extend({
+            labels : [<span class="string">'ON'</span>,<span class="string">'OFF'</span>]
+        },options);
+
+        <span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="keyword">function</span>(){
+            <span class="keyword">var</span> originalCheckBox = $(<span class="keyword">this</span>),
+                labels = [];
+
+            <span class="comment">// Checking for the data-on / data-off HTML5 data attributes:</span>
+            <span class="keyword">if</span>(originalCheckBox.data(<span class="string">'on'</span>)){
+                labels[<span class="number">0</span>] = originalCheckBox.data(<span class="string">'on'</span>);
+                labels[<span class="number">1</span>] = originalCheckBox.data(<span class="string">'off'</span>);
+            }
+            <span class="keyword">else</span> labels = options.labels;
+
+            <span class="comment">// Creating the new checkbox markup:</span>
+            <span class="keyword">var</span> checkBox = $(<span class="string">'&lt;span&gt;'</span>,{
+                className	: <span class="string">'tzCheckBox '</span>+(<span class="keyword">this</span>.checked?<span class="string">'checked'</span>:<span class="string">''</span>),
+                html:	<span class="string">'&lt;span class="tzCBContent"&gt;'</span>+labels[<span class="keyword">this</span>.checked?<span class="number">0</span>:<span class="number">1</span>]+
+                        <span class="string">'&lt;/span&gt;&lt;span class="tzCBPart"&gt;&lt;/span&gt;'</span>
+            });
+
+            <span class="comment">// Inserting the new checkbox, and hiding the original:</span>
+            checkBox.insertAfter(originalCheckBox.hide());
+
+            checkBox.click(<span class="keyword">function</span>(){
+                checkBox.toggleClass(<span class="string">'checked'</span>);
+
+                <span class="keyword">var</span> isChecked = checkBox.hasClass(<span class="string">'checked'</span>);
+
+                <span class="comment">// Synchronizing the original checkbox:</span>
+                originalCheckBox.attr(<span class="string">'checked'</span>,isChecked);
+                checkBox.find(<span class="string">'.tzCBContent'</span>).html(labels[isChecked?<span class="number">0</span>:<span class="number">1</span>]);
+            });
+
+            <span class="comment">// Listening for changes on the original and affecting the new one:</span>
+            originalCheckBox.bind(<span class="string">'change'</span>,<span class="keyword">function</span>(){
+                checkBox.click();
+            });
+        });
+    };
+})(jQuery);</code></pre>
+<p>All changes to the checkbox replacement are propagated back to the original checkbox (which is hidden, but still on the page). This also works the other way around, as in certain circumstances (when you click on a <code>label</code> element for example) the original checkbox might be changed. This will trigger the change event and update the replacement.</p>
+<p>Keeping the original checkboxes on the page is important, as this way submitting the form (with or without AJAX) would also send the correct values the user has chosen.</p>
+<p>Using the plugin is also pretty straightforward:</p>
+<pre class="brush:js" data-lines="1
+2
+3
+4
+"><code class="javascript">$(<span class="string">'input[type=checkbox]'</span>).tzCheckbox({
+    labels: [ <span class="string">'Enable'</span>, <span class="string">'Disable'</span> ]
+});
+</code></pre>
+<p>This selects all the checkboxes on the page and passes them to <code>tzCheckbox</code> with ‘Enable’ and ‘Disable’ as replacement text.</p>
+<p><strong>With this our checkbox replacement jQuery plugin is complete!</strong></p>
+<h3>Conclusion</h3>
+<p>You can use today’s plugin to enhance the admin or configuration panels of your web apps, or even built better mobile sites with it. If, for some reason, JavaScript has been disabled on the user’s browser, they will still see the default checkboxes as a fallback.</p>
+
+				 <div id="shareBar"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="about:blank" style="width:105px; height:22px;"></iframe><iframe src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true"></iframe><script src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/plusone.js" async=""></script> <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1399986037074" name="I0_1399986037074" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div><a href="http://pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"><img src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/pin_it_button.png"></a> <script type="text/javascript" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/pinit(1).js" async=""></script></div>
+				
+				<div class="social-icons">
+					<a href="http://twitter.com/Tutorialzine" class="twitter" target="_blank">Tutorialzine on Twitter</a>
+					<a href="http://www.facebook.com/Tutorialzine" class="facebook" target="_blank">Tutorialzine on Facebook</a>
+					<a class="googleplus" href="https://plus.google.com/102299652175684141333" target="_blank">Tutorialzine on Google+</a>
+					<a href="http://feeds.feedburner.com/Tutorialzine" class="rss" target="_blank">Tutorialzine's RSS feed</a>
+				</div>
+
+				<div id="author-info" class="hide600">
+					<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/18635cef09f45858ce6b07c8612c9f5b" class="avatar avatar-120 photo" height="120" width="120">					<h5>by <strong>Martin Angelov</strong></h5>
+					<p>Martin is a web developer with an eye for design from Bulgaria. He founded Tutorialzine in 2009 and publishes new tutorials weekly.</p>
+				</div>
+
+									<p id="categories"><a href="http://tutorialzine.com/category/tutorials/" title="View all posts in Tutorials" rel="category tag">Tutorials</a></p>
+				
+									<ul id="tags"><li><a href="http://tutorialzine.com/tag/css/" rel="tag">CSS</a></li><li><a href="http://tutorialzine.com/tag/jquery/" rel="tag">jQuery</a></li></ul>				
+			</div>
+
+		</article>
+
+        <div id="relatedSection" class="leftPostCol hide600">
+
+            <ul>
+
+				
+					<li><a href="http://tutorialzine.com/2013/04/check-out-jquery-trickshots-our-first-book/" title="Check Out jQuery Trickshots - Our First Book!">
+
+													<img width="150" height="150" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/featured-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="jQuery Trickshots - Our New Book">						
+						<span>Check Out jQuery Trickshots - Our First Book!</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2012/12/mini-help-system-jquery/" title="Mini Help System with jQuery">
+
+													<img width="150" height="150" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/2582-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Mini Help System with jQuery">						
+						<span>Mini Help System with jQuery</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2011/04/jquery-webcam-photobooth/" title="Photobooth with PHP, jQuery and CSS3">
+
+													<img width="150" height="150" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/1419-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="Photobooth with PHP, jQuery and CSS3">						
+						<span>Photobooth with PHP, jQuery and CSS3</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2010/11/jquery-data-method/" title="jQuery&#39;s Data Method - How and Why to Use It">
+
+													<img width="150" height="150" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/1260-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="jQuery&#39;s Data Method - How and Why to Use It">						
+						<span>jQuery's Data Method - How and Why to Use It</span>
+					</a></li>
+
+				
+					<li><a href="http://tutorialzine.com/2010/02/jquery-photoshoot-plugin/" title="jQuery PhotoShoot Plugin 1.0">
+
+													<img width="150" height="150" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/649-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="jQuery PhotoShoot Plugin 1.0">						
+						<span>jQuery PhotoShoot Plugin 1.0</span>
+					</a></li>
+
+				
+            </ul>
+
+        </div>
+
+		
+		<div id="newsletter-sidebar">
+			
+			<a href="http://tutorialzine.com/newsletter/issues/17-Jan-2014.html" target="_blank" title="See an example!"></a>
+			
+			<form method="post" action="http://tutorialzine.com/members/">
+				<input type="text" placeholder="Enter Your Email" name="email">
+				<input type="submit" name="submit" class="button blue" value="Join!">
+			</form>
+			
+			<div class="hider"></div>
+		</div>
+
+		
+        <script>
+			var the_title = "Better Check Boxes with jQuery and CSS";
+			var the_permalink = "http:\/\/tutorialzine.com\/2011\/03\/better-check-boxes-jquery-css\/";
+		</script>
+
+        
+<div id="comments" class="leftPostCol hide600">
+
+	<h4><b>62</b> Comments</h4>
+
+	
+		<ol>
+				<li class="comment even thread-even depth-1" id="comment-15988">
+				<div id="div-comment-15988" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/cdaf3f60d57520889564d972cf0890ed" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.alexpeta.ro/" rel="external nofollow" class="url">Alex</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-15988">
+			March 14, 2011 at 2:21 pm</a>		</div>
+
+		<p>Nice tutorial. Well done! Really usefull.</p>
+<p>Regards,<br>
+Alex</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=15988#respond" onclick="return addComment.moveForm(&quot;div-comment-15988&quot;, &quot;15988&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-15992">
+				<div id="div-comment-15992" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/4af6bb3c0006562285f04d0208d7514f" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Eduardo</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-15992">
+			March 14, 2011 at 3:32 pm</a>		</div>
+
+		<p>Very nice! Since the control invites to "slide" the button to the other side, I would add the option to change the value when the button is dragged http://threedubmedia.com/code/event/drag</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=15992#respond" onclick="return addComment.moveForm(&quot;div-comment-15992&quot;, &quot;15992&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-15993">
+				<div id="div-comment-15993" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/3936bccdba224c49e21789520a07fa5e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://sirdude.com/" rel="external nofollow" class="url">David</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-15993">
+			March 14, 2011 at 3:46 pm</a>		</div>
+
+		<p>Really cool stuff.</p>
+<p>I just test with latest, ie, opera, safari, chrome and FF and works perfect</p>
+<p>was wondering about ie8, ie7</p>
+<p>not so much about ie6</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=15993#respond" onclick="return addComment.moveForm(&quot;div-comment-15993&quot;, &quot;15993&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="comment-16093">
+				<div id="div-comment-16093" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/18635cef09f45858ce6b07c8612c9f5b(1)" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Martin Angelov</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16093">
+			March 17, 2011 at 2:06 am</a>		</div>
+
+		<p>It works everywhere (haven't tested it on IE6).</p>
+<p>However there is a problem with IE in that it does not support the "change" event on checkboxes when they are hidden, so clicking the labels would not work.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16093#respond" onclick="return addComment.moveForm(&quot;div-comment-16093&quot;, &quot;16093&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-15995">
+				<div id="div-comment-15995" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/8b1f07100323c8ceedeabb2319186de9" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://andersfillman.weebly.com/" rel="external nofollow" class="url">Anders</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-15995">
+			March 14, 2011 at 4:00 pm</a>		</div>
+
+		<p>It reminds me of how I created the iOS styled on/off buttons. Great job! Very useful!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=15995#respond" onclick="return addComment.moveForm(&quot;div-comment-15995&quot;, &quot;15995&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-15997">
+				<div id="div-comment-15997" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/4b7f6f5437119ac493c38b962952c093" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Tim</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-15997">
+			March 14, 2011 at 5:07 pm</a>		</div>
+
+		<p>Very nice, but in the demo if you click to the left of the actual button it works the same as clicking the actual button. Might want to check that out. =-)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=15997#respond" onclick="return addComment.moveForm(&quot;div-comment-15997&quot;, &quot;15997&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-16001">
+				<div id="div-comment-16001" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/5e32c52338f835b044df3f74975459b3" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Edward</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16001">
+			March 14, 2011 at 8:24 pm</a>		</div>
+
+		<p>I'm pretty sure thats a feature caused by the  tag.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16001#respond" onclick="return addComment.moveForm(&quot;div-comment-16001&quot;, &quot;16001&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt depth-2" id="comment-16020">
+				<div id="div-comment-16020" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/46171f07e4f16db52f4ba6008bcb96c4" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">feroc1ty</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16020">
+			March 15, 2011 at 10:04 am</a>		</div>
+
+		<p>that's default html label element functionality :)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16020#respond" onclick="return addComment.moveForm(&quot;div-comment-16020&quot;, &quot;16020&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even depth-2 parent" id="comment-16022">
+				<div id="div-comment-16022" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/affdd7a24367718cba04133c709c7dac" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Key</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16022">
+			March 15, 2011 at 10:41 am</a>		</div>
+
+		<p>I looked at the code in Firebug, and it appears that the label click is also triggering the change, which is the normal functionality of a button.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16022#respond" onclick="return addComment.moveForm(&quot;div-comment-16022&quot;, &quot;16022&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-3" id="comment-16023">
+				<div id="div-comment-16023" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/affdd7a24367718cba04133c709c7dac" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Key</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16023">
+			March 15, 2011 at 10:42 am</a>		</div>
+
+		<p>**I meant of a checkbox</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16023#respond" onclick="return addComment.moveForm(&quot;div-comment-16023&quot;, &quot;16023&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+</ol>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16003">
+				<div id="div-comment-16003" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/92f375fcd90a0b1e71a6e0be83eb740a" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Chico</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16003">
+			March 14, 2011 at 9:12 pm</a>		</div>
+
+		<p>Ohhh, very nice!!!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16003#respond" onclick="return addComment.moveForm(&quot;div-comment-16003&quot;, &quot;16003&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16004">
+				<div id="div-comment-16004" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/faa9e5f7928f2f5f80cdb347bcc3abd0" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">archer</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16004">
+			March 14, 2011 at 9:21 pm</a>		</div>
+
+		<p>Would be good if there was a left-to-right &amp; right-to-left slide effect when clicked...otherwise awesome work.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16004#respond" onclick="return addComment.moveForm(&quot;div-comment-16004&quot;, &quot;16004&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-16016">
+				<div id="div-comment-16016" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/deb708e45ae7845016e5f6dd90291b40" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://blackantmedia.com/" rel="external nofollow" class="url">Jason Long</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16016">
+			March 15, 2011 at 5:48 am</a>		</div>
+
+		<p>This is similar to a design I worked on recently. Having it wrapped up in a jQuery plugin is handy. Having the switch animate would be a nice addition - here's an example of what I did: <a href="http://preation.blackantmedia.com/switches.html" rel="nofollow">http://preation.blackantmedia.com/switches.html</a></p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16016#respond" onclick="return addComment.moveForm(&quot;div-comment-16016&quot;, &quot;16016&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 parent" id="comment-16091">
+				<div id="div-comment-16091" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/18635cef09f45858ce6b07c8612c9f5b(1)" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Martin Angelov</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16091">
+			March 17, 2011 at 1:59 am</a>		</div>
+
+		<p>It looks really impressive Jason! The only suggestion I have is to add an outline:none property as it currently shows in Firefox.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16091#respond" onclick="return addComment.moveForm(&quot;div-comment-16091&quot;, &quot;16091&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-3" id="comment-16434">
+				<div id="div-comment-16434" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/fdfddef692fe761459cd842142398778" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Matt</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16434">
+			March 29, 2011 at 8:34 am</a>		</div>
+
+		<p>I disagree with this. The dots are there for a good reason: keyboard navigation.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16434#respond" onclick="return addComment.moveForm(&quot;div-comment-16434&quot;, &quot;16434&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment odd alt depth-2 parent" id="comment-16267">
+				<div id="div-comment-16267" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/c2cae9ce601f34447854c49c96edfd2e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.e11world.com/" rel="external nofollow" class="url">e11world</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16267">
+			March 23, 2011 at 1:08 am</a>		</div>
+
+		<p>Love your implementation and I suggest you add outline: none; to your a on the button css to remove the dots in firefox!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16267#respond" onclick="return addComment.moveForm(&quot;div-comment-16267&quot;, &quot;16267&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-3" id="comment-16268">
+				<div id="div-comment-16268" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/c2cae9ce601f34447854c49c96edfd2e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.e11world.com/" rel="external nofollow" class="url">e11world</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16268">
+			March 23, 2011 at 1:09 am</a>		</div>
+
+		<p>Sorry I didn't read your reply before I posted mine Martin!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16268#respond" onclick="return addComment.moveForm(&quot;div-comment-16268&quot;, &quot;16268&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+</ol>
+</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16021">
+				<div id="div-comment-16021" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/62cfa7816b484a471375a4ddc3f27571" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Dan</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16021">
+			March 15, 2011 at 10:38 am</a>		</div>
+
+		<p>Tim it's a part of the plugin ... </p>
+<p>"All changes to the checkbox replacement are propagated back to the original checkbox (which is hidden, but still on the page). This also works the other way around, as in certain circumstances (when you click on a label element for example) the original checkbox might be changed. This will trigger the change event and update the replacement."</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16021#respond" onclick="return addComment.moveForm(&quot;div-comment-16021&quot;, &quot;16021&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16026">
+				<div id="div-comment-16026" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/05766f2d2a2bd141d211b9393b9c5035" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">A reader</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16026">
+			March 15, 2011 at 11:35 am</a>		</div>
+
+		<p>Hoping for 'Better radio buttons [...]' next week!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16026#respond" onclick="return addComment.moveForm(&quot;div-comment-16026&quot;, &quot;16026&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16028">
+				<div id="div-comment-16028" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/b04a1666b1c76c789562890f6bed103c" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.joomlaconvert.com/" rel="external nofollow" class="url">Frank M</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16028">
+			March 15, 2011 at 11:45 am</a>		</div>
+
+		<p>Great article. It came just as I was working on an admin panel and was try to figure out how to style the options. You definitely pointed me in the right direction.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16028#respond" onclick="return addComment.moveForm(&quot;div-comment-16028&quot;, &quot;16028&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16044">
+				<div id="div-comment-16044" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/b9f530c8c214038a965ab2850efd071d" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://minuoma.com/" rel="external nofollow" class="url">krypto</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16044">
+			March 16, 2011 at 1:14 am</a>		</div>
+
+		<p>Woah , I Love it! :)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16044#respond" onclick="return addComment.moveForm(&quot;div-comment-16044&quot;, &quot;16044&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16086">
+				<div id="div-comment-16086" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/8d7da68acaf448035c0061555e16fb48" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://sdplabs.com/" rel="external nofollow" class="url">Srinivas Reddy</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16086">
+			March 16, 2011 at 9:20 pm</a>		</div>
+
+		<p>Nice job...Thanks for sharing..will help a lot.</p>
+<p>Regards,<br>
+Sri</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16086#respond" onclick="return addComment.moveForm(&quot;div-comment-16086&quot;, &quot;16086&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16088">
+				<div id="div-comment-16088" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/133775eb5c459d8f55ec75130dc77096" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sagar Ranpise</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16088">
+			March 16, 2011 at 11:53 pm</a>		</div>
+
+		<p>Again Awesome Work! Thanks for sharing!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16088#respond" onclick="return addComment.moveForm(&quot;div-comment-16088&quot;, &quot;16088&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-even depth-1" id="comment-16092">
+				<div id="div-comment-16092" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/18635cef09f45858ce6b07c8612c9f5b(1)" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Martin Angelov</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16092">
+			March 17, 2011 at 1:59 am</a>		</div>
+
+		<p>Thank you for the awesome comments, folks!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16092#respond" onclick="return addComment.moveForm(&quot;div-comment-16092&quot;, &quot;16092&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-16094">
+				<div id="div-comment-16094" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/93ab876074f3842b5feb5625186c6c9e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">O'Ryan</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16094">
+			March 17, 2011 at 2:35 am</a>		</div>
+
+		<p>I used this type of check box replacement a little while back but people couldn't understand if it was checked or not. The changing labels confused them. Is it on when it says on? Or is it off when it says on and it's telling me that if i click on it will be now be on but say off?</p>
+<p>Even though people use switches just like this in real life. The usage still escaped them. So in the long run, while I love these, it fails as far as usability goes.</p>
+<p>not that it would be hard to make it absolutely clear.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16094#respond" onclick="return addComment.moveForm(&quot;div-comment-16094&quot;, &quot;16094&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2" id="comment-16112">
+				<div id="div-comment-16112" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/27c1e5cd1b12d2e8b33bf4f234fb7859" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Alan</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16112">
+			March 17, 2011 at 2:41 pm</a>		</div>
+
+		<p>You beat me to it; a better description of the current state is required. In particular I thought the labels and colours sent confusing signals. Perhaps if I were red/green colourblind ...</p>
+<p>Having the descriptions to the side, phrased in such a way that you can stick with on/off or enabled/disabled in all cases would be clearer.</p>
+<p>But the appearance is certainly attractive.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16112#respond" onclick="return addComment.moveForm(&quot;div-comment-16112&quot;, &quot;16112&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even depth-2" id="comment-16117">
+				<div id="div-comment-16117" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/affdd7a24367718cba04133c709c7dac" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Key</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16117">
+			March 17, 2011 at 7:48 pm</a>		</div>
+
+		<p>I can see how it could be confusing, but if used in the right context I think it could be okay. Such as making sure the labels are understandable to the on/off. Ex: Lights - On/Off is okay, whereas Lights Off - On/Off might get confusing.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16117#respond" onclick="return addComment.moveForm(&quot;div-comment-16117&quot;, &quot;16117&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16122">
+				<div id="div-comment-16122" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/045660e87d32598fe104f8eaa1f03d7c" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.kreatech.net/" rel="external nofollow" class="url">Ejaz</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16122">
+			March 17, 2011 at 11:00 pm</a>		</div>
+
+		<p>Great technique Martin<br>
+but It can be spiced up by using CSS3 transitions property with just a line of CSS  code, e.g. "-webkit-transitions:all linear 1s;" (but in that case sprite images should be placed side by side not top to bottom)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16122#respond" onclick="return addComment.moveForm(&quot;div-comment-16122&quot;, &quot;16122&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16226">
+				<div id="div-comment-16226" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/805d8f269a336a136cf8635cd211f28e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.blandydoes.co.uk/" rel="external nofollow" class="url">Richard Bland</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16226">
+			March 21, 2011 at 9:38 am</a>		</div>
+
+		<p>Martin,</p>
+<p>Truly amazing again. What a great eye for code! I would never of thought to do check boxes like this.</p>
+<p>PS. Take a look at this site for me, give me your feedback, need some fresh eyes on it: http://www.arnott-conveyors.co.uk/testing/index.html</p>
+<p>Speak soon mate</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16226#respond" onclick="return addComment.moveForm(&quot;div-comment-16226&quot;, &quot;16226&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16229">
+				<div id="div-comment-16229" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/09bd087794753f7ff06a1a4b05a7a3c0" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://partialbits.com/" rel="external nofollow" class="url">Vamsi</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16229">
+			March 21, 2011 at 10:05 am</a>		</div>
+
+		<p>pretty cool effects ;) thanks for sharing the code .</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16229#respond" onclick="return addComment.moveForm(&quot;div-comment-16229&quot;, &quot;16229&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16239">
+				<div id="div-comment-16239" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/c2cae9ce601f34447854c49c96edfd2e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.e11world.com/" rel="external nofollow" class="url">e11world</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16239">
+			March 21, 2011 at 6:01 pm</a>		</div>
+
+		<p>Really nice example and I guess a little animation won't hurt. I kind of prefer the click over the drag because of mobile functionality. So far, I haven't seen any site or plugin that makes use of the drag while browsing on a mobile device.<br>
+Very lovely and creative!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16239#respond" onclick="return addComment.moveForm(&quot;div-comment-16239&quot;, &quot;16239&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16251">
+				<div id="div-comment-16251" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/c54d7a3488c6be8427c174ec64d80a49" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Adrian</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16251">
+			March 22, 2011 at 8:23 am</a>		</div>
+
+		<p>Really nice tutorial. Thanx ;]</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16251#respond" onclick="return addComment.moveForm(&quot;div-comment-16251&quot;, &quot;16251&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16278">
+				<div id="div-comment-16278" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/8081b26e05bb4354f7d65ffc34cbbd67" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://css-tricks.com/" rel="external nofollow" class="url">Chris Coyier</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16278">
+			March 23, 2011 at 6:55 am</a>		</div>
+
+		<p>Just a little suggestion for funzies... I think it's clearer to label either side of the control, like this: http://cl.ly/5RNJ</p>
+<p>As it stands, there is a little confusion as to what the label inside the control means. It could mean:</p>
+<p>1) This control is currently at the value shown<br>
+2) If I click it, the control will THEN be at the value shown</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16278#respond" onclick="return addComment.moveForm(&quot;div-comment-16278&quot;, &quot;16278&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-16281">
+				<div id="div-comment-16281" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/7b14e1c4fd1aa373dee7d284dabfef0c" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.emota.com/" rel="external nofollow" class="url">Lee Regan</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16281">
+			March 23, 2011 at 11:55 am</a>		</div>
+
+		<p>Just thought you might be interested in this. http://codecanyon.net/item/html5-slick-slider-checkboxes/180044</p>
+<p>Seems as though someone is trying to profit of what you have provided here. Nice tutorial by the way, thanks!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16281#respond" onclick="return addComment.moveForm(&quot;div-comment-16281&quot;, &quot;16281&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-16944">
+				<div id="div-comment-16944" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/6aece1f74e63a36c073bfd4628963e6b" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.fitnessride.com/" rel="external nofollow" class="url">Fitness specialist</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-16944">
+			April 20, 2011 at 2:54 am</a>		</div>
+
+		<p>The codes are really amazing. I would never of thought or seen to do check boxes like this. great tutorial.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=16944#respond" onclick="return addComment.moveForm(&quot;div-comment-16944&quot;, &quot;16944&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-18699">
+				<div id="div-comment-18699" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/3a3676bae7946c67f4af14fd62d7044e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Gary Rozanski</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-18699">
+			July 19, 2011 at 1:31 pm</a>		</div>
+
+		<p>To be clear, I am able to pass either a 1 or a null value with the checkbox, however, I can't make the check box show OFF if there is a NULL value in the database.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=18699#respond" onclick="return addComment.moveForm(&quot;div-comment-18699&quot;, &quot;18699&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-18703">
+				<div id="div-comment-18703" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/3a3676bae7946c67f4af14fd62d7044e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Gary Rozanski</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-18703">
+			July 19, 2011 at 2:20 pm</a>		</div>
+
+		<p>yes, I have resolved this matter :]</p>
+<p>thanks for your awesome script. works a treat.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=18703#respond" onclick="return addComment.moveForm(&quot;div-comment-18703&quot;, &quot;18703&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-18709">
+				<div id="div-comment-18709" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/d6f87896eb381580b889338e39a468dc" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://nootn.com/" rel="external nofollow" class="url">asins</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-18709">
+			July 19, 2011 at 8:12 pm</a>		</div>
+
+		<p>in jquery 1.6.2 has bug</p>
+<p>I change it</p>
+<p>			var checkBox = $('',{<br>
+				'class'	: 'tzCheckBox '+(this.checked?'checked':''),<br>
+				'html':	''+labels[this.checked?0:1]+<br>
+						''<br>
+			});</p>
+<p>now good work in jquery 1.5.2 /1.6.2</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=18709#respond" onclick="return addComment.moveForm(&quot;div-comment-18709&quot;, &quot;18709&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-20952">
+				<div id="div-comment-20952" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/9d2e80d801e56255136876f2fa3c1e28" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.rickdegraaff.nl/" rel="external nofollow" class="url">Rick de Graaff</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-20952">
+			December 13, 2011 at 5:14 am</a>		</div>
+
+		<p>Where do you edit this? I can't find the replacement..?? :S</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=20952#respond" onclick="return addComment.moveForm(&quot;div-comment-20952&quot;, &quot;20952&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt depth-2" id="comment-41583">
+				<div id="div-comment-41583" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/6c9c54b13b36b9b61b9111f4f2cc1594" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sandesh</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-41583">
+			September 18, 2012 at 7:15 am</a>		</div>
+
+		<p>Thanks a lot buddy...U saved my day. Thanks a ton</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=41583#respond" onclick="return addComment.moveForm(&quot;div-comment-41583&quot;, &quot;41583&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-19278">
+				<div id="div-comment-19278" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/697503eb171b0bac4425b60656319788" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.ralphalmeida.com/" rel="external nofollow" class="url">Ralph Almeida</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-19278">
+			August 24, 2011 at 12:47 pm</a>		</div>
+
+		<p>very nice! but i have a question. i don´t want to use labels and i use jquery functions to manage the option.<br>
+so when i click on button, jquery doesn´t execute the command. can u help me?</p>
+<p>jquery:<br>
+$('#habilitar-base').click(function() { $('#senha-base').attr('disabled', false); });</p>
+<p>html:<br>
+on</p>
+<p>thanks in advance and congratulations for this tutorial =)</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=19278#respond" onclick="return addComment.moveForm(&quot;div-comment-19278&quot;, &quot;19278&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-21535">
+				<div id="div-comment-21535" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/1f7a746d70d0f925fa40c8f1bc001ebb" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">johnny</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-21535">
+			January 13, 2012 at 9:11 am</a>		</div>
+
+		<p>Seems to fail when i use another jquery object within the same page</p>
+<p>http://www.erichynds.com/jquery/jquery-ui-multiselect-widget/</p>
+<p>and i find if i delete the line </p>
+<p>the script works again :( </p>
+<p>not sure if i can have 2 differnt jquery scripts riding on the same page</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=21535#respond" onclick="return addComment.moveForm(&quot;div-comment-21535&quot;, &quot;21535&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-21821">
+				<div id="div-comment-21821" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/4902a3dcc7dae643882f4371b5973dee" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://skillclub.info/" rel="external nofollow" class="url">Sillier</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-21821">
+			January 31, 2012 at 7:18 am</a>		</div>
+
+		<p>with Jquery 1.7.1:<br>
+(in jquery.tzCheckbox.js, find "// Creating the new checkbox markup:")</p>
+<pre>var checkBox = $('&lt;span&gt;',{
+			
+	"class"	: "tzCheckBox "+(this.checked?'checked':''),
+	"html":	"&lt;span class='tzCBContent'&gt;"+labels[this.checked?0:1]+
+	"&lt;/span&gt;&lt;span class='tzCBPart'&gt;&lt;/span&gt;"
+});
+</pre>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=21821#respond" onclick="return addComment.moveForm(&quot;div-comment-21821&quot;, &quot;21821&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2" id="comment-41515">
+				<div id="div-comment-41515" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/9b4653c652b8f2bc4ffffe02cbcff4e3" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.design4lifeblog.com/" rel="external nofollow" class="url">Tony</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-41515">
+			September 14, 2012 at 7:37 am</a>		</div>
+
+		<p>Awesome, thanks for the fix and thank you Martin for sharing.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=41515#respond" onclick="return addComment.moveForm(&quot;div-comment-41515&quot;, &quot;41515&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment even thread-even depth-1" id="comment-22006">
+				<div id="div-comment-22006" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/cd3d84a3ac5af28fbb9eb81a7364c594" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">epecho</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-22006">
+			February 10, 2012 at 10:13 pm</a>		</div>
+
+		<p>The plug in background image disappears when I use JQuery 1.7.1. Any one know of a fix for this?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=22006#respond" onclick="return addComment.moveForm(&quot;div-comment-22006&quot;, &quot;22006&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-22078">
+				<div id="div-comment-22078" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/5b2e8585f2a8ef9df13957064916c006" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Jay</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-22078">
+			February 15, 2012 at 3:38 pm</a>		</div>
+
+		<p>Made a change to the jquery.tzCheckbox.js file<br>
+I wanted the original class from the old checkbox to set on the new button so I can handle multiple buttons on a page.<br>
+http://pastebin.com/gsAeQMpx</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=22078#respond" onclick="return addComment.moveForm(&quot;div-comment-22078&quot;, &quot;22078&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-22448">
+				<div id="div-comment-22448" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/f458a7958a9990797d8ec8f0c2652b52" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">lucas</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-22448">
+			March 4, 2012 at 9:44 am</a>		</div>
+
+		<p>I have modified a JS for include 2 new function: javascript caller and enabled state..</p>
+<pre>
+(function($){
+	$.fn.tzCheckbox = function(options){
+		
+		// Default On / Off labels:
+		
+		options = $.extend({
+			labels : ['Ok','No'],
+			actionJS : ['']
+		},options);
+		
+		return this.each(function(){
+			var originalCheckBox = $(this),
+				labels = [],actionJS = [];
+
+			// Checking for the data-on / data-off HTML5 data attributes:
+			if(originalCheckBox.data('on')){
+				labels[0] = originalCheckBox.data('on');
+				labels[1] = originalCheckBox.data('off');
+			}else{ 
+				labels = options.labels;
+			}
+			
+			// Checking for the actionJS / data-off HTML5 data attributes:
+			if(originalCheckBox.data('actionJS')){
+				actionJS='onClick="javascript: ' + originalCheckBox.data('actionJS')+'"';
+			}else{
+				actionJS = 'onClick="javascript: ' + options.actionJS +'"';
+			}
+			
+			// Checking for the ENABLED / data-off HTML5 data attributes:
+			if(originalCheckBox.data('disabled')){
+				state=originalCheckBox.data('disabled');
+			}else{
+				state = '';
+			}
+			
+			
+			//alert(actionJS);
+
+			// Creating the new checkbox markup:
+			var checkBox = $('&lt;span&gt;',{
+				className	: 'tzCheckBox '+(this.checked?'checked':''),
+				html:	'&lt;span class="tzCBContent"  ' + actionJS +
+				'&gt;'+labels[this.checked?0:1]+'&lt;/span&gt;&lt;span  class="tzCBPart"&gt;&lt;/span&gt;'
+			});
+			
+
+			// Inserting the new checkbox, and hiding the original:
+			checkBox.insertAfter(originalCheckBox.hide());
+			if(state==''){
+				checkBox.click(function(){
+					checkBox.toggleClass('checked');
+					var isChecked = checkBox.hasClass('checked');
+					// Synchronizing the original checkbox:
+					originalCheckBox.attr('checked',isChecked);
+					checkBox.find('.tzCBContent').html(labels[isChecked?0:1]);
+				});
+				// Listening for changes on the original and affecting the new one:
+				originalCheckBox.bind('change',function(){
+					checkBox.click();
+				});
+				
+				
+			}
+		});
+	};
+})(jQuery);
+
+</pre>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=22448#respond" onclick="return addComment.moveForm(&quot;div-comment-22448&quot;, &quot;22448&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-22997">
+				<div id="div-comment-22997" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/357a20e8c56e69d6f9734d23ef9517e8" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">lulalalla</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-22997">
+			March 28, 2012 at 11:02 pm</a>		</div>
+
+		<p>http://jsfiddle.net/ULphC/<br>
+I have custom select all/none buttons. However when they are clicked tzCheckboxes are not changed accordingly. Is it because the way I did it does not fire change events?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=22997#respond" onclick="return addComment.moveForm(&quot;div-comment-22997&quot;, &quot;22997&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-41720">
+				<div id="div-comment-41720" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/6c9c54b13b36b9b61b9111f4f2cc1594" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sandesh</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-41720">
+			September 29, 2012 at 8:49 am</a>		</div>
+
+		<p>If u got any solution then do mail me d solution...required it very badly.</p>
+<p>b.sandesh@gmail.com</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=41720#respond" onclick="return addComment.moveForm(&quot;div-comment-41720&quot;, &quot;41720&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-23347">
+				<div id="div-comment-23347" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/8876dfb69bb2076123d2910506c6c0d4" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.flashgames.sa/" rel="external nofollow" class="url">Flash Games</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-23347">
+			April 15, 2012 at 10:35 pm</a>		</div>
+
+		<p>Work more than good<br>
+But I have problems not to display the value when you use this code</p>
+<p>$ ('input [type = checkbox]'). tzCheckbox ({labels: ['Enable', 'Disable']});</p>
+<p>Thanks</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=23347#respond" onclick="return addComment.moveForm(&quot;div-comment-23347&quot;, &quot;23347&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-40547">
+				<div id="div-comment-40547" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/efc82f9803050c4261e3574ebecb3983" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://notupyet%21/" rel="external nofollow" class="url">Alan</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-40547">
+			July 19, 2012 at 10:21 pm</a>		</div>
+
+		<p>This is a great plugin - exactly what I was looking for.  I'm having two difficulties, though.  First - I can't seem to get the checkbox to return a value.  Even when I click it and change the state, it's value isn't changing.  Second - I want to have a function execute when the state of the checkbox changes - and I bound a change function to the ID of the checkbox - but nothing is triggering.  Using query 1.7.1</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=40547#respond" onclick="return addComment.moveForm(&quot;div-comment-40547&quot;, &quot;40547&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2" id="comment-40551">
+				<div id="div-comment-40551" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/efc82f9803050c4261e3574ebecb3983" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://notupyet%21/" rel="external nofollow" class="url">Alan</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-40551">
+			July 19, 2012 at 11:24 pm</a>		</div>
+
+		<p>In doing some additional troubleshooting it seems that the problem is with binding the change event to the new "checkbox."  No matter how I try to bind it - to the original ID, or any of the tz classes that are tied to the spans in the script - the change event doesn't trigger when the slider is clicked.  Also doesn't work for click events.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=40551#respond" onclick="return addComment.moveForm(&quot;div-comment-40551&quot;, &quot;40551&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+		<li class="comment even thread-even depth-1" id="comment-40582">
+				<div id="div-comment-40582" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/3cd637f68374dc735dc89b48508910b2" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://stefangabos.ro/" rel="external nofollow" class="url">Stefan Gabos</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-40582">
+			July 21, 2012 at 7:23 am</a>		</div>
+
+		<p>there’s also this jQuery plugin called &lt;a href="http://stefangabos.ro/jquery/zebra-transform/"&gt;Zebra_Transform&lt;/a&gt; which transforms all the check boxes, radio buttons and select boxes on a page. it’s not as fancy as yours, but it is very very small (3KB) and works in all major browsers.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=40582#respond" onclick="return addComment.moveForm(&quot;div-comment-40582&quot;, &quot;40582&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-41719">
+				<div id="div-comment-41719" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/6c9c54b13b36b9b61b9111f4f2cc1594" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sandesh</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-41719">
+			September 29, 2012 at 8:45 am</a>		</div>
+
+		<p>How to "Check all" or "Uncheck all" using a single button click???</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=41719#respond" onclick="return addComment.moveForm(&quot;div-comment-41719&quot;, &quot;41719&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-41722">
+				<div id="div-comment-41722" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/6c9c54b13b36b9b61b9111f4f2cc1594" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Sandesh</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-41722">
+			September 29, 2012 at 10:52 am</a>		</div>
+
+		<p>To check or uncheck all using a single button</p>
+<p>&lt;input type="button" class="check" value="check all" /&gt;</p>
+<p>&lt;script&gt;<br>
+$('input[type=checkbox]').tzCheckbox({<br>
+	labels: [ 'Enable', 'Disable' ]<br>
+});<br>
+$(document).ready(function(){<br>
+	$('.check:button').click(function(){<br>
+		if(!$('.tzCheckBox').hasClass('checked'))<br>
+		{<br>
+			$('.tzCheckBox').addClass('checked');<br>
+			$('.tzCheckBox').find('.tzCBContent').html('Enable');<br>
+			$(this).val('uncheck all');<br>
+		}<br>
+		else<br>
+		{<br>
+			$('.tzCheckBox').removeClass('checked');<br>
+			$('.tzCheckBox').find('.tzCBContent').html('Disable');<br>
+			$(this).val('check all');<br>
+		}<br>
+		})<br>
+});<br>
+&lt;/script&gt;</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=41722#respond" onclick="return addComment.moveForm(&quot;div-comment-41722&quot;, &quot;41722&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-75152">
+				<div id="div-comment-75152" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/7a9aae118390786970db3084328e5061" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">kostas</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-75152">
+			November 23, 2012 at 5:36 am</a>		</div>
+
+		<p>Your script is perfect but i can't take the value from checkbox and submit form onchange</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=75152#respond" onclick="return addComment.moveForm(&quot;div-comment-75152&quot;, &quot;75152&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-75852">
+				<div id="div-comment-75852" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/8722b271d3f7d08a6b087790ab34764e" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Dino</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-75852">
+			December 4, 2012 at 12:02 pm</a>		</div>
+
+		<p>Martin, you're the best. Thank you!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=75852#respond" onclick="return addComment.moveForm(&quot;div-comment-75852&quot;, &quot;75852&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-81136">
+				<div id="div-comment-81136" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/99820ce6673c3c9879931842232845a0" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://lazinator.com/" rel="external nofollow" class="url">Duindain</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-81136">
+			April 27, 2013 at 6:51 am</a>		</div>
+
+		<p>For later versions of Jquery I use 1.9.1 you need to change the javascript to the following</p>
+<pre>var checkBox = $('&lt;span&gt;',{
+	class	: 'tzCheckBox'+(this.checked?' checked':''),
+	html:	'&lt;span class="tzCBContent"&gt;'+labels[this.checked?0:1]+
+			'&lt;/span&gt;&lt;span class="tzCBPart"&gt;&lt;/span&gt;'
+});
+</pre>
+<p>I think className has been depreciated, also there were some extra spaces in the class declaration<br>
+The entire code segment is</p>
+<pre>(function($){
+	$.fn.tzCheckbox = function(options){
+		
+		// Default On / Off labels:
+		
+		options = $.extend({
+			labels : ['ON','OFF']
+		},options);
+		
+		return this.each(function(){
+			var originalCheckBox = $(this),
+				labels = [];
+
+			// Checking for the data-on / data-off HTML5 data attributes:
+			if(originalCheckBox.data('on')){
+				labels[0] = originalCheckBox.data('on');
+				labels[1] = originalCheckBox.data('off');
+			}
+			else 
+			{
+				labels = options.labels;
+			}
+			// Creating the new checkbox markup:
+			var checkBox = $('&lt;span&gt;',{
+				class	: 'tzCheckBox'+(this.checked?' checked':''),
+				html:	'&lt;span class="tzCBContent"&gt;'+labels[this.checked?0:1]+
+						'&lt;/span&gt;&lt;span class="tzCBPart"&gt;&lt;/span&gt;'
+			});
+
+			// Inserting the new checkbox, and hiding the original:
+			checkBox.insertAfter(originalCheckBox.hide());
+			
+			checkBox.click(function(){
+				checkBox.toggleClass('checked');
+				
+				var isChecked = checkBox.hasClass('checked');
+				
+				// Synchronizing the original checkbox:
+				originalCheckBox.attr('checked',isChecked);
+				checkBox.find('.tzCBContent').html(labels[isChecked?0:1]);
+			});
+			
+			// Listening for changes on the original and affecting the new one:
+			originalCheckBox.bind('change',function(){
+				checkBox.click();
+			});
+		});
+	};
+})(jQuery);
+</pre>
+<p>Thanks for the example best one I could find</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=81136#respond" onclick="return addComment.moveForm(&quot;div-comment-81136&quot;, &quot;81136&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-81793">
+				<div id="div-comment-81793" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/128c7410fee8097cf6504ae533b41cf1" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">dees</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-81793">
+			May 17, 2013 at 6:59 am</a>		</div>
+
+		<p>+1 I rename className to class:</p>
+<pre>var checkBox = $('&lt;span&gt;',{
+	class	: 'tzCheckBox '+(this.checked?'checked':''),
+	html:	'&lt;span class="tzCBContent"&gt;'+labels[this.checked?0:1]+
+	'&lt;/span&gt;&lt;span class="tzCBPart"&gt;&lt;/span&gt;'
+});
+</pre>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=81793#respond" onclick="return addComment.moveForm(&quot;div-comment-81793&quot;, &quot;81793&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt depth-2 parent" id="comment-84811">
+				<div id="div-comment-84811" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/9fb8073ac15824d33c99f49b6df00634" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Adrian</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-84811">
+			July 3, 2013 at 8:28 am</a>		</div>
+
+		<p>it doesn't run under IE8 http://stackoverflow.com/questions/17442311/tzcheckbox-expected-identifier-string-or-number#17442311</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=84811#respond" onclick="return addComment.moveForm(&quot;div-comment-84811&quot;, &quot;84811&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-3" id="comment-85167">
+				<div id="div-comment-85167" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/fe9c7616218a6bff076bb1b3ea8a84c5" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn">Riche</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-85167">
+			July 12, 2013 at 2:21 am</a>		</div>
+
+		<p>use this under ie8.</p>
+<p>'class' : 'tzCheckBox'+(this.checked?' checked':''),</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=85167#respond" onclick="return addComment.moveForm(&quot;div-comment-85167&quot;, &quot;85167&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+</ol>
+</li>
+</ol>
+</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-85532">
+				<div id="div-comment-85532" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/1678377fcbe8f336ac0c70de21677c7b" class="avatar avatar-80 photo" height="80" width="80">		<cite class="fn"><a href="http://www.phillipsenn.com/" rel="external nofollow" class="url">Phillip Senn</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#comment-85532">
+			July 18, 2013 at 6:54 pm</a>		</div>
+
+		<p>I think you have to use:<br>
+originalCheckBox.prop('checked',isChecked);<br>
+now instead of<br>
+originalCheckBox.attr('checked',isChecked);</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/?replytocom=85532#respond" onclick="return addComment.moveForm(&quot;div-comment-85532&quot;, &quot;85532&quot;, &quot;respond&quot;, &quot;1397&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		</ol>
+
+	
+	
+	
+	<div id="respond">
+		<div id="addCommentSection">
+			<h4 id="leavereply">Add Comment</h4>
+			<h4 id="respondtitle">Add a Reply</h4>
+
+			<form action="http://tutorialzine.com/wp-comments-post.php" method="post" id="commentform">
+
+				
+				<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+				<label for="author"><small>Name</small></label></p>
+
+				<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+				<label for="email"><small>Email (will not be published)</small></label></p>
+
+<!--				<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+				<label for="url"><small>Website</small></label></p>-->
+
+				
+				<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+				<p class="notes"><b>HTML is escaped automatically.</b> Surround code blocks with <b>&lt;pre&gt;&lt;/pre&gt;</b> for readability.<br>
+					Perks:&nbsp;&nbsp;&nbsp;<b>**bold**</b>&nbsp;&nbsp;&nbsp;<i>__italics__</i>&nbsp;&nbsp;&nbsp;<span style="color:#008DE6">[some text](http://example.com)</span> for links</p>
+
+				<div style="padding-top:15px;">
+					<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="button blue">
+					<input type="hidden" name="comment_post_ID" value="1397" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+					<div class="cancel-comment-reply">
+						<a rel="nofollow" id="cancel-comment-reply-link" href="http://tutorialzine.com/2011/03/better-check-boxes-jquery-css/#respond" style="display:none;">Cancel Reply</a>					</div>
+				</div>
+
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9d12f212da"></p>
+
+			</form>
+		</div>
+	</div>
+
+	
+</div>
+
+	</section>
+
+	<footer>
+
+		<div class="footer-limiter">
+
+			<div class="footer-group bottom-nav">
+				<a href="http://tutorialzine.com/license/">Tutorial License</a>
+				<a href="http://tutorialzine.com/privacy/">Privacy Policy</a>
+				<a href="http://tutorialzine.com/contact/">Contact Form</a>
+				<a href="http://buysellads.com/buy/detail/35457">Advertise</a>
+
+				<p>Tutorialzine © 2009-2014</p>
+			</div>
+
+			<div class="footer-group contribute">
+				<h6>Become a guest contributor</h6>
+				<p>We're open for guest contributions! If you'd like to share your web development skills by authoring a guest tutorial or article, let us know!</p>
+				<a href="http://tutorialzine.com/contact/" class="button blue small">Contact us</a>
+			</div>
+
+			<div class="footer-group suggest">
+				<h6>Suggest a tutorial idea</h6>
+				<p>We are always looking for something new and fresh. Do you have an idea for a tutorial that you'd like to see on the site? Tell us!</p>
+				<a href="http://tutorialzine.com/contact/" class="button blue small">Suggest</a>
+			</div>
+
+						
+			<div class="footer-group book">
+				<a href="http://tutorialzine.com/books/jquery-trickshots/" class="book-cover-small">Buy now!</a>
+				<h6>jQuery Trickshots</h6>
+				<p>Tutorialzine's advanced jQuery techniques book.</p>
+				<a href="http://tutorialzine.com/books/jquery-trickshots/" class="button red small">Buy now!</a>
+			</div>
+
+			
+		</div>
+
+	</footer>
+
+	<script type="text/javascript" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/jquery.min.js"></script>
+
+	
+
+
+
+		
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-531949-8']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+<script type="text/javascript" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/single.include-footer.00878b.js" gapi_processed="true"></script>
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using apc
+Page Caching using apc
+Object Caching 2934/3074 objects using apc
+Content Delivery Network via cdn.tutorialzine.com
+
+ Served from: tutorialzine.com @ 2014-05-13 12:55:29 by W3 Total Cache --><iframe name="oauth2relay671095881" id="oauth2relay671095881" src="./Better Check Boxes with jQuery and CSS   Tutorialzine_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

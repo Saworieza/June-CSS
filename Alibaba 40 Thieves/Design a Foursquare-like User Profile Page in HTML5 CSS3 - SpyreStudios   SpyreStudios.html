@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0080)http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/cb=gapi.loaded_1" async=""></script><script id="facebook-jssdk" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/all.js"></script><script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/log" type="text/javascript"></script><script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/initialize" type="text/javascript"></script>
+
+<meta name="distribution" content="global">
+<meta name="language" content="en, sv">
+<script type="text/javascript" async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/moth-min.js"></script><script async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/wl"></script><script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/ga.js"></script><script async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/cloudflare.min.js"></script><script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:{profile:false},oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok9v=2d3f118356/"},atok:"326985b042f78c5883585ca1f45247a8",petok:"49e19bb47edcfcea1eada2e6436d541169edbd83-1399970723-1800",zone:"spyrestudios.com",rocket:"0",apps:{}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok9v=97fb4d042e/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="shortcut icon" href="http://spyrestudios.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://spyrestudios.com/wp-content/uploads/wptouch/custom-icons/spyrestudios.png">
+<meta name="google-site-verification" content="V6J9GgiC2VOQN5W4BUgBQ41BOw_whHYi6aoivXGS3ak">
+<title>Design a Foursquare-like User Profile Page in HTML5/CSS3 - SpyreStudios&nbsp;|&nbsp;SpyreStudios</title>
+<link rel="stylesheet" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/style.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/jquery-1.4.3.min.js"></script><style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style>
+<link rel="stylesheet" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/colorbox.css" type="text/css">
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".tab_content").hide();
+	$("ul.tabs li:first").addClass("active").show();
+	$(".tab_content:first").show();
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_content").hide();
+		var activeTab = $(this).find("a").attr("href");
+		$(activeTab).fadeIn();
+		return false;
+	});
+});
+</script>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/SpyreStudios">
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://feeds.feedburner.com/SpyreStudios">
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://feeds.feedburner.com/SpyreStudios">
+<link rel="pingback" href="http://spyrestudios.com/xmlrpc.php">
+<link rel="archives" title="May 2014" href="http://spyrestudios.com/2014/05/">
+<link rel="archives" title="April 2014" href="http://spyrestudios.com/2014/04/">
+<link rel="archives" title="March 2014" href="http://spyrestudios.com/2014/03/">
+<link rel="archives" title="February 2014" href="http://spyrestudios.com/2014/02/">
+<link rel="archives" title="January 2014" href="http://spyrestudios.com/2014/01/">
+<link rel="archives" title="December 2013" href="http://spyrestudios.com/2013/12/">
+<link rel="archives" title="November 2013" href="http://spyrestudios.com/2013/11/">
+<link rel="archives" title="October 2013" href="http://spyrestudios.com/2013/10/">
+<link rel="archives" title="September 2013" href="http://spyrestudios.com/2013/09/">
+<link rel="archives" title="August 2013" href="http://spyrestudios.com/2013/08/">
+<link rel="archives" title="July 2013" href="http://spyrestudios.com/2013/07/">
+<link rel="archives" title="June 2013" href="http://spyrestudios.com/2013/06/">
+<link rel="archives" title="May 2013" href="http://spyrestudios.com/2013/05/">
+<link rel="archives" title="April 2013" href="http://spyrestudios.com/2013/04/">
+<link rel="archives" title="March 2013" href="http://spyrestudios.com/2013/03/">
+<link rel="archives" title="February 2013" href="http://spyrestudios.com/2013/02/">
+<link rel="archives" title="January 2013" href="http://spyrestudios.com/2013/01/">
+<link rel="archives" title="December 2012" href="http://spyrestudios.com/2012/12/">
+<link rel="archives" title="November 2012" href="http://spyrestudios.com/2012/11/">
+<link rel="archives" title="October 2012" href="http://spyrestudios.com/2012/10/">
+<link rel="archives" title="September 2012" href="http://spyrestudios.com/2012/09/">
+<link rel="archives" title="August 2012" href="http://spyrestudios.com/2012/08/">
+<link rel="archives" title="July 2012" href="http://spyrestudios.com/2012/07/">
+<link rel="archives" title="June 2012" href="http://spyrestudios.com/2012/06/">
+<link rel="archives" title="May 2012" href="http://spyrestudios.com/2012/05/">
+<link rel="archives" title="April 2012" href="http://spyrestudios.com/2012/04/">
+<link rel="archives" title="March 2012" href="http://spyrestudios.com/2012/03/">
+<link rel="archives" title="February 2012" href="http://spyrestudios.com/2012/02/">
+<link rel="archives" title="January 2012" href="http://spyrestudios.com/2012/01/">
+<link rel="archives" title="December 2011" href="http://spyrestudios.com/2011/12/">
+<link rel="archives" title="November 2011" href="http://spyrestudios.com/2011/11/">
+<link rel="archives" title="October 2011" href="http://spyrestudios.com/2011/10/">
+<link rel="archives" title="September 2011" href="http://spyrestudios.com/2011/09/">
+<link rel="archives" title="August 2011" href="http://spyrestudios.com/2011/08/">
+<link rel="archives" title="July 2011" href="http://spyrestudios.com/2011/07/">
+<link rel="archives" title="June 2011" href="http://spyrestudios.com/2011/06/">
+<link rel="archives" title="May 2011" href="http://spyrestudios.com/2011/05/">
+<link rel="archives" title="April 2011" href="http://spyrestudios.com/2011/04/">
+<link rel="archives" title="March 2011" href="http://spyrestudios.com/2011/03/">
+<link rel="archives" title="February 2011" href="http://spyrestudios.com/2011/02/">
+<link rel="archives" title="January 2011" href="http://spyrestudios.com/2011/01/">
+<link rel="archives" title="December 2010" href="http://spyrestudios.com/2010/12/">
+<link rel="archives" title="November 2010" href="http://spyrestudios.com/2010/11/">
+<link rel="archives" title="October 2010" href="http://spyrestudios.com/2010/10/">
+<link rel="archives" title="September 2010" href="http://spyrestudios.com/2010/09/">
+<link rel="archives" title="August 2010" href="http://spyrestudios.com/2010/08/">
+<link rel="archives" title="July 2010" href="http://spyrestudios.com/2010/07/">
+<link rel="archives" title="June 2010" href="http://spyrestudios.com/2010/06/">
+<link rel="archives" title="May 2010" href="http://spyrestudios.com/2010/05/">
+<link rel="archives" title="April 2010" href="http://spyrestudios.com/2010/04/">
+<link rel="archives" title="March 2010" href="http://spyrestudios.com/2010/03/">
+<link rel="archives" title="February 2010" href="http://spyrestudios.com/2010/02/">
+<link rel="archives" title="January 2010" href="http://spyrestudios.com/2010/01/">
+<link rel="archives" title="December 2009" href="http://spyrestudios.com/2009/12/">
+<link rel="archives" title="November 2009" href="http://spyrestudios.com/2009/11/">
+<link rel="archives" title="October 2009" href="http://spyrestudios.com/2009/10/">
+<link rel="archives" title="September 2009" href="http://spyrestudios.com/2009/09/">
+<link rel="archives" title="August 2009" href="http://spyrestudios.com/2009/08/">
+<link rel="archives" title="July 2009" href="http://spyrestudios.com/2009/07/">
+<link rel="archives" title="June 2009" href="http://spyrestudios.com/2009/06/">
+<link rel="archives" title="May 2009" href="http://spyrestudios.com/2009/05/">
+<link rel="archives" title="April 2009" href="http://spyrestudios.com/2009/04/">
+<link rel="archives" title="March 2009" href="http://spyrestudios.com/2009/03/">
+<link rel="archives" title="February 2009" href="http://spyrestudios.com/2009/02/">
+<link rel="archives" title="January 2009" href="http://spyrestudios.com/2009/01/">
+<link rel="archives" title="December 2008" href="http://spyrestudios.com/2008/12/">
+<link rel="archives" title="November 2008" href="http://spyrestudios.com/2008/11/">
+<link rel="archives" title="October 2008" href="http://spyrestudios.com/2008/10/">
+<link rel="archives" title="May 2008" href="http://spyrestudios.com/2008/05/">
+<link rel="archives" title="April 2008" href="http://spyrestudios.com/2008/04/">
+ 
+<link rel="canonical" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios.html">
+<link rel="author" href="https://plus.google.com/117805273496374929333">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design a Foursquare-like User Profile Page in HTML5/CSS3 - SpyreStudios">
+<meta property="og:description" content="Social networking apps have become all the rage, especially with mobile users. You can&#39;t search on Twitter or any corner of the web without finding some reference to checkin apps. The two industry giants are Foursquare and Gowalla which have both been online for just a few years. They feature many similar functions such as user checkins, badges, and friend feeds.
+I&#39;ll be demonstrating how to code a simple profile page similar to that of Foursquare. Their design is very simplistic with a 2-column layout split. We&#39;ll be coding this page in HTML5 and CSS3, so I&#39;ll be sure to introduce some of the newer techniques. Additionally I&#39;ve offered the source code for free along with a live demo which you can check out below.
+
+
+
+Live Demo - Download">
+<meta property="og:url" content="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/">
+<meta property="og:site_name" content="SpyreStudios">
+<meta property="article:section" content="Tutorial">
+<meta property="article:published_time" content="2011-08-24T11:47:40+00:00">
+<meta property="og:image" content="http://spyrestudios.com/wp-content/uploads/01-mysquare-demo-screen.jpg">
+<meta property="og:image" content="http://spyrestudios.com/wp-content/uploads/02-user-profile-block.jpg">
+<meta property="og:image" content="http://spyrestudios.com/wp-content/uploads/03-corner-links-badges.jpg">
+<meta property="og:image" content="http://spyrestudios.com/wp-content/uploads/04-friends-list.jpg">
+<meta property="og:image" content="http://spyrestudios.com/wp-content/uploads/05-mysquare-top-colored-navigation.jpg">
+ 
+<link rel="alternate" type="application/rss+xml" title="SpyreStudios » Design a Foursquare-like User Profile Page in HTML5/CSS3 Comments Feed" href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/feed/">
+<link rel="stylesheet" id="wp_dlmp_styles-css" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/styles.css" type="text/css" media="all">
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/jquery.js"></script>
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/pippity.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://spyrestudios.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://spyrestudios.com/wp-includes/wlwmanifest.xml">
+<link rel="shortlink" href="http://spyrestudios.com/?p=10717">
+<style type="text/css">.download-info .download-button{background-image:url(http://spyrestudios.com/wp-content/plugins/download-monitor/page-addon/downloadbutton.gif);}.download-info .more-button{background-image:url(http://spyrestudios.com/wp-content/plugins/download-monitor/page-addon/morebutton.gif);}</style>
+<script type="text/javascript">
+				pippity_globals = function(jQuery){
+				window.$j = jQuery;
+				window.PTY_URL = "http://spyrestudios.com/wp-content/plugins/pippity";
+				window.PTY_DOM = "spyrestudios.com";
+				window.PTY_AJAX = "http://spyrestudios.com/wp-admin/admin-ajax.php";
+				window.PTY_ADM = "http://spyrestudios.com/wp-admin/admin.php?page=";
+				window.PTY_PAGE = "";
+				window.PTY_ISPOST = true;
+				window.PTY_KEY = "OTRlMzBhZWFiODY1NTcxMGFkYmJmZDliYWQ0ZDc5NzllZTZlZDIyNDE0NGZhZDgyZGY1YTA1MjgzNjBhYmIxNzFkNzVlMWYxOGVkOTNlYjA=";
+				window.PTY_AFFLINK = "";
+				window.PTY_AFFTEXT = "";
+				window.PTY_NEWPOPUP = "false";
+				
+				}(jQuery)
+			</script>
+ 
+ 
+<script type="text/javascript">
+(function(url){
+if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+var wfscr = document.createElement('script');
+wfscr.type = 'text/javascript';
+wfscr.async = true;
+wfscr.src = url + '&r=' + Math.random();
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+})('//spyrestudios.com/wp-admin/admin-ajax.php?action=wordfence_logHuman&hid=51F5AFC86314629A67039AEA1E753E2C'); 
+</script><script type="text/javascript" async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/admin-ajax.php"></script>
+<link rel="stylesheet" type="text/css" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<meta property="fb:page_id" content="201896121647">
+<meta property="fb:app_id" content="177377429001241">
+<script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/colorbox.js"></script>
+<style type="text/css">h2.popup{font-family:Arial,Verdana,sans-serif;font-size:29px;color:#adadad;text-shadow:1px 1px 1px #818181;}#inline_content{color:#575757;font-size:16px;font-family:Arial,Verdana,sans-serif;line-height:23px;}</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6007351-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ 
+<style type="text/css">.slide-out-div{padding:20px;width:250px;background:#525252;color:#fff;font-size:12px;margin:8px 0;line-height:15px;}.text-slide{padding:5px 5px;width:200px;height:30px;color:#222;font-style:italic;margin:10px 0;}.txt-button{border:1px solid #ddd;margin:10px 0;padding:10px;}</style>
+ 
+ 
+<script>
+var _prum = [[‘id’, ‘52369ad9abe53dbd24000000’],
+[‘mark’, ‘firstbyte’, (new Date()).getTime()]];
+(function() {
+var s = document.getElementsByTagName(‘script’)[0]
+, p = document.createElement(‘script’);
+p.async = ‘async’;
+p.src = ’//rum-static.pingdom.net/prum.min.js’;
+s.parentNode.insertBefore(p, s);
+})();
+</script>
+<script type="text/javascript" async="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_c38bfe5dd65007d851bd7a21a37d911e" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/s_c38bfe5dd65007d851bd7a21a37d911e.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1239288{width:100%;display:block}div.bsap_1239288 a{width:125px}div.bsap_1239288 a img{padding:0}div.bsap_1239288 a em{font-style:normal}div.bsap_1239288 a{padding: 2px;float:left;}div.bsap_1239288 img{float: left;padding: 2px;}div.bsap_1239288 a.adhere{float: left; background: #222222; display: block; text-align: center; color: #ffffff; margin: 1px; font-size: 12px;}div.bsap_1239288 a.adhere:hover{float: left; background: #000000; display: block; text-align: center; color: #CC5639; margin: 1px; font-size: 12px;}div.bsap_1239288 iframe{padding: 2px;float:left;}div.bsap_1239288 a{line-height:100%}div.bsap_1239288 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1239288 a.adhere{width:123px;height:123px}div.bsap_1239288 img.s{height:0;width:0}div.bsap_1243245{width:100%;display:block}div.bsap_1243245 a{width:260px}div.bsap_1243245 a img{padding:0}div.bsap_1243245 a em{font-style:normal}div.bsap_1243245 a{width:260px; display:block;font-size:11px;color:#888;font-family:georgia,serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1243245 img{border:0;clear:right;}div.bsap_1243245 a.adhere{width:260px;color:#ffffff;font-weight:normal;font-size:12px;border:1px solid #000; background: #21211f;text-align:center;}div.bsap_1243245 a.adhere:hover{width:260px;border:1px solid #000000;background:#000000;color:#AE684E;}div.bsap_1243245 a{line-height:100%}div.bsap_1243245 a.adhere{width:260px;height:260px;line-height:2080%}html>body div.bsap_1243245 a.adhere{width:258px;height:258px}div.bsap_1243245 img.s{height:0;width:0}div.bsap_1243245{line-height:9px}div.bsap_1243245 .bsap_adhere a{height:19px;width:258px;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;text-shadow:1px 1px 0 #fff;line-height:16px}.bsap_backfillframe{border:0}div.bsap_1268050{width:100%;display:block}div.bsap_1268050 a{width:728px}div.bsap_1268050 a img{padding:0}div.bsap_1268050 a em{font-style:normal}div.bsap_1268050 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1268050 img{border:0;clear:right;}div.bsap_1268050 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1268050 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1268050 a{line-height:100%}div.bsap_1268050 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1268050 a.adhere{width:726px;height:88px}div.bsap_1268050 img.s{height:0;width:0}div.bsap_1268050{line-height:9px}div.bsap_1268050 .bsap_adhere2,div.bsap_1268050 iframe{float:left}div.bsap_1268050 .bsap_adhere2 a{height:90px;width:20px;background:url(http://s3.buysellads.com/ac/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px}div.bsap_1268065{width:100%;display:block}div.bsap_1268065 a{width:300px}div.bsap_1268065 a img{padding:0}div.bsap_1268065 a em{font-style:normal}div.bsap_1268065 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1268065 img{border:0;clear:right;}div.bsap_1268065 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1268065 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1268065 a{line-height:100%}div.bsap_1268065 a.adhere{width:300px;height:250px;line-height:2000%}html>body div.bsap_1268065 a.adhere{width:298px;height:248px}div.bsap_1268065 img.s{height:0;width:0}div.bsap_1268065{line-height:9px}div.bsap_1268065 .bsap_adhere a{height:19px;width:298px;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;text-shadow:1px 1px 0 #fff;line-height:16px}.bsap_backfillframe{border:0}div.bsap_1276976{width:100%;display:block}div.bsap_1276976 a{width:300px}div.bsap_1276976 a img{padding:0}div.bsap_1276976 a em{font-style:normal}div.bsap_1276976 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1276976 img{border:0;clear:right;}div.bsap_1276976 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1276976 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1276976 a{line-height:100%}div.bsap_1276976 a.adhere{width:300px;height:250px;line-height:2000%}html>body div.bsap_1276976 a.adhere{width:298px;height:248px}div.bsap_1276976 img.s{height:0;width:0}div.bsap_1276976{line-height:9px}div.bsap_1276976 .bsap_adhere a{height:19px;width:298px;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;text-shadow:1px 1px 0 #fff;line-height:16px}.bsap_backfillframe{border:0}div.bsap_1283589{width:100%;display:block}div.bsap_1283589 a{width:300px}div.bsap_1283589 a img{padding:0}div.bsap_1283589 a em{font-style:normal}div.bsap_1283589 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1283589 img{border:0;clear:right;}div.bsap_1283589 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1283589 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1283589 a{line-height:100%}div.bsap_1283589 a.adhere{width:300px;height:600px;line-height:4800%}html>body div.bsap_1283589 a.adhere{width:298px;height:598px}div.bsap_1283589 img.s{height:0;width:0}div.bsap_1283589{line-height:9px}div.bsap_1283589 .bsap_adhere a{height:19px;width:298px;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;text-shadow:1px 1px 0 #fff;line-height:16px}.bsap_backfillframe{border:0}</style><script id="pty_w" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/admin-ajax(1).php">text/javascript</script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><link type="text/css" rel="stylesheet" href="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/get_f_asset.php"></head>
+<body data-twttr-rendered="true">
+ 
+<script type="text/javascript">
+        (function(){
+          var bsa = document.createElement('script');
+              bsa.type= 'text/javascript';
+              bsa.async = true;
+              bsa.src='//s3.buysellads.com/ac/bsa.js';
+          (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+        })();
+        </script>
+ 
+<a name="backtotop"></a>
+<div id="wrap">
+<div id="page">
+<div id="header">
+<div id="headerleft">
+<h1><a href="http://spyrestudios.com/" title="SpyreStudios - Design and Development Magazine">SpyreStudios - Design and Development Magazine</a></h1>
+</div>
+<div id="headerright">
+<a href="http://spyrestudios.com/" title="SpyreStudios - Design and Development Magazine"><img class="logo" data-cfsrc="http://spyrestudios.com/wp-content/themes/spyrestudios/images/logo2.png" alt="SpyreStudios" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/logo2.png"></a>
+<div class="leaderboard">
+ 
+<div id="bsap_1268050" class="bsap_1268050 bsap"><iframe width="728" height="90" id="backfill_1268050_frame" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/backfill4.html" frameborder="0" class="bsap_backfillframe" scrolling="no"></iframe></div>
+ 
+</div>
+<div class="subhead">
+<div class="menu">
+<ul>
+<li><a href="http://spyrestudios.com/" title="Home">Home</a></li>
+<li><a href="http://spyrestudios.com/articles/" title="Read Original Articles">Articles</a></li>
+<li><a href="http://spyrestudios.com/freebies/" title="Freebies">Freebies</a></li>
+<li><a href="http://spyrestudios.com/stream/" title="Stream">Stream</a></li>
+<li><a href="http://spyrestudios.com/about/" title="About">About</a></li>
+<li><a href="http://spyrestudios.com/archives/" title="That is everything we&#39;ve written">Archives</a></li>
+<li><a href="http://spyrestudios.com/contact/" title="Get in touch with us">Contact</a></li>
+<li><a href="http://buysellads.com/buy/detail/4785/" title="Advertise on SpyreStudios">Advertise</a></li>
+<li><a href="http://feeds.feedburner.com/SpyreStudios" title="RSS">RSS</a></li>
+</ul>
+</div>
+<div class="search">
+<form method="get" action="http://spyrestudios.com/"><input type="text" value="type keywords and hit enter..." name="s" class="text" id="search_form" onfocus="if (this.value == &#39;type keywords and hit enter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;type keywords and hit enter...&#39;;}"></form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/plusone.js" gapi_processed="true"></script>
+<div class="container">
+<div class="content">
+<div class="post">
+<h2>Design a Foursquare-like User Profile Page in HTML5/CSS3</h2>
+<div class="social"><ul><li class="tweetbutton"><script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/widgets.js" type="text/javascript"></script>
+<div>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/tweet_button.1399599786.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 107px; height: 20px;"></iframe>
+</div></li>
+<li class="diggbutton"><a class="DiggThisButton DiggCompact" href="http://digg.com/submit?url=http%3A%2F%2Fspyrestudios.com%2Fdesign-a-foursquare-like-user-profile-page-in-html5css3%2F&title=Design+a+Foursquare-like+User+Profile+Page+in+HTML5%2FCSS3"></a></li>
+<li class="plusonebutton"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1399970748776" name="I0_1399970748776" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div></li>
+<li class="fbbutton"><div class="fb-like fb_iframe_widget" data-href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/" data-width="90" data-height="24" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=177377429001241&amp;color_scheme=light&amp;height=24&amp;href=http%3A%2F%2Fspyrestudios.com%2Fdesign-a-foursquare-like-user-profile-page-in-html5css3%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=90"><span style="vertical-align: bottom; width: 76px; height: 20px;"><iframe name="f4d080198" width="90px" height="24px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/like.html" class="" style="border: none; visibility: visible; width: 76px; height: 20px;"></iframe></span></div></li>
+<li class="fbbutton" style="margin-left:0px;"><div class="fb-share-button fb_iframe_widget" data-href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/" data-type="button" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=177377429001241&amp;href=http%3A%2F%2Fspyrestudios.com%2Fdesign-a-foursquare-like-user-profile-page-in-html5css3%2F&amp;locale=en_US&amp;sdk=joey&amp;type=button"><span style="vertical-align: bottom; width: 55px; height: 20px;"><iframe name="f192cfbe0c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/share_button.html" class="" style="border: none; visibility: visible; width: 55px; height: 20px;"></iframe></span></div></li>
+<li><fb:comments-count href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/" fb-xfbml-state="rendered" class=""><span class="fb_comments_count">6</span></fb:comments-count> comments</li>
+</ul></div><br><br>
+<div class="entry">
+<br>
+<center>
+ 
+<div id="bsap_1268065" class="bsap_1268065 bsap"><iframe width="300" height="250" id="ad_2875330_frame" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/raw_4740e160cb8ece87a6961df9b8853e4c.html" frameborder="0" class="bsap_adframe" scrolling="no"></iframe><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/4785/zone/1268065?utm_source=site_4785&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1268065">advertise here</a></div></div>
+ 
+</center>
+<p class="bigger">Social networking apps have become all the rage, especially with mobile users. You can’t search on Twitter or any corner of the web without finding some reference to checkin apps. The two industry giants are <a href="https://foursquare.com/">Foursquare</a> and <a href="http://gowalla.com/">Gowalla</a> which have both been online for just a few years. They feature many similar functions such as user checkins, badges, and friend feeds.</p>
+<p>I’ll be demonstrating how to code a simple profile page similar to that of Foursquare. Their design is very simplistic with a 2-column layout split. We’ll be coding this page in HTML5 and CSS3, so I’ll be sure to introduce some of the newer techniques. Additionally I’ve offered the source code for free along with a live demo which you can check out below.</p>
+<p><img class="wideimg" data-cfsrc="http://spyrestudios.com/wp-content/uploads/01-mysquare-demo-screen.jpg" alt="MySquare - Demo HTML5/CSS3 Profile Page" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/01-mysquare-demo-screen.jpg"></p>
+<p><strong><a href="http://spyrestudios.com/demos/foursquare-profile/index.html">Live Demo</a> – <a href="http://spyrestudios.com/downloads/foursquare-profile-source.zip" target="_blank">Download</a></strong><br>
+<span id="more-10717"></span></p>
+<h3>Starting the HTML Document</h3>
+<p>To begin open up a blank HTML sheet. We can start with some bare-bones template tags to define our page document type as standard HTML5. I have included the code below to help you get started.</p>
+<pre class="brush: xml; title: ; wrap-lines: false; notranslate" title="">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8" /&gt;
+	&lt;title&gt;Social User Profile Page in HTML5/CSS3[DEMO]&lt;/title&gt;
+	&lt;link rel="stylesheet" type="text/css" href="global.css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>You’ll notice right away the HTML5 doctype has been significantly simplified. This is appended directly above your page on each HTML5 page you write. We’ve also added the optional <code>lang="en"</code> attribute to our HTML element. This feature will let Google and other search engines know that our page language will strictly be written in English.</p>
+<p>Nothing here is too out of the ordinary. So let’s begin to examine our full page structure. Immediately you should notice I have taken advantage of two(2) new HTML5 elements. These are <code>&lt;header&gt;</code> and <code>&lt;nav&gt;</code> to separate our heading and navigation bar, respectively. These elements add to our semantic markup and help to distinguish our code as HTML5 specific.</p>
+<p>Below is the full HTML page code. I’ll break it down a bit more as we move forward. I’ve left the head portion of our document out since this was just added a few paragraphs ago.</p>
+<pre class="brush: xml; title: ; wrap-lines: false; notranslate" title="">&lt;body&gt;	
+	&lt;header&gt;
+		&lt;div class="wrapper"&gt;
+			&lt;a href="#"&gt;&lt;img src="img/Logo.jpg" alt="mysquare logo" title="mysquare - checkin and go home!" /&gt;&lt;/a&gt;
+			
+			&lt;span id="usernav"&gt;&lt;a href="#"&gt;Logout&lt;/a&gt; - &lt;a href="#"&gt;Settings&lt;/a&gt; - &lt;a href="#"&gt;My Profile&lt;span&gt;&lt;img src="img/user_avatar_s.jpg" /&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	
+	&lt;nav&gt;
+		&lt;ul id="n" class="clearfix"&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="sel"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Badges&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Search&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Find Friends&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	
+	&lt;div id="content" class="clearfix"&gt;
+		&lt;section id="left"&gt;
+			&lt;div id="userStats" class="clearfix"&gt;
+				&lt;div class="pic"&gt;
+					&lt;a href="#"&gt;&lt;img src="img/user_avatar.jpg" width="150" height="150" /&gt;&lt;/a&gt;
+				&lt;/div&gt;
+				
+				&lt;div class="data"&gt;
+					&lt;h1&gt;Johnny Appleseed&lt;/h1&gt;
+					&lt;h3&gt;San Francisco, CA&lt;/h3&gt;
+					&lt;h4&gt;&lt;a href="http://spyrestudios.com/"&gt;http://spyrestudios.com/&lt;/a&gt;&lt;/h4&gt;
+					&lt;div class="socialMediaLinks"&gt;
+						&lt;a href="http://twitter.com/jakerocheleau" rel="me" target="_blank"&gt;&lt;img src="img/twitter.png" alt="@jakerocheleau" /&gt;&lt;/a&gt;
+						&lt;a href="http://gowalla.com/users/JakeRocheleau" rel="me" target="_blank"&gt;&lt;img src="img/gowalla.png" /&gt;&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class="sep"&gt;&lt;/div&gt;
+					&lt;ul class="numbers clearfix"&gt;
+						&lt;li&gt;Reputation&lt;strong&gt;185&lt;/strong&gt;&lt;/li&gt;
+						&lt;li&gt;Checkins&lt;strong&gt;344&lt;/strong&gt;&lt;/li&gt;
+						&lt;li class="nobrdr"&gt;Days Out&lt;strong&gt;127&lt;/strong&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;h1&gt;About Me:&lt;/h1&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+		&lt;/section&gt;
+		
+		&lt;section id="right"&gt;
+			&lt;div class="gcontent"&gt;
+				&lt;div class="head"&gt;&lt;h1&gt;Badges(3)&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="boxy"&gt;
+					&lt;p&gt;Keep working to unlock badges!&lt;/p&gt;
+					
+					&lt;div class="badgeCount"&gt;
+						&lt;a href="#"&gt;&lt;img src="img/foursquare-badge.png" /&gt;&lt;/a&gt;
+						&lt;a href="#"&gt;&lt;img src="img/foursquare-badge.png" /&gt;&lt;/a&gt;
+						&lt;a href="#"&gt;&lt;img src="img/foursquare-badge.png" /&gt;&lt;/a&gt;
+					&lt;/div&gt;
+					
+					&lt;span&gt;&lt;a href="#"&gt;See allâ€¦&lt;/a&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="gcontent"&gt;
+				&lt;div class="head"&gt;&lt;h1&gt;Friends List&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="boxy"&gt;
+					&lt;p&gt;Your friends - 106 total&lt;/p&gt;
+					
+					&lt;div class="friendslist clearfix"&gt;
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Jerry K." /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Jerry K.&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Katie F." /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Katie F.&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Ash K." /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Ash K.&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Sponge B." /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Sponge B.&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Frank" /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Frank&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="friend"&gt;
+							&lt;a href="#"&gt;&lt;img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Alexa S." /&gt;&lt;/a&gt;&lt;span class="friendly"&gt;&lt;a href="#"&gt;Alexa S.&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					
+					&lt;span&gt;&lt;a href="#"&gt;See all...&lt;/a&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+<p>Please note that you aren’t required to stick with these new elements. <code>&lt;div&gt;</code> tags will work just as well in HTML5. And if you’ve noticed I have included a lot of divs within the code here, mostly to contain a wrapper class. But using these elements will free up space for IDs and clean your CSS code up a lot. Another example are the two <code>&lt;section&gt;</code> elements holding the right and left columns of our layout structure. This will make more sense as we begin to add styles and positioning.</p>
+<h3>Block Areas of our Template</h3>
+<p>Let’s now move into defining the areas of our page. The first thing to explain is how some portions of the site content are limited in width. However we have background colors spanning the entire width of our webpage. This is where the class <code>.wrapper</code> comes into play, since we can just wrap our page content and center it regardless of resolution. I’ve utilized this technique in each main area – heading, nav bar, and core content.</p>
+<p><img class="wideimg" data-cfsrc="http://spyrestudios.com/wp-content/uploads/02-user-profile-block.jpg" alt="Block Areas on User Profile Info" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/02-user-profile-block.jpg"></p>
+<p>For our header we only set 2 positions. The logo over to the left and a small set of links for the user to work with when logged-in. I split this small area with a <code>&lt;span&gt;</code> tag, and also included a smaller version of the user avatar near “My Profile”. This is a classic technique originally adopted by Digg a few years back.</p>
+<p>The navigation area is split with a simple unordered list. I have taken the liberty of also adding a selected class which only displays on the currently visited link. So as you move from the home page to your profile the <code>class="sel"</code> should switch list items. Check out the navigation code I’ve copied over.</p>
+<pre class="brush: xml; title: ; wrap-lines: false; notranslate" title="">&lt;nav&gt;
+	&lt;ul id="n" class="clearfix"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="sel"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Badges&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Search&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Find Friends&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+<p>Now viewing our content area you’ll see I actually used a simple <code>&lt;div&gt;</code> here with the class “clearfix”. This is a set of styles used to clear floating elements within a container. Or simpler, the outer div(container) holds 2 inner <code>&lt;section&gt;</code> elements with IDs <strong>#left</strong> and <strong>#right</strong>. These float next to each other and the <code>.clearfix</code> class helps to remove extra white space.</p>
+<p>On the left side we have a profile area with the user avatar, checkin stats, a link to their homepage and external icons to their alternate profiles. I used a free set of <a href="http://dribbble.com/shots/204407-35-Sweet-Social-Icons">sweet social icons</a> from Dribbble which is perfect for what we need. Additionally in the right sidebar I borrowed a small badge icon from Foursquare. The box elements are given a class <code>.gcontent</code> and split between a header and content area.</p>
+<h3>Building the Core CSS</h3>
+<p>Now you should open up the <strong>global.css</strong> file which you can find in the root of our demo. This stores all of the page styles split into groups labeled resets, core, navigation, left, right, and clearfix. The whole document is fairly long even with single-line styling, so I’ll only include specific bits of code.</p>
+<p><img class="wideimg" data-cfsrc="http://spyrestudios.com/wp-content/uploads/03-corner-links-badges.jpg" alt="Corner Links and Profile Badges" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/03-corner-links-badges.jpg"></p>
+<p>We can skip over the resets group since it doesn’t hold much use for this tutorial. If you know anything about resetting document styles, there’s nothing here to surprise you. Instead let’s focus first on the @group “core” which defines our page IDs.</p>
+<pre class="brush: css; title: ; wrap-lines: false; notranslate" title="">/* @group core */
+.wrapper { width: 850px; overflow: hidden; margin: 0 auto; background: none; }
+
+header { height: 100px; background-color: #afafaf; }
+
+header #usernav { float: right; line-height: 100px; font-size: 14px; font-weight: bold; color: #555; }
+header #usernav a { color: #444; text-shadow: 0px 1px 1px #ddd; }
+header #usernav a span img { position: relative; top: 8px; background: #cecece; margin-left: 5px; padding: 3px; border: 1px solid #969696; }
+
+#content { display: block; width: 820px; margin: 0 auto;  }
+#left { display: block; width: 560px; float: left; overflow: hidden; margin-right: 20px; }
+#right { display: block; width: 240px; float: left; overflow: hidden; }
+</pre>
+<p>The .wrapper class is given <code>margin: 0 auto;</code> so all of the content will automatically center on the page. Our specific width is set to 850px but you could change this to anything you want. However because of this our scale for #left and #right has also been limited to 560px and 240px. All overflow content is hidden so as to remove rendering bugs. Inside our #usernav span element we are making great use of the CSS3 <strong>text-shadow</strong> property.</p>
+<p>By adding a 1px offset and using a bright color the drop shadow appears to bold our text and jump right off the page! Apple has been seen using a similar effect, which I have duplicated throughout the profile page as well. This is a small addition but really can affect how your users perceive the page design.</p>
+<h4>Simplifying Other CSS3 Ideas</h4>
+<p>There are just a couple other CSS3 techniques which I’ve incorporated here that I would love to go over. The first you may notice is in our left column of the profile page. This <code>&lt;div&gt;</code> box has an ID of #userStats which can be found in the left @group of our CSS. Notably we have added some extra padding and a <code>.clearfix</code> for the avatar/statistics. But I have also utilized in-browser rounded corners without any images.</p>
+<p><img class="wideimg" data-cfsrc="http://spyrestudios.com/wp-content/uploads/04-friends-list.jpg" alt="Friends listing, boxes on profile page" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/04-friends-list.jpg"></p>
+<p>By default if the user is on a legacy browser they simply can’t experience the rounded effects. Instead the user statistics block will load with square corners – not too big of a deal. The code below shows our #userStats and profile pic styles. Notice I have included all 3 properties of rounded corners, these being <em>-moz-border-radius</em>, <em>-webkit-border-radius</em>, and simply <em>border-radius</em>.</p>
+<pre class="brush: css; title: ; wrap-lines: false; notranslate" title="">#userStats { display: block; width: auto; background-color: #f9f9f9; border: 1px solid #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 12px; }
+
+#userStats .pic { float: left; display: block; margin-right: 10px; }
+#userStats .pic a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
+</pre>
+<p>You may also enjoy the data list styles right next to the user profile picture. These include a small separator class for the line above along with an unordered list for each of the statistics (reputation, checkins, and days out). Also a small dotted border separating the 3 stat blocks.</p>
+<pre class="brush: css; title: ; wrap-lines: false; notranslate" title="">#userStats .data .sep { clear: both; margin-top: 40px; width: 320px; height: 1px; border-bottom: 1px solid #ccc; margin-bottom: 0; }
+#userStats .data ul.numbers { list-style: none; width: 320px; padding-top: 7px; margin-top: 0; border-top: 1px solid #fff; color: #676767; }
+#userStats .data ul.numbers li { width: 95px; float: left; display: block; padding-left: 8px; height: 50px; border-right: 1px dotted #bbb; text-transform: uppercase; }
+#userStats .data ul.numbers li strong { color: #434343; display: block; font-size: 3.4em; line-height: 1.1em; font-weight: bold; }
+</pre>
+<p>It’s not too big of a deal but just a little bit of CSS can go a long way towards perfecting your layout. The UL and .sep class are both set to 320px – this is because they cannot take up the entire width of the division. There simply isn’t enough room. But we must keep them identical so everything will line up in browser display.</p>
+<p><img class="wideimg" data-cfsrc="http://spyrestudios.com/wp-content/uploads/05-mysquare-top-colored-navigation.jpg" alt="Homescreen shot of MySquare Nav Menu" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/05-mysquare-top-colored-navigation.jpg"></p>
+<p>The internal list items are actually given padding on the left. This helps to move our numbers over a bit so the blocks aren’t stacked right next to each other. Inside the li elements I’ve included each of the label text while the numerical values are within <code>&lt;strong&gt;</code> tags. We set them to <code>display: block;</code> giving the appearance of label/value pairs. We are also using the <strong>text-transform</strong> property so the label text stands out more in comparison to other text on page.</p>
+<p><strong><a href="http://spyrestudios.com/demos/foursquare-profile/index.html">Live Demo</a> – <a href="http://spyrestudios.com/downloads/foursquare-profile-source.zip" target="_blank">Download</a></strong></p>
+<h3>Conclusion</h3>
+<p>I hope you enjoyed this introductory web development tutorial. To build such a user profile page in HTML5/CSS3 only takes a bit of dedication and some time in front of your computer. I have only covered some of the main areas in styling our page. However I do recommend downloading the demo source files and scrutinizing my code a bit more. You’ll surely pick up on a few tricks and it may clear up any confusion you run into.</p>
+<span id="pty_trigger"></span><center>
+ 
+<div id="bsap_1276976" class="bsap_1276976 bsap"><iframe width="300" height="250" id="backfill_1276976_frame" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/backfill4(1).html" frameborder="0" class="bsap_backfillframe" scrolling="no"></iframe><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/4785/zone/1276976?utm_source=site_4785&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1276976">advertise here</a></div></div>
+ 
+</center>
+<br>
+<div style="clear:both"></div>
+<div id="postfooter">
+<div id="aboutauthor">
+<img data-cfsrc="http://spyrestudios.com/wp-content/themes/spyrestudios/authors/46.jpg" alt="Jake Rocheleau" class="authorimgbox" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/46.jpg">
+<h4>About the author:</h4>
+<p>Jake is a creative designer, illustrator, and web developer. He frequently writes articles involving new-age design concepts and freelance management skills. You can find him in Google or follow his tweets @<a href="http://twitter.com/jakerocheleau">jakerocheleau</a></p>
+</div>
+<div id="related_posts">
+<h4>Related Entries:</h4>
+<ul><li><a href="http://spyrestudios.com/how-to-design-a-dribbble-style-homepage-layout/" rel="bookmark" title="January 26, 2012">How to Design a Dribbble-Style Homepage Layout</a></li>
+<li><a href="http://spyrestudios.com/dynamic-company-team-page/" rel="bookmark" title="February 24, 2014">Building a Company Team Page with Dynamic Content</a></li>
+<li><a href="http://spyrestudios.com/html5-css3-magazine-blog-post-layout/" rel="bookmark" title="January 20, 2014">Coding a Magazine-Style Blog Post Layout with CSS3 Effects</a></li>
+<li><a href="http://spyrestudios.com/design-a-full-html5css3-template-replica-of-digg-v3/" rel="bookmark" title="September 29, 2011">Design a Full HTML5/CSS3 Template Replica of Digg v3</a></li>
+<li><a href="http://spyrestudios.com/how-to-build-alphabetical-index-using-jquery/" rel="bookmark" title="December 20, 2012">How To Build an Alphabetical Page Index using jQuery</a></li>
+</ul> 
+</div>
+</div>
+ 
+<div id="grv-personalization-42" style="display: block; height: 2154px;"><iframe frameborder="0" scrolling="no" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/w2.html" style="width: 1px; height: 2154px; opacity: 0; overflow: hidden;"></iframe></div>
+<script type="text/javascript">
+  //<![CDATA[
+    (function(){
+    window.gravityInsightsParams = {
+      'type': 'content',
+      'action': '',
+      'site_guid': '746144806250d39c7b1f1e922db6ec45'
+    };
+    var adServerReq,bUrl,doUseGravityUserGuid,includeJs,jq,type,ug,wlPrefix,wlUrl,_ref,_ref1,_ref2;bUrl="";ug=(doUseGravityUserGuid=!0===gravityInsightsParams.useGravityUserGuid?1:0)?"":gravityInsightsParams.user_guid||(null!=(_ref=/grvinsights=([^;]+)/.exec(document.cookie))?_ref[1]:void 0)||"";
+    wlUrl=(wlPrefix="http://rma-api.gravity.com/v1/api/intelligence",jq=(null!=(_ref1=window.jQuery)?null!=(_ref2=_ref1.fn)?_ref2.jquery:void 0:void 0)||"",type="iframe",adServerReq=gravityInsightsParams.ad||"",""+wlPrefix+"/wl?jq="+jq+"&sg="+gravityInsightsParams.site_guid+"&ug="+ug+"&ugug="+doUseGravityUserGuid+"&pl=42&id=grv-personalization-42"+("&type="+type+"&ad="+adServerReq+"&x="+(new Date).getTime()));
+    includeJs=function(a){var b;b=document.createElement("script");b.async=!0;b.src=a;a=document.getElementsByTagName("script")[0];return a.parentNode.insertBefore(b,a)};bUrl&&includeJs(bUrl);wlUrl&&(window.gravityInsightsParams.sidebar&&(window.gravityInsightsParams.wlStartTime=(new Date).getTime()),includeJs(wlUrl));})();
+  //]]>
+</script>
+ 
+<div class="comments-template">
+<a name="comments"></a>
+<h3 style="padding-bottom: 10px;">Comments:</h3>
+<meta property="fb:admins" content="41116080">
+<script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/all(1).js"></script><fb:comments href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/" num_posts="20" width="673" fb-xfbml-state="rendered" class="fb_iframe_widget"><span style="height: 498px; width: 673px;"><iframe id="f11f05117c" name="f9f0ee3" scrolling="no" title="Facebook Social Plugin" class="fb_ltr" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/comments.html" style="border: none; overflow: hidden; height: 498px; width: 673px;"></iframe></span></fb:comments> <script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/all(2).js"></script>
+</div>
+</div>
+</div>
+</div>
+ 
+<div class="sidebar">
+ 
+ 
+<div id="bsap_1243245" class="bsap_1243245 bsap"><iframe width="260" height="260" id="backfill_1243245_frame" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/backfill1.html" frameborder="0" class="bsap_backfillframe" scrolling="no"></iframe></div>
+ 
+<div style="clear:both;"></div>
+ 
+ 
+ 
+<div id="bsap_1239288" class="bsap_1239288 bsap"><a href="http://stats.buysellads.com/click.go?z=1239288&b=2452678&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.5766223401296884&link=http://www.elegantthemes.com/gallery/divi/" onmouseover="window.status = &#39;http://www.elegantthemes.com/gallery/divi/&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Premium WordPress Themes" id="bsa_2452678" target="_blank"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/200737-1386792759.jpg" width="125" height="125" alt="Premium WordPress Themes"></a><a href="http://stats.buysellads.com/click.go?z=1239288&b=4362826&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.42797618824988604&link=http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&utm_medium=display&utm_content=spyrestudios125v1&utm_campaign=spyrestudios" onmouseover="window.status = &#39;http://info.biznessapps.com/bizness-apps-mobile-minutes?utm_source=buysellads&amp;utm_medium=display&amp;utm_content=spyrestudios125v1&amp;utm_campaign=spyrestudios&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Bizness Apps - Take Your Clients Mobile!" id="bsa_4362826" target="_blank"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/208529-1392144430.jpg" width="125" height="125" alt="Bizness Apps - Take Your Clients Mobile!"></a><a href="http://stats.buysellads.com/click.go?z=1239288&b=4742203&g=&s=&sw=1440&sh=900&br=chrome,34,linux&r=0.8621610892005265&link=http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco" onmouseover="window.status = &#39;http://themeforest.net/item/x-the-ultimate-wordpress-theme/5871901?ref=themeco&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="X WordPress Theme" id="bsa_4742203" target="_blank"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/202713-1388094531.png" width="125" height="125" alt="X WordPress Theme"></a><a href="http://buysellads.com/buy/detail/4785/zone/1239288?utm_source=site_4785&utm_medium=website&utm_campaign=adhere&utm_content=zone_1239288" title="Advertise Here" class="adhere ad4 even" target="_blank">Advertise Here</a></div>
+ 
+<div style="clear:both;"></div>
+ 
+ 
+<div class="textwidget"><p class="sociallinks"><a href="http://feeds.feedburner.com/SpyreStudios" title="Subscribe to the RSS feed">Join 19,000+ Readers</a></p>
+<a href="http://feeds.feedburner.com/SpyreStudios" title="Subscribe to the RSS feed"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/rss.png" alt="Subscribe to the RSS feed" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/rss.png"></a>
+<a onclick="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=SpyreStudios&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true" target="popupwindow" href="http://feedburner.google.com/fb/a/mailverify?uri=SpyreStudios"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/email_32.png" alt="SpyreStudios" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/email_32.png"></a>
+<a href="http://twitter.com/SpyreStudios" title="Follow us on Twitter"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/twitter.png" alt="Follow us on Twitter" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/twitter.png"></a>
+<a href="http://facebook.com/SpyreStudios" title="Like us on Facebook"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/facebook.png" alt="Like us on Facebook" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/facebook.png"></a>
+<a href="http://fusion.google.com/add?source=atgs&feedurl=http://feeds.feedburner.com/SpyreStudios" title="Add SpyreStudios To Google Reader"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/google.png" alt="Add us to Google Reader" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/google.png"></a>
+<a href="http://www.delicious.com/save" onclick="window.open(&#39;http://www.delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=&#39;+encodeURIComponent(location.href)+&#39;&amp;title=&#39;+encodeURIComponent(document.title), &#39;delicious&#39;,&#39;toolbar=no,width=550,height=550&#39;); return false;" title="Bookmark on Delicious"><img data-cfsrc="http://spyrestudios.com/wp-content/uploads/2010/12/delicious.png" alt="Bookmark On Delicious" width="20" height="20" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/delicious.png"></a>
+</div>
+ 
+<iframe src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height: 270px;" allowtransparency="true"></iframe>
+ 
+<div class="sidebox">
+<h3>Popular Articles <span><a href="http://spyrestudios.com/archives/" title="View Archive">(view archives)</a></span></h3>
+<ul>
+<li><a href="http://spyrestudios.com/hilarious-print-ads/" title="30 Hilarious Print Advertisements">30 Hilarious Print Advertisements</a></li>
+<li><a href="http://spyrestudios.com/how-to-create-a-sexy-vertical-sliding-panel-using-jquery-and-css3/" title="How To Create A Sexy Vertical Sliding Panel Using jQuery And CSS3">How To Create A Sexy Vertical Sliding Panel Using jQuery And CSS3</a></li>
+<li><a href="http://spyrestudios.com/must-read-books-for-designers-typography-lovers-and-freelancers/" title="25 Must-Read Books For Designers, Typography Lovers And Freelancers">25 Must-Read Books For Designers, Typography Lovers And Freelancers</a></li>
+<li><a href="http://spyrestudios.com/the-new-room-effect-usability-is-about-comfort/" title="The New Room Effect: Usability Is About Comfort">The New Room Effect: Usability Is About Comfort</a></li>
+<li><a href="http://spyrestudios.com/40-sexy-and-creative-typographic-logo-designs/" title="40 Sexy And Creative Typographic Logo Designs">40 Sexy And Creative Typographic Logo Designs</a></li>
+<li><a href="http://spyrestudios.com/morality-in-web-development-your-thoughts/" title="Morality in Web Development – Your Thoughts?">Morality in Web Development – Your Thoughts?</a></li>
+</ul>
+</div>
+ 
+<div style="width:208px;">
+ 
+<div id="bsap_1283589" class="bsap_1283589 bsap"><iframe width="300" height="600" id="backfill_1283589_frame" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/backfill1(1).html" frameborder="0" class="bsap_backfillframe" scrolling="no"></iframe><div class="bsap_adhere"><a href="http://buysellads.com/buy/detail/4785/zone/1283589?utm_source=site_4785&utm_medium=website&utm_campaign=cpmadhere&utm_content=zone_1283589">advertise here</a></div></div>
+ 
+</div>
+</div> 
+</div>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div class="footertop">
+<div class="topbtn">
+<a href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/#backtotop"><img class="topbutton" data-cfsrc="http://spyrestudios.com/wp-content/themes/spyrestudios/images/back-to-top.png" alt="Scroll back to the top" width="79" height="21" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/back-to-top.png"></a>
+</div>
+</div>
+<div id="footerbg">
+<div class="footer">
+<div class="footcolumns">
+<div class="footcol1">
+<div class="textwidget"><h3>About SpyreStudios</h3>
+<p>SpyreStudios is an online design and development magazine. We hope to provide content you will enjoy. We publish articles, tutorials and inspirational posts many times a week.</p>
+<p class="morebtn"><a href="http://spyrestudios.com/about/">Find out more</a></p></div>
+</div>
+<div class="footcol2">
+<div class="textwidget"><h3>Browse Categories</h3>
+<p>The most popular topics on SpyreStudios are: <a href="http://spyrestudios.com/category/minimalism/" title="Minimalism Category">Minimalism</a>, <a href="http://spyrestudios.com/category/typography/" title="Typography Category">Typography</a>, <a href="http://spyrestudios.com/category/tutorial/" title="Tutorials Category">Tutorials</a>, <a href="http://spyrestudios.com/category/inspirational/" title="Inspirational Category">Inspirational</a>, <a href="http://spyrestudios.com/category/css/" title="CSS Category">CSS</a>, <a href="http://spyrestudios.com/category/jquery/" title="jQuery Category">jQuery</a>, <a href="http://spyrestudios.com/category/usability/" title="Usability Category">Usability</a>, <a href="http://spyrestudios.com/category/ux/" title="UX Category">UX</a>, <a href="http://spyrestudios.com/category/design/" title="Design Category">Design</a>, <a href="http://spyrestudios.com/category/illustrator/" title="Illustrator Category">Illustrator</a>, <a href="http://spyrestudios.com/category/photoshop/" title="Photoshop Category">Photoshop</a>, <a href="http://spyrestudios.com/category/resources/" title="Resources Category">Resources</a>, <a href="http://spyrestudios.com/category/tools/" title="Tools Category">Tools</a>.</p>
+<p class="morebtn"><a href="http://spyrestudios.com/archives/">Browse the archives</a></p></div>
+</div>
+<div class="footcol3">
+<div class="textwidget"><h3>Contribute</h3>
+<p>We are often looking for great writers to contribute to the site. If you are a designer, you know a lot about certain topics related to design, and you love to write, we want to hear from you.</p>
+<p class="morebtn"><a href="http://spyrestudios.com/contribute/">Get more info</a></p></div>
+</div>
+<div class="footcol4">
+<div class="textwidget"><h3>Stay In The Loop</h3>
+<p>There are many ways you can receive the content we publish. You can grab the <a href="http://feeds.feedburner.com/SpyreStudios" title="SpyreStudios RSS Feed">main RSS feed</a>, follow us on <a href="http://twitter.com/SpyreStudios" title="SpyreStudios on Twitter">Twitter</a>, like us on <a href="http://facebook.com/SpyreStudios" title="SpyreStudios on Facebook">Facebook</a> and even get new articles <a onclick="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=SpyreStudios&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true" target="popupwindow" href="http://feedburner.google.com/fb/a/mailverify?uri=SpyreStudios">delivered by email</a>.</p>
+<p class="morebtn"><a href="http://feeds.feedburner.com/SpyreStudios">Subscribe now!</a></p></div>
+</div>
+</div>
+<div class="copyright">
+<div class="footnotice"><a href="http://spyrestudios.com/" title="SpyreStudios - Design and Development Magazine"><img class="logofooter" data-cfsrc="http://spyrestudios.com/wp-content/themes/spyrestudios/images/logo2.png" alt="SpyreStudios - Design and Development Magazine" width="184" height="48" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/logo2.png"></a> <p>Copyright 2007-2014. All rights reserved. <a href="http://spyrestudios.com/privacy-policy/">Privacy Policy</a>
+</p></div>
+</div>
+</div>
+ 
+ 
+ 
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/shCore.js"></script>
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/shBrushXml.js"></script>
+<script type="text/javascript" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/shBrushCss.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://spyrestudios.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://spyrestudios.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeDefault.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://spyrestudios.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['class-name'] = 'font-size 12px';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['wrap-lines'] = false;
+	SyntaxHighlighter.all();
+</script>
+</div>
+<script type="text/javascript">
+$(function(){
+$('a[href*=#backtotop]').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+&& location.hostname == this.hostname) {
+var $target = $(this.hash);
+$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+if ($target.length) {
+var targetOffset = $target.offset().top;
+$('html,body').animate({scrollTop: targetOffset}, 1000);
+return false;
+}
+}
+});
+});
+</script>
+<script>
+
+				$(document).ready(function() { 
+
+					 if (document.cookie.indexOf('visited=true') === -1) {
+					 							   var expires = new Date();
+												    expires.setDate(expires.getDate()+30);
+												    document.cookie = "visited=true; expires="+expires.toUTCString();
+						$.colorbox({inline:true, width:"40%", height:"450px", href:"#inline_content"});
+
+					 }
+
+
+					});
+
+			</script>
+<script type="text/javascript">
+  //<![CDATA[
+    (function(){
+    window.gravityInsightsParams = {
+      'type': 'content',
+      'action': '',
+      'site_guid': '746144806250d39c7b1f1e922db6ec45'
+    };
+    var b,c;b="https:"===document.location.protocol?"https://b-ssl.grvcdn.com/moth-min.js":"http://b.grvcdn.com/moth-min.js";window.grvMakeScript=function(d){var a;a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=d;return a};c=document.getElementsByTagName("script")[0];b&&c.parentNode.insertBefore(window.grvMakeScript(b),c);})();
+  //]]>
+</script>
+ 
+<div class="slide-out-div" style="line-height: 1; position: fixed; height: 285px; top: 200px; left: -290px;">
+<a class="handle" href="http://spyrestudios.com/design-a-foursquare-like-user-profile-page-in-html5css3/#" style="background-image: url(http://www.bloggingpro.com/wp-content/uploads/2013/05/signup.jpg); width: 40px; height: 230px; display: block; text-indent: -99999px; outline: none; position: absolute; top: 0px; right: -40px; background-position: initial initial; background-repeat: no-repeat no-repeat;">Content</a>
+<p align="center"><img data-cfsrc="http://spyrestudios.com/wp-content/themes/spyrestudios/images/logo2.png" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/logo2.png"></p>
+<br>
+<p>Receive the top stories from SpyreStudios and the Splashpress Media network every week, right in your Inbox. Relevant and timely content is yours for FREE! </p>
+<form method="post" class="af-form-wrapper" action="http://www.aweber.com/scripts/addlead.pl">
+<div style="display: none;">
+<input type="hidden" name="meta_web_form_id" value="1031430703">
+<input type="hidden" name="meta_split_id" value="">
+<input type="hidden" name="listname" value="spyrestudios">
+<input type="hidden" name="redirect" value="http://www.aweber.com/thankyou-coi.htm?m=text" id="redirect_99e3b72af7b71d4ca5feb77742c465da">
+<input type="hidden" name="meta_adtracking" value="Spyre_Newsletter_Subscription_Form">
+<input type="hidden" name="meta_message" value="1">
+<input type="hidden" name="meta_required" value="name,email">
+<input type="hidden" name="meta_tooltip" value="">
+</div>
+<input id="awf_field-5198244" type="text" name="name" class="text-slide" value="Name">
+<input class="text-slide" id="awf_field-5198244" type="text" name="email" value="Email" tabindex="501">
+<input name="submit" class="txt-button" type="submit" value="Submit" tabindex="502">
+<div style="display: none;">
+<img data-cfsrc="http://forms.aweber.com/form/displays.htm?id=jAzMjCzMDOwMzA" alt="" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/displays.htm">
+</div>
+</form>
+<script type="text/javascript">
+                        <!--
+                        (function() {
+                                var IE = /*@cc_on!@*/false;
+                                if (!IE) { return; }
+                                if (document.compatMode && document.compatMode == 'BackCompat') {
+                                        if (document.getElementById("af-form-1031430703")) {
+                                                document.getElementById("af-form-1031430703").className = "af-form af-quirksMode";
+                                        }
+                                        if (document.getElementById("af-body-1031430703")) {
+                                                document.getElementById("af-body-1031430703").className = "af-body inline af-quirksMode";
+                                        }
+                                        if (document.getElementById("af-header-1031430703")) {
+                                                document.getElementById("af-header-1031430703").className = "af-header af-quirksMode";
+                                        }
+                                        if (document.getElementById("af-footer-1031430703")) {
+                                                document.getElementById("af-footer-1031430703").className = "af-footer af-quirksMode";
+                                        }
+                                }
+                        })();
+                        -->
+                </script>
+</div>
+<script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/jquery.min.js" type="text/javascript"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/dgdTycPTSRj.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/dgdTycPTSRj(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/jquery.tabSlideOut.v1.3.js"></script>
+<script type="text/javascript">
+                $(function(){
+                        $('.slide-out-div').tabSlideOut({
+                                tabHandle: '.handle',                     //class of the element that will become your tab
+                                pathToTabImage: 'http://www.bloggingpro.com/wp-content/uploads/2013/05/signup.jpg', //path to the image for the tab //Optionally can be set using css
+                                imageHeight: '230px',                     //height of tab image           //Optionally can be set using css
+                                imageWidth: '40px',                       //width of tab image            //Optionally can be set using css
+                                tabLocation: 'left',                      //side of screen where tab lives, top, right, bottom, or left
+                                speed: 300,                               //speed of animation
+                                action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+                                topPos: '200px',                          //position from the top/ use if tabLocation is left or right
+                                leftPos: '20px',                          //position from left/ use if tabLocation is bottom or top
+                                fixedPosition: true                    //options: true makes it stick(fixed position) on scroll
+                        });
+                });
+        </script>
+ 
+ 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class=""><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><iframe name="oauth2relay265319813" id="oauth2relay265319813" src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="pty_preload" style="position:absolute; top:-9999px; left:-9999px"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/bg.png"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/bot.png"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/bullet.png"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/input.png"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/top.png"><img src="./Design a Foursquare-like User Profile Page in HTML5 CSS3 - SpyreStudios   SpyreStudios_files/submit__red.png"></div><div class="pty_fontload" style="position: absolute; top: -9999px; left: -9999px; display: none;" id="pty_fontload_1">How many a man has thrown up his hands at a time when a little more effort, a little more patience would have achieved success. -Elbert Hubbard</div><div class="pty_fontload" style="position: absolute; top: -9999px; left: -9999px; display: none;" id="pty_fontload_2">How many a man has thrown up his hands at a time when a little more effort, a little more patience would have achieved success. -Elbert Hubbard</div><div class="pty_fontload" style="position: absolute; top: -9999px; left: -9999px; display: none;" id="pty_fontload_3">How many a man has thrown up his hands at a time when a little more effort, a little more patience would have achieved success. -Elbert Hubbard</div><div class="pty_fontload" style="position: absolute; top: -9999px; left: -9999px; display: none;" id="pty_fontload_4">How many a man has thrown up his hands at a time when a little more effort, a little more patience would have achieved success. -Elbert Hubbard</div><div class="pty_fontload" style="position: absolute; top: -9999px; left: -9999px; display: none;" id="pty_fontload_5">How many a man has thrown up his hands at a time when a little more effort, a little more patience would have achieved success. -Elbert Hubbard</div></body></html>

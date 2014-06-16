@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Equal Height Columns with jQuery</title>
+<style>
+	body {
+		font: small/1.3em Arial, Helvetica, sans-serif;
+		background-color: white; }
+	#wrap {
+		width: 600px;
+		margin: 0 auto; }
+	.column {
+		float: left; 
+		padding: 10px; }
+	#col1 {
+		width: 110px;
+		margin-right: 10px;
+		background-color: #E2DDC4; }
+	#col2 {
+		width: 200px;
+		margin-right: 10px;
+		background-color: #6B99F6; }
+	#col3 {
+		width: 210px;
+		background-color: #E87C5E; }
+</style>
+<script language="javascript" type="text/javascript" src="../../js/jquery/jquery.js"></script>
+<script>
+function equalHeight(group) {
+	tallest = 0;
+	group.each(function() {
+		thisHeight = $(this).height();
+		if(thisHeight > tallest) {
+			tallest = thisHeight;
+		}
+	});
+	group.height(tallest);
+}
+$(document).ready(function() {
+	equalHeight($(".column"));
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<h1>Equal Height Columns with jQuery</h1>
+	<p>This is an example of equal height columns using a single short jQuery function. View the page source or <a href="../../index.html?p=280">refer to the original CSS Newbie article</a> to see how the function works.</p>
+	<div class="column" id="col1">
+		<p>This three-column design features three columns with significantly varying quantities of content.</p>
+	</div>
+	<div class="column" id="col2">
+		<p>However, despite the differing quantity amounts, these columns are exactly the same height. No tricks, no gimmicks, no resorting to repeating background images to fake our way to columnar nirvana. And certainly, no tables have been harmed in the making of these columns. </p>
+		<p>They're simply divs sharing a common class, all of which have been set to the same height.</p>
+	</div>
+	<div class="column" id="col3">
+		<p>And I think a single class is an addition we can all get behind.</p>
+	</div>
+</div>
+
+</body>
+</html>
